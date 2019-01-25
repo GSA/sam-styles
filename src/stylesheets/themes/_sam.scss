@@ -1,0 +1,43 @@
+/*******************************
+        SAM THEME
+*******************************/
+
+/*-------------------
+   Theme Utilities
+--------------------*/
+@import '../core/palette-uswds';
+@import '../core/theme-utils';
+@import '../core/typography-utils';
+
+/*-------------------
+     Components
+--------------------*/
+@import '../../components/form-control/input';
+@import '../../components/autocomplete/autocomplete';
+
+/*-------------------
+      Colors
+--------------------*/
+@import './sam-colors';
+
+@mixin theme-palette($config) {
+  @include sam-autocomplete-theme($config);
+}
+
+/*-------------------
+     Typography
+--------------------*/
+@import './sam-typography';
+
+@mixin theme-typography($config: null) {
+  @if $config == null {
+    $config: sam-typography-config();
+  }
+  @include sam-autocomplete-typography($config);
+}
+
+/*-------------------
+      Render
+--------------------*/
+@include theme-typography($theme-typography);
+@include theme-palette($theme-palette);

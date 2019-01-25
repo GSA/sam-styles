@@ -1,0 +1,44 @@
+/*******************************
+       SAM THEME COLORS
+*******************************/
+
+/*-------------------
+     Main Palette
+--------------------*/
+$primary:   sam-palette($uswds-blue, 700, 500, 900);
+$accent:    sam-palette($uswds-light-blue, 200, 400, 700);
+
+/*-------------------
+     Components
+--------------------*/
+$text-colors: (
+  text:         map-get($map: $uswds-cool-gray, $key: 700),
+  text-light:   map-get($map: $uswds-cool-gray, $key: 300),
+  link:         map-get($map: $uswds-blue, $key: 500),
+  headers:      map-get($map: $uswds-cool-gray, $key: 600),
+);
+
+$background-colors: (
+  chip:    white,
+  hover:   map-get($map: $uswds-cool-gray, $key: 100),
+);
+
+$shadow-colors: (
+  list-results: rgba(0,0,0,0.3),
+);
+
+$line-colors: (
+  list-results: #aeb0b5,
+);
+
+$component-colors: (
+  text: $text-colors,
+  background: $background-colors,
+  shadow: $shadow-colors,
+  line: $line-colors
+);
+
+/*-------------------
+     Theme map
+--------------------*/
+$theme-palette: sam-theme($primary, $accent, $component-colors);

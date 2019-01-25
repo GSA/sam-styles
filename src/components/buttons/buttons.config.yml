@@ -1,0 +1,33 @@
+label: Buttons
+status: wip
+context:
+  results: 3
+  classes: 'button'
+  scss: 'sam-styles/button'
+
+variants:
+  - name: primary
+    status: wip
+    context:
+      category: alternate
+      label: Secondary buttons
+      classes: 'usa-button-secondary'
+
+  - name: secondary
+    context:
+      category: alternate
+      label: Accent cool buttons
+      classes: 'usa-button-accent-cool'
+
+  - name: tertiary
+    context:
+      category: alternate
+      label: Gray buttons
+      classes: 'usa-button-base'
+
+  - name: close
+    context:
+      category: alternate
+      label: Gray buttons
+      classes: 'button height-5'
+      close: true

@@ -1,0 +1,32 @@
+$input-state-border-width: 1px;
+
+.sam.input{
+  @include typeset(
+    $theme-form-font-family,
+    $theme-body-font-size,
+    $theme-input-line-height
+  );
+
+  @include u-border($input-state-border-width, 'base-light');
+  appearance: none;
+  border-radius: 0;
+  color: color('ink');
+  display: block;
+  height: units(5);
+  margin-top: units(1);
+  max-width: units($theme-input-max-width);
+  padding: units(1);
+  width: 100%;
+}
+
+.sam.input.error{
+  @include u-border($input-state-border-width, 'error');  
+}
+
+.sam.label{
+  display: block;
+  font-weight: font-weight('semibold');
+  line-height: line-height($theme-form-font-family, 2);
+  margin-top: units(3);
+  max-width: units($theme-input-max-width);
+}

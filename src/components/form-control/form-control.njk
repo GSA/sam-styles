@@ -1,0 +1,24 @@
+{%- if label -%}
+  {% render '@label', { label: label, id: id, optional: optional } %}
+{% endif -%}
+
+{%- if error -%}
+  {% render '@message--error', { message: error, id: id }, true %}
+{% endif -%}
+
+{%- if help -%}
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam consequat 
+    diam sed gravida. Praesent ultricies eros lectus, vehicula congue libero ultricies 
+    at. Cras in sodales mauris.
+  </p>
+{% endif -%}
+
+{%- if (input == 'text') -%}
+  {% render '@input-text', { value: value, label: label, classes: classes, placeholder: placeholder, id: id, error: error }  %}
+{% endif -%}
+
+{%- if (input == 'text-clear') -%}
+  {% render '@input-text--clear', { value: value, label: label, classes: classes, placeholder: placeholder, id: id, error: error }  %}
+{% endif -%}
+
