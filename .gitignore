@@ -5,3 +5,4 @@
 
 # ignore the Fractal build directory
 build/
+_site/
