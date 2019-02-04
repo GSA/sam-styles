@@ -13,7 +13,7 @@ gulp.task('sass', function () {
   var plugins = [
     autoprefixer(autoprefixerOptions),
     packCSS({ sort: true }),
-    //cssnano(({ autoprefixer: { browsers: autoprefixerOptions }}))
+    cssnano(({ autoprefixer: { browsers: autoprefixerOptions }}))
   ];
 
   var stream = gulp.src('src/stylesheets/*.scss')
