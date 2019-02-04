@@ -60,5 +60,7 @@ samTheme.addLoadPath(__dirname + '/theme-overrides');
 
 fractal.web.theme(samTheme);
 
+// output files to /build
+fractal.web.set('builder.dest', 'build');
 
 module.exports = fractal;

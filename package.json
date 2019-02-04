@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build:css": "gulp sass",
+    "federalist": "npm install --only=dev && fractal build",
     "start": "fractal start --sync",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "nswatch"

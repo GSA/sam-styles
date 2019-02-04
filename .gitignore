@@ -2,3 +2,6 @@
 
 # ignore Node-specific files and directories
 /node_modules
+
+# ignore the Fractal build directory
+build/
