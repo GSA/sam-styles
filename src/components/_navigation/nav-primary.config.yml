@@ -1,9 +1,7 @@
 label: Primary (header)
-preview: '@uswds-header'
 
 context:
   nav:
-    search: false
     links:
       - text: Current section
         is_current: true

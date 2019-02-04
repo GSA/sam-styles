@@ -13,7 +13,6 @@
      Components
 --------------------*/
 @import '../../components/form-control/input';
-@import '../../components/autocomplete/autocomplete';
 
 /*-------------------
       Colors
@@ -21,7 +20,7 @@
 @import './sam-colors';
 
 @mixin theme-palette($config) {
-  @include sam-autocomplete-theme($config);
+  // @include sam-autocomplete-theme($config);
 }
 
 /*-------------------
@@ -33,7 +32,7 @@
   @if $config == null {
     $config: sam-typography-config();
   }
-  @include sam-autocomplete-typography($config);
+  // @include sam-autocomplete-typography($config);
 }
 
 /*-------------------

@@ -1,27 +1,10 @@
-label: Headers
+label: Header
 status: ready
 
 variants:
   - name: default
     label: Compare
     status: null
-
-  - name: basic
-    label: Basic header
-    context:
-      header:
-        primary:
-          search: true
-          id_prefix: basic-
-
-  - name: basic-mega
-    label: Basic with mega-menu
-    context:
-      header:
-        primary:
-          search: true
-          id_prefix: basic-mega-
-          mega: true
 
   - name: extended
     label: Extended header

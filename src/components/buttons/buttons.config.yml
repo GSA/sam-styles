@@ -6,26 +6,9 @@ context:
   scss: 'sam-styles/button'
 
 variants:
-  - name: primary
-    status: wip
-    context:
-      category: alternate
-      label: Secondary buttons
-      classes: 'usa-button-secondary'
-
-  - name: secondary
-    context:
-      category: alternate
-      label: Accent cool buttons
-      classes: 'usa-button-accent-cool'
-
-  - name: tertiary
-    context:
-      category: alternate
-      label: Gray buttons
-      classes: 'usa-button-base'
-
-  - name: close
+  - name: default
+    label: Default
+  - name: clear
     context:
       category: alternate
       label: Gray buttons
