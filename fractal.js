@@ -52,15 +52,15 @@ const themeConfig = {
 }
 
 const samTheme = mandelbrot(themeConfig);
-
-samTheme.addStatic(__dirname + '/dist', `/${themeConfig.static.mount}`);
-
-// specify a directory to hold the theme override templates
 samTheme.addLoadPath(__dirname + '/theme-overrides');  
 
-fractal.web.theme(samTheme);
+const web = fractal.web;
 
+web.theme(samTheme);
+
+web.set('static.path', 'dist');
+web.set('static.mount', 'dist');
 // output files to /build
-fractal.web.set('builder.dest', 'build');
+web.set('builder.dest', 'build');
 
 module.exports = fractal;
