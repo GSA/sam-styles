@@ -8,6 +8,6 @@
   </head>
   <body>
     {% block body %}{{ yield }}{% endblock %}
-    <script src="/dist/js/uswds.min.js"></script>
+    <script src="{{ '/dist/js/uswds.min.js' | path }}"></script>
   </body>
 </html>
