@@ -42,9 +42,6 @@ const mandelbrot = require('@frctl/mandelbrot');
 const themeConfig = {
   skin: "white",
   panels: ["html", "view", "context", "resources", "info", "notes"],
-  static: {
-    mount: 'dist',
-  },
   scripts: [
     "default",
     "https://unpkg.com/@stackblitz/sdk/bundles/sdk.umd.js"
@@ -60,7 +57,9 @@ web.theme(samTheme);
 
 web.set('static.path', 'dist');
 web.set('static.mount', 'dist');
-// output files to /build
+
+// output files to /_site
+// https://federalist.18f.gov/pages/using-federalist/supported-site-engines/#requirements
 web.set('builder.dest', '_site');
 
 module.exports = fractal;
