@@ -1,6 +1,6 @@
 # SAM Styles
 
-[![CircleCI](https://circleci.com/gh/GSA/sam-styles.svg?style=svg)](https://circleci.com/gh/GSA/sam-styles)
+[![CircleCI](https://circleci.com/gh/GSA/sam-styles.svg?style=shield)](https://circleci.com/gh/GSA/sam-styles)
 
 ## Fractal
 
