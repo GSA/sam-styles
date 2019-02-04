@@ -14,6 +14,10 @@
     "src/stylesheets/**/*.scss": "build:css",
     "src/components/**/*.scss": "build:css"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GSA/sam-styles.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
