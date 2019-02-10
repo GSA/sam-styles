@@ -31,7 +31,7 @@ components.engine(nunjucks);
 // DOCUMENTATION
 // =============================================================================
 const docs = fractal.docs;
-docs.set('path', __dirname + '/src/docs');
+docs.set('path', __dirname + '/docs');
 
 
 // =============================================================================
@@ -41,7 +41,7 @@ const mandelbrot = require('@frctl/mandelbrot');
 
 const themeConfig = {
   skin: "white",
-  panels: ["html", "view", "context", "resources", "info", "notes"],
+  panels: ["html", "resources", "info", "notes"],
   scripts: [
     "default",
     "https://unpkg.com/@stackblitz/sdk/bundles/sdk.umd.js"

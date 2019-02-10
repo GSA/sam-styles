@@ -1,0 +1,79 @@
+/*
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+========================================
+========================================
+========================================
+*/
+
+// Settings
+// -------------------------------------
+@import 'sam-theme-general';
+@import 'sam-theme-typography';
+@import 'sam-theme-color';
+@import 'sam-theme-spacing';
+@import 'sam-theme-utilities';
+@import 'sam-theme-components';
+
+// Tools
+// -------------------------------------
+@import 'node_modules/uswds/dist/scss/core/font-definitions';
+@import 'node_modules/uswds/dist/scss/core/functions';
+@import 'node_modules/uswds/dist/scss/core/system-tokens';
+@import 'node_modules/uswds/dist/scss/core/variables';
+
+$color-manual-values: (
+  $tokens-color-state
+);
+
+@import 'node_modules/uswds/dist/scss/core/properties';
+@import 'node_modules/uswds/dist/scss/core/mixins/all';
+
+// Generic
+// -------------------------------------
+@import 'node_modules/uswds/dist/scss/core/font-face';
+@import 'node_modules/uswds/dist/scss/lib/normalize';
+@import 'node_modules/uswds/dist/scss/core/base';
+
+// Elements
+// -------------------------------------
+@import 'node_modules/uswds/dist/scss/elements/list';
+@import 'node_modules/uswds/dist/scss/elements/table';
+@import 'node_modules/uswds/dist/scss/elements/typography';
+
+// Components
+// -------------------------------------
+@import 'node_modules/uswds/dist/scss/components/accordions';
+@import 'node_modules/uswds/dist/scss/components/alerts';
+@import 'node_modules/uswds/dist/scss/components/banner';
+@import 'node_modules/uswds/dist/scss/components/checklist';
+@import 'node_modules/uswds/dist/scss/components/footer';
+@import 'node_modules/uswds/dist/scss/components/forms';
+@import 'node_modules/uswds/dist/scss/components/graphic-list';
+@import 'node_modules/uswds/dist/scss/components/header';
+@import 'node_modules/uswds/dist/scss/components/hero';
+@import 'node_modules/uswds/dist/scss/components/layout';
+@import 'node_modules/uswds/dist/scss/components/media-block';
+@import 'node_modules/uswds/dist/scss/components/navigation';
+@import 'node_modules/uswds/dist/scss/components/search';
+@import 'node_modules/uswds/dist/scss/components/section';
+@import 'node_modules/uswds/dist/scss/components/sidenav';
+@import 'node_modules/uswds/dist/scss/components/skipnav';
+
+// Layout grid
+// -------------------------------------
+@import 'node_modules/uswds/dist/scss/core/layout-grid';
+
+// Utilities
+// -------------------------------------
+@import 'node_modules/uswds/dist/scss/utilities/palettes/all';
+@import 'node_modules/uswds/dist/scss/utilities/rules/all';
+@import 'node_modules/uswds/dist/scss/utilities/rules/package';
+@include render-utilities-in($utilities-package);
+
+// -------------------------------------
+// Import theme custom styles
+
+@import 'sam-theme-custom-styles';

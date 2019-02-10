@@ -1,123 +1,12 @@
-$theme-font-definitions: (
-  'source-sans-pro-plus': (
-    name: 'Source Sans Pro Web',
-    dir: 'source-sans-pro-plus',
-    stack: ('Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif),
-    system-font: false,
-    cap-height: 340px,
-    generate: true,
-    variable-font: false,
-    roman: (
-      100: false,
-      200: false,
-      300: 'sourcesanspro-light-webfont',
-      400: 'sourcesanspro-regular-webfont',
-      500: false,
-      600: 'sourcesanspro-semibold-webfont',
-      700: 'sourcesanspro-bold-webfont',
-      800: false,
-      900: false,
-    ),
-    italic: (
-      100: false,
-      200: false,
-      300: false,
-      400: 'sourcesanspro-italic-webfont',
-      500: false,
-      600: 'sourcesanspro-semibold-italic-webfont',
-      700: false,
-      800: false,
-      900: false,
-    ),
-  )
-);
-
-$theme-font-sans: 'source-sans-pro-plus';
-$theme-font-heading:  $theme-font-sans;
-$theme-font-weight-semibold: 600;
-
-
-
-/*******************************
-   USWDS - Version 2.0 Beta 4 
-*******************************/
-
-// Settings
-// -------------------------------------
-//@import './themes/uswds/uswds-theme-general';
-@import 'node_modules/uswds/dist/scss/settings/settings-general';
-@import 'node_modules/uswds/dist/scss/settings/settings-typography';
-@import 'node_modules/uswds/dist/scss/settings/settings-color';
-@import 'node_modules/uswds/dist/scss/settings/settings-spacing';
-@import 'node_modules/uswds/dist/scss/settings/settings-utilities';
-@import 'node_modules/uswds/dist/scss/settings/settings-components';
-
-// Tools
-// -------------------------------------
-@import 'node_modules/uswds/dist/scss/core/font-definitions';
-@import 'node_modules/uswds/dist/scss/core/functions';
-@import 'node_modules/uswds/dist/scss/core/system-tokens';
-@import 'node_modules/uswds/dist/scss/core/variables';
-
-$color-manual-values: (
-  $tokens-color-state
-);
-
-@import 'node_modules/uswds/dist/scss/core/properties';
-@import 'node_modules/uswds/dist/scss/core/mixins/all';
-
-// Generic
-// -------------------------------------
-@import 'node_modules/uswds/dist/scss/core/font-face';
-@import 'node_modules/uswds/dist/scss/lib/normalize';
-@import 'node_modules/uswds/dist/scss/core/base';
-
-
-// Utilities
-// -------------------------------------
-@import 'node_modules/uswds/dist/scss/utilities/palettes/all';
-@import 'node_modules/uswds/dist/scss/utilities/rules/all';
-@import 'node_modules/uswds/dist/scss/utilities/rules/package';
-@include render-utilities-in($utilities-package);
-
-// Elements
-// -------------------------------------
-@import 'node_modules/uswds/dist/scss/elements/list';
-@import 'node_modules/uswds/dist/scss/elements/table';
-@import 'node_modules/uswds/dist/scss/elements/typography';
-
-// Components
-// -------------------------------------
-@import 'node_modules/uswds/dist/scss/components/accordions';
-@import 'node_modules/uswds/dist/scss/components/banner';
-@import 'node_modules/uswds/dist/scss/components/footer';
-@import 'node_modules/uswds/dist/scss/components/header';
-@import 'node_modules/uswds/dist/scss/components/media-block';
-@import 'node_modules/uswds/dist/scss/components/navigation';
-@import 'node_modules/uswds/dist/scss/components/search';
-
-// Layout grid
-// -------------------------------------
-@import 'node_modules/uswds/dist/scss/core/layout-grid';
-
 
 /*******************************
           SAM THEME
 *******************************/
 
-html{
-  @include add-kerning;
-  font-family: font-family($theme-body-font-family);
-  font-size: $root-font-size;
+// body{
+//   margin: 10px;
+//   background: linear-gradient(rgba(255, 0, 0, 0.15), rgba(255, 0, 0, 0.15) 1px, transparent 1px);
+//   background-size: 1px 24px;
+// }
 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body{
-  // margin: 10px;
-  // background: linear-gradient(rgba(255, 0, 0, 0.15), rgba(255, 0, 0, 0.15) 1px, transparent 1px);
-  // background-size: 1px 24px;
-}
-
-@import './themes/sam';
+@import './theme/styles';
