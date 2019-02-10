@@ -23,11 +23,6 @@
 @import 'node_modules/uswds/dist/scss/core/functions';
 @import 'node_modules/uswds/dist/scss/core/system-tokens';
 @import 'node_modules/uswds/dist/scss/core/variables';
-
-$color-manual-values: (
-  $tokens-color-state
-);
-
 @import 'node_modules/uswds/dist/scss/core/properties';
 @import 'node_modules/uswds/dist/scss/core/mixins/all';
 

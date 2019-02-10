@@ -1,0 +1,450 @@
+<div class="styleguide-content usa-prose">
+
+  <h2 id="uswds-state-color-tokens">State color tokens</h2>
+  <p>
+    The state color palette is divided into five high-level role-based color 
+    families: <code class="highlighter-rouge">info</code>, 
+    <code class="highlighter-rouge">error</code>, 
+    <code class="highlighter-rouge">warning</code>, 
+    <code class="highlighter-rouge">success</code>, and 
+    <code class="highlighter-rouge">disabled</code>.
+  </p>
+  
+  <p>
+    Each color family except <code class="highlighter-rouge">disabled</code> 
+    has five possible lightness grades, from 
+    <code class="highlighter-rouge">lighter</code> to 
+    <code class="highlighter-rouge">darker</code>, though not every family needs 
+    to include a color at each grade. Some grades may be set to 
+    <code class="highlighter-rouge">false</code> in your project’s theme settings.
+  </p>
+  
+  <p>
+    Customize state color tokens using the variables listed below in 
+    <code class="highlighter-rouge">_sam_theme_color.scss</code> with 
+    <a href="https://v2.designsystem.digital.gov/design-tokens/color/system-tokens/">system color tokens</a>. Set 
+    any unused theme color to <code class="highlighter-rouge">false</code>.
+  </p>
+  
+  <div class="site-table-wrapper">
+    <table class="usa-table-borderless site-table-responsive">
+      <thead>
+        <tr>
+          <th scope="col">Color</th>
+          <th scope="col">Token</th>
+          <th scope="col">Default</th>
+          <th scope="col">Settings variable</th>
+          <th scope="col" class="text-right">Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-info-lighter"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'info-lighter'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'cyan-5'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-info-lighter
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #e7f6f8
+          </td>
+        </tr>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-info-light"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'info-light'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'cyan-20'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-info-light
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #9ddfeb
+          </td>
+        </tr>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-info"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'info'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'cyan-30v'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-info
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #00bde3
+          </td>
+        </tr>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-info-dark"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'info-dark'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'cyan-40v'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-info-dark
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #009ec1
+          </td>
+        </tr>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-info-darker"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'info-darker'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'blue-60'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-info-darker
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #2c608a
+          </td>
+        </tr>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-error-lighter"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'error-lighter'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'red-10'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-error-lighter
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #f8e1de
+          </td>
+        </tr>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-error-light"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'error-light'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'red-40v'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-error-light
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #fb5a47
+          </td>
+        </tr>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-error"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'error'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'red-50'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-error
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #d83933
+          </td>
+        </tr>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-error-dark"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'error-dark'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'red-60v'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-error-dark
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #b51d09
+          </td>
+        </tr>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-error-darker"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'error-darker'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'red-70v'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-error-darker
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #8b1303
+          </td>
+        </tr>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-warning-lighter"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'warning-lighter'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'gold-5v'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-warning-lighter
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #fef0c8
+          </td>
+        </tr>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-warning-light"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'warning-light'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'gold-10v'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-warning-light
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #ffe3a3
+          </td>
+        </tr>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-warning"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'warning'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'gold-20v'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-warning
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #fbc036
+          </td>
+        </tr>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-warning-dark"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'warning-dark'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'gold-30v'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-warning-dark
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #e5a000
+          </td>
+        </tr>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-warning-darker"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'warning-darker'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'gold-40v'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-warning-darker
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #c2850c
+          </td>
+        </tr>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-success-lighter"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'success-lighter'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'green-cool-5'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-success-lighter
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #e3f5e1
+          </td>
+        </tr>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-success-light"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'success-light'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'green-cool-30v'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-success-light
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #2cc821
+          </td>
+        </tr>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-success"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'success'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'green-cool-40v'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-success
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #0ca900
+          </td>
+        </tr>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-success-dark"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'success-dark'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'green-cool-50'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-success-dark
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #3e8520
+          </td>
+        </tr>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-success-darker"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'success-darker'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'green-cool-70'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-success-darker
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #364b29
+          </td>
+        </tr>
+        
+        <tr>
+          <td scope="row" data-title="Color" class="flex-align-center">
+            <span class="site-inline-swatch bg-disabled"></span>
+          </td>
+          <td data-title="Token">
+            <span class="utility-class font-mono-2xs">'disabled'</span>
+          </td>
+          <td data-title="Default" class="font-mono-2xs">
+            'gray-20'
+          </td>
+          <td data-title="Settings var" class="font-mono-2xs">
+            $theme-color-disabled
+          </td>
+          <td data-title="Value" class="font-mono-2xs text-right">
+            
+            #c9c9c9
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+  
+  
+  
+  
+  
+</div>

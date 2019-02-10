@@ -10,18 +10,20 @@ fractal.set('project.version', `v${pkg.version}`);
 // COMPONENTS
 // =============================================================================
 const components = fractal.components;
-
 components.set('ext', '.njk');
 components.set('path', __dirname + '/src/components');
-components.set('default.preview', '@preview');
+components.set('default.preview', '@sam');
 
 // use Nunjucks as the templating engine
 const nunjucks = require('@frctl/nunjucks')({
   filters: {
-    stackblitz: function(d) {
-      return d + 'hello';
-    }
-  }
+    // stackblitz: function(d) {
+    //   return d + 'hello';
+    // }
+  },
+  paths: [
+    'src/components',
+  ]
 });
 
 components.engine(nunjucks); 

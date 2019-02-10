@@ -586,7 +586,9 @@ $align-items-manual-values: ();
 
 // .background-color
 
-$background-color-palettes: ();
+$background-color-palettes: (
+  'palette-color-state'
+);
 $background-color-manual-values: ();
 
 // .border
@@ -637,7 +639,7 @@ $circle-manual-values: ();
 
 // .color
 
-$color-palettes: ();
+$color-palettes: ('palette-color-state');
 $color-manual-values: ();
 
 // .cursor
