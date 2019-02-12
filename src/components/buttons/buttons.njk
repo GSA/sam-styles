@@ -2,12 +2,12 @@
 <div class="bg-base-darkest padding-1" style="max-width: fit-content">
 {% endif -%}
 
-<button class="sam {{ classes }}">{{ '<span class="fas fa-times"></span>' if close else "Default" }}</button>
+<button class="usa-button {{ classes }}">Default</button>
 {% if (category != 'disabled') and (category != 'big') -%}
-<button class="sam {{ classes }} hover">{{ '<span class="fas fa-times"></span>' if close else "Hover" }}</button>
-<button class="sam {{ classes }} active">{{ '<span class="fas fa-times"></span>' if close else "Active" }}</button>
-<button class="sam {{ classes }} usa-focus">{{ '<span class="fas fa-times"></span>' if close else "Focus" }}</button>
-<button class="sam {{ classes }}" disabled>{{ '<span class="fas fa-times"></span>' if close else "Disabled" }}</button>
+<button class="usa-button {{ classes }} usa-button-hover">Hover</button>
+<button class="usa-button {{ classes }} usa-button-active">Active</button>
+<button class="usa-button {{ classes }} usa-focus">Focus</button>
+<button class="usa-button {{ classes }}" disabled>Disabled</button>
 {%- endif -%}
 
 {%- if (classes == 'usa-button-outline-inverse') %}

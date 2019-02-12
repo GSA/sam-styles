@@ -1,16 +1,40 @@
 label: Buttons
 status: wip
-context:
-  results: 3
-  classes: 'button'
-  scss: 'sam-styles/button'
-
+order: 3
+preview: "@sam-content"
 variants:
-  - name: default
-    label: Default
-  - name: clear
+  - name: secondary
+    context:
+      category: alternate
+      label: Secondary buttons
+      classes: 'usa-button-secondary'
+
+  - name: accent-cool
+    context:
+      category: alternate
+      label: Accent cool buttons
+      classes: 'usa-button-accent-cool'
+
+  - name: base
     context:
       category: alternate
       label: Gray buttons
-      classes: 'button height-5'
-      close: true
+      classes: 'usa-button-base'
+
+  - name: outline
+    context:
+      category: outline
+      label: outline buttons
+      classes: 'usa-button-outline'
+
+  - name: outline-inverse
+    context:
+      category: outline-inverse
+      label: outline inverse buttons
+      classes: 'usa-button-outline-inverse'
+
+  - name: big
+    context:
+      category: 'big'
+      label: Big button
+      classes: 'usa-button-big'
