@@ -1,7 +1,6 @@
 module.exports = {
 	title: "Input Text",
   status: "wip",
-  order: 3,
   collated: true,
   context: {
     "input": "text",

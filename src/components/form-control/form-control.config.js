@@ -1,7 +1,6 @@
 module.exports = {
 	title: "Form control",
   status: "wip",
-  order: 4,
   collated: true,
   context: {
     "input": "text",

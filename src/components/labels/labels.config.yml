@@ -1,0 +1,16 @@
+label: Tags
+order: 4
+status: wip
+
+variants:
+  - name: default
+    label: Info
+    context:
+      label:
+        classes: "usa-tag"
+
+  - name: big
+    label: Big
+    context:
+      label:
+        classes: "usa-tag usa-tag-big"
