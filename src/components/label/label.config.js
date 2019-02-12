@@ -1,7 +1,6 @@
 module.exports = {
 	title: "Input Label",
   status: "wip",
-  order: 1,
   collated: true,
 	variants: [
 		{

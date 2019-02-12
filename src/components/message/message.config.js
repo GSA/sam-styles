@@ -1,7 +1,6 @@
 module.exports = {
 	title: "Message",
   status: "wip",
-  order: 2,
   collated: true,
 	variants: [
 		{
