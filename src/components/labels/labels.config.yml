@@ -1,7 +1,7 @@
-label: Tags
+label: Labels
 order: 4
 status: wip
-
+preview: "@sam-content"
 variants:
   - name: default
     label: Info
