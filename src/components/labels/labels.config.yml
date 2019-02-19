@@ -14,3 +14,9 @@ variants:
     context:
       label:
         classes: "usa-tag usa-tag-big"
+
+  - name: chip
+    label: Chip
+    context:
+      label: 
+        classes: "sam label"
