@@ -25,7 +25,7 @@ $input-state-border-width: 1px;
 
 .sam.label{
   display: block;
-  font-weight: font-weight('semibold');
+  // font-weight: font-weight('semibold');
   line-height: line-height($theme-form-font-family, 2);
   margin-top: units(3);
   max-width: units($theme-input-max-width);

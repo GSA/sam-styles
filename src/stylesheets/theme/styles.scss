@@ -10,12 +10,23 @@
 
 // Settings
 // -------------------------------------
-@import 'sam-theme-general';
-@import 'sam-theme-typography';
-@import 'sam-theme-color';
-@import 'sam-theme-spacing';
-@import 'sam-theme-utilities';
-@import 'sam-theme-components';
+// @import 'sam-theme-general';
+// @import 'sam-theme-typography';
+// @import 'sam-theme-color';
+// @import 'sam-theme-spacing';
+// @import 'sam-theme-utilities';
+// @import 'sam-theme-components';
+
+// $theme-font-path:   './../fonts';
+$theme-font-path:   '~uswds/dist/fonts';
+$theme-image-path:   '~uswds/dist/img';
+
+@import 'node_modules/uswds/dist/scss/settings/settings-general';
+@import 'node_modules/uswds/dist/scss/settings/settings-typography';
+@import 'node_modules/uswds/dist/scss/settings/settings-color';
+@import 'node_modules/uswds/dist/scss/settings/settings-spacing';
+@import 'node_modules/uswds/dist/scss/settings/settings-utilities';
+@import 'node_modules/uswds/dist/scss/settings/settings-components';
 
 // Tools
 // -------------------------------------
