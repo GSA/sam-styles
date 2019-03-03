@@ -18,8 +18,45 @@
 // @import 'sam-theme-components';
 
 // $theme-font-path:   './../fonts';
-$theme-font-path:   '~uswds/dist/fonts';
-$theme-image-path:   '~uswds/dist/img';
+// $theme-font-path:   '~uswds/dist/fonts';
+// $theme-image-path:   '~uswds/dist/img';
+
+$theme-font-definitions: (
+  'source-sans-pro-plus': (
+    name: 'Source Sans Pro Web',
+    dir: 'source-sans-pro-plus',
+    stack: ('Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif),
+    system-font: false,
+    cap-height: 340px,
+    generate: true,
+    variable-font: false,
+    roman: (
+      100: false,
+      200: false,
+      300: 'sourcesanspro-light-webfont',
+      400: 'sourcesanspro-regular-webfont',
+      500: false,
+      600: 'sourcesanspro-semibold-webfont',
+      700: 'sourcesanspro-bold-webfont',
+      800: false,
+      900: false,
+    ),
+    italic: (
+      100: false,
+      200: false,
+      300: false,
+      400: 'sourcesanspro-italic-webfont',
+      500: false,
+      600: 'sourcesanspro-semibold-italic-webfont',
+      700: false,
+      800: false,
+      900: false,
+    ),
+  )
+);
+
+$theme-font-sans:   'source-sans-pro-plus';
+$theme-font-serif:  'source-sans-pro-plus';
 
 @import 'node_modules/uswds/dist/scss/settings/settings-general';
 @import 'node_modules/uswds/dist/scss/settings/settings-typography';

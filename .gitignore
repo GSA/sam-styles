@@ -1,8 +1,21 @@
 .DS_store
 
-# ignore Node-specific files and directories
-/node_modules
+# Dependency directories
+node_modules/
 
-# ignore the Fractal build directory
+# Fractal build directory
 build/
+
+# Federalist build directory
 _site/
+
+# Webpack default dist folder
+dist/
+
+# Ignore USWDS fonts only
+/src/fonts/*
+!/src/fonts/source-sans-pro-plus
+
+# Ignore USWDS images only
+/src/img/*
+!/src/img/sam
