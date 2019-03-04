@@ -6,21 +6,40 @@
 ========================================
 ========================================
 ========================================
+----------------------------------------
+SAM TYPOGRAPHY SETTINGS
+----------------------------------------
+-
+Read more about settings and
+USWDS typography tokens in the documentation:
+https://v2.designsystem.digital.gov/style-tokens/typography
+-
+----------------------------------------
 */
 
-// Settings
-// -------------------------------------
-// @import 'sam-theme-general';
-// @import 'sam-theme-typography';
-// @import 'sam-theme-color';
-// @import 'sam-theme-spacing';
-// @import 'sam-theme-utilities';
-// @import 'sam-theme-components';
+/*
+----------------------------------------
+Custom font definitions
+----------------------------------------
+Add a new custom font definition if
+your project uses a typeface we've
+not already defined.
+----------------------------------------
+The following faces are defined in the
+system:
 
-// $theme-font-path:   './../fonts';
-// $theme-image-path:   './../img';
-// $theme-font-path:   '~uswds/dist/fonts';
-// $theme-image-path:   '~uswds/dist/img';
+'georgia'
+'helvetica'
+'merriweather'
+'open-sans'
+'public-sans'
+'roboto-mono'
+'source-sans-pro'
+'system'
+'tahoma'
+'verdana'
+----------------------------------------
+*/
 
 $theme-font-definitions: (
   'source-sans-pro-plus': (
@@ -56,9 +75,111 @@ $theme-font-definitions: (
   )
 );
 
-$theme-font-sans:   'source-sans-pro-plus';
-$theme-font-serif:  'source-sans-pro-plus';
+/*
+----------------------------------------
+Fonts in use
+----------------------------------------
+Set the sans, serif, and mono faces for
+your project
+----------------------------------------
+The following faces are defined in the
+system:
 
+'georgia'
+'helvetica'
+'merriweather'
+'open-sans'
+'public-sans'
+'roboto-mono'
+'source-sans-pro'
+'system'
+'tahoma'
+'verdana'
+----------------------------------------
+*/
+
+$theme-font-sans:   'source-sans-pro-plus';
+
+/*
+----------------------------------------
+Fonts by role
+----------------------------------------
+Set the ui, heading, body, code, and alt
+faces for your project from
+
+$theme-font-sans
+$theme-font-serif
+$theme-font-mono
+$theme-font-cond
+----------------------------------------
+*/
+
+$theme-font-heading:  $theme-font-sans;
+
+/*
+----------------------------------------
+Font weights
+----------------------------------------
+Assign weights 100-900
+Or use `false` for unneeded weights.
+----------------------------------------
+*/
+$theme-font-weight-semibold:      600;
+
+
+
+
+/*
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+========================================
+========================================
+========================================
+----------------------------------------
+SAM THEME UTILITIES SETTINGS
+----------------------------------------
+-
+Read more about settings and
+USWDS utilities in the documentation:
+https://v2.designsystem.digital.gov/utilities
+-
+----------------------------------------
+*/
+
+/*
+----------------------------------------
+Values
+----------------------------------------
+*/
+
+// .background-color
+
+$background-color-palettes: ('palette-color-state');
+
+
+/*
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+========================================
+========================================
+========================================
+*/
+
+// Settings
+// -------------------------------------
+// @import 'sam-theme-general';
+// @import 'sam-theme-typography';
+// @import 'sam-theme-color';
+// @import 'sam-theme-spacing';
+// @import 'sam-theme-utilities';
+// @import 'sam-theme-components';
+
+// Settings
+// -------------------------------------
 @import 'node_modules/uswds/dist/scss/settings/settings-general';
 @import 'node_modules/uswds/dist/scss/settings/settings-typography';
 @import 'node_modules/uswds/dist/scss/settings/settings-color';

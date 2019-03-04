@@ -1,9 +1,6 @@
-const path = require('path');
 const webpack = require("webpack");
-// const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpackMerge = require("webpack-merge");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-// const CopyPlugin = require('copy-webpack-plugin');
 
 const modeConfig = env => require(`./build-utils/webpack.${env}`)(env);
 const presetConfig = require("./build-utils/loadPresets");

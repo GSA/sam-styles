@@ -1,7 +1,11 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const FractalWebpackPlugin = require('fractal-webpack-plugin');
 
 module.exports = () => ({
   devtool: 'source-map',
+  output: {
+    filename: 'js/sam.js'
+  },
   module: {
     rules: [
       {
@@ -22,6 +26,10 @@ module.exports = () => ({
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'css/sam.css'
+    }),
+    new FractalWebpackPlugin({
+      mode: 'server',
+      sync: true
     })
   ]
 });
