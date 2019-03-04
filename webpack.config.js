@@ -1,8 +1,10 @@
 const path = require('path');
 const webpack = require("webpack");
 const webpackMerge = require("webpack-merge");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 const modeConfig = env => require(`./build-utils/webpack.${env}`)(env);
 const presetConfig = require("./build-utils/loadPresets");
@@ -17,6 +19,18 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
       entry: "./src/js/index.js",
       module: {
         rules: [
+          {
+            test: /\.(sa|sc|c)ss$/,
+            use: [
+              { 
+                loader: MiniCssExtractPlugin.loader,
+                options: { publicPath: '../' }
+              },
+              { loader: 'css-loader', options: { sourceMap: true } },
+              'postcss-loader',
+              { loader: 'sass-loader', options: { sourceMap: true } }
+            ]
+          },
           {
             test: /\.(woff(2)?|ttf|eot|svg|png)$/,
             use: [
@@ -41,7 +55,11 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
         ]
       },
       plugins: [
-        new CleanWebpackPlugin(['dist']),
+        // new CleanWebpackPlugin(['dist']),
+        new StyleLintPlugin(),
+        new MiniCssExtractPlugin({
+          filename: 'css/sam.css'
+        }),
         new CopyWebpackPlugin([
           {
             from: path.resolve(SRC_DIR, 'img'),

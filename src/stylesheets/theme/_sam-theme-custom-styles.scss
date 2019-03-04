@@ -35,11 +35,10 @@ SAM THEME CUSTOM STYLES
 
 // Code samples ---------------------- //
 
-code,
-pre {
+code, pre {
   @include u-font('mono', '3xs');
   // TODO: add more black-transparent values (1-5)
-  background-color: rgba(0,0,0,.05);
+  background-color: rgba(0, 0, 0, .05);
 }
 
 code {
@@ -76,7 +75,6 @@ $theme-table-column-gap: 4;
     margin-top: units(3);
   }
 }
-
 
 .site-table-responsive {
   width: 100%;
@@ -120,6 +118,7 @@ $theme-table-column-gap: 4;
       position: relative;
       z-index: z(100);
 
+      // stylelint-disable selector-no-qualifying-type
       &[data-title]:before {
         @include typeset('ui', 1, 2);
         @include u-padding-x(1);
@@ -131,10 +130,10 @@ $theme-table-column-gap: 4;
         text-align: left;
         width: 50%;
       }
-
       &.is-empty {
         display: none;
       }
+      // stylelint-enable selector-no-qualifying-type
     }
 
     th:not([data-title]) {
@@ -162,11 +161,11 @@ $theme-table-column-gap: 4;
         width: 50%;
         z-index: z(0);
       }
-
+      // stylelint-disable selector-no-qualifying-type
       &.is-empty {
         display: none;
       }
-
+      // stylelint-enable selector-no-qualifying-type
       & + tr {
         margin-top: units(1);
       }
@@ -282,10 +281,11 @@ $theme-table-column-gap: 4;
         tr {
           border: none;
           border-top: units(1px) solid color('base-light');
-
+          // stylelint-disable max-nesting-depth
           &:last-child {
             border-bottom: units(1px) solid color('base-light');
           }
+          // stylelint-enable max-nesting-depth
         }
       }
     }
@@ -304,7 +304,7 @@ $theme-table-column-gap: 4;
 }
 
 .preview .usa-background-dark {
-  padding-left: 0.5rem ;
-  padding-right: 0.5rem ;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   display: inline-block;
 }

@@ -1,6 +1,6 @@
 $input-state-border-width: 1px;
 
-.sam.input{
+.sam.input {
   @include typeset(
     $theme-form-font-family,
     $theme-body-font-size,
@@ -19,11 +19,11 @@ $input-state-border-width: 1px;
   width: 100%;
 }
 
-.sam.input.error{
-  @include u-border($input-state-border-width, 'error');  
+.sam.input.error {
+  @include u-border($input-state-border-width, 'error');
 }
 
-.sam.label{
+.sam.label {
   display: block;
   // font-weight: font-weight('semibold');
   line-height: line-height($theme-form-font-family, 2);
