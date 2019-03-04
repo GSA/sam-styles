@@ -12,8 +12,8 @@
     "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
     "prod": "npm run webpack -- --env.mode production",
     "clean": "rimraf dist",
-    "copy:fonts": "cp -r ./node_modules/uswds/dist/fonts/* ./src/fonts/",
-    "copy:images": "cp -r ./node_modules/uswds/dist/img/* ./src/img/",
+    "copy:fonts": "copy './node_modules/uswds/dist/fonts/**/*.*' ./src/fonts",
+    "copy:images": "copy './node_modules/uswds/dist/img/**/*.*' ./src/img",
     "copy:assets": "npm run copy:fonts && npm run copy:images",
     "postinstall": "npm run clean && npm run copy:assets"
   },
@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "clean-webpack-plugin": "^1.0.1",
+    "copy": "^0.3.2",
     "copy-webpack-plugin": "^5.0.0",
     "css-loader": "^2.1.0",
     "file-loader": "^3.0.1",
