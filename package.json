@@ -30,6 +30,7 @@
     "uswds": "2.0.0-beta.5"
   },
   "devDependencies": {
+    "autoprefixer": "^9.4.9",
     "clean-webpack-plugin": "^1.0.1",
     "copy": "^0.3.2",
     "copy-webpack-plugin": "^5.0.0",
@@ -38,6 +39,7 @@
     "fractal-webpack-plugin": "^3.0.0",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
+    "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.5",

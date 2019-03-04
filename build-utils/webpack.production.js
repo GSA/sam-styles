@@ -17,6 +17,7 @@ module.exports = () => ({
             }
           },
           { loader: 'css-loader', options: { sourceMap: true } },
+          'postcss-loader',
           { loader: 'sass-loader', options: { sourceMap: true } }
         ]
       }
