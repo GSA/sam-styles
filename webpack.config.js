@@ -1,9 +1,14 @@
+const path = require('path');
 const webpack = require("webpack");
 const webpackMerge = require("webpack-merge");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const modeConfig = env => require(`./build-utils/webpack.${env}`)(env);
 const presetConfig = require("./build-utils/loadPresets");
+
+const SRC_DIR = './src/';
+const PUB_DIR = './dist/';
 
 module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
   return webpackMerge(
@@ -13,7 +18,7 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
       module: {
         rules: [
           {
-            test: /\.(woff(2)?|ttf|eot|svg|png|ico)$/,
+            test: /\.(woff(2)?|ttf|eot|svg|png)$/,
             use: [
               {
                 loader: "file-loader",
@@ -37,6 +42,12 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
       },
       plugins: [
         new CleanWebpackPlugin(['dist']),
+        new CopyWebpackPlugin([
+          {
+            from: path.resolve(SRC_DIR, 'img'),
+            to: path.resolve(PUB_DIR, 'img')
+          }
+        ]),
         new webpack.ProgressPlugin(),
       ]
     },
