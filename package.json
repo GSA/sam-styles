@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "fractal:build": "fractal build",
-    "federalist": "npm install --only=dev && npm run prod && npm run fractal:build",
+    "federalist": "npm install --only=dev && npm run postinstall && npm run prod && npm run fractal:build",
     "start": "fractal start --sync",
     "webpack-dev-server": "webpack-dev-server",
     "webpack": "webpack",
