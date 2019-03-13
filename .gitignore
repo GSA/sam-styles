@@ -19,3 +19,7 @@ dist/
 # Ignore USWDS images only
 /src/img/*
 !/src/img/sam
+
+# ignore saved screenshots
+spec/screenshots/*.png
+spec/screenshots/metadata.js
