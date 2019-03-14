@@ -105,6 +105,7 @@ class ChromeFractalTester {
   }
 
   teardown () {
+    server.stop();
     return this.chrome.kill();
   }
 }

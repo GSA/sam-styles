@@ -153,7 +153,6 @@ if(!module.parent){
       const jestArgs = [
         '--config', path.join(ROOT_DIR, 'jest.config.js'),
         path.join(SPEC_DIR, 'headless-chrome.spec.js'),
-        '--forceExit'
       ];
       if (argv.grep) {
         jestArgs.push('--testNamePattern', argv.grep);

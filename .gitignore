@@ -23,3 +23,6 @@ dist/
 # ignore saved screenshots
 spec/screenshots/*.png
 spec/screenshots/metadata.js
+
+# ignore VSCode files
+.vscode/

@@ -55,10 +55,10 @@ describe("fractal components", () => {
 
   if (process.env.ENABLE_SCREENSHOTS) {
     if (process.env.UPDATE_GOLDEN_SCREENSHOTS) {
-      VisualRegressionTester.cleanSync(handles, DEVICES);
+      VisualRegressionTester.cleanSync(global.handles, DEVICES);
     }
     // create visual regression testing metadata
-    afterAll(() => VisualRegressionTester.writeMetadata(handles, DEVICES));
+    afterAll(() => VisualRegressionTester.writeMetadata(global.handles, DEVICES));
   }
 
   global.handles.forEach(handle => {
