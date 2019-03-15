@@ -19,15 +19,15 @@ https://v2.designsystem.digital.gov/style-tokens/typography
 
 /*
 ----------------------------------------
-Custom font definitions
+Custom typeface tokens
 ----------------------------------------
-Add a new custom font definition if
-your project uses a typeface we've
-not already defined.
+Add a new custom typeface token if
+your project uses a typeface not already
+defined by USWDS.
 ----------------------------------------
-The following faces are defined in the
-system:
-
+USWDS defines the following tokens
+by default:
+----------------------------------------
 'georgia'
 'helvetica'
 'merriweather'
@@ -39,52 +39,70 @@ system:
 'tahoma'
 'verdana'
 ----------------------------------------
+Add as many new tokens as you have
+custom typefaces. Reference your new
+token(s) in the type-based font settings
+using the quoted name of the token.
+
+For example:
+
+$theme-font-type-cond: 'example-font-token';
+
+display-name:
+The display name of your font
+
+cap-height:
+The height of a 500px `N` in Sketch
+----------------------------------------
+You should change `example-[style]-token`
+names to something more descriptive.
+----------------------------------------
 */
 
-$theme-font-definitions: (
+$font-stack-helvetica: 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+
+$theme-typeface-tokens: (
   'source-sans-pro-plus': (
-    name: 'Source Sans Pro Web',
-    dir: 'source-sans-pro-plus',
-    stack: ('Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif),
-    system-font: false,
+    display-name: 'Source Sans Pro Plus Web',
     cap-height: 340px,
-    generate: true,
-    variable-font: false,
-    roman: (
-      100: false,
-      200: false,
-      300: 'sourcesanspro-light-webfont',
-      400: 'sourcesanspro-regular-webfont',
-      500: false,
-      600: 'sourcesanspro-semibold-webfont',
-      700: 'sourcesanspro-bold-webfont',
-      800: false,
-      900: false,
+    stack: $font-stack-helvetica,
+    src: (
+      dir: 'source-sans-pro-plus',
+      roman: (
+        100: false,
+        200: false,
+        300: 'sourcesanspro-light-webfont',
+        400: 'sourcesanspro-regular-webfont',
+        500: false,
+        600: 'sourcesanspro-semibold-webfont',
+        700: 'sourcesanspro-bold-webfont',
+        800: false,
+        900: false,
+      ),
+      italic: (
+        100: false,
+        200: false,
+        300: false,
+        400: 'sourcesanspro-italic-webfont',
+        500: false,
+        600: 'sourcesanspro-semibold-italic-webfont',
+        700: false,
+        800: false,
+        900: false,
+      ),
     ),
-    italic: (
-      100: false,
-      200: false,
-      300: false,
-      400: 'sourcesanspro-italic-webfont',
-      500: false,
-      600: 'sourcesanspro-semibold-italic-webfont',
-      700: false,
-      800: false,
-      900: false,
-    ),
-  )
+  ),
 );
 
 /*
 ----------------------------------------
-Fonts in use
+Type-based font settings
 ----------------------------------------
-Set the sans, serif, and mono faces for
-your project
+Set the type-based tokens for your
+project from the following tokens,
+or from any new font tokens you added in
+$theme-typeface-tokens.
 ----------------------------------------
-The following faces are defined in the
-system:
-
 'georgia'
 'helvetica'
 'merriweather'
@@ -98,23 +116,26 @@ system:
 ----------------------------------------
 */
 
-$theme-font-sans:   'source-sans-pro-plus';
+$theme-font-type-sans:   'source-sans-pro-plus';
 
 /*
 ----------------------------------------
-Fonts by role
+Role-based font settings
 ----------------------------------------
-Set the ui, heading, body, code, and alt
-faces for your project from
-
-$theme-font-sans
-$theme-font-serif
-$theme-font-mono
-$theme-font-cond
+Set the role-based tokens for your
+project from the following font-type
+tokens.
+----------------------------------------
+'cond'
+'icon'
+'lang'
+'mono'
+'sans'
+'serif'
 ----------------------------------------
 */
 
-$theme-font-heading:  $theme-font-sans;
+$theme-font-role-heading:   'sans';
 
 /*
 ----------------------------------------
