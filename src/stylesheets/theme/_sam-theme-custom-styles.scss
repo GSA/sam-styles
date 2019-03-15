@@ -23,15 +23,15 @@ SAM THEME CUSTOM STYLES
 // -------------------------------------
 @import '../components/toolbar';
 
-.usa-form-group-error {
-  border: none;
-  margin-top: 0;
-  padding-left: 0;
-  position: static;
-  @include at-media('desktop') {
-    margin-left: 0;
-  }
-}
+// .usa-form-group-error {
+//   border: none;
+//   margin-top: 0;
+//   padding-left: 0;
+//   position: static;
+//   @include at-media('desktop') {
+//     margin-left: 0;
+//   }
+// }
 
 // Code samples ---------------------- //
 
@@ -301,10 +301,4 @@ $theme-table-column-gap: 4;
   table & {
     display: block;
   }
-}
-
-.preview .usa-background-dark {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  display: inline-block;
 }
