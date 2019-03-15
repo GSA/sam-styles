@@ -1,0 +1,40 @@
+.usa-button {
+  // border-radius: radius('btn');
+  @include u-radius(0.3125rem);
+  color: #112f4e;
+  &:hover,
+  &.usa-button--hover {
+    background-color: #b7f5bd;
+    color: #112f4e;
+  }
+
+  &:active,
+  &.usa-button--active {
+    background-color: #112f4e;
+    color: color('white');
+  }
+}
+
+.usa-button--secondary {
+  background-color: #e3f5e1;
+  border: 2px solid #70e17b;
+  &:hover,
+  &.usa-button--hover {
+    border: 2px solid #b7f5bd;
+    background-color: color('white');
+  }
+
+  &:active,
+  &.usa-button--active {
+    color: #112f4e;
+    border-color: #122e51;
+    background-color: color('white');
+  }
+
+  &:disabled,
+  &.usa-button--disabled {
+    color: #dcdee0;
+    border-color: #d6d7d9;
+    background-color: transparent;
+  }
+}

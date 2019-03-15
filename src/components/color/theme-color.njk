@@ -5,7 +5,7 @@
   </h2>
   
   <p>
-    USWDS theme color tokens are divided into five high-level role-based color 
+    SAM theme color tokens are divided into five high-level role-based color 
     families: <code class="highlighter-rouge">base</code>, 
     <code class="highlighter-rouge">primary</code>, 
     <code class="highlighter-rouge">secondary</code>, 
@@ -14,40 +14,10 @@
   </p>
   
   <p>
-    <strong>Base</strong> is a project’s neutral color, typically some tint of 
-    gray, and usually used as the text color throughout.
-  </p>
-  
-  <p>
-    <strong>Primary</strong>, <strong>secondary</strong>, and 
-    <strong>accent</strong> colors can be thought of as falling into a 
-    proportional 60/30/10 relationship: about 60% of your site’s color would be 
-    the primary color family, about 30% would be the secondary color family, and 
-    about 10% would be the accent color families 
-    (<code class="highlighter-rouge">accent-warm</code> and 
-    <code class="highlighter-rouge">accent-cool</code>). Note that these 
-    proportions are for non-base colors. In many cases, the neutral base text 
-    color will be the predominant tone on your site.
-  </p>
-  
-  <p>
-    Each color family has seven possible lightness grades, from 
-    <code class="highlighter-rouge">lightest</code> to 
-    <code class="highlighter-rouge">darkest</code>, though not every family 
-    needs to include a color at each grade. Some grades may be set to 
-    <code class="highlighter-rouge">false</code> in your project’s theme 
-    settings. The default USWDS theme palette does not use every grade for every 
-    family. The <code class="highlighter-rouge">primary</code> and 
-    <code class="highlighter-rouge">secondary</code> families also have a 
-    <code class="highlighter-rouge">vivid</code> grade available.
-  </p>
-  
-  <p>
-    Customize theme color tokens using the variables listed below in 
-    <code class="highlighter-rouge">_sam_theme_color.scss</code> with 
-    <a href="https://v2.designsystem.digital.gov/design-tokens/color/system-tokens/">
-    system color tokens</a>. Set any unused theme color to 
-    <code class="highlighter-rouge">false</code>.
+    For more information: 
+    <a class="usa-link" href="https://v2.designsystem.digital.gov/design-tokens/color/system-tokens/">
+     USWDS system color tokens
+    </a>
   </p>
   
   <div class="site-table-wrapper">
@@ -71,14 +41,14 @@
             <span class="utility-class font-mono-2xs">'base-lightest'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'gray-5'
+            'gray-warm-4'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-base-lightest
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #f0f0f0
+            #f5f5f0
           </td>
         </tr>
         
@@ -90,14 +60,14 @@
             <span class="utility-class font-mono-2xs">'base-lighter'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'gray-cool-10'
+            'gray-warm-10'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-base-lighter
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #dbdee1
+            #e6e6e2
           </td>
         </tr>
         
@@ -109,14 +79,14 @@
             <span class="utility-class font-mono-2xs">'base-light'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'gray-30'
+            'gray-warm-30'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-base-light
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #adadad
+            #afaea2
           </td>
         </tr>
         
@@ -128,14 +98,14 @@
             <span class="utility-class font-mono-2xs">'base'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'gray-50'
+            'gray-warm-50'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-base
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #757575
+            #76766a
           </td>
         </tr>
         
@@ -147,14 +117,14 @@
             <span class="utility-class font-mono-2xs">'base-dark'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'gray-cool-60'
+            'gray-warm-60'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-base-dark
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #585c62
+            #5d5d52
           </td>
         </tr>
         
@@ -166,14 +136,14 @@
             <span class="utility-class font-mono-2xs">'base-darker'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'gray-cool-80'
+            'gray-warm-70'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-base-darker
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #2d2e2f
+            #454540
           </td>
         </tr>
         
@@ -185,14 +155,14 @@
             <span class="utility-class font-mono-2xs">'base-darkest'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'gray-90'
+            'gray-warm-80'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-base-darkest
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #171717
+            #2e2e2a
           </td>
         </tr>
         
@@ -204,14 +174,14 @@
             <span class="utility-class font-mono-2xs">'ink'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'gray-90'
+            'gray-warm-80'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-ink
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #171717
+            #2e2e2a
           </td>
         </tr>
         
@@ -223,14 +193,14 @@
             <span class="utility-class font-mono-2xs">'primary-lighter'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'blue-10'
+            'green-cool-5v'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-primary-lighter
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #d9e8f6
+            #e3f5e1
           </td>
         </tr>
         
@@ -242,14 +212,14 @@
             <span class="utility-class font-mono-2xs">'primary-light'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'blue-30'
+            'green-cool-10v'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-primary-light
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #73b3e7
+            #b7f5bd
           </td>
         </tr>
         
@@ -261,14 +231,14 @@
             <span class="utility-class font-mono-2xs">'primary'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'blue-60v'
+            'green-cool-20v'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-primary
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #005ea2
+            #70e17b
           </td>
         </tr>
         
@@ -280,14 +250,14 @@
             <span class="utility-class font-mono-2xs">'primary-vivid'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'blue-warm-60v'
+            'green-cool-30v'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-primary-vivid
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #0050d8
+            #21c834
           </td>
         </tr>
         
@@ -299,14 +269,14 @@
             <span class="utility-class font-mono-2xs">'primary-dark'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'blue-warm-70v'
+            'green-cool-40v'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-primary-dark
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #1a4480
+            #00a91c
           </td>
         </tr>
         
@@ -318,14 +288,14 @@
             <span class="utility-class font-mono-2xs">'primary-darker'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'blue-warm-80v'
+            'green-cool-50v'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-primary-darker
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #162e51
+            #008817
           </td>
         </tr>
         
@@ -337,14 +307,14 @@
             <span class="utility-class font-mono-2xs">'secondary-lighter'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'red-10'
+            'blue-warm-30v'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-secondary-lighter
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #f8e1de
+            #81aefc
           </td>
         </tr>
         
@@ -356,14 +326,14 @@
             <span class="utility-class font-mono-2xs">'secondary-light'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'red-30'
+            'blue-warm-40v'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-secondary-light
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #f2938c
+            #5994f6
           </td>
         </tr>
         
@@ -375,14 +345,14 @@
             <span class="utility-class font-mono-2xs">'secondary'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'red-50'
+            'blue-warm-50v'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-secondary
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #d83933
+            #2672de
           </td>
         </tr>
         
@@ -394,14 +364,14 @@
             <span class="utility-class font-mono-2xs">'secondary-vivid'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'red-50v'
+            'blue-warm-60v'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-secondary-vivid
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #e52207
+            #0050d8
           </td>
         </tr>
         
@@ -413,14 +383,14 @@
             <span class="utility-class font-mono-2xs">'secondary-dark'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'red-60v'
+            'blue-warm-70v'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-secondary-dark
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #b51d09
+            #1a4480
           </td>
         </tr>
         
@@ -432,14 +402,14 @@
             <span class="utility-class font-mono-2xs">'secondary-darker'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'red-70v'
+            'blue-warm-80v'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-secondary-darker
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #8b1303
+            #162e51
           </td>
         </tr>
         
@@ -451,14 +421,14 @@
             <span class="utility-class font-mono-2xs">'accent-cool-lighter'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'cyan-5'
+            'blue-5'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-accent-cool-lighter
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #e7f6f8
+            #eff6fb
           </td>
         </tr>
         
@@ -470,14 +440,14 @@
             <span class="utility-class font-mono-2xs">'accent-cool-light'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'cyan-20'
+            'blue-10'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-accent-cool-light
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #9ddfeb
+            #d9e8f6
           </td>
         </tr>
         
@@ -489,14 +459,14 @@
             <span class="utility-class font-mono-2xs">'accent-cool'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'cyan-30v'
+            'blue-20'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-accent-cool
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #00bde3
+            #aacdec
           </td>
         </tr>
         
@@ -508,14 +478,14 @@
             <span class="utility-class font-mono-2xs">'accent-cool-dark'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'cyan-40v'
+            'blue-30'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-accent-cool-dark
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #009ec1
+            #73b3e7
           </td>
         </tr>
         
@@ -527,14 +497,14 @@
             <span class="utility-class font-mono-2xs">'accent-cool-darker'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'blue-60'
+            'blue-40'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-accent-cool-darker
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #2c608a
+            #4f97d1
           </td>
         </tr>
         
@@ -546,14 +516,14 @@
             <span class="utility-class font-mono-2xs">'accent-warm-lighter'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'orange-10'
+            'gold-5'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-accent-warm-lighter
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #fce2c5
+            #f5f0e6
           </td>
         </tr>
         
@@ -565,14 +535,14 @@
             <span class="utility-class font-mono-2xs">'accent-warm-light'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'orange-20v'
+            'gold-10'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-accent-warm-light
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #ffbc78
+            #f1e5cd
           </td>
         </tr>
         
@@ -584,14 +554,14 @@
             <span class="utility-class font-mono-2xs">'accent-warm'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'orange-30v'
+            'gold-20'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-accent-warm
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #fa9441
+            #dec69a
           </td>
         </tr>
         
@@ -603,14 +573,14 @@
             <span class="utility-class font-mono-2xs">'accent-warm-dark'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'orange-50v'
+            'gold-30'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-accent-warm-dark
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #c05600
+            #c7a97b
           </td>
         </tr>
         
@@ -622,14 +592,14 @@
             <span class="utility-class font-mono-2xs">'accent-warm-darker'</span>
           </td>
           <td data-title="Default" class="font-mono-2xs">
-            'orange-60'
+            'gold-40'
           </td>
           <td data-title="Settings var" class="font-mono-2xs">
             $theme-color-accent-warm-darker
           </td>
           <td data-title="Value" class="font-mono-2xs text-right">
             
-            #73563e
+            #ad8b65
           </td>
         </tr>
         

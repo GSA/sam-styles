@@ -26,3 +26,11 @@ Values
 // .background-color
 
 $background-color-palettes: ('palette-color-state');
+
+// .border-radius
+
+// $project-border-radius: (
+//   'sm':         units($theme-border-radius-sm),
+// );
+// $border-radius-palettes: ('palette-border-radius-default');
+$border-radius-manual-values: ( ('btn' : 5px) );

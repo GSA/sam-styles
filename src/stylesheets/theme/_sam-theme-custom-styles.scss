@@ -17,21 +17,12 @@ SAM THEME CUSTOM STYLES
 
 // Elements
 // -------------------------------------
+@import '../elements/buttons';
 @import '../elements/tags';
 
 // Components
 // -------------------------------------
 @import '../components/toolbar';
-
-// .usa-form-group-error {
-//   border: none;
-//   margin-top: 0;
-//   padding-left: 0;
-//   position: static;
-//   @include at-media('desktop') {
-//     margin-left: 0;
-//   }
-// }
 
 // Code samples ---------------------- //
 

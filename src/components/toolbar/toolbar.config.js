@@ -1,6 +1,6 @@
 module.exports = {
 	title: "Toolbar",
-  status: "wip",
+  status: "prototype",
   context: {
   }
 };
