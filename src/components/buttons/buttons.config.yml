@@ -1,5 +1,5 @@
 label: Buttons
-status: wip
+status: ready
 order: 3
 preview: "@sam-content"
 default: "primary"
