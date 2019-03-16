@@ -46,7 +46,7 @@ const themeConfig = {
   panels: ["html", "resources"],
   scripts: [
     "default",
-    "https://unpkg.com/@stackblitz/sdk/bundles/sdk.umd.js"
+    // "https://unpkg.com/@stackblitz/sdk/bundles/sdk.umd.js"
   ]
 }
 

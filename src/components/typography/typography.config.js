@@ -1,6 +1,6 @@
 module.exports = {
 	title: "Typography",
-  status: "wip",
+  status: "ready",
   order: 2,
   preview: "@sam-content",
   context: {

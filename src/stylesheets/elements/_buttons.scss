@@ -107,3 +107,18 @@
     background-color: transparent;
   }
 }
+
+.usa-button--tertiary {
+  background-color: color('error');
+  &:hover,
+  &.usa-button--hover {
+    background-color: color('error-lighter');
+  }
+
+  &:active,
+  &.usa-button--active {
+    color: color('white');
+    background-color: color('error-dark');
+  }
+
+}

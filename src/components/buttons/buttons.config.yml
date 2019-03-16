@@ -10,11 +10,11 @@ variants:
       label: Secondary buttons
       classes: 'usa-button--secondary'
 
-  # - name: accent-cool
-  #   context:
-  #     category: alternate
-  #     label: Accent cool buttons
-  #     classes: 'usa-button--accent-cool'
+  - name: tertiary
+    context:
+      category: alternate
+      label: Tertiary buttons
+      classes: 'usa-button--tertiary'
 
   - name: base
     context:
