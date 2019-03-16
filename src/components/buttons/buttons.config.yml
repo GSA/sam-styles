@@ -2,6 +2,7 @@ label: Buttons
 status: wip
 order: 3
 preview: "@sam-content"
+default: "primary"
 variants:
   - name: secondary
     context:
@@ -9,11 +10,11 @@ variants:
       label: Secondary buttons
       classes: 'usa-button--secondary'
 
-  - name: accent-cool
-    context:
-      category: alternate
-      label: Accent cool buttons
-      classes: 'usa-button--accent-cool'
+  # - name: accent-cool
+  #   context:
+  #     category: alternate
+  #     label: Accent cool buttons
+  #     classes: 'usa-button--accent-cool'
 
   - name: base
     context:
