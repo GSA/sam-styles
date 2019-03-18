@@ -1,3 +1,17 @@
+.sam-tag.sam-tag--chip {
+  background-color: color('primary-lighter');
+  border: 1px solid color('primary');
+  font-weight: font-weight('semibold');
+  font-size: 14px;
+  padding: 2px 5px;
+}
+
+.sam-tag.sam-tag--chip .sam-tag__close {
+  @include button-unstyled;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
 .sam.label:not(.input) {
   background-color: #dce4ef;
   white-space: nowrap;
