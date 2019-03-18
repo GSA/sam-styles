@@ -1,114 +1,90 @@
 <style>
-  .toolbar{
-    /* margin: 20px 15px 20px 20px; */
+  .toolbar {
     display: inline-block;
     border: 1px solid #fff;
-    transition:all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     grid-column-start: 1;
     grid-column-end: 2;
   }
-  .toolbar.expanded{
+
+  .toolbar.expanded {
     border: 1px solid #d8d8d8;
     width: 300px;
-    box-shadow: 0 14px 24px 0 rgba(0,0,0,0.06);
+    box-shadow: 0 14px 24px 0 rgba(0, 0, 0, 0.06);
     border-radius: 1px;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
   }
 
-  .toolbar.expanded .toolbar-dropdown{
+  .toolbar.expanded .toolbar-dropdown {
     padding: 10px 15px;
   }
+
   .toolbar-dropdown {
     position: relative;
-    transition:all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
 
-  .toolbar-select{
+  .toolbar-select {
     background-color: #F7F9FA;
     border: 1px solid #979797;
     padding: 6px;
     border-radius: 4px;
-    width: 68px;
+    width: 45px;
     height: 44px;
   }
 
-  .toolbar-toggle-button{
+  .toolbar-toggle-button {
     background-color: #fff;
     display: block;
     width: 31px;
-    height: 29px;;
+    height: 29px;
+    ;
     border: 1px solid #000000;
     padding: 5px;
     border-radius: 3px;
-    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.29);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.29);
   }
 
-  .toolbar-toggle-button span{
+  .toolbar-toggle-button span {
     position: absolute;
     left: -999em;
   }
 
-  .toolbar-toggle-button::before{
+  .toolbar-toggle-button::before {
     content: '';
     display: block;
     background-color: #EFF6FB;
-    border: 2px solid #112F4E ;
+    border: 2px solid #112F4E;
     width: 9px;
-    transition:all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
-  .toolbar-toggle-button:hover::before{
+  .toolbar-toggle-button:hover::before {
     background-color: #B7F5BD;
   }
 
-  .toolbar-toggle-button.collapsed::before{
+  .toolbar-toggle-button.collapsed::before {
     height: 9px;
   }
 
-  .toolbar-toggle-button.expanded::before{
+  .toolbar-toggle-button.expanded::before {
     height: 18px;
   }
 
-  .toolbar-options{
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    top: 45px;
-    list-style: none;
-    background-color: white;
-    padding: 3px 7px;
-    border: 1px solid #d8d8d8;
-    box-shadow: 0 14px 24px 0 rgba(0,0,0,0.06);
-  }
-
-  .toolbar.expanded .toolbar-options{
-    top: 57px;
-  }
-
-  .toolbar-options a{
-    text-decoration: none;
-    color: #112F4E;
-  }
-
-  .toolbar-options a:hover{
-    color: #5994F6;
-  }
-
-  .toolbar-options,
-  .toolbar-expanded-content{
+  .toolbar-expanded-content {
     opacity: 0;
     display: none;
-    transition:opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
   }
-  .toolbar-options.open,
-  .toolbar-expanded-content.open{
+
+  .toolbar-expanded-content.open {
     opacity: 1;
     display: block;
   }
 
-  .accordion{
+  .accordion {
     padding: 12px 16px;
     border-top: 1px solid #d8d8d8;
     border-bottom: 1px solid #d8d8d8;
@@ -119,56 +95,75 @@
     margin-right: -1px;
     margin-bottom: 6px;
   }
-  .accordion.open{
+
+  .accordion.open {
     background-color: #EFF6FB;
-    box-shadow: inset 0 1px 7px 0 rgba(30,75,198,0.16);
+    box-shadow: inset 0 1px 7px 0 rgba(30, 75, 198, 0.16);
     border-left: 1px solid #aac0d0;
     border-right: 1px solid #aac0d0;
     border-color: #aac0d0;
-    transition:all 0.2s ease-in;
+    transition: all 0.2s ease-in;
   }
-  .accordion-header a{
+
+  .accordion-header a {
     font-size: 16px;
     font-weight: 600;
     color: #373737;
     text-decoration: none;
-    transition:all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
-  .accordion.open .accordion-header a{
+
+  .accordion.open .accordion-header a {
     color: #0A3466;
   }
-  .accordion-content{
+
+  .accordion-content {
     display: none;
   }
-  .accordion.open .accordion-content{
+
+  .accordion.open .accordion-content {
     padding-top: 10px;
     display: block;
   }
 
-  .page{
+  .page {
     margin: 20px;
     display: grid;
     grid-template-columns: 80px 235px auto;
     grid-template-rows: 46px auto;
   }
-  .page-content-header{
+
+  .page-content-header {
     grid-column-start: 2;
     grid-column-end: -1;
     grid-row-start: 1;
     grid-row-end: 2;
     align-self: center;
   }
-  .toolbar.expanded + .page-content-header{
+
+  .toolbar.expanded+.page-content-header {
     grid-column-start: 3;
   }
-  .page-content{
+
+  .page-content {
     grid-column-start: 1;
     grid-column-end: -1;
     grid-row-start: 2;
     grid-row-end: -1;
   }
-  .toolbar.expanded + .page-content-header + .page-content{
+
+  .toolbar.expanded+.page-content-header+.page-content {
     grid-column-start: 3;
+  }
+
+  .accordion-content nav{
+    border: 2px solid #D6D7D9;
+    border-radius: 0px 6px 6px 0px;
+    background-color: white;
+  }
+
+  .accordion-content nav .usa-sidenav{
+    border-bottom: none;
   }
 </style>
 
@@ -182,11 +177,6 @@
           <span>Collapse</span>
         </a>
       </div>
-      <ul class="toolbar-options">
-        <li>
-          <a class="toolbar-expand-button" href="">Expand</a>
-        </li>
-      </ul>
     </div>
 
     <div class="toolbar-expanded-content">
@@ -194,7 +184,38 @@
         <div class="accordion-header">
           <a href="">Navigation</a>
         </div>
-        <div class="accordion-content">Navigation Content</div>
+        <div class="accordion-content">
+          <nav>
+            <ul class="usa-sidenav">
+              <li class="usa-sidenav__item">
+                <a href="">Parent link</a>
+              </li>
+              <li class="usa-sidenav__item">
+                <a href="" class="usa-current">Current page</a>
+                <ul class="usa-sidenav__sublist">
+                  <li class="usa-sidenav__item">
+                    <a href="">Child link</a>
+                  </li>
+                  <li class="usa-sidenav__item">
+                    <a href="">Child link</a>
+                  </li>
+                  <li class="usa-sidenav__item">
+                    <a href="">Child link</a>
+                  </li>
+                  <li class="usa-sidenav__item">
+                    <a href="">Child link</a>
+                  </li>
+                  <li class="usa-sidenav__item">
+                    <a href="" class="usa-current">Child link</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="usa-sidenav__item">
+                <a href="">Parent link</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
       <div class="accordion">
         <div class="accordion-header">
@@ -213,54 +234,31 @@
   <div class="page-content">
     <h3>Frontier Allied Partners, Inc</h3>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet faucibus arcu id bibendum. Mauris eleifend massa
-      purus, eu volutpat erat placerat egestas. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet faucibus arcu id bibendum. Mauris eleifend
+      massa
+      purus, eu volutpat erat placerat egestas.
     </p>
   </div>
 </div>
 
 
 <script>
-  
+
   const toolbarEl = document.querySelector('.toolbar');
   const toggleBtnEl = document.querySelector('.toolbar-toggle-button');
-  const toolbarContentEl = document.querySelector('.toolbar-options');
-  const toolbarExpandBtnEl = document.querySelector('.toolbar-expand-button');
   const toolbarExpandCtnEl = document.querySelector('.toolbar-expanded-content');
 
-  toggleBtnEl.addEventListener('click', function(event){
-    toolbarContentEl.classList.toggle('open');
-    event.preventDefault();
-  });
-  
-  toolbarExpandBtnEl.addEventListener('click', (event) => {
-
-    // Update toggle button
-    if(toolbarExpandBtnEl.innerHTML == 'Expand'){
-      toggleBtnEl.classList.remove('collapsed');
-      toggleBtnEl.classList.add('expanded');
-      toggleBtnEl.querySelector('span').innerHTML = 'Expand';
-      toolbarExpandBtnEl.innerHTML = 'Collapse';
-    } else {
-      toggleBtnEl.classList.remove('expanded');
-      toggleBtnEl.classList.add('collapsed');
-      toggleBtnEl.querySelector('span').innerHTML = 'Collapse';
-      toolbarExpandBtnEl.innerHTML = 'Expand';
-    }
-    
-    // Close Options
-    toolbarContentEl.classList.toggle('open');
-
-    // Close/Open expanded content
-    if(toggleBtnEl.querySelector('span').innerHTML == 'Expand'){
+  toggleBtnEl.addEventListener('click', function (event) {
+    toggleBtnEl.classList.toggle('expanded');
+    if (toggleBtnEl.classList.contains('expanded')) {
       toolbarEl.classList.add('expanded');
       toolbarExpandCtnEl.classList.add('open');
+      toggleBtnEl.querySelector('span').innerHTML = 'Expand';
     } else {
       toolbarEl.classList.remove('expanded');
       toolbarExpandCtnEl.classList.remove('open');
+      toggleBtnEl.querySelector('span').innerHTML = 'Collapse';
     }
-
-    // Prevent default click
     event.preventDefault();
   });
 
