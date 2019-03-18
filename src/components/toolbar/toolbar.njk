@@ -168,7 +168,7 @@
   .filters .filter-header a{
     text-decoration: none;
     color: #323A45;
-
+    font-weight: 600;
   }
   .filters .filter-content{
     display: none;
@@ -182,6 +182,9 @@
     margin-left: -10px;
     margin-right: -10px;
     padding: 0px 10px 15px 10px;
+  }
+  .filters .filter-content .selected-chips{
+    margin-top: 5px;
   }
 </style>
 
@@ -248,7 +251,26 @@
               <div class="filter-content">
                 <label class="usa-label" for="input-type-naics">NAICS</label>
                 <input class="usa-input" id="input-type-naics" name="input-type-naics" type="text">
-
+                <div class="selected-chips">
+                  <span class="sam-tag sam-tag--chip">
+                    111140 -- Wheat Farming
+                    <button class="sam-tag__close">
+                      <span class="fas fa-times" aria-hidden="true"></span>
+                    </button>
+                  </span>
+                  <span class="sam-tag sam-tag--chip">
+                      212222 -- Silver Ore Mining
+                    <button class="sam-tag__close">
+                      <span class="fas fa-times" aria-hidden="true"></span>
+                    </button>
+                  </span>
+                  <span class="sam-tag sam-tag--chip">
+                      541850 -- Outdoor Advertising
+                    <button class="sam-tag__close">
+                      <span class="fas fa-times" aria-hidden="true"></span>
+                    </button>
+                  </span>
+                </div>
                 <label class="usa-label" for="input-type-psc">PSC</label>
                 <input class="usa-input" id="input-type-psc" name="input-type-psc" type="text">
               </div>

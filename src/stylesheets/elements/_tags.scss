@@ -4,6 +4,9 @@
   font-weight: font-weight('semibold');
   font-size: 14px;
   padding: 2px 5px;
+  white-space: nowrap;
+  display: inline-block;
+  margin-bottom: 5px;
 }
 
 .sam-tag.sam-tag--chip .sam-tag__close {
