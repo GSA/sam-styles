@@ -1,6 +1,6 @@
 {
   "name": "@gsa-sam/sam-styles",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,9 +11,7 @@
     "dev": "webpack --env.mode development --watch --progress",
     "prod": "webpack --env.mode production",
     "clean": "rimraf dist",
-    "copy:fonts": "copy './node_modules/uswds/dist/fonts/**/*.*' ./src/fonts",
-    "copy:images": "copy './node_modules/uswds/dist/img/**/*.*' ./src/img",
-    "copy:assets": "npm run copy:fonts && npm run copy:images",
+    "copy:assets": " node setup.js",
     "postinstall": "npm run clean && npm run copy:assets",
     "test": "jest"
   },
@@ -28,7 +26,7 @@
     "@frctl/fractal": "^1.1.7",
     "@frctl/mandelbrot": "^1.2.0",
     "@frctl/nunjucks": "^1.0.3",
-    "uswds": "2.0.0-beta.6",  
+    "uswds": "2.0.0-beta.6",
     "copy": "^0.3.2",
     "copy-webpack-plugin": "^5.0.1"
   },
