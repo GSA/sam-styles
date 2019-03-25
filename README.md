@@ -12,7 +12,7 @@ npm start
 
 Then, visit [http://localhost:3000/](http://localhost:3000/) to see sam-styles in action.
 
-_**Optional**: To re-build when CSS changes are made, run the following command from the project directory in a separate terminal window:_
+To re-build when CSS changes are made, run the following command from the project directory in a separate terminal window:
 ```sh
-npm run watch
+npm run prod
 ```

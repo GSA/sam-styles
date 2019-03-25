@@ -13,15 +13,13 @@ SAM THEME CUSTOM STYLES
 
 // Elements
 // -------------------------------------
-@import '../elements/inputs';
-
-// Elements
-// -------------------------------------
 @import '../elements/buttons';
+@import '../elements/inputs';
 @import '../elements/tags';
 
 // Components
 // -------------------------------------
+@import '../components/sidenav';
 @import '../components/toolbar';
 
 // Code samples ---------------------- //

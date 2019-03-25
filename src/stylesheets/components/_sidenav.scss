@@ -1,0 +1,23 @@
+.usa-sidenav {
+  a {
+    color: color('base-darkest');
+    font-weight: font-weight('semibold');
+    &:hover {
+      background-color: color('base-lightest');
+      color: color('secondary-light');
+    }
+  }
+
+  .usa-current {
+    @include add-bar(
+      $theme-sidenav-current-border-width,
+      'secondary-darker',
+      'left',
+      0,
+      0,
+      0.5
+    );
+    color: color('secondary-darker');
+    font-weight: font-weight('semibold');
+  }
+}
