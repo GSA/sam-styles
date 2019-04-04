@@ -6,6 +6,10 @@ variants:
     label: Compare
     status: null
 
+  - name: header--sam
+    label: SAM Header
+    status: null
+
   - name: extended
     label: Extended header
     context:

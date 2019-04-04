@@ -4,5 +4,10 @@ status: wip
 variants:
   - name: default
     label: Medium
+    status: null
+
+  - name: footer--sam
+    label: SAM Footer
+    status: null
 
 context: {}
