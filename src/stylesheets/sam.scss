@@ -10,27 +10,27 @@
       SB ADDED HEADER
 *******************************/
 .usa-menu-btn.sam-header-menu-btn {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 
 .usa-nav-close img {
-  width: 7rem !important;
+  width: 2rem;
 }
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .sam-mobile-usa-unstyled-list {
-    display: none !important;
+    display: none;
   }
 
-  #sam-navbar {
+  .usa-nav {
     background-color: white;
   }
 
-  #sam-navbar-content > * > * > * {
-    font-size: 20px !important;
-    color: #212121 !important;
-    letter-spacing: 0 !important;
-    line-height: 14px !important;
-    font-weight: normal !important;
+  .usa-nav-primary.usa-accordion > * > * > * {
+    font-size: 20px;
+    color: #212121;
+    letter-spacing: 0;
+    line-height: 14px;
+    font-weight: normal;
   }
 
   .usa-nav-link {
@@ -38,30 +38,22 @@
   }
 
   .usa-accordion-button .usa-nav-link > span::after {
-    background-color: #70E17B !important;
+    background-color: #70e17b;
   }
 
-  .usa-nav-primary button[aria-expanded=true] {
-    background-color: #EFF6FB !important;
+  .usa-nav-primary button [aria-expanded=true] {
+    background-color: #eff6fb;
   }
 
   .usa-nav-submenu {
-    width: 20rem !important;
+    width: 20rem;
   }
 
-  #extended-nav-section-one,
-  #extended-nav-section-two {
-    background-color: #EFF6FB;
+  .usa-nav-submenu {
+    background-color: #eff6fb;
   }
 
-  #extended-nav-section-one > li > a {
-    font-size: 18px;
-    color: #212121;
-    text-align: left;
-    line-height: 30px;
-  }
-
-  #extended-nav-section-two > li > a {
+  .usa-nav-submenu > li > a {
     font-size: 18px;
     color: #212121;
     text-align: left;
@@ -76,25 +68,25 @@
   .usa-header-extended .usa-current::after,
   .usa-header-extended .usa-nav-link:hover::after,
   .usa-header-extended [aria-expanded=true]::after {
-    background-color: #70E17B !important;
-    width: 100% !important;
-    left: 1px !important;
-    right: 1px !important;
+    background-color: #70e17b;
+    width: 100%;
+    left: 1px;
+    right: 1px;
   }
 
   .usa-nav-link {
-    text-decoration: none !important;
+    text-decoration: none;
   }
 
   .usa-accordian-button,
   .usa-focus,
   .usa-nav-link {
-    outline: none !important;
-    box-shadow: none !important;
+    outline: none;
+    box-shadow: none;
   }
 
-  #sam-secondary-header-nav > li {
-    display: inline-block !important;
+  .sam-usa-unstyled-list.usa-nav-secondary-links > li {
+    display: inline-block;
     font-size: 14px;
     color: #757575;
     letter-spacing: 0;
@@ -103,7 +95,7 @@
   }
 
   .usa-nav-secondary {
-    position: relative !important;
+    position: relative;
   }
 
   .sam-header > .usa-header-extended .usa-navbar {
@@ -114,7 +106,7 @@
     overflow: hidden;
   }
 
-  #sam-usa-navbar {
+  .usa-nav-primary.usa-accordion {
     margin: 0 3rem;
     padding: 0;
     background-color: white;
@@ -129,9 +121,9 @@
     max-height: 50px;
   }
 
-  .usa-nav-primary button[aria-expanded=false] {
-    background-image: url("/assets/sam-styles/uswds/img/arrow-down.png");
-    background-image: url(/assets/sam-styles/uswds/img/arrow-down.svg), linear-gradient(transparent, transparent) !important;
+  .usa-nav-primary button [aria-expanded=false] {
+    background-image: url ('/dist/img/arrow-down.png');
+    //background-image: url (/dist/img/arrow-down.svg), linear-gradient(transparent, transparent);
     background-repeat: no-repeat;
     background-position: right 0 center;
     background-size: 1.2rem;
@@ -142,39 +134,39 @@
     align-items: baseline;
   }
 }
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .sam-usa-unstyled-list {
-    display: none !important;
+    display: none;
   }
 
   .usa-nav.is-visible {
-    background-color: #EFF6FB;
+    background-color: #eff6fb;
   }
 
-  .usa-nav-primary button[aria-expanded=false] {
-    background-image: url("/assets/sam-styles/uswds/img/arrow-right.png");
-    background-image: url(/assets/sam-styles/uswds/img/arrow-right.svg), linear-gradient(transparent, transparent) !important;
+  .usa-nav-primary button [aria-expanded=false] {
+    background-image: url ('/dist/img/arrow-right.png');
+    //background-image: url (/dist/img/arrow-right.svg), linear-gradient(transparent, transparent);
     background-repeat: no-repeat;
     background-position: right 0 center;
     background-size: 1.2rem;
   }
 
-  .usa-nav-primary button[aria-expanded=true] {
-    background-image: url("/assets/sam-styles/uswds/img/arrow-down.png");
-    background-image: url(/assets/sam-styles/uswds/img/arrow-down.svg), linear-gradient(transparent, transparent) !important;
+  .usa-nav-primary button [aria-expanded=true] {
+    background-image: url ('/dist/img/arrow-down.png');
+    //background-image: url (/dist/img/arrow-down.svg), linear-gradient(transparent, transparent);
     background-repeat: no-repeat;
     background-position: right 0 center;
     background-size: 1.2rem;
   }
 
-  #sam-header-btn:hover {
-    background-color: #EFF6FB !important;
+  .usa-accordion-button .usa-nav-link:hover {
+    background-color: #eff6fb;
   }
 
-  #sam-header-btn:focus {
-    border-bottom: 3px solid #70E17B;
-    outline: none !important;
-    box-shadow: none !important;
+  .usa-accordion-button .usa-nav-link:focus {
+    border-bottom: 3px solid #70e17b;
+    outline: none;
+    box-shadow: none;
     color: #212121;
   }
 }
@@ -188,7 +180,7 @@
 }
 
 .sam-sign-out > a {
-  color: black !important;
+  color: black;
 }
 
 .beta-sam-logo {
@@ -204,7 +196,7 @@
 
 .sam-footer {
   display: block;
-  background-color: #ECF1F7;
+  background-color: #ecf1f7;
   box-sizing: content-box;
   padding: 10px 150px;
 }
@@ -219,7 +211,7 @@
   width: 100%;
   font-family: SourceSansPro-Regular;
   font-size: 13px;
-  color: #323A44;
+  color: #323a44;
   text-align: left;
   line-height: normal;
 }
@@ -261,7 +253,7 @@
   line-height: 26px;
   font-weight: 500;
 }
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .sam-footer {
     padding: 5% 10%;
   }
@@ -304,7 +296,7 @@
   font-size: 20px;
   font-weight: 500;
   margin: auto 0;
-  padding: 0 !important;
+  padding: 0;
 }
 
 .sam-pagination-expanded {
