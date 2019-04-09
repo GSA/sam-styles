@@ -9,7 +9,7 @@
 /*******************************
       SB ADDED HEADER
 *******************************/
-.usa-menu-btn.sam-header-menu-btn {
+.usa-menu-btn.sam-header__menu-btn {
   background-color: transparent;
 }
 
@@ -201,13 +201,13 @@
   padding: 10px 150px;
 }
 
-.sam-footer-content {
+.sam-footer__content {
   display: flex;
   flex-direction: row;
   margin: 20px 0;
 }
 
-.sam-footer-text {
+.sam-footer__text {
   width: 100%;
   font-family: SourceSansPro-Regular;
   font-size: 13px;
@@ -230,14 +230,14 @@
   margin-top: 5px;
 }
 
-.sam-footer-links {
+.sam-footer__links {
   display: flex;
   flex-direction: column;
   margin: 15px 20px;
   width: 220px;
 }
 
-.sam-footer-links > h4 {
+.sam-footer__links > h4 {
   //font-family: SourceSansPro-Bold;
   font-size: 18px;
   color: #212121;
@@ -245,7 +245,7 @@
   font-weight: bold;
 }
 
-.sam-footer-links > a {
+.sam-footer__links > a {
   //font-family: SourceSansPro-Regular;
   font-size: 16px;
   color: #205493;
@@ -258,7 +258,7 @@
     padding: 5% 10%;
   }
 
-  .sam-footer-content {
+  .sam-footer__content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -274,45 +274,12 @@
     font-size: 16;
   }
 
-  .sam-footer-links {
+  .sam-footer__links {
     padding-top: 10px;
     text-align: center;
   }
 
-  .sam-footer-text {
+  .sam-footer__text {
     text-align: center;
   }
-}
-/*******************************
-        SB ADDED PAGINATION
-  *******************************/
-
-.sam-pagination {
-  display: flex;
-  align-items: baseline;
-}
-
-.sam-pagination > p {
-  font-size: 20px;
-  font-weight: 500;
-  margin: auto 0;
-  padding: 0;
-}
-
-.sam-pagination-expanded {
-  list-style-type: none;
-  padding: 0;
-}
-
-.sam-pagination-expanded > li {
-  display: inline-block;
-  padding: 0.5rem;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.sam-pagination-expanded > li > * {
-  color: black;
-  height: 14px;
-  font-size: 20px;
 }
