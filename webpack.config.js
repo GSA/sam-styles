@@ -16,7 +16,7 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
   return webpackMerge(
     {
       mode,
-      entry: "./src/js/index.js",
+      entry: "./src/js/start.js",
       module: {
         rules: [
           {
