@@ -1,4 +1,9 @@
 .usa-sidenav {
+
+  &__item .usa-sidenav__item {
+    border-top: none;
+  }
+
   a {
     color: color('base-darkest');
     font-weight: font-weight('semibold');
