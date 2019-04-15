@@ -1,115 +1,111 @@
-.sam-accordion {
-  margin: 0;
-  position: relative;
-  width: 80px;
-  min-height: 500px;
+/* stylelint-disable */
+.sam-toolbar,
+.sam-toolbar__header,
+.sam-toolbar__content,
+.sam-page__content {
+  transition: all 0.2s ease-out;
 }
-// stylelint-disable selector-no-qualifying-type
-.sam-accordion dt[role='heading'] {
+
+.sam-toolbar {
+  position: absolute;
+  z-index: 2;
+  border: 1px solid #fff;
+}
+
+.sam-toolbar + * {
+  margin-left: 55px;
+  transition: all 0.2s ease-out;
+}
+
+.sam-toolbar.sam-toolbar--expanded {
   background-color: white;
-  width: 80px;
+  border: 1px solid #d8d8d8;
+  width: 300px;
+  box-shadow: 0 14px 24px 0 rgba(0, 0, 0, 0.06);
 }
-// stylelint-enable selector-no-qualifying-type
-.sam-accordion-trigger {
-  background: none;
-  border: 0;
-  color: hsl(0, 0%, 13%);
+
+.sam-toolbar.sam-toolbar.sam-toolbar--expanded .sam-toolbar__header {
+  padding: 10px 15px;
+}
+
+.sam-toolbar__toggle {
+  background-color: #f7f9fa;
+  border: 1px solid #979797;
+  padding: 6px;
+  border-radius: 4px;
+  width: 45px;
+  height: 44px;
+}
+
+.sam-toolbar__toogle-btn {
+  background-color: #fff;
   display: block;
-  margin: 0;
-  padding: 14px 0;
-  position: relative;
-  text-align: center;
-  width: 100%;
-  font-size: 12px;
-  font-weight: 600;
-  border-radius: 0;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  width: 31px;
+  height: 29px;
+  border: 1px solid #000000;
+  padding: 5px;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
-.sam-accordion-trigger:focus,
-.sam-accordion-trigger:hover {
-  color: hsl(0, 0%, 13%);
-  background-color: #f1f1f1;
-}
-
-.sam-accordion-trigger:hover {
-  border-top: 1px solid #f1f1f1;
-  border-bottom: 1px solid #f1f1f1;
-}
-
-.sam-accordion-trigger:focus {
-  outline-offset: -4px;
-  box-shadow: none;
-}
-
-.sam-accordion-trigger[aria-expanded='true'] {
-  background-color: #f1f1f1;
-  border-top: 1px solid #ccd6df;
-  border-bottom: 1px solid #ccd6df;
-}
-
-.sam-accordion dt:first-child .sam-accordion-trigger {
-  border-top: none;
-}
-
-.sam-accordion dt:last-of-type .sam-accordion-trigger {
-  border-bottom: none;
-}
-
-.sam-accordion-title {
-  display: block; /* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/8295099/ */
-  pointer-events: none;
-}
-
-.sam-accordion-icon {
-  margin: 0 0 5px 0;
+.sam-toolbar__toogle-btn::before {
+  content: "";
   display: block;
-  pointer-events: none;
+  background-color: #eff6fb;
+  border: 2px solid #112f4e;
+  width: 9px;
+  height: 18px;
+  transition: all 0.3s ease-in-out;
 }
 
-.sam-accordion-panel {
-  margin: 0;
-  padding: 20px;
-  position: absolute;
-  top: 0;
-  left: 80px;
-  width: 380px;
-  height: 100%;
-  overflow-y: auto;
-  background-color: #f1f1f1;
-  border-right: 1px solid #ccd6df;
+.sam-toolbar__toogle-btn:hover::before {
+  background-color: #b7f5bd;
 }
 
-.sam-accordion-panel .close {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  cursor: pointer;
+.sam-toolbar.sam-toolbar--expanded .sam-toolbar__toogle-btn::before {
+  height: 9px;
 }
 
-/* width */
-.sam-accordion-panel::-webkit-scrollbar {
-  width: 7px;
-}
-
-/* Track */
-.sam-accordion-panel::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-.sam-accordion-panel::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 0;
-}
-
-/* Handle on hover */
-.sam-accordion-panel::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-/* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4806035/ */
-.sam-accordion-panel[hidden] {
+.sam-toolbar .sam-toolbar__content {
   display: none;
+  opacity: 0;
 }
+
+.sam-toolbar.sam-toolbar--expanded .sam-toolbar__content {
+  display: block;
+  opacity: 1;
+}
+
+/* Accordion inside toolbar tweaks */
+.sam-toolbar.sam-toolbar--expanded .sam-toolbar__content > .sam-accordion {
+  margin-left: -1px;
+  margin-right: -1px;
+  margin-bottom: -1px;
+}
+
+.sam-toolbar.sam-toolbar--expanded
+  .sam-toolbar__content
+  > .sam-accordion
+  > .sam-accordion__item:first-of-type {
+  border-top-width: 0;
+}
+
+.sam-toolbar.sam-toolbar--expanded
+  .sam-toolbar__content
+  > .sam-accordion
+  > .sam-accordion__item {
+  border-left-width: 0;
+  border-right-width: 0;
+}
+
+/* Nav inside toolbar tweaks */
+.sam-toolbar.sam-toolbar--expanded .sam-toolbar__content > .sam-accordion nav {
+  border: 1px solid #d6d7d9;
+  border-radius: 0px 6px 6px 0px;
+  background-color: white;
+}
+
+.sam-toolbar__anim--expanded {
+  margin-left: 320px !important;
+}
+/* stylelint-enable */
