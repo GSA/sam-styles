@@ -2,7 +2,16 @@
   <ul class="usa-nav__secondary-links">
     {%- for link in nav.links -%}
     <li class="usa-nav__secondary-item">
-      <a href="{{ link.href }}"{% if link.current %} class="usa-current"{% endif %}>{{ link.text }}</a>
+      <a href="{{ link.href }}"{% if link.current %} class="usa-current"{% endif %}>
+        {% if link.icon and link.notification %}
+          <span class="icon-layers icon-fw">
+            <i class="fas icon-{{link.icon}}"></i>
+            <span class="icon-layers-counter"></span>
+          </span>
+        {% endif %}
+        {% if link.icon and not link.notification %}<i class="fas icon-{{link.icon}}"></i>{% endif %}
+        {{ link.text }}
+      </a>
     </li>
     {%- endfor -%}
   </ul>

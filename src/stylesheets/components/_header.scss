@@ -1,0 +1,49 @@
+// Header
+// ---------------------------------
+
+.usa-logo {
+  a {
+    // Size of logo
+    width: 140px;
+    height: 30px;
+    color: rgba(0, 0, 0, 0);
+    display: block;
+    @include at-media($theme-navigation-width) {
+      width: 195px;
+      height: 42px;
+    }
+  }
+}
+
+.usa-logo__text {
+  @include add-background-svg('sam/logo');
+}
+
+.usa-menu-btn {
+  @include button-unstyled;
+  margin-right: 10px;
+  // icon- classes come from 'js/component/icons.js'
+  // fontawesome-svg-core
+  .icon-square {
+    color: #70e17b;
+  }
+  .icon-bars {
+    color: #1a4480;
+  }
+  .icon-layers-counter {
+    height: 1em;
+    min-width: 1em;
+    right: 4px;
+  }
+}
+
+// usa-header--extended
+// ---------------------------------
+
+.usa-header--extended {
+  .usa-nav {
+    @include at-media($theme-navigation-width) {
+      box-shadow: 0 7px 18px -7px rgba(0, 0, 0, 0.36);
+    }
+  }
+}

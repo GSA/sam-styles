@@ -1,0 +1,173 @@
+// Header navigation
+// ---------------------------------
+
+.usa-nav {
+  @include at-media-max($theme-navigation-width) {
+    background: color('accent-cool-lighter');
+    &.is-visible {
+      box-shadow: 6px 10px 25px 13px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+// Primary navigation
+// ---------------------------------
+
+.usa-nav__primary {
+  // Until the $theme-navigation-width,
+  // use the usa-nav-list styles for the slide-in nav
+  @include at-media-max($theme-navigation-width) {
+    margin-top: units(2);
+    a {
+      &:hover {
+        color: color($theme-link-hover-color);
+      }
+    }
+  }
+  // just level 1 nav items...
+  > .usa-nav__primary-item {
+    border: none;
+    @include at-media($theme-navigation-width) {
+      font-size: 20px;
+      line-height: line-height($theme-navigation-font-family, 1);
+    }
+    // ...and their direct links
+    > a {
+      @include at-media($theme-navigation-width) {
+        padding-left: units(3);
+        padding-right: units(3);
+        font-weight: font-weight('normal');
+
+        &:hover {
+          color: color('ink');
+        }
+      }
+    }
+  }
+
+  button {
+    position: relative;
+    @include at-media($theme-navigation-width) {
+      padding-left: units(3);
+      padding-right: units(3);
+      font-size: 20px;
+      font-weight: font-weight('normal');
+    }
+    &:hover {
+      color: color('ink');
+    }
+    &::before {
+      content: ' ';
+      border: solid #0a3466;
+      border-width: 0 1px 1px 0;
+      height: 0.5rem;
+      pointer-events: none;
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-60%) rotate(-45deg);
+      width: 0.5rem;
+      border-radius: 0;
+      background-color: transparent;
+      transition: transform 0.2s ease-in;
+      @include at-media($theme-navigation-width) {
+        right: 20px;
+        transform: translateY(-65%) rotate(45deg);
+      }
+    }
+    &[aria-expanded=true]::before { /* stylelint-disable-line selector-no-qualifying-type */
+      transform: translateY(-65%) rotate(45deg);
+      @include at-media($theme-navigation-width) {
+        transform: translateY(-20%) rotate(-135deg);
+      }
+    }
+    &[aria-expanded=true] { /* stylelint-disable-line selector-no-qualifying-type */
+      background-image: none;
+      @include at-media($theme-navigation-width) {
+        background-color: color('accent-cool-lighter');
+        color: color('ink');
+      }
+    }
+    &[aria-expanded=false] { /* stylelint-disable-line selector-no-qualifying-type */
+      background-image: none;
+      &:hover {
+        @include at-media($theme-navigation-width) {
+          background-image: none;
+        }
+      }
+    }
+  }
+}
+
+// Secondary navigation
+// ---------------------------------
+
+.usa-nav__secondary {
+  margin-top: units(2);
+
+  @include at-media($theme-navigation-width) {
+    bottom: units(10); // XXX magic number
+  }
+}
+
+.usa-nav__secondary-links {
+  padding-left: 1rem;
+  @include at-media($theme-navigation-width) {
+    padding-left: 0;
+  }
+
+  .usa-nav__secondary-item {
+    padding-bottom: units(2.5);
+    @include at-media($theme-navigation-width) {
+      padding-bottom: 0;
+    }
+  }
+
+  a {
+    font-size: font-size($theme-navigation-font-family, 'xs');
+
+    &:hover {
+      color: color($theme-link-hover-color);
+    }
+  }
+}
+
+// Navigation dropdowns
+// ---------------------------------
+
+.usa-nav__submenu {
+  @include at-media($theme-navigation-width) {
+    background-color: color('accent-cool-lighter');
+  }
+  .usa-nav__submenu-item {
+    border: none;
+    font-size: font-size($theme-navigation-font-family, 'xs');
+    @include at-media($theme-navigation-width) {
+      a {
+        color: color('base-dark');
+
+        &:hover {
+          color: color('base-dark');
+        }
+      }
+    }
+  }
+}
+
+// Navigation close button
+// ---------------------------------
+
+.usa-nav__close {
+  @include button-unstyled;
+  height: 2.5rem;
+  width: 2.7rem;
+  float: none;
+  // icon- classes come from 'js/component/icons.js'
+  // fontawesome-svg-core
+  .icon-square {
+    color: #70e17b;
+  }
+  .icon-arrow-left {
+    color: #1a4480;
+  }
+}

@@ -1,0 +1,55 @@
+// General footer styles
+
+.usa-footer__primary-section {
+  background-color: color('accent-cool-lighter');
+}
+
+.usa-footer__secondary-link {
+  a {
+    text-decoration: none;
+  }
+}
+
+.usa-footer__secondary-section {
+  background-color: color('accent-cool-lighter');
+  text-align: center;
+  @include at-media('tablet') {
+    text-align: left;
+  }
+}
+
+.usa-footer__logo {
+  @include at-media('mobile-lg') {
+    @include u-flex('align-end');
+  }
+}
+
+.usa-footer__logo-img {
+  max-width: 100px;
+  @include at-media('mobile-lg') {
+    max-width: 100%;
+  }
+  @include at-media('tablet') {
+    min-width: 100px;
+  }
+}
+
+.usa-footer__logo-heading {
+  @include h4;
+  color: #005088;
+  font-weight: 600;
+}
+
+// Big footer styles
+
+.usa-footer--big {
+  .usa-footer__nav {
+    @include at-media('mobile-lg') {
+      text-align: center;
+      border-bottom: none;
+    }
+    @include at-media('tablet') {
+      text-align: left;
+    }
+  }
+}

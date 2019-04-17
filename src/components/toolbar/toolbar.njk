@@ -1,425 +1,212 @@
 <style>
-  .toolbar {
-    display: inline-block;
-    border: 1px solid #fff;
-    transition: all 0.2s ease-in-out;
-    grid-column-start: 1;
-    grid-column-end: 2;
+  .sam-page {
+    margin: 10px;
   }
 
-  .toolbar.expanded {
-    border: 1px solid #d8d8d8;
-    width: 300px;
-    box-shadow: 0 14px 24px 0 rgba(0, 0, 0, 0.06);
-    border-radius: 1px;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-  }
-
-  .toolbar.expanded .toolbar-dropdown {
-    padding: 10px 15px;
-  }
-
-  .toolbar-dropdown {
-    position: relative;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .toolbar-select {
-    background-color: #F7F9FA;
-    border: 1px solid #979797;
-    padding: 6px;
-    border-radius: 4px;
-    width: 45px;
-    height: 44px;
-  }
-
-  .toolbar-toggle-button {
-    background-color: #fff;
-    display: block;
-    width: 31px;
-    height: 29px;
-    ;
-    border: 1px solid #000000;
-    padding: 5px;
-    border-radius: 3px;
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.29);
-  }
-
-  .toolbar-toggle-button span {
-    position: absolute;
-    left: -999em;
-  }
-
-  .toolbar-toggle-button::before {
-    content: '';
-    display: block;
-    background-color: #EFF6FB;
-    border: 2px solid #112F4E;
-    width: 9px;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .toolbar-toggle-button:hover::before {
-    background-color: #B7F5BD;
-  }
-
-  .toolbar-toggle-button.collapsed::before {
-    height: 9px;
-  }
-
-  .toolbar-toggle-button.expanded::before {
-    height: 18px;
-  }
-
-  .toolbar-expanded-content {
-    opacity: 0;
-    display: none;
-    transition: opacity 0.3s ease-in-out;
-  }
-
-  .toolbar-expanded-content.open {
-    opacity: 1;
-    display: block;
-  }
-
-  .accordion {
-    padding: 12px 16px;
-    border-top: 1px solid #d8d8d8;
-    border-bottom: 1px solid #d8d8d8;
-    border-left: 1px solid #d8d8d8;
-    border-right: 1px solid #d8d8d8;
-    background-color: #fff;
-    margin-left: -1px;
-    margin-right: -1px;
-    margin-bottom: 6px;
-  }
-
-  .accordion.open {
-    background-color: #EFF6FB;
-    box-shadow: inset 0 1px 7px 0 rgba(30, 75, 198, 0.16);
-    border-left: 1px solid #aac0d0;
-    border-right: 1px solid #aac0d0;
-    border-color: #aac0d0;
-    transition: all 0.2s ease-in;
-  }
-
-  .accordion-header a {
-    font-size: 16px;
-    font-weight: 600;
-    color: #373737;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .accordion.open .accordion-header a {
-    color: #0A3466;
-  }
-
-  .accordion-content {
-    display: none;
-  }
-
-  .accordion.open .accordion-content {
-    padding-top: 10px;
-    display: block;
-  }
-
-  .page {
-    margin: 20px;
-    display: grid;
-    grid-template-columns: 80px 235px auto;
-    grid-template-rows: 46px auto;
-  }
-
-  .page-content-header {
-    grid-column-start: 2;
-    grid-column-end: -1;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    align-self: center;
-  }
-
-  .toolbar.expanded+.page-content-header {
-    grid-column-start: 3;
-  }
-
-  .page-content {
-    grid-column-start: 1;
-    grid-column-end: -1;
-    grid-row-start: 2;
-    grid-row-end: -1;
-  }
-
-  .toolbar.expanded+.page-content-header+.page-content {
-    grid-column-start: 3;
-  }
-
-  .accordion-content nav{
-    border: 2px solid #D6D7D9;
-    border-radius: 0px 6px 6px 0px;
-    background-color: white;
-  }
-
-  .accordion-content nav .usa-sidenav{
-    border-bottom: none;
-  }
-  .filters .filter-header a{
-    text-decoration: none;
-    color: #323A45;
-    font-weight: 600;
-  }
-  .filters .filter-content{
-    display: none;
-    background: #FFFFFF;
-    box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.50);
-  }
-  .filters .filter-content.open{
+  .sam-page .sam-page__options {
     display: flex;
-    flex-direction: column;
-    margin-top: 12px;
-    margin-left: -10px;
-    margin-right: -10px;
-    padding: 0px 10px 15px 10px;
+    position: relative;
   }
-  .filters .filter-content .selected-chips{
-    margin-top: 5px;
+
+  .sam-example-pagination {
+    line-height: 45px;
   }
 </style>
 
-
-<div class="page">
-  <div class="toolbar">
-
-    <div class="toolbar-dropdown">
-      <div class="toolbar-select">
-        <a class="toolbar-toggle-button collapsed" href="">
-          <span>Collapse</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="toolbar-expanded-content">
-      <div class="accordion">
-        <div class="accordion-header">
-          <a href="">Navigation</a>
+<div class="sam-page">
+  <div class="sam-page__options">
+    <div class="sam-toolbar">
+      <div class="sam-toolbar__header">
+        <div class="sam-toolbar__toggle">
+          <a class="sam-toolbar__toogle-btn" href="">
+            <span class="usa-sr-only">Open/Close Toolbar</span>
+          </a>
         </div>
-        <div class="accordion-content">
-          <nav>
-            <ul class="usa-sidenav">
-              <li class="usa-sidenav__item">
-                <a href="">Parent link</a>
-              </li>
-              <li class="usa-sidenav__item">
-                <a href="" class="usa-current">Current page</a>
-                <ul class="usa-sidenav__sublist">
+      </div>
+      <div class="sam-toolbar__content">
+        <div class="sam-accordion" data-allow-multiple>
+          <div class="sam-accordion__item">
+            <h3>
+              <button
+                aria-expanded="false"
+                class="sam-accordion__trigger"
+                aria-controls="accordion-nav-content"
+                id="accordion-nav-id"
+              >
+                <span class="sam-accordion__title">
+                  Navigation
+                  <span class="sam-accordion__icon"></span>
+                </span>
+              </button>
+            </h3>
+            <div
+              id="accordion-nav-content"
+              role="region"
+              aria-labelledby="accordion-nav-id"
+              class="sam-accordion__panel"
+              hidden=""
+            >
+              <nav>
+                <ul class="usa-sidenav">
                   <li class="usa-sidenav__item">
-                    <a href="">Child link</a>
+                    <a href="">Parent link</a>
                   </li>
                   <li class="usa-sidenav__item">
-                    <a href="">Child link</a>
+                    <a href="" class="usa-current">Current page</a>
+                    <ul class="usa-sidenav__sublist">
+                      <li class="usa-sidenav__item">
+                        <a href="">Child link</a>
+                      </li>
+                      <li class="usa-sidenav__item">
+                        <a href="">Child link</a>
+                      </li>
+                      <li class="usa-sidenav__item">
+                        <a href="">Child link</a>
+                      </li>
+                      <li class="usa-sidenav__item">
+                        <a href="">Child link</a>
+                      </li>
+                    </ul>
                   </li>
                   <li class="usa-sidenav__item">
-                    <a href="">Child link</a>
-                  </li>
-                  <li class="usa-sidenav__item">
-                    <a href="">Child link</a>
-                  </li>
-                  <li class="usa-sidenav__item">
-                    <a href="" class="usa-current">Child link</a>
+                    <a href="">Parent link</a>
                   </li>
                 </ul>
-              </li>
-              <li class="usa-sidenav__item">
-                <a href="">Parent link</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <div class="accordion">
-        <div class="accordion-header">
-          <a href="">Filters</a>
-        </div>
-        <div class="accordion-content">
-          <div class="filters">
-            <div class="filter">
-              <div class="filter-header">
-                  <a href="">Service Classifications</a>
-              </div>
-              <div class="filter-content">
-                <label class="usa-label" for="input-type-naics">NAICS</label>
-                <input class="usa-input" id="input-type-naics" name="input-type-naics" type="text">
-                <div class="selected-chips">
-                  <span class="sam-tag sam-tag--chip">
-                    111140 -- Wheat Farming
-                    <button class="sam-tag__close">
-                      <span class="fas fa-times" aria-hidden="true"></span>
+              </nav>
+            </div>
+          </div>
+          <div class="sam-accordion__item">
+            <h3>
+              <button
+                aria-expanded="false"
+                class="sam-accordion__trigger"
+                aria-controls="accordion-filters-content"
+                id="accordion-filters-id"
+              >
+                <span class="sam-accordion__title">
+                  Filters
+                  <span class="sam-accordion__icon"></span>
+                </span>
+              </button>
+            </h3>
+            <div
+              id="accordion-filters-content"
+              role="region"
+              aria-labelledby="accordion-filters-id"
+              class="sam-accordion__panel"
+              hidden=""
+            >
+              <div
+                class="sam-accordion sam-accordion--basic"
+                data-allow-multiple
+              >
+                <div class="sam-accordion__item">
+                  <h3>
+                    <button
+                      aria-expanded="false"
+                      class="sam-accordion__trigger"
+                      aria-controls="accordion-serv-class-content"
+                      id="accordion-serv-class-id"
+                    >
+                      <span class="sam-accordion__title">
+                        Service Classifications
+                        <span class="sam-accordion__icon"></span>
+                      </span>
                     </button>
-                  </span>
-                  <span class="sam-tag sam-tag--chip">
-                      212222 -- Silver Ore Mining
-                    <button class="sam-tag__close">
-                      <span class="fas fa-times" aria-hidden="true"></span>
-                    </button>
-                  </span>
-                  <span class="sam-tag sam-tag--chip">
-                      541850 -- Outdoor Advertising
-                    <button class="sam-tag__close">
-                      <span class="fas fa-times" aria-hidden="true"></span>
-                    </button>
-                  </span>
+                  </h3>
+                  <div
+                    id="accordion-serv-class-content"
+                    role="region"
+                    aria-labelledby="accordion-serv-class-id"
+                    class="sam-accordion__panel"
+                    hidden=""
+                  >
+                    <label class="usa-label" for="input-type-naics"
+                      >NAICS</label
+                    >
+                    <input
+                      class="usa-input"
+                      id="input-type-naics"
+                      name="input-type-naics"
+                      type="text"
+                    />
+                    <div class="selected-chips" style="margin-top: 5px;">
+                      <span class="sam-tag sam-tag--chip">
+                        111140 -- Wheat Farming
+                        <button class="sam-tag__close">
+                          <span class="fas fa-times" aria-hidden="true"></span>
+                        </button>
+                      </span>
+                      <span class="sam-tag sam-tag--chip">
+                        212222 -- Silver Ore Mining
+                        <button class="sam-tag__close">
+                          <span class="fas fa-times" aria-hidden="true"></span>
+                        </button>
+                      </span>
+                      <span class="sam-tag sam-tag--chip">
+                        541850 -- Outdoor Advertising
+                        <button class="sam-tag__close">
+                          <span class="fas fa-times" aria-hidden="true"></span>
+                        </button>
+                      </span>
+                    </div>
+                    <label class="usa-label" for="input-type-psc">PSC</label>
+                    <input
+                      class="usa-input"
+                      id="input-type-psc"
+                      name="input-type-psc"
+                      type="text"
+                    />
+                  </div>
                 </div>
-                <label class="usa-label" for="input-type-psc">PSC</label>
-                <input class="usa-input" id="input-type-psc" name="input-type-psc" type="text">
+                <div class="sam-accordion__item">
+                  <h3>
+                    <button
+                      aria-expanded="false"
+                      class="sam-accordion__trigger"
+                      aria-controls="accordion-entity-content"
+                      id="accordion-entity-id"
+                    >
+                      <span class="sam-accordion__title">
+                        Entity Name/UEI
+                        <span class="sam-accordion__icon"></span>
+                      </span>
+                    </button>
+                  </h3>
+                  <div
+                    id="accordion-entity-content"
+                    role="region"
+                    aria-labelledby="accordion-entity-id"
+                    class="sam-accordion__panel"
+                    hidden=""
+                  >
+                    <label class="usa-label" for="input-type-entity"
+                      >Name</label
+                    >
+                    <input
+                      class="usa-input"
+                      id="input-type-entity"
+                      name="input-type-entity"
+                      type="text"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
+    <div class="sam-example-pagination">
+      Showing 1 to 10 of 21 registrations
+    </div>
   </div>
-
-  <div class="page-content-header">
-    Showing 1 to 10 of 21 registrations
-  </div>
-
-  <div class="page-content">
+  <div class="sam-page__content">
     <h3>Frontier Allied Partners, Inc</h3>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet faucibus arcu id bibendum. Mauris eleifend
-      massa
-      purus, eu volutpat erat placerat egestas.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet
+      faucibus arcu id bibendum. Mauris eleifend massa purus, eu volutpat erat
+      placerat egestas.
     </p>
   </div>
 </div>
-
-
-<script>
-
-  const toolbarEl = document.querySelector('.toolbar');
-  const toggleBtnEl = document.querySelector('.toolbar-toggle-button');
-  const toolbarExpandCtnEl = document.querySelector('.toolbar-expanded-content');
-
-  toggleBtnEl.addEventListener('click', function (event) {
-    toggleBtnEl.classList.toggle('expanded');
-    if (toggleBtnEl.classList.contains('expanded')) {
-      toolbarEl.classList.add('expanded');
-      toolbarExpandCtnEl.classList.add('open');
-      toggleBtnEl.querySelector('span').innerHTML = 'Expand';
-    } else {
-      toolbarEl.classList.remove('expanded');
-      toolbarExpandCtnEl.classList.remove('open');
-      toggleBtnEl.querySelector('span').innerHTML = 'Collapse';
-    }
-    event.preventDefault();
-  });
-
-  Array.prototype.slice.call(document.querySelectorAll('.accordion')).forEach(function (accordion) {
-    const accordionTriggerEl = accordion.querySelector('.accordion-header a');
-    accordionTriggerEl.addEventListener('click', ((event) => {
-      accordion.classList.toggle('open');
-      event.preventDefault();
-    }));
-  });
-
-  Array.prototype.slice.call(document.querySelectorAll('.filters')).forEach(function (filter) {
-    const filterTriggerEl = filter.querySelector('.filter-header a');
-    const filterContentEl = filter.querySelector('.filter-content');
-    filterTriggerEl.addEventListener('click', ((event) => {
-      filterContentEl.classList.toggle('open');
-      event.preventDefault();
-    }));
-  });
-
-</script>
-
-<!-- <dl id="accordionGroup" role="presentation" class="sam-accordion">
-  <dt role="heading" aria-level="3">
-    <button aria-expanded="true" class="sam-accordion-trigger" aria-controls="sect1" id="accordion1id" type="button">
-      <span class="sam-accordion-icon">
-        <i class="fa fa-search fa-lg"></i>
-      </span>
-      <span class="sam-accordion-title">
-        Search
-      </span>
-    </button>
-  </dt>
-  <dd id="sect1" role="region" aria-labelledby="accordion1id" class="sam-accordion-panel">
-    <div>
-      <span class="close">
-          <span role="button" class="fa fa-chevron-circle-left fa-lg" tabindex="0" aria-label="Close section" aria-hidden="false">
-          </span>
-      </span>
-      Search Content
-    </div>
-  </dd>
-  <dt role="heading" aria-level="3">
-    <button aria-expanded="false" class="sam-accordion-trigger" aria-controls="sect2" id="accordion2id" type="button">
-      <span class="sam-accordion-icon">
-        <i class="fa fa-cloud fa-lg"></i>
-      </span>
-      <span class="sam-accordion-title">
-        Save
-      </span>
-    </button>
-  </dt>
-  <dd id="sect2" role="region" aria-labelledby="accordion2id" class="sam-accordion-panel" hidden="">
-    <div>
-      <span class="close">
-          <span role="button" class="fa fa-chevron-circle-left fa-lg" tabindex="0" aria-label="Close section" aria-hidden="false">
-          </span>
-      </span>
-      Save content
-    </div>
-  </dd>
-  <dt role="heading" aria-level="3">
-    <button aria-expanded="false" class="sam-accordion-trigger" aria-controls="sect3" id="accordion3id" type="button">
-      <span class="sam-accordion-icon">
-        <i class="fa fa-download fa-lg"></i>
-      </span>
-      <span class="sam-accordion-title">
-        Download
-      </span>
-    </button>
-  </dt>
-  <dd id="sect3" role="region" aria-labelledby="accordion3id" class="sam-accordion-panel" hidden="">
-    <div>
-      <span class="close">
-          <span role="button" class="fa fa-chevron-circle-left fa-lg" tabindex="0" aria-label="Close section" aria-hidden="false">
-          </span>
-      </span>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-        vel interdum lorem. Suspendisse rhoncus metus tortor, vel porta 
-        neque viverra ac. Vivamus ac sem a diam mollis tempor semper eu 
-        dui. Vestibulum aliquet a nulla ut efficitur. Nam aliquam rhoncus 
-        nunc vitae vehicula. Fusce scelerisque auctor mi vitae iaculis. 
-        Donec sit amet aliquam lectus. Quisque bibendum lacus non enim 
-        cursus, id lacinia metus placerat. Phasellus eget tortor vitae 
-        lacus condimentum sollicitudin ut eu risus. Sed mattis nisl 
-        velit, vel viverra odio egestas quis. Sed neque magna, bibendum 
-        ac congue eget, interdum at enim. Donec lobortis sollicitudin 
-        purus et placerat. Donec a blandit magna. Nam scelerisque mauris 
-        vitae velit auctor, non scelerisque erat pretium.
-      </p>  
-      <p>
-        Duis posuere tempor massa sed varius. Morbi sapien lectus, 
-        faucibus at aliquam in, gravida sed nisi. Nullam non nisl nec orci 
-        pellentesque congue. Pellentesque tempus mauris lacus, ut 
-        pellentesque massa tempor nec. Nunc condimentum arcu vel orci 
-        dapibus fringilla. Nullam congue venenatis interdum. Curabitur 
-        posuere lacinia nisl, ut vestibulum lorem mollis quis. Maecenas ac 
-        metus eu eros consequat malesuada quis at tortor. In eu quam lacus. 
-        Etiam cursus lobortis finibus. Vestibulum tempus enim non porttitor 
-        consequat. Pellentesque placerat risus dui, eu vehicula augue 
-        aliquam sit amet. Integer tempor accumsan luctus. Vestibulum id mi 
-        in augue luctus sodales nec eu nisl. Quisque placerat purus sed 
-        dolor varius, ut elementum augue consequat. Mauris tincidunt ex 
-        odio, nec eleifend sapien euismod tincidunt.
-      </p>
-    </div>
-  </dd>
-</dl> -->

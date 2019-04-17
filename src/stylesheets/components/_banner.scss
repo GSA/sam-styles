@@ -1,0 +1,6 @@
+.usa-banner__button {
+  @include u-text('base-dark', underline, baseline);
+  &:hover {
+    @include u-text($theme-link-hover-color);
+  }
+}
