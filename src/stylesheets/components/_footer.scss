@@ -18,10 +18,19 @@
   }
 }
 
+.usa-footer__logo {
+  @include at-media('mobile-lg') {
+    @include u-flex('align-end');
+  }
+}
+
 .usa-footer__logo-img {
-  max-width: 100%;
+  max-width: 100px;
+  @include at-media('mobile-lg') {
+    max-width: 100%;
+  }
   @include at-media('tablet') {
-    max-width: units(10);
+    min-width: 100px;
   }
 }
 
