@@ -1,7 +1,13 @@
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
 {% render '@banner' %}
 
 {% render '@header' %}
 
-{% render '@toolbar' %}
+<div id="main-content">
+  <div class="grid-container">
+    {% render '@toolbar' %}
+  </div>
+</div>
 
 {% render '@footer' %}

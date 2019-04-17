@@ -5,7 +5,7 @@ const footer = require('uswds/src/js/components/footer');
 const navigation = require('uswds/src/js/components/navigation');
 // const password = require('uswds/src/js/components/password');
 // const search = require('uswds/src/js/components/search');
-// const skipnav = require('uswds/src/js/components/skipnav');
+const skipnav = require('uswds/src/js/components/skipnav');
 // const validator = require('uswds/src/js/components/validator');
 
 // SAM Component
@@ -20,6 +20,6 @@ module.exports = {
   navigation,
   // password,
   // search,
-  // skipnav,
+  skipnav,
   // validator,
 };
