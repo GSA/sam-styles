@@ -18,6 +18,13 @@
   }
 }
 
+.usa-footer__logo-img {
+  max-width: 100%;
+  @include at-media('tablet') {
+    max-width: units(10);
+  }
+}
+
 .usa-footer__logo-heading {
   @include h4;
   color: #005088;
