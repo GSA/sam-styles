@@ -11,6 +11,7 @@ const navigation = require('uswds/src/js/components/navigation');
 // SAM Component
 const sam_toolbar = require('./toolbar');
 const sam_accordion = require('./accordion');
+const sam_icons = require('./icons');
 
 module.exports = {
   accordion,

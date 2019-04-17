@@ -13,8 +13,41 @@ variants:
         primary:
           search: false
           id_prefix: extended-
+          links:
+            - text: Home
+              href: ''
+              is_current: false
+              id: nav-section-home
+              links: false
+            - text: Contracting
+              is_current: false
+              id: nav-section-one
+              links: &subnav_links
+                - text: Page title
+                  href: '#'
+                - text: Page title
+                  href: '#'
+                - text: A very long page title that goes onto two lines
+                  href: '#'
+            - text: Federal Assistance
+              id: nav-section-two
+              links: *subnav_links
+            - text: Search
+              href: ''
+            - text: Help
+              href: ''
         secondary:
-          search: true
+          search: false
+          links:
+            - text: Request
+              icon: edit
+            - text: Messages
+              icon: comment
+              notification: true
+            - text: Workspace
+              icon: th
+            - text: Sign Out
+              icon: sign-out-alt
 
   - name: extended-mega
     label: Extended with mega-menu
