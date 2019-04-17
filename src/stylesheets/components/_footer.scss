@@ -1,0 +1,39 @@
+// General footer styles
+
+.usa-footer__primary-section {
+  background-color: color('accent-cool-lighter');
+}
+
+.usa-footer__secondary-link {
+  a {
+    text-decoration: none;
+  }
+}
+
+.usa-footer__secondary-section {
+  background-color: color('accent-cool-lighter');
+  text-align: center;
+  @include at-media('tablet') {
+    text-align: left;
+  }
+}
+
+.usa-footer__logo-heading {
+  @include h4;
+  color: #005088;
+  font-weight: 600;
+}
+
+// Big footer styles
+
+.usa-footer--big {
+  .usa-footer__nav {
+    @include at-media('mobile-lg') {
+      text-align: center;
+      border-bottom: none;
+    }
+    @include at-media('tablet') {
+      text-align: left;
+    }
+  }
+}
