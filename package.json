@@ -26,6 +26,7 @@
     "@frctl/fractal": "^1.1.7",
     "@frctl/mandelbrot": "^1.2.0",
     "@frctl/nunjucks": "^1.0.3",
+    "copy": "^0.3.2",
     "uswds": "^2.0.1"
   },
   "devDependencies": {
@@ -36,7 +37,6 @@
     "chrome-launcher": "^0.10.5",
     "chrome-remote-interface": "^0.27.1",
     "clean-webpack-plugin": "^1.0.1",
-    "copy": "^0.3.2",
     "copy-webpack-plugin": "^5.0.1",
     "css-loader": "^2.1.1",
     "file-loader": "^3.0.1",
