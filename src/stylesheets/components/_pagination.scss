@@ -1,0 +1,51 @@
+.sam-pagination {
+  display: block;
+}
+
+.sam-pagination > p {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 5px;
+  display: inline-block;
+}
+
+.sam-pagination__expanded {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.sam-pagination__expanded > li {
+  display: inline;
+}
+
+.sam-pagination__expanded > li > a {
+  padding: 0.5rem;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #11304f;
+}
+
+.sam-pagination__expanded > li > a .active {
+  color: #000000;
+}
+
+.sam-pagination__expanded > li > a :hover {
+  text-decoration: none;
+}
+
+.sam-pagination__expanded > li > a > img {
+  color: #123050;
+}
+
+.sam-pagination__expanded > a .active {
+  color: black;
+}
+
+.sam-pagination__expanded > a :hover {
+  text-decoration: none;
+}
+
+.sam-pagination__expanded > a > img {
+  height: 1rem;
+}

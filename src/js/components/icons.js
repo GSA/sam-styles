@@ -4,7 +4,9 @@ import {
   faEdit,
   faComment,
   faTh,
-  faSignOutAlt
+  faSignOutAlt,
+  faAngleRight,
+  faAngleLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import { samBars } from "./../icons/bars";
 import { samArrowLeft } from "./../icons/arrowLeft";
@@ -17,6 +19,8 @@ const icons = [
   faComment,
   faTh,
   faSignOutAlt,
+  faAngleRight,
+  faAngleLeft,
   samBars,
   samArrowLeft
 ];

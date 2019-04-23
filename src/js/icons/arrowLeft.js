@@ -26,4 +26,4 @@ exports.width = width;
 exports.height = height;
 exports.ligatures = ligatures;
 exports.unicode = unicode;
-exports.svgPathData = svgPathData;  
+exports.svgPathData = svgPathData;
