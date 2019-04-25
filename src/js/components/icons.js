@@ -8,20 +8,24 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { samBars } from "./../icons/bars";
 import { samArrowLeft } from "./../icons/arrowLeft";
-import { samAlarm } from "./../icons/alarm";
+import { samBell } from "./../icons/bell";
 import { samCalendar } from "./../icons/calendar";
-import { samDelete } from "./../icons/delete";
+import { samTrash } from "./../icons/trash";
 import { samFilter } from "./../icons/filter";
-import { samGlossary } from "./../icons/glossary";
+import { samBook } from "./../icons/book";
 import { samHome } from "./../icons/home";
-import { samMessage } from "./../icons/message";
-import { samNewMessage } from "./../icons/newMessage";
+import { samEnvelope } from "./../icons/envelope";
+import { samNewNote } from "./../icons/newNote";
 import { samPrinter } from "./../icons/printer";
-import { samReportData } from "./../icons/reportData";
+import { samFileChartLine } from "./../icons/fileChartLine";
 import { samShare } from "./../icons/share";
-import { samTools } from "./../icons/tools";
-import { samWhatsNext } from "./../icons/whatsNext";
-import { samWorkspace } from "./../icons/workspace";
+import { samRulerPencil } from "./../icons/rulerPencil";
+import { samPrinter } from "./../icons/printer";
+import { samUser } from "./../icons/user";
+import { samLink } from "./../icons/link";
+import { samDownload } from "./../icons/download";
+import { samInvoice } from "./../icons/invoice";
+import { samPaperPlane } from "./../icons/paperPlane";
 
 config.familyPrefix = "icon";
 
@@ -33,20 +37,23 @@ const icons = [
   faSignOutAlt,
   samBars,
   samArrowLeft,
-  samAlarm,
+  samBell,
+  samBook,
   samCalendar,
-  samDelete,
+  samDownload,
+  samEnvelope,
+  samFileChartLine,
   samFilter,
-  samGlossary,
   samHome,
-  samMessage,
-  samNewMessage,
+  samInvoice,
+  samLink,
+  samNewNote,
+  samPaperPlane,
   samPrinter,
-  samReportData,
+  samRulePencil,
   samShare,
-  samTools,
-  samWhatsNext,
-  samWorkspace
+  samTrash,
+  samUser
 ];
 
 library.add(...icons);
