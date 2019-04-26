@@ -19,7 +19,7 @@ exports.definition = {
     svgPathData
   ]};
 
-exports.samArrowLeft = exports.definition;
+exports.samEnvelope = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;

@@ -2,7 +2,7 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 var prefix = 'sam';
 var iconName = 'share';
-var width = 448;
+var width = 512;
 var height = 512;
 var ligatures = [];
 var unicode = '';
@@ -19,7 +19,7 @@ exports.definition = {
     svgPathData
   ]};
 
-exports.samArrowLeft = exports.definition;
+exports.samShare = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;

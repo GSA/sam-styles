@@ -16,11 +16,10 @@ import { samBook } from "./../icons/book";
 import { samHome } from "./../icons/home";
 import { samEnvelope } from "./../icons/envelope";
 import { samNewNote } from "./../icons/newNote";
-import { samPrinter } from "./../icons/printer";
 import { samFileChartLine } from "./../icons/fileChartLine";
 import { samShare } from "./../icons/share";
 import { samRulerPencil } from "./../icons/rulerPencil";
-import { samPrinter } from "./../icons/printer";
+import { samPrint } from "./../icons/print";
 import { samUser } from "./../icons/user";
 import { samLink } from "./../icons/link";
 import { samDownload } from "./../icons/download";
@@ -49,8 +48,8 @@ const icons = [
   samLink,
   samNewNote,
   samPaperPlane,
-  samPrinter,
-  samRulePencil,
+  samPrint,
+  samRulerPencil,
   samShare,
   samTrash,
   samUser
