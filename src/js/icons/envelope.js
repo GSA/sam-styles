@@ -2,7 +2,7 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 var prefix = 'sam';
 var iconName = 'envelope';
-var width = 448;
+var width = 732;
 var height = 512;
 var ligatures = [];
 var unicode = '';
