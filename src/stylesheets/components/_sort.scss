@@ -1,9 +1,4 @@
-.sam-sort__wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.sort-header {
+.sam-sort__header {
   font-size: 16px;
   font-weight: 500;
   color: #797979;
@@ -11,7 +6,7 @@
   padding: 0;
 }
 
-.sort-content > option {
+.sam-sort__content > option {
   width: 200px;
   height: 45px;
 }
