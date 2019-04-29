@@ -16,20 +16,20 @@
   flex-wrap: wrap;
 }
 
-.icons-list > li {
+.icons-list__items {
   height: 80px;
   width: 80px;
   text-align: center;
   padding: 5px;
 }
 
-.icons-list > li > * {
+.icons-list__items > * {
   display: block;
   padding: 0;
   font-size: 12px;
 }
 
-.icons-list > li > i {
-  margin: auto;
+.icons-list__items > svg {
   height: 30px;
+  margin: auto;
 }
