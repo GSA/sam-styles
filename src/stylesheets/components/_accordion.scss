@@ -2,6 +2,7 @@
 .sam-accordion {
   border: 1px solid #d8d8d8;
   padding-bottom: 10px;
+  display: block;
 }
 
 .sam-accordion.focus {
@@ -13,6 +14,8 @@
 }
 
 .sam-accordion__item {
+  display: block;
+  overflow: hidden;
   padding: 6px;
   border: 1px solid #d8d8d8;
   background-color: #fff;
@@ -36,7 +39,7 @@
   text-align: left;
   width: 100%;
   outline: none !important;
-
+  cursor: pointer;
   border-style: none;
 }
 
@@ -123,6 +126,10 @@
 }
 
 .sam-accordion__panel {
+  padding: 0;
+}
+
+.sam-accordion__panel-body{
   padding: 8px 5px;
 }
 
@@ -183,7 +190,7 @@
   content: none;
 }
 
-.sam-accordion.sam-accordion--basic .sam-accordion__panel {
+.sam-accordion.sam-accordion--basic .sam-accordion__panel .sam-accordion__panel-body{
   margin: 0px 5px;
   padding: 1px 8px 10px;
   background-color: white;
