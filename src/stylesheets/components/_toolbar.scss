@@ -10,6 +10,8 @@
   position: absolute;
   z-index: 2;
   border: 1px solid #fff;
+  overflow: hidden;
+  display: block;
 }
 
 .sam-toolbar + * {
@@ -20,8 +22,11 @@
 .sam-toolbar.sam-toolbar--expanded {
   background-color: white;
   border: 1px solid #d8d8d8;
-  width: 300px;
   box-shadow: 0 14px 24px 0 rgba(0, 0, 0, 0.06);
+}
+
+.sam-toolbar__header {
+  display: block;
 }
 
 .sam-toolbar.sam-toolbar.sam-toolbar--expanded .sam-toolbar__header {
@@ -67,12 +72,12 @@
 }
 
 .sam-toolbar .sam-toolbar__content {
-  display: none;
+  display: block;
+  overflow: hidden;
   opacity: 0;
 }
 
 .sam-toolbar.sam-toolbar--expanded .sam-toolbar__content {
-  display: block;
   opacity: 1;
 }
 
