@@ -23,7 +23,7 @@
           </a>
         </div>
       </div>
-      <div class="sam-toolbar__content">
+      <div style="width: 300px" class="sam-toolbar__content" hidden>
         <div class="sam-accordion" data-allow-multiple>
           <div class="sam-accordion__item">
             <h3>
@@ -46,33 +46,35 @@
               class="sam-accordion__panel"
               hidden=""
             >
-              <nav>
-                <ul class="usa-sidenav">
-                  <li class="usa-sidenav__item">
-                    <a href="">Parent link</a>
-                  </li>
-                  <li class="usa-sidenav__item">
-                    <a href="" class="usa-current">Current page</a>
-                    <ul class="usa-sidenav__sublist">
-                      <li class="usa-sidenav__item">
-                        <a href="">Child link</a>
-                      </li>
-                      <li class="usa-sidenav__item">
-                        <a href="">Child link</a>
-                      </li>
-                      <li class="usa-sidenav__item">
-                        <a href="">Child link</a>
-                      </li>
-                      <li class="usa-sidenav__item">
-                        <a href="">Child link</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="usa-sidenav__item">
-                    <a href="">Parent link</a>
-                  </li>
-                </ul>
-              </nav>
+              <div class="sam-accordion__panel-body">
+                <nav>
+                  <ul class="usa-sidenav">
+                    <li class="usa-sidenav__item">
+                      <a href="">Parent link</a>
+                    </li>
+                    <li class="usa-sidenav__item">
+                      <a href="" class="usa-current">Current page</a>
+                      <ul class="usa-sidenav__sublist">
+                        <li class="usa-sidenav__item">
+                          <a href="">Child link</a>
+                        </li>
+                        <li class="usa-sidenav__item">
+                          <a href="">Child link</a>
+                        </li>
+                        <li class="usa-sidenav__item">
+                          <a href="">Child link</a>
+                        </li>
+                        <li class="usa-sidenav__item">
+                          <a href="">Child link</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="usa-sidenav__item">
+                      <a href="">Parent link</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
           </div>
           <div class="sam-accordion__item">
@@ -96,99 +98,114 @@
               class="sam-accordion__panel"
               hidden=""
             >
-              <div
-                class="sam-accordion sam-accordion--basic"
-                data-allow-multiple
-              >
-                <div class="sam-accordion__item">
-                  <h3>
-                    <button
-                      aria-expanded="false"
-                      class="sam-accordion__trigger"
-                      aria-controls="accordion-serv-class-content"
-                      id="accordion-serv-class-id"
+              <div class="sam-accordion__panel-body">
+                <div
+                  class="sam-accordion sam-accordion--basic"
+                  data-allow-multiple
+                >
+                  <div class="sam-accordion__item">
+                    <h3>
+                      <button
+                        aria-expanded="false"
+                        class="sam-accordion__trigger"
+                        aria-controls="accordion-serv-class-content"
+                        id="accordion-serv-class-id"
+                      >
+                        <span class="sam-accordion__title">
+                          Service Classifications
+                          <span class="sam-accordion__icon"></span>
+                        </span>
+                      </button>
+                    </h3>
+                    <div
+                      id="accordion-serv-class-content"
+                      role="region"
+                      aria-labelledby="accordion-serv-class-id"
+                      class="sam-accordion__panel"
+                      hidden=""
                     >
-                      <span class="sam-accordion__title">
-                        Service Classifications
-                        <span class="sam-accordion__icon"></span>
-                      </span>
-                    </button>
-                  </h3>
-                  <div
-                    id="accordion-serv-class-content"
-                    role="region"
-                    aria-labelledby="accordion-serv-class-id"
-                    class="sam-accordion__panel"
-                    hidden=""
-                  >
-                    <label class="usa-label" for="input-type-naics"
-                      >NAICS</label
-                    >
-                    <input
-                      class="usa-input"
-                      id="input-type-naics"
-                      name="input-type-naics"
-                      type="text"
-                    />
-                    <div class="selected-chips" style="margin-top: 5px;">
-                      <span class="sam-tag sam-tag--chip">
-                        111140 -- Wheat Farming
-                        <button class="sam-tag__close">
-                          <span class="fas fa-times" aria-hidden="true"></span>
-                        </button>
-                      </span>
-                      <span class="sam-tag sam-tag--chip">
-                        212222 -- Silver Ore Mining
-                        <button class="sam-tag__close">
-                          <span class="fas fa-times" aria-hidden="true"></span>
-                        </button>
-                      </span>
-                      <span class="sam-tag sam-tag--chip">
-                        541850 -- Outdoor Advertising
-                        <button class="sam-tag__close">
-                          <span class="fas fa-times" aria-hidden="true"></span>
-                        </button>
-                      </span>
+                      <div class="sam-accordion__panel-body">
+                        <label class="usa-label" for="input-type-naics"
+                          >NAICS</label
+                        >
+                        <input
+                          class="usa-input"
+                          id="input-type-naics"
+                          name="input-type-naics"
+                          type="text"
+                        />
+                        <div class="selected-chips" style="margin-top: 5px;">
+                          <span class="sam-tag sam-tag--chip">
+                            111140 -- Wheat Farming
+                            <button class="sam-tag__close">
+                              <span
+                                class="fas fa-times"
+                                aria-hidden="true"
+                              ></span>
+                            </button>
+                          </span>
+                          <span class="sam-tag sam-tag--chip">
+                            212222 -- Silver Ore Mining
+                            <button class="sam-tag__close">
+                              <span
+                                class="fas fa-times"
+                                aria-hidden="true"
+                              ></span>
+                            </button>
+                          </span>
+                          <span class="sam-tag sam-tag--chip">
+                            541850 -- Outdoor Advertising
+                            <button class="sam-tag__close">
+                              <span
+                                class="fas fa-times"
+                                aria-hidden="true"
+                              ></span>
+                            </button>
+                          </span>
+                        </div>
+                        <label class="usa-label" for="input-type-psc">PSC</label>
+                        <input
+                          class="usa-input"
+                          id="input-type-psc"
+                          name="input-type-psc"
+                          type="text"
+                        />
+                      </div>
                     </div>
-                    <label class="usa-label" for="input-type-psc">PSC</label>
-                    <input
-                      class="usa-input"
-                      id="input-type-psc"
-                      name="input-type-psc"
-                      type="text"
-                    />
                   </div>
-                </div>
-                <div class="sam-accordion__item">
-                  <h3>
-                    <button
-                      aria-expanded="false"
-                      class="sam-accordion__trigger"
-                      aria-controls="accordion-entity-content"
-                      id="accordion-entity-id"
+                  <div class="sam-accordion__item">
+                    <h3>
+                      <button
+                        aria-expanded="false"
+                        class="sam-accordion__trigger"
+                        aria-controls="accordion-entity-content"
+                        id="accordion-entity-id"
+                      >
+                        <span class="sam-accordion__title">
+                          Entity Name/UEI
+                          <span class="sam-accordion__icon"></span>
+                        </span>
+                      </button>
+                    </h3>
+                    <div
+                      id="accordion-entity-content"
+                      role="region"
+                      aria-labelledby="accordion-entity-id"
+                      class="sam-accordion__panel"
+                      hidden=""
                     >
-                      <span class="sam-accordion__title">
-                        Entity Name/UEI
-                        <span class="sam-accordion__icon"></span>
-                      </span>
-                    </button>
-                  </h3>
-                  <div
-                    id="accordion-entity-content"
-                    role="region"
-                    aria-labelledby="accordion-entity-id"
-                    class="sam-accordion__panel"
-                    hidden=""
-                  >
-                    <label class="usa-label" for="input-type-entity"
-                      >Name</label
-                    >
-                    <input
-                      class="usa-input"
-                      id="input-type-entity"
-                      name="input-type-entity"
-                      type="text"
-                    />
+                      <div class="sam-accordion__panel-body">
+                        <label class="usa-label" for="input-type-entity"
+                          >Name</label
+                        >
+                        <input
+                          class="usa-input"
+                          id="input-type-entity"
+                          name="input-type-entity"
+                          type="text"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

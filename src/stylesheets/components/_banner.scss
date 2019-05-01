@@ -4,3 +4,25 @@
     @include u-text($theme-link-hover-color);
   }
 }
+
+// SAM specific
+.usa-banner__header-flag {
+  width: 16px;
+  height: 11px;
+  background-image: url('#{$theme-image-path}/us_flag_small.png');
+  background-repeat: no-repeat;
+}
+
+.usa-banner__content .usa-banner__guidance .usa-banner__icon {
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+}
+
+.usa-banner__content .usa-banner__guidance:first-child .usa-banner__icon {
+  background-image: url('#{$theme-image-path}/icon-dot-gov.svg');
+}
+
+.usa-banner__content .usa-banner__guidance:last-child .usa-banner__icon {
+  background-image: url('#{$theme-image-path}/icon-https.svg');
+}

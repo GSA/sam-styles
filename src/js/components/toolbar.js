@@ -1,5 +1,6 @@
 const samToolbar = document.querySelector(".sam-toolbar");
 if(samToolbar){
+  const samToolbarContent = samToolbar.querySelector(".sam-toolbar__content");
   const samToolbarSibling = samToolbar.nextElementSibling;
   const samToolbarToggleBtn = samToolbar.querySelector(
     ".sam-toolbar__toogle-btn"
@@ -16,12 +17,14 @@ if(samToolbar){
         samToolbarSibling.addEventListener("transitionend", startExpandedAnim);
         samToolbarSibling.classList.add("sam-toolbar__anim--expanded");
         samPageContent.classList.add("sam-toolbar__anim--expanded");
+        samToolbarContent.removeAttribute("hidden");
       });
     } else {
       const endExpandedAnim = () => {
         samToolbar.removeEventListener("transitionend", endExpandedAnim);
         samToolbarSibling.classList.remove("sam-toolbar__anim--expanded");
         samPageContent.classList.remove("sam-toolbar__anim--expanded");
+        samToolbarContent.setAttribute("hidden", "");
       };
       requestAnimationFrame(() => {
         samToolbar.addEventListener("transitionend", endExpandedAnim);
