@@ -1,14 +1,28 @@
-<div class="sam-pagination">
-  <p>Showing 1 to 20  of 112 registrations  </p>
-  <ul class="sam-pagination__content">
-      <li> <a href="#"><i class="fas icon-angle-left"></i></a></li>
-      <li> <a href="#">1</a></li>
-      <li> <a href="#">2</a></li>
-      <li> <a href="#">3</a></li>
-      <li> <a href="#">4</a></li>
-      <li> <a href="#">5</a></li>
-      <li> <a href="#">6</a></li>
-      <li> <a href="#">7</a></li>
-      <li> <a href="#"><i class="fas icon-angle-right"></i></a></li>
-  </ul>
+<div class="sds-pagination">
+  <div class="sds-pagination__controls">
+    <button>Previous Page</button>
+    <input
+      class="usa-input height-4 width-6 text-center border-base-light"
+      value="1"
+      type="number"
+      min="1"
+      max="10"
+      aria-label="current page"
+    />
+    <span class="sds-pagination__total"> of <strong>10</strong> </span>
+    <button>Next Page</button>
+  </div>
+  <div class="sds-pagination__results">
+    <label
+      class="usa-label font-sans-2xs text-italic text-base"
+      for="results-select"
+    >
+      results per page
+    </label>
+    <select class="usa-select border-base-light" id="results-select">
+      <option value="0: 25"> 25 </option>
+      <option value="1: 50"> 50 </option>
+      <option value="2: 100"> 100 </option>
+    </select>
+  </div>
 </div>
