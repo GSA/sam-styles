@@ -19,12 +19,12 @@
 
 // Custom Settings
 // -------------------------------------
-@import 'sam-theme-general';
-@import 'sam-theme-typography';
-@import 'sam-theme-color';
-@import 'sam-theme-spacing';
-@import 'sam-theme-utilities';
-@import 'sam-theme-components';
+@import 'sds-theme-general';
+@import 'sds-theme-typography';
+@import 'sds-theme-color';
+@import 'sds-theme-spacing';
+@import 'sds-theme-utilities';
+@import 'sds-theme-components';
 
 // Tools
 // -------------------------------------
@@ -84,4 +84,4 @@
 // -------------------------------------
 // Import theme custom styles
 
-@import 'sam-theme-custom-styles';
+@import 'sds-theme-custom-styles';

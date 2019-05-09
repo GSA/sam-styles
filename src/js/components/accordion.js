@@ -1,7 +1,7 @@
 "use strict";
 
 Array.prototype.slice
-  .call(document.querySelectorAll(".sam-accordion"))
+  .call(document.querySelectorAll(".sds-accordion"))
   .forEach(function(accordion) {
     // Allow for multiple accordion sections to be expanded at the same time
     var allowMultiple = accordion.hasAttribute("data-allow-multiple");
@@ -13,23 +13,23 @@ Array.prototype.slice
     // Create the array of toggle elements for the accordion group
     var triggers = Array.prototype.slice.call(
       accordion.querySelectorAll(
-        ":scope > .sam-accordion__item > h3 > .sam-accordion__trigger"
+        ":scope > .sds-accordion__item > h3 > .sds-accordion__trigger"
       )
     );
     var panels = Array.prototype.slice.call(
-      accordion.querySelectorAll(".sam-accordion__panel")
+      accordion.querySelectorAll(".sds-accordion__panel")
     );
 
     accordion.addEventListener("click", function(event) {
       var target = event.target;
       if (
-        target.classList.contains("sam-accordion__trigger") &&
+        target.classList.contains("sds-accordion__trigger") &&
         -1 !== triggers.indexOf(target)
       ) {
         // Check if the current toggle is expanded.
         var isExpanded = target.getAttribute("aria-expanded") == "true";
         var active = accordion.querySelector('[aria-expanded="true"]');
-        var targetParent = target.closest(".sam-accordion__item");
+        var targetParent = target.closest(".sds-accordion__item");
 
         // without allowMultiple, close the open accordion
         if (!allowMultiple && active && active !== target) {
@@ -41,8 +41,8 @@ Array.prototype.slice
             .setAttribute("hidden", "");
           // Removes expanded class from parent container
           active
-            .closest(".sam-accordion__item")
-            .classList.remove("sam-accordion__item--expanded");
+            .closest(".sds-accordion__item")
+            .classList.remove("sds-accordion__item--expanded");
           // When toggling is not allowed, clean up disabled state
           if (!allowToggle) {
             active.removeAttribute("aria-disabled");
@@ -57,7 +57,7 @@ Array.prototype.slice
             .getElementById(target.getAttribute("aria-controls"))
             .removeAttribute("hidden");
           // Add expanded class to parent container
-          targetParent.classList.add("sam-accordion__item--expanded");
+          targetParent.classList.add("sds-accordion__item--expanded");
           // If toggling is not allowed, set disabled state on trigger
           if (!allowToggle) {
             target.setAttribute("aria-disabled", "true");
@@ -70,7 +70,7 @@ Array.prototype.slice
             .getElementById(target.getAttribute("aria-controls"))
             .setAttribute("hidden", "");
           // Remove expanded class from parent container
-          targetParent.classList.remove("sam-accordion__item--expanded");
+          targetParent.classList.remove("sds-accordion__item--expanded");
         }
 
         event.preventDefault();
@@ -92,7 +92,7 @@ Array.prototype.slice
 
       // Is this coming from an accordion header?
       if (
-        target.classList.contains("sam-accordion__trigger") &&
+        target.classList.contains("sds-accordion__trigger") &&
         -1 !== triggers.indexOf(target)
       ) {
         // Up/ Down arrow and Control + Page Up/ Page Down keyboard operations
@@ -125,7 +125,7 @@ Array.prototype.slice
 
     // These are used to style the accordion when one of the buttons has focus
     accordion
-      .querySelectorAll(".sam-accordion__trigger")
+      .querySelectorAll(".sds-accordion__trigger")
       .forEach(function(trigger) {
         trigger.addEventListener("focus", function(event) {
           accordion.classList.add("focus");

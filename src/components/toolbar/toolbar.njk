@@ -1,41 +1,26 @@
-<style>
-  .sam-page {
-    margin: 10px;
-  }
-
-  .sam-page .sam-page__options {
-    display: flex;
-    position: relative;
-  }
-
-  .sam-example-pagination {
-    line-height: 45px;
-  }
-</style>
-
-<div class="sam-page">
-  <div class="sam-page__options">
-    <div class="sam-toolbar">
-      <div class="sam-toolbar__header">
-        <div class="sam-toolbar__toggle">
-          <a class="sam-toolbar__toogle-btn" href="">
+<div class="margin-105">
+  <div class="display-flex position-relative">
+    <div class="sds-toolbar">
+      <div class="sds-toolbar__header">
+        <div class="sds-toolbar__toggle">
+          <a class="sds-toolbar__toogle-btn" href="">
             <span class="usa-sr-only">Open/Close Toolbar</span>
           </a>
         </div>
       </div>
-      <div style="width: 300px" class="sam-toolbar__content" hidden>
-        <div class="sam-accordion" data-allow-multiple>
-          <div class="sam-accordion__item">
+      <div style="width: 300px" class="sds-toolbar__content" hidden>
+        <div class="sds-accordion" data-allow-multiple>
+          <div class="sds-accordion__item">
             <h3>
               <button
                 aria-expanded="false"
-                class="sam-accordion__trigger"
+                class="sds-accordion__trigger"
                 aria-controls="accordion-nav-content"
                 id="accordion-nav-id"
               >
-                <span class="sam-accordion__title">
+                <span class="sds-accordion__title">
                   Navigation
-                  <span class="sam-accordion__icon"></span>
+                  <span class="sds-accordion__icon"></span>
                 </span>
               </button>
             </h3>
@@ -43,10 +28,10 @@
               id="accordion-nav-content"
               role="region"
               aria-labelledby="accordion-nav-id"
-              class="sam-accordion__panel"
+              class="sds-accordion__panel"
               hidden=""
             >
-              <div class="sam-accordion__panel-body">
+              <div class="sds-accordion__panel-body">
                 <nav>
                   <ul class="usa-sidenav">
                     <li class="usa-sidenav__item">
@@ -77,17 +62,17 @@
               </div>
             </div>
           </div>
-          <div class="sam-accordion__item">
+          <div class="sds-accordion__item">
             <h3>
               <button
                 aria-expanded="false"
-                class="sam-accordion__trigger"
+                class="sds-accordion__trigger"
                 aria-controls="accordion-filters-content"
                 id="accordion-filters-id"
               >
-                <span class="sam-accordion__title">
+                <span class="sds-accordion__title">
                   Filters
-                  <span class="sam-accordion__icon"></span>
+                  <span class="sds-accordion__icon"></span>
                 </span>
               </button>
             </h3>
@@ -95,25 +80,25 @@
               id="accordion-filters-content"
               role="region"
               aria-labelledby="accordion-filters-id"
-              class="sam-accordion__panel"
+              class="sds-accordion__panel"
               hidden=""
             >
-              <div class="sam-accordion__panel-body">
+              <div class="sds-accordion__panel-body">
                 <div
-                  class="sam-accordion sam-accordion--basic"
+                  class="sds-accordion sds-accordion--basic"
                   data-allow-multiple
                 >
-                  <div class="sam-accordion__item">
+                  <div class="sds-accordion__item">
                     <h3>
                       <button
                         aria-expanded="false"
-                        class="sam-accordion__trigger"
+                        class="sds-accordion__trigger"
                         aria-controls="accordion-serv-class-content"
                         id="accordion-serv-class-id"
                       >
-                        <span class="sam-accordion__title">
+                        <span class="sds-accordion__title">
                           Service Classifications
-                          <span class="sam-accordion__icon"></span>
+                          <span class="sds-accordion__icon"></span>
                         </span>
                       </button>
                     </h3>
@@ -121,10 +106,10 @@
                       id="accordion-serv-class-content"
                       role="region"
                       aria-labelledby="accordion-serv-class-id"
-                      class="sam-accordion__panel"
+                      class="sds-accordion__panel"
                       hidden=""
                     >
-                      <div class="sam-accordion__panel-body">
+                      <div class="sds-accordion__panel-body">
                         <label class="usa-label" for="input-type-naics"
                           >NAICS</label
                         >
@@ -135,27 +120,27 @@
                           type="text"
                         />
                         <div class="selected-chips" style="margin-top: 5px;">
-                          <span class="sam-tag sam-tag--chip">
+                          <span class="sds-tag sds-tag--chip">
                             111140 -- Wheat Farming
-                            <button class="sam-tag__close">
+                            <button class="sds-tag__close">
                               <span
                                 class="fas fa-times"
                                 aria-hidden="true"
                               ></span>
                             </button>
                           </span>
-                          <span class="sam-tag sam-tag--chip">
+                          <span class="sds-tag sds-tag--chip">
                             212222 -- Silver Ore Mining
-                            <button class="sam-tag__close">
+                            <button class="sds-tag__close">
                               <span
                                 class="fas fa-times"
                                 aria-hidden="true"
                               ></span>
                             </button>
                           </span>
-                          <span class="sam-tag sam-tag--chip">
+                          <span class="sds-tag sds-tag--chip">
                             541850 -- Outdoor Advertising
-                            <button class="sam-tag__close">
+                            <button class="sds-tag__close">
                               <span
                                 class="fas fa-times"
                                 aria-hidden="true"
@@ -173,17 +158,17 @@
                       </div>
                     </div>
                   </div>
-                  <div class="sam-accordion__item">
+                  <div class="sds-accordion__item">
                     <h3>
                       <button
                         aria-expanded="false"
-                        class="sam-accordion__trigger"
+                        class="sds-accordion__trigger"
                         aria-controls="accordion-entity-content"
                         id="accordion-entity-id"
                       >
-                        <span class="sam-accordion__title">
+                        <span class="sds-accordion__title">
                           Entity Name/UEI
-                          <span class="sam-accordion__icon"></span>
+                          <span class="sds-accordion__icon"></span>
                         </span>
                       </button>
                     </h3>
@@ -191,10 +176,10 @@
                       id="accordion-entity-content"
                       role="region"
                       aria-labelledby="accordion-entity-id"
-                      class="sam-accordion__panel"
+                      class="sds-accordion__panel"
                       hidden=""
                     >
-                      <div class="sam-accordion__panel-body">
+                      <div class="sds-accordion__panel-body">
                         <label class="usa-label" for="input-type-entity"
                           >Name</label
                         >
@@ -214,11 +199,11 @@
         </div>
       </div>
     </div>
-    <div class="sam-example-pagination">
+    <div class="margin-2">
       Showing 1 to 10 of 21 registrations
     </div>
   </div>
-  <div class="sam-page__content">
+  <div class="sds-page__content">
     <h3>Frontier Allied Partners, Inc</h3>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet

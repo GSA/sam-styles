@@ -19,4 +19,4 @@ variants:
     label: Chip
     context:
       label: 
-        classes: "sam-tag sam-tag--chip"
+        classes: "sds-tag sds-tag--chip"

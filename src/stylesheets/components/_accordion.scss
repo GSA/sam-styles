@@ -1,19 +1,19 @@
 /* stylelint-disable */
-.sam-accordion {
+.sds-accordion {
   border: 1px solid #d8d8d8;
   padding-bottom: 10px;
   display: block;
 }
 
-.sam-accordion.focus {
+.sds-accordion.focus {
   border-color: hsl(216, 94%, 73%);
 }
 
-.sam-accordion h3 {
+.sds-accordion h3 {
   margin: 0;
 }
 
-.sam-accordion__item {
+.sds-accordion__item {
   display: block;
   overflow: hidden;
   padding: 6px;
@@ -23,13 +23,13 @@
   transition: all 0.2s ease-in;
 }
 
-.sam-accordion__item--expanded {
+.sds-accordion__item--expanded {
   border-color: #aac0d0;
   background-color: #eff6fb;
   box-shadow: inset 0 1px 7px 0 rgba(30, 75, 198, 0.16);
 }
 
-.sam-accordion__trigger {
+.sds-accordion__trigger {
   display: block;
   font-size: 17px;
   font-weight: 600;
@@ -43,16 +43,16 @@
   border-style: none;
 }
 
-.sam-accordion__trigger:focus,
-.sam-accordion__trigger:hover {
+.sds-accordion__trigger:focus,
+.sds-accordion__trigger:hover {
   background: #eff6fb;
 }
 
-.sam-accordion .sam-accordion__trigger::-moz-focus-inner {
+.sds-accordion .sds-accordion__trigger::-moz-focus-inner {
   border: 0;
 }
 
-.sam-accordion__title {
+.sds-accordion__title {
   display: block;
   pointer-events: none;
   border: transparent 1px dashed;
@@ -61,16 +61,16 @@
   padding: 6px 10px;
 }
 
-.sam-accordion__trigger:focus .sam-accordion__title {
+.sds-accordion__trigger:focus .sds-accordion__title {
   border-color: hsl(216, 94%, 73%);
 }
 
-.sam-accordion__trigger:focus .sam-accordion__icon,
-.sam-accordion__trigger:hover .sam-accordion__icon {
+.sds-accordion__trigger:focus .sds-accordion__icon,
+.sds-accordion__trigger:hover .sds-accordion__icon {
   background-color: white;
 }
 
-.sam-accordion__icon {
+.sds-accordion__icon {
   transition: transform 0.2s ease-in;
   width: 24px;
   height: 24px;
@@ -81,11 +81,11 @@
   background-color: #e2e2e2;
 }
 
-.sam-accordion__icon::before {
-  content: "";
+.sds-accordion__icon::before {
+  content: '';
   display: block;
   width: 11px;
-  height: 0px;
+  height: 0;
   border-bottom: solid 1px #0a3466;
   position: absolute;
   left: 6px;
@@ -94,11 +94,11 @@
   transition: width 0.2s ease-in;
 }
 
-.sam-accordion__icon::after {
-  content: "";
+.sds-accordion__icon::after {
+  content: '';
   display: block;
   width: 11px;
-  height: 0px;
+  height: 0;
   border-bottom: solid 1px #0a3466;
   position: absolute;
   left: 6px;
@@ -106,66 +106,66 @@
   transition: width 0.2s ease-in;
 }
 
-.sam-accordion__trigger[aria-expanded="true"] .sam-accordion__icon {
+.sds-accordion__trigger[aria-expanded='true'] .sds-accordion__icon {
   transform: rotate(0deg);
   background-color: white;
 }
 
-.sam-accordion__trigger[aria-expanded="true"] .sam-accordion__icon::after {
+.sds-accordion__trigger[aria-expanded='true'] .sds-accordion__icon::after {
   bottom: 11px;
 }
 
-.sam-accordion__trigger[aria-expanded="true"] .sam-accordion__icon::before {
-  width: 0px;
+.sds-accordion__trigger[aria-expanded='true'] .sds-accordion__icon::before {
+  width: 0;
   transform: rotate(90deg);
 }
 
-.sam-accordion__trigger[aria-expanded="true"] {
+.sds-accordion__trigger[aria-expanded='true'] {
   color: #0a3466;
   background-color: #eff6fb;
 }
 
-.sam-accordion__panel {
+.sds-accordion__panel {
   padding: 0;
 }
 
-.sam-accordion__panel-body{
+.sds-accordion__panel-body {
   padding: 8px 5px;
 }
 
 /* Accordion -- Basic */
-.sam-accordion.sam-accordion--basic {
+.sds-accordion.sds-accordion--basic {
   border-color: transparent;
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
 
-.sam-accordion.sam-accordion--basic.focus {
+.sds-accordion.sds-accordion--basic.focus {
   border-color: hsl(216, 94%, 73%);
 }
 
-.sam-accordion.sam-accordion--basic .sam-accordion__item {
+.sds-accordion.sds-accordion--basic .sds-accordion__item {
   border: none;
   background-color: transparent;
   padding: 0;
   margin-bottom: 0;
 }
 
-.sam-accordion.sam-accordion--basic .sam-accordion__item--expanded {
+.sds-accordion.sds-accordion--basic .sds-accordion__item--expanded {
   background-color: transparent;
   box-shadow: none;
 }
 
-.sam-accordion.sam-accordion--basic .sam-accordion__trigger {
+.sds-accordion.sds-accordion--basic .sds-accordion__trigger {
   background-color: transparent;
   font-size: 16px;
 }
 
-.sam-accordion.sam-accordion--basic
-  .sam-accordion__trigger[aria-expanded="true"] {
+.sds-accordion.sds-accordion--basic
+.sds-accordion__trigger[aria-expanded='true'] {
   background-color: transparent;
 }
 
-.sam-accordion.sam-accordion--basic .sam-accordion__icon {
+.sds-accordion.sds-accordion--basic .sds-accordion__icon {
   border: solid #0a3466;
   border-width: 0 1px 1px 0;
   height: 0.5rem;
@@ -179,19 +179,21 @@
   background-color: transparent;
 }
 
-.sam-accordion.sam-accordion--basic
-  .sam-accordion__trigger[aria-expanded="true"]
-  .sam-accordion__icon {
+.sds-accordion.sds-accordion--basic
+.sds-accordion__trigger[aria-expanded='true']
+.sds-accordion__icon {
   transform: rotate(-135deg);
 }
 
-.sam-accordion.sam-accordion--basic .sam-accordion__icon::before,
-.sam-accordion.sam-accordion--basic .sam-accordion__icon::after {
+.sds-accordion.sds-accordion--basic .sds-accordion__icon::before,
+.sds-accordion.sds-accordion--basic .sds-accordion__icon::after {
   content: none;
 }
 
-.sam-accordion.sam-accordion--basic .sam-accordion__panel .sam-accordion__panel-body{
-  margin: 0px 5px;
+.sds-accordion.sds-accordion--basic
+.sds-accordion__panel
+.sds-accordion__panel-body {
+  margin: 0 5px;
   padding: 1px 8px 10px;
   background-color: white;
   box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
