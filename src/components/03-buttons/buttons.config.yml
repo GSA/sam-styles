@@ -1,6 +1,5 @@
 label: Buttons
 status: ready
-order: 3
 preview: "@sam-content"
 default: "primary"
 variants:
