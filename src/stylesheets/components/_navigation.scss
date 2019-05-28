@@ -18,6 +18,9 @@
   // use the usa-nav-list styles for the slide-in nav
   @include at-media-max($theme-navigation-width) {
     margin-top: units(2);
+    .usa-current {
+      color: color('ink');
+    }
     a {
       &:hover {
         color: color($theme-link-hover-color);
