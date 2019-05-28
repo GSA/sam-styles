@@ -30,7 +30,6 @@ const SKIP_COMPONENTS = [
   'page-with-sidebar',
   'state-color', // Is not a component - will be moved to docs section
   'theme-color', // Is not a component - will be moved to docs section
-  'toolbar' // Refactoring this component
 ];
 const DEVICES = [
   new Device('small-desktop', {
