@@ -27,7 +27,7 @@ const SKIP_COMPONENTS = [
   // here.
   'sam',
   'sam-content',
-  'page-wrapper',
+  'page-with-sidebar',
   'state-color', // Is not a component - will be moved to docs section
   'theme-color', // Is not a component - will be moved to docs section
   'toolbar' // Refactoring this component
