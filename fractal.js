@@ -43,7 +43,7 @@ const mandelbrot = require('@frctl/mandelbrot');
 
 const themeConfig = {
   skin: "white",
-  panels: ["html", "resources"],
+  panels: ["html", "notes", "resources"],
   scripts: [
     "default",
     // "https://unpkg.com/@stackblitz/sdk/bundles/sdk.umd.js"
