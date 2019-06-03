@@ -7,6 +7,7 @@ import {
   faSignOutAlt,
   faAngleRight,
   faAngleLeft,
+  faExclamationCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { samBars } from "./../icons/bars";
 import { samArrowLeft } from "./../icons/arrowLeft";
@@ -38,6 +39,7 @@ const icons = [
   faSignOutAlt,
   faAngleRight,
   faAngleLeft,
+  faExclamationCircle,
   samBars,
   samArrowLeft,
   samBell,
