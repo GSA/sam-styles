@@ -9,7 +9,7 @@
 }
 
 .entity-content > * {
-  margin: 0 10px;
+  margin: 0 10px 0 0;
   align-self: flex-start;
 }
 
@@ -27,17 +27,21 @@
 
 .entity-address,
 .entity-id {
-  font: 400 14px/20px Source Sans Pro, sans-serif;
+  font: 400 14px/26px Source Sans Pro, sans-serif;
   color: #5c5c5c;
   display: flex;
   text-align: left;
-  margin-top: 25px;
+  margin-top: 22px;
+}
+
+.duns-sam {
+  margin-top: 7px;
 }
 
 .duns,
 .sam {
   font: 400 16px/20px Source Sans Pro, sans-serif;
-  margin: auto 10px 10px;
+  margin: auto 10px 10px 0px;
 }
 
 .duns {
@@ -58,7 +62,7 @@
 
 .entity-btns {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .entity-expires,
@@ -93,5 +97,5 @@
 
 .entity-options {
   max-width: 45px;
-  margin: 30px 10px;
+  margin: 25px 10px;
 }
