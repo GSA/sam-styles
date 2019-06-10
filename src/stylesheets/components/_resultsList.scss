@@ -36,7 +36,8 @@
   display: inline-block;
 }
 
-.search-result > .id, .purpose {
+.purpose,
+.search-result > .id {
   font: 400 14px/26px Source Sans Pro, sans-serif;
   color: #5c5c5c;
   display: flex;
@@ -62,7 +63,7 @@
   text-align: center;
 }
 
- .label-white {
+.label-white {
   width: 55px;
   height: 20px;
   border-radius: 2px;
