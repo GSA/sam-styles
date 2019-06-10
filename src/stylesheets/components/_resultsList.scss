@@ -1,37 +1,31 @@
-.entity-name {
-  font: 600 20px/20px Source Sans Pro, sans-serif;
-  color: #112f4e;
-}
-
-.entity-content {
-  display: flex;
-  align-items: center;
-}
-
-.entity-content > * {
+.search-result__list > * {
   margin: 0 10px 0 0;
   align-self: flex-start;
 }
 
-.entity-alert {
+.search-result > .name {
+  font: 600 20px/20px Source Sans Pro, sans-serif;
+  color: #112f4e;
+}
+
+.search-result > .alert {
   height: 35px;
   width: 270px;
   border: solid #febe2e;
   border-radius: 3px;
-  background: #fcfcfb;
   box-shadow: 0 -5px 7px rgba(154, 154, 154, 0.25);
   text-align: center;
   box-sizing: border-box;
 }
 
-.entity-alert__label {
+.search-result > .alert > .label {
   font: 600 16px/30px Source Sans Pro, sans-serif;
   color: #5c5c5c;
   display: inline-block;
   margin: 0 0 0 4px;
 }
 
-.circle {
+.search-result > .alert > .circle {
   height: 17px;
   width: 17px;
   background-color: #febe2e;
@@ -42,8 +36,7 @@
   display: inline-block;
 }
 
-.entity-address,
-.entity-id {
+.search-result > .id, .purpose {
   font: 400 14px/26px Source Sans Pro, sans-serif;
   color: #5c5c5c;
   display: flex;
@@ -51,17 +44,17 @@
   margin-top: 22px;
 }
 
-.duns-sam {
+.label-field {
   margin-top: 7px;
 }
 
-.duns,
-.sam {
+.label-green,
+.label-white {
   font: 400 16px/20px Source Sans Pro, sans-serif;
   margin: auto 10px 10px 0;
 }
 
-.duns {
+.label-green {
   background-color: #c3ee90;
   width: 55px;
   height: 20px;
@@ -69,7 +62,7 @@
   text-align: center;
 }
 
-.sam {
+ .label-white {
   width: 55px;
   height: 20px;
   border-radius: 2px;
@@ -77,19 +70,17 @@
   text-align: center;
 }
 
-.entity-btns {
+.search-result > .button-field {
   display: flex;
   justify-content: center;
 }
 
-.entity-expires,
-.entity-status {
+.search-result > .button-field > .button-content {
   font: italic 400 14px/18px Source Sans Pro, sans-serif;
   color: #636363;
 }
 
-.entity-expires__btn,
-.entity-status__btn {
+.search-result > .button-field > .button-content > .button {
   font: 600 14px/18px Source Sans Pro, sans-serif;
   color: #636363;
   display: flex;
@@ -98,8 +89,7 @@
   margin: 10px 10px 0 0;
 }
 
-.entity-expires__btn > *,
-.entity-status__btn > * {
+.search-result > .button-field > .button-content > .button > * {
   margin: auto;
 }
 
@@ -112,7 +102,7 @@
   margin: 5%;
 }
 
-.entity-options {
+.search-result > .options {
   max-width: 45px;
   margin: 25px 10px;
 }
