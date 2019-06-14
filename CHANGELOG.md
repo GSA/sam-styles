@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.0.14 (14/06/2019)
+- [0.0.14](https://github.com/GSA/sam-styles/commit/97cb048c86f2cead02b303bc324e5fc5bf60a561) - @carlosvalle
+- [Replace footer logo with background image](https://github.com/GSA/sam-styles/commit/5c34752f597428107fab51f15aed2734a931e348) - @carlosvalle
+- [Update changelog with latest version notes](https://github.com/GSA/sam-styles/commit/f905bb97a0da9ca26a2a675c200b55a83bb88f30) - @carlosvalle
+
+---
+
 ## v0.0.13 (13/06/2019)
 - [NPM Version 0.0.13](https://github.com/GSA/sam-styles/commit/f0dd5bf45ebd02c29451ae1b207008301e9e8a9f) - @carlosvalle
 - [Add menu component](https://github.com/GSA/sam-styles/commit/e2e85e82b659fb8b599042148c025f549f666fe4) - @carlosvalle
