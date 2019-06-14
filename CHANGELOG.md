@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.0.15 (14/06/2019)
+- [Add option for custom logo in footer](https://github.com/GSA/sam-styles/commit/9415616e67ccfd5c1d2f5c22616ff4c64f224b0c) - @carlosvalle
+
+---
+
 ## v0.0.14 (14/06/2019)
 - [0.0.14](https://github.com/GSA/sam-styles/commit/97cb048c86f2cead02b303bc324e5fc5bf60a561) - @carlosvalle
 - [Replace footer logo with background image](https://github.com/GSA/sam-styles/commit/5c34752f597428107fab51f15aed2734a931e348) - @carlosvalle
