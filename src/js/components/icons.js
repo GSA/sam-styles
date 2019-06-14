@@ -1,4 +1,4 @@
-import { config, library, dom } from "@fortawesome/fontawesome-svg-core";
+import { library, dom } from "@fortawesome/fontawesome-svg-core";
 import {
   faSquare,
   faEdit,
@@ -8,6 +8,9 @@ import {
   faAngleRight,
   faAngleLeft,
   faExclamationCircle,
+  faTimes,
+  faQuestion,
+  faCircle
 } from "@fortawesome/free-solid-svg-icons";
 import { samBars } from "./../icons/bars";
 import { samArrowLeft } from "./../icons/arrowLeft";
@@ -29,10 +32,9 @@ import { samDownload } from "./../icons/download";
 import { samInvoice } from "./../icons/invoice";
 import { samPaperPlane } from "./../icons/paperPlane";
 
-config.familyPrefix = "icon";
-
 const icons = [
   faSquare,
+  faCircle,
   faEdit,
   faComment,
   faTh,
@@ -40,6 +42,8 @@ const icons = [
   faAngleRight,
   faAngleLeft,
   faExclamationCircle,
+  faTimes,
+  faQuestion,
   samBars,
   samArrowLeft,
   samBell,

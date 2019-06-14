@@ -29,4 +29,13 @@ $background-color-palettes: ('palette-color-state');
 
 // .border-radius
 
-$border-radius-manual-values: ( ('btn' : 5px) );
+$border-radius-manual-values: (
+  'button': 5px,
+  'overlay': 6px,
+);
+
+// .min-width
+
+$min-width-manual-values: (
+  'menu': 200px
+);
