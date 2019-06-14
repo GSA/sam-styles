@@ -32,6 +32,16 @@
   @include add-background-svg('sam/logo-gsa');
 }
 
+.usa-footer__logo-img {
+  max-width: 100px;
+  @include at-media('mobile-lg') {
+    max-width: 100%;
+  }
+  @include at-media('tablet') {
+    min-width: 100px;
+  }
+}
+
 .usa-footer__logo-heading {
   @include h4;
   color: #005088;
