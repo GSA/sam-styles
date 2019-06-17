@@ -122,3 +122,12 @@
   }
 
 }
+
+.sds-button--attached-left{
+  border-radius: 0px 0.3125rem 0.3125rem 0px; 
+}
+
+.sds-button--circle{
+  @include u-padding-x('105');
+  @include u-radius('pill');
+}
