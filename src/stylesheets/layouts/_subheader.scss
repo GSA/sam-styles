@@ -1,0 +1,14 @@
+.sds-subheader__title,
+.subheader__buttons{
+  @include u-margin-bottom('1');
+  @include at-media(tablet) {
+    @include u-margin-bottom(0);
+  }
+}
+
+.subheader__menu{
+  @include u-display('none');
+  @include at-media(tablet) {
+    @include u-display('block');
+  }
+}
