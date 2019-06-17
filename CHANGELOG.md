@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.0.16 (17/06/2019)
+- [0.0.16](https://github.com/GSA/sam-styles/commit/8ffc736344164b9240b7f2f7184e497047f38e57) - @carlosvalle
+- [Layouts](https://github.com/GSA/sam-styles/commit/7782f95d909620a1137be6de839b03047fa3cf78) - @carlosvalle
+- [Buttons](https://github.com/GSA/sam-styles/commit/60ad7a64d60629df46f283d0f3b54a9fb3a30ff1) - @carlosvalle
+
+---
+
 ## v0.0.15 (14/06/2019)
 - [Add option for custom logo in footer](https://github.com/GSA/sam-styles/commit/9415616e67ccfd5c1d2f5c22616ff4c64f224b0c) - @carlosvalle
 
