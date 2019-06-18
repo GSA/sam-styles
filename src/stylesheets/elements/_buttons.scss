@@ -2,20 +2,21 @@
   @include u-radius(0.3125rem); // TODO: support for manual variables ex: u-radius('btn');
   color: color('secondary-darker');
   padding: units(1.5) units(4);
-  &:hover,
-  &.usa-button--hover {
+
+  &.usa-button--hover,
+  &:hover {
     background-color: color('primary-light');
     color: color('secondary-darker');
   }
 
-  &:active,
-  &.usa-button--active {
+  &.usa-button--active,
+  &:active {
     background-color: color('secondary-darker');
     color: color('white');
   }
 
-  &:focus,
-  &.usa-focus {
+  &.usa-focus,
+  &:focus {
     outline-offset: units(2px);
   }
 }
@@ -28,14 +29,14 @@
     color: color('primary');
   }
 
-  &:hover,
-  &.usa-button--hover {
+  &.usa-button--hover,
+  &:hover {
     background-color: transparent;
     box-shadow: $button-stroke color('primary-light');
   }
 
-  &:active,
-  &.usa-button--active {
+  &.usa-button--active,
+  &:active {
     background-color: transparent;
     color: color('secondary-darker');
     box-shadow: $button-stroke color('secondary-darker');
@@ -50,15 +51,15 @@
       color: color('base-lighter');
     }
 
-    &:hover,
-    &.usa-button--hover {
+    &.usa-button--hover,
+    &:hover {
       background-color: transparent;
       box-shadow: $button-stroke color('base-lightest');
       color: color('base-lightest');
     }
 
-    &:active,
-    &.usa-button--active {
+    &.usa-button--active,
+    &:active {
       background-color: transparent;
       box-shadow: $button-stroke color('white');
       color: color('base-light');
@@ -70,15 +71,16 @@
   color: color('gold-70');
   background-color: color('accent-warm-lighter');
   box-shadow: $button-stroke color('base-light');
-  &:hover,
-  &.usa-button--hover {
+
+  &.usa-button--hover,
+  &:hover {
     color: color('gold-70');
     background-color: color('white');
     box-shadow: $button-stroke color('base');
   }
 
-  &:active,
-  &.usa-button--active {
+  &.usa-button--active,
+  &:active {
     color: color('white');
     background-color: color('base-dark');
   }
@@ -87,21 +89,22 @@
 .usa-button--secondary {
   background-color: color('primary-lighter');
   box-shadow: $button-stroke color('primary');
-  &:hover,
-  &.usa-button--hover {
+
+  &.usa-button--hover,
+  &:hover {
     box-shadow: $button-stroke color('primary-light');
     background-color: color('white');
   }
 
-  &:active,
-  &.usa-button--active {
+  &.usa-button--active,
+  &:active {
     color: color('secondary-darker');
     box-shadow: $button-stroke color('secondary-darker');
     background-color: color('white');
   }
 
-  &:disabled,
-  &.usa-button--disabled {
+  &.usa-button--disabled,
+  &:disabled {
     color: color('disabled');
     box-shadow: $button-stroke color('disabled');
     background-color: transparent;
@@ -110,24 +113,24 @@
 
 .usa-button--tertiary {
   background-color: color('error');
-  &:hover,
-  &.usa-button--hover {
+
+  &.usa-button--hover,
+  &:hover {
     background-color: color('error-lighter');
   }
 
-  &:active,
-  &.usa-button--active {
+  &.usa-button--active,
+  &:active {
     color: color('white');
     background-color: color('error-dark');
   }
-
 }
 
-.sds-button--attached-left{
-  border-radius: 0px 0.3125rem 0.3125rem 0px; 
+.sds-button--attached-left {
+  border-radius: 0 0.3125rem 0.3125rem 0;
 }
 
-.sds-button--circle{
+.sds-button--circle {
   @include u-padding-x('105');
   @include u-radius('pill');
 }
