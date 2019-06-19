@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.0.17 (18/06/2019)
+- [0.0.17](https://github.com/GSA/sam-styles/commit/d92dee63a46b887323470135e676dac547287076) - @carlosvalle
+- [format fix](https://github.com/GSA/sam-styles/commit/35b8b1437bc2b55b4339fafad420a3337b47a4f2) - @samanthabaker
+
+---
+
 ## v0.0.16 (17/06/2019)
 - [0.0.16](https://github.com/GSA/sam-styles/commit/8ffc736344164b9240b7f2f7184e497047f38e57) - @carlosvalle
 - [Layouts](https://github.com/GSA/sam-styles/commit/7782f95d909620a1137be6de839b03047fa3cf78) - @carlosvalle
