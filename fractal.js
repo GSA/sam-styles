@@ -43,6 +43,7 @@ const mandelbrot = require('@frctl/mandelbrot');
 
 const themeConfig = {
   skin: "white",
+  nav: ['docs', 'components'],
   panels: ["html", "notes", "resources"],
   scripts: [
     "default",
