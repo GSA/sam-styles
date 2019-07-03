@@ -31,6 +31,8 @@ import { samLink } from "./../icons/link";
 import { samDownload } from "./../icons/download";
 import { samInvoice } from "./../icons/invoice";
 import { samPaperPlane } from "./../icons/paperPlane";
+import { samWarning } from "./../icons/warning";
+
 
 const icons = [
   faSquare,
@@ -62,7 +64,8 @@ const icons = [
   samRulerPencil,
   samShare,
   samTrash,
-  samUser
+  samUser,
+  samWarning
 ];
 
 library.add(...icons);

@@ -1,3 +1,34 @@
+.sds-tag--info-purple {
+  color: black;
+  background-color: #e2bee4;
+  border: 1.5px solid #7665d1;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+.sds-tag--info-white {
+  color: black;
+  background-color: white;
+  border: 1.5px solid #76766a;
+  border-radius: 2px;
+  font-weight: 600;
+}
+// Alert tag
+
+.sds-tag--alert {
+  background-color: #faf3d1;
+  border-radius: 8px;
+  max-width: 320px;
+  display: flex;
+  align-items: center;
+}
+
+.sds-tag--alert-content {
+  display: inline-block;
+  margin-left: 10px;
+}
+// Chip tag
+
 .sds-tag.sds-tag--chip {
   background-color: color('primary-lighter');
   border: 1px solid color('primary');
@@ -14,9 +45,7 @@
   font-size: 12px;
   margin-left: 5px;
 }
-
 // Status tag
-
 .sds-tag[class*='sds-tag--status'] {
   white-space: nowrap;
   text-transform: uppercase;
@@ -69,6 +98,75 @@
 }
 
 .sds-tag.sds-tag--status-red::before {
+  border: 1px solid #981b1e;
+  background-color: #e59393;
+}
+// Outline tag
+
+.sds-label--outline {
+  display: inline-block;
+}
+
+.sds-label--outline-title {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: lighter;
+  margin: 0;
+  color: #5d5d52;
+}
+
+.sds-tag[class*='sds-tag--outline'] {
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 550;
+  padding: 5px;
+  border: 1px solid;
+  color: #212121;
+  margin-right: 5px;
+  display: inline-block;
+  width: auto;
+  background-color: #f5f5f0;
+}
+
+.sds-tag[class*='sds-tag--outline']::before {
+  content: '';
+  display: inline-block;
+  border: 1px solid #5b616b;
+  background-color: #f1f1f1;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+  vertical-align: bottom;
+}
+
+.sds-tag.sds-tag--outline-green::before {
+  border: 1px solid #2e8540;
+  background-color: #4aa564;
+}
+
+.sds-tag.sds-tag--outline-gray::before {
+  border: 1px solid #aeb0b5;
+  background-color: #e4e2e0;
+}
+
+.sds-tag.sds-tag--outline-dark-gray::before {
+  border: 1px solid #aeb0b5;
+  background-color: #5b616b;
+}
+
+.sds-tag.sds-tag--outline-yellow::before {
+  border: 1px solid #fdb81e;
+  background-color: #fad980;
+}
+
+.sds-tag.sds-tag--outline-light-blue::before {
+  border: 1px solid #00a6d2;
+  background-color: #9bdaf1;
+}
+
+.sds-tag.sds-tag--outline-red::before {
   border: 1px solid #981b1e;
   background-color: #e59393;
 }
