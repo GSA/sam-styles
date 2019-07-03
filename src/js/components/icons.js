@@ -20,6 +20,7 @@ import { samDownload } from "./../icons/download";
 import { samInvoice } from "./../icons/invoice";
 import { samPaperPlane } from "./../icons/paperPlane";
 
+
 const icons = [
   fas,
   samBars,
