@@ -1,6 +1,6 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'sam';
+var prefix = 'sds';
 var iconName = 'print';
 var width = 592;
 var height = 512;

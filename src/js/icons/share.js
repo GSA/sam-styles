@@ -1,6 +1,6 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'sam';
+var prefix = 'sds';
 var iconName = 'share';
 var width = 512;
 var height = 512;

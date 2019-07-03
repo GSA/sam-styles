@@ -1,6 +1,6 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'sam';
+var prefix = 'sds';
 var iconName = 'arrow-left';
 var width = 448;
 var height = 512;
