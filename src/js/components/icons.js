@@ -1,17 +1,5 @@
 import { library, dom } from "@fortawesome/fontawesome-svg-core";
-import {
-  faSquare,
-  faEdit,
-  faComment,
-  faTh,
-  faSignOutAlt,
-  faAngleRight,
-  faAngleLeft,
-  faExclamationCircle,
-  faTimes,
-  faQuestion,
-  faCircle
-} from "@fortawesome/free-solid-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
 import { samBars } from "./../icons/bars";
 import { samArrowLeft } from "./../icons/arrowLeft";
 import { samBell } from "./../icons/bell";
@@ -33,17 +21,7 @@ import { samInvoice } from "./../icons/invoice";
 import { samPaperPlane } from "./../icons/paperPlane";
 
 const icons = [
-  faSquare,
-  faCircle,
-  faEdit,
-  faComment,
-  faTh,
-  faSignOutAlt,
-  faAngleRight,
-  faAngleLeft,
-  faExclamationCircle,
-  faTimes,
-  faQuestion,
+  fas,
   samBars,
   samArrowLeft,
   samBell,
