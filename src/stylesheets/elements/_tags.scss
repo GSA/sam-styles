@@ -1,6 +1,6 @@
 .sds-tag--info-purple {
   color: black;
-  background-color: #e2bee4;
+  background-color: #fbdcff;
   border: 1.5px solid #7665d1;
   border-radius: 2px;
   font-weight: 600;
@@ -103,18 +103,6 @@
 }
 // Outline tag
 
-.sds-label--outline {
-  display: inline-block;
-}
-
-.sds-label--outline-title {
-  font-size: 14px;
-  font-style: italic;
-  font-weight: lighter;
-  margin: 0;
-  color: #5d5d52;
-}
-
 .sds-tag[class*='sds-tag--outline'] {
   white-space: nowrap;
   font-size: 14px;
@@ -169,4 +157,18 @@
 .sds-tag.sds-tag--outline-red::before {
   border: 1px solid #981b1e;
   background-color: #e59393;
+}
+
+.sds-tag[class*='sds-tag--alt'] {
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 550;
+  padding: 5px 10px;
+  border: 1px solid;
+  color: #212121;
+  margin-right: 5px;
+  display: inline-block;
+  width: auto;
+  background-color: #f5f5f0;
 }
