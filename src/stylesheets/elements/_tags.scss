@@ -15,7 +15,7 @@
 }
 // Alert tag - Warning
 
-.sds-tag--alert {
+.sds-alert {
   background-color: #faf3d1;
   border-radius: 8px;
   max-width: 320px;
@@ -23,18 +23,18 @@
   align-items: center;
 }
 
-.sds-tag--alert > svg {
+.sds-alert > svg {
   margin: auto 10px;
   color: #fbc036;
 }
 
-.sds-tag--alert-content {
+.sds-alert-content {
   display: inline-block;
 }
 
 // Alert tag - Info
 
-.sds-tag--alert-info {
+.sds-alert-info {
   background-color: #e7f6f8;
   border-radius: 8px;
   max-width: 320px;
@@ -42,14 +42,14 @@
   align-items: center;
 }
 
-.sds-tag--alert-info > svg {
+.sds-alert-info > svg {
   margin: auto 10px;
   color: #00bde3;
 }
 
 // Alert tag - Error
 
-.sds-tag--alert-error {
+.sds-alert-error {
   background-color: #fdb8ae;
   border-radius: 8px;
   max-width: 320px;
@@ -57,7 +57,7 @@
   align-items: center;
 }
 
-.sds-tag--alert-error > svg {
+.sds-alert-error > svg {
   margin: auto 10px;
   color: #fb5a47;
 }
