@@ -19,6 +19,7 @@ import { samLink } from "./../icons/link";
 import { samDownload } from "./../icons/download";
 import { samInvoice } from "./../icons/invoice";
 import { samPaperPlane } from "./../icons/paperPlane";
+import { samExclamation } from "./../icons/exclamation";
 
 
 const icons = [
@@ -41,7 +42,8 @@ const icons = [
   samRulerPencil,
   samShare,
   samTrash,
-  samUser
+  samUser,
+  samExclamation
 ];
 
 library.add(...icons);
