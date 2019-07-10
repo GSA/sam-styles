@@ -22,7 +22,7 @@ variants:
               id: nav-section-contracting
               links: false
             - text: Federal Assistance
-              id: nav-section-assistance
+              id: nav-section-federal-assistance
               links: false
             - text: Help
               href: ''

@@ -6,7 +6,8 @@
   "scripts": {
     "fractal:build": "fractal build",
     "federalist": "npm install --only=dev && npm run postinstall && npm run prod && npm run fractal:build",
-    "start": "fractal.cmd start --sync",
+    "start": "fractal start --sync",
+    "start-win": "fractal.cmd start --sync",
     "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
     "dev": "webpack --env.mode development --watch --progress",
     "prod": "webpack --env.mode production",
@@ -55,8 +56,5 @@
     "webpack-cli": "^3.2.3",
     "webpack-merge": "^4.2.1",
     "yargs": "^13.2.2"
-  },
-  "fractal":{
-    "main": "fractal.js"
   }
 }
