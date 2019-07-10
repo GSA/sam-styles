@@ -1,4 +1,4 @@
-label: Header
+cd label: Header
 status: wip
 
 variants:
@@ -14,12 +14,12 @@ variants:
           search: false
           id_prefix: extended-
           links:
-            - text: Home
+            - text: Section 1
               href: ''
               is_current: false
               id: nav-section-home
               links: false
-            - text: Contracting
+            - text: Section 2
               is_current: false
               id: nav-section-one
               links: &subnav_links
@@ -29,12 +29,12 @@ variants:
                   href: '#'
                 - text: A very long page title that goes onto two lines
                   href: '#'
-            - text: Federal Assistance
+            - text: Section 3
               id: nav-section-two
               links: *subnav_links
-            - text: Search
+            - text: Section 4
               href: ''
-            - text: Help
+            - text: Section 5
               href: ''
         secondary:
           search: false

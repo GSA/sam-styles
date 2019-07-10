@@ -1,1 +1,0 @@
-This is an overview file of the SAM design system.

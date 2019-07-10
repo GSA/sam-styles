@@ -5,6 +5,7 @@ const fractal = require('@frctl/fractal').create();
 
 fractal.set('project.title', `SAM Styles (v${pkg.version})`);
 fractal.set('project.version', `v${pkg.version}`);
+fractal.set('project.author', 'GSA Integrated Award Environment');
 
 // =============================================================================
 // COMPONENTS
