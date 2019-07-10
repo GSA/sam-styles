@@ -17,5 +17,17 @@ variants:
   - name: chip
     label: Chip
     context:
-      label: 
+      label:
         classes: "sds-tag sds-tag--chip"
+
+  - name: outline
+    label: Outline
+    context:
+      label:
+        classes: "sds-tag sds-tag--outline"
+
+  - name: alert
+    label: Alert
+    context:
+      label:
+        classes: "sds-tag sds-tag--alert"

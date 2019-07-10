@@ -1,12 +1,12 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 var prefix = 'sds';
-var iconName = 'paper-plane';
-var width = 448;
+var iconName = 'exclamation';
+var width = 225;
 var height = 512;
 var ligatures = [];
 var unicode = '';
-var svgPathData = 'M499.79,1,4.35,267.8a8.26,8.26,0,0,0,2.3,15.37l185.24,36.95,36.95,185.24a8.26,8.26,0,0,0,15.37,2.3L511,12.21A8.26,8.26,0,0,0,499.79,1ZM32.38,271.46,458.1,42.23,196.18,304.14ZM240.53,479.62l-32.67-163.8L469.75,53.94Z';
+var svgPathData = 'M150,0H75A75.15,75.15,0,0,0,0,75.29V436.71A75.15,75.15,0,0,0,75,512h75a75.15,75.15,0,0,0,75-75.29V75.29A75.15,75.15,0,0,0,150,0ZM110,90.44q1.24-.08,2.48-.08a37.42,37.42,0,0,1,37.35,37.5q0,1.25-.08,2.49l-13.32,201H88.55l-13.32-201A37.45,37.45,0,0,1,110,90.44Zm2.48,346.27A37.65,37.65,0,1,1,150,399.06,37.57,37.57,0,0,1,112.5,436.71Z';
 
 exports.definition = {
   prefix: prefix,
@@ -19,7 +19,7 @@ exports.definition = {
     svgPathData
   ]};
 
-exports.samPaperPlane = exports.definition;
+exports.samExclamation = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;

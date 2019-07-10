@@ -1,0 +1,7 @@
+label: Alerts
+status: wip
+
+variants:
+  - name: default
+    label: SAM Alerts
+    status: null

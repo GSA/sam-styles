@@ -36,41 +36,6 @@
   display: inline-block;
 }
 
-.purpose,
-.search-result > .id {
-  font: 400 14px/26px Source Sans Pro, sans-serif;
-  color: #5c5c5c;
-  display: flex;
-  text-align: left;
-  margin-top: 22px;
-}
-
-.label-field {
-  margin-top: 7px;
-}
-
-.label-green,
-.label-white {
-  font: 400 16px/20px Source Sans Pro, sans-serif;
-  margin: auto 10px 10px 0;
-}
-
-.label-green {
-  background-color: #c3ee90;
-  width: 55px;
-  height: 20px;
-  border-radius: 2px;
-  text-align: center;
-}
-
-.label-white {
-  width: 55px;
-  height: 20px;
-  border-radius: 2px;
-  border: solid 1px #9b9b9b;
-  text-align: center;
-}
-
 .search-result > .button-field {
   display: flex;
   justify-content: center;

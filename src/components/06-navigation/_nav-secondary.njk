@@ -5,11 +5,11 @@
       <a href="{{ link.href }}"{% if link.current %} class="usa-current"{% endif %}>
         {% if link.icon and link.notification %}
           <span class="icon-layers icon-fw">
-            <i class="fas icon-{{link.icon}}"></i>
+            <i class="fas fa-{{link.icon}}"></i>
             <span class="icon-layers-counter"></span>
           </span>
         {% endif %}
-        {% if link.icon and not link.notification %}<i class="fas icon-{{link.icon}}"></i>{% endif %}
+        {% if link.icon and not link.notification %}<i class="fas fa-{{link.icon}}"></i>{% endif %}
         {{ link.text }}
       </a>
     </li>

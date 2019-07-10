@@ -1,6 +1,6 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'sam';
+var prefix = 'sds';
 var iconName = 'ruler-pencil';
 var width = 448;
 var height = 512;
