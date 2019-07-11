@@ -1,3 +1,4 @@
 module.exports = {
-	title: "Theme Color"
+	title: "Theme Color",
+	order: 1
 };
