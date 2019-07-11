@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development concurrently 'node ./server.js' 'webpack-dev-server --hot'",
+    "start": "cross-env NODE_ENV=development concurrently 'node server.js' 'webpack-dev-server --hot'",
     "build": "cross-env NODE_ENV=production concurrently 'npm run build:fractal' 'npm run build:webpack'",
     "build:fractal": "fractal build",
     "build:webpack": "cross-env NODE_ENV=production webpack",
