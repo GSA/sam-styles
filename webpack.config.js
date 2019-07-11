@@ -1,75 +1,101 @@
-const path = require('path');
-const webpack = require("webpack");
-const webpackMerge = require("webpack-merge");
+const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
-const modeConfig = env => require(`./build-utils/webpack.${env}`)(env);
-const presetConfig = require("./build-utils/loadPresets");
-
-const SRC_DIR = './src/';
-const PUB_DIR = './dist/';
-
-module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
-  return webpackMerge(
-    {
-      mode,
-      entry: "./src/js/start.js",
-      module: {
-        rules: [
+module.exports = {
+  mode: process.env.NODE_ENV,
+  resolve: {
+    modules: [
+      path.resolve(__dirname, "assets/scripts"),
+      path.resolve(__dirname, "assets"),
+      "node_modules"
+    ],
+    extensions: [".js"]
+  },
+  entry: {
+    theme: [
+      path.resolve(__dirname, "assets/scripts/theme.js"),
+      path.resolve(__dirname, "assets/styles/theme.scss")
+    ],
+    sds: [
+      path.resolve(__dirname, "src/js/index.js"),
+      path.resolve(__dirname, "src/stylesheets/sam.scss")
+    ],
+    icons: path.resolve(__dirname, "src/icons/icons.js")
+  },
+  output: {
+    path: path.resolve(__dirname, "_site"),
+    publicPath: "/",
+    filename: "[name].js"
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader"
+      },
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
           {
-            test: /\.(sa|sc|c)ss$/,
-            use: [
-              { 
-                loader: MiniCssExtractPlugin.loader,
-                options: { publicPath: '../' }
-              },
-              { loader: 'css-loader', options: { sourceMap: true } },
-              'postcss-loader',
-              { loader: 'sass-loader', options: { sourceMap: true } }
-            ]
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV === "development"
+            }
+          },
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: [require("autoprefixer")()]
+            }
           },
           {
-            test: /\.(woff(2)?|ttf|eot|svg|png)$/,
-            use: [
-              {
-                loader: "file-loader",
-                options: {
-                  outputPath: (url, resourcePath, context) => {
-                    const dirNameArr = resourcePath.split('/');
-                    const imgPathIdx = dirNameArr.indexOf('img');
-                    const fontPathIdx = dirNameArr.indexOf('fonts');
-                    if(imgPathIdx !== -1){
-                      return dirNameArr.slice(imgPathIdx).join('/');
-                    } else if(fontPathIdx !== -1){
-                      return dirNameArr.slice(fontPathIdx).join('/');
-                    }
-                    return url;
-                  }
-                }
-              }
-            ]
+            loader: "sass-loader",
+            options: {
+              includePaths: ["node_modules"]
+            }
           }
         ]
       },
-      plugins: [
-        // new CleanWebpackPlugin(['dist']),
-        new StyleLintPlugin(),
-        new MiniCssExtractPlugin({
-          filename: 'css/sam.css'
-        }),
-        new CopyWebpackPlugin([
+      {
+        test: /\.(svg|png|jpe?g|gif|woff|woff2|eot|ttf|otf)$/,
+        use: [
           {
-            from: path.resolve(SRC_DIR, 'img'),
-            to: path.resolve(PUB_DIR, 'img')
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "sds"
+            }
           }
-        ]),
-        new webpack.ProgressPlugin(),
-      ]
+        ]
+      }
+    ]
+  },
+  plugins: [new CleanWebpackPlugin(["_site"]), new MiniCssExtractPlugin()],
+  devServer: {
+    historyApiFallback: true,
+    compress: true,
+    proxy: {
+      "**": "http://localhost:4000"
     },
-    modeConfig(mode),
-    presetConfig({ mode, presets })
-  );
+    port: 3000,
+    stats: {
+      colors: true
+    },
+    overlay: true
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: "styles",
+          test: /\.css$/,
+          chunks: "all",
+          enforce: true
+        }
+      }
+    }
+  }
 };

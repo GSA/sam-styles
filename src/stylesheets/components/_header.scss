@@ -22,15 +22,13 @@
 .usa-menu-btn {
   @include button-unstyled;
   margin-right: 10px;
-  // icon- classes come from 'js/component/icons.js'
-  // fontawesome-svg-core
-  .icon-square {
+  .fa-square {
     color: #70e17b;
   }
-  .icon-bars {
+  .fa-bars {
     color: #1a4480;
   }
-  .icon-layers-counter {
+  .fa-layers-counter {
     height: 1em;
     min-width: 1em;
     right: 4px;
