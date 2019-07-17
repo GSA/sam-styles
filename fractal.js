@@ -1,7 +1,8 @@
-'use strict';
-
-const pkg = require('./package.json');
-const fractal = require('@frctl/fractal').create();
+"use strict";
+const path = require("path");
+const fractal = require("@frctl/fractal").create();
+const mandelbrot = require("@frctl/mandelbrot");
+const pkg = require("./package.json");
 
 fractal.set('project.title', `SAM Styles (v${pkg.version})`);
 fractal.set('project.version', `v${pkg.version}`);
@@ -11,59 +12,63 @@ fractal.set('project.author', 'GSA Integrated Award Environment');
 // COMPONENTS
 // =============================================================================
 const components = fractal.components;
-components.set('ext', '.njk');
-components.set('path', __dirname + '/src/components');
-components.set('default.preview', '@sam');
+components.set("ext", ".njk");
+components.set("path", __dirname + "/src/components");
+components.set("default.preview", "@sam");
 
 // use Nunjucks as the templating engine
-const nunjucks = require('@frctl/nunjucks')({
-  filters: {
-    // stackblitz: function(d) {
-    //   return d + 'hello';
-    // }
-  },
-  paths: [
-    'src/components',
-  ]
+const nunjucks = require("@frctl/nunjucks")({
+  paths: ["src/components"]
 });
 
-components.engine(nunjucks); 
-
+components.engine(nunjucks);
 
 // =============================================================================
 // DOCUMENTATION
 // =============================================================================
-const docs = fractal.docs;
-docs.set('path', __dirname + '/docs');
-
+fractal.docs.set("path", __dirname + "/docs");
 
 // =============================================================================
 // WEB UI
 // =============================================================================
-const mandelbrot = require('@frctl/mandelbrot');
 
 const themeConfig = {
   skin: "white",
-  nav: ['docs', 'components'],
+  nav: ["docs", "components"],
   panels: ["html", "notes", "resources"],
-  scripts: [
-    "default",
-    // "https://unpkg.com/@stackblitz/sdk/bundles/sdk.umd.js"
-  ]
-}
+  styles: ["default", "/theme.css"],
+  scripts: ["default", "/theme.js"]
+};
 
-const samTheme = mandelbrot(themeConfig);
-samTheme.addLoadPath(__dirname + '/theme-overrides');  
+const sdsTheme = mandelbrot(themeConfig);
 
-const web = fractal.web;
+sdsTheme.addLoadPath(__dirname + "/theme-overrides");
 
-web.theme(samTheme);
+fractal.web.theme(sdsTheme);
 
-web.set('static.path', 'dist');
-web.set('static.mount', 'dist');
+fractal.web.set("static.path", path.join(__dirname, "public"));
 
-// output files to /_site
-// https://federalist.18f.gov/pages/using-federalist/supported-site-engines/#requirements
-web.set('builder.dest', '_site');
+/**
+ * Federalist
+ * output files to /_site
+ * https://federalist.18f.gov/pages/using-federalist/supported-site-engines/#requirements
+ */
+fractal.web.set("builder.dest", "_site");
+
+/**
+ * Server configuration
+ */
+fractal.web.set("server.port", 4000);
+fractal.web.set("server.sync", true);
+
+/**
+ * Prevent Bluebird warnings like "a promise was created in a handler but was not returned from it"
+ * caused by Nunjucks from polluting the console
+ */
+const bluebird = require('bluebird');
+bluebird.config({
+  warnings: false
+});
+
 
 module.exports = fractal;

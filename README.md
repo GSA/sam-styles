@@ -9,10 +9,3 @@ We're using [Fractal](http://fractal.build) to generate an interactive component
 ```sh
 npm start
 ```
-
-Then, visit [http://localhost:3000/](http://localhost:3000/) to see sam-styles in action.
-
-To re-build when CSS changes are made, run the following command from the project directory in a separate terminal window:
-```sh
-npm run prod
-```
