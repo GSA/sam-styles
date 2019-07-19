@@ -1,5 +1,27 @@
 # Changelog
 
+## v0.0.20 (18/07/2019)
+- [0.0.20](https://github.com/GSA/sam-styles/commit/fa513defe86af9a42307d260aad838ccdc66f97d) - @carlosvalle
+- [Add dialog styles](https://github.com/GSA/sam-styles/commit/9c3d771fb0e3a24b7c595a74a9f70413a1bc6fa1) - @carlosvalle
+- [Fix start script in windows](https://github.com/GSA/sam-styles/commit/1dbf982e47b882a9bfad79005d8181ba1b53d4da) - @carlosvalle
+- [Remove './' from start script to make it compatible with windonws](https://github.com/GSA/sam-styles/commit/efef14d492146b8b4b16a9f60a2240afc50344ed) - @carlosvalle
+- [Correctly sets NODE_ENV variable accross platforms](https://github.com/GSA/sam-styles/commit/32b23a1a33e7db29e16daf73892bf82d6dafd9db) - @carlosvalle
+- [Update build script in CI config](https://github.com/GSA/sam-styles/commit/d51363d132c34d45c73d336e1b0b177acc960300) - @carlosvalle
+- [Fix assets path in build configuration](https://github.com/GSA/sam-styles/commit/3b10d89f58b8d477144fa1641a040175908e2d6f) - @carlosvalle
+- [Update README.md](https://github.com/GSA/sam-styles/commit/408a558163f878bcefb26991570b5591aadbc479) - @carlosvalle
+
+---
+
+## 0.0.19 (10/07/2019)
+Alert components were added
+Icons pre-fix was changed from SAM to SDS
+Version number was updated
+---
+
+## 0.0.18 (08/07/2019)
+Update release version to 0.0.18
+---
+
 ## v0.0.17 (18/06/2019)
 - [0.0.17](https://github.com/GSA/sam-styles/commit/d92dee63a46b887323470135e676dac547287076) - @carlosvalle
 - [format fix](https://github.com/GSA/sam-styles/commit/35b8b1437bc2b55b4339fafad420a3337b47a4f2) - @samanthabaker
