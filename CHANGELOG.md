@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.0.21 (04/08/2019)
+- [0.0.21](https://github.com/GSA/sam-styles/commit/8a8e1f04fd1dfad13957a91bafdbd9129eac6476) - undefined
+- [Add autocomplete styles](https://github.com/GSA/sam-styles/commit/c3970020e6aa035f47c4bec31e71901b009200d3) - undefined
+- [Radio Button](https://github.com/GSA/sam-styles/commit/6fb65562c22d3d623186070300c39ca25983aefc) - undefined
+- [Fix circle-ci error](https://github.com/GSA/sam-styles/commit/98f67152fb279dd58ae4e1664055305727c1bd4a) - undefined
+- [Add installation documentation](https://github.com/GSA/sam-styles/commit/cd43313dfec0e1008a3ef878eef468fa4ed8d0c2) - undefined
+
+---
+
 ## v0.0.20 (18/07/2019)
 - [0.0.20](https://github.com/GSA/sam-styles/commit/fa513defe86af9a42307d260aad838ccdc66f97d) - @carlosvalle
 - [Add dialog styles](https://github.com/GSA/sam-styles/commit/9c3d771fb0e3a24b7c595a74a9f70413a1bc6fa1) - @carlosvalle
