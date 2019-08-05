@@ -10,4 +10,4 @@ To use sam-styles icons, you need to know two bits of information to reference a
 <i class="sds fa-bell"></i> <!-- this icon's name is `bell` and sam-styles prefix is 'sds' -->
 ```
 
-[View available icons](../../components/detail/icons)
+[View available icons](../../components/detail/icons.html)
