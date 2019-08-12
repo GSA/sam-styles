@@ -1,5 +1,4 @@
 .usa-link{
-    font-family: 'Source Sans Pro';
     color: #3F57A6;
     text-decoration: none;
 }
@@ -8,35 +7,11 @@
     color: #562b97;
 }
 
-.h1-link{  
-    font-weight: bold;
-    font-size: 36px;
-}
-
-.h2-link{
-    font-weight: 600;
-    font-size: 26px;    
-    font-kerning: .5;  
-}
-
-.h3-link{
-    font-weight: bold;  
-    font-size: 20px;
-}
-
-.p-link{
-    font-weight: 16pt;
-}
-
 .usa-color-text-visited{
-    font-weight: 16pt;
-    font-style: 600;
     color: #562b97;
 }
 
 .usa-color-text-hover{
-    font-weight: 16pt;
-    font-style: 600;
     color: #562b97;
 }
 
@@ -48,11 +23,11 @@
     color: #B69FFF;
 }
 
-#dark-hover{
+#usa-link--dark-hover{
     color: #B69FFF;
 }
 
-.typography{
+.usa-link-wrapper{
     padding: 25px;
 }
 
