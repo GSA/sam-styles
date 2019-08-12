@@ -3,6 +3,9 @@ status: wip
 
 variants:
   - name: default
-    label: Medium
+    label: Default
+
+  - name: alt
+    label: Compare
 
 context: {}

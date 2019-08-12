@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Menu",
+  title: "Actions Menu",
   status: "wip",
   context: {}
 };
