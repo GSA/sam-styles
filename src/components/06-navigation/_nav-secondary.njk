@@ -9,7 +9,7 @@
             <span class="icon-layers-counter"></span>
           </span>
         {% endif %}
-        {% if link.icon and not link.notification %}<i class="fas fa-{{link.icon}}"></i>{% endif %}
+        {% if link.icon and not link.notification %}<i class="{{ "sds" if link.sdsIcon else "fas" }} fa-{{link.icon}}"></i>{% endif %}
         {{ link.text }}
       </a>
     </li>

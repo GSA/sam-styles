@@ -45,7 +45,8 @@ variants:
               icon: comment
               notification: true
             - text: Workspace
-              icon: th
+              sdsIcon: true
+              icon: workspace
             - text: Sign Out
               icon: sign-out-alt
 
