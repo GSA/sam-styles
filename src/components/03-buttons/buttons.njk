@@ -13,3 +13,21 @@
 {%- if (classes == 'usa-button--outline usa-button--inverse') %}
 </div>
 {%- endif %}
+
+<br>
+
+{%- if (classes == 'usa-button--outline-circle usa-button--inverse-circle') -%}
+<div class="bg-base-darkest padding-1" style="max-width: fit-content">
+{% endif -%}
+
+<button class="usa-button--circle {{ classes }}"><i class="fa fa-caret-down"></i></button>
+{% if (category != 'disabled') and (category != 'big') -%}
+<button class="usa-button--circle {{ classes }} usa-button--hover-circle"><i class="fa fa-caret-up"></i></button>
+<button class="usa-button--circle {{ classes }} usa-button--active-circle"><i class="fa fa-caret-left"></i></button>
+<button class="usa-button--circle {{ classes }} usa-focus--circle"><i class="fa fa-caret-right"></i></button>
+<button class="usa-button--circle {{ classes }}" disabled-circle><i class="fa fa-times"></i></button>
+{%- endif -%}
+
+{%- if (classes == 'usa-button--outline-circle usa-button--inverse-circle') %}
+</div>
+{%- endif %}
