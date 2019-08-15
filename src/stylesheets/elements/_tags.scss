@@ -140,6 +140,7 @@
 
 .sds-tag[class*='sds-tag--outline'] {
   white-space: nowrap;
+  text-align: center;
   font-size: 14px;
   line-height: 20px;
   font-weight: 550;
@@ -148,7 +149,7 @@
   color: #212121;
   margin-right: 5px;
   display: inline-block;
-  width: auto;
+  width: 115px;
   background-color: #f5f5f0;
 }
 
@@ -184,6 +185,11 @@
   background-color: #fad980;
 }
 
+.sds-tag.sds-tag--outline-blue::before {
+  border: 1px solid #5A94F5;
+  background-color: #5A94F5;
+}
+
 .sds-tag.sds-tag--outline-light-blue::before {
   border: 1px solid #00a6d2;
   background-color: #9bdaf1;
@@ -197,6 +203,7 @@
 .sds-tag[class*='sds-tag--alt'] {
   white-space: nowrap;
   font-size: 14px;
+  text-align: center;
   line-height: 20px;
   font-weight: 550;
   padding: 5px 10px;
@@ -204,6 +211,6 @@
   color: #212121;
   margin-right: 5px;
   display: inline-block;
-  width: auto;
+  width: 115px;
   background-color: #f5f5f0;
 }
