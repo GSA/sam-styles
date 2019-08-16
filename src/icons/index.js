@@ -17,6 +17,7 @@ import { sdsRulerPencil } from "./sdsRulerPencil";
 import { sdsShare } from "./sdsShare";
 import { sdsTrash } from "./sdsTrash";
 import { sdsUser } from "./sdsUser";
+import { sdsWorkspace } from "./sdsWorkspace";
 
 const prefix = "sds";
 
@@ -39,7 +40,8 @@ const _iconsCache = {
   sdsRulerPencil: sdsRulerPencil,
   sdsShare: sdsShare,
   sdsTrash: sdsTrash,
-  sdsUser: sdsUser
+  sdsUser: sdsUser,
+  sdsWorkspace: sdsWorkspace
 };
 
 export {
@@ -63,5 +65,6 @@ export {
   sdsRulerPencil,
   sdsShare,
   sdsTrash,
-  sdsUser
+  sdsUser,
+  sdsWorkspace
 };
