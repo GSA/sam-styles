@@ -1,4 +1,4 @@
 module.exports = {
 	title: "State Color",
-	order: 1
+	order: 2
 };
