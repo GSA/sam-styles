@@ -46,8 +46,33 @@
   }
 }
 
+.search-button {
+  color: color('secondary-darker');
+  margin: units(1.5);
+  height: 2rem;
+  width: 2rem;
+
+  &.search-button--hover,
+  &:hover {
+    background-color: color('primary-light');
+    color: color('secondary-darker');
+  }
+
+  &.search-button--active,
+  &:active {
+    background-color: color('secondary-darker');
+    color: color('white');
+  }
+
+  &.search-button-focus,
+  &:focus {
+    outline-offset: units(2px);
+  }
+}
+
 .usa-button--outline,
-.usa-button--outline-circle {
+.usa-button--outline-circle,
+.search-button--outline {
   background-color: transparent;
   box-shadow: $button-stroke color('primary');
 
@@ -57,6 +82,7 @@
 
   &.usa-button--hover,
   &.usa-button--hover-circle,
+  &.search-button--hover,
   &:hover {
     background-color: transparent;
     box-shadow: $button-stroke color('primary-light');
@@ -64,14 +90,14 @@
 
   &.usa-button--active,
   &.usa-button--active-circle,
+  &.search-button--active,
   &:active {
     background-color: transparent;
     color: color('secondary-darker');
     box-shadow: $button-stroke color('secondary-darker');
   }
 
-  &.usa-button--inverse,
-  &.usa-button--inverse-circle {
+  &.usa-button--inverse {
     background-color: transparent;
     box-shadow: $button-stroke color('primary');
     color: color('white');
@@ -82,6 +108,7 @@
 
     &.usa-button--hover,
     &.usa-button--hover-circle,
+    &.search-button--hover,
     &:hover {
       background-color: transparent;
       box-shadow: $button-stroke color('base-lightest');
@@ -90,6 +117,7 @@
 
     &.usa-button--active,
     &.usa-button--active-circle,
+    &.search-button--active,
     &:active {
       background-color: transparent;
       box-shadow: $button-stroke color('white');
@@ -99,13 +127,15 @@
 }
 
 .usa-button--base,
-.usa-button--base-circle {
+.usa-button--base-circle,
+.search-button--base {
   color: color('gold-70');
   background-color: color('accent-warm-lighter');
   box-shadow: $button-stroke color('base-light');
 
   &.usa-button--hover,
   &.usa-button--hover-circle,
+  &.search-button--hover,
   &:hover {
     color: color('gold-70');
     background-color: color('white');
@@ -114,6 +144,7 @@
 
   &.usa-button--active,
   &.usa-button--active-circle,
+  &.search-button--active,
   &:active {
     color: color('white');
     background-color: color('base-dark');
@@ -121,12 +152,14 @@
 }
 
 .usa-button--secondary,
-.usa-button--secondary-circle {
+.usa-button--secondary-circle,
+.search-button--secondary {
   background-color: color('primary-lighter');
   box-shadow: $button-stroke color('primary');
 
   &.usa-button--hover,
   &.usa-button--hover-circle,
+  &.search-button--hover,
   &:hover {
     box-shadow: $button-stroke color('primary-light');
     background-color: color('white');
@@ -134,6 +167,7 @@
 
   &.usa-button--active,
   &.usa-button--active-circle,
+  &.search-button--active,
   &:active {
     color: color('secondary-darker');
     box-shadow: $button-stroke color('secondary-darker');
@@ -142,6 +176,7 @@
 
   &.usa-button--disabled,
   &.usa-button--disabled-circle,
+  &.search-button--disabled,
   &:disabled {
     color: color('disabled');
     box-shadow: $button-stroke color('disabled');
@@ -149,18 +184,21 @@
   }
 }
 
-.usa-button--tertiary,
-.usa-button--tertiary-circle {
+.usa-button--danger,
+.usa-button--danger-circle
+.search-button--danger {
   background-color: color('error');
 
   &.usa-button--hover,
   &.usa-button--hover-circle,
+  &.search-button--hover,
   &:hover {
-    background-color: color('error-lighter');
+    background-color: color('error-lighter')
   }
 
   &.usa-button--active,
   &.usa-button--active-circle,
+  &.search-button--active,
   &:active {
     color: color('white');
     background-color: color('error-dark');
@@ -174,4 +212,15 @@
 .sds-button--circle {
   @include u-padding-x('105');
   @include u-radius('pill');
+}
+
+.usa-button--inverse-circle,
+.search-button--inverse {
+  background-color: transparent;
+  box-shadow: $button-stroke color('primary');
+  color: color('white');
+
+  &:visited {
+    color: color('base-lighter');
+  }
 }

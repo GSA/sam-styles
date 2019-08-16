@@ -8,12 +8,6 @@ variants:
       label:
         classes: "usa-tag"
 
-  - name: big
-    label: Big
-    context:
-      label:
-        classes: "usa-tag usa-tag--big"
-
   - name: chip
     label: Chip
     context:
