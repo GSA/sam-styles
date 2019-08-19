@@ -24,6 +24,7 @@
 .usa-button--circle {
   @include u-radius(50%); // TODO: support for manual variables ex: u-radius('btn');
   color: color('secondary-darker');
+  border: 0.25px solid darkgray;
   margin: units(1.5);
   height: 2rem;
   width: 2rem;
