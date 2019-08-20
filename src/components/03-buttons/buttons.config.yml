@@ -7,34 +7,28 @@ variants:
     context:
       category: alternate
       label: Secondary buttons
-      classes: 'usa-button--secondary'
+      classes: 'usa-button--secondary usa-button--secondary-circle search-button--secondary'
 
-  - name: tertiary
+  - name: danger
     context:
       category: alternate
-      label: Tertiary buttons
-      classes: 'usa-button--tertiary'
+      label: danger buttons
+      classes: 'usa-button--danger usa-button--danger-circle search-button--danger'
 
   - name: base
     context:
       category: alternate
       label: Gray buttons
-      classes: 'usa-button--base'
+      classes: 'usa-button--base usa-button--base-circle search-button--base'
 
   - name: outline
     context:
       category: outline
       label: outline buttons
-      classes: 'usa-button--outline'
+      classes: 'usa-button--outline usa-button--ouline-circle search-button--outline'
 
   - name: outline-inverse
     context:
       category: outline-inverse
       label: outline inverse buttons
       classes: 'usa-button--outline usa-button--inverse'
-
-  - name: big
-    context:
-      category: 'big'
-      label: Big button
-      classes: 'usa-button--big'
