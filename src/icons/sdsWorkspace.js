@@ -19,7 +19,7 @@ exports.definition = {
     svgPathData
   ]};
 
-exports.sdsUser = exports.definition;
+exports.sdsWorkspace = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;

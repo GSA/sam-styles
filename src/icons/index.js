@@ -18,6 +18,9 @@ import { sdsShare } from "./sdsShare";
 import { sdsTrash } from "./sdsTrash";
 import { sdsUser } from "./sdsUser";
 import { sdsWorkspace } from "./sdsWorkspace";
+import { sdsRequest } from "./sdsRequest";
+import { sdsMessages } from "./sdsMessages";
+import { sdsLogOut } from "./sdsLogOut";
 
 const prefix = "sds";
 
@@ -41,7 +44,10 @@ const _iconsCache = {
   sdsShare: sdsShare,
   sdsTrash: sdsTrash,
   sdsUser: sdsUser,
-  sdsWorkspace: sdsWorkspace
+  sdsWorkspace: sdsWorkspace,
+  sdsRequest: sdsRequest,
+  sdsMessages: sdsMessages,
+  sdsLogOut: sdsLogOut
 };
 
 export {
@@ -66,5 +72,8 @@ export {
   sdsShare,
   sdsTrash,
   sdsUser,
-  sdsWorkspace
+  sdsWorkspace,
+  sdsRequest,
+  sdsMessages,
+  sdsLogOut
 };
