@@ -19,9 +19,3 @@ variants:
     context:
       label:
         classes: "sds-tag sds-tag--outline"
-
-  - name: alert
-    label: Alert
-    context:
-      label:
-        classes: "sds-tag sds-tag--alert"
