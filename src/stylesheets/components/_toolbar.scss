@@ -7,16 +7,17 @@
 }
 
 .sds-toolbar {
-  position: absolute;
   z-index: 2;
   border: 1px solid #fff;
   overflow: hidden;
-  display: block;
+  display: inline-block;
+  width: 300px;
 }
 
 .sds-toolbar + * {
-  margin-left: 55px;
+  margin-left: 25px;
   transition: all 0.2s ease-out;
+  display: inline-block;
 }
 
 .sds-toolbar.sds-toolbar--expanded {
@@ -111,6 +112,6 @@
 }
 
 .sds-toolbar__anim--expanded {
-  margin-left: 320px !important;
+  margin-left: 20px;
 }
 /* stylelint-enable */
