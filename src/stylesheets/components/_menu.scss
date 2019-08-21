@@ -15,7 +15,22 @@
 .sds-menu__header-title {
   font-size: 18px;
   font-weight: 600;
-  color: #2e2e2a;
+  color: color("gray-warm-70");
+}
+
+.usa-nav__secondary {
+  .usa-nav__link {
+    &:hover {
+      color: color("gray-warm-70");
+      text-decoration: none;
+      &:after {
+        height: 0.17rem;
+        left: .5rem;
+        right: .5rem;
+        bottom: 6px;
+      }
+    }
+  }
 }
 
 .sds-menu__header-button {
