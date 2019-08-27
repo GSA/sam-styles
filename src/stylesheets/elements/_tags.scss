@@ -214,3 +214,12 @@
   width: 115px;
   background-color: #f5f5f0;
 }
+
+.sds-tag--small {
+  @include u-font('sans', '3xs');
+}
+
+.sds-tag--disabled {
+  @include u-bg('disabled', !important);
+  @include u-border('disabled-dark', !important);
+}
