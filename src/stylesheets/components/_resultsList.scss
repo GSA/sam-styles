@@ -75,7 +75,6 @@
 
 .action-menu-wrapper {
   height:100%;
-  width:60px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -93,20 +92,19 @@
   flex-direction: column;
   color:#666;
   font-size:1.5em;
+  cursor: pointer;
 }
 
 h2 .action-menu-placeholder {
   font-size:1em;
 }
 
-@media (min-width: 640px) {
-  .action-menu-col {
-    display: block !important;
-  }
+div[class^="grid-col-"] .sds-tag--static, div[class*=" grid-col-"] .sds-tag--static {
+  display: block !important;
+  width: 100% !important;
 }
 
-@media (min-width: 640px) {
-  h2 .action-menu-wrapper {
-    display: none !important;
-  }
+ /* remove if colors PR is accepted */
+.sds-text-success {
+  @include u-text('success', !important)
 }
