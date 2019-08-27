@@ -1,0 +1,93 @@
+/** Utilities **/
+
+
+/* color helpers */
+.sds-text-primary {
+  @include u-text('primary', !important)
+}
+
+.sds-text-secondary {
+  @include u-text('secondary', !important)
+}
+
+.sds-text-success {
+  @include u-text('success', !important)
+}
+
+.sds-text-danger {
+  @include u-text('error', !important)
+}
+
+.sds-text-warning {
+  @include u-text('warning', !important)
+}
+
+.sds-text-info {
+  @include u-text('info', !important)
+}
+
+.sds-text-light {
+  @include u-text('base-light', !important)
+}
+
+.sds-text-dark {
+  @include u-text('base-dark', !important)
+}
+
+.sds-text-body {
+  @include u-text('base-darkest', !important)
+}
+
+.sds-text-muted {
+  @include u-text('disabled', !important)
+}
+
+.sds-text-white {
+  @include u-text('white', !important)
+}
+
+
+/* background-color helpers */
+.sds-bg-primary {
+  @include u-bg('primary', !important)
+}
+
+.sds-bg-secondary {
+  @include u-bg('secondary', !important)
+}
+
+.sds-bg-success {
+  @include u-bg('success', !important)
+}
+
+.sds-bg-danger {
+  @include u-bg('error', !important)
+}
+
+.sds-bg-warning {
+  @include u-bg('warning', !important)
+}
+
+.sds-bg-info {
+  @include u-bg('info', !important)
+}
+
+.sds-bg-light {
+  @include u-bg('base-light', !important)
+}
+
+.sds-bg-dark {
+  @include u-bg('base-dark', !important)
+}
+
+.sds-bg-body {
+  @include u-bg('base-darkest', !important)
+}
+
+.sds-bg-muted {
+  @include u-bg('disabled', !important)
+}
+
+.sds-bg-white, .sds-bg-transparent {
+  @include u-bg('white', !important)
+}
