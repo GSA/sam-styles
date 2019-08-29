@@ -103,8 +103,3 @@ div[class^="grid-col-"] .sds-tag--static, div[class*=" grid-col-"] .sds-tag--sta
   display: block !important;
   width: 100% !important;
 }
-
- /* remove if colors PR is accepted */
-.sds-text-success {
-  @include u-text('success', !important)
-}
