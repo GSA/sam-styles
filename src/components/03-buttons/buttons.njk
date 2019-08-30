@@ -1,32 +1,42 @@
 {%- if (classes == 'usa-button--outline usa-button--inverse') -%}
-<div class="bg-base-darkest padding-1" style="max-width: fit-content">
-{% endif -%}
+  <div class="bg-base-darkest padding-1" style="max-width: fit-content">
+  {% endif -%}
 
-<button class="usa-button {{ classes }}">Default</button>
-{% if (category != 'disabled') -%}
-<button class="usa-button {{ classes }} usa-button--hover">Hover</button>
-<button class="usa-button {{ classes }} usa-button--active">Active</button>
-<button class="usa-button {{ classes }} usa-focus">Focus</button>
-<button class="usa-button {{ classes }}" disabled>Disabled</button>
-{%- endif -%}
+  <button class="usa-button {{ classes }}">Default</button>
+  {% if (category != 'disabled') -%}
+    <button class="usa-button {{ classes }} usa-button--hover">Hover</button>
+    <button class="usa-button {{ classes }} usa-button--active">Active</button>
+    <button class="usa-button {{ classes }} usa-focus">Focus</button>
+    <button class="usa-button {{ classes }}" disabled="disabled">Disabled</button>
+  {%- endif -%}
 
-{%- if (classes == 'usa-button--outline usa-button--inverse') %}
-{%- endif %}
+  <br>
 
-<br>
-
-{%- if (classes == 'usa-button--outline-circle usa-button--inverse-circle search-button--outline search-button--inverse') -%}
-{% endif -%}
-
-<button class="usa-button--circle {{ classes }}"><i class="fa fa-caret-down"></i></button>
-{% if (category != 'disabled') -%}
-<button class="usa-button--circle {{ classes }} usa-button--hover-circle"><i class="fa fa-caret-up"></i></button>
-<button class="usa-button--circle {{ classes }} usa-button--active-circle"><i class="fa fa-caret-left"></i></button>
-<button class="usa-button--circle {{ classes }} usa-focus--circle"><i class="fa fa-caret-right"></i></button>
-<button class="usa-button--circle {{ classes }}" disabled-circle><i class="fa fa-times"></i></button>
-<button class="search-button {{ classes }}"><i class="fa fa-search"></i></button>
-{%- endif -%}
-
-{%- if (classes == 'usa-button--outline-circle usa-button--inverse-circle search-button--outline search-button--inverse') %}
+<div class="button-label">
+  <button class="sds-button--circle {{ classes }}"><i class="fa fa-caret-down"></i></button>
+  <label>Default</label>
 </div>
-{%- endif %}
+{% if (category != 'disabled') -%}
+<div class="button-label">
+  <button class="sds-button--circle {{ classes }} usa-button--hover"><i class="fa fa-caret-up"></i></button>
+  <label>Hover</label>
+</div>
+<div class="button-label">
+  <button class="sds-button--circle {{ classes }} usa-button--active"><i class="fa fa-caret-left"></i></button>
+  <label>Active</label>
+</div>
+<div class="button-label">
+  <button class="sds-button--circle {{ classes }} usa-focus"><i class="fa fa-caret-right"></i></button>
+  <label>Focus</label>
+</div>
+<div class="button-label">
+  <button class="sds-button--circle {{ classes }}" disabled="disabled"><i class="fa fa-times"></i></button>
+  <label>Disabled</label>
+</div>
+<div class="button-label">
+  <button class="sds-button--square  {{ classes }}"><i class="fa fa-search"></i></button>
+  <label>Search</label>
+</div>
+{%- endif -%}
+
+{%- if (classes == 'usa-button--outline usa-button--inverse') %}{%- endif %}
