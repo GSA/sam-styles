@@ -2,3 +2,38 @@
   @include add-background-svg('sam/arrow-down');
   background-size: 0.6rem;
 }
+
+.usa-static--tag {
+  @include u-display('block');
+  @include u-margin-y(0.5);
+  @include u-margin-right(0.5, !important);
+  min-width:52px;
+  width: 52px;
+}
+
+.usa-static--label {
+  @include u-display('block');
+  @include u-margin-top(0.5);
+  @include u-margin-right(0.5, !important);
+  white-space: nowrap;
+}
+
+.usa-static {
+  @include u-text('semibold');
+}
+
+.usa-form-group {
+  @include u-margin-top(0.5);
+
+  .usa-static {
+    @include u-margin-y(0);
+  }
+}
+
+.usa-form-group-horizontal {
+  @include u-margin-top(0.5);
+
+  .usa-static {
+    @include u-margin-y(0.5);
+  }
+}

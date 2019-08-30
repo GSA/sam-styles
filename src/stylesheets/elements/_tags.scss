@@ -23,7 +23,7 @@
   align-items: center;
 }
 
-.sds-alert > svg {
+.sds-alert svg {
   margin: auto 10px;
   color: #fbc036;
 }
@@ -213,4 +213,13 @@
   display: inline-block;
   width: 115px;
   background-color: #f5f5f0;
+}
+
+.sds-tag--small {
+  @include u-font('sans', '3xs');
+}
+
+.sds-tag--disabled {
+  @include u-bg('disabled', !important);
+  @include u-border('disabled-dark', !important);
 }

@@ -1,6 +1,6 @@
 .sds-dialog__container {
   display: block;
-  padding: 24px;
+  padding: 30px;
   border-radius: 4px;
   box-sizing: border-box;
   overflow: auto;
@@ -9,12 +9,12 @@
   height: 100%;
   min-height: inherit;
   max-height: inherit;
+  position: relative;
 }
 
 .sds-dialog__container {
   box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
   background: #fff;
-  color: rgba(0, 0, 0, 0.87);
 }
 
 .sds-dialog-title {
@@ -38,4 +38,87 @@
   min-height: 52px;
   align-items: center;
   margin-bottom: -24px;
+}
+
+
+.sds-dialog__container {
+  .close-btn {
+    @include button-unstyled;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    width: 15px;
+    height: 20px;
+    text-align: center;
+    color: #9b9b9b;
+  }
+  .sds-dialog-title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .sds-dialog-subtitle{
+    font-size: 20px;
+  }
+  .sds-dialog-actions {
+    margin-bottom: -10px;
+    margin-top: 20px;
+    justify-content: flex-end;
+  }
+  // Centers text and flex content
+  .sds-dialog-section--centered {
+    @include u-text('center');
+    @include u-flex('justify-center');
+  }
+}
+
+// Dialog Alert
+// ================================
+.sds-dialog--alert {
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 8px;
+  background-color: #fcfcfb;
+  .sds-dialog-icon {
+    text-align: center;
+    margin-top: 5px;
+  }
+  .sds-dialog-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 14px;
+    margin-bottom: 10px;
+  }
+  .sds-dialog-content {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: #5c5c5c;
+  }
+  .sds-dialog-actions {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    justify-content: center;
+  }
+}
+
+.sds-dialog--alert-error {
+  border-color: #ee601d;
+  .sds-dialog-icon {
+    color: #ee601d;
+  }
+}
+
+.sds-dialog--alert-warning {
+  border-color: #febe2e;
+  .sds-dialog-icon {
+    color: #febe2e;
+  }
+}
+
+.sds-dialog--alert-info {
+  border-color: #5994f6;
+  .sds-dialog-icon {
+    color: #5994f6;
+  }
 }
