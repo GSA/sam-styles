@@ -3,7 +3,7 @@ status: wip
 
 variants:
   - name: default
-    label: Compare
+    label: Default
     status: null
 
   - name: extended
@@ -41,6 +41,44 @@ variants:
               sdsIcon: true
               icon: workspace
             - text: Sign Out
+              sdsIcon: true
+              icon: 'log-out'
+
+  - name: alt
+    label: Compare
+    context:
+      header:
+        primary:
+          search: false
+          id_prefix: alt-
+          links:
+            - text: Primary Link
+              href: ''
+              is_current: false
+              id: nav-section-home
+              links: false
+            - text: Primary Link
+              links: false
+              is_current: false
+              id: nav-section-one
+            - text: Primary Link
+              id: nav-section-two
+              links: false
+            - text: Primary Link
+              href: ''
+        secondary:
+          search: false
+          links:
+            - text: Secondary Link
+              sdsIcon: true
+              icon: request
+            - text: Secondary Link
+              sdsIcon: true
+              icon: messages
+            - text: Secondary Link
+              sdsIcon: true
+              icon: workspace
+            - text: Secondary Link
               sdsIcon: true
               icon: 'log-out'
 
