@@ -39,21 +39,10 @@
 }
 
 .sds-alert-content-extended{
-  padding-left: 55px;
+  padding-left: 52px;
 }
 
-.sds-alert-button{
-padding-left: 75%;
-}
 
-.sds-alert-button:active{
-  padding-left: 75%;
-}
-
-.myDiv{
-  padding-left: 15px;
-  max-width: 75%;
-}
 
 // Alert tag - Info
 
@@ -66,6 +55,10 @@ padding-left: 75%;
   align-items: center;
   padding: 25px;
   margin: 25px;
+
+  .usa-button--circle {
+    @include u-margin(0, !important);
+  }
 }
 
 .fa-alert-info{
