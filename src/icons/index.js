@@ -21,6 +21,9 @@ import { sdsWorkspace } from "./sdsWorkspace";
 import { sdsRequest } from "./sdsRequest";
 import { sdsMessages } from "./sdsMessages";
 import { sdsLogOut } from "./sdsLogOut";
+import { sdsAlertWarning } from "./sdsAlertWarning";
+import { sdsAlertInfo } from "./sdsAlertInfo";
+import { sdsAlertError } from "./sdsAlertError";
 
 const prefix = "sds";
 
@@ -47,7 +50,10 @@ const _iconsCache = {
   sdsWorkspace: sdsWorkspace,
   sdsRequest: sdsRequest,
   sdsMessages: sdsMessages,
-  sdsLogOut: sdsLogOut
+  sdsLogOut: sdsLogOut,
+  sdsAlertWarning: sdsAlertWarning,
+  sdsAlertInfo: sdsAlertInfo,
+  sdsAlertError: sdsAlertError
 };
 
 export {
@@ -75,5 +81,8 @@ export {
   sdsWorkspace,
   sdsRequest,
   sdsMessages,
-  sdsLogOut
+  sdsLogOut,
+  sdsAlertWarning,
+  sdsAlertInfo,
+  sdsAlertError
 };
