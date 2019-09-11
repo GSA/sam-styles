@@ -1,0 +1,74 @@
+.sds-card {
+  margin: 40px 0;
+  padding: 18px 20px 20px;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.15);
+}
+
+.sds-card .sds-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .sds-card__header-mobile {
+    color: #212121;
+    margin: 0 auto 0 5px;
+
+    @media only screen and (min-width: 600px) {
+      display: none;
+      overflow: hidden;
+      max-height: 0;
+    }
+  }
+
+  .sds-card__header-actions {
+    display: flex;
+  }
+
+}
+
+.sds-card .sds-card__content {
+  padding: 15px 0 0;
+  display: block;
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
+//search fieldset
+.sds-search {
+ display: block;
+ margin: auto;
+
+  //height: 40px;
+
+  form {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+
+  }
+  select {
+    margin: 0;
+    width: 150px;
+    border-right-width: 0;
+    padding: 0 15px;
+  }
+
+  input {
+    margin: 0;
+    height: 40px;
+    border-right-width: 0;
+  }
+
+  input:focus {
+    box-shadow: 2px 2px 6px 2px #e3f5e1;
+    outline: none;
+  }
+
+  button, span {
+    height: 40px !important;
+  }
+}

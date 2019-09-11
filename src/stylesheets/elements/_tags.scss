@@ -31,9 +31,7 @@
 .sds-alert-content {
   display: inline-block;
 }
-
 // Alert tag - Info
-
 .sds-alert-info {
   background-color: #e7f6f8;
   border-radius: 8px;
@@ -46,9 +44,7 @@
   margin: auto 10px;
   color: #00bde3;
 }
-
 // Alert tag - Error
-
 .sds-alert-error {
   background-color: #fdb8ae;
   border-radius: 8px;
@@ -61,9 +57,7 @@
   margin: auto 10px;
   color: #fb5a47;
 }
-
 // Chip tag
-
 .sds-tag.sds-tag--chip {
   background-color: color('primary-lighter');
   border: 1px solid color('primary');
@@ -81,6 +75,7 @@
   margin-left: 5px;
 }
 // Status tag
+
 .sds-tag[class*='sds-tag--status'] {
   white-space: nowrap;
   text-transform: uppercase;

@@ -1,39 +1,90 @@
-.usa-link, .usa-link:visited {
-    color: #3F57A6;
-    text-decoration: none;
+.usa-link,
+.usa-link:visited {
+  color: #3F57A6;
+  text-decoration: none;
 }
 
-.usa-link:hover{
-    color: #8A7237;
-    text-decoration: underline;
+.usa-link:hover {
+  color: #8A7237;
+  text-decoration: underline;
 }
 
-.usa-color-text-visited{
-    color: #3F57A6;
+.usa-color-text-visited {
+  color: #3F57A6;
 }
 
-.usa-color-text-hover{
-    color: #8A7237;
-    text-decoration: underline;
+.usa-color-text-hover {
+  color: #8A7237;
+  text-decoration: underline;
 }
 
 .usa-dark-background a {
-    color: #D9E8F6;
+  color: #D9E8F6;
 }
 
 .usa-dark-background a:hover {
-    color: #B69FFF;
+  color: #B69FFF;
 }
 
-#usa-link--dark-hover{
-    color: #B69FFF;
-    text-decoration: underline;
+#usa-link--dark-hover {
+  color: #B69FFF;
+  text-decoration: underline;
 }
 
-.usa-link-wrapper{
-    padding: 25px;
+.usa-link-wrapper {
+  padding: 25px;
 }
 
-.usa-link--external::after{
-    fill: #562b97;
+.usa-link--external::after {
+  fill: #562b97;
+}
+// FEED
+// --------------------------------
+
+.sds-feed {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  width: 100%;
+
+  .event:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+  }
+
+  .event {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid #D6D7D9;
+
+    .label {
+      padding-right: 15px;
+    }
+
+    .content {
+      width: 100%;
+    }
+
+    .content .summary {
+      line-height: 18px;
+    }
+
+    .content .summary > .action {
+      font-weight: 700;
+      color: #212121;
+    }
+
+    .content .summary > .date {
+      font-size: 13px;
+      background: #F1F1F1;
+      font-style: italic;
+      float: right;
+      padding: 0 5px;
+      margin: 0 0 10px 10px;
+    }
+
+    .content .meta {
+      margin-top: 5px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
 }

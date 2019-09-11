@@ -32,3 +32,9 @@ variants:
       category: outline-inverse
       label: Outline inverse buttons
       classes: 'usa-button--outline usa-button--inverse'
+
+  - name: statistic
+    label: Statistic
+    context:
+      label:
+        classes: "sds-statistic"
