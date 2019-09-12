@@ -16,50 +16,81 @@
 // Alert tag - Warning
 
 .sds-alert {
-  background-color: #faf3d1;
   border-radius: 8px;
-  max-width: 320px;
+  border-style: solid;
+  border-color: #FEBE2E;
+  max-width: 90%;
   display: flex;
   align-items: center;
+  padding: 25px;
+  margin: 25px;
+  .usa-button--circle {
+    @include u-margin(0, !important);
+  }
 }
 
-.sds-alert svg {
+.fa-alert-warning {
   margin: auto 10px;
-  color: #fbc036;
+  color: #FEBE2E;
 }
 
 .sds-alert-content {
+  margin: auto;
   display: inline-block;
+  max-width: 75%;
 }
+
+.sds-alert-content-extended {
+  padding-left: 52px;
+}
+
+.sds-alert-content-extended{
+  padding-left: 52px;
+}
+
+
 
 // Alert tag - Info
 
 .sds-alert-info {
-  background-color: #e7f6f8;
   border-radius: 8px;
-  max-width: 320px;
+  border-style: solid;
+  border-color: #5994F6;
+  max-width: 90%;
   display: flex;
   align-items: center;
+  padding: 25px;
+  margin: 25px;
+
+  .usa-button--circle {
+    @include u-margin(0, !important);
+  }
 }
 
-.sds-alert-info > svg {
+.fa-alert-info {
   margin: auto 10px;
-  color: #00bde3;
+  color: #5994F6;
 }
 
 // Alert tag - Error
 
 .sds-alert-error {
-  background-color: #fdb8ae;
   border-radius: 8px;
-  max-width: 320px;
+  border-style: solid;
+  border-color: #E9695F;
+  max-width: 90%;
   display: flex;
   align-items: center;
+  padding: 25px;
+  margin: 25px;
+  .usa-button--circle {
+    @include u-margin(0, !important);
+  }
 }
 
-.sds-alert-error > svg {
+.fa-alert-error {
   margin: auto 10px;
-  color: #fb5a47;
+  color: #E9695F;
 }
 
 // Chip tag
