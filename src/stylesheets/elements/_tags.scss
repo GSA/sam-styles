@@ -1,16 +1,14 @@
 .sds-tag--info-purple {
-  color: black;
   background-color: #fbdcff;
-  border: 1.5px solid #7665d1;
-  border-radius: 2px;
+  border: 1px solid #7665d1;
   font-weight: 600;
+  border-radius: 0;
+  @include u-text('base-darker');
 }
 
 .sds-tag--info-white {
-  color: black;
   background-color: white;
-  border: 1.5px solid #76766a;
-  border-radius: 2px;
+  border: 1px solid #76766a;
   font-weight: 600;
 }
 // Alert tag - Warning
@@ -94,8 +92,7 @@
 .sds-tag.sds-tag--chip {
   background-color: color('primary-lighter');
   border: 1px solid color('primary');
-  font-weight: font-weight('semibold');
-  font-size: 14px;
+  @include u-font('sans', '3xs');
   padding: 2px 5px;
   white-space: nowrap;
   display: inline-block;
@@ -112,12 +109,12 @@
 .sds-tag[class*='sds-tag--status'] {
   white-space: nowrap;
   text-transform: uppercase;
-  font-size: 14px;
+  @include u-font('sans', '3xs');
+  @include u-text('base-dark');
   line-height: 20px;
   font-weight: 600;
   padding: 0 5px 4px 0;
   border-radius: 2px;
-  color: #212121;
   margin-right: 5px;
   display: inline-block;
   width: auto;
@@ -169,12 +166,12 @@
 .sds-tag[class*='sds-tag--outline'] {
   white-space: nowrap;
   text-align: center;
-  font-size: 14px;
+  @include u-font('sans', '3xs');
+  @include u-text('base-dark');
   line-height: 20px;
   font-weight: 550;
   padding: 5px;
   border: 1px solid;
-  color: #212121;
   margin-right: 5px;
   display: inline-block;
   width: 115px;
@@ -186,8 +183,8 @@
   display: inline-block;
   border: 1px solid #5b616b;
   background-color: #f1f1f1;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   margin-right: 5px;
   vertical-align: bottom;
@@ -230,13 +227,13 @@
 
 .sds-tag[class*='sds-tag--alt'] {
   white-space: nowrap;
-  font-size: 14px;
+  @include u-font('sans', '3xs');
+  @include u-text('base-dark');
   text-align: center;
   line-height: 20px;
   font-weight: 550;
   padding: 5px 10px;
   border: 1px solid;
-  color: #212121;
   margin-right: 5px;
   display: inline-block;
   width: 115px;

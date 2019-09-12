@@ -1,0 +1,40 @@
+sds-page {
+  @include u-display("block");
+  @include u-margin-y(2);
+
+  &.condensed {
+    @include u-font("sans", "3xs");
+  }
+}
+
+hr.thin {
+  border: 0;
+  height: 0;
+  @include u-border-top(1px);
+  @include u-border-top("base-lighter");
+}
+
+.border--hairline {
+  border: 0 !important;
+  box-shadow: 0 0 0 1px;
+}
+@media (min-resolution: 2dppx) {
+  .border--hairline {
+    border: 0 !important;
+    box-shadow: 0 0 0 0.5px;
+  }
+}
+
+@media (min-resolution: 3dppx) {
+  .border--hairline {
+    border: 0 !important;
+    box-shadow: 0 0 0 0.33333333px;
+  }
+}
+
+@media (min-resolution: 4dppx) {
+  .border--hairline {
+    border: 0 !important;
+    box-shadow: 0 0 0 0.25px;
+  }
+}

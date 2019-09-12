@@ -13,8 +13,8 @@
 
 .usa-static--label {
   @include u-display('block');
-  @include u-margin-top(0.5);
-  @include u-margin-right(0.5, !important);
+  @include u-margin-top('2px');
+  @include u-margin-right('2px', !important);
   white-space: nowrap;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .usa-form-group {
-  @include u-margin-top(0.5);
+  @include u-margin-top('2px');
 
   .usa-static {
     @include u-margin-y(0);
@@ -31,10 +31,10 @@
 }
 
 .usa-form-group-horizontal {
-  @include u-margin-top(0.5);
+  @include u-margin-top('2px');
 
   .usa-static {
-    @include u-margin-y(0.5);
+    @include u-margin-y('2px');
   }
 }
 //search fieldset
