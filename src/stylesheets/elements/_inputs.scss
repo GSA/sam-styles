@@ -1,7 +1,14 @@
 .usa-select {
   @include add-background-svg('sam/arrow-down');
   background-size: 0.6rem;
+
+  &.usa-select--small {
+    @include u-font('sans', '3xs');
+    @include u-margin-top('2px');
+    height: 2.1rem;
+  }
 }
+
 
 .usa-static--tag {
   @include u-display('block');
