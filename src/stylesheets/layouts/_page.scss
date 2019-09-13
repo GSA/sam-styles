@@ -16,7 +16,7 @@ hr.thin {
 
 .border--hairline {
   border: 0 !important;
-  box-shadow: 0 0 0 1px;
+  box-shadow: 0 0 0 1px color('base-light');
 }
 @media (min-resolution: 2dppx) {
   .border--hairline {
@@ -37,4 +37,8 @@ hr.thin {
     border: 0 !important;
     box-shadow: 0 0 0 0.25px;
   }
+}
+
+.usa-min-width-160 {
+  min-width: 160px;
 }

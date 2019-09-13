@@ -20,8 +20,8 @@
   background-color: #eff6fb;
   border-radius: 50%;
   border: none;
-  height: 45px;
-  width: 45px;
+  height: 40px;
+  width: 40px;
   text-indent: -9999em;
   margin: 0 15px;
   position: relative;
@@ -30,10 +30,10 @@
     position: absolute;
     border: solid #0a3466;
     border-width: 0 1px 1px 0;
-    width: 0.7rem;
-    height: 0.7rem;
-    top: 17px;
-    left: 16px;
+    width: 0.6rem;
+    height: 0.6rem;
+    top: 15px;
+    left: 13px;
     transform: rotate(-45deg);
   }
   &:first-child::after {
@@ -50,7 +50,7 @@
 }
 
 .sds-pagination .usa-label {
-  margin-top: 0;
+  @include u-margin-top(1);
 }
 
 .sds-pagination .sds-pagination__total {
