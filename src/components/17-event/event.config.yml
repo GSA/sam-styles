@@ -1,0 +1,7 @@
+label: Event
+status: wip
+
+variants:
+  - name: default
+    label: SDS Events
+    status: null
