@@ -42,7 +42,13 @@
  display: block;
  margin: auto;
 
-  //height: 40px;
+  .usa-button {
+    background-color: #3F57A6;
+  }
+
+  .usa-button:hover {
+    background-color: #1a4480;
+  }
 
   form {
     display: flex;
@@ -64,7 +70,7 @@
   }
 
   input:focus {
-    box-shadow: 2px 2px 6px 2px #e3f5e1;
+    box-shadow: 2px 1px 6px 1px #3F57A6;
     outline: none;
   }
 
