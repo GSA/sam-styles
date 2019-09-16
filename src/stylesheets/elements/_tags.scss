@@ -48,8 +48,6 @@
   padding-left: 52px;
 }
 
-
-
 // Alert tag - Info
 
 .sds-alert-info {
@@ -71,7 +69,6 @@
   margin: auto 10px;
   color: #5994F6;
 }
-
 // Alert tag - Error
 
 .sds-alert-error {
@@ -92,7 +89,6 @@
   margin: auto 10px;
   color: #E9695F;
 }
-
 // Chip tag
 
 .sds-tag.sds-tag--chip {
@@ -112,6 +108,7 @@
   margin-left: 5px;
 }
 // Status tag
+
 .sds-tag[class*='sds-tag--status'] {
   white-space: nowrap;
   text-transform: uppercase;

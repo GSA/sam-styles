@@ -50,7 +50,7 @@
   }
 }
 
-.sds-button--square {
+.sds-button {
   color: color('secondary-darker');
   height: 2rem;
   width: 2rem;
@@ -78,7 +78,7 @@
   }
 }
 
-.usa-button--outline{
+.usa-button--outline {
   background-color: transparent;
   box-shadow: $button-stroke color('primary');
 
@@ -124,7 +124,7 @@
   }
 }
 
-.usa-button--base{
+.usa-button--base {
   color: color('gold-70');
   background-color: color('accent-warm-lighter');
   box-shadow: $button-stroke color('base-light');
@@ -143,7 +143,7 @@
   }
 }
 
-.usa-button--secondary{
+.usa-button--secondary {
   background-color: color('primary-lighter');
   box-shadow: $button-stroke color('primary');
 
@@ -173,7 +173,7 @@
 
   &.usa-button--hover,
   &:hover {
-    background-color: color('error-lighter')
+    background-color: color('error-lighter');
   }
 
   &.usa-button--active,

@@ -1,0 +1,7 @@
+label: Card
+status: wip
+
+variants:
+  - name: default
+    label: SDS Card
+    status: null

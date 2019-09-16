@@ -1,0 +1,12 @@
+label: Statistics
+status: wip
+
+variants:
+  - name: Default
+    label: SDS Statistics
+    status: null
+
+variants:
+  - name: Alternative
+    label: SDS Statistics Square
+    status: null
