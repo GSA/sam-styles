@@ -7,92 +7,15 @@
 ========================================
 ========================================
 ----------------------------------------
-SAM THEME TYPOGRAPHY SETTINGS
+USWDS 2.1.0
 ----------------------------------------
--
+TYPOGRAPHY SETTINGS
+----------------------------------------
 Read more about settings and
 USWDS typography tokens in the documentation:
-https://v2.designsystem.digital.gov/style-tokens/typography
--
+https://designsystem.digital.gov/design-tokens/typesetting/font-family/
 ----------------------------------------
 */
-
-/*
-----------------------------------------
-Custom typeface tokens
-----------------------------------------
-Add a new custom typeface token if
-your project uses a typeface not already
-defined by USWDS.
-----------------------------------------
-USWDS defines the following tokens
-by default:
-----------------------------------------
-'georgia'
-'helvetica'
-'merriweather'
-'open-sans'
-'public-sans'
-'roboto-mono'
-'source-sans-pro'
-'system'
-'tahoma'
-'verdana'
-----------------------------------------
-Add as many new tokens as you have
-custom typefaces. Reference your new
-token(s) in the type-based font settings
-using the quoted name of the token.
-
-For example:
-
-$theme-font-type-cond: 'example-font-token';
-
-display-name:
-The display name of your font
-
-cap-height:
-The height of a 500px `N` in Sketch
-----------------------------------------
-You should change `example-[style]-token`
-names to something more descriptive.
-----------------------------------------
-*/
-
-$font-stack-helvetica: 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
-
-$theme-typeface-tokens: (
-  'source-sans-pro-plus': (
-    display-name: 'Source Sans Pro Plus Web',
-    cap-height: 340px,
-    stack: $font-stack-helvetica,
-    src: (
-      dir: 'source-sans-pro-plus',
-      roman: (
-        100: false,
-        200: false,
-        300: 'sourcesanspro-light-webfont',
-        400: 'sourcesanspro-regular-webfont',
-        500: false,
-        600: 'sourcesanspro-semibold-webfont',
-        700: 'sourcesanspro-bold-webfont',
-        800: false,
-        900: false,
-      ),
-      italic: (
-        100: false,
-        200: false,
-        300: false,
-        400: 'sourcesanspro-italic-webfont',
-        500: false,
-        600: 'sourcesanspro-semibold-italic-webfont',
-        700: false,
-        800: false,
-        900: false,
-      ),
-    ),
-  ),
-);
 
 /*
 ----------------------------------------
@@ -116,7 +39,8 @@ $theme-typeface-tokens.
 ----------------------------------------
 */
 
-$theme-font-type-sans:   'source-sans-pro-plus';
+// sans-serif
+$theme-font-type-sans:  'source-sans-pro';
 
 /*
 ----------------------------------------
@@ -146,16 +70,3 @@ Or use `false` for unneeded weights.
 ----------------------------------------
 */
 $theme-font-weight-semibold:      600;
-
-/*
-----------------------------------------
-Label Title
-----------------------------------------
-*/
-.sds-type--label-title {
-  font-size: 14px;
-  font-style: italic;
-  font-weight: lighter;
-  margin: 0;
-  color: #5d5d52;
-}

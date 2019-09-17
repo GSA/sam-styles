@@ -14,7 +14,6 @@ dist/
 
 # Ignore USWDS fonts only
 /src/fonts/*
-!/src/fonts/source-sans-pro-plus
 
 # Ignore USWDS images only
 /src/img/*
