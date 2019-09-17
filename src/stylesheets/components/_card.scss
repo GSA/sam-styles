@@ -4,6 +4,14 @@
   border-radius: 4px;
   background-color: white;
   box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.15);
+
+  h2 {
+    margin: 10px 0;
+  }
+
+  a:visited {
+    color: #3f57a6;
+  }
 }
 
 .sds-card .sds-card__header {
@@ -14,7 +22,6 @@
   .sds-card__header-mobile {
     color: #212121;
     margin: 0 auto 0 5px;
-
     @media only screen and (min-width: 600px) {
       display: none;
       overflow: hidden;
@@ -25,22 +32,20 @@
   .sds-card__header-actions {
     display: flex;
   }
-
 }
 
 .sds-card .sds-card__content {
   padding: 15px 0 0;
   display: block;
-
   @media only screen and (max-width: 600px) {
     display: none;
   }
 }
-
 //search fieldset
+
 .sds-search {
- display: block;
- margin: auto;
+  display: block;
+  margin: auto;
 
   .usa-button {
     background-color: #3F57A6;
@@ -54,8 +59,8 @@
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-
   }
+
   select {
     margin: 0;
     width: 150px;
@@ -74,7 +79,8 @@
     outline: none;
   }
 
-  button, span {
+  button,
+  span {
     height: 40px !important;
   }
 }
