@@ -8,15 +8,6 @@
 ========================================
 */
 
-// Settings
-// -------------------------------------
-@import '~uswds/dist/scss/settings/settings-general';
-@import '~uswds/dist/scss/settings/settings-typography';
-@import '~uswds/dist/scss/settings/settings-color';
-@import '~uswds/dist/scss/settings/settings-spacing';
-@import '~uswds/dist/scss/settings/settings-utilities';
-@import '~uswds/dist/scss/settings/settings-components';
-
 // Custom Settings
 // -------------------------------------
 @import 'sds-theme-general';
@@ -26,30 +17,32 @@
 @import 'sds-theme-utilities';
 @import 'sds-theme-components';
 
-// Tools
+// Required
 // -------------------------------------
-@import '~uswds/dist/scss/core/functions';
-@import '~uswds/dist/scss/core/system-tokens';
-@import '~uswds/dist/scss/core/variables';
-@import '~uswds/dist/scss/core/properties';
-@import '~uswds/dist/scss/core/mixins/all';
+@import '~uswds/dist/scss/packages/required';
 
-// Generic
+// Global
 // -------------------------------------
-@import '~uswds/dist/scss/core/font-face';
-@import '~uswds/dist/scss/lib/normalize';
-@import '~uswds/dist/scss/core/base';
+@import '~uswds/dist/scss/packages/global';
+
+// Base
+// -------------------------------------
+@import '~uswds/dist/scss/base/body';
+@import '~uswds/dist/scss/base/accessibility';
 
 // Elements
 // -------------------------------------
 @import '~uswds/dist/scss/elements/buttons';
 @import '~uswds/dist/scss/elements/embed';
 @import '~uswds/dist/scss/elements/figure';
-@import '~uswds/dist/scss/elements/inputs';
-@import '~uswds/dist/scss/elements/list';
+@import '~uswds/dist/scss/elements/form-controls/all';
+@import '~uswds/dist/scss/elements/layout-grid';
 @import '~uswds/dist/scss/elements/table';
 @import '~uswds/dist/scss/elements/tags';
-@import '~uswds/dist/scss/elements/typography';
+@import '~uswds/dist/scss/elements/typography/content';
+@import '~uswds/dist/scss/elements/typography/links';
+@import '~uswds/dist/scss/elements/typography/list';
+@import '~uswds/dist/scss/elements/typography/prose';
 
 // Components
 // -------------------------------------
@@ -64,18 +57,18 @@
 @import '~uswds/dist/scss/components/hero';
 @import '~uswds/dist/scss/components/layout';
 @import '~uswds/dist/scss/components/media-block';
+@import '~uswds/dist/scss/components/megamenu';
+@import '~uswds/dist/scss/components/nav-container';
+@import '~uswds/dist/scss/components/navbar';
 @import '~uswds/dist/scss/components/navigation';
 @import '~uswds/dist/scss/components/search';
 @import '~uswds/dist/scss/components/section';
 @import '~uswds/dist/scss/components/sidenav';
 @import '~uswds/dist/scss/components/skipnav';
 
-// Layout grid
-// -------------------------------------
-@import '~uswds/dist/scss/core/layout-grid';
-
 // Utilities
 // -------------------------------------
+@import '~uswds/dist/scss/utilities/utility-fonts';
 @import '~uswds/dist/scss/utilities/palettes/all';
 @import '~uswds/dist/scss/utilities/rules/all';
 @import '~uswds/dist/scss/utilities/rules/package';

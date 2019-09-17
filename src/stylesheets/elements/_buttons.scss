@@ -1,5 +1,4 @@
 .usa-button {
-  @include u-radius(0.3125rem); // TODO: support for manual variables ex: u-radius('btn');
   color: color('secondary-darker');
   padding: units(1.5) units(4);
 
@@ -22,7 +21,7 @@
 }
 
 .sds-button--circle {
-  @include u-radius(50%); // TODO: support for manual variables ex: u-radius('btn');
+  border-radius: 50%;
   color: color('secondary-darker');
   border: 0.25px solid darkgray;
   height: 2rem;

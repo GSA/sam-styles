@@ -251,3 +251,16 @@
   @include u-bg('disabled', !important);
   @include u-border('disabled-dark', !important);
 }
+
+/*
+----------------------------------------
+Label Title
+----------------------------------------
+*/
+.sds-type--label-title {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: lighter;
+  margin: 0;
+  color: #5d5d52;
+}
