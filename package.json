@@ -23,7 +23,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@frctl/fractal": "^1.1.7",
+    "@frctl/fractal": "^1.2.0",
     "@frctl/mandelbrot": "^1.2.0",
     "@frctl/nunjucks": "^1.0.3",
     "copy": "^0.3.2",
