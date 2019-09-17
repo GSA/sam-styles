@@ -4,6 +4,14 @@
   border-radius: 4px;
   background-color: white;
   box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.15);
+
+  h2 {
+    margin: 10px 0;
+  }
+
+  a:visited {
+    color: #3F57A6;
+  }
 }
 
 .sds-card .sds-card__header {
@@ -24,6 +32,11 @@
 
   .sds-card__header-actions {
     display: flex;
+
+    .usa-button {
+      border-radius: 0.3125rem;
+      color: #162e51;
+      padding: 0.75rem 1rem;
   }
 
 }
