@@ -1,7 +1,21 @@
 label: Alerts
 status: wip
-
+preview: "@sam-content"
 variants:
   - name: default
-    label: SAM Alerts
-    status: null
+    label: Default
+    context:
+      label:
+        classes: "sds-alert"
+
+  - name: basic
+    label: Basic
+    context:
+      label:
+        classes: "sds-alert--basic"
+
+  - name: compact
+    label: Compact
+    context:
+      label:
+        classes: "sds-alert--compact"

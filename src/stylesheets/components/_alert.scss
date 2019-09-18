@@ -1,0 +1,139 @@
+//SDS ALERT COMPACT
+.sds-alert--compact {
+  background-color: #fef0c8;
+  max-width: 300px;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .compact-icon {
+    color: #fbc036;
+    background-color: #fef0c8;
+    border-radius: 0.5rem;
+    margin: auto 10px;
+  }
+
+  label {
+    display: block;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+//SDS INFO ALERT
+.sds-alert-info--compact {
+  background-color: #e7f6f8;
+  max-width: 300px;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+
+  .compact-icon {
+    color: #00bde3;
+    background-color: #e7f6f8;
+    border-radius: 0.5rem;
+    margin: auto 10px;
+  }
+
+  label {
+    display: block;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+//SDS ERROR ALERT
+.sds-alert-error--compact {
+  background-color: #fdb8ae;
+  max-width: 300px;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+
+  .compact-icon {
+    color: #fb5a47;
+    background-color: #fdb8ae;
+    border-radius: 0.5rem;
+    margin: auto 10px;
+    padding: .5rem .2rem;
+  }
+
+  label {
+    display: block;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+//SDS ALERT BASIC
+.sds-alert--basic {
+  padding: 5px;
+  border: solid 2px #fbc036;
+  border-radius: 0.5rem;
+  width: 175px;
+
+  .sds-alert--basic-icon {
+    display: inline-block;
+    text-align: center;
+    height: 25px;
+    width: 25px;
+    color: #ffffff;
+    background-color: #fbc036;
+    border-radius: 50%;
+    padding-top: 1px;
+    margin: auto 5px;
+  }
+}
+
+//SDS ALERT BASIC
+.sds-alert--info-basic {
+  padding: 5px;
+  border: solid 2px #00BDE3;
+  border-radius: 0.5rem;
+  width: 175px;
+
+  .sds-alert--basic-icon {
+    display: inline-block;
+    text-align: center;
+    height: 25px;
+    width: 25px;
+    color: #ffffff;
+    background-color: #00BDE3;
+    border-radius: 50%;
+    padding-top: 1px;
+    margin: auto 5px;
+  }
+}
+
+//SDS ALERT BASIC
+.sds-alert--error-basic {
+  padding: 5px;
+  border: solid 2px #fb5a47;
+  border-radius: 0.5rem;
+  width: 175px;
+
+  .sds-alert--basic-icon {
+    display: inline-block;
+    text-align: center;
+    height: 25px;
+    width: 25px;
+    color: #ffffff;
+    background-color: #fb5a47;
+    border-radius: 50%;
+    padding-top: 1px;
+    margin: auto 5px;
+  }
+}
