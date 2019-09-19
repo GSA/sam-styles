@@ -1,6 +1,7 @@
 label: Alerts
 status: wip
 preview: "@sam-content"
+
 variants:
   - name: default
     label: Default
@@ -8,14 +9,14 @@ variants:
       label:
         classes: "sds-alert"
 
-  - name: basic
-    label: Basic
+  - name: block
+    label: Block
     context:
       label:
-        classes: "sds-alert--basic"
+        classes: "sds-alert--block"
 
-  - name: compact
-    label: Compact
+  - name: expanded
+    label: Expanded
     context:
       label:
-        classes: "sds-alert--compact"
+        classes: "sds-alert--expanded"
