@@ -1,16 +1,18 @@
 .sds-card {
-  margin: 40px 0;
-  padding: 18px 20px 20px;
+  @include u-margin-y(5);
+  @include u-padding-top(2);
+  @include u-padding-x('205');
+  @include u-padding-bottom('205');
   border-radius: 4px;
   background-color: white;
   box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.15);
 
   h2 {
-    margin: 10px 0;
+    @include u-margin-y(1);
   }
 
   a:visited {
-    color: #3f57a6;
+    color: color('indigo-cool-60');
   }
 }
 
@@ -20,8 +22,8 @@
   justify-content: space-between;
 
   .sds-card__header-mobile {
-    color: #212121;
-    margin: 0 auto 0 5px;
+    margin-right: auto;
+    @include u-margin-left('05');
     @media only screen and (min-width: 600px) {
       display: none;
       overflow: hidden;
@@ -35,52 +37,9 @@
 }
 
 .sds-card .sds-card__content {
-  padding: 15px 0 0;
   display: block;
+  @include u-padding-top('105');
   @media only screen and (max-width: 600px) {
     display: none;
-  }
-}
-//search fieldset
-
-.sds-search {
-  display: block;
-  margin: auto;
-
-  .usa-button {
-    background-color: #3F57A6;
-  }
-
-  .usa-button:hover {
-    background-color: #1a4480;
-  }
-
-  form {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-  }
-
-  select {
-    margin: 0;
-    width: 150px;
-    border-right-width: 0;
-    padding: 0 15px;
-  }
-
-  input {
-    margin: 0;
-    height: 40px;
-    border-right-width: 0;
-  }
-
-  input:focus {
-    box-shadow: 2px 1px 6px 1px #3F57A6;
-    outline: none;
-  }
-
-  button,
-  span {
-    height: 40px !important;
   }
 }

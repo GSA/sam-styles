@@ -7,7 +7,7 @@
   @include u-display('block');
   @include u-margin-y(0.5);
   @include u-margin-right(0.5, !important);
-  min-width:52px;
+  min-width: 52px;
   width: 52px;
 }
 
@@ -35,5 +35,47 @@
 
   .usa-static {
     @include u-margin-y(0.5);
+  }
+}
+//search fieldset
+.sds-search {
+  display: block;
+  @include u-margin-top(1);
+
+  .usa-button {
+    @include u-bg('indigo-cool-60');
+  }
+
+  .usa-button:hover {
+    @include u-bg('blue-warm-70v');
+  }
+
+  form {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  select {
+    width: 150px;
+    border-right-width: 0;
+    @include u-margin(0);
+    @include u-padding-x(2);
+  }
+
+  input {
+    height: 40px;
+    border-right-width: 0;
+    @include u-margin(0);
+  }
+
+  input:focus {
+    box-shadow: 2px 1px 6px 1px #3F57A6;
+    outline: none;
+  }
+
+  button,
+  span {
+    height: 40px !important;
   }
 }

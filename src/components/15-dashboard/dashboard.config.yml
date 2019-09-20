@@ -8,20 +8,18 @@ variants:
       label:
         classes: "sds-card"
 
-variants:
-- name: default
-  label: SDS Statistics
-  context:
-    label:
-      classes: "sds-statistic"
+  - name: default
+    label: SDS Statistics
+    context:
+      label:
+        classes: "sds-statistic"
 
-- name: Alternative
-  label: SDS Statistics Square
-  context:
-    label:
-      classes: "sds-statistic--alt"
+  - name: Alternative
+    label: SDS Statistics Square
+    context:
+      label:
+        classes: "sds-statistic--alt"
 
-variants:
   - name: default
     label: SDS Events
     status: null
