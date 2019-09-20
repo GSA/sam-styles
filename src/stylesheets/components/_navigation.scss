@@ -2,7 +2,7 @@
 // ---------------------------------
 
 .usa-nav {
-  @include at-media-max($theme-navigation-width) {
+  @include at-media-max($theme-header-min-width) {
     background: color('accent-cool-lighter');
     &.is-visible {
       box-shadow: 6px 10px 25px 13px rgba(0, 0, 0, 0.25);
@@ -14,9 +14,9 @@
 // ---------------------------------
 
 .usa-nav__primary {
-  // Until the $theme-navigation-width,
+  // Until the $theme-header-min-width,
   // use the usa-nav-list styles for the slide-in nav
-  @include at-media-max($theme-navigation-width) {
+  @include at-media-max($theme-header-min-width) {
     margin-top: units(2);
     .usa-current {
       color: color('ink');
@@ -30,13 +30,13 @@
   // just level 1 nav items...
   > .usa-nav__primary-item {
     border: none;
-    @include at-media($theme-navigation-width) {
+    @include at-media($theme-header-min-width) {
       font-size: 20px;
       line-height: line-height($theme-navigation-font-family, 1);
     }
     // ...and their direct links
     > a {
-      @include at-media($theme-navigation-width) {
+      @include at-media($theme-header-min-width) {
         padding-left: units(3);
         padding-right: units(3);
         font-weight: font-weight('normal');
@@ -50,7 +50,7 @@
 
   button {
     position: relative;
-    @include at-media($theme-navigation-width) {
+    @include at-media($theme-header-min-width) {
       padding-left: units(3);
       padding-right: units(3);
       font-size: 20px;
@@ -73,20 +73,20 @@
       border-radius: 0;
       background-color: transparent;
       transition: transform 0.2s ease-in;
-      @include at-media($theme-navigation-width) {
+      @include at-media($theme-header-min-width) {
         right: 20px;
         transform: translateY(-65%) rotate(45deg);
       }
     }
     &[aria-expanded=true]::before { /* stylelint-disable-line selector-no-qualifying-type */
       transform: translateY(-65%) rotate(45deg);
-      @include at-media($theme-navigation-width) {
+      @include at-media($theme-header-min-width) {
         transform: translateY(-20%) rotate(-135deg);
       }
     }
     &[aria-expanded=true] { /* stylelint-disable-line selector-no-qualifying-type */
       background-image: none;
-      @include at-media($theme-navigation-width) {
+      @include at-media($theme-header-min-width) {
         background-color: color('accent-cool-lighter');
         color: color('ink');
       }
@@ -94,7 +94,7 @@
     &[aria-expanded=false] { /* stylelint-disable-line selector-no-qualifying-type */
       background-image: none;
       &:hover {
-        @include at-media($theme-navigation-width) {
+        @include at-media($theme-header-min-width) {
           background-image: none;
         }
       }
@@ -108,20 +108,20 @@
 .usa-nav__secondary {
   margin-top: units(2);
 
-  @include at-media($theme-navigation-width) {
+  @include at-media($theme-header-min-width) {
     bottom: units(10); // XXX magic number
   }
 }
 
 .usa-nav__secondary-links {
   padding-left: 1rem;
-  @include at-media($theme-navigation-width) {
+  @include at-media($theme-header-min-width) {
     padding-left: 0;
   }
 
   .usa-nav__secondary-item {
     padding-bottom: units(2.5);
-    @include at-media($theme-navigation-width) {
+    @include at-media($theme-header-min-width) {
       padding-bottom: 0;
     }
   }
@@ -139,13 +139,13 @@
 // ---------------------------------
 
 .usa-nav__submenu {
-  @include at-media($theme-navigation-width) {
+  @include at-media($theme-header-min-width) {
     background-color: color('accent-cool-lighter');
   }
   .usa-nav__submenu-item {
     border: none;
     font-size: font-size($theme-navigation-font-family, 'xs');
-    @include at-media($theme-navigation-width) {
+    @include at-media($theme-header-min-width) {
       a {
         color: color('base-dark');
 
