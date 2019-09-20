@@ -68,11 +68,7 @@
 
 // Utilities
 // -------------------------------------
-@import '~uswds/dist/scss/utilities/utility-fonts';
-@import '~uswds/dist/scss/utilities/palettes/all';
-@import '~uswds/dist/scss/utilities/rules/all';
-@import '~uswds/dist/scss/utilities/rules/package';
-@include render-utilities-in($utilities-package);
+@import '~uswds/dist/scss/packages/uswds-utilities';
 
 // -------------------------------------
 // Import theme custom styles
