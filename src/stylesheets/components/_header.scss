@@ -8,7 +8,7 @@
     height: 30px;
     color: rgba(0, 0, 0, 0);
     display: block;
-    @include at-media($theme-navigation-width) {
+    @include at-media($theme-header-min-width) {
       width: 195px;
       height: 42px;
     }
@@ -40,7 +40,7 @@
 
 .usa-header--extended {
   .usa-nav {
-    @include at-media($theme-navigation-width) {
+    @include at-media($theme-header-min-width) {
       box-shadow: 0 7px 18px -7px rgba(0, 0, 0, 0.36);
     }
   }
