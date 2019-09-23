@@ -1,0 +1,7 @@
+{
+  "dataSource": "prs",
+  "ignoreLabels": ["npm release"],
+  "onlyMilestones": false,
+  "groupBy": "label",
+  "changelogFilename": "CHANGELOG.md"
+}
