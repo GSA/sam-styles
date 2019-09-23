@@ -7,7 +7,7 @@
 ========================================
 ========================================
 ----------------------------------------
-USWDS 2.1.0
+USWDS 2.2.0
 ----------------------------------------
 TYPOGRAPHY SETTINGS
 ----------------------------------------
@@ -16,31 +16,6 @@ USWDS typography tokens in the documentation:
 https://designsystem.digital.gov/design-tokens/typesetting/font-family/
 ----------------------------------------
 */
-
-/*
-----------------------------------------
-Type-based font settings
-----------------------------------------
-Set the type-based tokens for your
-project from the following tokens,
-or from any new font tokens you added in
-$theme-typeface-tokens.
-----------------------------------------
-'georgia'
-'helvetica'
-'merriweather'
-'open-sans'
-'public-sans'
-'roboto-mono'
-'source-sans-pro'
-'system'
-'tahoma'
-'verdana'
-----------------------------------------
-*/
-
-// sans-serif
-$theme-font-type-sans:  'source-sans-pro';
 
 /*
 ----------------------------------------
