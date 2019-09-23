@@ -1,63 +1,99 @@
-// General footer styles
+/*******************************
+       USWDS OVERRIDES
+*******************************/
+
+/*-------------------
+    General footer
+--------------------*/
 
 .usa-footer__primary-section {
   background-color: color('accent-cool-lighter');
 }
 
+.usa-footer__secondary-link a {
+  @include u-text('no-underline');
+}
+
 .usa-footer__secondary-link {
-  a {
-    text-decoration: none;
-  }
+  margin-left: 0;
+}
+
+.usa-footer__primary-content {
+  border-top: none;
 }
 
 .usa-footer__secondary-section {
   background-color: color('accent-cool-lighter');
-  text-align: center;
+  @include u-text('center');
   @include at-media('tablet') {
-    text-align: left;
+    @include u-text('left');
   }
 }
 
-.usa-footer__logo {
-  @include at-media('mobile-lg') {
-    @include u-flex('align-end');
-  }
-}
-
-.usa-footer__logo-text {
-  width: 100px;
-  height: 90px;
-  @include u-color('transparent');
-  @include u-display('block');
-  @include add-background-svg('sam/logo-gsa');
-}
-
-.usa-footer__logo-img {
-  max-width: 100px;
-  @include at-media('mobile-lg') {
-    max-width: 100%;
-  }
-  @include at-media('tablet') {
-    min-width: 100px;
-  }
-}
-
-.usa-footer__logo-heading {
-  @include h4;
-  color: #005088;
-  font-weight: 600;
-}
-
-// Big footer styles
+/*-------------------
+      Big footer
+--------------------*/
 
 .usa-footer--big {
   .usa-footer__nav {
-    @include at-media('mobile-lg') {
-      text-align: center;
-      border-bottom: none;
-    }
+    padding-top: units(4);
+    @include u-text('center');
+    border-bottom: none;
     @include at-media('tablet') {
-      text-align: left;
+      @include u-text('left');
     }
   }
+
+  .usa-footer__primary-link {
+    @include u-padding-y(0);
+    background: none;
+    margin-bottom: units(1);
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .usa-footer__primary-content--collapsible {
+    &.hidden {
+      .usa-footer__primary-link {
+        background-size: units(1);
+      }
+    }
+  }
+
+  .usa-list--unstyled {
+    @include u-padding-x(0, !important);
+    padding-bottom: units(4) !important;
+    padding-top: units(1.5);
+  }
+}
+
+/*******************************
+      SDS Specific Styles
+*******************************/
+
+.sds-footer__logo {
+  @include u-margin-top(4);
+  @include u-display('flex');
+  @include u-flex('justify-center');
+  @include at-media('tablet') {
+    @include u-display('block');
+  }
+}
+
+.sds-footer__logo-link img {
+  @include u-width(15);
+}
+
+.sds-footer__logo-heading {
+  @include h4;
+  @include u-margin-y(1);
+  line-height: line-height('heading', 2);
+  @include u-text('semibold');
+  color: color('secondary-dark');
+  @include u-maxw('card');
+  align-self: center;
+}
+
+.sds-footer__note {
+  @include u-font('body', '2xs');
 }
