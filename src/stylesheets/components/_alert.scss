@@ -1,0 +1,141 @@
+//SDS ALERT
+
+.sds-alert {
+  @include u-padding('05');
+  @include u-radius('lg');
+  border: solid 0.1rem #fbc036;
+  width: 175px;
+
+  .sds-alert-icon {
+    @include u-display('inline-block');
+    @include u-text('center');
+    @include u-height(3);
+    @include u-width(3);
+    @include u-text('white');
+    @include u-bg('warning');
+    @include u-radius('pill');
+    @include u-padding-top('1px');
+    @include u-margin-x('05');
+  }
+  //SDS ALERT INFO
+  &.info {
+    border: solid 0.1rem #00BDE3;
+
+    .sds-alert-icon {
+      @include u-bg('info');
+    }
+  }
+  //SDS ALERT ERROR
+  &.error {
+    border: solid 0.1rem #fb5a47;
+
+    .sds-alert-icon {
+      @include u-bg('error');
+    }
+  }
+}
+//SDS ALERT BLOCK
+
+.sds-alert--block {
+  @include u-bg('warning-lighter');
+  @include u-maxw('mobile');
+  @include u-radius('lg');
+  @include u-display('flex');
+  @include u-flex('row', 'justify');
+  @include u-margin-bottom('205');
+
+  .sds-alert--block-icon {
+    @include u-bg('warning-lighter');
+    @include u-text('warning');
+    @include u-radius('lg');
+    margin: auto 10px;
+  }
+
+  label {
+    @include u-display('block');
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  span {
+    @include u-display('block');
+  }
+  //SDS INFO ALERT BLOCK
+  &.info {
+    @include u-bg('info-lighter');
+
+    .sds-alert--block-icon {
+      @include u-bg('info-lighter');
+      @include u-text('info');
+    }
+  }
+  //SDS ERROR ALERT BLOCK
+  &.error {
+    @include u-bg('error-lighter');
+
+    .sds-alert--block-icon {
+      @include u-bg('error-lighter');
+      @include u-text('error');
+    }
+  }
+}
+// Alert tag - Warning
+
+.sds-alert--expanded {
+  border: solid 0.1rem #FEBE2E;
+  @include u-radius('lg');
+  @include u-display('flex');
+  @include u-flex('align-center');
+  @include u-margin(3);
+  @include u-padding(3);
+  max-width: 90%;
+
+  .usa-button--circle {
+    @include u-margin(0, !important);
+  }
+
+  .fa-alert-warning {
+    @include u-text('warning');
+    margin: auto 10px;
+  }
+
+  .sds-alert--expanded-content {
+    @include u-display('inline-block');
+    margin: auto;
+    max-width: 75%;
+  }
+
+  .sds-alert--expanded-content-extended {
+    padding-left: 52px;
+  }
+
+  .sds-alert--expanded-content-extended {
+    padding-left: 52px;
+  }
+  // Alert tag - Info
+  &.info {
+    border: solid 0.1rem #00BDE3;
+
+    .usa-button--circle {
+      @include u-margin(0, !important);
+    }
+  }
+
+  .fa-alert-info {
+    margin: auto 10px;
+    color: #00BDE3;
+  }
+  // Alert tag - Error
+  &.error {
+    border: solid 0.1rem #E9695F;
+
+    .usa-button--circle {
+      @include u-margin(0, !important);
+    }
+  }
+
+  .fa-alert-error {
+    margin: auto 10px;
+    color: #E9695F;
+  }
+}

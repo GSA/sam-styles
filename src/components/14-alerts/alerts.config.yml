@@ -1,0 +1,21 @@
+label: Alerts
+status: wip
+preview: "@sam-content"
+variants:
+  - name: default
+    label: Default
+    context:
+      label:
+        classes: "sds-alert"
+
+  - name: block
+    label: Block
+    context:
+      label:
+        classes: "sds-alert--block"
+
+  - name: expanded
+    label: Expanded
+    context:
+      label:
+        classes: "sds-alert--expanded"
