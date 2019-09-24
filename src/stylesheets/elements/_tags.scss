@@ -260,4 +260,9 @@ Label Title
   font-weight: lighter;
   margin: 0;
   color: #5d5d52;
+  
+.sds-tag--light {
+  @include u-bg('white', !important);
+  @include u-border('warning', !important);
+  @include u-text('base-darker', !important);
 }
