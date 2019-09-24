@@ -15,8 +15,10 @@
 
   &.sds-alert--small {
     @include u-margin(0);
+    @include u-margin-top(1);
     @include u-padding(0.5);
-    @include u-border('2px');
+    @include u-border('1px');
+    max-width: none;
   }
 }
 
@@ -26,9 +28,8 @@
 }
 
 .sds-alert-content {
-  margin: auto;
   display: inline-block;
-  max-width: 75%;
+  max-width: 90%;
 }
 
 .sds-alert-content-extended {
