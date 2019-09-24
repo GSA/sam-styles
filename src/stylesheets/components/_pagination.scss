@@ -57,6 +57,7 @@
   @include u-display('none');
   strong {
     color: #162e51;
+    @include u-margin-left('2px');
   }
   @include at-media('mobile-lg') {
     @include u-display('block');
