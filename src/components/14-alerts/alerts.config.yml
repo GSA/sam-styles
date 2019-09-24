@@ -1,7 +1,6 @@
 label: Alerts
 status: wip
 preview: "@sam-content"
-
 variants:
   - name: default
     label: Default
