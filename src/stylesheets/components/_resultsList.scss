@@ -1,6 +1,6 @@
 .result-item-wrapper {
   @include u-margin-top(1);
-  @include u-margin-bottom(2);
+  @include u-margin-bottom('205');
 }
 
 .search-result__list > * {

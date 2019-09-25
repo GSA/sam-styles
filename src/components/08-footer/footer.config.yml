@@ -1,0 +1,11 @@
+label: Footer
+status: wip
+
+variants:
+  - name: default
+    label: Default
+
+  - name: alt
+    label: Compare
+
+context: {}
