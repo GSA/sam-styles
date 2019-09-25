@@ -33,6 +33,15 @@
       @include u-bg('error');
     }
   }
+
+  &.sds-alert--small {
+    @include u-margin(0);
+    @include u-margin-top(1);
+    @include u-padding(0.5);
+    @include u-border('1px');
+    max-width: none;
+  }
+
 }
 //SDS ALERT BLOCK
 
