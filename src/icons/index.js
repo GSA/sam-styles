@@ -25,6 +25,12 @@ import { sdsExclamation } from "./sdsExclamation";
 import { sdsAlertWarning } from "./sdsAlertWarning";
 import { sdsAlertInfo } from "./sdsAlertInfo";
 import { sdsAlertError } from "./sdsAlertError";
+import { sdsUsers } from "./sdsUsers";
+import { sdsUser } from "./sdsUser";
+import { sdsShip } from "./sdsShip";
+import { sdsReview } from "./sdsReview";
+import { sdsFile } from "./sdsFile";
+import { sdsExclamationCircle } from "./sdsExclamationCircle";
 
 const prefix = "sds";
 
@@ -47,7 +53,7 @@ const _iconsCache = {
   sdsRulerPencil: sdsRulerPencil,
   sdsShare: sdsShare,
   sdsTrash: sdsTrash,
-  sdsUser: sdsUser,
+  sdsUserCircle: sdsUserCircle,
   sdsWorkspace: sdsWorkspace,
   sdsRequest: sdsRequest,
   sdsMessages: sdsMessages,
@@ -55,7 +61,13 @@ const _iconsCache = {
   sdsExclamation: sdsExclamation,
   sdsAlertWarning: sdsAlertWarning,
   sdsAlertInfo: sdsAlertInfo,
-  sdsAlertError: sdsAlertError
+  sdsAlertError: sdsAlertError,
+  sdsUsers: sdsUsers,
+  sdsUser: sdsUser,
+  sdsShip: sdsShip,
+  sdsReview: sdsReview,
+  sdsFile: sdsFile,
+  sdsExclamationCircle: sdsExclamationCircle
 };
 
 export {
@@ -79,7 +91,7 @@ export {
   sdsRulerPencil,
   sdsShare,
   sdsTrash,
-  sdsUser,
+  sdsUserCircle,
   sdsWorkspace,
   sdsRequest,
   sdsMessages,
@@ -87,5 +99,11 @@ export {
   sdsExclamation,
   sdsAlertWarning,
   sdsAlertInfo,
-  sdsAlertError
+  sdsAlertError,
+  sdsUsers,
+  sdsUser,
+  sdsShip,
+  sdsReview,
+  sdsFile,
+  sdsExclamationCircle
 };
