@@ -1,4 +1,4 @@
-.result-item-wrapper {
+.result-item {
   @include u-margin-top(1);
   @include u-margin-bottom('205');
 }
@@ -78,31 +78,10 @@
   margin: 25px 10px;
 }
 
-.action-menu-wrapper {
+.action-menu {
   height: 100%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   flex-direction: column;
-}
-
-.action-menu-placeholder {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: solid 1px #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: #666;
-  font-size: 1em;
-  cursor: pointer;
-  margin-top: 4px;
-}
-
-div[class^="grid-col-"] .sds-tag--static,
-div[class*=" grid-col-"] .sds-tag--static {
-  display: block !important;
-  width: 100% !important;
 }

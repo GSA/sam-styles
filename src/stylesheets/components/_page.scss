@@ -1,0 +1,8 @@
+sds-page {
+  @include u-display("block");
+  @include u-margin-y(2);
+
+  &.condensed {
+    @include u-font("sans", "3xs");
+  }
+}

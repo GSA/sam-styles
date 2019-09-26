@@ -17,6 +17,8 @@ SDS THEME CUSTOM STYLES
 @import '../elements/inputs';
 @import '../elements/tags';
 @import '../elements/typography';
+@import '../elements/borders';
+@import '../elements/sizing';
 
 // Components
 // -------------------------------------
@@ -28,7 +30,7 @@ SDS THEME CUSTOM STYLES
 @import '../components/banner';
 @import '../components/footer';
 @import '../components/pagination';
-@import '../components/resultsList';
+@import '../components/results';
 @import '../components/menu';
 @import '../components/overlay';
 @import '../components/dialog';
@@ -38,11 +40,11 @@ SDS THEME CUSTOM STYLES
 @import '../components/statistic';
 @import '../components/event';
 @import '../components/alert';
+@import '../components/page';
 
 // Layouts
 // -------------------------------------
 @import '../layouts/subheader';
-@import '../layouts/page';
 
 // Code samples ---------------------- //
 

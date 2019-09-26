@@ -1,12 +1,3 @@
-sds-page {
-  @include u-display("block");
-  @include u-margin-y(2);
-
-  &.condensed {
-    @include u-font("sans", "3xs");
-  }
-}
-
 hr.thin {
   border: 0;
   height: 0;
@@ -16,8 +7,9 @@ hr.thin {
 
 .border--hairline {
   border: 0 !important;
-  box-shadow: 0 0 0 1px color('base-light');
+  box-shadow: 0 0 0 1px color("base-light");
 }
+
 @media (min-resolution: 2dppx) {
   .border--hairline {
     border: 0 !important;
@@ -37,8 +29,4 @@ hr.thin {
     border: 0 !important;
     box-shadow: 0 0 0 0.25px;
   }
-}
-
-.usa-min-width-160 {
-  min-width: 160px;
 }
