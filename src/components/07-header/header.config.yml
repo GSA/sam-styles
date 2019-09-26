@@ -1,4 +1,4 @@
-cd label: Header
+label: Header
 status: wip
 
 variants:
@@ -14,24 +14,50 @@ variants:
           search: false
           id_prefix: extended-
           links:
+            - text: Current section
+              current: true
+              links: false
+            - text: Section
+              links: false
+
+        secondary:
+          search: false
+          links:
+            - sdsIcon: true
+              icon: bars
+            - sdsIcon: true
+              icon: bars
+
+  - name: extended-sam
+    label: SAM
+    context:
+      header:
+        title: SAM.gov
+        logo: '/assets/images/logo-sam.svg'
+        notification: true
+        primary:
+          search: false
+          id_prefix: sam-
+          links:
+            - text: Home
+              href: 'javascript:void(0)'
+              current: true
+              links: false
             - text: Search
-              href: ''
-              is_current: false
-              id: nav-section-home
+              href: 'javascript:void(0)'
               links: false
             - text: Databank
-              links: false
-              is_current: false
-              id: nav-section-one
+              href: 'javascript:void(0)'
             - text: Data Services
-              id: nav-section-two
-              links: false
+              href: 'javascript:void(0)'
             - text: Help
-              href: ''
+              href: 'javascript:void(0)'
         secondary:
           search: false
           links:
             - text: Request
+              current: true
+              notification: true
               sdsIcon: true
               icon: request
             - text: Messages
@@ -43,52 +69,3 @@ variants:
             - text: Sign Out
               sdsIcon: true
               icon: 'log-out'
-
-  - name: alt
-    label: Compare
-    context:
-      header:
-        primary:
-          search: false
-          id_prefix: alt-
-          links:
-            - text: Primary Link
-              href: ''
-              is_current: false
-              id: nav-section-home
-              links: false
-            - text: Primary Link
-              links: false
-              is_current: false
-              id: nav-section-one
-            - text: Primary Link
-              id: nav-section-two
-              links: false
-            - text: Primary Link
-              href: ''
-        secondary:
-          search: false
-          links:
-            - text: Secondary Link
-              sdsIcon: true
-              icon: request
-            - text: Secondary Link
-              sdsIcon: true
-              icon: messages
-            - text: Secondary Link
-              sdsIcon: true
-              icon: workspace
-            - text: Secondary Link
-              sdsIcon: true
-              icon: 'log-out'
-
-  - name: extended-mega
-    label: Extended with mega-menu
-    context:
-      header:
-        primary:
-          search: false
-          id_prefix: extended-mega-
-          mega: true
-        secondary:
-          search: true

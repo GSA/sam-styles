@@ -2,17 +2,22 @@
   <ul class="usa-nav__secondary-links">
     {%- for link in nav.links -%}
     <li class="usa-nav__secondary-item">
-      <a href="{{ link.href }}" class="usa-nav__link{% if link.current %} usa-current{% endif %}">
+      <a href="{{ link.href }}"{% if link.current %} class="usa-current"{% endif %}>
         {% if link.icon and link.notification %}
-          <span class="icon-layers icon-fw">
-            <i class="fas fa-{{link.icon}}"></i>
-            <span class="icon-layers-counter"></span>
+          <span class="fa-layers fa-fw">
+            <i class="{{ "sds" if link.sdsIcon else "fas" }} fa-{{link.icon}}"></i>
+            <span class="fa-layers-counter"></span>
           </span>
         {% endif %}
-        {% if link.icon and not link.notification %}<i class="{{ "sds" if link.sdsIcon else "fas" }} fa-{{link.icon}}"></i>{% endif %}
-        {{ link.text }}
+        {% if link.icon and not link.notification %}
+          <i class="{{ "sds" if link.sdsIcon else "fas" }} fa-{{link.icon}}"></i>
+        {% endif %}
+        <span class="sds-nav__secondary-item-text">{{ link.text }}</span>
       </a>
     </li>
     {%- endfor -%}
   </ul>
+  {%- if nav.search -%}
+    {% render '@search--header', {search: nav.search, search_js: false, id_prefix: id_prefix} %}
+  {%- endif -%}
 </div>

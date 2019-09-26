@@ -1,59 +1,61 @@
-// Header
-// ---------------------------------
+/*******************************
+       USWDS OVERRIDES
+*******************************/
 
-.usa-logo {
-  a {
-    // Size of logo
-    width: 140px;
-    height: 30px;
-    color: rgba(0, 0, 0, 0);
-    display: block;
-    @include at-media($theme-header-min-width) {
-      width: 195px;
-      height: 42px;
-    }
-  }
-}
+/*-------------------
+       Header
+--------------------*/
 
-.usa-logo__text {
-  @include add-background-svg('sam/logo');
+.usa-header {
+  background-color: white;
 }
 
 .usa-menu-btn {
   @include button-unstyled;
-  margin-right: 10px;
-  .fa-square {
-    color: #70e17b;
-  }
-  .fa-bars {
-    color: #1a4480;
-  }
   .fa-layers-counter {
-    height: 1em;
-    min-width: 1em;
-    right: 4px;
+    @include u-top('neg-1px');
+    @include u-right(2px);
   }
 }
 
-// usa-header--extended
-// ---------------------------------
+.usa-overlay {
+  background: color('secondary-darker');
+  &.is-visible {
+    opacity: opacity(50);
+  }
+}
+
+/*-------------------
+ usa-header--extended
+--------------------*/
 
 .usa-header--extended {
-  .usa-nav {
+  .usa-nav__link:not(.usa-current):hover::after {
+    content: none;
+  }
+
+  .usa-logo {
     @include at-media($theme-header-min-width) {
-      box-shadow: 0 7px 18px -7px rgba(0, 0, 0, 0.36);
+      margin: units(3) 0 units(2);
     }
   }
 
-  #alt-logo {
-    .usa-logo__text {
-      background-image: none;
-      content:"\A";
-      height: 80px;
-      width: 80px;
-      background-color: #1a4480;
-      border: none;
-      border-radius: 10px;
+  .usa-nav {
+    @include at-media($theme-header-min-width) {
+      border-top: units(1px) solid color('base-lighter');
+      box-shadow: 0px -10px white, 0px 2px 11px rgba(0, 0, 0, 0.15);
     }
   }
 }
+
+/*******************************
+      SDS Specific Styles
+*******************************/
+
+.sds-header__logo {
+  @include u-height(4);
+  @include at-media($theme-header-min-width) {
+    @include u-height(5);
+  }
+}
+

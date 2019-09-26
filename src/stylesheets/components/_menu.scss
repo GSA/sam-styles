@@ -18,21 +18,6 @@
   color: color("gray-warm-70");
 }
 
-.usa-nav__secondary {
-  .usa-nav__link {
-    &:hover {
-      color: color("gray-warm-70");
-      text-decoration: none;
-      &:after {
-        height: 0.2rem;
-        left: -0.1rem;
-        right: -0.1rem;
-        bottom: 6px;
-      }
-    }
-  }
-}
-
 .sds-menu__header-button {
   padding: 5px 10px;
   border-radius: 50%;

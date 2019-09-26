@@ -1,175 +1,125 @@
-// Header navigation
-// ---------------------------------
+/*******************************
+       USWDS OVERRIDES
+*******************************/
+
+/*-------------------
+  Header navigation
+--------------------*/
 
 .usa-nav {
   @include at-media-max($theme-header-min-width) {
     background: color('accent-cool-lighter');
     &.is-visible {
-      box-shadow: 6px 10px 25px 13px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
     }
   }
 }
 
-// Primary navigation
-// ---------------------------------
+/*-------------------
+  Primary navigation
+--------------------*/
 
 .usa-nav__primary {
-  // Until the $theme-header-min-width,
-  // use the usa-nav-list styles for the slide-in nav
   @include at-media-max($theme-header-min-width) {
-    margin-top: units(2);
-    .usa-current {
-      color: color('ink');
+    &-item {
+      border-top: none;
     }
     a {
       &:hover {
-        color: color($theme-link-hover-color);
+        background-color: transparent;
       }
     }
+    .usa-current {
+      color: color('base-dark');
+    }
   }
-  // just level 1 nav items...
   > .usa-nav__primary-item {
-    border: none;
-    @include at-media($theme-header-min-width) {
-      font-size: 20px;
-      line-height: line-height($theme-navigation-font-family, 1);
-    }
-    // ...and their direct links
+    font-size: font-size($theme-navigation-font-family, 'md');
     > a {
-      @include at-media($theme-header-min-width) {
-        padding-left: units(3);
-        padding-right: units(3);
-        font-weight: font-weight('normal');
-
-        &:hover {
-          color: color('ink');
-        }
-      }
-    }
-  }
-
-  button {
-    position: relative;
-    @include at-media($theme-header-min-width) {
-      padding-left: units(3);
-      padding-right: units(3);
-      font-size: 20px;
       font-weight: font-weight('normal');
-    }
-    &:hover {
-      color: color('ink');
-    }
-    &::before {
-      content: ' ';
-      border: solid #0a3466;
-      border-width: 0 1px 1px 0;
-      height: 0.5rem;
-      pointer-events: none;
-      position: absolute;
-      right: 5px;
-      top: 50%;
-      transform: translateY(-60%) rotate(-45deg);
-      width: 0.5rem;
-      border-radius: 0;
-      background-color: transparent;
-      transition: transform 0.2s ease-in;
-      @include at-media($theme-header-min-width) {
-        right: 20px;
-        transform: translateY(-65%) rotate(45deg);
-      }
-    }
-    &[aria-expanded=true]::before { /* stylelint-disable-line selector-no-qualifying-type */
-      transform: translateY(-65%) rotate(45deg);
-      @include at-media($theme-header-min-width) {
-        transform: translateY(-20%) rotate(-135deg);
-      }
-    }
-    &[aria-expanded=true] { /* stylelint-disable-line selector-no-qualifying-type */
-      background-image: none;
-      @include at-media($theme-header-min-width) {
-        background-color: color('accent-cool-lighter');
-        color: color('ink');
-      }
-    }
-    &[aria-expanded=false] { /* stylelint-disable-line selector-no-qualifying-type */
-      background-image: none;
       &:hover {
-        @include at-media($theme-header-min-width) {
-          background-image: none;
-        }
+        color: color('secondary');
       }
     }
   }
 }
 
-// Secondary navigation
-// ---------------------------------
+/*-------------------
+ Secondary navigation
+--------------------*/
 
 .usa-nav__secondary {
-  margin-top: units(2);
-
-  @include at-media($theme-header-min-width) {
-    bottom: units(10); // XXX magic number
+  @include at-media-max($theme-header-min-width) {
+    .usa-current {
+      @include add-bar(
+        $theme-sidenav-current-border-width,
+        'primary',
+        'left',
+        'pill',
+        1,
+        1
+      );
+    }
   }
 }
 
 .usa-nav__secondary-links {
-  padding-left: 1rem;
-  @include at-media($theme-header-min-width) {
-    padding-left: 0;
-  }
-
   .usa-nav__secondary-item {
-    padding-bottom: units(2.5);
+    svg {
+      color: color('black');
+    }
     @include at-media($theme-header-min-width) {
-      padding-bottom: 0;
+      padding-left: units(3);
+    }
+    @include at-media('tablet-lg') {
+      padding-left: units(0.5);
+    }
+    @include at-media-max('tablet-lg') {
+      &::before {
+        content: none !important;
+      }
     }
   }
 
   a {
-    font-size: font-size($theme-navigation-font-family, 'xs');
-
+    @include u-padding-bottom('105');
     &:hover {
-      color: color($theme-link-hover-color);
+      color: color('secondary');
+      text-decoration: none;
+    }
+    &.usa-current::after {
+      left: 0;
+      right: 0;
+    }
+    @include at-media-max($theme-header-min-width) {
+      padding: units(1) units(2);
+    }
+    .fa-layers-counter {
+      padding: units(2);
+      @include u-top('neg-05');
+      @include u-right(-2px);
     }
   }
 }
 
-// Navigation dropdowns
-// ---------------------------------
-
-.usa-nav__submenu {
-  @include at-media($theme-header-min-width) {
-    background-color: color('accent-cool-lighter');
-  }
-  .usa-nav__submenu-item {
-    border: none;
-    font-size: font-size($theme-navigation-font-family, 'xs');
-    @include at-media($theme-header-min-width) {
-      a {
-        color: color('base-dark');
-
-        &:hover {
-          color: color('base-dark');
-        }
-      }
-    }
-  }
-}
-
-
-// Navigation close button
-// ---------------------------------
+/*-------------------
+Navigation close button
+--------------------*/
 
 .usa-nav__close {
-  @include button-unstyled;
-  height: 2.5rem;
-  width: 2.7rem;
-  float: none;
-  .fa-square {
-    color: #70e17b;
+  margin-bottom: 0;
+}
+
+/*******************************
+      SDS Specific Styles
+*******************************/
+
+.sds-nav__secondary-item-text {
+  padding-left: units(0.5);
+  @include at-media($theme-header-min-width) {
+    @include u-display('none');
   }
-  .fa-arrow-left {
-    color: #1a4480;
+  @include at-media('tablet-lg') {
+    @include u-display('inline-block');
   }
 }
