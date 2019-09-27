@@ -1,0 +1,12 @@
+.sds-result-item {
+  @include u-margin-top(1);
+  @include u-margin-bottom('205');
+
+  .action-menu {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+  }
+}

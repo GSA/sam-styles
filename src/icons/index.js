@@ -28,7 +28,6 @@ import { sdsAlertError } from "./sdsAlertError";
 import { sdsUsers } from "./sdsUsers";
 import { sdsUser } from "./sdsUser";
 import { sdsShip } from "./sdsShip";
-import { sdsReview } from "./sdsReview";
 import { sdsFile } from "./sdsFile";
 import { sdsExclamationCircle } from "./sdsExclamationCircle";
 
@@ -65,7 +64,6 @@ const _iconsCache = {
   sdsUsers: sdsUsers,
   sdsUser: sdsUser,
   sdsShip: sdsShip,
-  sdsReview: sdsReview,
   sdsFile: sdsFile,
   sdsExclamationCircle: sdsExclamationCircle
 };
@@ -103,7 +101,6 @@ export {
   sdsUsers,
   sdsUser,
   sdsShip,
-  sdsReview,
   sdsFile,
   sdsExclamationCircle
 };
