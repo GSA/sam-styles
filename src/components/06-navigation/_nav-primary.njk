@@ -1,9 +1,10 @@
 <button class="usa-nav__close">
-  {# <img src="{{ '/dist/img/close.svg' | path }}" alt="close"> #}
-  <span class="fa-layers fa-fw fa-2x">
-    <i class="fas fa-square"></i>
-    <i class="sds fa-arrow-left" data-fa-transform="shrink-6"></i>
-  </span>
+  <div class="fa-lg">
+    <span class="fa-layers fa-fw">
+      <i class="fa-inverse fas fa-circle" data-fa-transform="grow-2"></i>
+      <i class="fas fa-times" data-fa-transform="shrink-6"></i>
+    </span>
+  </div>
   <span class="usa-sr-only">Close</span>
 </button>
 <ul class="usa-nav__primary usa-accordion">
@@ -23,7 +24,7 @@
       {%- else -%}
         <div class="grid-row grid-gap-4">
           {%- for group in link.links | batch(3) -%}
-            <div class="desktop:grid-col-3">
+            <div class="usa-col">
               <ul class="usa-nav__submenu-list">
                 {%- for child in group -%}
                   <li class="usa-nav__submenu-item">

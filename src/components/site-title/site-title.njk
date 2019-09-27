@@ -1,13 +1,22 @@
 <div class="usa-navbar">
   <div class="usa-logo" id="{{ header.primary.id_prefix }}logo">
-    <em class="usa-logo__text"><a href="{{ header.link.href | default('/') }}" title="{{ header.link.title | default('Home') }}" aria-label="{{ header.link.label | default('Home') }}">{{ header.title | default(site.title) }}</a></em>
+    {% if header.logo %}
+    <a href="{{ header.link.href | default('/') }}" title="{{ header.link.title | default('Home') }}" aria-label="{{ header.link.label | default('Home') }}">
+      <img class="sds-header__logo" src="{{ header.logo | path }}" alt="Logo" />
+    </a>
+    {% endif %}
+    {% if not header.logo %}
+      <em class="usa-logo__text"><a href="{{ header.link.href | default('/') }}" title="{{ header.link.title | default('Home') }}" aria-label="{{ header.link.label | default('Home') }}">{{ header.title | default(site.title) }}</a></em>
+    {% endif %}
   </div>
   <button class="usa-menu-btn">
     <span class="fa-layers fa-fw fa-3x">
-      <i class="fas fa-square"></i>
+      <i class="fas fa-square text-primary"></i>
       <i class="sds fa-bars" data-fa-transform="shrink-6"></i>
-      <span class="fa-layers-counter"></span>
+      {% if header.notification %}
+        <span class="fa-layers-counter"></span>
+      {% endif %}
     </span>
-    <span class="usa-sr-only">Close</span>
+    <span class="usa-sr-only">Menu</span>
   </button>
 </div>
