@@ -38,3 +38,30 @@
 .usa-link--external::after {
   fill: #562b97;
 }
+
+.sds-group {
+  @include u-margin-top(0.5);
+
+  .sds-static {
+    @include u-margin-y(0);
+  }
+}
+
+.sds-group--horizontal {
+  @include u-margin-top(0.5);
+
+  .sds-static {
+    @include u-margin-y(0.5);
+  }
+}
+
+.sds-static--label {
+  @include u-display('block');
+  @include u-margin-top(0.5);
+  @include u-margin-right(0.5, !important);
+  white-space: nowrap;
+}
+
+.sds-static {
+  @include u-text('semibold');
+}
