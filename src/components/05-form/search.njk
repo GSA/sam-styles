@@ -1,7 +1,26 @@
+<h4>SDS Search Example</h4>
 <div class="sds-search">
   <form class="usa-search usa-search--small">
     <div role="search" class="search">
-      <input class="usa-input" id="search-field-small" type="search" name="search">
+      <input class="usa-input" id="search-field-small" type="search" name="search" placeholder="Search Here">
+      <button class="usa-button" type="submit">
+        <span class="usa-sr-only">Search</span>
+      </button>
+    </div>
+  </form>
+</div>
+
+<h4>SDS Dropdown + Search Example</h4>
+<div class="sds-search">
+  <form class="usa-search usa-search--small">
+    <select class="usa-select" name="options" id="options">
+      <option value="value">- Select -</option>
+      <option value="value1">Option A</option>
+      <option value="value2">Option B</option>
+      <option value="value3">Option C</option>
+    </select>
+    <div role="search" class="search">
+      <input class="usa-input" id="search-field-small" type="search" name="search" placeholder="Search Here">
       <button class="usa-button" type="submit">
         <span class="usa-sr-only">Search</span>
       </button>

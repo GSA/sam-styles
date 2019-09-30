@@ -16,6 +16,7 @@
 
   .usa-button {
     @include u-bg('indigo-cool-60');
+    @include u-radius(0)
   }
 
   .usa-button:hover {
