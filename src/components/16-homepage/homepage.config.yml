@@ -1,0 +1,15 @@
+label: Homepage
+status: wip
+preview: "@sam-content"
+variants:
+  - name: banner
+    label: SDS Banner
+    context:
+      label:
+        classes: "sds-banner"
+
+  - name: tile
+    label: SDS Tile
+    context:
+      label:
+        classes: "sds-tile"

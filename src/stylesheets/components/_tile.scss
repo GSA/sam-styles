@@ -1,0 +1,65 @@
+// Basic tile
+// ----------------------
+.tile-wrapper {
+  @include u-display('inline-block');
+  @include u-margin-x('2');
+}
+
+.tile {
+  @include u-display('flex');
+  @include u-flex('column');
+  @include u-text('center');
+  width: 180px;
+  height: 150px;
+  text-decoration: none !important;
+
+  &:hover {
+    text-decoration: none;
+    color: #212121 !important;
+  }
+
+  .tile-icon {
+    @include u-margin-x('auto');
+    @include u-margin-bottom('105');
+    @include u-text('black');
+  }
+
+  .tile-header {
+    @include u-font('sans', 'md');
+    @include u-text('bold');
+    @include u-text('black');
+  }
+
+  .tile-details {
+    @include u-font('sans', 'sm');
+    @include u-text('black');
+  }
+}
+
+// Outline tile
+// ----------------------
+.tile.outline {
+  @include u-border(2px, 'white');
+  @include u-radius('lg');
+  @include u-padding-y('2');
+  @include u-bg('accent-cool-lighter');
+  text-decoration: none !important;
+  height: 130px;
+
+  .tile-icon {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .tile-header {
+    @include u-font('sans', 'xs');
+    @include u-text('semibold');
+    @include u-text('secondary-dark');
+  }
+
+  .tile-details {
+    @include u-font('sans', '2xs');
+    @include u-text('base');
+  }
+
+}
