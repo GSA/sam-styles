@@ -1,0 +1,37 @@
+.sds-official-tag {
+  @include u-radius-bottom('pill');
+  @include u-bg('white');
+  @include u-padding('05');
+  width: 130px;
+
+  .outline {
+    @include u-border-bottom(2px,'error', 'solid');
+    @include u-border-x(2px,'error', 'solid');
+    @include u-radius-bottom('pill');
+    @include u-display('flex');
+    @include u-flex('column', 'align-center');
+    @include u-width('15');
+    @include u-radius-bottom('pill');
+    @include u-bg('white');
+    @include u-padding-y('105');
+    @include u-text('bold');
+
+    .red {
+      text-align: center;
+      color: color('error');
+    }
+
+    .blue {
+      color: color('secondary');
+    }
+
+    .grey {
+      color: color('disabled');
+    }
+
+    i {
+      height: 20px !important;
+      width: 20px !important;
+    }
+  }
+}
