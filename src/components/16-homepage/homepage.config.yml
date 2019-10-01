@@ -2,11 +2,11 @@ label: Homepage
 status: wip
 preview: "@sam-content"
 variants:
-  - name: banner
-    label: SDS Banner
+  - name: tag
+    label: SDS Offical Tag
     context:
       label:
-        classes: "sds-banner"
+        classes: "sds-official-tag"
 
   - name: tile
     label: SDS Tile
