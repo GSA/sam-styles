@@ -5,7 +5,7 @@
       <a href="{{ link.href }}"{% if link.current %} class="usa-current"{% endif %}>
         {% if link.icon and link.notification %}
           <span class="fa-layers fa-fw">
-            <i class="{{ "sds" if link.sdsIcon else "fas" }} fa-{{link.icon}}"></i>
+            <i class="{{ "sds" if link.sdsIcon else "fas" }} fa-{{link.icon}} {{ "fa-flip-horizontal" if link.iconFlip }}"></i>
             <span class="fa-layers-counter"></span>
           </span>
         {% endif %}
