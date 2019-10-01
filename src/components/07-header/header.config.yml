@@ -60,6 +60,7 @@ variants:
               notification: true
               sdsIcon: true
               icon: request
+              iconFlip: true
             - text: Messages
               sdsIcon: true
               icon: messages
