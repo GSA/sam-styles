@@ -2,37 +2,40 @@
   @include u-radius-bottom('pill');
   @include u-bg('white');
   @include u-padding('05');
-  width: 130px;
+  width: 115px;
 
-  .outline {
+  .sds-official-tag__outline {
     @include u-border-bottom(2px,'error', 'solid');
     @include u-border-x(2px,'error', 'solid');
     @include u-radius-bottom('pill');
     @include u-display('flex');
     @include u-flex('column', 'align-center');
-    @include u-width('15');
+    //@include u-width('15');
     @include u-radius-bottom('pill');
     @include u-bg('white');
     @include u-padding-y('105');
     @include u-text('bold');
 
-    .red {
+    .sds-official-tag__red {
       text-align: center;
       color: color('error');
       line-height: 14px;
+      padding-top: 10px;
     }
 
-    .blue {
+    .sds-official-tag__blue {
       color: color('secondary');
+      line-height: 14px;
     }
 
-    .grey {
+    .sds-official-tag__grey {
       color: color('disabled');
     }
 
     i {
       height: 20px !important;
       width: 20px !important;
+      padding: 10px 0;
     }
   }
 }
