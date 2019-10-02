@@ -1,0 +1,15 @@
+label: Tile
+status: wip
+preview: "@sam-content"
+variants:
+  - name: default
+    label: SDS Tile
+    context:
+      label:
+        classes: "sds-tile"
+
+  - name: outline
+    label: SDS Tile Outline
+    context:
+      label:
+        classes: "sds-tile--outline"

@@ -192,3 +192,21 @@
     font-size: 14px;
   }
 }
+
+.sds-button.sds-button--icon {
+  height: 65px;
+  width: 180px;
+  @include u-radius('md');
+  @include u-display('flex');
+  @include u-bg('white');
+  @include u-flex('justify-center');
+  @include u-margin('1');
+
+
+  span {
+    font-size: 14px;
+    margin: auto 0;
+    @include u-text('bold');
+    @include u-padding-left('205');
+  }
+}

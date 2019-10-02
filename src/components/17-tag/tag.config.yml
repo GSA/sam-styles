@@ -1,4 +1,4 @@
-label: Homepage
+label: Tag
 status: wip
 preview: "@sam-content"
 variants:
@@ -7,9 +7,3 @@ variants:
     context:
       label:
         classes: "sds-official-tag"
-
-  - name: tile
-    label: SDS Tile
-    context:
-      label:
-        classes: "sds-tile"
