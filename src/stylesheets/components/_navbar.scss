@@ -1,0 +1,10 @@
+.sds-navbar {
+  @include border-box-sizing;
+  min-height: units($size-touch-target);
+  @include u-bg('base-lightest');
+  @include u-padding-y(2);
+}
+
+.sds-navbar .sds-navbar__content {
+  @include grid-container($theme-header-max-width);
+}
