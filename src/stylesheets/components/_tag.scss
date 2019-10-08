@@ -15,9 +15,9 @@
     @include u-bg('white');
     @include u-padding-y('105');
     @include u-text('bold');
+    @include u-text('center');
 
     .sds-official-tag__red {
-      text-align: center;
       color: color('error');
       line-height: 14px;
       padding-top: 10px;

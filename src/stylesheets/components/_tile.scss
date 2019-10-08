@@ -10,7 +10,7 @@
   @include u-display('flex');
   @include u-flex('column');
   @include u-text('center');
-  width: 180px;
+  @include u-width('card-lg');
   height: 150px;
   text-decoration: none !important;
 
@@ -19,21 +19,48 @@
     color: #212121 !important;
   }
 
-  .sds-tile__icon {
-    @include u-margin-x('auto');
-    @include u-margin-bottom('105');
-    @include u-text('black');
+  @media only screen and (min-width: 600px){
+    .sds-tile__icon {
+      @include u-margin-x('auto');
+      @include u-margin-bottom('105');
+      text-decoration: none !important;
+    }
+
+
+    .sds-tile__title {
+      @include u-font('sans', 'md');
+      @include u-text('bold');
+      @include u-text('black');
+    }
+
+    .sds-tile__details {
+      @include u-font('sans', 'sm');
+      @include u-text('black');
+    }
   }
 
-  .sds-tile__title {
-    @include u-font('sans', 'md');
-    @include u-text('bold');
-    @include u-text('black');
-  }
+  @media only screen and (max-width: 600px){
+    .sds-tile__icon {
+      @include u-display('inline-block');
+      @include u-margin-right('2');
+      height: 30px;
+      width: 30px;
+      text-decoration: none !important;
+    }
+    .sds-tile__title {
+      @include u-display('block');
+      @include u-font('sans', 'sm');
+      @include u-text('bold');
+      @include u-text('black');
+      @include u-text('left');
+    }
 
-  .sds-tile__details {
-    @include u-font('sans', 'sm');
-    @include u-text('black');
+    .sds-tile__details {
+      @include u-font('sans', 'xs');
+      @include u-text('black');
+      @include u-display('block');
+      @include u-text('left');
+    }
   }
 }
 // Outline tile
@@ -41,14 +68,19 @@
 .sds-tile.sds-tile--outline {
   @include u-border(2px, 'white');
   @include u-radius('lg');
-  @include u-padding-y('2');
+  @include u-padding('2');
   background: rgba(240, 245, 249, 0.95);
   text-decoration: none !important;
-  height: 130px;
+  height: 150px;
+  width: 195px;
 
-  .sds-tile__icon {
-    width: 48px !important;
-    height: 48px !important;
+
+  @media only screen and (min-width: 600px) {
+    .sds-tile__icon {
+      width: 48px;
+      height: 48px;
+      text-decoration: none !important;
+    }
   }
 
   .sds-tile__title {
@@ -60,5 +92,35 @@
   .sds-tile__details {
     @include u-font('sans', '2xs');
     @include u-text('base');
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .sds-tile__wrapper {
+    @include u-display('block');
+    @include u-margin-y('1');
+  }
+
+  .sds-tile, .sds-tile.sds-tile--outline {
+    @include u-display('flex');
+    @include u-flex('row');
+    @include u-padding-y('0');
+    @include u-padding-x('2');
+
+
+    height: 50px;
+    width: 300px;
+
+  }
+  .sds-tile__icon {
+    @include u-height('205');
+    @include u-width('205');
+    margin: auto 10px;
+    column-width: 1;
+    text-decoration: none !important;
+  }
+
+  .sds-tile__title, .sds-tile__details {
+    margin: auto 2px;
   }
 }
