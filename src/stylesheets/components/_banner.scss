@@ -1,3 +1,7 @@
+/*******************************
+       USWDS OVERRIDES
+*******************************/
+
 .usa-banner__header-action {
   color: color('ink');
 }
@@ -9,7 +13,10 @@
   }
 }
 
-// SAM specific
+/*******************************
+      SDS Specific Styles
+*******************************/
+
 .usa-banner__header-flag {
   width: 16px;
   height: 11px;
@@ -25,8 +32,15 @@
 
 .usa-banner__content .usa-banner__guidance:first-child .usa-banner__icon {
   background-image: url('#{$theme-image-path}/icon-dot-gov.svg');
+  background-size: contain;
 }
 
 .usa-banner__content .usa-banner__guidance:last-child .usa-banner__icon {
   background-image: url('#{$theme-image-path}/icon-https.svg');
+  background-size: contain;
+}
+
+.usa-banner__button[aria-expanded=true]::after {
+  right: 0;
+  top: 0;
 }

@@ -43,6 +43,7 @@
     .sds-tile__icon {
       @include u-display('inline-block');
       @include u-margin-right('2');
+      @include u-text('secondary');
       height: 30px;
       width: 30px;
       text-decoration: none !important;
@@ -115,6 +116,7 @@
   .sds-tile__icon {
     @include u-height('205');
     @include u-width('205');
+    @include u-text('secondary');
     margin: auto 10px;
     column-width: 1;
     text-decoration: none !important;
