@@ -18,14 +18,6 @@
   color: color("gray-warm-70");
 }
 
-.sds-menu__header-button {
-  padding: 5px 10px;
-  border-radius: 50%;
-  background-color: #c7c7c7;
-  border: none;
-  color: white;
-}
-
 .sds-menu__item {
   @include button-unstyled;
   display: flex;
