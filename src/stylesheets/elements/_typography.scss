@@ -62,6 +62,10 @@
   white-space: nowrap;
 }
 
+.sds-static--featured{
+  @include u-text('italic');
+}
+
 .sds-static {
   @include u-text('semibold');
 }
