@@ -36,6 +36,7 @@ import { sdsBuilding } from "./sdsBuilding";
 import { sdsFlag } from "./sdsFlag";
 import { sdsFederalBuilding } from "./sdsFederalBuilding";
 import { sdsPenPaper } from "./sdsPenPapper";
+import { sdsStar } from "./sdsStar";
 
 const prefix = "sds";
 
