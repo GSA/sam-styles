@@ -1,8 +1,7 @@
 label: Tag
 status: wip
-preview: "@sam-content"
+
+variants:
   - name: default
     label: SDS Offical Tag
-    context:
-      label:
-        classes: "sds-official-tag"
+    status: null
