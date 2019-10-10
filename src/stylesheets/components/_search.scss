@@ -1,0 +1,16 @@
+/*******************************
+       USWDS OVERRIDES
+*******************************/
+.usa-search {
+  [type='submit'] {
+    @include u-bg('indigo-cool-60');
+    @include u-radius(0);
+    height: units(5);
+  }
+}
+
+[type='search'],
+.usa-search__input {
+  height: units(5);
+  border: 1px solid color('base-light');
+}

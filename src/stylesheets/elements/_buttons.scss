@@ -20,6 +20,7 @@
   }
 }
 
+// DEPRECATED: Use .sds-button.sds-button--circular
 .sds-button--circle {
   border-radius: 50%;
   color: color('secondary-darker');
@@ -44,34 +45,6 @@
   }
 
   &.usa-focus,
-  &:focus {
-    outline-offset: units(2px);
-  }
-}
-
-.sds-button {
-  color: color('secondary-darker');
-  height: 2rem;
-  width: 2rem;
-  border: none;
-
-  .svg-inline--fa {
-    align-self: center;
-  }
-
-  &.usa-button--hover,
-  &:hover {
-    background-color: color('primary-light');
-    color: color('secondary-darker');
-  }
-
-  &.usa-button--active,
-  &:active {
-    background-color: color('secondary-darker');
-    color: color('white');
-  }
-
-  &.usa-button--focus,
   &:focus {
     outline-offset: units(2px);
   }
@@ -182,6 +155,8 @@
   }
 }
 
+// TODO: Remove this style
+// as its only used for example display
 .button-label {
   text-align: center;
   display: inline-block;
@@ -193,6 +168,130 @@
   }
 }
 
+/*******************************
+      SDS Specific Styles
+*******************************/
+/*-------------------
+  Basic Button
+--------------------*/
+.sds-button {
+  @include border-box-sizing;
+  @include typeset($theme-button-font-family, null, 1);
+  @include add-knockout-font-smoothing;
+  appearance: none;
+  background-color: color('white');
+  border: 0;
+  border-radius: radius($theme-button-border-radius);
+  box-shadow: inset 0px 0px 0 1px color('base-lighter');
+  color: color('secondary-dark');
+  cursor: pointer;
+  display: inline-block;
+  font-weight: font-weight('bold');
+  margin-right: units(1);
+  padding: units(1.5) units(2.5);
+  text-align: center;
+  text-decoration: none;
+
+  &:visited {
+    color: color('white');
+  }
+
+  &:hover,
+  &.usa-button--hover {
+    box-shadow: inset 0px 0px 0 1px color('primary');
+    text-decoration: none;
+  }
+
+  &:active,
+  &.usa-button--active {
+    box-shadow: inset 0px 0px 0 1px color('secondary-darker');
+  }
+
+  &:focus,
+  &.usa-focus {
+    outline-offset: units(0.5);
+  }
+
+  &:disabled {
+    @include button-disabled;
+  }
+}
+
+/*-------------------
+  Primary Buttons
+--------------------*/
+.sds-button--primary {
+  @include u-bg('primary');
+  &.usa-button--hover,
+  &:hover {
+    background-color: color('primary-light');
+    color: color('secondary-darker');
+  }
+
+  &.usa-button--active,
+  &:active {
+    background-color: color('secondary-darker');
+    color: color('white');
+  }
+
+  &.usa-focus,
+  &:focus {
+    outline-offset: units(2px);
+  }
+}
+
+/*-------------------
+  Circular Buttons
+--------------------*/
+// Utility buttons only include an icon
+
+.sds-button.sds-button--circular {
+  @include u-radius('pill');
+  @include u-padding-x('105');
+  // Font-Awesome Fixed width class
+  // its slightly narrow to make it
+  // look like a cirle
+  .svg-inline--fa.fa-fw {
+    width: 1.1em;
+  }
+}
+
+/*-------------------
+  Labeled Icon Button
+--------------------*/
+.sds-button.sds-button--labeled-icon {
+  color: color('indigo-cool-60');
+  box-shadow: none;
+  transition: box-shadow 0.2s ease-out;
+  @include u-position('relative');
+  @include u-padding-right(5);
+  @include u-padding-left(2);
+  &:hover,
+  &.usa-button--hover {
+    @include u-shadow(2);
+  }
+  &:active,
+  &.usa-button--active {
+    color: color('secondary-dark');
+    box-shadow: inset 0px 0px 0 1px color('secondary-darker');
+  }
+  .fa-layers {
+    @include u-position('absolute');
+    font-size: 27px;
+    top: 5px;
+    right: 5px;
+    .fa-circle {
+      color: color('primary');
+    }
+    .svg-inline--fa:not(.fa-circle) {
+      color: color('secondary-dark');
+    }
+  }
+}
+
+/*-------------------
+  Icon Button
+--------------------*/
 .sds-button.sds-button--icon {
   height: 65px;
   width: 180px;
@@ -208,5 +307,3 @@
     margin: auto 0;
     @include u-text('bold');
     @include u-padding-left('205');
-  }
-}
