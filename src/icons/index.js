@@ -30,6 +30,12 @@ import { sdsUserCircle } from "./sdsUserCircle";
 import { sdsShip } from "./sdsShip";
 import { sdsFile } from "./sdsFile";
 import { sdsExclamationCircle } from "./sdsExclamationCircle";
+import { sdsCheckCircle } from "./sdsCheckCircle";
+import { sdsOpenDoors } from "./sdsOpenDoors";
+import { sdsBuilding } from "./sdsBuilding";
+import { sdsFlag } from "./sdsFlag";
+import { sdsFederalBuilding } from "./sdsFederalBuilding";
+import { sdsPenPaper } from "./sdsPenPapper";
 
 const prefix = "sds";
 
@@ -65,7 +71,15 @@ const _iconsCache = {
   sdsUser: sdsUser,
   sdsShip: sdsShip,
   sdsFile: sdsFile,
-  sdsExclamationCircle: sdsExclamationCircle
+  sdsExclamationCircle: sdsExclamationCircle,
+  sdsCheckCircle: sdsCheckCircle,
+  sdsStar: sdsStar,
+  sdsFolder: sdsFolder,
+  sdsFlag: sdsFlag,
+  sdsOpenDoors:sdsOpenDoors,
+  sdsBuilding:sdsBuilding,
+  sdsFederalBuilding:sdsFederalBuilding,
+  sdsPenPaper:sdsPenPapper
 };
 
 export {
@@ -102,5 +116,13 @@ export {
   sdsUser,
   sdsShip,
   sdsFile,
-  sdsExclamationCircle
+  sdsExclamationCircle,
+  sdsCheckCircle,
+  sdsStar,
+  sdsFlag,
+  sdsFolder,
+  sdsOpenDoors,
+  sdsBuilding,
+  sdsFederalBuilding,
+  sdsPenPapper
 };

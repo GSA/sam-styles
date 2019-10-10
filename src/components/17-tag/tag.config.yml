@@ -1,0 +1,7 @@
+label: Tag
+status: wip
+
+variants:
+  - name: default
+    label: SDS Offical Tag
+    status: null
