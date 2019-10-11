@@ -38,6 +38,7 @@ import { sdsFederalBuilding } from "./sdsFederalBuilding";
 import { sdsPenPaper } from "./sdsPenPaper";
 import { sdsStar } from "./sdsStar";
 import { sdsFolder} from "./sdsFolder";
+import { sdsEllipsis } from "./sdsEllipsis";
 
 const prefix = "sds";
 
@@ -81,7 +82,8 @@ const _iconsCache = {
   sdsOpenDoors:sdsOpenDoors,
   sdsBuilding:sdsBuilding,
   sdsFederalBuilding:sdsFederalBuilding,
-  sdsPenPaper:sdsPenPaper
+  sdsPenPaper:sdsPenPaper,
+  sdsEllipsis:sdsEllipsis
 };
 
 export {
@@ -126,5 +128,6 @@ export {
   sdsOpenDoors,
   sdsBuilding,
   sdsFederalBuilding,
-  sdsPenPaper
+  sdsPenPaper,
+  sdsEllipsis
 };
