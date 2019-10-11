@@ -33,6 +33,16 @@
   &:focus {
     color: color('accent-warm-darker');
     text-decoration: underline;
-    outline-offset: -3px !important;
+    outline-offset: -4px !important;
+  }
+}
+
+// Small menu
+.sds-menu.sds-menu--small {
+  .sds-menu__header-title {
+    @include u-font('sans', 'xs');
+  }
+  .sds-menu__item {
+    @include u-font('sans', '2xs');
   }
 }
