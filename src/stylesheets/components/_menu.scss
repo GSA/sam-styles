@@ -15,7 +15,7 @@
 .sds-menu__header-title {
   font-size: 18px;
   font-weight: 600;
-  color: color("gray-warm-70");
+  color: color('gray-warm-70');
 }
 
 .sds-menu__item {
@@ -28,6 +28,11 @@
   font-weight: 600;
   font-size: 17px;
   &:hover {
-    text-decoration: none;
+    color: color('accent-warm-darker');
+  }
+  &:focus {
+    color: color('accent-warm-darker');
+    text-decoration: underline;
+    outline-offset: -3px !important;
   }
 }
