@@ -234,11 +234,18 @@
   }
 }
 
+// Size
+.sds-button.sds-button--small {
+  @include u-font('sans', '2xs');
+  padding: 10px units(2);
+}
+
 /*-------------------
   Primary Buttons
 --------------------*/
 .sds-button--primary {
   @include u-bg('primary');
+  @include u-shadow('none');
   &.usa-button--hover,
   &:hover {
     background-color: color('primary-light');
@@ -270,6 +277,9 @@
   // look like a cirle
   .svg-inline--fa.fa-fw {
     width: 1.1em;
+  }
+  &.sds-button--small .svg-inline--fa.fa-fw {
+    width: .8em;
   }
 }
 
@@ -310,6 +320,13 @@
     }
     .svg-inline--fa:not(.fa-circle) {
       color: color('secondary-dark');
+    }
+  }
+  &.sds-button--small {
+    @include u-padding-right(4);
+    .fa-layers {
+      font-size: 20px;
+      top: 6px;
     }
   }
 }
