@@ -341,7 +341,7 @@
   @include u-display('flex');
   @include u-bg('white');
   @include u-flex('justify-center');
-  @include u-margin('1');
+  @include u-margin(1);
 
   span {
     font-size: 14px;
