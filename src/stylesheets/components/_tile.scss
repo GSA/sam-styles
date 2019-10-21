@@ -16,7 +16,7 @@
 
   &:hover {
     text-decoration: none;
-    color: #212121 !important;
+    //color: #212121 !important;
   }
   @media only screen and (min-width: 600px) {
     .sds-tile__icon {
@@ -26,13 +26,13 @@
     }
 
     .sds-tile__title {
-      @include u-font('sans', 'md');
+      @include u-font('sans', 'sm');
       @include u-text('bold');
       @include u-text('black');
     }
 
     .sds-tile__details {
-      @include u-font('sans', 'sm');
+      @include u-font('sans', 'xs');
       @include u-text('black');
     }
   }
@@ -67,13 +67,15 @@
 
 .sds-tile__content.sds-tile--outline {
   @include u-border(2px, 'white');
-  @include u-radius('lg');
   @include u-padding('2');
-  background: rgba(240, 245, 249, 0.95);
+  background: rgba(240, 245, 249, 0.8);
   text-decoration: none !important;
-  height: 150px;
-  width: 195px;
+  border-radius: 2rem;
+
   @media only screen and (min-width: 600px) {
+    height: 150px;
+    width: 195px;
+
     .sds-tile__icon {
       width: 48px;
       height: 48px;
@@ -82,13 +84,13 @@
   }
 
   .sds-tile__title {
-    @include u-font('sans', 'xs');
+    @include u-font('sans', '2xs');
     @include u-text('semibold');
     @include u-text('secondary-dark');
   }
 
   .sds-tile__details {
-    @include u-font('sans', '2xs');
+    @include u-font('sans', '3xs');
     @include u-text('base');
   }
 }
@@ -105,7 +107,7 @@
     @include u-padding-y('0');
     @include u-padding-x('2');
     height: 50px;
-    width: 300px;
+    width: 400px;
   }
 
   .sds-tile__icon {
