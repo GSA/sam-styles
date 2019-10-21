@@ -1,6 +1,7 @@
 module.exports = {
-  title: "Actions Menu",
+	title: "Fields",
   status: "wip",
   preview: "@sam-content",
-  context: {}
+  context: {
+  }
 };

@@ -3,7 +3,7 @@
 
 .sds-tile {
   @include u-display('inline-block');
-  @include u-margin-x('2');
+  @include u-margin-x(2);
 }
 
 .sds-tile__content {
@@ -39,7 +39,7 @@
   @media only screen and (max-width: 600px) {
     .sds-tile__icon {
       @include u-display('inline-block');
-      @include u-margin-right('2');
+      @include u-margin-right(2);
       @include u-text('secondary');
       height: 30px;
       width: 30px;
@@ -97,15 +97,15 @@
 @media only screen and (max-width: 600px) {
   .sds-tile {
     @include u-display('block');
-    @include u-margin-y('1');
+    @include u-margin-y(1);
   }
 
   .sds-tile__content,
   .sds-tile__content.sds-tile--outline {
     @include u-display('flex');
     @include u-flex('row');
-    @include u-padding-y('0');
-    @include u-padding-x('2');
+    @include u-padding-y(0);
+    @include u-padding-x(1);
     height: 50px;
     width: 400px;
   }
