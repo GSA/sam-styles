@@ -1,7 +1,7 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 var prefix = 'sds';
-var iconName = 'federal-building';
+var iconName = 'pen-paper';
 var width = 543.5;
 var height = 512;
 var ligatures = [];
@@ -19,7 +19,7 @@ exports.definition = {
     svgPathData
   ]};
 
-exports.sdsFederalBuilding = exports.definition;
+exports.sdsPenPaper = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;

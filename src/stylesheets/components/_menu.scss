@@ -15,15 +15,7 @@
 .sds-menu__header-title {
   font-size: 18px;
   font-weight: 600;
-  color: color("gray-warm-70");
-}
-
-.sds-menu__header-button {
-  padding: 5px 10px;
-  border-radius: 50%;
-  background-color: #c7c7c7;
-  border: none;
-  color: white;
+  color: color('gray-warm-70');
 }
 
 .sds-menu__item {
@@ -36,6 +28,21 @@
   font-weight: 600;
   font-size: 17px;
   &:hover {
-    text-decoration: none;
+    color: color('accent-warm-darker');
+  }
+  &:focus {
+    color: color('accent-warm-darker');
+    text-decoration: underline;
+    outline-offset: -4px !important;
+  }
+}
+
+// Small menu
+.sds-menu.sds-menu--small {
+  .sds-menu__header-title {
+    @include u-font('sans', 'xs');
+  }
+  .sds-menu__item {
+    @include u-font('sans', '2xs');
   }
 }
