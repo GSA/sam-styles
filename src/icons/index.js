@@ -34,17 +34,12 @@ import { sdsCheckCircle } from "./sdsCheckCircle";
 import { sdsOpenDoors } from "./sdsOpenDoors";
 import { sdsBuilding } from "./sdsBuilding";
 import { sdsFlag } from "./sdsFlag";
-import { sdsFederalBuilding } from "./sdsFederalBuilding";
-<<<<<<< HEAD
-import { sdsPenPaper } from "./sdsPenPapper";
 import { sdsPhoto } from "./sdsPhoto";
-=======
 import { sdsPenPaper } from "./sdsPenPaper";
 import { sdsStar } from "./sdsStar";
 import { sdsFolder} from "./sdsFolder";
 import { sdsEllipsis } from "./sdsEllipsis";
 import { sdsTag } from "./sdsTag";
->>>>>>> a2fa587addafcbe4e34d7ccf02e236d35c24d947
 
 const prefix = "sds";
 
@@ -88,14 +83,10 @@ const _iconsCache = {
   sdsOpenDoors:sdsOpenDoors,
   sdsBuilding:sdsBuilding,
   sdsFederalBuilding:sdsFederalBuilding,
-<<<<<<< HEAD
-  sdsPenPaper:sdsPenPapper,
-  sdsPhoto:sdsPhoto
-=======
   sdsPenPaper:sdsPenPaper,
   sdsEllipsis:sdsEllipsis,
-  sdsTag:sdsTag
->>>>>>> a2fa587addafcbe4e34d7ccf02e236d35c24d947
+  sdsTag:sdsTag,
+  sdsPhoto:sdsPhoto
 };
 
 export {
@@ -140,12 +131,8 @@ export {
   sdsOpenDoors,
   sdsBuilding,
   sdsFederalBuilding,
-<<<<<<< HEAD
   sdsPenPapper,
-  sdsPhoto
-=======
-  sdsPenPaper,
+  sdsPhoto,
   sdsEllipsis,
   sdsTag
->>>>>>> a2fa587addafcbe4e34d7ccf02e236d35c24d947
 };

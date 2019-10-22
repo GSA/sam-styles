@@ -60,8 +60,11 @@
     background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='white'><polygon points='0,0 20,0 10,10'/></svg>") no-repeat;
     background-size: 12px;
     background-position: calc(100% - 20px);
+    width: 200px !important;
+}
 
-    @media only screen and (max-width: 600px) {
-      display: none;
-    }
+@media only screen and (max-width: 600px) {
+  #inverse-search-dropdown {
+    width: 350px;
+  }
 }
