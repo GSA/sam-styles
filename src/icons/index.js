@@ -33,6 +33,7 @@ import { sdsExclamationCircle } from "./sdsExclamationCircle";
 import { sdsCheckCircle } from "./sdsCheckCircle";
 import { sdsOpenDoors } from "./sdsOpenDoors";
 import { sdsBuilding } from "./sdsBuilding";
+import { sdsFederalBuilding } from "./sdsFederalBuilding";
 import { sdsFlag } from "./sdsFlag";
 import { sdsPhoto } from "./sdsPhoto";
 import { sdsPenPaper } from "./sdsPenPaper";
