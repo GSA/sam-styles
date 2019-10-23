@@ -9,6 +9,7 @@ module.exports = {
     Documentation: ['docs'],
     Build: ['build'],
     'Performance Improvements': ['perf'],
+    'BREAKING CHANGES': ['breaking change'],
     Other: ['closed']
   },
   changelogFilename: 'CHANGELOG.md',
