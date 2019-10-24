@@ -16,7 +16,6 @@
 
   &:hover {
     text-decoration: none;
-    color: #212121 !important;
   }
   @media only screen and (min-width: 600px) {
     .sds-tile__icon {
@@ -26,13 +25,13 @@
     }
 
     .sds-tile__title {
-      @include u-font('sans', 'md');
+      @include u-font('sans', 'sm');
       @include u-text('bold');
       @include u-text('black');
     }
 
     .sds-tile__details {
-      @include u-font('sans', 'sm');
+      @include u-font('sans', 'xs');
       @include u-text('black');
     }
   }
@@ -40,7 +39,6 @@
     .sds-tile__icon {
       @include u-display('inline-block');
       @include u-margin-right(2);
-      @include u-text('secondary');
       height: 30px;
       width: 30px;
       text-decoration: none !important;
@@ -67,13 +65,16 @@
 
 .sds-tile__content.sds-tile--outline {
   @include u-border(2px, 'white');
-  @include u-radius('lg');
   @include u-padding(2);
-  background: rgba(240, 245, 249, 0.95);
+  @include u-margin-top(4);
+  background: rgba(240, 245, 249, 0.8);
   text-decoration: none !important;
-  height: 150px;
-  width: 195px;
+  border-radius: 2rem;
+
   @media only screen and (min-width: 600px) {
+    height: 150px;
+    width: 195px;
+
     .sds-tile__icon {
       width: 48px;
       height: 48px;
@@ -82,16 +83,17 @@
   }
 
   .sds-tile__title {
-    @include u-font('sans', 'xs');
+    @include u-font('sans', '2xs');
     @include u-text('semibold');
     @include u-text('secondary-dark');
   }
 
   .sds-tile__details {
-    @include u-font('sans', '2xs');
+    @include u-font('sans', '3xs');
     @include u-text('base');
   }
 }
+
 @media only screen and (max-width: 600px) {
   .sds-tile {
     @include u-display('block');
@@ -104,14 +106,14 @@
     @include u-flex('row');
     @include u-padding-y(0);
     @include u-padding-x(1);
-    height: 50px;
+    height: 70px;
     width: 300px;
+    margin: auto;
   }
 
   .sds-tile__icon {
     @include u-height('205');
     @include u-width('205');
-    @include u-text('secondary');
     margin: auto 10px;
     column-width: 1;
     text-decoration: none !important;
