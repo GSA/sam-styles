@@ -132,7 +132,7 @@ export {
   sdsOpenDoors,
   sdsBuilding,
   sdsFederalBuilding,
-  sdsPenPapper,
+  sdsPenPaper,
   sdsPhoto,
   sdsEllipsis,
   sdsTag
