@@ -28,7 +28,6 @@
     "@frctl/nunjucks": "^1.0.3",
     "@gsa-sam/icons": "^1.0.0",
     "copy": "^0.3.2",
-    "gren": "0.0.1",
     "uswds": "2.2.1"
   },
   "devDependencies": {
