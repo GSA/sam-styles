@@ -1,6 +1,6 @@
 {
   "name": "@gsa-sam/sam-styles",
-  "version": "0.0.38",
+  "version": "0.0.39",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -26,9 +26,10 @@
     "@frctl/fractal": "^1.2.0",
     "@frctl/mandelbrot": "^1.2.0",
     "@frctl/nunjucks": "^1.0.3",
+    "@gsa-sam/icons": "^1.0.0",
     "copy": "^0.3.2",
-    "uswds": "2.2.1",
-    "@gsa-sam/icons": "^1.0.0"
+    "gren": "0.0.1",
+    "uswds": "2.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.0",
