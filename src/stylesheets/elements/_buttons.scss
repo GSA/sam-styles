@@ -336,15 +336,16 @@
 --------------------*/
 .sds-button.sds-button--icon {
   height: 85px;
-  width: 195px;
+  min-width: 195px;
   @include u-radius('lg');
   @include u-display('flex');
   @include u-bg('white');
   @include u-flex('justify-center');
   @include u-margin(1);
 
-  i {
-    @include u-margin-x(1);
+  svg {
+    margin-right: 15px;
+    width: 45px !important;
   }
 
   span {

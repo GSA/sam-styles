@@ -41,6 +41,10 @@ import { sdsStar } from "./sdsStar";
 import { sdsFolder} from "./sdsFolder";
 import { sdsEllipsis } from "./sdsEllipsis";
 import { sdsTag } from "./sdsTag";
+import { sdsCircle } from "./sdsCircle";
+import { sdsPentagon } from "./sdsPentagon";
+import { sdsTriangle } from "./sdsTriangle";
+import { sdsLeaf } from "./sdsLeaf";
 
 const prefix = "sds";
 
@@ -87,7 +91,11 @@ const _iconsCache = {
   sdsPenPaper:sdsPenPaper,
   sdsEllipsis:sdsEllipsis,
   sdsTag:sdsTag,
-  sdsPhoto:sdsPhoto
+  sdsPhoto:sdsPhoto,
+  sdsCircle:sdsCircle,
+  sdsPentagon:sdsPentagon,
+  sdsTriangle:sdsTriangle,
+  sdsLeaf:sdsLeaf
 };
 
 export {
@@ -135,5 +143,9 @@ export {
   sdsPenPaper,
   sdsPhoto,
   sdsEllipsis,
-  sdsTag
+  sdsTag,
+  sdsCircle,
+  sdsPentagon,
+  sdsTriangle,
+  sdsLeaf
 };
