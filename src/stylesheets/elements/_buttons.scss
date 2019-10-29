@@ -335,18 +335,22 @@
   Icon Button
 --------------------*/
 .sds-button.sds-button--icon {
-  height: 65px;
-  width: 180px;
-  @include u-radius('md');
+  height: 85px;
+  min-width: 195px;
+  @include u-radius('lg');
   @include u-display('flex');
   @include u-bg('white');
   @include u-flex('justify-center');
   @include u-margin(1);
 
+  svg {
+    margin-right: 15px;
+    width: 45px !important;
+  }
+
   span {
     font-size: 14px;
     margin: auto 0;
     @include u-text('bold');
-    @include u-padding-left('205');
   }
 }
