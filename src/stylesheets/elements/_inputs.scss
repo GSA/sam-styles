@@ -60,15 +60,25 @@
     background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='white'><polygon points='0,0 20,0 10,10'/></svg>") no-repeat;
     background-size: 12px;
     background-position: calc(100% - 20px);
-    width: 200px !important;
-
-    @media only screen and (max-width: 600px) {
-      display: none;
-    }
+    width: 150px !important;
 }
 
 @media only screen and (max-width: 600px) {
+  .usa-select.usa-select--inverse {
+    display: block;
+    width: 410px !important;
+    margin-bottom: 2px;
+  }
+
   #inverse-search-dropdown {
-    width: 350px;
+    display: block;
+    width: 362px;
+  }
+
+  .usa-search.usa-search--small.usa-search--inverse{
+    flex-wrap: wrap;
+    padding: 8px;
+    background-color: #FFFFFF;
+    width: min-content;
   }
 }
