@@ -64,10 +64,10 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .usa-select--inverse {
+  .usa-select.usa-select--inverse {
     display: block;
     width: 410px !important;
-    margin-bottom: 2px !important;
+    margin-bottom: 2px;
   }
 
   #inverse-search-dropdown {
@@ -75,7 +75,7 @@
     width: 362px;
   }
 
-  .usa-search.usa-search--small.inverse{
+  .usa-search.usa-search--small.usa-search--inverse{
     flex-wrap: wrap;
     padding: 8px;
     background-color: #FFFFFF;
