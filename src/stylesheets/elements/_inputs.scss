@@ -61,14 +61,24 @@
     background-size: 12px;
     background-position: calc(100% - 20px);
     width: 200px !important;
-
-    @media only screen and (max-width: 600px) {
-      display: none;
-    }
 }
 
 @media only screen and (max-width: 600px) {
+  .usa-select--inverse {
+    display: block;
+    width: 410px !important;
+    margin-bottom: 2px !important;
+  }
+
   #inverse-search-dropdown {
-    width: 350px;
+    display: block;
+    width: 362px;
+  }
+
+  .usa-search.usa-search--small.inverse{
+    flex-wrap: wrap;
+    padding: 8px;
+    background-color: #FFFFFF;
+    width: min-content;
   }
 }
