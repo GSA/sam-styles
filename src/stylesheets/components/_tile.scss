@@ -22,6 +22,11 @@
       @include u-margin-x('auto');
       @include u-margin-bottom('105');
       text-decoration: none !important;
+
+
+      svg {
+        height: 80px;
+      }
     }
 
     .sds-tile__title {
@@ -38,10 +43,13 @@
   @media only screen and (max-width: 600px) {
     .sds-tile__icon {
       @include u-display('inline-block');
-      @include u-margin-right(2);
-      height: 30px;
-      width: 30px;
+      margin-top: 10px;
+      width: 80px;
       text-decoration: none !important;
+
+      svg {
+        height: 40px !important;
+      }
     }
 
     .sds-tile__title {
