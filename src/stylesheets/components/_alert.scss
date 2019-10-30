@@ -148,3 +148,44 @@
     color: #E9695F;
   }
 }
+
+  // Alert--Header
+  .sds-alert--header {
+    @include u-border-y(1px);
+    @include u-border-y('yellow-10v');
+    @include u-padding(4);
+
+    .sds-alert--header__icon {
+      @include u-margin-x(2);
+      @include u-height(7);
+      @include u-width(7);
+    }
+
+    .sds-alert--header__content {
+      @include u-padding(1);
+      @include u-margin-bottom(2);
+      @include u-border(1px);
+      @include u-border('gray-10');
+
+      border-radius: 12px;
+    }
+
+    .sds-alert--header__label {
+      @include u-display('inline-block');
+      @include u-text('semibold');
+      @include u-font('sans', 'xs');
+    }
+
+    .sds-alert--header__link {
+      @include u-display('inline-block');
+      @include u-text('semibold');
+      @include u-text('secondary-dark');
+      @include u-margin-x(1);
+    }
+
+    .sds-alert--header__date {
+      @include u-display('block');
+      @include u-text('italic');
+      @include u-text('base');
+    }
+  }

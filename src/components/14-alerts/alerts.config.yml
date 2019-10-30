@@ -19,3 +19,9 @@ variants:
     context:
       label:
         classes: "sds-alert--expanded"
+
+  - name: header
+    label: Header
+    context:
+      label:
+        classes: "sds-alert--header"
