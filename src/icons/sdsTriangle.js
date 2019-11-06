@@ -6,7 +6,7 @@ var width = 589.6;
 var height = 512;
 var ligatures = [];
 var unicode = '';
-var svgPathData = 'M566.4,0L457.6,512L0,147.1L566.4,0z"';
+var svgPathData = 'M566.4,0L457.6,512L0,147.1L566.4,0z';
 
 exports.definition = {
   prefix: prefix,
