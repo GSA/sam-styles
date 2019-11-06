@@ -163,12 +163,17 @@
     }
 
     .sds-alert--header__content {
-      @include u-padding(1);
+      @include u-padding-y(1);
+      @include u-padding-x('205');
       @include u-margin-bottom(2);
       @include u-border(1px);
       @include u-border('gray-10');
 
       border-radius: 12px;
+
+      .sds-button--circle {
+        margin: auto;
+      }
     }
 
     .sds-alert--header__label {
