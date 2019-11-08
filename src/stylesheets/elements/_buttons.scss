@@ -24,9 +24,10 @@
 .sds-button--circle {
   border-radius: 50%;
   color: color('secondary-darker');
-  border: 0.25px solid darkgray;
+  border: 0.65px solid darkgray;
   height: 2rem;
   width: 2rem;
+  padding: 2px 0 0 1px;
 
   .svg-inline--fa {
     align-self: center;
