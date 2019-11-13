@@ -12,7 +12,6 @@
 //search fieldset
 .sds-search {
   display: block;
-  @include u-margin-top(1);
 
   .usa-button {
     @include u-bg('indigo-cool-60');
@@ -40,6 +39,7 @@
     height: 40px;
     border-right-width: 0;
     @include u-margin(0);
+    min-width: 80px;
   }
 
   input:focus {
