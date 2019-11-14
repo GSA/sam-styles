@@ -342,7 +342,6 @@
   @include u-display('flex');
   @include u-bg('white');
   @include u-flex('justify-center');
-  @include u-margin(1);
 
   svg {
     margin-right: 15px;
