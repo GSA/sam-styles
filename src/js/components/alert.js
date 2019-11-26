@@ -11,3 +11,21 @@ Array.prototype.slice
       caretIcon.classList.toggle("fa-caret-down");
     });
   });
+
+  //hide header alert once all alerts have been closed
+
+  var closebtns = document.getElementsByClassName("sds-alert--header__close");
+  var i;
+  var alertCounter = 0;
+
+  for (i = 0; i < closebtns.length; i++) {
+    closebtns[i].addEventListener("click", function(event) {
+      this.parentElement.style.display = 'none';
+      alertCounter++;
+      if (alertCounter === closebtns.length)
+      {
+        let header = document.getElementById("sds-alert--header")
+        header.style.display = 'none';
+      }
+    });
+  }
