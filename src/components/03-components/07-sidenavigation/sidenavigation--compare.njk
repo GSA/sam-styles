@@ -1,8 +1,8 @@
 <div class="grid-row grid-gap">
-  {%- for nav in sidenavs -%}
+  {%- for nav in sidenavigation -%}
     <div class="tablet:grid-col-4">
       <h6 class="usa-heading-alt">{{ nav.title }}</h6>
-      {%- render '@sidenav--default', {sidenav: nav} -%}
+      {%- render '@sidenavigation--default', {sidenavigation: nav} -%}
     </div>
   {%- endfor -%}
 </div>
