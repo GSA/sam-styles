@@ -48,9 +48,9 @@
 // sds-autcomplete-selected
 .sds-autocomplete-selected .sds-autocomplete-selected__item {
   border-radius: 2px;
-  background: #dce4ef;
+  background-color: color('primary-lighter');
+  border: 1px solid color('primary');
   display: inline-block;
-  border: 1px solid #ccc;
   font-size: 14px;
   padding: 3px 8px;
   margin-top: 4px;
