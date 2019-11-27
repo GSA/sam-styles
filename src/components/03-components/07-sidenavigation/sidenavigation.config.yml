@@ -3,7 +3,7 @@ status: ready
 # preview: '@uswds-framed'
 
 context:
-  sidenav:
+  sidenavigation:
     links: &default_links
       - text: Parent link
       - text: Current page
@@ -29,7 +29,7 @@ variants:
 
   - name: compare
     context:
-      sidenav:
+      sidenavigation:
         - title: Single level
           links:
             - text: Current page
