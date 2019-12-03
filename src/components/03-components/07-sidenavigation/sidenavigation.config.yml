@@ -1,9 +1,9 @@
-label: Side navigation
+label: Side Navigation
 status: ready
 # preview: '@uswds-framed'
 
 context:
-  sidenav:
+  sidenavigation:
     links: &default_links
       - text: Parent link
       - text: Current page
@@ -24,11 +24,12 @@ context:
       - text: Parent link
 
 variants:
+
   - name: default
 
   - name: compare
     context:
-      sidenavs:
+      sidenavigation:
         - title: Single level
           links:
             - text: Current page
