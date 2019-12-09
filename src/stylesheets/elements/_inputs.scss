@@ -80,3 +80,8 @@
     width: min-content;
   }
 }
+
+//soften error styles
+.usa-input--error {
+    border-width: .1rem;
+}
