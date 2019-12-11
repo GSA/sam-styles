@@ -46,16 +46,14 @@
 }
 
 // sds-autcomplete-selected
-.sds-autocomplete-selected {
-  @include u-margin-top('05');
-}
-
 .sds-autocomplete-selected .sds-autocomplete-selected__item {
   border-radius: 2px;
   background-color: color('primary-lighter');
   border: 1px solid color('primary');
   display: inline-block;
   font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 0px;
   padding: 3px 8px;
   width: calc(100% - 16px);
   max-width: 30rem;
