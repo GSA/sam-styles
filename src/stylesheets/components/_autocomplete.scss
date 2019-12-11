@@ -46,6 +46,10 @@
 }
 
 // sds-autcomplete-selected
+.sds-autocomplete-selected {
+  @include u-margin-top('05');
+}
+
 .sds-autocomplete-selected .sds-autocomplete-selected__item {
   border-radius: 2px;
   background-color: color('primary-lighter');
