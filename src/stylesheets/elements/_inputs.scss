@@ -85,7 +85,7 @@
 .usa-error-message {
   font-weight: 500 !important;
 }
-.usa-input--error {
+.usa-input--error, .usa-input.usa-focus, .usa-input.usa-input--success {
     border-width: .1rem !important;
 }
 .usa-form-group--error {
