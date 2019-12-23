@@ -319,3 +319,48 @@ $theme-table-column-gap: 4;
     display: block;
   }
 }
+
+//accordion customization
+
+.usa-accordion.sds-mod {
+  background-color: aliceblue;
+  padding: 1em;
+  box-shadow: inset 2px 2px 7px -2px #bdd8e8;
+  border: 1px solid #e4e4e7;
+}
+
+.sds-mod h2.usa-accordion__heading {
+  /* background: aliceblue; */
+}
+
+.sds-mod button.usa-accordion__button {
+  background-color: transparent;
+}
+
+.sds-mod .usa-accordion__content {
+  border: 1px solid #e4e4e7;
+  border-radius: 5px;
+}
+//==
+
+
+
+.usa-accordion{
+  background-color: aliceblue;
+  padding: 1em;
+  box-shadow: inset 2px 2px 7px -2px #bdd8e8;
+  border: 1px solid #e4e4e7;
+}
+
+h2.usa-accordion__heading {
+  /* background: aliceblue; */
+}
+
+button.usa-accordion__button {
+  background-color: transparent;
+}
+
+.usa-accordion__content {
+  border: 1px solid #e4e4e7;
+  border-radius: 5px;
+}
