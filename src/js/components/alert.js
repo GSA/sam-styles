@@ -29,3 +29,46 @@ Array.prototype.slice
       }
     });
   }
+
+
+  //mobile header alert show alerts once arrow is clicked
+  var showbtns = document.getElementsByClassName("sds-alert--header__show");
+  var a;
+  var mobileCounter = 0;
+
+  for (a = 0; a < showbtns.length; a++) {
+    showbtns[a].addEventListener("click", function(event) {
+      this.parentElement.style.display = 'none';
+      mobileCounter++;
+      if (mobileCounter === showbtns.length)
+      {
+        let mobileHeader = document.getElementById("sds-mobile-alert")
+        mobileHeader.style.display = 'none';
+        console.log('hi');
+        let content = document.getElementById("sds-mobile-alert__content")
+        content.style.display = 'flex';
+        let contentbtn = document.getElementById("sds-mobile-alert__content-btn")
+        contentbtn.style.display = 'flex';
+      }
+    });
+  }
+
+
+  //hide header alert once all alerts have been closed
+  var closeMobile = document.getElementsByClassName("sds-alert--header__close-mobile");
+  var b;
+  var btnCounter = 0;
+
+  for (b = 0; b < closeMobile.length; b++) {
+    closeMobile[b].addEventListener("click", function(event) {
+      this.parentElement.style.display = 'none';
+      btnCounter++;
+      if (btnCounter === closeMobile.length)
+      {
+        let header = document.getElementById("sds-alert--header")
+        header.style.display = 'none';
+        let contentbtn = document.getElementById("sds-mobile-alert__content-btn")
+        contentbtn.style.display = 'none';
+      }
+    });
+  }
