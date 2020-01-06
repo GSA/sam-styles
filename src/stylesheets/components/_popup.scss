@@ -1,4 +1,4 @@
-  .sds-popup__wrapper {
+  .sds-popup {
       position: relative;
       display: inline-block;
       float: right;
@@ -7,7 +7,7 @@
 
   }
 
-  .sds-popup__wrapper:hover .sds-popup__content {
+  .sds-popup:hover .sds-popup__content {
       z-index: 10;
       opacity: 1;
       visibility: visible;
@@ -55,7 +55,7 @@
       //shadow-4
   }
 
-  .popup__wrapper:hover .popup__content {
+  .popup:hover .popup__content {
       z-index: 10;
       opacity: 1;
       visibility: visible;
