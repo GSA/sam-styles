@@ -1,0 +1,67 @@
+  .sds-popup__wrapper {
+      position: relative;
+      display: inline-block;
+      float: right;
+      // margin-1
+      margin: units(1);
+
+  }
+
+  .sds-popup__wrapper:hover .sds-popup__content {
+      z-index: 10;
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.2s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+  }
+
+  .sds-popup__icon {
+      float: right;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      width: units(3);
+      height: units(3);
+      @include u-font-size(sans, sm);
+      @include u-radius('pill');
+      @include u-border(2px);
+      @include u-border('base-dark');
+  }
+
+  .popup__inner-icon {
+      margin: -8px -8px 4px 4px;
+  }
+
+  .sds-popup__content {
+      opacity: 0;
+      visibility: hidden;
+      //position-absolute
+      position: absolute;
+      //right-0
+      right: 0;
+      //top-0 
+      top:0;
+      //bg-white 
+      @include u-bg('white');
+      //width-card-lg 
+      @include u-width('card-lg')
+      //radius-lg
+      @include u-radius('lg')
+      //border-1px 
+      border: units('1px');
+      //border-base-dark 
+      @include u-border('base-dark');
+      //padding-105 
+      @include u-padding('105');
+      //shadow-4
+  }
+
+  .popup__wrapper:hover .popup__content {
+      z-index: 10;
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.2s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+  }
+
+  .popup__message {
+      text-align: center;
+  }
