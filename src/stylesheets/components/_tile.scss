@@ -133,3 +133,16 @@
     margin: auto 2px;
   }
 }
+
+// Outline tile lg
+// ----------------------
+.sds-tile--lg {
+  .sds-tile__title{
+    font-size: 23px !important;
+    margin: auto;
+  }
+  .sds-tile__content{
+    width: 300px;
+    height: auto;
+  }
+}
