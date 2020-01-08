@@ -338,7 +338,6 @@
 .sds-button.sds-button--icon {
   height: 45px;
   min-width: 225px;
-  margin: auto;
   @include u-padding-x(4);
   @include u-radius('lg');
   @include u-display('flex');

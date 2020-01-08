@@ -97,7 +97,7 @@
   }
 
   .sds-tile__details {
-    @include u-font('sans', '3xs');
+    @include u-font('sans', 'xs');
     @include u-text('base');
   }
 }
