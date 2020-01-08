@@ -336,8 +336,10 @@
   Icon Button
 --------------------*/
 .sds-button.sds-button--icon {
-  height: 55px;
-  min-width: 195px;
+  height: 45px;
+  min-width: 225px;
+  margin: auto;
+  @include u-padding-x(4);
   @include u-radius('lg');
   @include u-display('flex');
   @include u-bg('white');
@@ -352,5 +354,23 @@
     font-size: 14px;
     margin: auto 0;
     @include u-text('bold');
+  }
+
+  .sds-button--icon__title {
+    margin: 5px 0px;
+  }
+}
+
+.sds-button--outline{
+  border: none;
+  border-radius: radius($theme-button-border-radius);
+  background-color: white;
+  padding: 3px;
+  height: 51px;
+
+  .sds-button--icon{
+    border: solid 1px color('primary');
+    border-radius: radius($theme-button-border-radius);
+    margin: auto;
   }
 }
