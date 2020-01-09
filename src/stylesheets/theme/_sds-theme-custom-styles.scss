@@ -52,8 +52,7 @@ SDS THEME CUSTOM STYLES
 
 // Code samples ---------------------- //
 
-code,
-pre {
+code, pre {
   @include u-font('mono', '3xs');
   // TODO: add more black-transparent values (1-5)
   background-color: rgba(0, 0, 0, .05);
@@ -148,11 +147,9 @@ $theme-table-column-gap: 4;
         text-align: left;
         width: 50%;
       }
-
       &.is-empty {
         display: none;
       }
-
       // stylelint-enable selector-no-qualifying-type
     }
 
