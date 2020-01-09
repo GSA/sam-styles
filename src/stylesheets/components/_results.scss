@@ -13,9 +13,7 @@
   &.dual-record {
     background-color: #f9f9f9;
     @include u-radius('lg');
-    @include u-padding-left('105');
-    @include u-padding-top('105');
-    @include u-padding-bottom('105');
+    @include u-padding('105');
     @include u-border('1px');
     @include u-border('base-lighter');
   }
