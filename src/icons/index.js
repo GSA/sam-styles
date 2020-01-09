@@ -47,7 +47,7 @@ import { sdsTriangle } from "./sdsTriangle";
 import { sdsLeaf } from "./sdsLeaf";
 import { sdsExclamationTriangle } from "./sdsExclamationTriangle";
 import { sdsSearch } from "./sdsSearch";
-
+import { sdsNewVersion } from "./sdsNewVersion"
 const prefix = "sds";
 
 const _iconsCache = {
@@ -99,7 +99,8 @@ const _iconsCache = {
   sdsTriangle:sdsTriangle,
   sdsLeaf:sdsLeaf,
   sdsExclamationTriangle:sdsExclamationTriangle,
-  sdsSearch:sdsSearch
+  sdsSearch:sdsSearch,
+  sdsNewVersion:sdsNewVersion
 };
 
 export {
@@ -153,5 +154,6 @@ export {
   sdsTriangle,
   sdsLeaf,
   sdsExclamationTriangle,
-  sdsSearch
+  sdsSearch,
+  sdsNewVersion
 };
