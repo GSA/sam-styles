@@ -1,7 +1,7 @@
-label: Tag
+label: Seal
 status: wip
 
 variants:
   - name: default
-    label: SDS Offical Tag
+    label: SDS Offical Seal
     status: null

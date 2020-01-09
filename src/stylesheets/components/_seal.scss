@@ -1,0 +1,37 @@
+.sds-seal {
+  @include u-radius-left('pill');
+  @include u-bg('white');
+  @include u-padding-y('105');
+  @include u-padding-x('2');
+  @include u-display('flex');
+  @include u-flex('row', 'align-center');
+  @include u-border('05','error', 'solid');
+  @include u-radius-left('pill');
+  @include u-border-right(0);
+  height: 75px;
+  float: right;
+  clear: both;
+  box-shadow: -5px 5px 1px 2px white, -5px -5px 1px 2px white;
+
+  .sds-seal__content {
+    @include u-display('flex');
+    @include u-flex('column', 'align-center');
+    @include u-padding-x('105');
+    @include u-text('bold');
+    @include u-text('center');
+
+    .sds-seal__official {
+      color: color('error');
+    }
+
+    .sds-seal__free {
+      color: color('base');
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .sds-seal {
+    @include u-display('none');
+  }
+}
