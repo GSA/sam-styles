@@ -1,5 +1,4 @@
 "use strict";
-
 Array.prototype.slice
   .call(document.querySelectorAll(".sds-accordion"))
   .forEach(function(accordion) {
