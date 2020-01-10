@@ -2,8 +2,8 @@ console.log("loading!")
 
 Array.prototype.slice
   .call(document.querySelectorAll(".simple-toggle"))
-  .forEach(function (toggleButton) {
-    toggleButton.addEventListener("click", function (event) {
+  .forEach(function(toggleButton) {
+    toggleButton.addEventListener("click", function(event) {
       var toToggle = document.getElementById(toggleButton.getAttribute("aria-controls"));
       var caretIcon = toggleButton.children[0];
       toToggle.classList.toggle("display-none");
@@ -12,20 +12,19 @@ Array.prototype.slice
     });
   });
 
-  //hide header alert once all alerts have been closed
+//hide header alert once all alerts have been closed
 
-  var closebtns = document.getElementsByClassName("sds-alert--header__close");
-  var i;
-  var alertCounter = 0;
+var closebtns = document.getElementsByClassName("sds-alert--header__close");
+var i;
+var alertCounter = 0;
 
-  for (i = 0; i < closebtns.length; i++) {
-    closebtns[i].addEventListener("click", function(event) {
-      this.parentElement.style.display = 'none';
-      alertCounter++;
-      if (alertCounter === closebtns.length)
-      {
-        let header = document.getElementById("sds-alert--header")
-        header.style.display = 'none';
-      }
-    });
-  }
+for (i = 0; i < closebtns.length; i++) {
+  closebtns[i].addEventListener("click", function(event) {
+    this.parentElement.style.display = 'none';
+    alertCounter++;
+    if (alertCounter === closebtns.length) {
+      let header = document.getElementById("sds-alert--header")
+      header.style.display = 'none';
+    }
+  });
+}
