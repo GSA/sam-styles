@@ -23,7 +23,6 @@
       @include u-margin-bottom('105');
       text-decoration: none !important;
 
-
       svg {
         height: 80px;
       }
@@ -78,7 +77,6 @@
   background: rgba(240, 245, 249, 0.8);
   text-decoration: none !important;
   border-radius: 2rem;
-
   @media only screen and (min-width: 600px) {
     height: 150px;
     width: 195px;
@@ -101,7 +99,6 @@
     @include u-text('base');
   }
 }
-
 @media only screen and (max-width: 600px) {
   .sds-tile {
     @include u-display('block');
@@ -133,16 +130,35 @@
     margin: auto 2px;
   }
 }
-
 // Outline tile lg
 // ----------------------
+
 .sds-tile--lg {
-  .sds-tile__title{
+  .sds-tile__title {
     font-size: 23px !important;
-    margin: auto;
   }
-  .sds-tile__content{
+  .mobile-details {
+  .sds-button--icon {
+    width: 100%;
+  }
+  }
+
+  .sds-tile__content {
     width: 300px;
     height: auto;
+    @media only screen and (max-width: 600px) {
+      width: 410px;
+      @include u-display('flex');
+      @include u-flex('column');
+      .mobile-details {
+        @include u-display('flex');
+      .sds-button--icon {
+        min-width: auto;
+        @include u-margin-bottom(2);
+        @include u-height('auto');
+        @include u-padding-x(2);
+      }
+      }
+    }
   }
 }
