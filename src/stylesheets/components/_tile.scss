@@ -137,27 +137,40 @@
   .sds-tile__title {
     font-size: 23px !important;
   }
+
   .mobile-details {
-  .sds-button--icon {
-    width: 100%;
-  }
+    .sds-button--icon {
+      width: 100%;
+    }
   }
 
   .sds-tile__content {
     width: 300px;
     height: auto;
-    @media only screen and (max-width: 600px) {
-      width: 410px;
+    align-items: center;
+  }
+  @media only screen and (max-width: 880px) {
+    width: 90%;
+
+    .sds-tile__content {
+      width: 100%;
       @include u-display('flex');
       @include u-flex('column');
+      justify-content: center;
+
+      .sds-tile__icon {
+        margin: auto 15px;
+      }
+
       .mobile-details {
         @include u-display('flex');
-      .sds-button--icon {
-        min-width: auto;
-        @include u-margin-bottom(2);
-        @include u-height('auto');
-        @include u-padding-x(2);
-      }
+
+        .sds-button--icon {
+          min-width: auto;
+          @include u-margin-x(2);
+          @include u-margin-bottom(2);
+          @include u-height('auto');
+        }
       }
     }
   }
