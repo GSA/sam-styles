@@ -1,6 +1,6 @@
 <form class="bg-accent-cool-light padding-top-6">
   <div class="sds-feedback">
-    <button class="sds-feedback__btn-close toggle">
+    <button aria-controls="alert-extension" class="sds-feedback__btn-close simple-toggle accordion display-none">
       <span class="fa-stack fa-2x">
         <i class="fas fa-circle fa-stack-1x text-primary"></i>
         <i class="sds fa-arrow-up fa-stack-1x text-base fa-1x arrow"></i>
@@ -8,7 +8,7 @@
       Feedback
     </button>
 
-    <button class="sds-feedback__btn-open toggle" id="sdsFeedback">
+    <button aria-controls="alert-extension" class="sds-feedback__btn-open simple-toggle accordion">
       <span class="fa-stack fa-2x">
         <i class="fas fa-circle fa-stack-1x text-base-lighter"></i>
         <i class="sds fa-arrow-down fa-stack-1x text-base fa-1x arrow"></i>
@@ -16,7 +16,7 @@
       Feedback
     </button>
 
-    <div class="sds-feedback__survey display-none" id="sdsFeedback">
+    <div class="sds-feedback__survey" id="alert-extension">
     <div>
       <h1>One Question</h1><h2> Survey</h2>
     </div>

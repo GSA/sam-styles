@@ -1,5 +1,7 @@
+console.log("feedback loading")
+
 Array.prototype.slice
-  .call(document.querySelectorAll(".toggle"))
+  .call(document.querySelectorAll(".simple-toggle"))
   .forEach(function(toggleButton) {
     toggleButton.addEventListener("click", function(event) {
       var toToggle = document.getElementById(toggleButton.getAttribute("aria-controls"));
@@ -9,3 +11,5 @@ Array.prototype.slice
       arrowIcon.classList.toggle("fa-arrow-down");
     });
   });
+
+console.log("feedback done")
