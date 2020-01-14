@@ -38,7 +38,10 @@
       @include u-radius('lg');
       border: units('1px');
       @include u-border('base-dark');
-      @include u-padding('105');
+      @include u-padding-top('05');
+      @include u-padding-right('05');
+      @include u-padding-bottom('105');
+      @include u-padding-left('105');
       ul{
         @include u-margin('0');
         @include u-margin-left(-2);
