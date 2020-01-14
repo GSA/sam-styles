@@ -11,8 +11,8 @@
   @include u-flex('column');
   @include u-text('center');
   @include u-width('card-lg');
-  height: 150px;
-  text-decoration: none !important;
+  @include u-height('card');
+  text-decoration: none;
 
   &:hover {
     text-decoration: none;
@@ -136,11 +136,13 @@
 .sds-tile--lg {
   .sds-tile__title {
     font-size: 23px !important;
+    @include u-padding-x(1);
   }
 
   .mobile-details {
-    .sds-button--icon {
+    .sds-button.sds-button--icon {
       width: 100%;
+      margin: 20px auto auto;
     }
   }
 
@@ -166,10 +168,16 @@
         @include u-display('flex');
 
         .sds-button--icon {
-          min-width: auto;
           @include u-margin-x(2);
           @include u-margin-bottom(2);
           @include u-height('auto');
+        }
+        @media only screen and (max-width: 600px){
+          @include u-display('block');
+          margin: auto;
+          .sds-button--icon {
+            @include u-margin-x('auto');
+          }
         }
       }
     }
