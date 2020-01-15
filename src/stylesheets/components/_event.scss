@@ -3,7 +3,7 @@
 
 .sds-feed {
   margin-top: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 0;
   width: 100%;
 
   .event:hover {
@@ -42,9 +42,31 @@
     }
 
     .content .meta {
-      margin-top: 5px;
-      font-size: 14px;
-      line-height: 16px;
+      @include u-margin-top('05');
+      @include u-margin-right(2);
+      @include u-padding-right(2);
+      @include u-font('sans','xs');
+      @include u-text('justify');
+      overflow: hidden;
+      position: relative;
+      line-height: 1.2em;
+      max-height: 4.6em;
     }
+    .meta:before {
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .meta:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: white;
+  }
   }
 }

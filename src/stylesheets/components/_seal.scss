@@ -5,7 +5,7 @@
   @include u-padding-x('2');
   @include u-display('flex');
   @include u-flex('row', 'align-center');
-  @include u-border('05','error', 'solid');
+  @include u-border('2px','error', 'solid');
   @include u-radius-left('pill');
   @include u-border-right(0);
   height: 75px;
