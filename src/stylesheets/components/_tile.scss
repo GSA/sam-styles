@@ -91,7 +91,7 @@
   .sds-tile__title {
     @include u-font('sans', '2xs');
     @include u-text('semibold');
-    @include u-text('secondary-dark');
+    color: #3f57a6;
   }
 
   .sds-tile__details {
@@ -141,8 +141,8 @@
 
   .mobile-details {
     .sds-button.sds-button--icon {
-      width: 100%;
       margin: 20px auto auto;
+      color: #3f57a6;
     }
   }
 
@@ -151,8 +151,9 @@
     height: auto;
     align-items: center;
   }
-  @media only screen and (max-width: 880px) {
+  @media only screen and (max-width: 1170px) {
     width: 90%;
+    @include u-margin-x('auto');
 
     .sds-tile__content {
       width: 100%;
