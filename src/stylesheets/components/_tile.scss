@@ -91,7 +91,7 @@
   .sds-tile__title {
     @include u-font('sans', '2xs');
     @include u-text('semibold');
-    color: #3f57a6;
+    @extend .usa-link;
   }
 
   .sds-tile__details {
@@ -142,7 +142,8 @@
   .mobile-details {
     .sds-button.sds-button--icon {
       margin: 20px auto auto;
-      color: #3f57a6;
+      width: auto;
+      @extend .usa-link;
     }
   }
 
@@ -150,37 +151,5 @@
     width: 300px;
     height: auto;
     align-items: center;
-  }
-  @media only screen and (max-width: 1170px) {
-    width: 90%;
-    @include u-margin-x('auto');
-
-    .sds-tile__content {
-      width: 100%;
-      @include u-display('flex');
-      @include u-flex('column');
-      justify-content: center;
-
-      .sds-tile__icon {
-        margin: auto 15px;
-      }
-
-      .mobile-details {
-        @include u-display('flex');
-
-        .sds-button--icon {
-          @include u-margin-x(2);
-          @include u-margin-bottom(2);
-          @include u-height('auto');
-        }
-        @media only screen and (max-width: 600px){
-          @include u-display('block');
-          margin: auto;
-          .sds-button--icon {
-            @include u-margin-x('auto');
-          }
-        }
-      }
-    }
   }
 }
