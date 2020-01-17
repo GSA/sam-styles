@@ -9,29 +9,4 @@
     justify-content: center;
     flex-direction: column;
   }
-
-  &.dual-record {
-    background-color: #f9f9f9;
-    @include u-radius('lg');
-    @include u-padding('105');
-    @include u-border('1px');
-    @include u-border('base-lighter');
-  }
-
-  .dual-record {
-    &--title {
-      @include u-line-height('sans', 6);
-      @include u-border('base-light');
-      @include u-border(0);
-      @include u-border-bottom('2px');
-      @include u-border-bottom('dashed');
-    }
-
-    &--hilite {
-      @include u-border('base-light');
-      @include u-border(0);
-      @include u-border-bottom('1px');
-      @include u-border-bottom('dashed');
-    }
-  }
 }
