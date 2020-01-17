@@ -115,7 +115,7 @@
     overflow: hidden;
     height: 60px;
     width: 410px;
-    margin: 20px auto;
+    margin: 5px auto;
   }
 
   .sds-tile__icon {
@@ -136,7 +136,7 @@
 .sds-tile--lg {
   .sds-tile__title {
     font-size: 23px !important;
-    @include u-padding-x(1);
+    @include u-padding(1);
   }
 
   .mobile-details {
