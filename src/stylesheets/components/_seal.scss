@@ -21,7 +21,7 @@
     @include u-text('center');
 
     .sds-seal__official {
-      color: color('error');
+      color: color('error-dark');
     }
 
     .sds-seal__free {
@@ -30,7 +30,7 @@
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 880px) {
   .sds-seal {
     @include u-display('none');
   }
