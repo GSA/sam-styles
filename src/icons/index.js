@@ -48,7 +48,10 @@ import { sdsLeaf } from "./sdsLeaf";
 import { sdsExclamationTriangle } from "./sdsExclamationTriangle";
 import { sdsSearch } from "./sdsSearch";
 import { sdsNewVersion } from "./sdsNewVersion";
-import { sdsQuestion } from "./sdsQuestion"
+import { sdsQuestion } from "./sdsQuestion";
+import { sdsVideoSquare } from "./sdsVideoSquare";
+import { sdsVideoCircle } from "./sdsVideoCircle";
+import { sdsVideoPlay } from "./sdsVideoPlay";
 const prefix = "sds";
 
 const _iconsCache = {
@@ -102,7 +105,10 @@ const _iconsCache = {
   sdsExclamationTriangle:sdsExclamationTriangle,
   sdsSearch:sdsSearch,
   sdsNewVersion:sdsNewVersion,
-  sdsQuestion:sdsQuestion
+  sdsQuestion:sdsQuestion,
+  sdsVideoSquare:sdsVideoSquare,
+  sdsVideoCircle:sdsVideoCircle,
+  sdsVideoPlay:sdsVideoPlay
 };
 
 export {
@@ -158,5 +164,8 @@ export {
   sdsExclamationTriangle,
   sdsSearch,
   sdsNewVersion,
-  sdsQuestion
+  sdsQuestion,
+  sdsVideoSquare,
+  sdsVideoCircle,
+  sdsVideoPlay
 };
