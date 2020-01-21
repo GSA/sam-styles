@@ -1,7 +1,0 @@
-label: Pop-up
-status: wip
-
-variants:
-  - name: default
-    label: SDS Pop-up
-    status: null
