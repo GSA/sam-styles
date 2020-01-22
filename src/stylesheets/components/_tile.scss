@@ -11,8 +11,8 @@
   @include u-flex('column');
   @include u-text('center');
   @include u-width('card-lg');
-  height: 150px;
-  text-decoration: none !important;
+  @include u-height('card');
+  text-decoration: none;
 
   &:hover {
     text-decoration: none;
@@ -22,7 +22,6 @@
       @include u-margin-x('auto');
       @include u-margin-bottom('105');
       text-decoration: none !important;
-
 
       svg {
         height: 80px;
@@ -78,7 +77,6 @@
   background: rgba(240, 245, 249, 0.8);
   text-decoration: none !important;
   border-radius: 2rem;
-
   @media only screen and (min-width: 600px) {
     height: 150px;
     width: 195px;
@@ -93,15 +91,14 @@
   .sds-tile__title {
     @include u-font('sans', '2xs');
     @include u-text('semibold');
-    @include u-text('secondary-dark');
+    @extend .usa-link;
   }
 
   .sds-tile__details {
-    @include u-font('sans', '3xs');
+    @include u-font('sans', 'xs');
     @include u-text('base');
   }
 }
-
 @media only screen and (max-width: 600px) {
   .sds-tile {
     @include u-display('block');
@@ -118,7 +115,7 @@
     overflow: hidden;
     height: 60px;
     width: 410px;
-    margin: 20px auto;
+    margin: 5px auto;
   }
 
   .sds-tile__icon {
@@ -133,16 +130,26 @@
     margin: auto 2px;
   }
 }
-
 // Outline tile lg
 // ----------------------
+
 .sds-tile--lg {
-  .sds-tile__title{
+  .sds-tile__title {
     font-size: 23px !important;
-    margin: auto;
+    @include u-padding(1);
   }
-  .sds-tile__content{
+
+  .mobile-details {
+    .sds-button.sds-button--icon {
+      margin: 20px auto auto;
+      width: auto;
+      @extend .usa-link;
+    }
+  }
+
+  .sds-tile__content {
     width: 300px;
     height: auto;
+    align-items: center;
   }
 }

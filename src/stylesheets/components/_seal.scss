@@ -5,7 +5,7 @@
   @include u-padding-x('2');
   @include u-display('flex');
   @include u-flex('row', 'align-center');
-  @include u-border('05','error', 'solid');
+  @include u-border('2px','error', 'solid');
   @include u-radius-left('pill');
   @include u-border-right(0);
   height: 75px;
@@ -21,7 +21,7 @@
     @include u-text('center');
 
     .sds-seal__official {
-      color: color('error');
+      color: color('error-dark');
     }
 
     .sds-seal__free {
@@ -30,7 +30,7 @@
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 880px) {
   .sds-seal {
     @include u-display('none');
   }
