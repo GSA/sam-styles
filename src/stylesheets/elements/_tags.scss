@@ -1,10 +1,10 @@
 .sds-tag--info-purple {
-  @include u-bg('violet-warm-10v');
-  @include u-border('indigo-warm-50');
-  @include u-border('1px');
+  @include u-bg("violet-warm-10v");
+  @include u-border("indigo-warm-50");
+  @include u-border("1px");
   font-weight: 600;
   border-radius: 0;
-  @include u-text('base-darker');
+  @include u-text("base-darker");
 }
 
 .sds-tag--info-white {
@@ -12,15 +12,15 @@
   border: 1px solid #76766a;
   font-weight: 600;
   border-radius: 0;
-  @include u-text('base-darker');
+  @include u-text("base-darker");
 }
 
 // Chip tag
 
 .sds-tag.sds-tag--chip {
-  background-color: color('primary-lighter');
-  border: 1px solid color('primary');
-  @include u-font('sans', '3xs');
+  background-color: color("primary-lighter");
+  border: 1px solid color("primary");
+  @include u-font("sans", "3xs");
   padding: 2px 5px;
   white-space: nowrap;
   display: inline-block;
@@ -34,11 +34,11 @@
 }
 // Status tag
 
-.sds-tag[class*='sds-tag--status'] {
+.sds-tag[class*="sds-tag--status"] {
   white-space: nowrap;
   text-transform: uppercase;
-  @include u-font('sans', '3xs');
-  @include u-text('base-dark');
+  @include u-font("sans", "3xs");
+  @include u-text("base-dark");
   line-height: 20px;
   font-weight: 600;
   padding: 0 5px 4px 0;
@@ -48,8 +48,8 @@
   width: auto;
 }
 
-.sds-tag[class*='sds-tag--status']::before {
-  content: '';
+.sds-tag[class*="sds-tag--status"]::before {
+  content: "";
   display: inline-block;
   border: 1px solid #5b616b;
   background-color: #f1f1f1;
@@ -89,28 +89,42 @@
   border: 1px solid #981b1e;
   background-color: #e59393;
 }
+//Border colors
+.sds-tag--border-blue {
+  border-color:  #00a6d2!important;
+  border-radius: 3px;
+}
+.sds-tag--border-red {
+  border-color:  #981b1e!important;
+  border-radius: 3px;
+}
+.sds-tag--border-yellow {
+  border-color:  #fdb81e!important;
+  border-radius: 3px;
+}
 // Outline tag
-
-.sds-tag[class*='sds-tag--outline'] {
-  @include u-font('sans', '3xs');
-  @include u-text('base-dark');
+.sds-tag[class*="sds-tag--outline"] {
+  @include u-font("sans", "3xs");
+  @include u-text("base-dark");
   line-height: 20px;
   font-weight: 550;
   padding: 5px;
   border: 1px solid;
   margin-right: 5px;
-  display:flex;
+  display: flex;
   justify-content: center;
+  align-items: center;
   width: 115px;
   background-color: #f5f5f0;
-  div{
+  height: calc(100% - 1.3rem);
+  div {
     text-align: left;
     width: calc(100% - 42px);
   }
 }
 
-.sds-tag[class*='sds-tag--outline']::before {
-  content: '';
+.sds-tag[class*="sds-tag--outline"]::before {
+  content: "";
   display: inline-block;
   border: 1px solid #5b616b;
   background-color: #f1f1f1;
@@ -142,8 +156,8 @@
 }
 
 .sds-tag.sds-tag--outline-blue::before {
-  border: 1px solid #5A94F5;
-  background-color: #5A94F5;
+  border: 1px solid #5a94f5;
+  background-color: #5a94f5;
 }
 
 .sds-tag.sds-tag--outline-light-blue::before {
@@ -156,29 +170,30 @@
   background-color: #e59393;
 }
 
-.sds-tag[class*='sds-tag--alt'] {
+.sds-tag[class*="sds-tag--alt"] {
   white-space: nowrap;
-  @include u-font('sans', '3xs');
-  @include u-text('base-dark');
+  @include u-font("sans", "3xs");
+  @include u-text("base-dark");
   text-align: center;
   line-height: 20px;
   font-weight: 550;
   padding: 5px 10px;
   border: 1px solid;
   margin-right: 5px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   width: 115px;
   background-color: #f5f5f0;
   height: calc(100% - 1.3rem);
 }
 
 .sds-tag--small {
-  @include u-font('sans', '3xs');
+  @include u-font("sans", "3xs");
 }
 
 .sds-tag--disabled {
-  @include u-bg('disabled', !important);
-  @include u-border('disabled-dark', !important);
+  @include u-bg("disabled", !important);
+  @include u-border("disabled-dark", !important);
 }
 
 // Block style tag
@@ -202,17 +217,17 @@ Label Title
 }
 
 .sds-tag--light {
-  @include u-bg('white', !important);
-  @include u-border('warning', !important);
-  @include u-text('base-darker', !important);
+  @include u-bg("white", !important);
+  @include u-border("warning", !important);
+  @include u-text("base-darker", !important);
 }
 
 .sds-static--tag {
-  @include u-display('block');
+  @include u-display("block");
   @include u-margin-bottom(0);
-  @include u-margin-top('2px');
+  @include u-margin-top("2px");
   @include u-margin-right(0.5, !important);
-  @include u-font('sans', '3xs');
+  @include u-font("sans", "3xs");
   min-width: 52px;
   width: 52px;
 }
