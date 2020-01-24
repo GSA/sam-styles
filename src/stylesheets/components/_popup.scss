@@ -10,10 +10,13 @@
   }
 
     .sds-popup__content {
-        opacity: 0;
-        visibility: hidden;
+        opacity: 1;
+        //visibility: hidden;
+      z-index: 10;
         position: absolute;
-        left: 0; top:0;
+        // top:0;
+        left: 0;
+        &.in{
         &.top-left      {left: 0;   top:0;  bottom: unset;  right: unset;}
         &.top-center    {left: 25%; top:0;  bottom: unset;  right: unset;}
         &.top-right     {right: 0;  top:0;  bottom: unset;  left: unset;}
@@ -22,6 +25,18 @@
         &.bottom-center {left: 25%; bottom:0;  top: unset;  right: unset;}
         &.bottom-left   {left: 0;   bottom:0;  top: unset;  right: unset;}
         &.left-middle   {left: 0;   top:50%;  bottom: unset;  right: unset;}
+        }
+        &.out{
+            width:100%;
+        &.top-left      {left: 0;   top:0;  bottom: unset;  right: unset;}
+        &.top-center    {left: 25%; top:0;  bottom: unset;  right: unset;}
+        &.top-right     {right: 0;  top:0;  bottom: unset;  left: unset;}
+        &.right-middle  {right: 0;  top:50%;  bottom: unset;  left: unset;}
+        &.bottom-right  {right: 0;  bottom:0;  top: unset;  left: unset;}
+        &.bottom-center {left: 25%; bottom:0;  top: unset;  right: unset;}
+        &.bottom-left   {left: 0;   bottom:0;  top: unset;  right: unset;}
+        &.left-middle   {left: 0;   top:50%;  bottom: unset;  right: unset;}
+        }
     //   border: units('1px');
     //   @include u-bg('white');
     //   @include u-width('card-lg');
