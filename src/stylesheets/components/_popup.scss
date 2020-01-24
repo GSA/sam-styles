@@ -1,6 +1,5 @@
   .sds-popup {
       position: relative;
-      float: right;
   }
 
   .sds-popup:hover .sds-popup__content {
@@ -10,55 +9,28 @@
       transition: all 0.2s cubic-bezier(0.75, -0.02, 0.2, 0.97);
   }
 
-  .sds-popup__icon {
-      float: right;
-      display: flex;
-      text-align: center;
-      justify-content: center;
-      width: units(3);
-      height: units(3);
-      @include u-font-size(sans, sm);
-      @include u-radius('pill');
-      @include u-border(2px);
-      @include u-border('base-dark');
+    .sds-popup__content {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        left: 0; top:0;
+        &.top-left      {left: 0;   top:0;  bottom: unset;  right: unset;}
+        &.top-center    {left: 25%; top:0;  bottom: unset;  right: unset;}
+        &.top-right     {right: 0;  top:0;  bottom: unset;  left: unset;}
+        &.right-middle  {right: 0;  top:50%;  bottom: unset;  left: unset;}
+        &.bottom-right  {right: 0;  bottom:0;  top: unset;  left: unset;}
+        &.bottom-center {left: 25%; bottom:0;  top: unset;  right: unset;}
+        &.bottom-left   {left: 0;   bottom:0;  top: unset;  right: unset;}
+        &.left-middle   {left: 0;   top:50%;  bottom: unset;  right: unset;}
+    //   border: units('1px');
+    //   @include u-bg('white');
+    //   @include u-width('card-lg');
+    //   @include u-radius('lg');
+    //   @include u-border('base-dark');
+    //   @include u-padding-top('05');
+    //   @include u-padding-right('05');
+    //   @include u-padding-bottom('105');
+    //   @include u-padding-left('105');
   }
 
-  .popup__inner-icon {
-      margin: -8px -8px 4px 4px;
-  }
 
-  .sds-popup__content {
-      opacity: 0;
-      visibility: hidden;
-      position: absolute;
-      right: 0;
-      top:0;
-      @include u-bg('white');
-      @include u-width('card-lg');
-      @include u-radius('lg');
-      border: units('1px');
-      @include u-border('base-dark');
-      @include u-padding-top('05');
-      @include u-padding-right('05');
-      @include u-padding-bottom('105');
-      @include u-padding-left('105');
-      ul{
-        @include u-margin('0');
-        @include u-margin-left(-2);
-        li{
-            @include u-margin('0');
-
-        }
-      }
-  }
-
-  .popup:hover .popup__content {
-      z-index: 10;
-      opacity: 1;
-      visibility: visible;
-      transition: all 0.2s cubic-bezier(0.75, -0.02, 0.2, 0.97);
-  }
-
-  .popup__message {
-      text-align: center;
-  }
