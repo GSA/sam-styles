@@ -1,51 +1,68 @@
-  .sds-popup {
-      position: relative;
+.sds-popup {
+  position: relative;
+  display:initial;
+}
+.sds-popup__content {
+  //outline: 1px solid red;
+}
+.sds-popup:hover .sds-popup__content {
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.2s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+
+.sds-popup__content {
+  opacity: 1;
+  visibility: hidden;
+  z-index: 10;
+  position: absolute;
+  user-select: none; 
+  cursor:pointer;
+  
+  /* beautify preserve:start */
+  &.in{
+    &.top-left      {left: 0;   top:0;  bottom: unset;  right: unset;}
+    &.top-center    {left: 25%; top:0;  bottom: unset;  right: unset;
+      div:first-child {
+        margin-left: -50%;
+    }}
+    &.top-right     {right: 0;  top:0;  bottom: unset;  left: unset;}
+    &.right-middle  {right: 0;  top:50%;  bottom: unset;  left: unset;}
+    &.bottom-right  {right: 0;  bottom:0;  top: unset;  left: unset;}
+    &.bottom-center {left: 25%; bottom:0;  top: unset;  right: unset;
+      div:first-child {
+        margin-left: -50%;
+    }}
+    &.bottom-left   {left: 0;   bottom:0;  top: unset;  right: unset;}
+    &.left-middle   {left: 0;   top:50%;  bottom: unset;  right: unset;}
+    }
+    &.out{
+        width:100%;
+    &.top-left      {left: 0; bottom: 100%; right: 100%; text-align: start;}
+    &.top-center    {left: 0; bottom: 100%; right: 100%; text-align: center;}
+    &.top-right     {left: 0; bottom: 100%; right: 100%; text-align: end;}
+    &.right-middle  {left: 0; top: 0; right: 100%; text-align: end; height:100%;
+            *:first-child {position: absolute;  top: 50%;  transform: translateY(-50%);
+    }}
+    &.bottom-right  {top: 100%;  left: 0;  text-align: right;}
+    &.bottom-center {top: 100%;  left: 0;  text-align: center}
+    &.bottom-left   {top: 100%;  left: 0;  text-align: left}
+    &.left-middle   {left: 0; top: 0; right: 0%; text-align: start; height:100%;
+      *:first-child {position: absolute;  top: 50%; right:100%; transform: translateY(-50%);
+        /* beautify preserve:end */
+      }
+    }
+    .tooltip {
+      background-color: color("base-dark");
+      border: 1px solid color("base-darkest");
+      @include u-text("base-lightest");
+      @include u-font("sans", "3xs");
+      padding: 2px 5px;
+      white-space: nowrap;
+      display: inline-block;
+      @include u-margin(1px);
+     
+    }
   }
-
-  .sds-popup:hover .sds-popup__content {
-      z-index: 10;
-      opacity: 1;
-      visibility: visible;
-      transition: all 0.2s cubic-bezier(0.75, -0.02, 0.2, 0.97);
-  }
-
-    .sds-popup__content {
-        opacity: 1;
-        //visibility: hidden;
-      z-index: 10;
-        position: absolute;
-        // top:0;
-        left: 0;
-        &.in{
-        &.top-left      {left: 0;   top:0;  bottom: unset;  right: unset;}
-        &.top-center    {left: 25%; top:0;  bottom: unset;  right: unset;}
-        &.top-right     {right: 0;  top:0;  bottom: unset;  left: unset;}
-        &.right-middle  {right: 0;  top:50%;  bottom: unset;  left: unset;}
-        &.bottom-right  {right: 0;  bottom:0;  top: unset;  left: unset;}
-        &.bottom-center {left: 25%; bottom:0;  top: unset;  right: unset;}
-        &.bottom-left   {left: 0;   bottom:0;  top: unset;  right: unset;}
-        &.left-middle   {left: 0;   top:50%;  bottom: unset;  right: unset;}
-        }
-        &.out{
-            width:100%;
-        &.top-left      {left: 0;   top:0;  bottom: unset;  right: unset;}
-        &.top-center    {left: 25%; top:0;  bottom: unset;  right: unset;}
-        &.top-right     {right: 0;  top:0;  bottom: unset;  left: unset;}
-        &.right-middle  {right: 0;  top:50%;  bottom: unset;  left: unset;}
-        &.bottom-right  {right: 0;  bottom:0;  top: unset;  left: unset;}
-        &.bottom-center {left: 25%; bottom:0;  top: unset;  right: unset;}
-        &.bottom-left   {left: 0;   bottom:0;  top: unset;  right: unset;}
-        &.left-middle   {left: 0;   top:50%;  bottom: unset;  right: unset;}
-        }
-    //   border: units('1px');
-    //   @include u-bg('white');
-    //   @include u-width('card-lg');
-    //   @include u-radius('lg');
-    //   @include u-border('base-dark');
-    //   @include u-padding-top('05');
-    //   @include u-padding-right('05');
-    //   @include u-padding-bottom('105');
-    //   @include u-padding-left('105');
-  }
-
-
+}

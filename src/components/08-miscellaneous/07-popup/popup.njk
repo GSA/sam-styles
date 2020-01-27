@@ -1,117 +1,213 @@
-<!-- <div class="display-flex flex-column flex-align-end">
-      <div>
-        <i class="sds fa-information-circle fa-2x "></i>
-      </div>
-    </div>
-    <ul>
-      <li>Lorem ipsum sit amet</li>
-      <li>Lorem ipsum</li>
-    </ul> -->
-<div class="sds-popup">
-  <i class="sds fa-information-circle fa-2x float-left margin-top-1"></i>
-  <div class="sds-popup__content width-card-lg">
-    <div class="sds-alert--block">
-      <div class="sds-alert--block-icon grid-col-auto">
-        <i class="sds fa-exclamation fa-2x"></i>
-      </div>
-      <div class="grid-col">
-        <label>Address Needs to be Updated</label>
-        <span>600 14th St NW</span>
-        <span>Washington, DC 20007</span>
-      </div>
-    </div>
-  </div>
-</div>
-
+<h3>
+  <a class="usa-link">Pop out (tooltip)</a>
+</h3>
 <div class="sds-navbar border-bottom border-base-lighter">
   <div class="sds-navbar__content">
     <div class="grid-row">
-      <div
-        class="grid-col-12 tablet-lg:grid-col-auto display-flex flex-align-center margin-bottom-1 tablet-lg:margin-bottom-0">
-        <!-- Back Button -->
-        <button class="sds-button sds-button--circular">
-          <i class="fas fa-fw fa-chevron-left"></i>
-        </button>
-
-        <!-- Page Title -->
-        <span class="font-heading-md text-semibold tablet-lg:width-mobile">
-          Title here
-        </span>
-      </div>
       <div class="grid-col-12 tablet-lg:grid-col-fill display-flex">
-        <div class="tablet-lg:order-1">
-          <!-- Buttons -->
-
-          <button class="usa-button usa-button sds-popup margin-05">in top-left     <div class="sds-popup__content in top-left     "><span class="sds-tag sds-tag--chip">Normal</span></div></button>
-          <button class="usa-button usa-button sds-popup margin-05">in top-center   <div class="sds-popup__content in top-center   "><span class="sds-tag sds-tag--chip">Normal</span></div></button>
-          <button class="usa-button usa-button sds-popup margin-05">in top-right    <div class="sds-popup__content in top-right    "><span class="sds-tag sds-tag--chip">Normal</span></div></button>
-          <button class="usa-button usa-button sds-popup margin-05">in right-middle <div class="sds-popup__content in right-middle "><span class="sds-tag sds-tag--chip">Normal</span></div></button>
-          <button class="usa-button usa-button sds-popup margin-05">in bottom-right <div class="sds-popup__content in bottom-right "><span class="sds-tag sds-tag--chip">Normal</span></div></button>
-          <button class="usa-button usa-button sds-popup margin-05">in bottom-center<div class="sds-popup__content in bottom-center"><span class="sds-tag sds-tag--chip">Normal</span></div></button>
-          <button class="usa-button usa-button sds-popup margin-05">in bottom-left  <div class="sds-popup__content in bottom-left  "><span class="sds-tag sds-tag--chip">Normal</span></div></button>
-          <button class="usa-button usa-button sds-popup margin-05">in left-middle  <div class="sds-popup__content in left-middle  "><span class="sds-tag sds-tag--chip">Normal</span></div></button>
-       
+        <!-- diagonals -->
+        <div>
+          <button class="usa-button usa-button--base sds-popup margin-2">
+            out top-left
+            <div class="sds-popup__content out top-left">
+              <span class="tooltip tooltip-left">Pop Outside</span>
+            </div>
+          </button>
+          <button class="usa-button usa-button--base sds-popup margin-2">
+            out top-right
+            <div class="sds-popup__content out top-right">
+              <span class="tooltip tooltip-left">Pop Outside</span>
+            </div>
+          </button>
+          <button class="usa-button usa-button--base sds-popup margin-2">
+            out bottom-right
+            <div class="sds-popup__content out bottom-right">
+              <span class="tooltip tooltip-left">Pop Outside</span>
+            </div>
+          </button>
+          <button class="usa-button usa-button--base sds-popup margin-2">
+            out bottom-left
+            <div class="sds-popup__content out bottom-left">
+              <span class="tooltip tooltip-left">Pop Outside</span>
+            </div>
+          </button>
+        </div>
+        <!-- cardinals -->
+        <div>
+          <button class="usa-button usa-button sds-popup margin-2">
+            out right-middle
+            <div class="sds-popup__content out right-middle">
+              <span class="tooltip tooltip-left">Pop Outside</span>
+            </div>
+          </button>
+          <button class="usa-button usa-button sds-popup margin-2">
+            out left-middle
+            <div class="sds-popup__content out left-middle">
+              <span class="tooltip tooltip-left">Pop Outside</span>
+            </div>
+          </button>
+          <button class="usa-button usa-button sds-popup margin-2">
+            out top-center
+            <div class="sds-popup__content out top-center">
+              <span class="tooltip tooltip-left">Pop Outside</span>
+            </div>
+          </button>
+          <button class="usa-button usa-button sds-popup margin-2">
+            out bottom-center
+            <div class="sds-popup__content out bottom-center">
+              <span class="tooltip tooltip-left">Pop Outside</span>
+            </div>
+          </button>
+        </div>
       </div>
-      <div class="tablet-lg:order-1">
-        <!-- Buttons -->
-
-        <button class="usa-button usa-button sds-popup margin-05">out top-left      <div class="sds-popup__content out top-left      "><span class="sds-tag sds-tag--chip">Normal</span></div></button>
-        <button class="usa-button usa-button sds-popup margin-05">out top-center    <div class="sds-popup__content out top-center    "><span class="sds-tag sds-tag--chip">Normal</span></div></button>
-        <button class="usa-button usa-button sds-popup margin-05">out top-right     <div class="sds-popup__content out top-right     "><span class="sds-tag sds-tag--chip">Normal</span></div></button>
-        <button class="usa-button usa-button sds-popup margin-05">out right-middle  <div class="sds-popup__content out right-middle  "><span class="sds-tag sds-tag--chip">Normal</span></div></button>
-        <button class="usa-button usa-button sds-popup margin-05">out bottom-right  <div class="sds-popup__content out bottom-right  "><span class="sds-tag sds-tag--chip">Normal</span></div></button>
-        <button class="usa-button usa-button sds-popup margin-05">out bottom-center <div class="sds-popup__content out bottom-center "><span class="sds-tag sds-tag--chip">Normal</span></div></button>
-        <button class="usa-button usa-button sds-popup margin-05">out bottom-left   <div class="sds-popup__content out bottom-left   "><span class="sds-tag sds-tag--chip">Normal</span></div></button>
-        <button class="usa-button usa-button sds-popup margin-05">out left-middle   <div class="sds-popup__content out left-middle   "><span class="sds-tag sds-tag--chip">Normal</span></div></button>
-     
-    </div>
+      <!-- alternatives -->
+      <div class="grid-col-12 tablet-lg:grid-col-fill display-flex">
+        <div>
+          <button class="usa-button usa-button--secondary sds-popup margin-2">
+            rich content
+            <div class="sds-popup__content out top-center">
+              <div class="sds-alert bg-base-lightest ">
+                <div class="sds-alert-icon">
+                  <i class="fa fa-exclamation"></i>
+                </div>
+                <span>Review Required</span>
+                <p>Venenatis dapibus ex</p>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div>
+          <button class="usa-button usa-button--secondary sds-popup margin-2">
+            rich content
+            <div class="sds-popup__content out bottom-center">
+              <div class="radius-md shadow-2 margin-0 width-card-lg 
+              bg-primary-lighter text-left  
+              padding-1 border">
+                <h4 class="margin-0">Lorem ipsum dolor</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In neque nunc, auctor a cursus vitae,
+                  venenatis dapibus ex.
+                </p>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+</div>
+<h2>
+  <a class="usa-link">Pop in</a>
+</h2>
+<div class="sds-navbar border-bottom border-base-lighter">
+  <div class="sds-navbar__content">
+    <div class="grid-container margin-0">
+      <div class="tablet:grid-col-8">
 
-<div id="main-content">
-  <div class="grid-container margin-top-3 desktop:margin-top-5 margin-bottom-9">
-    <div class="grid-row grid-gap">
-      <div class="usa-layout-docs__main desktop:grid-col-9 usa-prose">
-        <h1>Page heading (h1)</h1>
+        <div class="sds-card">
+          <div class="sds-card__content">
+            <div class="grid-container">
+              <div class="grid-row">
+                <div class="tablet:grid-col-auto sds-popup">
+                  <i class="sds fa-bars fa-2x"></i>
+                  <div class="sds-popup__content in top-left margin-bottom-neg-05">
+                    <div class="radius-md shadow-2 margin-y-neg-205 width-card-lg bg-base-lightest 
+                  padding-x-1 padding-bottom-1 border">
+                      <h4><i class="sds fa-bars fa-2x"></i> Pop inside</h4>
+                      <ul>
+                        <li>Lorem ipsum sit amet</li>
+                        <li>Lorem ipsum</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="tablet:grid-col text-center">
+                  <div class="sds-popup">
+                    <i class="sds fa-download fa-2x"></i>
+                    <div class="sds-popup__content in top-center margin-bottom-neg-05">
+                        <div class="radius-md shadow-2 margin-y-neg-205 
+                        width-card-lg bg-base-lightest
+                        padding-x-1 padding-bottom-1 border">
+                          <i class="sds fa-download fa-2x"></i>
+                          <h4> Pop inside</h4>
+                          <p>Lorem ipsum sit amet<br />Lorem ipsum</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tablet:grid-col-auto sds-popup text-right">
+                  <i class="sds fa-exclamation-circle fa-2x"></i>
+                  <div class="sds-popup__content in top-right width-mobile margin-y-neg-2">
+                    <div class="sds-alert--block">
+                      <div class="sds-alert--block-icon grid-col-auto">
+                        <i class="sds fa-exclamation fa-2x"></i>
+                      </div>
+                      <div class="grid-col padding-y-2 padding-right-2">
+                        <label>Address Needs to be Updated</label>
+                        <span>600 14th St NW</span>
+                        <span>Washington, DC 20007</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="tablet:grid-col">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In neque nunc, auctor a cursus vitae,
+                    venenatis dapibus ex. Nam tristique aliquam efficitur. Aliquam sit amet sodales elit, accumsan
+                    lacinia
+                    nisi. Aliquam eu mauris ut augue fringilla congue a eu ante. Donec maximus placerat convallis. Morbi
+                    eu tincidunt neque, vel porta nulla. Suspendisse venenatis augue eget massa ullamcorper, et
+                    fringilla
+                    ipsum lobortis. In hac habitasse platea dictumst. Quisque et fringilla lacus, non consequat nulla.
+                  </p>
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="tablet:grid-col-auto sds-popup">
+                  <i class="sds fa-user-circle fa-2x"></i>
+                  <div class="sds-popup__content in bottom-left  ">
+                    <div class="sds-alert bg-base-lightest ">
+                      <div class="sds-alert-icon">
+                        <i class="fa fa-exclamation"></i>
+                      </div>
+                      <span>Review Required</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="tablet:grid-col text-center">
+                  <div class="sds-popup">
+                    <i class="sds fa-new-note fa-2x"></i>
+                    <div class="sds-popup__content in bottom-center">
+                      <div class="radius-md shadow-2 margin-0 width-card-lg 
+                       text-left bg-accent-cool padding-1 border">
 
-        <p class="usa-intro">
-          The page heading communicates the main focus of the page. Make your page heading descriptive and keep it
-          succinct.
-        </p>
+                          <p>The First item</p><hr class="thin"/>
+                          <p>The Second item</p><hr class="thin"/>
+                          <p>Another item</p><hr class="thin"/>
+                          <p>One More item</p><hr class="thin"/>
+                          <p>The Last item</p>
 
-        <h2 id="section-heading-h2">Section heading (h2)</h2>
-
-        <p>
-          These headings introduce, respectively, sections and subsections within your body copy. As you create these
-          headings, follow the same guidelines that you use when writing section headings: Be succinct, descriptive, and
-          precise.
-        </p>
-
-        <h3 id="section-heading-h3">Subsection heading (h3)</h3>
-
-        <p>
-          The particulars of your body copy will be determined by the topic of your page. Regardless of topic, it’s a
-          good practice to follow the inverted pyramid structure when writing copy: Begin with the information that’s
-          most important to your users and then present information of less importance.
-        </p>
-
-        <p>
-          Keep each section and subsection focused — a good approach is to include one theme (topic) per section.
-        </p>
-
-        <h4 id="section-heading-h4">Subsection heading (h4)</h4>
-
-        <p>
-          Use the side navigation menu to help your users quickly skip to different sections of your page. The menu is
-          best suited to displaying a hierarchy with one to three levels and, as we mentioned, to display the
-          sub-navigation of a given page.
-        </p>
-
-        <p>
-          Read the full documentation on our side navigation on the component page.
-        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tablet:grid-col-auto text-right sds-popup">
+                  <i class="sds fa-trash fa-2x"></i>
+                  <div class="sds-popup__content in bottom-right ">
+                      <div class="radius-md shadow-2 margin-0 width-card-lg 
+                      bg-primary-lighter text-left  
+                      padding-1 border">
+                        <h4 class="margin-0">Lorem ipsum dolor</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In neque nunc, auctor a cursus vitae,
+                          venenatis dapibus ex.
+                        </p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
