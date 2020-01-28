@@ -42,7 +42,7 @@
   line-height: 20px;
   font-weight: 600;
   padding: 0 5px 4px 0;
-  border-radius: 2px;
+  border-radius: 0;
   margin-right: 5px;
   display: inline-block;
   width: auto;
@@ -51,8 +51,7 @@
 .sds-tag[class*="sds-tag--status"]::before {
   content: "";
   display: inline-block;
-  border: 1px solid #5b616b;
-  background-color: #f1f1f1;
+  background-color: #5b616b;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -61,58 +60,48 @@
 }
 
 .sds-tag.sds-tag--status-green::before {
-  border: 1px solid #2e8540;
   background-color: #4aa564;
 }
 
 .sds-tag.sds-tag--status-gray::before {
-  border: 1px solid #aeb0b5;
   background-color: #e4e2e0;
 }
 
 .sds-tag.sds-tag--status-dark-gray::before {
-  border: 1px solid #aeb0b5;
   background-color: #5b616b;
 }
 
 .sds-tag.sds-tag--status-yellow::before {
-  border: 1px solid #fdb81e;
   background-color: #fad980;
 }
 
 .sds-tag.sds-tag--status-light-blue::before {
-  border: 1px solid #00a6d2;
   background-color: #9bdaf1;
 }
 
 .sds-tag.sds-tag--status-red::before {
-  border: 1px solid #981b1e;
   background-color: #e59393;
 }
 //Border colors
 .sds-tag--border-blue {
   border-color:  #00a6d2!important;
-  border-radius: 3px;
 }
 .sds-tag--border-red {
   border-color:  #981b1e!important;
-  border-radius: 3px;
 }
 .sds-tag--border-yellow {
   border-color:  #fdb81e!important;
-  border-radius: 3px;
 }
 // Outline tag
 .sds-tag[class*="sds-tag--outline"] {
   @include u-font("sans", "3xs");
   @include u-text("base-dark");
-  line-height: 20px;
+  line-height: 1rem;
   font-weight: 550;
-  padding: 5px;
+  padding: 7px;
   border: 1px solid;
   margin-right: 5px;
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 115px;
   background-color: #f5f5f0;
@@ -137,22 +126,22 @@
 
 .sds-tag.sds-tag--outline-green::before {
   border: 1px solid #2e8540;
-  background-color: #4aa564;
+  background-color: #2e8540;
 }
 
 .sds-tag.sds-tag--outline-gray::before {
   border: 1px solid #aeb0b5;
-  background-color: #e4e2e0;
+  background-color: #aeb0b5;
 }
 
 .sds-tag.sds-tag--outline-dark-gray::before {
   border: 1px solid #aeb0b5;
-  background-color: #5b616b;
+  background-color: #aeb0b5;
 }
 
 .sds-tag.sds-tag--outline-yellow::before {
   border: 1px solid #fdb81e;
-  background-color: #fad980;
+  background-color: #fdb81e;
 }
 
 .sds-tag.sds-tag--outline-blue::before {
@@ -162,12 +151,12 @@
 
 .sds-tag.sds-tag--outline-light-blue::before {
   border: 1px solid #00a6d2;
-  background-color: #9bdaf1;
+  background-color: #00a6d2;
 }
 
 .sds-tag.sds-tag--outline-red::before {
   border: 1px solid #981b1e;
-  background-color: #e59393;
+  background-color: #981b1e;
 }
 
 .sds-tag[class*="sds-tag--alt"] {
@@ -175,9 +164,9 @@
   @include u-font("sans", "3xs");
   @include u-text("base-dark");
   text-align: center;
-  line-height: 20px;
+  line-height: 1rem;
   font-weight: 550;
-  padding: 5px 10px;
+  padding: 7px 10px;
   border: 1px solid;
   margin-right: 5px;
   display: flex;
