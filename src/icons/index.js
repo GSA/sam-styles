@@ -47,6 +47,7 @@ import { sdsTriangle } from "./sdsTriangle";
 import { sdsLeaf } from "./sdsLeaf";
 import { sdsExclamationTriangle } from "./sdsExclamationTriangle";
 import { sdsSearch } from "./sdsSearch";
+import { sdsInformationCircle } from "./sdsInformationCircle";
 import { sdsNewVersion } from "./sdsNewVersion";
 import { sdsQuestion } from "./sdsQuestion";
 import { sdsVideoSquare } from "./sdsVideoSquare";
@@ -104,6 +105,7 @@ const _iconsCache = {
   sdsLeaf:sdsLeaf,
   sdsExclamationTriangle:sdsExclamationTriangle,
   sdsSearch:sdsSearch,
+  sdsInformationCircle:sdsInformationCircle,
   sdsNewVersion:sdsNewVersion,
   sdsQuestion:sdsQuestion,
   sdsVideoSquare:sdsVideoSquare,
@@ -163,6 +165,7 @@ export {
   sdsLeaf,
   sdsExclamationTriangle,
   sdsSearch,
+  sdsInformationCircle,
   sdsNewVersion,
   sdsQuestion,
   sdsVideoSquare,
