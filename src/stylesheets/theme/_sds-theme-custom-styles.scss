@@ -89,7 +89,7 @@ $theme-table-column-gap: 4;
     margin: 0;
   }
 
-  & + .site-table-wrapper {
+  &+.site-table-wrapper {
     margin-top: units(3);
   }
 }
@@ -179,12 +179,14 @@ $theme-table-column-gap: 4;
         width: 50%;
         z-index: z(0);
       }
+
       // stylelint-disable selector-no-qualifying-type
       &.is-empty {
         display: none;
       }
+
       // stylelint-enable selector-no-qualifying-type
-      & + tr {
+      &+tr {
         margin-top: units(1);
       }
     }
@@ -199,7 +201,7 @@ $theme-table-column-gap: 4;
         display: none;
       }
 
-      & + td {
+      &+td {
         border-top: units(1px) solid color('base-lighter');
       }
 
@@ -258,7 +260,7 @@ $theme-table-column-gap: 4;
         border: none;
         border-top: units(2px) solid;
 
-        & + tr {
+        &+tr {
           border-top: units(1px) solid color('base-lighter');
         }
       }
@@ -299,10 +301,12 @@ $theme-table-column-gap: 4;
         tr {
           border: none;
           border-top: units(1px) solid color('base-light');
+
           // stylelint-disable max-nesting-depth
           &:last-child {
             border-bottom: units(1px) solid color('base-light');
           }
+
           // stylelint-enable max-nesting-depth
         }
       }
@@ -318,5 +322,66 @@ $theme-table-column-gap: 4;
 
   table & {
     display: block;
+  }
+}
+
+.usa-accordion__block {
+  background-image: none;
+  background-color: white;
+  padding: 1rem 1.25rem 1rem 1.25rem;
+  font-weight: 600;
+  position: relative;
+  &:hover {
+    @include u-bg('accent-cool-light')
+  }
+
+  &:not([disabled]):focus,
+  &:focus {
+    outline: none;
+    outline-color: #79adfb;
+    outline-style: dashed;
+    outline-width: 1px;
+    outline-offset: 0;
+  }
+
+  &::after {
+    content: '';
+    display:inline-block;
+    width:25px;
+    height:25px;
+    background:linear-gradient(#0a3466,#0a3466);
+    background-position:center;
+    background-size: 54% 1px;
+    background-repeat:no-repeat;
+    position: absolute;
+    right: 27px;
+    top:7px;
+  }
+
+  &[aria-expanded=true] {
+    background-image: none;
+    color: #0a3466;
+    background-color: #eff6fb;
+  }
+
+  &[aria-expanded=false] {
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+
+    &::before {
+      content: '';
+      display:inline-block;
+      width:25px;
+      height:25px;
+      background:linear-gradient(#0a3466,#0a3466),#e2e2e2;
+      background-position:center;
+      background-size: 1px 54%;
+      background-repeat:no-repeat;
+      position: absolute;
+      right: 27px;
+      top:7px;
+      border-radius: 50%;
+    }
   }
 }
