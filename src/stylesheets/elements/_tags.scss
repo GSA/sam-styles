@@ -117,7 +117,7 @@
   @include u-text("base-dark");
   line-height: 1rem;
   font-weight: 550;
-  padding: 8px 8px 6px 8px;
+  padding: 7px 7px 7px 7px;
   border: 1px solid #c9c9c9;
   //@include u-border('base-light');
   margin-right: 14px;
@@ -126,7 +126,7 @@
   background-color: #f7f9fa;
 }
 .sds-tag[class*="sds-tag--alt"] {
-  padding: 8px 8px 8px 8px;
+  padding: 7px 7px 7px 7px;
   display: block;
   text-align: center;
   white-space: nowrap;
@@ -139,7 +139,7 @@
   min-width: 8px;
   height: 8px;
   border-radius: 50%;
-  margin: 4px 11px 2px 4px;
+  margin: 4.5px 11px 2px 4px;
 }
 
 .sds-tag.sds-tag--outline-green::before {
