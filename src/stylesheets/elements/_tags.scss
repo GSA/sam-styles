@@ -86,7 +86,7 @@
 .sds-tag {
   &.sds-tag- {
     &-outline-blue,
-    &-alt {
+    &-alert {
       &.sds-tag--border-blue {
         @include u-border('info');
       }
@@ -94,7 +94,7 @@
   }
   &.sds-tag- {
     &-outline-red,
-    &-alt {
+    &-alert {
       &.sds-tag--border-red {
         @include u-border('error');
       }
@@ -102,7 +102,7 @@
   }
   &.sds-tag- {
     &-outline-yellow,
-    &-alt {
+    &-alert {
       &.sds-tag--border-yellow {
         @include u-border('warning');
       }
@@ -112,20 +112,19 @@
 // Outline tag
 
 .sds-tag[class*="sds-tag--outline"],
-.sds-tag[class*="sds-tag--alt"] {
+.sds-tag[class*="sds-tag--alert"] {
   @include u-font("sans", "3xs");
   @include u-text("base-dark");
   line-height: 1rem;
   font-weight: 550;
   padding: 7px 7px 7px 7px;
   border: 1px solid #c9c9c9;
-  //@include u-border('base-light');
   margin-right: 14px;
   display: flex;
   width: 128px;
   background-color: #f7f9fa;
 }
-.sds-tag[class*="sds-tag--alt"] {
+.sds-tag[class*="sds-tag--alert"] {
   padding: 7px 7px 7px 7px;
   display: block;
   text-align: center;
