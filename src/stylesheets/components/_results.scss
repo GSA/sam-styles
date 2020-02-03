@@ -10,7 +10,7 @@
     flex-direction: column;
   }
 
-  &.dual-record {
+  &.sds-results-child {
     background-color: #f9f9f7;
     @include u-radius('lg');
     @include u-padding('105');
@@ -18,18 +18,16 @@
     @include u-border('base-lighter');
   }
 
-  .dual-record {
+  .sds-results-child {
     &--title {
       @include u-line-height('sans', 6);
-      @include u-border('base-light');
-      @include u-border(0);
+      @include u-border-bottom('base-light');
       @include u-border-bottom('2px');
       @include u-border-bottom('dashed');
     }
 
     &--hilite {
-      @include u-border('base-light');
-      @include u-border(0);
+      @include u-border-bottom('base-light');
       @include u-border-bottom('1px');
       @include u-border-bottom('dashed');
     }
