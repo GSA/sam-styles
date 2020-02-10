@@ -1,3 +1,4 @@
+// Info tags
 .sds-tag--info-purple {
   @include u-bg("violet-warm-10v");
   @include u-border("indigo-warm-50");
@@ -32,6 +33,7 @@
   font-size: 12px;
   margin-left: 5px;
 }
+
 // Status tag
 
 .sds-tag[class*="sds-tag--status"] {
@@ -48,48 +50,38 @@
   width: auto;
 }
 
-// .sds-tag[class*="sds-tag--status"]::before {
-//   content: "";
-//   display: inline-block;
-//   // background-color: #5b616b;
-//   width: 20px;
-//   height: 20px;
-//   border-radius: 50%;
-//   margin-right: 5px;
-//   vertical-align: bottom;
-// }
+// Status tag Outlined colors
 
-//Border colors
-.sds-tag {
-  &.sds-tag- {
-    &-outline-blue,
-    &-alert {
-      &.sds-tag--border-blue {
-        @include u-border("info");
-      }
-    }
-  }
-  &.sds-tag- {
-    &-outline-red,
-    &-alert {
-      &.sds-tag--border-red {
-        @include u-border("error");
-      }
-    }
-  }
-  &.sds-tag- {
-    &-outline-yellow,
-    &-alert {
-      &.sds-tag--border-yellow {
-        @include u-border("warning");
-      }
-    }
-  }
-}
+// .sds-tag {
+//   &.sds-tag- {
+//     &-outline-blue,
+//     &-alert {
+//       &.sds-tag--border-blue {
+//         @include u-border("info");
+//       }
+//     }
+//   }
+//   &.sds-tag- {
+//     &-outline-red,
+//     &-alert {
+//       &.sds-tag--border-red {
+//         @include u-border("error");
+//       }
+//     }
+//   }
+//   &.sds-tag- {
+//     &-outline-yellow,
+//     &-alert {
+//       &.sds-tag--border-yellow {
+//         @include u-border("warning");
+//       }
+//     }
+//   }
+// },
+//.sds-tag[class*="sds-tag--alert"]
 // Outline tag
 
-.sds-tag[class*="sds-tag--outline"],
-.sds-tag[class*="sds-tag--alert"] {
+.sds-tag[class*="sds-tag--outline"] {
   @include u-font("sans", "3xs");
   @include u-text("base-dark");
   line-height: 1rem;
@@ -101,13 +93,40 @@
   width: 128px;
   background-color: #f7f9fa;
 }
-.sds-tag[class*="sds-tag--alert"] {
-  padding: 7px 7px 7px 7px;
-  display: block;
-  text-align: center;
-  white-space: nowrap;
-  height: 32px;
-}
+.sds-tag.sds-tag--outline{
+  &--blue {@include u-border("info-dark");}
+  &--red {@include u-border("error");}
+  &--green {@include u-border("success");}
+  &--gray {@include u-border("base-light");}
+  &--dark-gray {@include u-border("base");}
+  &--yellow {@include u-border("warning");}
+  &--blue {@include u-border("secondary-vivid");}
+  &--light-blue {@include u-border("info");}
+  &--brown {@include u-border("warning-darker");}
+  
+  &--danger {@include u-border("error");}
+  &--info {@include u-border ('info');}
+  &--info-lighter {@include u-border ('info-lighter');}
+  &--info-light {@include u-border ('info-light');}
+  &--info-dark {@include u-border ('info-dark');}
+  &--info-darker {@include u-border ('info-darker');}
+  &--error {@include u-border ('error');}
+  &--error-lighter {@include u-border ('error-lighter');}
+  &--error-light {@include u-border ('error-light');}
+  &--error-dark {@include u-border ('error-dark');}
+  &--error-darker {@include u-border ('error-darker');}
+  &--warning {@include u-border ('warning');}
+  &--warning-lighter {@include u-border ('warning-lighter');}
+  &--warning-light {@include u-border ('warning-light');}
+  &--warning-dark {@include u-border ('warning-dark');}
+  &--warning-darker {@include u-border ('warning-darker');}
+  &--success {@include u-border ('success');}
+  &--success-lighter {@include u-border ('success-lighter');}
+  &--success-light {@include u-border ('success-light');}
+  &--success-dark {@include u-border ('success-dark');}
+  &--success-darker {@include u-border ('success-darker');}
+  &--disabled {@include u-border ('disabled');}
+  }
 
 .sds-tag--small {
   @include u-font("sans", "3xs");
@@ -183,98 +202,36 @@ Label Title
 
 
 // color variants 
-.sds-status--blue {
-  @include u-bg("info-dark");
-}
-.sds-status--red {
-  @include u-bg("error");
-}
-.sds-status--green {
-  @include u-bg("success");
-}
-.sds-status--gray {
-  @include u-bg("base-light");
-}
-.sds-status--dark-gray {
-  @include u-bg("base");
-}
-.sds-status--yellow {
-  @include u-bg("warning");
-}
-.sds-status--blue {
-  @include u-bg("secondary-vivid");
-}
-.sds-status--light-blue {
-  @include u-bg("info");
-}
-.sds-status--brown {
-  @include u-bg("warning-darker");
-}
+.sds-status--blue {@include u-bg("info-dark");}
+.sds-status--red {@include u-bg("error");}
+.sds-status--green {@include u-bg("success");}
+.sds-status--gray {@include u-bg("base-light");}
+.sds-status--dark-gray {@include u-bg("base");}
+.sds-status--yellow {@include u-bg("warning");}
+.sds-status--blue {@include u-bg("secondary-vivid");}
+.sds-status--light-blue {@include u-bg("info");}
+.sds-status--brown {@include u-bg("warning-darker");}
 
 // state variants (used where the item shown has an implied state/status)
-.sds-status--danger {
-  @include u-bg("error");
-}
-.sds-status--info {
-  @include u-bg ('info');
-}
-.sds-status--info-lighter {
-  @include u-bg ('info-lighter');
-}
-.sds-status--info-light {
-  @include u-bg ('info-light');
-}
-.sds-status--info-dark {
-  @include u-bg ('info-dark');
-}
-.sds-status--info-darker {
-  @include u-bg ('info-darker');
-}
-.sds-status--error {
-  @include u-bg ('error');
-}
-.sds-status--error-lighter {
-  @include u-bg ('error-lighter');
-}
-.sds-status--error-light {
-  @include u-bg ('error-light');
-}
-.sds-status--error-dark {
-  @include u-bg ('error-dark');
-}
-.sds-status--error-darker {
-  @include u-bg ('error-darker');
-}
-.sds-status--warning {
-  @include u-bg ('warning');
-}
-.sds-status--warning-lighter {
-  @include u-bg ('warning-lighter');
-}
-.sds-status--warning-light {
-  @include u-bg ('warning-light');
-}
-.sds-status--warning-dark {
-  @include u-bg ('warning-dark');
-}
-.sds-status--warning-darker {
-  @include u-bg ('warning-darker');
-}
-.sds-status--success {
-  @include u-bg ('success');
-}
-.sds-status--success-lighter {
-  @include u-bg ('success-lighter');
-}
-.sds-status--success-light {
-  @include u-bg ('success-light');
-}
-.sds-status--success-dark {
-  @include u-bg ('success-dark');
-}
-.sds-status--success-darker {
-  @include u-bg ('success-darker');
-}
-.sds-status--disabled {
-  @include u-bg ('disabled');
-}
+.sds-status--danger {@include u-bg("error");}
+.sds-status--info {@include u-bg ('info');}
+.sds-status--info-lighter {@include u-bg ('info-lighter');}
+.sds-status--info-light {@include u-bg ('info-light');}
+.sds-status--info-dark {@include u-bg ('info-dark');}
+.sds-status--info-darker {@include u-bg ('info-darker');}
+.sds-status--error {@include u-bg ('error');}
+.sds-status--error-lighter {@include u-bg ('error-lighter');}
+.sds-status--error-light {@include u-bg ('error-light');}
+.sds-status--error-dark {@include u-bg ('error-dark');}
+.sds-status--error-darker {@include u-bg ('error-darker');}
+.sds-status--warning {@include u-bg ('warning');}
+.sds-status--warning-lighter {@include u-bg ('warning-lighter');}
+.sds-status--warning-light {@include u-bg ('warning-light');}
+.sds-status--warning-dark {@include u-bg ('warning-dark');}
+.sds-status--warning-darker {@include u-bg ('warning-darker');}
+.sds-status--success {@include u-bg ('success');}
+.sds-status--success-lighter {@include u-bg ('success-lighter');}
+.sds-status--success-light {@include u-bg ('success-light');}
+.sds-status--success-dark {@include u-bg ('success-dark');}
+.sds-status--success-darker {@include u-bg ('success-darker');}
+.sds-status--disabled {@include u-bg ('disabled');}
