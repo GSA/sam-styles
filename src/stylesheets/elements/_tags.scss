@@ -5,7 +5,7 @@
   @include u-border("1px");
   font-weight: 600;
   border-radius: 0;
-  @include u-text("base-darker");
+  @include u-text("ink");
 }
 
 .sds-tag--info-white {
@@ -13,7 +13,7 @@
   border: 1px solid #76766a;
   font-weight: 600;
   border-radius: 0;
-  @include u-text("base-darker");
+  @include u-text("ink");
 }
 
 // Chip tag
@@ -160,7 +160,7 @@ Label Title
 .sds-tag--light {
   @include u-bg("white", !important);
   @include u-border("warning", !important);
-  @include u-text("base-darker", !important);
+  @include u-text("ink", !important);
 }
 
 .sds-static--tag {
