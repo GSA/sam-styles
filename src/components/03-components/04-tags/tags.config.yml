@@ -1,4 +1,4 @@
-label: Labels
+label: Tags
 status: wip
 preview: "@sam-content"
 variants:
@@ -14,8 +14,20 @@ variants:
       label:
         classes: "sds-tag sds-tag--chip"
 
+  - name: status
+    label: Status
+    context:
+      label:
+        classes: "sds-tag sds-tag--status"
+
+  - name: outline-sam
+    label: Outlined SAM
+    context:
+      label:
+        classes: "sds-tag sds-tag--outline"
+
   - name: outline
-    label: Outline
+    label: Outlined Extended
     context:
       label:
         classes: "sds-tag sds-tag--outline"
