@@ -55,6 +55,7 @@
 .sds-tag[class*="sds-tag--outline"] {
   @include u-font("sans", "3xs");
   @include u-text("base-dark");
+  @include u-border("1px");
   line-height: 1rem;
   font-weight: 550;
   padding: 6px 7px 7px 7px;
