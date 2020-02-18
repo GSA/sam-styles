@@ -3,7 +3,6 @@
   display:inline-block;
 }
 .sds-popup__content {
-  //outline: 1px solid red;
 }
 .sds-popup:hover .sds-popup__content {
   z-index: 10;
@@ -20,7 +19,6 @@
   user-select: none; 
   cursor:pointer;
   
-  /* beautify preserve:start */
   &.in{
     &.top-left      {left: 0;   top:0;  bottom: unset;  right: unset;}
     &.top-center    {left: 25%; top:0;  bottom: unset;  right: unset;
@@ -50,19 +48,20 @@
     &.bottom-left   {top: 100%;  left: 0;  text-align: left}
     &.left-middle   {left: 0; top: 0; right: 0%; text-align: start; height:100%;
       *:first-child {position: absolute;  top: 50%; right:100%; transform: translateY(-50%);
-        /* beautify preserve:end */
       }
     }
     .tooltip {
-      background-color: color("base-dark");
-      border: 1px solid color("base-darkest");
-      @include u-text("base-lightest");
-      @include u-font("sans", "3xs");
-      padding: 2px 5px;
-      white-space: nowrap;
-      display: inline-block;
-      @include u-margin(1px);
-     
+      @include u-display('inline-block');
+      @include u-bg('base-dark');
+      @include u-border('1px');
+      @include u-border('solid');
+      @include u-border('base-darkest');
+      @include u-text('base-lightest');
+      @include u-font('sans', '3xs');
+      @include u-padding-x('2px');
+      @include u-padding-y('05');
+      @include u-text('no-wrap');
+      @include u-margin('1px');
     }
   }
 }
