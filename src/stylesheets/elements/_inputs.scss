@@ -90,4 +90,5 @@
 }
 .usa-form-group--error {
   border-left: .15rem solid #b50909 !important;
+  @include u-margin-top(0);
 }
