@@ -8,6 +8,7 @@
 
 .sds-tile__content {
   @include u-display('flex');
+  @include u-flex('no-wrap');
   @include u-flex('column');
   @include u-text('center');
   @include u-width('card-lg');
@@ -22,9 +23,8 @@
       @include u-margin-x('auto');
       @include u-margin-bottom('105');
       text-decoration: none !important;
-
-      svg {
-        height: 80px;
+      svg.fa-stack-1x{
+        font-size: 2em;
       }
     }
 
@@ -40,30 +40,31 @@
     }
   }
   @media only screen and (max-width: 600px) {
+      @include u-display('flex');
+      @include u-flex('column');
+      width: 150px;
+
     .sds-tile__icon {
-      @include u-display('inline-block');
+      align-self: center;
       margin-top: 10px;
-      width: 40px;
+      width: 60px;
       text-decoration: none !important;
 
       svg {
-        height: 40px !important;
+        height: 60px !important;
+        width: 60px !important;
       }
     }
 
     .sds-tile__title {
-      @include u-display('block');
       @include u-font('sans', 'sm');
       @include u-text('bold');
       @include u-text('black');
-      @include u-text('left');
     }
 
     .sds-tile__details {
       @include u-font('sans', 'xs');
       @include u-text('black');
-      @include u-display('block');
-      @include u-text('left');
     }
   }
 }
@@ -100,12 +101,6 @@
   }
 }
 @media only screen and (max-width: 600px) {
-  .sds-tile {
-    @include u-display('block');
-    @include u-margin-y(1);
-  }
-
-  .sds-tile__content,
   .sds-tile__content.sds-tile--outline {
     @include u-display('flex');
     @include u-flex('row');
