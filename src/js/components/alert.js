@@ -53,22 +53,3 @@ Array.prototype.slice
     });
   }
 
-
-  //hide header alert once all alerts have been closed
-  var closeMobile = document.getElementsByClassName("sds-alert--header__close-mobile");
-  var b;
-  var btnCounter = 0;
-
-  for (b = 0; b < closeMobile.length; b++) {
-    closeMobile[b].addEventListener("click", function(event) {
-      this.parentElement.style.display = 'none';
-      btnCounter++;
-      if (btnCounter === closeMobile.length)
-      {
-        let header = document.getElementById("sds-alert--header")
-        header.style.display = 'none';
-        let contentbtn = document.getElementById("sds-mobile-alert__content-btn")
-        contentbtn.style.display = 'none';
-      }
-    });
-  }
