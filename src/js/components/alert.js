@@ -29,3 +29,27 @@ Array.prototype.slice
       }
     });
   }
+
+
+  //mobile header alert show alerts once arrow is clicked
+  var showbtns = document.getElementsByClassName("sds-alert--header__show");
+  var a;
+  var mobileCounter = 0;
+
+  for (a = 0; a < showbtns.length; a++) {
+    showbtns[a].addEventListener("click", function(event) {
+      this.parentElement.style.display = 'none';
+      mobileCounter++;
+      if (mobileCounter === showbtns.length)
+      {
+        let mobileHeader = document.getElementById("sds-mobile-alert")
+        mobileHeader.style.display = 'none';
+        console.log('hi');
+        let content = document.getElementById("sds-mobile-alert__content")
+        content.style.display = 'flex';
+        let contentbtn = document.getElementById("sds-mobile-alert__content-btn")
+        contentbtn.style.display = 'flex';
+      }
+    });
+  }
+
