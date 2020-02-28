@@ -44,3 +44,13 @@
   right: 0;
   top: 0;
 }
+
+.usa-banner__header-description {
+  display: none;
+  @media (min-width: 830px) {
+    display: inline-block;
+    flex-grow: 1;
+    text-align: right;
+    padding-right: 10px;
+  }
+}
