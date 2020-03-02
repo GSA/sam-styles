@@ -154,6 +154,7 @@
     @include u-border-y(1px);
     @include u-border-y('yellow-20v');
     @include u-padding('105');
+    min-width: 375px;
 
     .sds-alert--header__icon {
       @include u-margin-x('205');
@@ -177,7 +178,6 @@
 
       &:hover {
         box-shadow: 0 0 11px rgba(33,33,33,.2);
-        //@include u-bg('yellow-5');
       }
     }
 
@@ -193,7 +193,7 @@
       @include u-text('semibold');
       @include u-text('secondary-dark');
       @include u-text('no-underline');
-      @include u-margin-x(1);
+      @include u-margin-x(0);
       @include u-font('sans', 'xs');
       line-height: 14px;
     }
@@ -206,4 +206,63 @@
       @include u-padding-bottom('1px');
       line-height: 14px;
     }
+}
+//ALERT--HEADER Mobile
+.sds-mobile-alert {
+  flex-wrap: nowrap;
+  .sds-alert--header__icon-mobile {
+    @include u-margin-x('205');
+    @include u-margin-y(1);
+    @include u-height(5);
+    @include u-width(5);
+    @include u-text('yellow-20v');
   }
+  .sds-alert--header__show {
+    @include u-margin-y(1);
+  }
+}
+
+//ALERT--HEADER Mobile Content
+.sds-mobile-alert__content{
+  @include u-padding-y('05');
+  @include u-padding-x('105');
+  @include u-margin-y(1);
+  @include u-border(1px);
+  @include u-border('gray-10');
+  border-radius: 12px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  .sds-button--circle {
+    margin: auto;
+  }
+  .sds-alert--header__label {
+    max-width: 350px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+// @media only screen and (max-width: 640px) {
+//   .sds-alert--header__link {
+//     display: block !important;
+//     margin-left: 0 !important;
+//   }
+//   .sds-alert--header__content, .sds-mobile-alert__content, .sds-alert--header__icon, .sds-mobile-alert__content-btn {
+//     display: none;
+//   }
+//   .sds-alert--header {
+//      .sds-alert--button{
+//        display: none;
+//        text-align: right;
+//        margin-top: 10px;
+//      }
+//    }
+// }
+
+// @media only screen and (min-width: 640px) {
+//   .sds-mobile-alert, .sds-mobile-alert__content, .sds-mobile-alert__content-btn{
+//     display: none;
+//   }
+// }
