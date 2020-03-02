@@ -53,6 +53,8 @@ import { sdsQuestion } from "./sdsQuestion";
 import { sdsVideoSquare } from "./sdsVideoSquare";
 import { sdsVideoCircle } from "./sdsVideoCircle";
 import { sdsVideoPlay } from "./sdsVideoPlay";
+import { sdsArrowDown } from "./sdsArrowDown";
+import { sdsArrowUp } from "./sdsArrowUp";
 const prefix = "sds";
 
 const _iconsCache = {
@@ -110,7 +112,9 @@ const _iconsCache = {
   sdsQuestion:sdsQuestion,
   sdsVideoSquare:sdsVideoSquare,
   sdsVideoCircle:sdsVideoCircle,
-  sdsVideoPlay:sdsVideoPlay
+  sdsVideoPlay:sdsVideoPlay,
+  sdsArrowUp: sdsArrowUp,
+  sdsArrowDown: sdsArrowDown
 };
 
 export {
@@ -170,5 +174,7 @@ export {
   sdsQuestion,
   sdsVideoSquare,
   sdsVideoCircle,
-  sdsVideoPlay
+  sdsVideoPlay,
+  sdsArrowUp,
+  sdsArrowDown
 };
