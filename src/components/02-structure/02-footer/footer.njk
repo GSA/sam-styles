@@ -1,6 +1,6 @@
 <div class="sds-feedback">
   <button type="button" class="sds-feedback__button" [attr.aria-expanded]="!isCollapsedContent" aria-controls="collapseID" (click)="isCollapsedContent = !isCollapsedContent">
-    <i class="sds-feedback__closed sds fa-arrow-left"></i>
+    <i class="sds-feedback__open sds fa-arrow-down"></i>
     <span class="sds-feedback__title">Feedback</span>
   </button>
   <div id="collapseID" [sdsCollapse]="isCollapsedContent" class="sds-feedback__response">

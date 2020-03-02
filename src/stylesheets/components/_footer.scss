@@ -118,16 +118,18 @@
 
     .sds-feedback__open {
       @include u-padding(1);
-      //@include u-border('none');
-      border: none;
       @include u-bg('base-light');
+      height: 30px;
+      width: 30px;
+      border: none;
       border-radius: 50%;
     }
     .sds-feedback__closed {
       @include u-padding(1);
-      //@include u-border('none');
-      border: none;
       @include u-bg('primary');
+      height: 30px;
+      width: 30px;
+      border: none;
       border-radius: 50%;
     }
     .sds-feedback__title{
