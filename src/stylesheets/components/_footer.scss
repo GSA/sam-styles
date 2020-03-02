@@ -97,3 +97,79 @@
 .sds-footer__note {
   @include u-font('body', '2xs');
 }
+
+/*******************************
+      SDS Feedback Styles
+*******************************/
+.sds-feedback {
+  .sds-feedback__button {
+    @include u-text('center');
+    @include u-padding-y('3');
+    @include u-radius-top('pill');
+    //@include u-border('none');
+    //@include u-display('flex');
+    border: none;
+    display: flex;
+    @include u-flex('column');
+    @include u-flex('align-center');
+    background-color: ghostwhite;
+    width: 140px;
+    margin: auto;
+
+    .sds-feedback__open {
+      @include u-padding(1);
+      //@include u-border('none');
+      border: none;
+      @include u-bg('base-light');
+      border-radius: 50%;
+    }
+    .sds-feedback__closed {
+      @include u-padding(1);
+      //@include u-border('none');
+      border: none;
+      @include u-bg('primary');
+      border-radius: 50%;
+    }
+    .sds-feedback__title{
+      @include u-font('sans', 'sm');
+      @include u-text('base-dark');
+      @include u-margin-top(1);
+    }
+  }
+
+  .sds-feedback__response {
+    background-color: ghostwhite;
+    width: 100%;
+    height: 300px;
+
+    .sds-feedback__response-title{
+      @include u-font('sans', 'lg');
+      @include u-text('base');
+      @include u-text('bold');
+      //@include u-display('display-inline');
+      display: inline;
+    }
+
+    .sds-feedback__response-title-thin{
+      @include u-font('sans', 'lg');
+      @include u-text('base');
+      @include u-text('normal');
+      //@include u-display('display-inline');
+      display: inline;
+    }
+
+    .sds-feedback__response-text{
+      @include u-font('sans', 'md');
+      @include u-text('secondary-dark');
+      @include u-text('bold');
+      //@include u-display('display-block');
+      display: block;
+    }
+
+    .sds-feedback__input {
+      height: 150px;
+      width: 100%;
+      border: none;
+    }
+  }
+}
