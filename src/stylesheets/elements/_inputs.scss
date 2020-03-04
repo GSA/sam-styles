@@ -1,3 +1,19 @@
+//sds form layout
+.sds-form.usa-form.usa-form--large {
+  @media (min-width: 30em){
+    @include u-padding-x(4);
+    @include u-padding-y(2);
+    max-width: 40rem;
+  }
+
+  .sds-form__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+//select
 .usa-select {
   @include add-background-svg('sam/arrow-down');
   background-size: 0.6rem;
