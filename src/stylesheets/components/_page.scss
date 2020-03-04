@@ -1,6 +1,8 @@
 sds-page {
   @include u-display("block");
   @include u-margin-y(2);
+  @include u-margin-bottom(8)
+  min-height: 600px;
 
   &.condensed {
     @include u-font("sans", "3xs");
