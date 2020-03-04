@@ -1,21 +1,25 @@
 .sds-card {
-  @include u-margin-y(5);
+  @include u-margin-y(2);
   @include u-padding-top(2);
-  @include u-padding-x('205');
-  @include u-padding-bottom('205');
+  @include u-padding-x("205");
+  @include u-padding-bottom("205");
   border-radius: 4px;
   background-color: white;
-  box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px 0px rgba(0, 0, 0, 0.10);
+  
 
   h2 {
     @include u-margin-y(1);
   }
 
   a:visited {
-    color: color('indigo-cool-60');
+    color: color("indigo-cool-60");
+  }
+  &.sds-card--vertical {
+    display: flex;
+    flex-direction: row;
   }
 }
-
 .sds-card .sds-card__header {
   display: flex;
   align-items: center;
@@ -23,7 +27,7 @@
 
   .sds-card__header-mobile {
     margin-right: auto;
-    @include u-margin-left('05');
+    @include u-margin-left("05");
     @media only screen and (min-width: 600px) {
       display: none;
       overflow: hidden;
@@ -36,10 +40,27 @@
   }
 }
 
+.sds-card--vertical .sds-card__header {
+  align-content: flex-start;
+  align-items: flex-start;
+  padding-right: 16px;
+}
 .sds-card .sds-card__content {
   display: block;
-  @include u-padding-top('105');
+  @include u-padding-top("105");
   @media only screen and (max-width: 600px) {
     display: none;
   }
+}
+.sds-card--vertical .sds-card__content {
+  padding-left: 16px;
+  padding-top: 0px;
+}
+.sds-card--title {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.sds-card--subtitle {
+  margin-top: -1.3rem;
 }
