@@ -67,15 +67,15 @@
     @include u-margin(4);
   }
   .sds-card--lg__header {
-    @include u-padding(2);
+    @include u-padding('105');
     @include u-bg('accent-cool-lighter');
-    @include u-height(7);
+
     h3, a {
       @include u-text('base-darker');
       @include u-text('no-underline');
       @include u-font-family('sans');
       @include u-margin(0);
-      font-size: 28px;
+      font-size: 26px;
     }
   }
 
@@ -84,8 +84,8 @@
     @include u-text('semibold');
     @include u-font-family('sans');
     @include u-padding-x(2);
-    @include u-margin-bottom(1);
-    font-size: 24px;
+    @include u-margin-y(1);
+    font-size: 20px;
   }
 
   .sds-card--lg__links {
@@ -93,7 +93,7 @@
     @include u-flex('column');
     @include u-padding-x(2);
     @include u-font-family('sans');
-    font-size: 22px;
+    font-size: 18px;
 
     a {
       @include u-display('flex');
