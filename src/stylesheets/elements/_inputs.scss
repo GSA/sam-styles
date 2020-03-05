@@ -55,6 +55,10 @@
 //big search
 .sds-search--big {
   box-shadow: 2px 1px 6px 1px #c9c9c9;
+
+  .search {
+    width: 100%;
+  }
   .usa-input{
     height: 65px;
     max-width: 680px;
@@ -65,9 +69,16 @@
     width: 65px;
   }
 
+  .usa-search{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
   .usa-select {
-    max-width: 745px;
-    height: 50px;
+    border: solid 1px #c9c9c9;
+    max-width: 250px;
+    height: 65px;
     @include u-margin(0);
     @include u-padding-x(2);
   }
