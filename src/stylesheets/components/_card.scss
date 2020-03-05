@@ -73,23 +73,27 @@
     h3, a {
       @include u-text('base-darker');
       @include u-text('no-underline');
-      @include u-font('sans', 'lg');
+      @include u-font-family('sans');
       @include u-margin(0);
+      font-size: 28px;
     }
   }
 
   .sds-card--lg__title {
     @include u-text('ink');
     @include u-text('semibold');
-    @include u-font('sans', 'md');
+    @include u-font-family('sans');
     @include u-padding-x(2);
     @include u-margin-bottom(1);
+    font-size: 24px;
   }
 
   .sds-card--lg__links {
     @include u-display('flex');
     @include u-flex('column');
     @include u-padding-x(2);
+    @include u-font-family('sans');
+    font-size: 22px;
 
     a {
       @include u-display('flex');
