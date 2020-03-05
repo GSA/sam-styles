@@ -52,6 +52,27 @@
   }
 }
 
+//big search
+.sds-search--big {
+  box-shadow: 2px 1px 6px 1px #c9c9c9;
+  .usa-input{
+    height: 65px;
+    max-width: 680px;
+    min-width: 80px;
+  }
+  .usa-search.usa-search--small > .search > .usa-button {
+    height: 65px;
+    width: 65px;
+  }
+
+  .usa-select {
+    max-width: 745px;
+    height: 50px;
+    @include u-margin(0);
+    @include u-padding-x(2);
+  }
+}
+
 //inverse search
 .usa-select--inverse {
     color: white !important;
