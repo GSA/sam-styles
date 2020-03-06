@@ -23,7 +23,7 @@
   border: 1px solid color("primary");
   @include u-font("sans", "3xs");
   padding: 2px 5px;
-  display: inline-flex;
+  @include u-display('inline-flex');
   margin-bottom: 5px;
   align-items: flex-start;
 }
