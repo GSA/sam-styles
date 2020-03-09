@@ -73,8 +73,7 @@
   @include u-display('flex');
   align-items: center;
   justify-content: space-between;
-  @include u-padding-top(2);
-  @include u-padding-x("205");
+  @include u-padding("205");
 
   .sds-card__header-mobile {
     @include u-margin-right("auto");
