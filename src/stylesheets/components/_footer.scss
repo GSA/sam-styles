@@ -102,7 +102,11 @@
       SDS Feedback Styles
 *******************************/
 .sds-feedback {
+  filter: drop-shadow(0 -5px 5px #f5f5f0);
+  padding-top: 15px;
+
   .sds-feedback__button {
+    @include u-bg('white');
     @include u-text('center');
     @include u-padding-y('3');
     @include u-radius-top('pill');
