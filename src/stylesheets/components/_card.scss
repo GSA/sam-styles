@@ -1,29 +1,40 @@
 .sds-card {
-  @include u-margin-y(5);
-  @include u-padding-top(2);
-  @include u-padding-x('205');
-  @include u-padding-bottom('205');
-  border-radius: 4px;
-  background-color: white;
-  box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.15);
+  @include u-margin-y(2);
+  @include u-radius('md');
+  @include u-bg('white');
+  box-shadow: 0 6px 12px 0px rgba(0, 0, 0, 0.1);
 
   h2 {
     @include u-margin-y(1);
   }
 
   a:visited {
-    color: color('indigo-cool-60');
+    color: color("indigo-cool-60");
+  }
+  &.sds-card--vertical {
+    @include u-display('flex');
+    flex-direction: row;
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include u-margin-y(0);
+    }
   }
 }
-
 .sds-card .sds-card__header {
-  display: flex;
+  @include u-display('flex');
   align-items: center;
   justify-content: space-between;
+  @include u-padding-top(2);
+  @include u-padding-x("205");
+  //@include u-padding-bottom("205");
 
   .sds-card__header-mobile {
-    margin-right: auto;
-    @include u-margin-left('05');
+    @include u-margin-right("auto");
+    @include u-margin-left("05");
     @media only screen and (min-width: 600px) {
       display: none;
       overflow: hidden;
@@ -36,14 +47,49 @@
   }
 }
 
+.sds-card--vertical .sds-card__header {
+  @include u-display('block');
+  align-content: flex-start;
+  align-items: flex-start;
+  @include u-border("base-light");
+  @include u-border-right("1px");
+  @include u-border-left(0);
+  @include u-border-y(0);
+}
 .sds-card .sds-card__content {
-  display: block;
-  @include u-padding-top('105');
+  @include u-padding-x("205");
+  @include u-padding-bottom("205");
+  @include u-display('block');
+  @include u-padding-top("105");
   @media only screen and (max-width: 600px) {
     display: none;
   }
 }
+.sds-card--vertical .sds-card__content {
+  @include u-padding-left(2);
+  @include u-padding-top(2);
+}
+.sds-card--title {
+  @include u-padding-top(0);
+  @include u-margin-top(0);
+}
 
+.sds-card--vertical .sds-card__header {
+  @media only screen and (max-width: 600px) {
+    @include u-padding-bottom("205");
+    @include u-border-right(0);
+  }
+}
+.sds-card--vertical .sds-card__header-mobile {
+  @include u-margin-right("auto");
+  @include u-margin-left("05");
+  @include u-padding("205");
+  @media only screen and (min-width: 600px) {
+    display: none;
+    overflow: hidden;
+    max-height: 0;
+  }
+}
 //sds card SMALL
 .sds-card.sds-card--sm {
   @include u-text('base-dark');
