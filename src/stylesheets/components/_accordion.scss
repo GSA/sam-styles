@@ -225,3 +225,9 @@
     color: color('ink');
   }
 }
+
+.usa-accordion__heading.sds-accordion__heading button.usa-accordion__block[aria-expanded=true] {
+  border-top: 0.25rem solid #f9f9f7;
+  border-left: 0.25rem solid #f9f9f7;
+  border-right: 0.25rem solid #f9f9f7;
+}

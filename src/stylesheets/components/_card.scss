@@ -14,15 +14,17 @@
 
   .sds-card__header {
     @include u-display("block");
-    @include u-padding('105');
+    @include u-padding-y('1');
+    @include u-padding-x('2');
     @include u-bg('accent-cool-lighter');
 
     a {
-      @include u-text('bold');
+      @include u-text('semibold');
       @include u-text('base-darker');
       @include u-text('no-underline');
       @include u-font-family('sans');
       @include u-margin(0);
+      @include u-margin-x(1);
       font-size: 26px;
     }
   }
