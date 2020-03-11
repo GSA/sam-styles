@@ -1,26 +1,19 @@
 .usa-list.sds-list--menu {
-  list-style-type: none;
-  padding-left: initial;
-  margin-top: initial;
+   @include unstyled-list;
 }
 .usa-list.sds-list--menu > li {
- 
   @include u-border('1px');
   @include u-border('base-light');
   @include u-border-top(0);
-  padding: 16px;
-  margin: 0;
-  //max-width: initial;
+  @include u-padding(2);
+  @include u-margin(0);
   @include u-maxw('none');
 }
 .usa-list.sds-list--menu > li:first-child {
-  border-top: 1px solid grey;
-  
   @include u-border('1px');
   @include u-border('base-light');
   @include u-bg('base-lightest');
-  //background: #f9f9f9;
-  font-weight: 700;
+  @include u-text(700);
 }
 .sds-list--related-articles{
   min-width: 240px;
