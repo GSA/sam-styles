@@ -233,4 +233,8 @@
 .sds-accordion.usa-accordion--bordered .usa-accordion__content{
   @include u-border-x('1px', 'base-light', 'solid');
   @include u-border-bottom('1px', 'base-light', 'solid');
+
+  p {
+    max-width: unset;
+  }
 }
