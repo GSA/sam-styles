@@ -213,25 +213,19 @@
 
   .usa-accordion__button.usa-accordion__block {
     @include u-padding-right(6);
-    @include u-border-x('1px', 'base-light', 'solid');
-    @include u-border-bottom('1px', 'base-light', 'solid');
     color: color('ink');
     font-size: 1.25rem;
-
-    &:first-child {
-      @include u-border-top('1px', 'base-light', 'solid');
-    }
   }
 
   button.usa-accordion__block[aria-expanded=true] {
     @include u-bg('white');
-    @include u-border(0);
     color: color('ink');
+    @include u-border-bottom(0);
   }
 }
 
-.usa-accordion__heading.sds-accordion__heading button.usa-accordion__block[aria-expanded=true] {
-  @include u-border-top('1px', 'base-light', 'solid');
+.usa-accordion__heading.sds-accordion__heading button.usa-accordion__block{
+  @include u-border-bottom('1px', 'base-light', 'solid');
   @include u-border-x('1px', 'base-light', 'solid');
 }
 
