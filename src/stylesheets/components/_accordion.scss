@@ -217,6 +217,10 @@
     @include u-border-bottom('1px', 'base-light', 'solid');
     color: color('ink');
     font-size: 1.25rem;
+
+    &:first-child {
+      @include u-border-top('1px', 'base-light', 'solid');
+    }
   }
 
   button.usa-accordion__block[aria-expanded=true] {
