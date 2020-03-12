@@ -227,10 +227,11 @@
 }
 
 .usa-accordion__heading.sds-accordion__heading button.usa-accordion__block[aria-expanded=true] {
+  @include u-border-top('1px', 'base-light', 'solid');
   @include u-border-x('1px', 'base-light', 'solid');
 }
 
-.sds-accordion.usa-accordion--bordered .usa-accordion__content{
+.sds-accordion .usa-accordion__content{
   @include u-border-x('1px', 'base-light', 'solid');
   @include u-border-bottom('1px', 'base-light', 'solid');
 
