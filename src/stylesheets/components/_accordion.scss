@@ -227,7 +227,10 @@
 }
 
 .usa-accordion__heading.sds-accordion__heading button.usa-accordion__block[aria-expanded=true] {
-  border-top: 0.25rem solid #f9f9f7;
-  border-left: 0.25rem solid #f9f9f7;
-  border-right: 0.25rem solid #f9f9f7;
+  @include u-border-x('1px', 'base-light', 'solid');
+}
+
+.sds-accordion.usa-accordion--bordered .usa-accordion__content{
+  @include u-border-x('1px', 'base-light', 'solid');
+  @include u-border-bottom('1px', 'base-light', 'solid');
 }
