@@ -18,13 +18,12 @@
     @include u-padding-x('2');
     @include u-bg('accent-cool-lighter');
 
-    a {
+    a, h2, h3, h4, h5, h6 {
       @include u-text('semibold');
       @include u-text('base-darker');
       @include u-text('no-underline');
       @include u-font-family('sans');
-      @include u-margin(0);
-      @include u-margin-x(1);
+      margin: 0 6px;
       font-size: 26px;
     }
   }
@@ -106,6 +105,7 @@
       @include u-display('flex');
       @include u-flex('column');
       @include u-padding-x(2);
+      @include u-margin-bottom('105');
       @include u-font-family('sans');
       font-size: 18px;
 
