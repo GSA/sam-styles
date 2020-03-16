@@ -14,7 +14,8 @@
 
   .sds-card__header {
     @include u-display("block");
-    @include u-padding('105');
+    @include u-padding-y('1');
+    @include u-padding-x('2');
     @include u-bg('accent-cool-lighter');
 
     a, h2, h3, h4, h5, h6 {
