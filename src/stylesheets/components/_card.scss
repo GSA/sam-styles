@@ -88,18 +88,17 @@
       @include u-text('semibold');
       @include u-font-family('sans');
       @include u-text('ink');
+      + span {
+        @include u-text("ink");
+        @include u-text("bold");
+        @include u-font("sans", "sm");
+      }
     }
 
-    span {
-      @include u-text('ink');
-      @include u-text('bold');
-      @include u-font('sans', 'sm');
-    }
-
-    p {
-      @include u-text('ink');
-      @include u-font('sans', 'sm');
-    }
+    // p {
+    //   @include u-text('ink');
+    //   @include u-font('sans', 'sm');
+    // }
 
     .sds-card__links {
       @include u-display('flex');
