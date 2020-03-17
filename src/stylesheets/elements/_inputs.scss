@@ -1,3 +1,56 @@
+//sds form layout
+.sds-form-wrapper {
+  @include u-bg('accent-cool-light');
+  justify-content: center;
+}
+.sds-form.usa-form.usa-form--large {
+  @include u-bg('white');
+  @include u-padding('105');
+  max-width: 50rem;
+
+  @media (min-width: 30em){
+    @include u-padding-x(4);
+    @include u-margin-y(3);
+    -moz-box-shadow: 2px 2px 10px 3px #c9c9c9;
+    -webkit-box-shadow: 2px 2px 10px 3px #c9c9c9;
+    box-shadow: 2px 2px 10px 3px #c9c9c9;
+  }
+
+  .usa-legend {
+    font-size: 1.75rem;
+  }
+
+  .sds-form-text {
+    max-height: 800px;
+    opacity: 1;
+  }
+
+  .usa-label, .usa-input, .usa-select {
+    max-width: 30rem;
+  }
+
+  .usa-hint {
+    line-height: 1.1;
+  }
+
+  .sds-form-extension {
+    @include u-display('none');
+
+    @include at-media('desktop') {
+      @include u-display('inline-block');
+      }
+    }
+
+  .sds-form-extension-btn {
+    @include u-display('block');
+    @include u-margin-y(1);
+    @include at-media('desktop') {
+      @include u-display('none');
+    }
+  }
+}
+
+//select
 .usa-select {
   @include add-background-svg('sam/arrow-down');
   background-size: 0.6rem;
@@ -6,78 +59,6 @@
     @include u-font('sans', '3xs');
     @include u-margin-top(0.5);
     height: 2.1rem;
-  }
-}
-
-//search fieldset
-.sds-search {
-  @include u-display('block');
-
-  .usa-button {
-    @include u-bg('indigo-cool-60');
-    @include u-radius(0)
-  }
-
-  .usa-button:hover {
-    @include u-bg('blue-warm-70v');
-  }
-
-  form {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-  }
-
-  select {
-    width: 150px;
-    border-right-width: 0;
-    @include u-margin(0);
-    @include u-padding-x(2);
-  }
-
-  input {
-    height: 40px;
-    border-right-width: 0;
-    @include u-margin(0);
-  }
-
-  input:focus {
-    box-shadow: 2px 1px 6px 1px #3F57A6;
-    outline: none;
-  }
-
-  button,
-  span {
-    height: 40px !important;
-  }
-}
-
-//inverse search
-.usa-select--inverse {
-    color: white !important;
-    background-color: black !important;
-    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='white'><polygon points='0,0 20,0 10,10'/></svg>") no-repeat;
-    background-size: 12px;
-    background-position: calc(100% - 20px);
-    width: 150px;
-}
-
-@media only screen and (max-width: 600px) {
-  .usa-select.usa-select--inverse {
-    @include u-display('block');
-    @include u-margin-bottom('2px');
-    min-width: 348px;
-  }
-
-  #inverse-search-dropdown {
-    @include u-display('block');
-    min-width: 300px;
-  }
-
-  .usa-search.usa-search--small.usa-search--inverse{
-    @include u-flex('wrap');
-    @include u-padding(1);
-    width: min-content;
   }
 }
 

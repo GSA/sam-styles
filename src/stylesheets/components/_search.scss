@@ -14,3 +14,124 @@
   height: units(5);
   border: 1px solid color('base-light');
 }
+
+//search fieldset
+.sds-search {
+  @include u-display('block');
+
+  .usa-button {
+    @include u-bg('indigo-cool-60');
+    @include u-radius(0)
+  }
+
+  .usa-button:hover {
+    @include u-bg('blue-warm-70v');
+  }
+
+  form {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  select {
+    width: 150px;
+    border-right-width: 0;
+    @include u-margin(0);
+    @include u-padding-x(2);
+  }
+
+  input {
+    height: 40px;
+    border-right-width: 0;
+    @include u-margin(0);
+  }
+
+  input:focus {
+    box-shadow: 2px 1px 6px 1px #3F57A6;
+    outline: none;
+  }
+
+  button,
+  span {
+    height: 40px !important;
+  }
+}
+
+//big search
+.sds-search--big {
+  box-shadow: 2px 1px 6px 1px #c9c9c9;
+
+  .search {
+    width: 100%;
+  }
+  .usa-input{
+    height: 65px;
+    max-width: 680px;
+    min-width: 80px;
+  }
+  .usa-search.usa-search--small > .search > .usa-button,
+  .usa-search.usa-search--small.usa-search--inverse > div > .usa-button {
+    height: 65px;
+    width: 65px;
+  }
+
+  .usa-search{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .usa-select {
+    border: solid 1px #c9c9c9;
+    border-right-width: 0;
+    max-width: 250px;
+    height: 65px;
+    @include u-margin(0);
+    @include u-padding-x(2);
+  }
+  .usa-search.usa-search--small > div,
+  .usa-search.usa-search--small.usa-search--inverse > div {
+    width: 100%;
+  }
+}
+
+//inverse search
+.usa-select--inverse {
+    color: white !important;
+    background-color: black !important;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='white'><polygon points='0,0 20,0 10,10'/></svg>") no-repeat;
+    background-size: 12px;
+    background-position: calc(100% - 20px);
+    width: 150px;
+}
+
+@media only screen and (max-width: 600px) {
+  .usa-select.usa-select--inverse {
+    @include u-display('block');
+    @include u-margin-bottom('2px');
+    min-width: 348px;
+  }
+
+  #inverse-search-dropdown {
+    @include u-display('block');
+    min-width: 300px;
+  }
+
+  .usa-search.usa-search--small.usa-search--inverse{
+    @include u-flex('wrap');
+    @include u-padding(1);
+    width: min-content;
+  }
+
+  .sds-search--big > .usa-search.usa-search--small.usa-search--inverse{
+    @include u-flex('wrap');
+    @include u-padding(1);
+    width: 100%;
+  }
+
+  .sds-search--big > .usa-search.usa-search--small.usa-search--inverse > .usa-select.usa-select--inverse{
+    max-width: unset;
+    width: 100%;
+  }
+}
