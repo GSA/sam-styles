@@ -1,12 +1,12 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 var prefix = 'sds';
-var iconName = 'question';
-var width = 324;
+var iconName = 'angle-right';
+var width = 234.3;
 var height = 512;
 var ligatures = [];
 var unicode = '';
-var svgPathData = 'M152.31,416.62a36,36,0,0,1-36-36V284.89c0-19.88,15.46-36,45.69-36h0c49.62,0,90-39.68,90-88.44S211.62,72,162,72s-90,39.67-90,88.45a36,36,0,0,1-72,0C0,72,72.67,0,162,0S324,72,324,160.45c0,79.6-58.83,145.83-135.69,158.33v61.84A36,36,0,0,1,152.31,416.62Zm2.6,39.38a28,28,0,1,0,28.35,28A28.18,28.18,0,0,0,154.91,456Z';
+var svgPathData = 'M39.5,0c12.6,0.1,24.3,6.2,31.6,16.4l156,218.4c9.6,13.5,9.6,31.7,0,45.2l-156,218.4c-14,16.4-38.6,18.3-55,4.3 C1.8,490.3-1.7,469.4,8,453.1l139.6-195L8,63.2C-5.1,46-1.8,21.6,15.4,8.5c0.5-0.4,1-0.8,1.5-1.1C23.5,2.6,31.4,0.1,39.5,0z';
 
 exports.definition = {
   prefix: prefix,
@@ -19,7 +19,7 @@ exports.definition = {
     svgPathData
   ]};
 
-exports.sdsQuestion = exports.definition;
+exports.sdsAngleRight = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;

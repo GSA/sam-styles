@@ -1,4 +1,4 @@
-import { sdsArrowLeft } from "./sdsArrowLeft";
+import { sdsArrow } from "./sdsArrow";
 import { sdsBars } from "./sdsBars";
 import { sdsBell } from "./sdsBell";
 import { sdsBook } from "./sdsBook";
@@ -49,16 +49,22 @@ import { sdsExclamationTriangle } from "./sdsExclamationTriangle";
 import { sdsSearch } from "./sdsSearch";
 import { sdsInformationCircle } from "./sdsInformationCircle";
 import { sdsNewVersion } from "./sdsNewVersion";
-import { sdsQuestion } from "./sdsQuestion";
+import { sdsQuestionCircle } from "./sdsQuestionCircle";
 import { sdsVideoSquare } from "./sdsVideoSquare";
 import { sdsVideoCircle } from "./sdsVideoCircle";
 import { sdsVideoPlay } from "./sdsVideoPlay";
 import { sdsArrowDown } from "./sdsArrowDown";
 import { sdsArrowUp } from "./sdsArrowUp";
+import { sdsExit } from "./sdsExit";
+import { sdsQuestion } from "./sdsQuestion";
+import { sdsAngleRight } from "./sdsAngleRight";
+import { sdsAngleLeft } from "./sdsAngleLeft";
+import { sdsReset } from "./sdsReset";
+import { sdsThumbUp } from "./sdsThumbUp";
 const prefix = "sds";
 
 const _iconsCache = {
-  sdsArrowLeft: sdsArrowLeft,
+  sdsArrow: sdsArrow,
   sdsBars: sdsBars,
   sdsBell: sdsBell,
   sdsBook: sdsBook,
@@ -109,18 +115,24 @@ const _iconsCache = {
   sdsSearch:sdsSearch,
   sdsInformationCircle:sdsInformationCircle,
   sdsNewVersion:sdsNewVersion,
-  sdsQuestion:sdsQuestion,
+  sdsQuestionCircle:sdsQuestionCircle,
   sdsVideoSquare:sdsVideoSquare,
   sdsVideoCircle:sdsVideoCircle,
   sdsVideoPlay:sdsVideoPlay,
   sdsArrowUp: sdsArrowUp,
-  sdsArrowDown: sdsArrowDown
+  sdsArrowDown: sdsArrowDown,
+  sdsExit: sdsExit,
+  sdsQuestion: sdsQuestion,
+  sdsAngleLeft: sdsAngleLeft,
+  sdsAngleRight: sdsAngleRight,
+  sdsReset: sdsReset,
+  sdsThumbUp: sdsThumbUp
 };
 
 export {
   _iconsCache as sds,
   prefix,
-  sdsArrowLeft,
+  sdsArrow,
   sdsBars,
   sdsBell,
   sdsBook,
@@ -171,10 +183,16 @@ export {
   sdsSearch,
   sdsInformationCircle,
   sdsNewVersion,
-  sdsQuestion,
+  sdsQuestionCircle,
   sdsVideoSquare,
   sdsVideoCircle,
   sdsVideoPlay,
   sdsArrowUp,
-  sdsArrowDown
+  sdsArrowDown,
+  sdsExit,
+  sdsQuestion,
+  sdsAngleLeft,
+  sdsAngleRight,
+  sdsReset,
+  sdsThumbUp
 };
