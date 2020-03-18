@@ -61,6 +61,12 @@ import { sdsAngleRight } from "./sdsAngleRight";
 import { sdsAngleLeft } from "./sdsAngleLeft";
 import { sdsReset } from "./sdsReset";
 import { sdsThumbUp } from "./sdsThumbUp";
+import { sdsThumbDown } from "./sdsThumbDown";
+import { sdsBookmark } from "./sdsBookmark";
+import { sdsComment } from "./sdsComment";
+import { sdsMobile } from "./sdsMobile";
+import { sdsTablet } from "./sdsTablet";
+import { sdsUpload } from "./sdsUpload";
 const prefix = "sds";
 
 const _iconsCache = {
@@ -126,7 +132,13 @@ const _iconsCache = {
   sdsAngleLeft: sdsAngleLeft,
   sdsAngleRight: sdsAngleRight,
   sdsReset: sdsReset,
-  sdsThumbUp: sdsThumbUp
+  sdsThumbUp: sdsThumbUp,
+  sdsThumbDown: sdsThumbDown,
+  sdsBookmark: sdsBookmark,
+  sdsComment: sdsComment,
+  sdsMobile: sdsMobile,
+  sdsTablet: sdsTablet,
+  sdsUpload: sdsUpload
 };
 
 export {
@@ -194,5 +206,11 @@ export {
   sdsAngleLeft,
   sdsAngleRight,
   sdsReset,
-  sdsThumbUp
+  sdsThumbUp,
+  sdsThumbDown,
+  sdsBookmark,
+  sdsComment,
+  sdsMobile,
+  sdsTablet,
+  sdsUpload
 };
