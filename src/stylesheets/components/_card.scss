@@ -159,12 +159,12 @@
       @include u-text('base');
       margin: auto;
     }
+    + span {
+      @include u-text('semibold');
+      @include u-margin-top(1);
+    }
   }
 
-  span {
-    @include u-text('semibold');
-    @include u-margin-top(1);
-  }
 
   p {
     margin: 8px auto;
