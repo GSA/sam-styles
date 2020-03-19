@@ -1,12 +1,12 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 var prefix = 'sds';
-var iconName = 'log-out';
-var width = 512;
+var iconName = 'angle-right';
+var width = 234.3;
 var height = 512;
 var ligatures = [];
 var unicode = '';
-var svgPathData = 'M440,464H72a24,24,0,0,1-24-24V72A24,24,0,0,1,72,48H440a24,24,0,0,1,24,24v88a16,16,0,0,1-32,0V80H80V432H432V352a16,16,0,0,1,32,0v88A24,24,0,0,1,440,464ZM381,246.7l-80-112a16,16,0,0,0-26,18.6L336.92,240H144a16,16,0,0,0,0,32H336.92L275,358.7a16,16,0,0,0,26,18.6l80-112A16,16,0,0,0,381,246.7Z';
+var svgPathData = 'M39.5,0c12.6,0.1,24.3,6.2,31.6,16.4l156,218.4c9.6,13.5,9.6,31.7,0,45.2l-156,218.4c-14,16.4-38.6,18.3-55,4.3 C1.8,490.3-1.7,469.4,8,453.1l139.6-195L8,63.2C-5.1,46-1.8,21.6,15.4,8.5c0.5-0.4,1-0.8,1.5-1.1C23.5,2.6,31.4,0.1,39.5,0z';
 
 exports.definition = {
   prefix: prefix,
@@ -19,7 +19,7 @@ exports.definition = {
     svgPathData
   ]};
 
-exports.sdsLogOut = exports.definition;
+exports.sdsAngleRight = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;
