@@ -55,6 +55,7 @@ import { sdsVideoCircle } from "./sdsVideoCircle";
 import { sdsVideoPlay } from "./sdsVideoPlay";
 import { sdsArrowDown } from "./sdsArrowDown";
 import { sdsArrowUp } from "./sdsArrowUp";
+import { sdsResetFilter } from "./sdsResetFilter";
 const prefix = "sds";
 
 const _iconsCache = {
@@ -114,7 +115,8 @@ const _iconsCache = {
   sdsVideoCircle:sdsVideoCircle,
   sdsVideoPlay:sdsVideoPlay,
   sdsArrowUp: sdsArrowUp,
-  sdsArrowDown: sdsArrowDown
+  sdsArrowDown: sdsArrowDown,
+  sdsResetFilter:sdsResetFilter
 };
 
 export {
@@ -176,5 +178,6 @@ export {
   sdsVideoCircle,
   sdsVideoPlay,
   sdsArrowUp,
-  sdsArrowDown
+  sdsArrowDown,
+  sdsResetFilter
 };
