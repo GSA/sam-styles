@@ -386,3 +386,22 @@ $theme-table-column-gap: 4;
     }
   }
 }
+.video-placeholder {
+  height: 0;
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+.video-placeholder-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  span{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
