@@ -1,12 +1,12 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 var prefix = 'sds';
-var iconName = 'search';
+var iconName = 'search-circle';
 var width = 512;
 var height = 512;
 var ligatures = [];
 var unicode = '';
-var svgPathData = 'M459.32,436.69,345.51,322.89A167.24,167.24,0,0,0,384,216c0-92.63-75.36-168-168-168S48,123.37,48,216s75.37,168,168,168a167.24,167.24,0,0,0,106.89-38.49l113.8,113.81a16,16,0,0,0,22.63-22.63ZM80,216c0-75,61-136,136-136s136,61,136,136S291,352,216,352,80,291,80,216Z';
+var svgPathData = 'M256,0C114.62,0,0,114.62,0,256S114.62,512,256,512,512,397.38,512,256,397.38,0,256,0Zm0,497.48C122.64,497.48,14.52,389.36,14.52,256S122.64,14.52,256,14.52,497.48,122.64,497.48,256,389.36,497.48,256,497.48ZM409.1,359.81l-144-118a92.41,92.41,0,1,0-10.78,13.84L398,373.38a8.79,8.79,0,0,0,12.34-1.22h0A8.8,8.8,0,0,0,409.1,359.81ZM197.88,270.15a78.7,78.7,0,1,1,67.17-88.75A78.71,78.71,0,0,1,197.88,270.15Z';
 
 exports.definition = {
   prefix: prefix,
@@ -19,7 +19,7 @@ exports.definition = {
     svgPathData
   ]};
 
-exports.sdsSearch = exports.definition;
+exports.sdsSearchCircle = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;

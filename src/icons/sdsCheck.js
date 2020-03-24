@@ -1,13 +1,12 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 var prefix = 'sds';
-var iconName = 'search';
+var iconName = 'check';
 var width = 512;
 var height = 512;
 var ligatures = [];
 var unicode = '';
-var svgPathData = 'M459.32,436.69,345.51,322.89A167.24,167.24,0,0,0,384,216c0-92.63-75.36-168-168-168S48,123.37,48,216s75.37,168,168,168a167.24,167.24,0,0,0,106.89-38.49l113.8,113.81a16,16,0,0,0,22.63-22.63ZM80,216c0-75,61-136,136-136s136,61,136,136S291,352,216,352,80,291,80,216Z';
-
+var svgPathData = 'M207.2,352h-.06a16.05,16.05,0,0,1-11.33-4.75l-63.2-64a16,16,0,1,1,22.78-22.5l51.91,52.58L356.72,164.66a16,16,0,1,1,22.56,22.68l-160.8,160A16,16,0,0,1,207.2,352Z'
 exports.definition = {
   prefix: prefix,
   iconName: iconName,
@@ -19,7 +18,7 @@ exports.definition = {
     svgPathData
   ]};
 
-exports.sdsSearch = exports.definition;
+exports.sdsCheck = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;
