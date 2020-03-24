@@ -1,6 +1,37 @@
 <h1>Fields</h1>
 <p>Examples of how to display fields.</p>
 
+<h3> Horizontal layout and a tag</h3>
+<div class="grid-col-4 sds-field">
+  <div class="sds-label">
+<span class="usa-tag sds-tag--info-purple">DUNS</span>Unique Entity ID
+  </div>
+  <div class="sds-value">6528545845</div>
+</div>
+ 
+<h3> With a paragraph value, no label, and large</h3>
+<div class="grid-col-4 sds-field--large">
+  <div class="sds-value--paragraph">With a paragraph value, no label, and large</div>
+</div>
+ 
+<h3> Stacked layout, smaller size, and link value</h3>
+<div class="grid-fill sds-field sds-field--stacked sds-field--small">
+  <div class="sds-label">Website</div>
+  <div class="sds-value"><a href="www.website.gov">www.website.gov</a></div>
+</div>
+ 
+<h3> Stacked layout, Featured and Outlined Status Field</h3>
+<div class="grid-auto sds-field sds-field--stacked sds-field--featured">
+  <div class="sds-label">Status</div>
+  <div class="sds-value">
+      <span class="sds-tag sds-tag--outline">
+        <i class="sds-status sdss-status--sm sds-status--lightblue"></i>Default
+      </span>
+  </div>
+</div>
+
+
+
 <h2>Field</h2>
 <div>Display general field.</div>
 <sds-page class="condensed">

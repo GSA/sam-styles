@@ -1,0 +1,13 @@
+.sds-field {
+    &--stacked {}
+    &--small {}
+    &--large {}
+    &--featured {}
+ 
+    .sds-label {}
+     
+    .sds-value {
+        @include u-text("semibold");
+         &--paragraph {}
+    }
+}
