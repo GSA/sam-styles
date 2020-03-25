@@ -1,13 +1,36 @@
 .sds-field {
-    &--stacked {}
-    &--small {}
-    &--large {}
-    &--featured {}
- 
-    .sds-label {}
-     
-    .sds-value {
-        @include u-text("semibold");
-         &--paragraph {}
+  @include grid-row;
+  @include grid-gap(1);
+  @include u-text("normal");
+  .sds-name {
+    @include grid-col("auto");
+  }
+  .sds-value {
+    @include grid-col("fill");
+    @include u-text("semibold");
+    &--paragraph {
+      @include grid-col("fill");
+      @include u-text("semibold");
     }
+  }
+  &--stacked {
+    .sds-name {
+      @include grid-col(12);
+    }
+    .sds-value {
+      @include grid-col(12);
+      &--paragraph {
+        @include grid-col(12);
+      }
+    }
+  }
+  &--small {
+    @include u-font("sans", "3xs");
+  }
+  &--large {
+    @include u-font("sans", "lg");
+  }
+  &--featured {
+    @include u-text("italic");
+  }
 }
