@@ -2,44 +2,42 @@
 <p>Examples of how to display fields.</p>
 
 <!-- <sds-page class="condensed"> -->
-    <p>Horizontal layout and a tag</p>
+<p>Horizontal layout and a tag</p>
 
-    <div class="sds-field">
-        <div class="sds-name">
-            <span class="usa-tag sds-tag--info-purple">DUNS</span></div>
-        <div class="sds-value">
-            <div class="sds-field">
-                <div class="sds-name">Unique Entity ID:</div>
-                <div class="sds-value">902930291</div>
-            </div>
+<div class="sds-field">
+    <div class="sds-name">
+        <span class="usa-tag sds-tag--info-purple">DUNS</span></div>
+    <div class="sds-value">
+        <div class="sds-field">
+            <div class="sds-name">Unique Entity ID:</div>
+            <div class="sds-value">902930291</div>
         </div>
     </div>
+</div>
 
-    <p>With a paragraph value, no label, and large</p>
-    <div class="sds-field sds-field--large">
-        <div class="sds-name">Lorem Ipsum</div>
-        <div class="sds-value--paragraph">Dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula, mi at imperdiet imperdiet, lectus velit vehicula dolor, ac scelerisque metus lectus in eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</div>
-    </div>
+<p>With a paragraph value, no label, and large</p>
+<div class="sds-field sds-field--large">
+    <div class="sds-name">Lorem Ipsum</div>
+    <div class="sds-value--paragraph">Dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula, mi at imperdiet imperdiet, lectus velit vehicula dolor, ac scelerisque metus lectus in eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</div>
+</div>
 
-    <p>Stacked layout, smaller size, and link value</p>
-    <div class="sds-field sds-field--stacked sds-field--small">
-        <div class="sds-name">Website</div>
-        <div class="sds-value">
-            <a href="www.website.gov">www.website.gov</a>
-        </div>
+<p>Stacked layout, smaller size, and link value</p>
+<div class="sds-field sds-field--stacked sds-field--small">
+    <div class="sds-name">Website</div>
+    <div class="sds-value">
+        <a href="www.website.gov">www.website.gov</a>
     </div>
+</div>
 
-    <p>Stacked layout, Featured and Outlined Status Field</p>
-    <div class="sds-field sds-field--stacked sds-field--featured">
-        <div class="sds-name">Status</div>
-        <div class="sds-value">
-            <span class="sds-tag sds-tag--outline margin-1">
-                <i class="sds-status sds-status--sm sds-status--light-blue"></i>Default</span>
-        </div>
+<p>Stacked layout, Featured and Outlined Status Field</p>
+<div class="sds-field sds-field--stacked sds-field--featured">
+    <div class="sds-name">Status</div>
+    <div class="sds-value">
+        <span class="sds-tag sds-tag--outline margin-1">
+            <i class="sds-status sds-status--sm sds-status--light-blue"></i>Default</span>
     </div>
+</div>
 <!-- </sds-page> -->
-
-
 
 <div class="sds-result-item">
     <div class="grid-row grid-gap">
@@ -51,25 +49,7 @@
             </h3>
         </div>
         <div class="grid-col">
-            <div class="action-menu float-right">
-                <sds-actions-menu>
-                    <button class="sds-button sds-button--circular" aria-haspopup="true" aria-expanded="false">
-                        <fa-icon class="ng-fa-icon" transform="grow-5">
-                            <svg aria-hidden="true" focusable="false" data-prefix="sds" data-icon="ellipsis" class="svg-inline--fa fa-ellipsis fa-w-4 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 120 512" style="transform-origin: 0.1171875em 0.5em;">
-                                <g transform="translate(60 256)">
-                                    <g transform="translate(0, 0)  scale(1.3125, 1.3125)  rotate(0 0 0)">
-                                        <path fill="currentColor" d="M60,390.763209 C93.137085,390.763209 120,417.902989 120,451.381605 C120,484.86022 93.137085,512 60,512 C26.862915,512 0,484.86022 0,451.381605 C0,417.902989 26.862915,390.763209 60,390.763209 Z M60,195.381605 C93.137085,195.381605 120,222.521385 120,256 C120,289.478615 93.137085,316.618395 60,316.618395 C26.862915,316.618395 0,289.478615 0,256 C0,222.521385 26.862915,195.381605 60,195.381605 Z M60,0 C93.137085,0 120,27.13978 120,60.6183953 C120,94.0970106 93.137085,121.236791 60,121.236791 C26.862915,121.236791 0,94.0970106 0,60.6183953 C0,27.13978 26.862915,0 60,0 Z" transform="translate(-60 -256)"></path>
-                                    </g>
-                                </g>
-                            </svg>
-                        </fa-icon>
-                        <span class="usa-sr-only">Toggle Actions Menu</span>
-                    </button>
-                    <sds-menu overlaptrigger="true" xposition="before" class="ng-tns-c2-0">
-                        <!---->
-                    </sds-menu>
-                </sds-actions-menu>
-            </div>
+            <div class="action-menu float-right"></div>
         </div>
     </div>
     <div class="grid-row grid-gap">
@@ -86,18 +66,11 @@
                                 </div>
                             </div>
                             <div class="grid-col">
-                                <!-- <div class="grid-row">
-                                    <div class="grid-col-auto">
-                                        <div class="sds-static--label">Unique Entity ID:</div>
-                                    </div>
-                                    <div class="grid-col-fill">
-                                        <p class="sds-static">902930291</p>
-                                    </div>
-                                </div> -->
-                                    <div class="sds-field sds-field--small">
-                                        <div class="sds-name">Unique Entity ID:</div>
-                                        <div class="sds-value">902930291</div>
-                                    </div>
+                                <!-- <div class="grid-row"> <div class="grid-col-auto"> <div class="sds-static--label">Unique Entity ID:</div> </div> <div class="grid-col-fill"> <p class="sds-static">902930291</p> </div> </div> -->
+                                <div class="sds-field sds-field--small">
+                                    <div class="sds-name">Unique Entity ID:</div>
+                                    <div class="sds-value">902930291</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -113,18 +86,11 @@
                                 </div>
                             </div>
                             <div class="grid-col">
-                                <!-- <div class="grid-row">
-                                    <div class="grid-col-auto">
-                                        <div class="sds-static--label">Unique Entity ID:</div>
-                                    </div>
-                                    <div class="grid-col-fill">
-                                        <p class="sds-static">1A23B45C67D89E</p>
-                                    </div> 
-                                </div>-->
-                                    <div class="sds-field sds-field--small">
-                                        <div class="sds-name">Unique Entity ID:</div>
-                                        <div class="sds-value">1A23B45C67D89E</div>
-                                    </div>
+                                <!-- <div class="grid-row"> <div class="grid-col-auto"> <div class="sds-static--label">Unique Entity ID:</div> </div> <div class="grid-col-fill"> <p class="sds-static">1A23B45C67D89E</p> </div> </div>-->
+                                <div class="sds-field sds-field--small">
+                                    <div class="sds-name">Unique Entity ID:</div>
+                                    <div class="sds-value">1A23B45C67D89E</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -140,18 +106,11 @@
                                 </div>
                             </div>
                             <div class="grid-col">
-                                <!-- <div class="grid-row">
-                                    <div class="grid-col-auto">
-                                        <div class="sds-static--label">CAGE/NCAGE:</div>
-                                    </div>
-                                    <div class="grid-col-fill">
-                                        <p class="sds-static">0D203</p>
-                                    </div>
-                                </div> -->
-                                    <div class="sds-field sds-field--small">
-                                        <div class="sds-name">CAGE/NCAGE:</div>
-                                        <div class="sds-value">0D203</div>
-                                    </div>
+                                <!-- <div class="grid-row"> <div class="grid-col-auto"> <div class="sds-static--label">CAGE/NCAGE:</div> </div> <div class="grid-col-fill"> <p class="sds-static">0D203</p> </div> </div> -->
+                                <div class="sds-field sds-field--small">
+                                    <div class="sds-name">CAGE/NCAGE:</div>
+                                    <div class="sds-value">0D203</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -164,18 +123,11 @@
                     <div class="sds-group">
                         <div class="grid-row">
                             <div class="grid-col">
-                                <!-- <div class="grid-row">
-                                    <div class="grid-col-12">
-                                        <div class="sds-static--label">Purpose of Registration:</div>
-                                    </div>
-                                    <div class="grid-col-12">
-                                        <p class="sds-static">Federal Assistance Awards &amp; IGT</p>
-                                    </div>
-                                </div> -->
-                                    <div class="sds-field sds-field--stacked sds-field--small">
-                                        <div class="sds-name">Purpose of Registration:</div>
-                                        <div class="sds-value">Federal Assistance Awards &amp; IGT</div>
-                                    </div>
+                                <!-- <div class="grid-row"> <div class="grid-col-12"> <div class="sds-static--label">Purpose of Registration:</div> </div> <div class="grid-col-12"> <p class="sds-static">Federal Assistance Awards &amp; IGT</p> </div> </div> -->
+                                <div class="sds-field sds-field--stacked sds-field--small">
+                                    <div class="sds-name">Purpose of Registration:</div>
+                                    <div class="sds-value">Federal Assistance Awards &amp; IGT</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -185,22 +137,14 @@
                     <div class="sds-group">
                         <div class="grid-row">
                             <div class="grid-col">
-                                <!-- <div class="grid-row">
-                                    <div class="grid-col-12">
-                                        <div class="sds-static--label">Physical Address:</div>
+                                <!-- <div class="grid-row"> <div class="grid-col-12"> <div class="sds-static--label">Physical Address:</div> </div> <div class="grid-col-12"> <p class="sds-static">123456 George Washington Boulevard, Suite 4a</p> <p class="sds-static">Ashburn, VA 20147 United States</p> </div> </div> -->
+                                <div class="sds-field sds-field--stacked sds-field--small">
+                                    <div class="sds-name">Physical Address:</div>
+                                    <div class="sds-value">
+                                        123456 George Washington Boulevard, Suite 4a<br/>
+                                        Ashburn, VA 20147 United States
                                     </div>
-                                    <div class="grid-col-12">
-                                        <p class="sds-static">123456 George Washington Boulevard, Suite 4a</p>
-                                        <p class="sds-static">Ashburn, VA 20147 United States</p>
-                                    </div>
-                                </div> -->
-                                    <div class="sds-field sds-field--stacked sds-field--small">
-                                        <div class="sds-name">Physical Address:</div>
-                                        <div class="sds-value">
-                                            123456 George Washington Boulevard, Suite 4a<br/>
-                                            Ashburn, VA 20147 United States
-                                        </div>
-                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -212,14 +156,8 @@
             <div class="grid-row grid-gap-05">
                 <div class="tablet:grid-col-6 grid-col-4">
                     <div class="grid-row">
-                        <!-- <div class="grid-col-12">
-                            <div class="sds-static--label font-sans-3xs text-light text-italic">Status</div>
-                        </div>
-                        <div class="grid-col-12">
-                            <span class="sds-tag sds-tag--outline">
-                                <i class="sds-status sds-status--sm sds-status--green"></i>Active</span>
-                        </div> -->
-                        
+                        <!-- <div class="grid-col-12"> <div class="sds-static--label font-sans-3xs text-light text-italic">Status</div> </div> <div class="grid-col-12"> <span class="sds-tag sds-tag--outline"> <i class="sds-status sds-status--sm sds-status--green"></i>Active</span> </div> -->
+
                         <div class="sds-field sds-field--stacked sds-field--small sds-field--featured">
                             <div class="sds-name">Status</div>
                             <div class="sds-value">
@@ -231,16 +169,12 @@
                 </div>
                 <div class="tablet:grid-col-6 grid-col-4">
                     <div class="grid-row">
-                        <!-- <div class="grid-col-12">
-                            <div class="sds-static--label font-sans-3xs text-light text-italic">Expiration Date</div>
-                        </div>
-                        <div class="grid-col-12">
-                            <span class="sds-tag sds-tag--outline flex-justify-center">Feb 20, 2019</span>
-                        </div> -->
-                        
+                        <!-- <div class="grid-col-12"> <div class="sds-static--label font-sans-3xs text-light text-italic">Expiration Date</div> </div> <div class="grid-col-12"> <span class="sds-tag sds-tag--outline flex-justify-center">Feb 20, 2019</span> </div> -->
+
                         <div class="sds-field sds-field--stacked sds-field--small sds-field--featured">
                             <div class="sds-name">Expiration Date</div>
-                            <div class="sds-value"><span class="sds-tag sds-tag--outline flex-justify-center">Feb 20, 2019</span></div>
+                            <div class="sds-value">
+                                <span class="sds-tag sds-tag--outline flex-justify-center">Feb 20, 2019</span></div>
                         </div>
                     </div>
                 </div>
@@ -249,12 +183,9 @@
                 <div class="grid-col-auto">
                     <span class="sds-tag sds-tag--chip sds-tag--small sds-tag--light" title="Notarized Letter">
                         Notarized Letter
-                        <span class="sds-text-disabled">
-                            <fa-icon class="ng-fa-icon" size="sm">
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="question" class="svg-inline--fa fa-question fa-w-12 fa-sm" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512">
-                                    <path fill="currentColor" d="M202.021 0C122.202 0 70.503 32.703 29.914 91.026c-7.363 10.58-5.093 25.086 5.178 32.874l43.138 32.709c10.373 7.865 25.132 6.026 33.253-4.148 25.049-31.381 43.63-49.449 82.757-49.449 30.764 0 68.816 19.799 68.816 49.631 0 22.552-18.617 34.134-48.993 51.164-35.423 19.86-82.299 44.576-82.299 106.405V320c0 13.255 10.745 24 24 24h72.471c13.255 0 24-10.745 24-24v-5.773c0-42.86 125.268-44.645 125.268-160.627C377.504 66.256 286.902 0 202.021 0zM192 373.459c-38.196 0-69.271 31.075-69.271 69.271 0 38.195 31.075 69.27 69.271 69.27s69.271-31.075 69.271-69.271-31.075-69.27-69.271-69.27z"></path>
-                                </svg>
-                            </fa-icon></span></span></div>
+                        <span class="sds-text-disabled"></span>
+                    </span>
+                </div>
             </div>
         </div>
     </div>
