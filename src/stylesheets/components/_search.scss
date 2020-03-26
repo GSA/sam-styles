@@ -61,6 +61,7 @@
 //big search
 .sds-search--big {
   box-shadow: 2px 1px 6px 1px #c9c9c9;
+  max-width: fit-content;
 
   .search {
     width: 100%;
@@ -68,7 +69,7 @@
   .usa-input{
     height: 65px;
     max-width: 680px;
-    min-width: 80px;
+    width: -webkit-fill-available;
   }
   .usa-search.usa-search--small > .search > .usa-button,
   .usa-search.usa-search--small.usa-search--inverse > div > .usa-button {
@@ -86,6 +87,7 @@
     border: solid 1px #c9c9c9;
     border-right-width: 0;
     max-width: 250px;
+    min-width: 110px;
     height: 65px;
     @include u-margin(0);
     @include u-padding-x(2);
