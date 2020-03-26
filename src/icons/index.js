@@ -3,6 +3,8 @@ import { sdsBars } from "./sdsBars";
 import { sdsBell } from "./sdsBell";
 import { sdsBook } from "./sdsBook";
 import { sdsCalendar } from "./sdsCalendar";
+import { sdsCalendarAdd } from "./sdsCalendarAdd";
+import { sdsCalendarCheck } from "./sdsCalendarCheck";
 import { sdsDownload } from "./sdsDownload";
 import { sdsEnvelope } from "./sdsEnvelope";
 import { sdsFileChartLine } from "./sdsFileChartLine";
@@ -20,6 +22,7 @@ import { sdsWorkspace } from "./sdsWorkspace";
 import { sdsRequest } from "./sdsRequest";
 import { sdsMessages } from "./sdsMessages";
 import { sdsLogOut } from "./sdsLogOut";
+import { sdsLogIn } from "./sdsLogIn";
 import { sdsExclamation } from "./sdsExclamation";
 import { sdsAlertWarning } from "./sdsAlertWarning";
 import { sdsAlertInfo } from "./sdsAlertInfo";
@@ -33,12 +36,15 @@ import { sdsExclamationCircle } from "./sdsExclamationCircle";
 import { sdsCheckCircle } from "./sdsCheckCircle";
 import { sdsOpenDoors } from "./sdsOpenDoors";
 import { sdsBuilding } from "./sdsBuilding";
+import { sdsBuildingAlt } from "./sdsBuildingAlt";
 import { sdsFederalBuilding } from "./sdsFederalBuilding";
 import { sdsFlag } from "./sdsFlag";
 import { sdsPhoto } from "./sdsPhoto";
 import { sdsPenPaper } from "./sdsPenPaper";
 import { sdsStar } from "./sdsStar";
 import { sdsFolder} from "./sdsFolder";
+import { sdsFolderAlt1} from "./sdsFolderAlt1";
+import { sdsFolderAlt2} from "./sdsFolderAlt2";
 import { sdsEllipsis } from "./sdsEllipsis";
 import { sdsTag } from "./sdsTag";
 import { sdsCircle } from "./sdsCircle";
@@ -74,6 +80,9 @@ import { sdsDocument } from "./sdsDocument";
 import { sdsDocumentAdd } from "./sdsDocumentAdd";
 import { sdsDocumentSearch } from "./sdsDocumentSearch";
 import { sdsAdd } from "./sdsAdd";
+import { sdsAngleCircle } from "./sdsAngleCircle";
+import { sdsAddReq } from "./sdsAddReq";
+import { sdsAttachment } from "./sdsAttachment";
 const prefix = "sds";
 
 const _iconsCache = {
@@ -82,6 +91,8 @@ const _iconsCache = {
   sdsBell: sdsBell,
   sdsBook: sdsBook,
   sdsCalendar: sdsCalendar,
+  sdsCalendarAdd: sdsCalendarAdd,
+  sdsCalendarCheck: sdsCalendarCheck,
   sdsDownload: sdsDownload,
   sdsEnvelope: sdsEnvelope,
   sdsFileChartLine: sdsFileChartLine,
@@ -100,6 +111,7 @@ const _iconsCache = {
   sdsRequest: sdsRequest,
   sdsMessages: sdsMessages,
   sdsLogOut: sdsLogOut,
+  sdsLogIn: sdsLogIn,
   sdsExclamation: sdsExclamation,
   sdsAlertWarning: sdsAlertWarning,
   sdsAlertInfo: sdsAlertInfo,
@@ -112,9 +124,12 @@ const _iconsCache = {
   sdsCheckCircle: sdsCheckCircle,
   sdsStar: sdsStar,
   sdsFolder: sdsFolder,
+  sdsFolderAlt1: sdsFolderAlt1,
+  sdsFolderAlt2: sdsFolderAlt2,
   sdsFlag: sdsFlag,
   sdsOpenDoors:sdsOpenDoors,
   sdsBuilding:sdsBuilding,
+  sdsBuildingAlt:sdsBuildingAlt,
   sdsFederalBuilding:sdsFederalBuilding,
   sdsPenPaper:sdsPenPaper,
   sdsEllipsis:sdsEllipsis,
@@ -152,7 +167,10 @@ const _iconsCache = {
   sdsAdd: sdsAdd,
   sdsDocument: sdsDocument,
   sdsDocumentAdd: sdsDocumentAdd,
-  sdsDocumentSearch: sdsDocumentSearch
+  sdsDocumentSearch: sdsDocumentSearch,
+  sdsAngleCircle: sdsAngleCircle,
+  sdsAddReq: sdsAddReq,
+  sdsAttachment: sdsAttachment
 };
 
 export {
@@ -163,6 +181,8 @@ export {
   sdsBell,
   sdsBook,
   sdsCalendar,
+  sdsCalendarAdd,
+  sdsCalendarCheck,
   sdsDownload,
   sdsEnvelope,
   sdsFileChartLine,
@@ -181,6 +201,7 @@ export {
   sdsRequest,
   sdsMessages,
   sdsLogOut,
+  sdsLogIn,
   sdsExclamation,
   sdsAlertWarning,
   sdsAlertInfo,
@@ -194,8 +215,11 @@ export {
   sdsStar,
   sdsFlag,
   sdsFolder,
+  sdsFolderAlt1,
+  sdsFolderAlt2,
   sdsOpenDoors,
   sdsBuilding,
+  sdsBuildingAlt,
   sdsFederalBuilding,
   sdsPenPaper,
   sdsPhoto,
@@ -229,9 +253,12 @@ export {
   sdsUpload,
   sdsSearchCircle,
   sdsCheck,
-  sdsPhotoV2,
+  sdsPhotoAlt,
   sdsAdd,
   sdsDocument,
   sdsDocumentAdd,
-  sdsDocumentSearch
+  sdsDocumentSearch,
+  sdsAngleCircle,
+  sdsAddReq,
+  sdsAttachment
 };

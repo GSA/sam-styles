@@ -1,12 +1,12 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 var prefix = 'sds';
-var iconName = 'photo-v2';
+var iconName = 'attachment';
 var width = 512;
 var height = 512;
 var ligatures = [];
 var unicode = '';
-var svgPathData = 'M440,48H144a24,24,0,0,0-24,24v40H72a24,24,0,0,0-24,24V440a24,24,0,0,0,24,24H376a24,24,0,0,0,24-24V392h40a24,24,0,0,0,24-24V72A24,24,0,0,0,440,48Zm-72,96V346.55l-63.58-60.82a26.85,26.85,0,0,0-40-2.43l-50.67,48.87-22.49-21.51a23.82,23.82,0,0,0-33.39.2L80,387.22V144ZM271.84,432H80l94.73-92.86Zm46.3,0-81.22-77.69,46.25-44.62L368,390.84V432ZM432,360H400V136a24,24,0,0,0-24-24H152V80H432Z';
+var svgPathData = 'M256,464.88a96.1,96.1,0,0,1-96-96v-120a56,56,0,0,1,112,0v88a16,16,0,0,1-32,0v-88a24,24,0,0,0-48,0v120a64,64,0,0,0,128,0v-224a64,64,0,0,0-128,0,16,16,0,0,1-32,0,96,96,0,0,1,192,0v224A96.1,96.1,0,0,1,256,464.88Z';
 
 exports.definition = {
   prefix: prefix,
@@ -19,7 +19,7 @@ exports.definition = {
     svgPathData
   ]};
 
-exports.sdsPhotoV2 = exports.definition;
+exports.sdsAttachment = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;
