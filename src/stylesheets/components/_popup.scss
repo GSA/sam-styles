@@ -36,9 +36,9 @@
     }
     &.out{
         width:100%;
-    &.top-left      {left: 0; bottom: 100%; right: 100%; text-align: start;}
+    &.top-left      {left: 0; bottom: 100%; right: 100%; text-align: left;}
     &.top-center    {left: 0; bottom: 100%; right: 100%; text-align: center;}
-    &.top-right     {left: 0; bottom: 100%; right: 100%; text-align: end;}
+    &.top-right     {left: 0; bottom: 100%; right: 100%; text-align: right;}
     &.right-middle  {left: 0; top: 0; right: 100%; text-align: end; height:100%;
             *:first-child {position: absolute; left:100%; top: 50%;  transform: translateY(-50%);
     }}
