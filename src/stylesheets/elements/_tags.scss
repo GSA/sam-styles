@@ -219,8 +219,8 @@ Label Title
   margin: 2px 5px -0.33rem 0;
 }
 .sds-status--sm {
-  @include u-width("1");
-  @include u-height("1");
+  @include u-width(1);
+  @include u-height(1);
   @include u-bg("base-light");
   margin: 4px 6px 4px 4px;
 }

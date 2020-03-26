@@ -108,7 +108,7 @@
   .sds-feedback__button {
     @include u-bg('white');
     @include u-text('center');
-    @include u-padding-y('3');
+    @include u-padding-y(3);
     @include u-radius-top('pill');
     border: none;
     display: flex;
