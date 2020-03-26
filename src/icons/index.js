@@ -70,6 +70,10 @@ import { sdsUpload } from "./sdsUpload";
 import { sdsSearchCircle } from "./sdsSearchCircle";
 import { sdsCheck } from "./sdsCheck";
 import { sdsPhotoV2 } from "./sdsPhotoV2";
+import { sdsDocument } from "./sdsDocument";
+import { sdsDocumentAdd } from "./sdsDocumentAdd";
+import { sdsDocumentSearch } from "./sdsDocumentSearch";
+import { sdsAdd } from "./sdsAdd";
 const prefix = "sds";
 
 const _iconsCache = {
@@ -144,7 +148,11 @@ const _iconsCache = {
   sdsUpload: sdsUpload,
   sdsSearchCircle: sdsSearchCircle,
   sdsCheck: sdsCheck,
-  sdsPhotoV2: sdsPhotoV2
+  sdsPhotoV2: sdsPhotoV2,
+  sdsAdd: sdsAdd,
+  sdsDocument: sdsDocument,
+  sdsDocumentAdd: sdsDocumentAdd,
+  sdsDocumentSearch: sdsDocumentSearch
 };
 
 export {
@@ -221,5 +229,9 @@ export {
   sdsUpload,
   sdsSearchCircle,
   sdsCheck,
-  sdsPhotoV2
+  sdsPhotoV2,
+  sdsAdd,
+  sdsDocument,
+  sdsDocumentAdd,
+  sdsDocumentSearch
 };
