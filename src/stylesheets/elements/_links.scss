@@ -1,7 +1,18 @@
 .sds-icon-link{
-    @include u-display('table');
+    @include u-display('flex');
     @include u-flex('align-center');
     svg{
-        @include u-text('middle')
+        @include u-flex('align-center');
+    }
+    &--left{
+        svg{
+            @include u-margin-right(1)
+        }
+    }
+    &--right{
+        svg{
+            @include u-margin-left(1)
+        }
     }
 }
+
