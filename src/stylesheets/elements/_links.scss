@@ -1,5 +1,5 @@
 .sds-icon-link{
-    @include u-display('flex');
+    @include u-display('inline-flex');
     @include u-flex('align-center');
     svg{
         @include u-flex('align-center');
