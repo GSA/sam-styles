@@ -14,8 +14,8 @@
 
   .sds-card__header {
     @include u-display("block");
-    @include u-padding-y('1');
-    @include u-padding-x('2');
+    @include u-padding-y(1);
+    @include u-padding-x(2);
     @include u-bg('accent-cool-lighter');
 
     a, h2, h3, h4, h5, h6 {
@@ -72,7 +72,7 @@
   .sds-card__body {
     @include u-display("flex");
     @include u-flex("column");
-    @include u-padding("1");
+    @include u-padding(1);
     // @media only screen and (max-width: 600px) {
     //   display: none;
     // }
@@ -113,7 +113,7 @@
         @include u-flex('row');
         @include u-flex('align-center');
         @include u-text('semibold');
-        @include u-margin-y('1');
+        @include u-margin-y(1);
 
         svg {
           @include u-text('base-dark');

@@ -1,17 +1,19 @@
 .usa-button {
-  color: color('secondary-darker');
-  padding: units(1.5) units(4);
+  @include u-margin-y("1px");
+  @include u-text('secondary-darker');
+  @include u-padding-y(1.5);
+  @include u-padding-x(4);
 
   &.usa-button--hover,
   &:hover {
-    background-color: color('primary-light');
-    color: color('secondary-darker');
+    @include u-bg('primary-light');
+    @include u-text('secondary-darker');
   }
 
   &.usa-button--active,
   &:active {
-    background-color: color('secondary-darker');
-    color: color('white');
+    @include u-bg('secondary-darker');
+    @include u-text('white');
   }
 
   &.usa-focus,

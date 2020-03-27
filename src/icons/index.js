@@ -1,8 +1,10 @@
-import { sdsArrowLeft } from "./sdsArrowLeft";
+import { sdsArrow } from "./sdsArrow";
 import { sdsBars } from "./sdsBars";
 import { sdsBell } from "./sdsBell";
 import { sdsBook } from "./sdsBook";
 import { sdsCalendar } from "./sdsCalendar";
+import { sdsCalendarAdd } from "./sdsCalendarAdd";
+import { sdsCalendarCheck } from "./sdsCalendarCheck";
 import { sdsDownload } from "./sdsDownload";
 import { sdsEnvelope } from "./sdsEnvelope";
 import { sdsFileChartLine } from "./sdsFileChartLine";
@@ -20,6 +22,7 @@ import { sdsWorkspace } from "./sdsWorkspace";
 import { sdsRequest } from "./sdsRequest";
 import { sdsMessages } from "./sdsMessages";
 import { sdsLogOut } from "./sdsLogOut";
+import { sdsLogIn } from "./sdsLogIn";
 import { sdsExclamation } from "./sdsExclamation";
 import { sdsAlertWarning } from "./sdsAlertWarning";
 import { sdsAlertInfo } from "./sdsAlertInfo";
@@ -33,12 +36,15 @@ import { sdsExclamationCircle } from "./sdsExclamationCircle";
 import { sdsCheckCircle } from "./sdsCheckCircle";
 import { sdsOpenDoors } from "./sdsOpenDoors";
 import { sdsBuilding } from "./sdsBuilding";
+import { sdsBuildingAlt } from "./sdsBuildingAlt";
 import { sdsFederalBuilding } from "./sdsFederalBuilding";
 import { sdsFlag } from "./sdsFlag";
 import { sdsPhoto } from "./sdsPhoto";
 import { sdsPenPaper } from "./sdsPenPaper";
 import { sdsStar } from "./sdsStar";
 import { sdsFolder} from "./sdsFolder";
+import { sdsFolderAlt1} from "./sdsFolderAlt1";
+import { sdsFolderAlt2} from "./sdsFolderAlt2";
 import { sdsEllipsis } from "./sdsEllipsis";
 import { sdsTag } from "./sdsTag";
 import { sdsCircle } from "./sdsCircle";
@@ -49,21 +55,44 @@ import { sdsExclamationTriangle } from "./sdsExclamationTriangle";
 import { sdsSearch } from "./sdsSearch";
 import { sdsInformationCircle } from "./sdsInformationCircle";
 import { sdsNewVersion } from "./sdsNewVersion";
-import { sdsQuestion } from "./sdsQuestion";
+import { sdsQuestionCircle } from "./sdsQuestionCircle";
 import { sdsVideoSquare } from "./sdsVideoSquare";
 import { sdsVideoCircle } from "./sdsVideoCircle";
 import { sdsVideoPlay } from "./sdsVideoPlay";
 import { sdsArrowDown } from "./sdsArrowDown";
 import { sdsArrowUp } from "./sdsArrowUp";
-import { sdsResetFilter } from "./sdsResetFilter";
+import { sdsExit } from "./sdsExit";
+import { sdsQuestion } from "./sdsQuestion";
+import { sdsAngleRight } from "./sdsAngleRight";
+import { sdsAngleLeft } from "./sdsAngleLeft";
+import { sdsReset } from "./sdsReset";
+import { sdsThumbUp } from "./sdsThumbUp";
+import { sdsThumbDown } from "./sdsThumbDown";
+import { sdsBookmark } from "./sdsBookmark";
+import { sdsComment } from "./sdsComment";
+import { sdsMobile } from "./sdsMobile";
+import { sdsTablet } from "./sdsTablet";
+import { sdsUpload } from "./sdsUpload";
+import { sdsSearchCircle } from "./sdsSearchCircle";
+import { sdsCheck } from "./sdsCheck";
+import { sdsPhotoV2 } from "./sdsPhotoV2";
+import { sdsDocument } from "./sdsDocument";
+import { sdsDocumentAdd } from "./sdsDocumentAdd";
+import { sdsDocumentSearch } from "./sdsDocumentSearch";
+import { sdsAdd } from "./sdsAdd";
+import { sdsAngleCircle } from "./sdsAngleCircle";
+import { sdsAddReq } from "./sdsAddReq";
+import { sdsAttachment } from "./sdsAttachment";
 const prefix = "sds";
 
 const _iconsCache = {
-  sdsArrowLeft: sdsArrowLeft,
+  sdsArrow: sdsArrow,
   sdsBars: sdsBars,
   sdsBell: sdsBell,
   sdsBook: sdsBook,
   sdsCalendar: sdsCalendar,
+  sdsCalendarAdd: sdsCalendarAdd,
+  sdsCalendarCheck: sdsCalendarCheck,
   sdsDownload: sdsDownload,
   sdsEnvelope: sdsEnvelope,
   sdsFileChartLine: sdsFileChartLine,
@@ -82,6 +111,7 @@ const _iconsCache = {
   sdsRequest: sdsRequest,
   sdsMessages: sdsMessages,
   sdsLogOut: sdsLogOut,
+  sdsLogIn: sdsLogIn,
   sdsExclamation: sdsExclamation,
   sdsAlertWarning: sdsAlertWarning,
   sdsAlertInfo: sdsAlertInfo,
@@ -94,9 +124,12 @@ const _iconsCache = {
   sdsCheckCircle: sdsCheckCircle,
   sdsStar: sdsStar,
   sdsFolder: sdsFolder,
+  sdsFolderAlt1: sdsFolderAlt1,
+  sdsFolderAlt2: sdsFolderAlt2,
   sdsFlag: sdsFlag,
   sdsOpenDoors:sdsOpenDoors,
   sdsBuilding:sdsBuilding,
+  sdsBuildingAlt:sdsBuildingAlt,
   sdsFederalBuilding:sdsFederalBuilding,
   sdsPenPaper:sdsPenPaper,
   sdsEllipsis:sdsEllipsis,
@@ -110,23 +143,46 @@ const _iconsCache = {
   sdsSearch:sdsSearch,
   sdsInformationCircle:sdsInformationCircle,
   sdsNewVersion:sdsNewVersion,
-  sdsQuestion:sdsQuestion,
+  sdsQuestionCircle:sdsQuestionCircle,
   sdsVideoSquare:sdsVideoSquare,
   sdsVideoCircle:sdsVideoCircle,
   sdsVideoPlay:sdsVideoPlay,
   sdsArrowUp: sdsArrowUp,
   sdsArrowDown: sdsArrowDown,
-  sdsResetFilter:sdsResetFilter
+  sdsExit: sdsExit,
+  sdsQuestion: sdsQuestion,
+  sdsAngleLeft: sdsAngleLeft,
+  sdsAngleRight: sdsAngleRight,
+  sdsReset: sdsReset,
+  sdsThumbUp: sdsThumbUp,
+  sdsThumbDown: sdsThumbDown,
+  sdsBookmark: sdsBookmark,
+  sdsComment: sdsComment,
+  sdsMobile: sdsMobile,
+  sdsTablet: sdsTablet,
+  sdsUpload: sdsUpload,
+  sdsSearchCircle: sdsSearchCircle,
+  sdsCheck: sdsCheck,
+  sdsPhotoV2: sdsPhotoV2,
+  sdsAdd: sdsAdd,
+  sdsDocument: sdsDocument,
+  sdsDocumentAdd: sdsDocumentAdd,
+  sdsDocumentSearch: sdsDocumentSearch,
+  sdsAngleCircle: sdsAngleCircle,
+  sdsAddReq: sdsAddReq,
+  sdsAttachment: sdsAttachment
 };
 
 export {
   _iconsCache as sds,
   prefix,
-  sdsArrowLeft,
+  sdsArrow,
   sdsBars,
   sdsBell,
   sdsBook,
   sdsCalendar,
+  sdsCalendarAdd,
+  sdsCalendarCheck,
   sdsDownload,
   sdsEnvelope,
   sdsFileChartLine,
@@ -145,6 +201,7 @@ export {
   sdsRequest,
   sdsMessages,
   sdsLogOut,
+  sdsLogIn,
   sdsExclamation,
   sdsAlertWarning,
   sdsAlertInfo,
@@ -158,8 +215,11 @@ export {
   sdsStar,
   sdsFlag,
   sdsFolder,
+  sdsFolderAlt1,
+  sdsFolderAlt2,
   sdsOpenDoors,
   sdsBuilding,
+  sdsBuildingAlt,
   sdsFederalBuilding,
   sdsPenPaper,
   sdsPhoto,
@@ -173,11 +233,32 @@ export {
   sdsSearch,
   sdsInformationCircle,
   sdsNewVersion,
-  sdsQuestion,
+  sdsQuestionCircle,
   sdsVideoSquare,
   sdsVideoCircle,
   sdsVideoPlay,
   sdsArrowUp,
   sdsArrowDown,
-  sdsResetFilter
+  sdsExit,
+  sdsQuestion,
+  sdsAngleLeft,
+  sdsAngleRight,
+  sdsReset,
+  sdsThumbUp,
+  sdsThumbDown,
+  sdsBookmark,
+  sdsComment,
+  sdsMobile,
+  sdsTablet,
+  sdsUpload,
+  sdsSearchCircle,
+  sdsCheck,
+  sdsPhotoAlt,
+  sdsAdd,
+  sdsDocument,
+  sdsDocumentAdd,
+  sdsDocumentSearch,
+  sdsAngleCircle,
+  sdsAddReq,
+  sdsAttachment
 };
