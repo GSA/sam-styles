@@ -62,6 +62,7 @@
 .sds-search--big {
   box-shadow: 2px 1px 6px 1px #c9c9c9;
   max-width: fit-content;
+  display: table;
 
   .search {
     width: 100%;
