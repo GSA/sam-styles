@@ -1,12 +1,12 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 var prefix = 'sds';
-var iconName = 'folder';
+var iconName = 'attachment';
 var width = 512;
 var height = 512;
 var ligatures = [];
 var unicode = '';
-var svgPathData = 'M440,97.48H209.5l-1-2.75a23.89,23.89,0,0,0-21.46-13.25H72a24,24,0,0,0-24,24V409.93a23.81,23.81,0,0,0,24,23.55H440a23.8,23.8,0,0,0,24-23.55V121A23.81,23.81,0,0,0,440,97.48Zm-8,32v40.45H235.31L220.9,129.48Zm0,272H80v-288H181.35l31.35,88.45H432Z';
+var svgPathData = 'M256,464.88a96.1,96.1,0,0,1-96-96v-120a56,56,0,0,1,112,0v88a16,16,0,0,1-32,0v-88a24,24,0,0,0-48,0v120a64,64,0,0,0,128,0v-224a64,64,0,0,0-128,0,16,16,0,0,1-32,0,96,96,0,0,1,192,0v224A96.1,96.1,0,0,1,256,464.88Z';
 
 exports.definition = {
   prefix: prefix,
@@ -19,7 +19,7 @@ exports.definition = {
     svgPathData
   ]};
 
-exports.sdsFolder = exports.definition;
+exports.sdsAttachment = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;

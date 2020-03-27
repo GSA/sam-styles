@@ -1,13 +1,12 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 var prefix = 'sds';
-var iconName = 'folder';
+var iconName = 'angle-circle';
 var width = 512;
 var height = 512;
 var ligatures = [];
 var unicode = '';
-var svgPathData = 'M440,97.48H209.5l-1-2.75a23.89,23.89,0,0,0-21.46-13.25H72a24,24,0,0,0-24,24V409.93a23.81,23.81,0,0,0,24,23.55H440a23.8,23.8,0,0,0,24-23.55V121A23.81,23.81,0,0,0,440,97.48Zm-8,32v40.45H235.31L220.9,129.48Zm0,272H80v-288H181.35l31.35,88.45H432Z';
-
+var svgPathData = 'M296,368a16,16,0,0,1-12.3-5.76l-80-96a16,16,0,0,1,0-20.48l80-96a16,16,0,1,1,24.58,20.48L236.83,256l71.46,85.76A16,16,0,0,1,296,368ZM480,256C480,132.48,379.52,32,256,32S32,132.48,32,256,132.48,480,256,480,480,379.52,480,256Zm-32,0c0,105.87-86.13,192-192,192S64,361.87,64,256,150.13,64,256,64,448,150.13,448,256Z'
 exports.definition = {
   prefix: prefix,
   iconName: iconName,
@@ -19,7 +18,7 @@ exports.definition = {
     svgPathData
   ]};
 
-exports.sdsFolder = exports.definition;
+exports.sdsAngleCircle = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;
