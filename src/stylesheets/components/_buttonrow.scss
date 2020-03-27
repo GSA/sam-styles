@@ -1,5 +1,5 @@
 .sds-button-row {
-  display: -webkit-flex;
+  @include u-display('flex');
   @include u-flex("fill");
   @include u-flex("wrap");
   @include u-flex("row");
@@ -12,7 +12,7 @@
   }
 
   .sds-button-col {
-    display: -webkit-flex;
+    @include u-display('flex');
     @include u-flex("column");
     @include u-flex("align-center");
     @include u-flex("justify-center");
