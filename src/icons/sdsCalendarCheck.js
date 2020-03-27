@@ -1,12 +1,12 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 var prefix = 'sds';
-var iconName = 'folder';
+var iconName = 'calendar-check';
 var width = 512;
 var height = 512;
 var ligatures = [];
 var unicode = '';
-var svgPathData = 'M440,97.48H209.5l-1-2.75a23.89,23.89,0,0,0-21.46-13.25H72a24,24,0,0,0-24,24V409.93a23.81,23.81,0,0,0,24,23.55H440a23.8,23.8,0,0,0,24-23.55V121A23.81,23.81,0,0,0,440,97.48Zm-8,32v40.45H235.31L220.9,129.48Zm0,272H80v-288H181.35l31.35,88.45H432Z';
+var svgPathData = 'M448,64H384V48a16,16,0,0,0-32,0V64H160V48a16,16,0,0,0-32,0V64H64A16,16,0,0,0,48,80V448a16,16,0,0,0,16,16H448a16,16,0,0,0,16-16V80A16,16,0,0,0,448,64ZM432,96v48H80V96ZM80,432V176H432V432ZM353.47,228.72a16,16,0,0,1-.06,22.63L229.68,374.45a16,16,0,0,1-11.28,4.65h-.07A16,16,0,0,1,207,374.35L158.4,325.1a16,16,0,0,1,22.77-22.48l37.33,37.81L330.85,228.66A16,16,0,0,1,353.47,228.72Z';
 
 exports.definition = {
   prefix: prefix,
@@ -19,7 +19,7 @@ exports.definition = {
     svgPathData
   ]};
 
-exports.sdsFolder = exports.definition;
+exports.sdsCalendarCheck = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;
