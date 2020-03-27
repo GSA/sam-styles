@@ -1,199 +1,73 @@
 <h1>Fields</h1>
 <p>Examples of how to display fields.</p>
 
-<!-- <sds-page class="condensed"> -->
-<p>Horizontal layout and a tag</p>
 
-<div class="sds-field">
-    <div class="sds-name">
-        <span class="usa-tag sds-tag--info-purple">DUNS</span></div>
-    <div class="sds-value">
-        <div class="sds-field">
-            <div class="sds-name">Unique Entity ID:</div>
-            <div class="sds-value">902930291</div>
-        </div>
+<h2>Inline Field</h2>
+<p>Display name and value inline.</p>
+<div class="grid-row">
+    <div class="sds-field">
+        <div class="sds-name">Field:</div>
+        <div class="sds-value">Lorem ipsum dolor</div>
+    </div>
+</div>
+<div class="grid-row">
+    <div class="sds-field sds-field--featured">
+        <div class="sds-name">Featured Field:</div>
+        <div class="sds-value">Lorem ipsum dolor</div>
+    </div>
+</div>
+<div class="grid-row">
+    <div class="sds-field sds-field--small">
+        <div class="sds-name">Field Small:</div>
+        <div class="sds-value">Lorem ipsum dolor</div>
+    </div>
+</div>
+<div class="grid-row">
+    <div class="sds-field sds-field--large">
+        <div class="sds-name">Field Large:</div>
+        <div class="sds-value">Lorem ipsum dolor</div>
+    </div>
+</div>
+<div class="grid-row">
+    <div class="sds-field sds-field--parragraph">
+        <div class="sds-name">Parragraph Field:</div>
+        <div class="sds-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula, mi at imperdiet imperdiet, lectus velit vehicula dolor, ac scelerisque metus lectus in eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</div>
+    </div>
+</div>
+<h2>Stacked Field</h2>
+<p>Display name and value stacked.</p>
+<div class="grid-row">
+    <div class="sds-field sds-field--stacked">
+        <div class="sds-name">Stacked Field:</div>
+        <div class="sds-value">Lorem ipsum dolor</div>
+    </div>
+</div>
+<div class="grid-row">
+    <div class="sds-field sds-field--stacked sds-field--featured">
+        <div class="sds-name">Featured Field:</div>
+        <div class="sds-value">Lorem ipsum dolor</div>
+    </div>
+</div>
+<div class="grid-row">
+    <div class="sds-field sds-field--stacked sds-field--small">
+        <div class="sds-name">Field Small:</div>
+        <div class="sds-value">Lorem ipsum dolor</div>
+    </div>
+</div>
+<div class="grid-row">
+    <div class="sds-field sds-field--stacked sds-field--large">
+        <div class="sds-name">Field Large:</div>
+        <div class="sds-value">Lorem ipsum dolor</div>
+    </div>
+</div>
+<div class="grid-row">
+    <div class="sds-field sds-field--stacked sds-field--parragraph">
+        <div class="sds-name">Parragraph Field:</div>
+        <div class="sds-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula, mi at imperdiet imperdiet, lectus velit vehicula dolor, ac scelerisque metus lectus in eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</div>
     </div>
 </div>
 
-<p>With a paragraph value, no label, and large</p>
-<div class="sds-field sds-field--large">
-    <div class="sds-name">Lorem Ipsum</div>
-    <div class="sds-value--paragraph">Dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula, mi at imperdiet imperdiet, lectus velit vehicula dolor, ac scelerisque metus lectus in eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</div>
-</div>
-
-<p>Stacked layout, smaller size, and link value</p>
-<div class="sds-field sds-field--stacked sds-field--small">
-    <div class="sds-name">Website</div>
-    <div class="sds-value">
-        <a href="www.website.gov">www.website.gov</a>
-    </div>
-</div>
-
-<p>Stacked layout, Featured and Outlined Status Field</p>
-<div class="sds-field sds-field--stacked sds-field--featured">
-    <div class="sds-name">Status</div>
-    <div class="sds-value">
-        <span class="sds-tag sds-tag--outline margin-1">
-            <i class="sds-status sds-status--sm sds-status--light-blue"></i>Default</span>
-    </div>
-</div>
-<!-- </sds-page> -->
-
-<div class="sds-result-item">
-    <div class="grid-row grid-gap">
-        <div class="grid-col">
-            <h3 class="font-sans-xs margin-y-0">
-                <a class="usa-link" href="#">
-                    First Entity: 1
-                </a>
-            </h3>
-        </div>
-        <div class="grid-col">
-            <div class="action-menu float-right"></div>
-        </div>
-    </div>
-    <div class="grid-row grid-gap">
-        <div class="tablet:grid-col-4 grid-col-12">
-            <div class="grid-row">
-                <div class="grid-col-12">
-                    <div class="sds-group--horizontal">
-                        <div class="grid-row">
-                            <div class="grid-col-auto">
-                                <div class="grid-row">
-                                    <div class="grid-col-auto">
-                                        <div class="usa-tag sds-tag--info-purple sds-static--tag">DUNS</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-col">
-                                <!-- <div class="grid-row"> <div class="grid-col-auto"> <div class="sds-static--label">Unique Entity ID:</div> </div> <div class="grid-col-fill"> <p class="sds-static">902930291</p> </div> </div> -->
-                                <div class="sds-field sds-field--small">
-                                    <div class="sds-name">Unique Entity ID:</div>
-                                    <div class="sds-value">902930291</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-col-12">
-                    <div class="sds-group--horizontal">
-                        <div class="grid-row">
-                            <div class="grid-col-auto">
-                                <div class="grid-row">
-                                    <div class="grid-col-auto">
-                                        <div class="usa-tag sds-tag--info-white sds-static--tag">SAM</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-col">
-                                <!-- <div class="grid-row"> <div class="grid-col-auto"> <div class="sds-static--label">Unique Entity ID:</div> </div> <div class="grid-col-fill"> <p class="sds-static">1A23B45C67D89E</p> </div> </div>-->
-                                <div class="sds-field sds-field--small">
-                                    <div class="sds-name">Unique Entity ID:</div>
-                                    <div class="sds-value">1A23B45C67D89E</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-col-12">
-                    <div class="sds-group--horizontal">
-                        <div class="grid-row">
-                            <div class="grid-col-auto">
-                                <div class="grid-row">
-                                    <div class="grid-col-auto">
-                                        <div class="sds-static--tag display-none"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-col">
-                                <!-- <div class="grid-row"> <div class="grid-col-auto"> <div class="sds-static--label">CAGE/NCAGE:</div> </div> <div class="grid-col-fill"> <p class="sds-static">0D203</p> </div> </div> -->
-                                <div class="sds-field sds-field--small">
-                                    <div class="sds-name">CAGE/NCAGE:</div>
-                                    <div class="sds-value">0D203</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="tablet:grid-col-4 grid-col-12">
-            <div class="grid-row">
-                <div class="grid-col-12">
-                    <div class="sds-group">
-                        <div class="grid-row">
-                            <div class="grid-col">
-                                <!-- <div class="grid-row"> <div class="grid-col-12"> <div class="sds-static--label">Purpose of Registration:</div> </div> <div class="grid-col-12"> <p class="sds-static">Federal Assistance Awards &amp; IGT</p> </div> </div> -->
-                                <div class="sds-field sds-field--stacked sds-field--small">
-                                    <div class="sds-name">Purpose of Registration:</div>
-                                    <div class="sds-value">Federal Assistance Awards &amp; IGT</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!---->
-                <div class="grid-col-12 ng-star-inserted">
-                    <div class="sds-group">
-                        <div class="grid-row">
-                            <div class="grid-col">
-                                <!-- <div class="grid-row"> <div class="grid-col-12"> <div class="sds-static--label">Physical Address:</div> </div> <div class="grid-col-12"> <p class="sds-static">123456 George Washington Boulevard, Suite 4a</p> <p class="sds-static">Ashburn, VA 20147 United States</p> </div> </div> -->
-                                <div class="sds-field sds-field--stacked sds-field--small">
-                                    <div class="sds-name">Physical Address:</div>
-                                    <div class="sds-value">
-                                        123456 George Washington Boulevard, Suite 4a<br/>
-                                        Ashburn, VA 20147 United States
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!---->
-            </div>
-        </div>
-        <div class="tablet:grid-col-4 grid-col-12">
-            <div class="grid-row grid-gap-05">
-                <div class="tablet:grid-col-6 grid-col-4">
-                    <div class="grid-row">
-                        <!-- <div class="grid-col-12"> <div class="sds-static--label font-sans-3xs text-light text-italic">Status</div> </div> <div class="grid-col-12"> <span class="sds-tag sds-tag--outline"> <i class="sds-status sds-status--sm sds-status--green"></i>Active</span> </div> -->
-
-                        <div class="sds-field sds-field--stacked sds-field--small sds-field--featured">
-                            <div class="sds-name">Status</div>
-                            <div class="sds-value">
-                                <span class="sds-tag sds-tag--outline">
-                                    <i class="sds-status sds-status--sm sds-status--green"></i>Active</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tablet:grid-col-6 grid-col-4">
-                    <div class="grid-row">
-                        <!-- <div class="grid-col-12"> <div class="sds-static--label font-sans-3xs text-light text-italic">Expiration Date</div> </div> <div class="grid-col-12"> <span class="sds-tag sds-tag--outline flex-justify-center">Feb 20, 2019</span> </div> -->
-
-                        <div class="sds-field sds-field--stacked sds-field--small sds-field--featured">
-                            <div class="sds-name">Expiration Date</div>
-                            <div class="sds-value">
-                                <span class="sds-tag sds-tag--outline flex-justify-center">Feb 20, 2019</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-row grid-gap-05 margin-top-1">
-                <div class="grid-col-auto">
-                    <span class="sds-tag sds-tag--chip sds-tag--small sds-tag--light" title="Notarized Letter">
-                        Notarized Letter
-                        <span class="sds-text-disabled"></span>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!---->
-</div>
-<h2>Field</h2>
-<div>Display general field.</div>
-<sds-page class="condensed">
+<div class="sections">
     <div class="sds-result-item">
         <div class="grid-row grid-gap">
             <div class="grid-col-12">
@@ -252,128 +126,725 @@
             </div>
         </div>
     </div>
-</sds-page>
+</div>
 
-<h2>Horizontal Field</h2>
-<p>Display label and value inline.</p>
-<sds-page class="condensed">
-    <div class="sds-result-item">
-        <div class="grid-row grid-gap">
-            <div class="grid-col-12">
-                <div class="sds-group--horizontal">
-                    <div class="grid-row">
-                        <div class="grid-col">
-                            <div class="grid-row">
-                                <div class="grid-col-auto">
-                                    <div class="sds-static--label">Short Emphasis Field:</div>
-                                </div>
-                                <div class="grid-col-fill">
-                                    <p class="sds-static">Lorem ipsum dolor</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</sds-page>
-<sds-page class="condensed">
-    <div class="sds-result-item">
-        <div class="grid-row grid-gap">
-            <div class="grid-col-12">
-                <div class="sds-group--horizontal">
-                    <div class="grid-row">
-                        <div class="grid-col">
-                            <div class="grid-row">
-                                <div class="grid-col-auto">
-                                    <div class="sds-static--label">Long Emphasis Field:</div>
-                                </div>
-                                <div class="grid-col-fill">
-                                    <p class="sds-static">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula, mi at imperdiet imperdiet, lectus velit vehicula dolor, ac scelerisque metus lectus in eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</sds-page>
-<sds-page class="condensed">
-    <div class="sds-result-item">
-        <div class="grid-row grid-gap">
-            <div class="grid-col-12">
-                <div class="sds-group--horizontal">
-                    <div class="grid-row">
-                        <div class="grid-col">
-                            <div class="grid-row">
-                                <div class="grid-col-auto">
-                                    <div class="sds-static--label sds-type--label-title">Featured Field:</div>
-                                </div>
-                                <div class="grid-col-fill">
-                                    <p class="sds-static">Lorem ipsum dolor</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</sds-page>
+<h2>Other examples</h2>
 
-<sds-page class="condensed">
+
+<div class="grid-row">
+    <div class="grid-col-auto">
+        <div class="usa-tag sds-tag--info-purple sds-static--tag">DUNS</div>
+    </div>
+    <div class="grid-col-auto">
+        <div class="sds-field">
+            <div class="sds-name">Unique Entity ID:</div>
+            <div class="sds-value">902930291</div>
+        </div>
+    </div>
+</div>
+<div class="grid-row">
+    <div class="grid-col-auto">
+        <div class="usa-tag sds-tag--info-white sds-static--tag">SAM</div>
+    </div>
+    <div class="grid-col-auto">
+        <div class="sds-field">
+            <div class="sds-name">Unique Entity ID:</div>
+            <div class="sds-value">902930291</div>
+        </div>
+    </div>
+</div>
+
+<div class="sds-field sds-field--stacked">
+    <div class="sds-name">Multiple line value</div>
+    <div class="sds-value">
+        <div>TERRENCE W. WIDEMAN</div>
+        <div>terrence.wideman@usmc.mil</div>
+        <div>(843) 228-3258</div>
+    </div>
+</div>
+<p>Fields without name<p>
+<div class="sds-field sds-field--stacked">
+    <div class="sds-value">
+        <div>1500 MENDOTA AVENUE, SUITE 12</div>
+        <div>ST PAUL, MINNESOTA 54112</div>
+        <div>UNITED STATES</div>
+    </div>
+</div>
+<div class="sds-field sds-field--stacked">
+    <div class="sds-value sds-value--paragraph">Check the registrant's Reps &amp; Certs, if present, under FAR 52.212-3 or FAR 52.219-1 to determine if the entity is an SBA-certified HUBZone small business concern. Additional small business information may be found in the SBA's Dynamic Small Business Search if the entity completed the SBA supplemental pages during registration.</div>
+</div>
+
+<hr>
+<h2>Testing</h2>
+<div class="testing">
     <div class="sds-result-item">
         <div class="grid-row grid-gap">
-            <div class="grid-col-12">
-                <div class="sds-group--horizontal">
-                    <div class="grid-row">
-                        <div class="grid-col">
+            <div class="grid-col">
+                <h3 class="font-sans-xs margin-y-0">
+                    <a class="usa-link" href="#">
+                        First Entity: 1
+                    </a>
+                </h3>
+            </div>
+            <div class="grid-col">
+                <div class="action-menu float-right"></div>
+            </div>
+        </div>
+        <div class="grid-row grid-gap">
+            <div class="tablet:grid-col-4 grid-col-12">
+                <div class="grid-row">
+                    <div class="grid-col-12">
+                        <div class="sds-group--horizontal">
                             <div class="grid-row">
                                 <div class="grid-col-auto">
-                                    <div class="usa-tag sds-tag--info-purple sds-static--tag">DUNS</div>
-                                </div>
-                                <div class="grid-col-auto">
-                                    <div class="sds-static--label">
-                                        Unique Identity ID:
+                                    <div class="grid-row">
+                                        <div class="grid-col-auto">
+                                            <div class="usa-tag sds-tag--info-purple sds-static--tag">DUNS</div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="grid-col-fill">
-                                    <p class="sds-static">Lorem ipsum dolor</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</sds-page>
-<sds-page class="condensed">
-    <div class="sds-result-item">
-        <div class="grid-row grid-gap">
-            <div class="grid-col-12">
-                <div class="sds-group--horizontal">
-                    <div class="grid-row">
-                        <div class="grid-col">
-                            <div class="grid-row">
-                                <div class="grid-col-auto">
-                                    <div class="usa-tag sds-tag--info-white sds-static--tag">SAM</div>
-                                </div>
-                                <div class="grid-col-auto">
-                                    <div class="sds-static--label">
-                                        Unique Identity ID:
+                                <div class="grid-col">
+                                    <!-- <div class="grid-row"> <div class="grid-col-auto"> <div class="sds-static--label">Unique Entity ID:</div> </div> <div class="grid-col-fill"> <p class="sds-static">902930291</p> </div> </div> -->
+                                    <div class="sds-field sds-field--small">
+                                        <div class="sds-name">Unique Entity ID:</div>
+                                        <div class="sds-value">902930291</div>
                                     </div>
                                 </div>
-                                <div class="grid-col-fill">
-                                    <p class="sds-static">Lorem ipsum dolor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-col-12">
+                        <div class="sds-group--horizontal">
+                            <div class="grid-row">
+                                <div class="grid-col-auto">
+                                    <div class="grid-row">
+                                        <div class="grid-col-auto">
+                                            <div class="usa-tag sds-tag--info-white sds-static--tag">SAM</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-col">
+                                    <!-- <div class="grid-row"> <div class="grid-col-auto"> <div class="sds-static--label">Unique Entity ID:</div> </div> <div class="grid-col-fill"> <p class="sds-static">1A23B45C67D89E</p> </div> </div>-->
+                                    <div class="sds-field sds-field--small">
+                                        <div class="sds-name">Unique Entity ID:</div>
+                                        <div class="sds-value">1A23B45C67D89E</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-col-12">
+                        <div class="sds-group--horizontal">
+                            <div class="grid-row">
+                                <div class="grid-col-auto">
+                                    <div class="grid-row">
+                                        <div class="grid-col-auto">
+                                            <div class="sds-static--tag display-none"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-col">
+                                    <!-- <div class="grid-row"> <div class="grid-col-auto"> <div class="sds-static--label">CAGE/NCAGE:</div> </div> <div class="grid-col-fill"> <p class="sds-static">0D203</p> </div> </div> -->
+                                    <div class="sds-field sds-field--small">
+                                        <div class="sds-name">CAGE/NCAGE:</div>
+                                        <div class="sds-value">0D203</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="tablet:grid-col-4 grid-col-12">
+                <div class="grid-row">
+                    <div class="grid-col-12">
+                        <div class="sds-group">
+                            <div class="grid-row">
+                                <div class="grid-col">
+                                    <!-- <div class="grid-row"> <div class="grid-col-12"> <div class="sds-static--label">Purpose of Registration:</div> </div> <div class="grid-col-12"> <p class="sds-static">Federal Assistance Awards &amp; IGT</p> </div> </div> -->
+                                    <div class="sds-field sds-field--stacked sds-field--small">
+                                        <div class="sds-name">Purpose of Registration:</div>
+                                        <div class="sds-value">Federal Assistance Awards &amp; IGT</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="grid-col-12 ng-star-inserted">
+                        <div class="sds-group">
+                            <div class="grid-row">
+                                <div class="grid-col">
+                                    <!-- <div class="grid-row"> <div class="grid-col-12"> <div class="sds-static--label">Physical Address:</div> </div> <div class="grid-col-12"> <p class="sds-static">123456 George Washington Boulevard, Suite 4a</p> <p class="sds-static">Ashburn, VA 20147 United States</p> </div> </div> -->
+                                    <div class="sds-field sds-field--stacked sds-field--small">
+                                        <div class="sds-name">Physical Address:</div>
+                                        <div class="sds-value">
+                                            123456 George Washington Boulevard, Suite 4a<br/>
+                                            Ashburn, VA 20147 United States
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+            </div>
+            <div class="tablet:grid-col-4 grid-col-12">
+                <div class="grid-row grid-gap-05">
+                    <div class="tablet:grid-col-6 grid-col-4">
+                        <div class="grid-row">
+                            <!-- <div class="grid-col-12"> <div class="sds-static--label font-sans-3xs text-light text-italic">Status</div> </div> <div class="grid-col-12"> <span class="sds-tag sds-tag--outline"> <i class="sds-status sds-status--sm sds-status--green"></i>Active</span> </div> -->
+
+                            <div class="sds-field sds-field--stacked sds-field--small sds-field--featured">
+                                <div class="sds-name">Status</div>
+                                <div class="sds-value">
+                                    <span class="sds-tag sds-tag--outline">
+                                        <i class="sds-status sds-status--sm sds-status--green"></i>Active</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tablet:grid-col-6 grid-col-4">
+                        <div class="grid-row">
+                            <!-- <div class="grid-col-12"> <div class="sds-static--label font-sans-3xs text-light text-italic">Expiration Date</div> </div> <div class="grid-col-12"> <span class="sds-tag sds-tag--outline flex-justify-center">Feb 20, 2019</span> </div> -->
+
+                            <div class="sds-field sds-field--stacked sds-field--small sds-field--featured">
+                                <div class="sds-name">Expiration Date</div>
+                                <div class="sds-value">
+                                    <span class="sds-tag sds-tag--outline flex-justify-center">Feb 20, 2019</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-row grid-gap-05 margin-top-1">
+                    <div class="grid-col-auto">
+                        <span class="sds-tag sds-tag--chip sds-tag--small sds-tag--light" title="Notarized Letter">
+                            Notarized Letter
+                            <span class="sds-text-disabled"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---->
+    </div>
+
+    <div class="grid-row">
+        <div class="tablet:grid-col-3 grid-col-12"></div>
+        <div class="tablet:grid-col-9 grid-col-12">
+            <h2>Tardegrade Legal Service, LLC</h2>
+
+            <div class="grid-row">
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--large">
+                        <div class="sds-name">
+                            <span class="usa-tag sds-tag--info-purple sds-static--tag">DUNS</span>Unique Entity ID:</div>
+                        <div class="sds-value">102939202</div>
+                    </div>
+                    <div class="sds-field sds-field--large">
+                        <div class="sds-name">
+                            <span class="usa-tag sds-tag--info-purple sds-static--tag">SAM</span>Unique Entity ID:</div>
+                        <div class="sds-value">HFU9R4WE9SWR</div>
+                    </div>
+                    <div class="sds-field sds-field--large">
+                        <div class="sds-name">CAGE / NCAGE:</div>
+                        <div class="sds-value">D2909</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--large sds-field--stacked">
+                        <div class="sds-name">Purpose of Registration</div>
+                        <div class="sds-value">Federal Assistance Awards &amp; IGT</div>
+                    </div>
+                    <div class="sds-field sds-field--large sds-field--stacked">
+                        <div class="sds-name">Physical Address</div>
+                        <div class="sds-value">
+                            <div class="sds-line">30110 Fieldview Avenue, Ste 1006</div>
+                            <div class="sds-line">Mendota Heights, Minnesota 51092 United States</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="grid-row">
+                        <div class="grid-fill"></div>
+                        <div class="grid-col-auto">
+                            <div class="sds-field sds-field--stacked sds-field--small sds-field--featured">
+                                <div class="sds-name">Status</div>
+                                <div class="sds-value">
+                                    <span class="sds-tag sds-tag--outline">
+                                        <i class="sds-status sds-status--sm sds-status--green"></i>Active</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-col-auto">
+                            <div class="sds-field sds-field--stacked sds-field--featured">
+                                <div class="sds-name">Expiration Date</div>
+                                <div class="sds-value">
+                                    <span class="sds-tag sds-tag--outline flex-justify-center">Feb 20, 2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="sds-divider">
+            <h3>
+                <i class="fa fa-times"></i>Business Information</h3>
+            <div class="grid-row">
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Doing Business As</div>
+                        <div class="sds-value">(blank)</div>
+                    </div>
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">URL</div>
+                        <div class="sds-value">
+                            <a href="">https://tardegradelegal.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Division Name</div>
+                        <div class="sds-value">(blank)</div>
+                    </div>
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Division Number</div>
+                        <div class="sds-value">(blank)</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">State / Country of Incorporation</div>
+                        <div class="sds-value">Minnesota, United States</div>
+                    </div>
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Congressional District</div>
+                        <div class="sds-value">Minnesota 06</div>
+                    </div>
+                </div>
+            </div>
+            <hr class="sds-divider sds-divider--light">
+            <h4>
+                <i class="fa fa-times"></i>SAM Dates</h4>
+            <div class="grid-row">
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Initial Registration Date</div>
+                        <div class="sds-value">Feb 26, 1998</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Submission Date</div>
+                        <div class="sds-value">Jan 4, 2020</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Activation Date</div>
+                        <div class="sds-value">Jan 6, 2020</div>
+                    </div>
+                </div>
+            </div>
+            <hr class="sds-divider sds-divider--light">
+            <h4>
+                <i class="fa fa-times"></i>Entity Dates</h4>
+            <div class="grid-row">
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Entity Start Date</div>
+                        <div class="sds-value">Oct 10, 1997</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Fiscal Year End Close Date</div>
+                        <div class="sds-value">Dec 31</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12"></div>
+            </div>
+            <hr class="sds-divider sds-divider--light">
+            <h4>
+                <i class="fa fa-times"></i>Immediate Owner</h4>
+            <div class="grid-row">
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">CAGE / NCAGE</div>
+                        <div class="sds-value">F9309</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Legal Business Name</div>
+                        <div class="sds-value">Tardegrade Global Services, Inc</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12"></div>
+            </div>
+            <hr class="sds-divider sds-divider--light">
+            <h4>
+                <i class="fa fa-times"></i>Highest Level Owner</h4>
+            <div class="grid-row">
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">CAGE / NCAGE</div>
+                        <div class="sds-value">F9309</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Legal Business Name</div>
+                        <div class="sds-value">Tardegrade Global Services, Inc</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12"></div>
+            </div>
+            <div class="grid-row sds-info-box">
+                <h4>Executive Compensation</h4>
+                <div class="grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-value sds-value--paragraph">Registrants in the System for Award Management (SAM) respond to the Executive Compensation questions in accordance with Section 6202 of P.L. 110-252, amending the Federal Funding Accountability and Transparency Act (P.L. 109-282). This information is not displayed in SAM. It is sent to USAspending.gov for display in association with an eligible award. Maintaining an active registration in SAM demonstrates the registrant responded to the questions.</div>
+                    </div>
+                </div>
+            </div>
+            <hr class="sds-divider">
+            <h3>
+                <i class="fa fa-times"></i>Entity Types</h3>
+            <hr class="sds-divider sds-divider--light">
+            <h4>Business Types</h4>
+            <div class="grid-row">
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Entity Structure</div>
+                        <div class="sds-value">Corporate Entity (Tax Exempt)</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Entity Type</div>
+                        <div class="sds-value">Non-Profit Organization</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Profit Structure</div>
+                        <div class="sds-value">Non-Profit Organization</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Organization Structure</div>
+                        <div class="sds-value">Non-Profit Organization</div>
+                    </div>
+                </div>
+            </div>
+            <hr class="sds-divider sds-divider--light">
+            <h4>Socio-Economic Types</h4>
+            <div class="grid-row">
+                <div class="grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-value">(blank)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-row sds-info-box">
+                <div class="grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-value sds-value--paragraph">Check the registrant's Reps & Certs, if present, under FAR 52.212-3 or FAR 52.219-1 to determine if the entity is an SBA-certified HUBZone small business concern. Additional small business information may be found in the SBA's Dynamic Small Business Search if the entity completed the SBA supplemental pages during registration.</div>
+                    </div>
+                </div>
+            </div>
+            <hr class="sds-divider sds-divider--light">
+            <h4>Department of Transportation Certifications</h4>
+            <div class="grid-row">
+                <div class="grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-value">(blank)</div>
+                    </div>
+                </div>
+            </div>
+            <hr class="sds-divider">
+            <h3>
+                <i class="fa fa-times"></i>Points of Contact</h3>
+            <hr class="sds-divider sds-divider--light">
+            <h4>Electronic Business</h4>
+            <div class="grid-row">
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-value">MARLA C. JONES</div>
+                        <div class="sds-value">PRESIDENT</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-value">240 555-1212</div>
+                        <div class="sds-value">marla.jones@tardegrade.com</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-value">1500 MENDOTA AVENUE, SUITE 12</div>
+                        <div class="sds-value">ST PAUL, MINNESOTA 54112</div>
+                        <div class="sds-value">UNITED STATES</div>
+                    </div>
+                </div>
+            </div>
+            <hr class="sds-divider sds-divider--light">
+            <h4>Government Business</h4>
+            <div class="grid-row">
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-value">MARLA C. JONES</div>
+                        <div class="sds-value">PRESIDENT</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-value">240 555-1212</div>
+                        <div class="sds-value">marla.jones@tardegrade.com</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-value">1500 MENDOTA AVENUE, SUITE 12</div>
+                        <div class="sds-value">ST PAUL, MINNESOTA 54112</div>
+                        <div class="sds-value">UNITED STATES</div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-row">
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-value">MICHAEL R. LEWIS</div>
+                        <div class="sds-value">DIRECTOR OF FEDERAL SALES</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-value">240 555-1212</div>
+                        <div class="sds-value">michael.lewis@tardegrade.com</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-value">
+                            <div>1500 MENDOTA AVENUE, SUITE 12</div>
+                            <div>ST PAUL, MINNESOTA 54112</div>
+                            <div>UNITED STATES</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</sds-page>
+
+    <div class="grid-row">
+        <div class="tablet:grid-col-3 grid-col-12"></div>
+        <div class="tablet:grid-col-9 grid-col-12">
+            <h2>Blast Chillers</h2>
+
+            <div class="grid-row">
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--large sds-field--stacked">
+                        <div class="sds-name">Notice ID</div>
+                        <div class="sds-value">M00263-20-Q-0016</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--large sds-field--stacked">
+                        <div class="sds-name">Offers Due</div>
+                        <div class="sds-value">Jan 20, 2020</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="grid-row">
+                        <div class="grid-fill"></div>
+                        <div class="grid-col-auto">
+                            <div class="sds-field sds-field--large sds-field--stacked">
+                                <div class="sds-name">Status</div>
+                                <div class="sds-value">
+                                    <span class="sds-tag sds-tag--outline">
+                                        <i class="sds-status sds-status--sm sds-status--green"></i>Active</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-row">
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Department / Ind Agency</div>
+                        <div class="sds-value">DEPARTMENT OF DEFENSE</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Subtier</div>
+                        <div class="sds-value">DEPARTMENT OF THE NAVY</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="grid-row">
+                        <div class="grid-fill"></div>
+                        <div class="grid-col-auto">
+                            <div class="sds-field sds-field--stacked">
+                                <div class="sds-name">Major Command</div>
+                                <div class="sds-value">USMC</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Subcommand 1</div>
+                        <div class="sds-value">MARCORP I & L</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Subcommand 2</div>
+                        <div class="sds-value">MARINE CORPS INSTALLATIONS COMMAND</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="grid-row">
+                        <div class="grid-fill"></div>
+                        <div class="grid-col-auto">
+                            <div class="sds-field sds-field--stacked">
+                                <div class="sds-name">Subcommand 3</div>
+                                <div class="sds-value">MCIEAST</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="grid-row">
+                        <div class="grid-fill"></div>
+                        <div class="grid-col-auto">
+                            <div class="sds-field sds-field--stacked">
+                                <div class="sds-name">Office</div>
+                                <div class="sds-value">COMMANDING OFFICER TMO</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="sds-divider">
+            <h3>
+                <i class="fa fa-times"></i>General Information</h3>
+            <div class="grid-row">
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Contract Opportunity Type</div>
+                        <div class="sds-value">Combined Synopsis/Solicitation (Updated)</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Initiative</div>
+                        <div class="sds-value">None</div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-row">
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Updated Published Date</div>
+                        <div class="sds-value">Oct 6, 2019</div>
+                    </div>
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Original Published Date</div>
+                        <div class="sds-value">Sep 9, 2019</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Inactive Policy</div>
+                        <div class="sds-value">15 days after date offers due</div>
+                    </div>
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Updated Inactive Date</div>
+                        <div class="sds-value">Feb 5, 2020</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Updated Date Offers Due</div>
+                        <div class="sds-value">Jan 20, 2020</div>
+                    </div>
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Original Date Offers Due</div>
+                        <div class="sds-value">Dec 6, 2019</div>
+                    </div>
+                </div>
+            </div>
+            <hr class="sds-divider">
+            <h3>
+                <i class="fa fa-times"></i>Classification</h3>
+            <div class="grid-row">
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Original Set Aside</div>
+                        <div class="sds-value">(blank)</div>
+                    </div>
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Place of Performance</div>
+                        <div class="sds-value">(blank)</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">NAICS Code</div>
+                        <div class="sds-value">333415</div>
+                        <div class="sds-value sds-value--paragraph">Air-Conditioning and Warm Air Heating Equipment and Commercial and Industrial Refrigeration Equipment Manufacturing</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Product Service Code</div>
+                        <div class="sds-value">4110 - REFRIGERATION EQUIPMENT</div>
+                    </div>
+                </div>
+            </div>
+            <hr class="sds-divider">
+            <h3>
+                <i class="fa fa-times"></i>Description</h3>
+            <hr class="sds-divider">
+            <h3>
+                <i class="fa fa-times"></i>Attachments</h3>
+            <hr class="sds-divider">
+            <h3>
+                <i class="fa fa-times"></i>Contact Information</h3>
+            <div class="grid-row">
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Contracting Office Address</div>
+                        <div class="sds-value">MCAS FREIGHT SECTION P O BOX 55010</div>
+                        <div class="sds-value">BEAUFORT, SOUTH CAROLINA 29904-5010</div>
+                        <div class="sds-value">UNITED STATES</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Primary Point of Contact</div>
+                        <div class="sds-value">TERRENCE W. WIDEMAN</div>
+                        <div class="sds-value">terrence.wideman@usmc.mil</div>
+                        <div class="sds-value">(843) 228-3258</div>
+                    </div>
+                </div>
+                <div class="tablet:grid-col-4 grid-col-12">
+                    <div class="sds-field sds-field--stacked">
+                        <div class="sds-name">Alternate Point of Contact</div>
+                        <div class="sds-value">CHARLES R. SMALL</div>
+                        <div class="sds-value">rodney.c.small@usmc.mil</div>
+                        <div class="sds-value">(843) 228-2151</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

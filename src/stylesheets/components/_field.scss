@@ -2,15 +2,18 @@
   @include grid-row;
   @include grid-gap(1);
   @include u-text("normal");
+  @include u-font('sans', '2xs');
+  @include u-margin-y(1);
   .sds-name {
     @include grid-col("auto");
   }
   .sds-value {
     @include grid-col("fill");
-    @include u-text("semibold");
+    @include u-text("bold");
     &--paragraph {
       @include grid-col("fill");
-      @include u-text("semibold");
+      @include u-text("normal");
+      @include u-measure(6);
     }
   }
   &--stacked {
@@ -28,12 +31,13 @@
     @include u-font("sans", "3xs");
   }
   &--large {
-    @include u-font("sans", "lg");
+    @include u-font("sans", "sm");
   }
   &--featured {
     .sds-name {
         @include u-text("italic");
         @include u-text("light");
+        @include u-font('sans', '2xs');
     }
   }
 }
