@@ -4,10 +4,10 @@
   @include u-text("normal");
   @include u-font('sans', '2xs');
   @include u-margin-y(1);
-  .sds-name {
+  .sds-field--name {
     @include grid-col("auto");
   }
-  .sds-value {
+  .sds-field--value {
     @include grid-col("fill");
     @include u-text("bold");
     &--paragraph {
@@ -17,10 +17,10 @@
     }
   }
   &--stacked {
-    .sds-name {
+    .sds-field--name {
       @include grid-col(12);
     }
-    .sds-value {
+    .sds-field--value {
       @include grid-col(12);
       &--paragraph {
         @include grid-col(12);
@@ -34,7 +34,7 @@
     @include u-font("sans", "sm");
   }
   &--featured {
-    .sds-name {
+    .sds-field--name {
         @include u-text("italic");
         @include u-text("light");
         @include u-font('sans', '2xs');
