@@ -1,0 +1,7 @@
+.sds-icon-link{
+    @include u-display('table');
+    align-items:center;
+    svg{
+        @include u-text('middle')
+    }
+}
