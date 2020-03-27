@@ -1,6 +1,6 @@
 .sds-icon-link{
     @include u-display('table');
-    align-items:center;
+    @include u-flex('align-center');
     svg{
         @include u-text('middle')
     }
