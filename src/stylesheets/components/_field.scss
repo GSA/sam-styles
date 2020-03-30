@@ -1,0 +1,43 @@
+.sds-field {
+  @include grid-row;
+  @include grid-gap(1);
+  @include u-text("normal");
+  @include u-font('sans', '2xs');
+  @include u-margin-y(1);
+  .sds-field__name {
+    @include grid-col("auto");
+  }
+  .sds-field__value {
+    @include grid-col("fill");
+    @include u-text("bold");
+    &--paragraph {
+      @include grid-col("fill");
+      @include u-text("normal");
+      @include u-measure(6);
+    }
+  }
+  &--stacked {
+    .sds-field__name {
+      @include grid-col(12);
+    }
+    .sds-field__value {
+      @include grid-col(12);
+      &--paragraph {
+        @include grid-col(12);
+      }
+    }
+  }
+  &--small {
+    @include u-font("sans", "3xs");
+  }
+  &--large {
+    @include u-font("sans", "sm");
+  }
+  &--featured {
+    .sds-field__name {
+        @include u-text("italic");
+        @include u-text("light");
+        @include u-font('sans', '2xs');
+    }
+  }
+}
