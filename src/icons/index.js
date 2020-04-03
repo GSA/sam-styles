@@ -12,6 +12,7 @@ import { sdsFilter } from "./sdsFilter";
 import { sdsHome } from "./sdsHome";
 import { sdsInvoice } from "./sdsInvoice";
 import { sdsLink } from "./sdsLink";
+import { sdsUnlink } from "./sdsUnlink";
 import { sdsNewNote } from "./sdsNewNote";
 import { sdsPaperPlane } from "./sdsPaperPlane";
 import { sdsPrint } from "./sdsPrint";
@@ -79,10 +80,12 @@ import { sdsPhotoV2 } from "./sdsPhotoV2";
 import { sdsDocument } from "./sdsDocument";
 import { sdsDocumentAdd } from "./sdsDocumentAdd";
 import { sdsDocumentSearch } from "./sdsDocumentSearch";
+import { sdsDocumentPdf } from "./sdsDocumentPdf";
 import { sdsAdd } from "./sdsAdd";
 import { sdsAngleCircle } from "./sdsAngleCircle";
 import { sdsAddReq } from "./sdsAddReq";
 import { sdsAttachment } from "./sdsAttachment";
+import { sdsReceipt } from "./sdsReceipt";
 const prefix = "sds";
 
 const _iconsCache = {
@@ -168,9 +171,12 @@ const _iconsCache = {
   sdsDocument: sdsDocument,
   sdsDocumentAdd: sdsDocumentAdd,
   sdsDocumentSearch: sdsDocumentSearch,
+  sdsDocumentPdf: sdsDocumentPdf,
   sdsAngleCircle: sdsAngleCircle,
   sdsAddReq: sdsAddReq,
-  sdsAttachment: sdsAttachment
+  sdsAttachment: sdsAttachment,
+  sdsUnlink: sdsUnlink,
+  sdsReceipt: sdsReceipt
 };
 
 export {
@@ -260,5 +266,8 @@ export {
   sdsDocumentSearch,
   sdsAngleCircle,
   sdsAddReq,
-  sdsAttachment
+  sdsAttachment,
+  sdsUnlink,
+  sdsDocumentPdf,
+  sdsReceipt
 };
