@@ -115,4 +115,23 @@
 .sds-toolbar__anim--expanded {
   margin-left: 20px;
 }
+
+.sds-toolbar{
+
+  .sds-toolbar--icon-open {
+    display: none;
+  }
+  .sds-toolbar--icon-closed {
+    display: inline;
+  }
+
+  &.sds-toolbar--expanded {
+    .sds-toolbar--icon-open {
+      display: inline;
+    }
+    .sds-toolbar--icon-closed {
+      display: none;
+    }
+  }
+}
 /* stylelint-enable */

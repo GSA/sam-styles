@@ -3,9 +3,11 @@
     <div class="sds-toolbar">
       <div class="sds-toolbar__header">
         <div class="sds-toolbar__toggle">
-          <a class="sds-toolbar__toogle-btn" href="">
+          <a class="sds-toolbar__toogle-btn" href="#">
             <span class="usa-sr-only">Open/Close Toolbar</span>
           </a>
+            <i class="fa fa-angle-up sds-toolbar--icon-open"></i>
+            <i class="fa fa-angle-down sds-toolbar--icon-closed"></i>
         </div>
       </div>
       <div class="sds-toolbar__content" hidden="hidden">
@@ -17,6 +19,9 @@
                   Navigation
                   <span class="sds-accordion__icon"></span>
                 </span>
+                <span class="sds-accordion__subtitle">
+                  Selected Child
+                </span>
               </button>
             </h3>
             <div id="accordion-nav-content" role="region" aria-labelledby="accordion-nav-id" class="sds-accordion__panel" hidden="">
@@ -24,27 +29,27 @@
                 <nav>
                   <ul class="usa-sidenav">
                     <li class="usa-sidenav__item">
-                      <a href="">Parent link</a>
+                      <a href="#">Parent link</a>
                     </li>
                     <li class="usa-sidenav__item">
-                      <a href="" class="usa-current">Current page</a>
+                      <a href="#" class="usa-current">Current page</a>
                       <ul class="usa-sidenav__sublist">
                         <li class="usa-sidenav__item">
-                          <a href="">Child link</a>
+                          <a href="#">Child link</a>
                         </li>
                         <li class="usa-sidenav__item">
-                          <a href="">Child link</a>
+                          <a href="#">Child link</a>
                         </li>
                         <li class="usa-sidenav__item">
-                          <a href="">Child link</a>
+                          <a href="#">Child link</a>
                         </li>
                         <li class="usa-sidenav__item">
-                          <a href="">Child link</a>
+                          <a href="#">Child link</a>
                         </li>
                       </ul>
                     </li>
                     <li class="usa-sidenav__item">
-                      <a href="">Parent link</a>
+                      <a href="#">Parent link</a>
                     </li>
                   </ul>
                 </nav>
