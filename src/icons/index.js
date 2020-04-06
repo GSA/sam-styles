@@ -76,7 +76,7 @@ import { sdsTablet } from "./sdsTablet";
 import { sdsUpload } from "./sdsUpload";
 import { sdsSearchCircle } from "./sdsSearchCircle";
 import { sdsCheck } from "./sdsCheck";
-import { sdsPhotoV2 } from "./sdsPhotoV2";
+import { sdsPhotoAlt } from "./sdsPhotoAlt";
 import { sdsDocument } from "./sdsDocument";
 import { sdsDocumentAdd } from "./sdsDocumentAdd";
 import { sdsDocumentSearch } from "./sdsDocumentSearch";
@@ -166,7 +166,7 @@ const _iconsCache = {
   sdsUpload: sdsUpload,
   sdsSearchCircle: sdsSearchCircle,
   sdsCheck: sdsCheck,
-  sdsPhotoV2: sdsPhotoV2,
+  sdsPhotoAlt: sdsPhotoAlt,
   sdsAdd: sdsAdd,
   sdsDocument: sdsDocument,
   sdsDocumentAdd: sdsDocumentAdd,
