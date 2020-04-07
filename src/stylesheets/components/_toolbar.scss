@@ -11,6 +11,7 @@
   border: 1px solid #fff;
   overflow: hidden;
   display: inline-block;
+  font-size: 15px;
 }
 .sds-toolbar a {
   text-decoration: none;
@@ -22,7 +23,48 @@
   transition: all 0.2s ease-out;
   display: inline-block;
 }
+.sds-toolbar {
+  .usa-accordion__button.usa-accordion__block {
+    font-size: inherit;
+  }
+  .sds-accordion {
+    &__trigger {
+      font-size: inherit;
 
+    }
+    h3 {
+      font-size: inherit;
+    }
+    .usa-sidenav{
+      font-size: inherit;
+    }
+  }
+}
+.sds-toolbar {
+  .usa-sidenav {
+    &__item .usa-sidenav__item {
+      border-top: none;
+    }
+
+    a {
+      color: color("ink");
+      font-weight: font-weight("semibold");
+      &:hover {
+        background-color: color("base-lightest");
+        color: color("secondary-light");
+      }
+    }
+
+    .usa-current {
+      @include add-bar($theme-sidenav-current-border-width, "secondary-darker", "left", 0, 0, 0);
+      color: color("secondary-darker");
+      font-weight: font-weight("semibold");
+    }
+    &__sublist{
+      font-size: inherit;
+    }
+  }
+}
 .sds-toolbar.sds-toolbar--expanded {
   background-color: white;
   border: 1px solid #d8d8d8;
