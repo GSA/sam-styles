@@ -9,6 +9,7 @@
   @include u-radius-left('pill');
   @include u-border-right(0);
   height: 75px;
+  width: 350px;
   float: right;
   clear: both;
   box-shadow: -5px 5px 1px 2px white,
@@ -22,12 +23,9 @@
     @include u-padding-x('105');
     @include u-text('bold');
     @include u-text('center');
+    color: color('error-dark');
 
-    .sds-seal__official {
-      color: color('error-dark');
-    }
-
-    .sds-seal__free {
+    span {
       color: color('base');
     }
   }
