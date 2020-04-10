@@ -1,10 +1,108 @@
-sds-page {
-  @include u-display("block");
+.sds-page {
   @include u-margin-top(2);
   @include u-margin-bottom(8);
-  min-height: 600px;
+  min-height: $theme-page-min-height;
+}
 
-  &.condensed {
-    @include u-font("sans", "3xs");
+.sds-page--simple {
+	background-color: color('accent-cool-lighter');
+	width: 100%;
+	@include u-margin-y(0);
+	@include u-padding(0);
+
+	@include at-media(tablet) {
+		@include u-padding(4);
+	}
+
+	.sds-page--simple__content {
+	    width: 100%;
+	    background-color: color('white');
+	    @include u-padding(2);	
+		min-height: 640px;
+
+		@include at-media(tablet) {
+			@include u-margin-x(auto);
+	    	width: 80%;
+		    @include u-padding(4);	
+	    }
+	    @include at-media(desktop-lg) {
+	    	width: 60%;
+	    }
+	}	
+}
+
+.sds-form--simple {
+	@include u-margin-x(auto);
+	max-width: $theme-form-max-width;
+}
+
+
+.multi-step-form {
+	max-width: 30rem;
+}
+
+.multi-step-page {
+  
+  @include grid-row;
+  @include grid-gap;
+
+  @include u-margin-y(0);
+  @include u-padding(0);
+
+  @media (min-width: 640px) {
+  	@include u-padding(2);
   }
+
+  @media (min-width: 1024px) {
+	@include u-padding(4);
+  }
+
+  @media (min-width: 1200px) {
+  	  width: 80%;
+	  @include u-margin-x(auto);
+  }
+
+  .multi-step-page__sidebar {
+
+	  @include u-margin(0);
+	  @include u-padding(0);
+	  @include grid-col(12);
+
+  	   @media (min-width: 640px) {
+  			@include grid-col(4);
+  	   }
+  	   @media (min-width: 880px) {
+  	   		@include grid-col(3);
+  	   }
+  }
+
+  .multi-step-page__content {
+
+       @include grid-col(12);
+       @include u-padding-x(2);
+
+  	   @media (min-width: 640px) {
+  			@include grid-col(8);
+  			@include u-padding-x(4);
+  	   }
+  	   @media (min-width: 880px) {
+  	   		@include grid-col(9);
+  	   }
+
+  	   .multi-step-page__banner {
+  	   		@include u-margin-bottom(2);
+  	   		@include u-border-bottom(1);
+  	   		@include u-border-bottom('base-light');
+  	   }
+   }	
+}
+
+.form-instruction {
+	@include u-font('sans', '2xs');
+	@include u-measure(4);
+}
+
+.form-instruction--large {
+	@include u-font('sans', 'xs');
+	@include u-measure(4);	
 }
