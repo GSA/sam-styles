@@ -1,0 +1,7 @@
+label: Tabs
+status: wip
+
+variants:
+  - name: default
+    label: SAM Tabs
+    status: null
