@@ -18,24 +18,18 @@
   </div>
   <div class="usa-footer__primary-section">
     <div class="grid-container">
-      <div class="sds-footer__wrapper grid-row grid-gap">
-      
-        <div class="sds-footer__note grid-col-8 desktop:grid-col-12">
-          {{ note }}
+      <div class="grid-row grid-gap">
+        <div class="sds-footer__logo tablet:grid-col-4">
+          <a href="javascript:void(0);" class="sds-footer__logo-link">
+            <img src="{{ logo | path }}" alt=""/>
+          </a>
+          <h3 class="sds-footer__logo-heading">{{ agency }}</h3>
         </div>
-        <div class="sds-footer__logo grid-col-4 desktop:grid-col-3">
-          <div class="grid-row">
-            <a href="javascript:void(0);" class="sds-footer__logo-link grid-col-4 desktop:grid-col-12">
-              <img src="{{ logo | path }}" alt=""/>
-            </a>
-            <h3 class="sds-footer__logo-heading  grid-col-8 desktop:grid-col-12">{{ agency }}</h3>
-          </div>
-        </div>
-        <div class="desktop:grid-col-9">
+        <div class="tablet:grid-col-8">
           <nav class="usa-footer__nav">
             <div class="grid-row grid-gap-4">
               {%- for nav in navigation -%}
-                <div class="grid-col-4">
+                <div class="mobile-lg:grid-col-12 desktop:grid-col-4">
                   <section class="usa-footer__primary-content">
                     <span class="usa-footer__primary-link">
                       {{ nav.header }}
@@ -43,11 +37,7 @@
                     <ul class="usa-list usa-list--unstyled">
                       {%- for item in nav.links -%}
                         <li class="usa-footer__secondary-link">
-                          <a href="{{ item.href }}">{{ item.text }}
-                            {%-  if item.external -%}
-                            &nbsp; <i class="fas fa-external-link-alt fa-xs"></i>
-                            {%- endif -%}
-                          </a>
+                          <a href="{{ item.href }}">{{ item.text }}</a>
                         </li>
                       {%- endfor -%}
                     </ul>
@@ -56,41 +46,11 @@
               {%- endfor -%}
             </div>
           </nav>
-          <nav class="sds-footer__nav--accordion">
-            <div class="usa-accordion">
-              <!-- -->
-              {%- for nav in navigation -%}
-              <h2 class="usa-accordion__heading">
-                <button class="usa-accordion__button usa-accordion__block"
-                  aria-expanded="false"
-                  aria-controls="a{{loop.index}}">
-                    {{ nav.header }}
-                  </button>
-                </h2>
-                <div id="a{{loop.index}}" class="usa-accordion__content usa-prose" hidden>
-
-                    {%- for item in nav.links -%}                  <p>
-                      
-                        <a href="{{ item.href }}">{{ item.text }}
-                          {%-  if item.external -%}
-                          &nbsp; <i class="fas fa-external-link-alt fa-xs"></i>
-                          {%- endif -%}
-                        </a>
-                      </p>
-
-                    {%- endfor -%}
-                    </div>
-                  
-        
-            {%- endfor -%}
-              <!-- -->
-            </div>
-          </nav>
         </div>
       </div>
     </div>
   </div>
-  <!-- <div class="usa-footer__secondary-section">
+  <div class="usa-footer__secondary-section">
     <div class="grid-container">
       <div class="grid-row grid-gap">
         <div class="sds-footer__note">
@@ -98,5 +58,5 @@
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 </footer>

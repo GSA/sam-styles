@@ -88,22 +88,14 @@ module.exports = {
         logo: '/assets/images/logo-gsa.svg',
         navigation: [
           {
-            header: 'Our Website',
+            header: 'About beta.SAM.gov',
             links: [
               {
-                text: 'About This Site',
+                text: 'Explore Our Community',
                 href: 'javascript:void(0);'
               },
               {
                 text: 'Release Notes',
-                href: 'javascript:void(0);'
-              },
-              {
-                text: 'Alerts',
-                href: 'javascript:void(0);'
-              },
-              {
-                text: 'News',
                 href: 'javascript:void(0);'
               }
             ]
@@ -113,18 +105,15 @@ module.exports = {
             links: [
               {
                 text: 'Aquisition.gov',
-                href: 'javascript:void(0);',
-                external: true
+                href: 'javascript:void(0);'
               },
               {
                 text: 'USASpending.gov',
-                href: 'javascript:void(0);',
-                external: true
+                href: 'javascript:void(0);'
               },
               {
                 text: 'Grants.gov',
-                href: 'javascript:void(0);',
-                external: true
+                href: 'javascript:void(0);'
               },
               {
                 text: 'More Partners',
@@ -136,21 +125,19 @@ module.exports = {
             header: 'Customer Service',
             links: [
               {
-                text: 'Help',
+                text: 'Learning Center',
                 href: 'javascript:void(0);'
               },
               {
                 text: 'Contact Federal Service Desk',
-                href: 'javascript:void(0);',
-                external: true
+                href: 'javascript:void(0);'
               },
               {
-                text: 'Our Community',
-                href: 'javascript:void(0);',
-                external: true
+                text: 'Resources',
+                href: 'javascript:void(0);'
               },
               {
-                text: 'Policy',
+                text: 'Freedom of Information Act',
                 href: 'javascript:void(0);'
               }
             ]

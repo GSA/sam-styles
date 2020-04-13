@@ -24,7 +24,7 @@
 
 .usa-footer__secondary-section {
   background-color: color('accent-cool-lighter');
-  @include u-text('left');
+  @include u-text('center');
   @include at-media('tablet') {
     @include u-text('left');
   }
@@ -37,7 +37,7 @@
 .usa-footer--big {
   .usa-footer__nav {
     padding-top: units(4);
-    @include u-text('left');
+    @include u-text('center');
     border-bottom: none;
     @include at-media('tablet') {
       @include u-text('left');
@@ -70,35 +70,13 @@
 /*******************************
       SDS Specific Styles
 *******************************/
-@media only screen and (min-width: 484px) {
-  .sds-footer__nav--accordion{
-    display:none;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .usa-footer__nav{
-    display:none;
-  }
-}
-.sds-footer__wrapper{
-  flex-wrap: wrap-reverse;
-}
-@media only screen and (max-width: 880px) {
-  .sds-footer__wrapper{
-    flex-flow: row-reverse wrap-reverse;
-  }
-}
+
 .sds-footer__logo {
   @include u-margin-top(4);
   @include u-display('flex');
   @include u-flex('justify-center');
   @include at-media('tablet') {
     @include u-display('block');
-  }
-}
-@media only screen and (max-width: 880px) {
-  .sds-footer__logo {
-    @include u-margin-top(0);
   }
 }
 
