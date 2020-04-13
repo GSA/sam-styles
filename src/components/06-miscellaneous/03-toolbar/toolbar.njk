@@ -13,10 +13,15 @@
           <div class="sds-accordion__item">
             <h3>
               <button aria-expanded="false" class="sds-accordion__trigger" aria-controls="accordion-nav-content" id="accordion-nav-id">
-                <span class="sds-accordion__title">
-                  Navigation
-                  <span class="sds-accordion__icon"></span>
-                </span>
+                <div class="sds-accordion__header">
+                  <div class="sds-accordion__title">
+                    <div class="sds-field sds-field--stacked">
+                      <div class="sds-field__name">Navigation</div>
+                      <div class="sds-field__value">Selected Category</div>
+                    </div>
+                  </div>
+                  <div class="sds-accordion__icon"></div>
+                </div>
               </button>
             </h3>
             <div id="accordion-nav-content" role="region" aria-labelledby="accordion-nav-id" class="sds-accordion__panel" hidden="">
@@ -54,8 +59,10 @@
           <div class="sds-accordion__item">
             <h3>
               <button aria-expanded="false" class="sds-accordion__trigger" aria-controls="accordion-filters-content" id="accordion-filters-id">
-                <span class="sds-accordion__title">
-                  Filters
+                <span class="sds-accordion__header">
+                  <div class="sds-accordion__title">
+                    Filters
+                  </div>
                   <span class="sds-accordion__icon"></span>
                 </span>
               </button>
