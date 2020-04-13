@@ -25,6 +25,7 @@
 .sds-accordion__item--expanded {
   //border-color: #aac0d0;
   background-color: #eff6fb;
+  overflow: visible;
   box-shadow: inset 0 1px 7px 0 rgba(30, 75, 198, 0.16);
 }
 .sds-accordion__content {
