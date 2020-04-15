@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="698px" height="80px" viewBox="0 0 698 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>step process</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#E3F5E1" offset="0%"></stop>
+            <stop stop-color="#70E17B" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-109.4%" y="-109.4%" width="318.8%" height="318.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-109.4%" y="-109.4%" width="318.8%" height="318.8%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-109.4%" y="-109.4%" width="318.8%" height="318.8%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-109.4%" y="-109.4%" width="318.8%" height="318.8%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Entity-Registration-Home" transform="translate(-172.000000, -432.000000)">
+            <g id="Tiles" transform="translate(144.000000, 300.000000)">
+                <g id="Before-you-get-started">
+                    <g id="step-process" transform="translate(32.000000, 132.000000)">
+                        <path d="M7,0 L657.065352,0 C659.040319,-9.62860648e-14 660.923389,0.834284732 662.250245,2.29714038 L692.380192,35.5153424 C694.439226,37.7854229 694.456456,41.2423951 692.420153,43.5328874 L662.092552,77.6462377 C660.761763,79.1431472 658.853494,79.9982843 656.850564,79.995287 L6.98952489,79.0228051 C3.12762612,79.017026 6.69019566e-15,75.8847161 0,72.022813 L0,7 C-4.73447626e-16,3.13400675 3.13400675,7.10171439e-16 7,0 Z" id="Rectangle" fill="url(#linearGradient-1)"></path>
+                        <g id="Group-4-Copy" transform="translate(312.000000, 0.000000)" stroke="#F3F8FC" stroke-linecap="square">
+                            <line x1="36" y1="40" x2="0.166666667" y2="79.7560976" id="Line"></line>
+                            <line x1="36" y1="40" x2="0.166666667" y2="0.75" id="Line-Copy"></line>
+                        </g>
+                        <g id="Group-4-Copy-3" transform="translate(486.000000, 0.000000)" stroke="#F3F8FC" stroke-linecap="square">
+                            <path d="M36,40 L0.166666667,79.7560976 M36,40 L0.166666667,0.75" id="Combined-Shape"></path>
+                        </g>
+                        <g id="Group-4-Copy-2" transform="translate(138.000000, 0.000000)" stroke="#F3F8FC" stroke-linecap="square">
+                            <line x1="36" y1="40" x2="0.166666667" y2="79.7560976" id="Line"></line>
+                            <line x1="36" y1="40" x2="0.166666667" y2="0.75" id="Line-Copy"></line>
+                        </g>
+                        <g id="Group-2-Copy-10" filter="url(#filter-2)" transform="translate(8.000000, 24.000000)">
+                            <circle id="Oval" stroke="#112F4E" fill="#FFFFFF" cx="16" cy="16" r="15.5"></circle>
+                            <text id="1" font-family="Helvetica" font-size="15.6" font-weight="normal" line-spacing="21.6" letter-spacing="-0.120000002" fill="#112F4E">
+                                <tspan x="12" y="20">1</tspan>
+                            </text>
+                        </g>
+                        <g id="Group-2-Copy-11" filter="url(#filter-3)" transform="translate(182.000000, 24.000000)">
+                            <circle id="Oval" stroke="#112F4E" fill="#FFFFFF" cx="16" cy="16" r="15.5"></circle>
+                            <text id="2" font-family="Helvetica" font-size="15.6" font-weight="normal" line-spacing="21.6" letter-spacing="-0.120000002" fill="#112F4E">
+                                <tspan x="12" y="20">2</tspan>
+                            </text>
+                        </g>
+                        <g id="Group-2-Copy-12" filter="url(#filter-4)" transform="translate(356.000000, 24.000000)">
+                            <circle id="Oval" stroke="#112F4E" fill="#FFFFFF" cx="16" cy="16" r="15.5"></circle>
+                            <text id="3" font-family="Helvetica" font-size="15.6" font-weight="normal" line-spacing="21.6" letter-spacing="-0.120000002" fill="#112F4E">
+                                <tspan x="12" y="20">3</tspan>
+                            </text>
+                        </g>
+                        <g id="Group-2-Copy-13" filter="url(#filter-5)" transform="translate(530.000000, 24.000000)">
+                            <circle id="Oval" stroke="#112F4E" fill="#FFFFFF" cx="16" cy="16" r="15.5"></circle>
+                            <text id="4" font-family="Helvetica" font-size="15.6" font-weight="normal" line-spacing="21.6" letter-spacing="-0.120000002" fill="#112F4E">
+                                <tspan x="12" y="20">4</tspan>
+                            </text>
+                        </g>
+                        <text id="Get-a-Login.gov-Acco" font-family="Helvetica" font-size="14" font-weight="normal" fill="#112F4E">
+                            <tspan x="48" y="38">Get a Login.gov </tspan>
+                            <tspan x="48" y="55">Account</tspan>
+                        </text>
+                        <text id="Request-a-DUNS-Numbe" font-family="Helvetica" font-size="14" font-weight="normal" fill="#112F4E">
+                            <tspan x="222" y="36">Request a </tspan>
+                            <tspan x="222" y="53">DUNS </tspan>
+                            <tspan x="222" y="70">Number</tspan>
+                        </text>
+                        <text id="Prepare-Documentatio" font-family="Helvetica" font-size="14" font-weight="normal" fill="#112F4E">
+                            <tspan x="396" y="36">Prepare </tspan>
+                            <tspan x="396" y="53">Documentatio</tspan>
+                            <tspan x="396" y="70">n</tspan>
+                        </text>
+                        <text id="Review-Requirements" font-family="Helvetica" font-size="14" font-weight="normal" fill="#112F4E">
+                            <tspan x="570" y="36">Review </tspan>
+                            <tspan x="570" y="53">Requirements</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

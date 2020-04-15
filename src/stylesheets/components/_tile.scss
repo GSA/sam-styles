@@ -80,7 +80,7 @@
   border-radius: 2rem;
   @media only screen and (min-width: 600px) {
     height: 150px;
-    width: 195px;
+    //width: 195px;
 
     .sds-tile__icon {
       width: 48px;
@@ -143,8 +143,25 @@
   }
 
   .sds-tile__content {
+
+
     width: 300px;
     height: auto;
     align-items: center;
+  }
+}
+
+
+// outline tile section
+// ----------------------
+.sds-tile.sds-tile--section {
+  width: auto;
+  height: auto;
+
+  .sds-tile__content.sds-tile--outline{
+    width: auto;
+    height: auto;
+    text-align: left;
+    @include u-padding-x(2);
   }
 }
