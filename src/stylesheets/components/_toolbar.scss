@@ -162,12 +162,5 @@
 .sds-toolbar__anim--expanded {
   margin-left: 20px;
 }
-/* modification for sds-field */
-.sds-toolbar .sds-accordion__item .sds-field {
-  font-size: inherit;
-  font-weight: inherit;
-}
-.sds-toolbar .sds-accordion__item--expanded .sds-field .sds-field__name {
-  color: #838985;
-}
+
 /* stylelint-enable */

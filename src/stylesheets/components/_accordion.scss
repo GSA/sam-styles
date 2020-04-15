@@ -76,7 +76,7 @@
   border-style: none;
 }
 
-.sds-accordion__header {
+.sds-accordion__item-header {
   display: flex;
   pointer-events: none;
   border: transparent 1px dashed;
@@ -86,10 +86,19 @@
   align-items: center;
 }
 
-.sds-accordion__title {
+.sds-accordion__item-header-text {
   flex-grow:1;
   min-height: 24px;
 }
+
+.sds-accordion__item-header-title{
+  @include u-display('block');
+}
+
+.sds-accordion__item-header-subtitle{
+  @include u-display('block');
+}
+
 
 .sds-accordion__trigger:focus .sds-accordion__icon,
 .sds-accordion__trigger:hover .sds-accordion__icon {
