@@ -123,3 +123,101 @@ Navigation close button
     @include u-display('inline-block');
   }
 }
+
+
+
+/*-------------------
+  Navigation Tabs
+--------------------*/
+
+.sds-nav {
+
+  .sds-nav__tabs {
+    @include u-display(flex);
+    @extend .usa-list--unstyled;
+    @include u-margin(0);
+
+    &-link {
+      @include u-text('secondary-dark');
+      @include u-text('no-underline');
+      @include u-padding-x(2);
+      @include u-padding-y('05');
+      @include u-margin-right(1);
+
+      &:hover, &.sds-active {
+        @include u-text('secondary');
+        @include u-border-bottom('2px');
+        @include u-border-bottom('primary-vivid');
+      }
+
+      &.sds-secondary {
+        &:hover, &.sds-active {
+          @include u-border-bottom('secondary-vivid');
+        }
+      }
+
+      &.sds-accent-warm {
+        &:hover, &.sds-active {
+          @include u-border-bottom('accent-warm-dark');
+        }
+      }
+
+      &.sds-accent-cool {
+        &:hover, &.sds-active {
+          @include u-border-bottom('accent-cool-darker');
+        }
+      }
+
+      &.sds-base {
+        &:hover, &.sds-active {
+          @include u-border-bottom('base');
+        }
+      }
+    }
+  }
+
+  &--large {
+    .sds-nav__tabs {
+      &-link {
+        @include u-padding-x(4);
+        @include u-padding-y(1);
+        @include u-margin-right(2);
+      }
+    }
+  }
+
+  &--pills {
+    .sds-nav__tabs {
+      &-link {
+        &:hover, &.sds-active {
+          @include u-radius('md');
+          @include u-bg('primary');
+          @include u-border-bottom(0);
+          @include u-text('secondary-darker');
+        }
+      }
+    }
+  }
+
+  &--unstyled {
+    .sds-nav__tabs {
+      &-link {
+        @include u-border-bottom(0);
+
+        &:hover, &.sds-active {
+          @include u-border-bottom(0);
+        }
+      }
+    }
+  }
+
+  &--thin {
+    .sds-nav__tabs {
+      &-link {
+        &:hover, &.sds-active {
+          @include u-border-bottom('1px');
+        }
+      }
+    }
+  }
+}

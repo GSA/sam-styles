@@ -226,6 +226,12 @@
   &:disabled {
     @include button-disabled;
   }
+
+  &--unstyled {
+    &:hover {
+      box-shadow: none;
+    }
+  }
 }
 
 // Shadow
@@ -291,6 +297,10 @@
   }
   &.sds-button--small .svg-inline--fa.fa-fw {
     width: .8em;
+  }
+
+  &.sds-round {
+    @include u-padding('05');
   }
 }
 

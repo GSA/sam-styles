@@ -6,15 +6,39 @@
 
   &__link {
     @include u-display(inline-block);
+    @include u-margin-left(1);
     font-size: 20px;
+    overflow: hidden;
+    width:100%;
+    height: 100%;
+    font-size: 18px;
+    @include u-text('secondary-darker');
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+
+    .sds-button--circular {
+      box-shadow:none;
+    }
+
+    &.sds-active {
+      font-weight: 600;
+
+      .sds-button--circular {
+        background: #1a4480;
+        color: #ffffff;
+      }
+    }
   }
 
   &--wizard li {
     float: left;
     margin-left: 0;
     width: 300px; /* 100 / number of steps */
-    height: 100px; /* total height */
+    height: 80px; /* total height */
     list-style-type: none;
+    display: flex;
+    align-items: center;
     padding: 5px 5px 5px 30px; /* padding around text, last should include arrow width */
     border-right: 3px solid white; /* width: gap between arrows, color: background of document */
     position: relative;
@@ -31,8 +55,8 @@
       left:0;
       display: block;
       border-left: 30px solid white; /* width: arrow width, color: background of document */
-      border-top: 50px solid transparent; /* width: half height */
-      border-bottom: 50px solid transparent; /* width: half height */
+      border-top: 40px solid transparent; /* width: half height */
+      border-bottom: 40px solid transparent; /* width: half height */
       width: 0;
       height: 0;
       content: " ";
@@ -46,8 +70,8 @@
       right: -30px; /* arrow width (negated) */
       display: block;
       border-left: 30px solid color('primary'); /* width: arrow width */
-      border-top: 50px solid transparent; /* width: half height */
-      border-bottom: 50px solid transparent; /* width: half height */
+      border-top: 40px solid transparent; /* width: half height */
+      border-bottom: 40px solid transparent; /* width: half height */
       width:0;
       height:0;
       content: " ";
