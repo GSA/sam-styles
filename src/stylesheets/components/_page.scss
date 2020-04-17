@@ -13,7 +13,16 @@ sds-page {
 .sds-pages{
   display: block;
 }
-.sds-intro,
+
+.sds-intro{
+  display: block;
+  margin-left: auto;
+  padding-left: 1rem;
+  @media (min-width: 64em){
+    padding-left: 2rem;
+  }
+}
+
 .sds-primary,
 .sds-secondary,
 .sds-tertiary {
@@ -32,14 +41,38 @@ sds-page {
 .sds-primary__content,
 .sds-secondary__content,
 .sds-tertiary__content {
-  padding: 10px;
+  @include u-padding-y(2);
+
+  display: webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  *, ::after, ::before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+  }
 }
 
 .sds-intro__block,
 .sds-primary__block,
 .sds-secondary__block,
 .sds-tertiary__block {
- margin: 10px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 0px;
+  flex: 1 0 0px;
+  width: auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  @include u-margin-x(2);
+
+  @media all and (max-width:40em) {
+    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    -webikit-box-flex: 0;
+    }
+
 }
 
 // //*******************************************

@@ -12,10 +12,7 @@
   width: 350px;
   float: right;
   clear: both;
-  box-shadow: -5px 5px 1px 2px white,
-  -5px -5px 1px 2px white,
-  5px 5px 1px 2px white,
-  5px -5px 1px 2px white;
+  box-shadow: -5px 5px 1px 2px white, -5px -5px 1px 2px white, 5px 5px 1px 2px white, 5px -5px 1px 2px white;
 
   .sds-seal__content {
     @include u-display('flex');
@@ -29,10 +26,12 @@
       color: color('base');
     }
   }
-}
-
-@media only screen and (max-width: 880px) {
-  .sds-seal {
+  @media all and (min-width:40em) {
+    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    -webikit-box-flex: 0;
+  }
+  @media only screen and (max-width: 880px) {
     @include u-display('none');
   }
 }
