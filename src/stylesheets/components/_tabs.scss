@@ -34,10 +34,11 @@
   &--wizard li {
     float: left;
     margin-left: 0;
-    width: 300px; /* 100 / number of steps */
+    width: 380px; /* 100 / number of steps */
     height: 80px; /* total height */
     list-style-type: none;
     display: flex;
+    flex-grow: 1;
     align-items: center;
     padding: 5px 5px 5px 30px; /* padding around text, last should include arrow width */
     border-right: 3px solid white; /* width: gap between arrows, color: background of document */

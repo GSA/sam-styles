@@ -131,18 +131,25 @@ Navigation close button
 --------------------*/
 
 .sds-nav {
-
   .sds-nav__tabs {
-    @include u-display(flex);
+    @include u-display('inline-block');
     @extend .usa-list--unstyled;
     @include u-margin(0);
+
+    li {
+      @include u-display('inline-block');
+    }
 
     &-link {
       @include u-text('secondary-dark');
       @include u-text('no-underline');
+      @include u-text('no-wrap');
       @include u-padding-x(2);
       @include u-padding-y('05');
       @include u-margin-right(1);
+      @include u-display('inline-block');
+      @include u-border-bottom('transparent');
+      @include u-border-bottom('2px');
 
       &:hover, &.sds-active {
         @include u-text('secondary');
@@ -195,6 +202,30 @@ Navigation close button
           @include u-border-bottom(0);
           @include u-text('secondary-darker');
         }
+
+        &.sds-secondary {
+          &:hover, &.sds-active {
+            @include u-bg('secondary-lighter');
+          }
+        }
+
+        &.sds-accent-warm {
+          &:hover, &.sds-active {
+            @include u-bg('accent-warm-lighter');
+          }
+        }
+
+        &.sds-accent-cool {
+          &:hover, &.sds-active {
+            @include u-bg('accent-cool-light');
+          }
+        }
+
+        &.sds-base {
+          &:hover, &.sds-active {
+            @include u-bg('base-lighter');
+          }
+        }
       }
     }
   }
@@ -214,6 +245,9 @@ Navigation close button
   &--thin {
     .sds-nav__tabs {
       &-link {
+        @include u-border-bottom('transparent');
+        @include u-border-bottom('1px');
+
         &:hover, &.sds-active {
           @include u-border-bottom('1px');
         }
