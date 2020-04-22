@@ -1,19 +1,45 @@
+@mixin search-icon__big {
+  @include add-background-svg('search');
+  background-position: center center;
+  background-size: units(4);
+}
+
 /*******************************
        USWDS OVERRIDES
 *******************************/
 .usa-search {
+  @include u-shadow(2);
+  @include u-padding(0);
+  @include grid-row;
+
   [type='submit'] {
     @include u-bg('indigo-cool-60');
     @include u-radius(0);
+    @include grid-col(auto);
     height: units(5);
   }
+
+  [type='search'],
+  .usa-search__input {
+    height: units(5);
+    border: 1px solid color('base-light');
+    @include grid-col(fill);
+  }
+
+  &.usa-search--big {
+    [type='submit'] {
+     @include search-icon__big;
+     @include u-height(8);
+    }
+
+    >.usa-input {
+      @include u-height(8);
+    }
+  }
+
 }
 
-[type='search'],
-.usa-search__input {
-  height: units(5);
-  border: 1px solid color('base-light');
-}
+
 
 //search fieldset
 .sds-search {
@@ -64,12 +90,12 @@
   display: inline;
 
   .usa-input{
-    height: 65px;
+    @include u-height(8);
   }
   .usa-search.usa-search--small > .search > .usa-button,
   .usa-search.usa-search--small.usa-search--inverse > div > .usa-button {
-    height: 65px;
-    width: 65px;
+    @include u-height(8);
+    @include u-width(8);
   }
 
   .usa-search{
