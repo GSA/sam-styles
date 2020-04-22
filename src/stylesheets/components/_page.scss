@@ -2,9 +2,23 @@ sds-page {
   @include u-display("block");
   @include u-margin-top(2);
   @include u-margin-bottom(8);
-  min-height: 600px;
+  @include u-minh('viewport');
 
   &.condensed {
     @include u-font("sans", "3xs");
   }
+}
+
+// add theme-default-bottom-padding  elsewhere
+// add negative responsive-site-margins mixin elsewhere
+
+.sds-page—background-accent {
+  @include u-bg("accent-cool-light");
+}
+
+.sds-hero {
+  @include grid-gap;
+  @include grid-col(10);
+  @include grid-offset(2);
+  @include u-padding-bottom(4);
 }
