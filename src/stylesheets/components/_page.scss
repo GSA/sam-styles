@@ -8,3 +8,46 @@ sds-page {
     @include u-font("sans", "3xs");
   }
 }
+
+.sds-page—background-accent {
+  @include u-bg("accent-cool-light");
+}
+
+.sds-hero {
+  // NEGATIVE MARGIN HERE
+}
+
+@mixin add-responsive-site-margins{
+  @include u-padding-x($theme-site-margins-mobile-width);
+  @include at-media($theme-site-margins-breakpoint) {
+    @include u-padding-x($theme-site-margins-width);
+  }
+}
+
+// Create a grid section that is a composite for a grid row,
+// and column offset to align centered:
+.main {
+  @include grid-container;
+}
+
+.grid-section {
+  @include grid-row;
+
+  // Add column gaps
+  .content-row {
+    @include grid-gap;
+    @include grid-col(10);
+    @include grid-offset(2);
+    margin: auto;
+  }
+  .content-row--lg {
+    @include grid-col(11);
+    @include grid-offset(1);
+    margin: auto;
+  }
+  .content-row--sm {
+    @include grid-col(8);
+    @include grid-offset(4);
+    margin: auto;
+  }
+}
