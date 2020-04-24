@@ -9,53 +9,45 @@
             </div>
         </div>
         <div class="sds-toolbar__content" hidden="hidden">
-            <div class="sds-accordion" data-allow-multiple="data-allow-multiple">
-                <div class="sds-accordion__item">
-                    <h3>
-                    	<button aria-expanded="true" class="sds-accordion__trigger" aria-controls="accordion-nav-content" id="accordion-nav-id">
-            				<span class="sds-accordion__title">
-              					Navigation
-              					<span class="sds-accordion__icon"></span>
-            				</span>
-          				</button>
-                    </h3>
-                    <div id="accordion-nav-content" role="region" aria-labelledby="accordion-nav-id" class="sds-accordion__panel" hidden="">
-                        <div class="sds-accordion__panel-body">
-                            <nav>
-                                <ul class="usa-sidenav">
-                                    <li class="usa-sidenav__item">
-                                        <a href="">Parent link</a>
-                                    </li>
-                                    <li class="usa-sidenav__item">
-                                        <a href="" class="usa-current">Current page</a>
-                                        <ul class="usa-sidenav__sublist">
-                                            <li class="usa-sidenav__item">
-                                                <a href="">Child link</a>
-                                            </li>
-                                            <li class="usa-sidenav__item">
-                                                <a href="">Child link</a>
-                                            </li>
-                                            <li class="usa-sidenav__item">
-                                                <a href="">Child link</a>
-                                            </li>
-                                            <li class="usa-sidenav__item">
-                                                <a href="">Child link</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="usa-sidenav__item">
-                                        <a href="">Parent link</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
+          <div class="usa-accordion usa-accordion--bordered" aria-multiselectable="true">
+            <h3 class="usa-accordion__heading">
+              <button class="usa-accordion__button usa-accordion__block" aria-expanded="true" aria-controls="editor-menu">
+                System Accounts Editor
+              </button>
+            </h3>
+            <div id="editor=menu" class="usa-accordion__content" hidden>
+                <nav>
+                    <ul class="usa-sidenav">
+                        <li class="usa-sidenav__item">
+                            <a href="">Parent link</a>
+                        </li>
+                        <li class="usa-sidenav__item">
+                            <a href="" class="usa-current">Current page</a>
+                            <ul class="usa-sidenav__sublist">
+                                <li class="usa-sidenav__item">
+                                    <a href="">Child link</a>
+                                </li>
+                                <li class="usa-sidenav__item">
+                                    <a href="">Child link</a>
+                                </li>
+                                <li class="usa-sidenav__item">
+                                    <a href="">Child link</a>
+                                </li>
+                                <li class="usa-sidenav__item">
+                                    <a href="">Child link</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="usa-sidenav__item">
+                            <a href="">Parent link</a>
+                        </li>
+                    </ul>
+                </nav>
+              </div>
             </div>
-    	</div>
+         </div>
     	<div></div>
-	</div>
-    <div></div>
+    </div>
 	<div class="sds-page-multi__content">
 		<div class="sds-page-multi__banner">
 			<h2 class="untitled">Untitled System Account</h2>

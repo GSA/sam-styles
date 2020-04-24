@@ -1,7 +1,7 @@
 <main>
   <div class="sds-page">
     <div class="grid-container">
-      <section aria-label="Contract Data Hero Section">
+      <section aria-label="Contract Data">
           <div class="sds-hero usa-prose">
             <div class="grid-row grid-gap-md">
               <div class="grid-col-fill">
@@ -29,20 +29,19 @@
             </div>
         </div>
       </section>
-  <section aria-label="Contract Data Information Accordions">
-    <h2 class="usa-sr-only">Contract Data Search and Reports</h2>
+  <section aria-label="Contract Data Search and Reports">
     <div class="grid-row">
       <div class="grid-col-12 tablet-lg:grid-col-10 tablet-lg:grid-offset-1">
         <div class="usa-accordion usa-accordion--bordered" aria-multiselectable="true">
           <section aria-label="How to search contract data">
-            <h3 class="usa-accordion__heading">
+            <h2 class="usa-accordion__heading">
               <button class="usa-accordion__button usa-accordion__block" aria-expanded="false" aria-controls="contract-data-search">
                 How to search contract data
               </button>
-            </h3>
+            </h2>
             <div id="contract-data-search" class="usa-accordion__content usa-prose" hidden>
               <!-- Get started links -->
-              <h4 class="text-ink text-semibold font-sans-md">Get started searching contract data</h4>
+              <h3 class="text-ink text-semibold font-sans-md">Get started searching contract data</h3>
               <div class="padding-x-2 display-flex flex-column">
                 <a class="usa-link" [routerLink]="['help']">
                   <i class="sds fa-file text-base-dark margin-right-1"></i>
@@ -62,7 +61,7 @@
                 </a>
               </div>
               <!-- additional filters links -->
-              <h4 class="text-ink text-semibold font-sans-md">Use filters to find contract data</h4>
+              <h3 class="text-ink text-semibold font-sans-md">Use filters to find contract data</h3>
               <div class="padding-x-2 display-flex flex-column">
                 <a class="usa-link" [routerLink]="['news']">
                   <i class="sds fa-file text-base-dark margin-right-1"></i>
@@ -88,15 +87,15 @@
             </div>
           </section>
 
-          <section aria-label="How to run Contract Data Reports">
-            <h3 class="usa-accordion__heading">
+          <section aria-label="How to run contract data reports">
+            <h2 class="usa-accordion__heading">
               <button class="usa-accordion__button usa-accordion__block" aria-expanded="false" aria-controls="contract-data-reports">
                 How to run contract data reports
               </button>
-            </h3>
+            </h2>
             <div id="contract-data-reports" class="usa-accordion__content usa-prose" hidden>
               <!-- smanage listings links -->
-              <h4 class="text-ink text-semibold font-sans-md">Manage your assistance listings</h4>
+              <h3 class="text-ink text-semibold font-sans-md">Manage your assistance listings</h3>
               <div class="padding-x-2 display-flex flex-column">
                 <a class="usa-link" [routerLink]="['news']">
                   <i class="sds fa-file text-base-dark margin-right-1"></i>
@@ -120,7 +119,7 @@
                 </a>
               </div>
               <!-- admin links -->
-              <h4 class="text-ink text-semibold font-sans-md">Manage your assistance listings</h4>
+              <h3 class="text-ink text-semibold font-sans-md">Manage your assistance listings</h3>
               <div class="padding-x-2 display-flex flex-column">
                 <a class="usa-link" [routerLink]="['news']">
                   <i class="sds fa-file text-base-dark margin-right-1"></i>
@@ -142,12 +141,14 @@
     </div>
   </section>
 
+
   <div class="grid-row grid-gap-md margin-top-4">
-      <div class="grid-col-12 tablet-lg:grid-col-5 margin-bottom-2">
-      <div class="sds-card">
-         <h2 class="sds-card__heading">Data Extracts and APIs</h2>
+    <div class="grid-col-12 tablet-lg:grid-col-5 margin-bottom-2">
+      <section aria-label="Data extracts and APIs">
+        <div class="sds-card">
+          <h2 class="sds-card__heading">Data Extracts and APIs</h2>
           <div class="sds-card__content">
-             <p><a class="usa-link" [routerLink]="['news']">
+            <p><a class="usa-link" [routerLink]="['news']">
               <i class="sds fa-file text-base-dark margin-right-1"></i>
               <span>Quick Start Guide for Role Management</span>
             </a></p>
@@ -157,22 +158,24 @@
             </a></p>
           </div>
         </div>
-      </div>
-
-      <div class="grid-col-12 tablet-lg:grid-col-7 margin-bottom-2">
-      <div class="sds-card">
-         <h2 class="sds-card__heading">More about Contract Data</h2>
-          <div class="sds-card__content">
-             <p><a class="usa-link" [routerLink]="['news']">
-              <i class="sds fa-file text-base-dark margin-right-1"></i>
-              <span>FAQs</span>
-            </a></p>
-            <p><a class="usa-link" [routerLink]="['news']">
-              <i class="sds fa-video-square text-base-dark margin-right-1"></i>
-              <span>Glossary Terms</span>
-            </a></p>
+      </section>
+    </div>
+    <div class="grid-col-12 tablet-lg:grid-col-7 margin-bottom-2">
+      <section aria-label="More about contract data">
+        <div class="sds-card">
+           <h2 class="sds-card__heading">More about Contract Data</h2>
+            <div class="sds-card__content">
+               <p><a class="usa-link" [routerLink]="['news']">
+                <i class="sds fa-file text-base-dark margin-right-1"></i>
+                <span>FAQs</span>
+              </a></p>
+              <p><a class="usa-link" [routerLink]="['news']">
+                <i class="sds fa-video-square text-base-dark margin-right-1"></i>
+                <span>Glossary Terms</span>
+              </a></p>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   </div>
