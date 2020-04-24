@@ -8,10 +8,11 @@
   @include u-border('2px','error', 'solid');
   @include u-radius-left('pill');
   @include u-border-right(0);
+  position: absolute;
+  right: 0;
+  top: 32px;
   height: 75px;
   width: 350px;
-  float: right;
-  clear: both;
   box-shadow: -5px 5px 1px 2px white,
   -5px -5px 1px 2px white,
   5px 5px 1px 2px white,
