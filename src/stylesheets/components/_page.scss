@@ -1,5 +1,4 @@
 sds-page {
-  @include u-display("block");
   @include u-margin-bottom(8);
   @include u-minh('viewport');
 }
