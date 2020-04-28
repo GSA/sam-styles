@@ -12,13 +12,69 @@ sds-page {
 // add theme-default-bottom-padding  elsewhere
 // add negative responsive-site-margins mixin elsewhere
 
-.sds-page—background-accent {
+.sds-page--background-accent {
   @include u-bg("accent-cool-light");
 }
 
-.sds-hero {
-  @include grid-gap;
-  @include grid-col(10);
-  @include grid-offset(2);
-  @include u-padding-bottom(4);
+// .sds-hero {
+//   @include grid-gap;
+//   @include grid-col(10);
+//   @include grid-offset(2);
+//   @include u-padding-bottom(4);
+// }
+//----------------------------------------------------------------
+/*What I just showed in the scrum.  Thanks.
+
+$theme-page-margins-bottom: 8;
+
+.sds-page {
+     padding-bottom: units($theme-page-margins-bottom);
+     @include u-minh('viewport');
 }
+
+.sds-page--background-accent {
+    @include u-bg('accent-cool-lighter');
+}
+
+// Can we add default padding to the hero area
+.sds-hero {
+
+    @include u-padding-bottom(4);
+}
+*/
+//========================================================================
+/*
+@mixin adjust-responsive-site-margins {
+  margin-left: -(units($theme-site-margins-mobile-width));
+  margin-right: -(units($theme-site-margins-mobile-width));
+  padding-left: (units($theme-site-margins-mobile-width));
+  padding-right: (units($theme-site-margins-mobile-width));
+  @include at-media($theme-site-margins-breakpoint) {
+      margin-left: -(units($theme-site-margins-width));
+      margin-right: -(units($theme-site-margins-width));
+      padding-left: (units($theme-site-margins-width));
+      padding-right: (units($theme-site-margins-width));
+  }
+}
+
+.sds-page {
+   @include u-padding-bottom(8);
+   @include u-minh('viewport');
+}
+
+.sds-page--background-accent {
+    @include u-bg('accent-cool-lighter');
+}
+
+.sds-page--background {
+    @include u-bg('white');
+}
+
+.sds-hero {
+  @include u-height('full');
+  background: url("/assets/images/landing-hero.png") no-repeat right bottom;
+  background-size: cover;
+  @include u-padding-bottom(4);
+  @include adjust-responsive-site-margins;
+}
+*/
