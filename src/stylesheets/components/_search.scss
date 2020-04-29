@@ -26,11 +26,16 @@
   select {
     @include u-margin-top(0);
     height: units(5);
-    max-width: 12rem;
     @include u-border('solid');
     @include u-border(1px);
     @include u-border('base-light');
-    border-right-width: 0;
+    @media only screen and (min-width:480px){
+      border-right-width: 0;
+      max-width: 12rem;
+    }
+  }
+  div {
+    width: 100%;
   }
 }
 
@@ -43,6 +48,7 @@
     @include u-text('white');
     background-image: url('#{$theme-image-path}/arrow-down-white.svg');
     background-repeat: no-repeat;
+    background-size: 0.75rem;
   }
     @media only screen and (max-width:480px){
       flex-direction: column;
