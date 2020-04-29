@@ -104,7 +104,14 @@
 .sds-accordion__trigger:hover .sds-accordion__icon {
   background-color: white;
 }
-
+.sds-accordion__title {
+  display: block;
+  pointer-events: none;
+  border: transparent 1px dashed;
+  border-radius: 2px;
+  outline: none;
+  padding: 6px 10px;
+}
 .sds-accordion__icon {
   transition: transform 0.2s ease-in;
   width: 24px;
