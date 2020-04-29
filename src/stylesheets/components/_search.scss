@@ -1,136 +1,81 @@
-/*******************************
-       USWDS OVERRIDES
-*******************************/
+/**********************************
+       SEARCH USWDS OVERRIDES
+***********************************/
 .usa-search {
   [type='submit'] {
     @include u-bg('indigo-cool-60');
     @include u-radius(0);
     height: units(5);
+    min-width:48px;
   }
 }
 
-[type='search'],
-.usa-search__input {
+[type='search'] {
   height: units(5);
   border: 1px solid color('base-light');
 }
 
-//search fieldset
-.sds-search {
-  @include u-display('block');
+.usa-form.usa-search {
+  max-width: 40rem;
 
-  .usa-button {
-    @include u-bg('indigo-cool-60');
-    @include u-radius(0)
-  }
-
-  .usa-button:hover {
-    @include u-bg('blue-warm-70v');
-  }
-
-  form {
-    display: flex;
-    flex-wrap: nowrap;
+  [type='search'],
+  .usa-search__input{
     width: 100%;
+    max-width: 40rem;
   }
-
   select {
-    width: 150px;
+    @include u-margin-top(0);
+    height: units(5);
+    max-width: 12rem;
+    @include u-border('solid');
+    @include u-border(1px);
+    @include u-border('base-light');
     border-right-width: 0;
-    @include u-margin(0);
-    @include u-padding-x(2);
-  }
-
-  input {
-    height: 40px;
-    border-right-width: 0;
-    @include u-margin(0);
-  }
-
-  input:focus {
-    box-shadow: 2px 1px 6px 1px #3F57A6;
-    outline: none;
-  }
-
-  button,
-  span {
-    height: 40px !important;
   }
 }
 
-//big search
-.sds-search--big {
-  box-shadow: 2px 1px 6px 1px #c9c9c9;
-  display: inline;
-
-  .usa-input{
-    height: 65px;
+/*******************************
+       Inverse Select
+*******************************/
+.usa-form.usa-search.sds-inverse {
+  select {
+    @include u-bg('black');
+    @include u-text('white');
+    background-image: url('#{$theme-image-path}/arrow-down-white.svg');
+    background-repeat: no-repeat;
   }
-  .usa-search.usa-search--small > .search > .usa-button,
-  .usa-search.usa-search--small.usa-search--inverse > div > .usa-button {
-    height: 65px;
-    width: 65px;
-  }
-
-  .usa-search{
-    display: flex;
-    flex-wrap: nowrap;
-  }
-
-  .usa-select {
-    border: solid 1px #c9c9c9;
-    border-right-width: 0;
-    max-width: 250px;
-    min-width: 110px;
-    height: 65px;
-    @include u-margin(0);
-    @include u-padding-x(2);
-  }
-  .usa-search.usa-search--small > div,
-  .usa-search.usa-search--small.usa-search--inverse > div {
-    width: 100%;
-  }
-}
-
-//inverse search
-.usa-select--inverse {
-    color: white !important;
-    background-color: black !important;
-
-    &::-ms-expand {
-      color: white;
-      background-color: black;
-      border: none;
+    @media only screen and (max-width:480px){
+      //display: block;
+      flex-direction: column;
+      select {
+        //display: block;
+        width:100%;
+        max-width: unset;
+      }
+      // [type='search'],
+      // [type='submit'] {
+      //   width: 100%;
+      //   display:inline;
+      // }
     }
 }
 
-@media only screen and (max-width: 600px) {
-  .usa-select--inverse {
-    @include u-display('block');
-    @include u-margin-bottom('2px');
-    height: 38px;
-    width: 100% !important;
+/************************************
+       Big Search USWDS OVERRIDES
+*************************************/
+.usa-search.usa-search--big{
+  [type='submit'] {
+    @include u-bg('indigo-cool-60');
+    @include u-radius(0);
+    @include u-minw(6);
+    background-image: url('#{$theme-image-path}/search.svg');
+    background-repeat: no-repeat;
   }
 
-  #inverse-search-dropdown {
-    @include u-display('block');
-    min-width: 300px;
-  }
-
-  .usa-search.usa-search--small.usa-search--inverse{
-    @include u-flex('wrap');
-    @include u-padding(1);
-    width: min-content;
-  }
-
-  .sds-search--big > .usa-search.usa-search--small.usa-search--inverse{
-    @include u-flex('wrap');
-    @include u-padding(1);
-    width: 100%;
-  }
-
-  .sds-search--big > .usa-search.usa-search--small.usa-search--inverse > .usa-select.usa-select--inverse{
-    max-width: unset;
-    width: 100%;
+  @media only screen and (min-width:480px){
+    [type='submit'],
+     select {
+      @include u-height(6);
+    }
   }
 }
