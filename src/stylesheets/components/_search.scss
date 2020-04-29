@@ -45,18 +45,11 @@
     background-repeat: no-repeat;
   }
     @media only screen and (max-width:480px){
-      //display: block;
       flex-direction: column;
       select {
-        //display: block;
         width:100%;
         max-width: unset;
       }
-      // [type='search'],
-      // [type='submit'] {
-      //   width: 100%;
-      //   display:inline;
-      // }
     }
 }
 
