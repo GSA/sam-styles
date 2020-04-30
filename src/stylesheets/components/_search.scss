@@ -5,37 +5,39 @@
   [type='submit'] {
     @include u-bg('indigo-cool-60');
     @include u-radius(0);
-    height: units(5);
-    min-width:48px;
+    @include u-height(5);
+    min-width: 48px;
+    box-shadow: 2px 4px 6px 1px #c9c9c9;
+  }
+
+  [type='search'] {
+    @include u-height(5);
+    border: 1px solid color('base-light');
+    box-shadow: 2px 4px 6px 1px #c9c9c9;
   }
 }
-
-[type='search'] {
-  height: units(5);
-  border: 1px solid color('base-light');
-}
-
 .usa-form.usa-search {
   max-width: 40rem;
 
   [type='search'],
   .usa-search__input{
-    width: 100%;
+    @include u-width('full');
     max-width: 40rem;
   }
   select {
     @include u-margin-top(0);
-    height: units(5);
+    @include u-height(5);
     @include u-border('solid');
     @include u-border(1px);
     @include u-border('base-light');
+    box-shadow: 2px 4px 6px 1px #c9c9c9;
     @media only screen and (min-width:480px){
       border-right-width: 0;
       max-width: 12rem;
     }
   }
   div {
-    width: 100%;
+    @include u-width('full');
   }
 }
 
@@ -51,9 +53,9 @@
     background-size: 0.75rem;
   }
     @media only screen and (max-width:480px){
-      flex-direction: column;
+      @include u-flex('column');
       select {
-        width:100%;
+        @include u-width('full');
         max-width: unset;
       }
     }
@@ -70,11 +72,12 @@
     background-image: url('#{$theme-image-path}/search.svg');
     background-repeat: no-repeat;
   }
-
-  @media only screen and (min-width:480px){
+  @media (min-width: 30em) {
+    [type="search"],
     [type='submit'],
-     select {
-      @include u-height(6);
+    .usa-select {
+      @include u-font('sans', 'md')
+      @include u-height(8);
     }
   }
 }
