@@ -71,6 +71,9 @@
     @include u-minw(6);
     background-image: url('#{$theme-image-path}/search.svg');
     background-repeat: no-repeat;
+      @media (min-width: 30em) {
+        background-size: 1.5rem;
+      }
   }
   @media (min-width: 30em) {
     [type="search"],
@@ -78,6 +81,7 @@
     .usa-select {
       @include u-font('sans', 'md')
       @include u-height(8);
+
     }
   }
 }
