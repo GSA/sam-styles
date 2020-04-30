@@ -1,6 +1,6 @@
 <div class="grid-row grid-gap">
 	{% for color in colors %}
-		<div class="grid-col-12 tablet:grid-col-6">
+		<div class="grid-col-12 tablet-lg:grid-col-7">
 			<span{% if not heading %} id="cardHeading" role="heading" aria-level="1"{% endif %}>{{color.title}}</span>
 			<div {% if not heading %}aria-labelledby="cardHeading"{% endif %}class="sds-card {% for modifier in modifiers %} sds-card--{{modifier}}{% endfor %}">
 

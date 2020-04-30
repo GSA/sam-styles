@@ -22,10 +22,24 @@
     @include u-padding(2);
 
     &--flex {
-      text-align: center;
-      @include at-media('tablet-lg') {
-        display: flex;
-        justify-content: space-between;
+      @extend .grid-row;
+      display: flex;
+      .sds-card__title {
+        @include grid-col(12);
+        text-align: center;
+        @include at-media('tablet-lg') {
+          @include grid-col('auto');
+          text-align: left;
+          flex: 0 0 auto;
+        }
+      }
+      .sds-card__buttons {
+        @include grid-col(12);
+        @include at-media('tablet-lg') {
+          @include grid-col;
+          flex: 1 0 auto;
+          text-align: right;
+        }
       }
     }
 
@@ -47,6 +61,18 @@
         @extend .grid-col;
         margin: auto;
       }
+    }
+  }
+
+  &__buttons {
+    .usa-button {
+      @include u-width(full);
+      @include at-media('tablet-lg') {
+        width: initial;
+      }
+    }
+    :last-child {
+      margin-right: 0;
     }
   }
 
@@ -81,14 +107,6 @@
     display: flex;
     .sds-card__heading {
       @include u-border-right('base-light', 'solid', '1px');
-    }
-  }
-
-  .usa_button, .sds-button {
-    @include at-media('tablet-lg') {
-      &:last-of-type {
-        margin: 0;
-      }
     }
   }
 
