@@ -1,14 +1,11 @@
 .usa-list.sds-list--menu {
    @include unstyled-list;
 }
+
 .usa-list.sds-list--menu > li {
-  @include u-border('1px');
-  @include u-border('base-light');
-  @include u-border-top(0);
-  @include u-padding(2);
-  @include u-margin(0);
-  @include u-maxw('none');
+  @include bordered-item();
 }
+
 .usa-list.sds-list--menu > li:first-child {
   @include u-border('1px');
   @include u-border('base-light');
@@ -17,4 +14,8 @@
 }
 .sds-list--related-articles{
   min-width: 240px;
+}
+
+.usa-list--bordered > li {
+  @include bordered-item();
 }

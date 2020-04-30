@@ -1,0 +1,22 @@
+status: wip
+preview: "@sam-content"
+default: unordered
+notes: Lists can be ordered, unordered, or unstyled
+context:
+  items:
+    - list item
+    - list item
+    - list item
+  modifiers:
+variants:
+  - name: unordered
+    label: Unordered List
+  - name: ordered
+    label: Ordered List
+    context:
+      ordered: true
+  - name: unstyled
+    label: Unstyled List
+    context:
+      modifiers:
+        - unstyled

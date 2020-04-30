@@ -1,0 +1,27 @@
+<div class="grid-row grid-gap">
+	{% for color in colors %}
+		<div class="grid-col-12 tablet:grid-col-6">
+
+			<div class="sds-card {% for modifier in modifiers %} sds-card--{{modifier}}{% endfor %}">
+
+				{% if heading %}
+					<div class="sds-card__heading{% if color.modifier %} sds-heading--{{color.modifier}}{% endif %}">
+
+						{% if heading.icon %}
+							<div class="sds-card__icon">
+								{%- render '@icons--single', {icon: heading.icon} -%}
+							</div>
+						{% endif %}
+
+					</div>
+				{% endif %}
+
+				<div class="sds-card__content">
+          <h3 class="sds-card__title">{{title}}</h3>
+
+          <p class="usa-prose">{{body}}</p>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>

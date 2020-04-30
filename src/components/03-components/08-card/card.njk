@@ -1,0 +1,52 @@
+<div class="grid-row grid-gap">
+	{% for color in colors %}
+		<div class="grid-col-12 tablet:grid-col-6">
+			<h2>{{color.title}}</h2>
+			<div class="sds-card {% for modifier in modifiers %} sds-card--{{modifier}}{% endfor %}">
+
+				{% if heading %}
+					<div class="sds-card__heading{% if color.modifier %} sds-heading--{{color.modifier}}{% endif %} sds-card__heading--{{heading.style}}">
+
+						{% if heading.icon %}
+							<div class="sds-card__icon">
+								{%- render '@icons--single', {icon: heading.icon} -%}
+							</div>
+						{% endif %}
+
+						{% if heading.link %}
+							<a href="{{heading.link}}" class="sds-card__link">
+						{% endif %}
+
+						<h2 class="sds-card__title">{{title}}</h2>
+
+
+						{% if heading.link %}
+							</a>
+						{% endif %}
+
+						{% if heading.buttons %}
+							<div class="sds-card__buttons">
+								{% for button in heading.buttons %}
+									{% render '@buttons--single', {modifiers: button.modifiers }, true %}
+								{% endfor %}
+							</div>
+						{% endif %}
+					{% if heading.action %}
+						<div class="sds-card__action">
+							{%- render '@actions--single' -%}
+						</div>
+					{% endif %}
+					</div>
+				{% endif %}
+
+				<div class="sds-card__content">
+					{% if body.list %}
+						{% render '@list', {modifiers: ['bordered', 'unstyled'] }, true %}
+					{% else %}
+						{{ body }}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>

@@ -1,0 +1,116 @@
+label: Cards
+status: wip
+preview: "@sam-content"
+default: default
+notes: A horizontal header may have a title and a button.
+context:
+  base: sds-card
+  title: Contract Opportunities
+  colors:
+    - title: Plain
+    - modifier: base
+      title: Base
+    - modifier: accent-cool
+      title: Accent Cool
+    - modifier: accent-warm
+      title: Accent Warm
+    - modifier: feature
+      title: Feature (Secondary)
+  heading:
+    style: left
+  modifiers:
+    - shadowed
+    - bordered
+  body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae.
+variants:
+  - name: default
+    label: Shadowed and Bordered
+  - name: bordered
+    label: Bordered No Shadow
+    context:
+      modifiers:
+        - bordered
+  - name: shadowed
+    label: Shadowed No Border
+    context:
+      modifiers:
+        - shadowed
+  - name: no shadow
+    label: No Shadow or Border
+    context:
+      modifiers:
+  - name: no heading
+    label: No Heading
+    context:
+      heading:
+      colors:
+        - title: Plain
+  - name: link heading
+    label: Link Heading
+    notes: Heading can be a link.
+    context:
+      heading:
+        link: " "
+  - name: heading icon left
+    label: Heading Icon Left
+    context:
+      heading:
+        icon: book
+  - name: heading icon stacked
+    label: Heading Icon Stacked
+    context:
+      heading:
+        icon: book
+        style: stacked
+  - name: heading icon centered
+    label: Heading Icon Centered
+    context:
+        heading:
+          icon: book
+          style: center
+  - name: heading button
+    label: Heading with One Button
+    notes: A horizontal card heading may have a title and a button.
+    context:
+      heading:
+        buttons:
+          - modifiers:
+            - outline
+        style: flex
+  - name: heading buttons
+    label: Heading with Two Buttons
+    notes: A horizontal card heading may have a title and two buttons.
+    context:
+      heading:
+        buttons:
+          - modifiers:
+            - outline
+          - modifiers:
+            - outline
+        style: flex
+  - name: heading action
+    label: Heading with Action Button
+    notes: A horizontal card heading may have an action button. Card headings with actions should have a row modifier "sds-card__heading--row"
+    context:
+      heading:
+        action: true
+        style: row
+  - name: vertical
+    label: Vertical Heading
+    notes: A card can have a vertical heading
+    context:
+      modifiers:
+        - shadowed
+        - bordered
+        - vertical
+      heading:
+        icon: question-circle
+  - name: list
+    label: List
+    notes: Card layouts can be used for lists. Don't add bordered modifier to card -- just add to list
+    context:
+      modifiers:
+        - shadowed
+        - list
+      body:
+        list: true
