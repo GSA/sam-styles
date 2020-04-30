@@ -1,11 +1,11 @@
 <div class="grid-row grid-gap">
 	{% for color in colors %}
 		<div class="grid-col-12 tablet:grid-col-6">
+			<h2>{{color.title}}</h2>
 
 			<div class="sds-card {% for modifier in modifiers %} sds-card--{{modifier}}{% endfor %}">
-
 				{% if heading %}
-					<div class="sds-card__heading{% if color.modifier %} sds-heading--{{color.modifier}}{% endif %}">
+					<div class="sds-card__heading{% if color.modifier %} sds-card__heading--{{color.modifier}}{% endif %}">
 
 						{% if heading.icon %}
 							<div class="sds-card__icon">
@@ -18,7 +18,6 @@
 
 				<div class="sds-card__content">
           <h3 class="sds-card__title">{{title}}</h3>
-
           <p class="usa-prose">{{body}}</p>
 				</div>
 			</div>
