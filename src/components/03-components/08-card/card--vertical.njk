@@ -1,7 +1,7 @@
 <div class="grid-row grid-gap">
 	{% for color in colors %}
 		<div class="grid-col-12 tablet:grid-col-6">
-			<h2>{{color.title}}</h2>
+			<span>{{color.title}}</span>
 
 			<div class="sds-card {% for modifier in modifiers %} sds-card--{{modifier}}{% endfor %}">
 				{% if heading %}

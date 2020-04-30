@@ -3,3 +3,4 @@ status: wip
 preview: "@sam-content"
 context:
     style: primary
+    label: action

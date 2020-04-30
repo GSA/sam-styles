@@ -41,6 +41,7 @@ variants:
       modifiers:
   - name: no heading
     label: No Heading
+    notes: "508: card must have `aria-labelledby` attribute with a corresponding heading outside of card"
     context:
       heading:
       colors:
