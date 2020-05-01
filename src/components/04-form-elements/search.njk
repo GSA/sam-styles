@@ -1,12 +1,14 @@
-<section aria-label="Small search component" class="margin-2">
+<section class="margin-2">
   <h2>Small Search</h2>
 
   <form class="usa-search usa-search--small" role="search">
-    <label class="usa-sr-only" for="search-field-small">Search</label>
-    <input class="usa-input" id="search-field-small" type="search" name="search" placeholder="Search Here">
-    <button class="usa-button" type="submit">
-      <span class="usa-sr-only">Search</span>
-    </button>
+    <div class="usa-form-group usa-search">
+      <label class="usa-sr-only" for="search-field-small">Search</label>
+      <input class="usa-input" id="search-field-small" type="search" name="search" placeholder="Search Here">
+      <button class="usa-button" type="submit">
+        <span class="usa-sr-only">Search</span>
+      </button>
+    </div>
   </form>
 </section>
 
@@ -36,7 +38,7 @@
       <option value="value2">Option B</option>
       <option value="value3">Option C</option>
     </select>
-    <div>
+    <div class="usa-form-group sds-inverse__search">
       <label class="usa-sr-only" for="search-field-small">Search</label>
       <input class="usa-input" id="search-field-small" type="search" name="search" placeholder="Search Here">
       <button class="usa-button" type="submit">
@@ -50,11 +52,13 @@
   <h2>Big Search</h2>
 
   <form class="usa-search usa-search--big" role="search">
-    <label class="usa-sr-only" for="search-field-big">Search</label>
-    <input class="usa-input" id="search-field-big" type="search" name="search">
-    <button class="usa-button" type="submit">
-      <span class="usa-sr-only">Search</span>
-    </button>
+    <div class="usa-form-group usa-search">
+      <label class="usa-sr-only" for="search-field-big">Search</label>
+      <input class="usa-input" id="search-field-big" type="search" name="search" placeholder="Search Here">
+      <button class="usa-button" type="submit">
+        <span class="usa-sr-only">Search</span>
+      </button>
+    </div>
   </form>
 </section>
 
@@ -68,7 +72,7 @@
       <option value="value3">Option C</option>
     </select>
     <label class="usa-sr-only" for="search-field-big">Search</label>
-    <input class="usa-input" id="search-field-big" type="search" name="search">
+    <input class="usa-input" id="search-field-big" type="search" name="search" placeholder="Search Here">
     <button class="usa-button" type="submit">
       <span class="usa-sr-only">Search</span>
     </button>
@@ -80,13 +84,13 @@
     <label class="usa-sr-only" for="options">Dropdown label</label>
     <select class="usa-select" name="options" id="options">
       <option value>- Select -</option>
-      <option value="value1">Option A</option>
+      <option value="value1">This is a super long example for an option on the select</option>
       <option value="value2">Option B</option>
       <option value="value3">Option C</option>
     </select>
-    <div>
+    <div class="usa-form-group sds-inverse__search">
       <label class="usa-sr-only" for="search-field-big">Search</label>
-      <input class="usa-input" id="search-field-big" type="search" name="search">
+      <input class="usa-input" id="search-field-big" type="search" name="search" placeholder="Search Here">
       <button class="usa-button" type="submit">
         <span class="usa-sr-only">Search</span>
       </button>
