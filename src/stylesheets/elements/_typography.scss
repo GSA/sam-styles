@@ -70,32 +70,38 @@
   line-height: 0.5rem;
 }
 
-.h1{
+h1 {
+  font-size: units(5);
   @include u-text('bold', 'base');
-  font-size: 2.13rem;
-  line-height: 3rem;
+  line-height: units(6);
 }
 
-.h2{
+h2 {
+  font-size: units(4);
   @include u-text('semibold', 'base-dark');
-  font-size: 1.625rem;
-  line-height: 2.25rem;
+  line-height: units(5);
 }
 
-.h3{
+h3 {
+  font-size: units(3);
   @include u-text('bold', 'base-dark');
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  line-height: units(4);
 }
 
-.h4{
+h4 {
+  font-size: units(2.5);
   @include u-text('semibold', 'base-dark');
-  font-size: 1.13rem;
-  line-height: 1.5rem;
+  line-height: units(3);
 }
 
-.h5{
+h5 {
+  font-size: units(2);
   @include u-text('bold', 'base-dark');
-  font-size: 1.0rem;
-  line-height: 1.25rem;
+  line-height: units(2.5);
+}
+
+h6 {
+  font-size: units(2);
+  @include u-text('bold', 'base-dark');
+  line-height: units(2.5);
 }
