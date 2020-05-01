@@ -68,6 +68,7 @@
     .usa-button {
       @include u-width(full);
       @include at-media('tablet-lg') {
+        width: auto;
         width: initial;
       }
     }
