@@ -55,11 +55,12 @@
       text-align: center;
     }
 
-    &--row {
-      @include grid-row;
-      * {
-        @include grid-col;
-        margin: auto;
+    &--action {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .sds-card__action > * {
+        margin-right: 0;
       }
     }
   }

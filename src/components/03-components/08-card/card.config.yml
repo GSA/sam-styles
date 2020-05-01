@@ -91,11 +91,11 @@ variants:
         style: flex
   - name: header action
     label: Header with Action Button
-    notes: A horizontal card header may have an action button. Card headers with actions should have a row modifier "sds-card__header--row"
+    notes: A horizontal card header may have an action button. Card headers with actions should have an action modifier "sds-card__header--action"
     context:
       header:
         action: true
-        style: row
+        style: action
   - name: vertical
     label: Vertical Header
     notes: A card can have a vertical header
