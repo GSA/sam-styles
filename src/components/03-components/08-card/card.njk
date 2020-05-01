@@ -1,37 +1,37 @@
 <div class="grid-row grid-gap">
 	{% for color in colors %}
 		<div class="grid-col-12 tablet-lg:grid-col-7">
-			<span{% if not heading %} id="cardHeading" role="heading" aria-level="1"{% endif %}>{{color.title}}</span>
-			<div {% if not heading %}aria-labelledby="cardHeading"{% endif %}class="sds-card {% for modifier in modifiers %} sds-card--{{modifier}}{% endfor %}">
+			<span{% if not header %} id="cardHeader" role="header" aria-level="1"{% endif %}>{{color.title}}</span>
+			<div {% if not header %}aria-labelledby="cardHeader"{% endif %}class="sds-card {% for modifier in modifiers %} sds-card--{{modifier}}{% endfor %}">
 
-				{% if heading %}
-					<div class="sds-card__heading{% if color.modifier %} sds-card__heading--{{color.modifier}}{% endif %} sds-card__heading--{{heading.style}}">
+				{% if header %}
+					<div class="sds-card__header{% if color.modifier %} sds-card__header--{{color.modifier}}{% endif %} sds-card__header--{{header.style}}">
 
-						{% if heading.icon %}
+						{% if header.icon %}
 							<div class="sds-card__icon">
-								{%- render '@icons--single', {icon: heading.icon} -%}
+								{%- render '@icons--single', {icon: header.icon}, true -%}
 							</div>
 						{% endif %}
 
-						{% if heading.link %}
-							<a href="{{heading.link}}" class="sds-card__link">
+						{% if header.link %}
+							<a href="{{header.link}}" class="sds-card__link">
 						{% endif %}
 
 						<h2 class="sds-card__title">{{title}}</h2>
 
 
-						{% if heading.link %}
+						{% if header.link %}
 							</a>
 						{% endif %}
 
-						{% if heading.buttons %}
+						{% if header.buttons %}
 							<div class="sds-card__buttons">
-								{% for button in heading.buttons %}
+								{% for button in header.buttons %}
 									{% render '@buttons--single', {modifiers: button.modifiers }, true %}
 								{% endfor %}
 							</div>
 						{% endif %}
-					{% if heading.action %}
+					{% if header.action %}
 						<div class="sds-card__action">
 							{%- render '@actions--single' -%}
 						</div>

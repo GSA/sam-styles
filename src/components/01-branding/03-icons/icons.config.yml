@@ -1,6 +1,9 @@
 label: Icons
 status: wip
 context:
+  size: 2x
+  semantic: true
+  screenReader: Screen reader description
   icons:
     - name: pentagon
       description: pentagon

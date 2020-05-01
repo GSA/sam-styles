@@ -16,7 +16,7 @@ context:
       title: Accent Warm
     - modifier: feature
       title: Feature (Secondary)
-  heading:
+  header:
     style: left
   modifiers:
     - shadowed
@@ -24,7 +24,7 @@ context:
   body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae.
 variants:
   - name: default
-    label: Shadowed and Bordered
+    label: Default
   - name: bordered
     label: Bordered No Shadow
     context:
@@ -39,72 +39,72 @@ variants:
     label: No Shadow or Border
     context:
       modifiers:
-  - name: no heading
-    label: No Heading
-    notes: "508: card must have `aria-labelledby` attribute with a corresponding heading outside of card"
+  - name: no header
+    label: No Header
+    notes: "508: card must have `aria-labelledby` attribute with a corresponding header outside of card"
     context:
-      heading:
+      header:
       colors:
         - title: Plain
-  - name: link heading
-    label: Link Heading
-    notes: Heading can be a link.
+  - name: link header
+    label: Link Header
+    notes: Header can be a link.
     context:
-      heading:
+      header:
         link: " "
-  - name: heading icon left
-    label: Heading Icon Left
+  - name: header icon left
+    label: Header Icon Left
     context:
-      heading:
+      header:
         icon: book
-  - name: heading icon stacked
-    label: Heading Icon Stacked
+  - name: header icon stacked
+    label: Header Icon Stacked
     context:
-      heading:
+      header:
         icon: book
         style: stacked
-  - name: heading icon centered
-    label: Heading Icon Centered
+  - name: header icon centered
+    label: Header Icon Centered
     context:
-        heading:
+        header:
           icon: book
           style: center
-  - name: heading button
-    label: Heading with One Button
-    notes: A horizontal card heading may have a title and a button.
+  - name: header button
+    label: Header with One Button
+    notes: A horizontal card header may have a title and a button.
     context:
-      heading:
+      header:
         buttons:
           - modifiers:
             - outline
         style: flex
-  - name: heading buttons
-    label: Heading with Two Buttons
-    notes: A horizontal card heading may have a title and two buttons.
+  - name: header buttons
+    label: Header with Two Buttons
+    notes: A horizontal card header may have a title and two buttons.
     context:
-      heading:
+      header:
         buttons:
           - modifiers:
             - outline
           - modifiers:
             - outline
         style: flex
-  - name: heading action
-    label: Heading with Action Button
-    notes: A horizontal card heading may have an action button. Card headings with actions should have a row modifier "sds-card__heading--row"
+  - name: header action
+    label: Header with Action Button
+    notes: A horizontal card header may have an action button. Card headers with actions should have a row modifier "sds-card__header--row"
     context:
-      heading:
+      header:
         action: true
         style: row
   - name: vertical
-    label: Vertical Heading
-    notes: A card can have a vertical heading
+    label: Vertical Header
+    notes: A card can have a vertical header
     context:
       modifiers:
         - shadowed
         - bordered
         - vertical
-      heading:
+      header:
         icon: question-circle
   - name: list
     label: List

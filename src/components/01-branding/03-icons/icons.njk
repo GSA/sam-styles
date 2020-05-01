@@ -3,7 +3,7 @@
     <ul class="usa-list usa-list--unstyled grid-row flex-wrap">
       {% for icon in icons %}
         <li class="display-block padding-2 text-center">
-          {%- render '@icons--single', {icon: icon.name} -%}
+          {%- render '@icons--single', {icon: icon.name}, true -%}
           <p class="font-sans-3xs">{{icon.description}}</p>
         </li>
       {% endfor %}

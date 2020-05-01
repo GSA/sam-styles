@@ -4,12 +4,12 @@
 			<span>{{color.title}}</span>
 
 			<div class="sds-card {% for modifier in modifiers %} sds-card--{{modifier}}{% endfor %}">
-				{% if heading %}
-					<div class="sds-card__heading{% if color.modifier %} sds-card__heading--{{color.modifier}}{% endif %}">
+				{% if header %}
+					<div class="sds-card__header{% if color.modifier %} sds-card__header--{{color.modifier}}{% endif %}">
 
-						{% if heading.icon %}
+						{% if header.icon %}
 							<div class="sds-card__icon">
-								{%- render '@icons--single', {icon: heading.icon} -%}
+								{%- render '@icons--single', {icon: header.icon}, true -%}
 							</div>
 						{% endif %}
 
