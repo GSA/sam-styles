@@ -22,7 +22,7 @@
     @include u-padding(2);
 
     &--flex {
-      @extend .grid-row;
+      @include grid-row;
       display: flex;
       .sds-card__title {
         @include grid-col(12);
@@ -56,9 +56,9 @@
     }
 
     &--row {
-      @extend .grid-row;
+      @include grid-row;
       * {
-        @extend .grid-col;
+        @include grid-col;
         margin: auto;
       }
     }
