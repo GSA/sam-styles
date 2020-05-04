@@ -27,9 +27,10 @@
     }
 
     &--hilite {
-      @include u-border-bottom('base-light');
-      @include u-border-bottom('1px');
-      @include u-border-bottom('dashed');
+      text-decoration-color: #c3c3c3;
+      text-decoration-style: dashed;
+      text-decoration-line: underline;
+
     }
   }
 }
