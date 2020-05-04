@@ -1,6 +1,7 @@
 <footer class="usa-footer usa-footer--big">
   <div class="sds-feedback">
-    <button type="button" class="sds-feedback__button simple-toggle" [attr.aria-expanded]="!isCollapsedContent" aria-controls="collapseID" (click)="isCollapsedContent = !isCollapsedContent">
+    <button type="button" class="sds-feedback__button simple-toggle" [attr.aria-expanded]="!isCollapsedContent"
+      aria-controls="collapseID" (click)="isCollapsedContent = !isCollapsedContent">
       <i class="sds-feedback__open sds fa-arrow-down"></i>
       <span class="sds-feedback__title">Feedback</span>
     </button>
@@ -13,7 +14,7 @@
         <p class="sds-feedback__response-text">What changes or improvements would you suggest?</p>
         <input class="sds-feedback__input" type="text">
         <p class="text-right">
-        <button class="usa-button usa-button--secondary">Submit</button>
+          <button class="usa-button usa-button--secondary">Submit</button>
         </p>
       </div>
     </div>
@@ -21,77 +22,70 @@
   <div class="usa-footer__primary-section">
     <div class="grid-container">
       <div class="grid-row grid-gap">
-        <div class="sds-footer__logo tablet:grid-col-3">
-          <a href="javascript:void(0);" class="sds-footer__logo-link">
-            <img src="{{ logo | path }}" alt=""/>
-          </a>
-          <h3 class="sds-footer__logo-heading">{{ agency }}</h3>
-        </div>
-        <div class="tablet:grid-col-9">
+        <div class="tablet:grid-col-12">
           <nav class="usa-footer__nav">
             <div class="grid-row grid-gap-4">
               {%- for nav in navigation -%}
-                <div class="grid-col-4">
-                  <section class="usa-footer__primary-content">
-                    <span class="usa-footer__primary-link">
-                      {{ nav.header }}
-                    </span>
-                    <ul class="usa-list usa-list--unstyled">
-                      {%- for item in nav.links -%}
-                        <li class="usa-footer__secondary-link">
-                          <a class="usa-link" href="{{ item.href }}">{{ item.text }}
-                            {%-  if item.external -%}
-                             <i class="fas fa-external-link-alt fa-xs"></i>
-                            {%- endif -%}
-                          </a>
-                        </li>
-                      {%- endfor -%}
-                    </ul>
-                  </section>
-                </div>
+              <div class="grid-col-3">
+                <section class="usa-footer__primary-content">
+                  <span class="usa-footer__primary-link">
+                    {{ nav.header }}
+                  </span>
+                  <ul class="usa-list usa-list--unstyled">
+                    {%- for item in nav.links -%}
+                    <li class="usa-footer__secondary-link">
+                      <a class="usa-link" href="{{ item.href }}">{{ item.text }}
+                        {%-  if item.external -%}
+                        <i class="fas fa-external-link-alt fa-xs"></i>
+                        {%- endif -%}
+                      </a>
+                    </li>
+                    {%- endfor -%}
+                  </ul>
+                </section>
+              </div>
               {%- endfor -%}
             </div>
           </nav>
         </div>
       </div>
     </div>
-          <nav class="sds-footer__nav--accordion">
-            <div class="sds-accordion usa-accordion">
-              <!-- -->
-              {%- for nav in navigation -%}
-                <h2 class="usa-accordion__heading sds-accordion__heading">
-                  <button class="usa-accordion__button usa-accordion__block"
-                    aria-expanded="false"
-                    aria-controls="a{{loop.index}}">
-                    {{ nav.header }}
-                  </button>
-                </h2>
-                <ul id="a{{loop.index}}" class="sds-footer__nav--accordion-content" hidden>
-                  {%- for item in nav.links -%}
-                    <li>
-                      <a class="usa-link" href="{{ item.href }}">{{ item.text }}
-                        {%-  if item.external -%}
-                         <i class="fas fa-external-link-alt fa-xs"></i>
-                        {%- endif -%}
-                      </a>
-                    </li>
-                  {%- endfor -%}
-                </ul>
-              {%- endfor -%}
-              <!-- -->
-            </div>
-          </nav>
+    <nav class="sds-footer__nav--accordion">
+      <div class="sds-accordion usa-accordion">
+        <!-- -->
+        {%- for nav in navigation -%}
+        <h2 class="usa-accordion__heading sds-accordion__heading">
+          <button class="usa-accordion__button usa-accordion__block" aria-expanded="false"
+            aria-controls="a{{loop.index}}">
+            {{ nav.header }}
+          </button>
+        </h2>
+        <ul id="a{{loop.index}}" class="sds-footer__nav--accordion-content" hidden>
+          {%- for item in nav.links -%}
+          <li>
+            <a class="usa-link" href="{{ item.href }}">{{ item.text }}
+              {%-  if item.external -%}
+              <i class="fas fa-external-link-alt fa-xs"></i>
+              {%- endif -%}
+            </a>
+          </li>
+          {%- endfor -%}
+        </ul>
+        {%- endfor -%}
+        <!-- -->
+      </div>
+    </nav>
   </div>
   <div class="usa-footer__secondary-section">
     <div class="grid-container">
       <div class="grid-row grid-gap">
-        <div class="sds-footer__logo mobile-lg:grid-col-3">
+        <div class="sds-footer__logo grid-col-3">
           <a href="javascript:void(0);" class="sds-footer__logo-link">
-            <img src="{{ logo | path }}" alt=""/>
+            <img src="{{ logo | path }}" alt="" />
           </a>
           <h3 class="sds-footer__logo-heading">{{ agency }}</h3>
         </div>
-        <div class="sds-footer__note  mobile-lg:grid-col-9 tablet:grid-col-12">
+        <div class="sds-footer__note grid-col-9 ">
           {{ note }}
         </div>
       </div>
