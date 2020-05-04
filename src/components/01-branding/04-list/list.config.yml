@@ -7,9 +7,9 @@ Modifiers are unstyled and flex (for icon lists)"
 context:
   modifiers:
   items:
-    - text: list item
-    - text: list item
-    - text: list item
+    - text: List Item
+    - text: List Item
+    - text: List Item
 variants:
   - name: unordered
     label: Unordered List
@@ -29,11 +29,11 @@ variants:
           - unstyled
           - flex
       items:
-        - text: list item
+        - text: List Item
           icon: bell
-        - text: list item
+        - text: List Item
           icon: calendar
-        - text: list item
+        - text: List Item
           icon: book
   - name: menu
     label: Menu List
@@ -41,13 +41,11 @@ variants:
       modifiers:
           - unstyled
       items:
-        - text: As a federal Hierarchy Administrator, what data is needed to create an office?
+        - text: List Item
           href: " "
-        - text: Wage Determination Now in beta.SAM.gov
+        - text: List Item
           href: " "
-        - text: Assistance Admin Transition
-          href: " "
-        - text: Non-Standard Wage
+        - text: List Item
           href: " "
   - name: menu icon
     label: Menu List with Icons
@@ -56,15 +54,12 @@ variants:
           - unstyled
           - flex
       items:
-        - text: list item
+        - text: List Item
           href: " "
           icon: bell
-        - text: list item
+        - text: List Item
           href: " "
           icon: calendar
-        - text: list item
+        - text: List Item
           href: " "
           icon: book
-        - text: list item
-          href: " "
-          icon: photo
