@@ -35,6 +35,22 @@ variants:
           icon: calendar
         - text: List Item
           icon: book
+  - name: icon large
+    label: Icon List -- Large
+    context:
+      modifiers:
+          - unstyled
+          - flex
+      items:
+        - text: List Item
+          icon: bell
+          iconSize: 2x
+        - text: List Item
+          icon: calendar
+          iconSize: 2x
+        - text: List Item
+          icon: book
+          iconSize: 2x
   - name: menu
     label: Menu List
     context:
@@ -57,9 +73,28 @@ variants:
         - text: List Item
           href: " "
           icon: bell
-        - text: List Item
+        - text: Quick start guide for creating a login.gov account
           href: " "
           icon: calendar
         - text: List Item
           href: " "
           icon: book
+  - name: menu icon large
+    label: Menu List with Icons -- Large
+    context:
+      modifiers:
+          - unstyled
+          - flex
+      items:
+        - text: List Item
+          href: " "
+          icon: bell
+          iconSize: 2x
+        - text: Quick start guide for creating a login.gov account
+          href: " "
+          icon: calendar
+          iconSize: 2x
+        - text: List Item
+          href: " "
+          icon: book
+          iconSize: 2x
