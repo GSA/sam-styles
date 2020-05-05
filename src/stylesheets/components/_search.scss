@@ -1,7 +1,7 @@
 /**********************************
        SEARCH USWDS OVERRIDES
 ***********************************/
-.usa-search, .usa-form-group {
+.usa-search{
   @include u-width('full');
   @media only screen and (max-width:480px){
     @include u-flex('row');
@@ -10,52 +10,42 @@
     @include u-bg('indigo-cool-60');
     @include u-radius(0);
     @include u-height(5);
-    min-width: 48px;
-    box-shadow: 2px 4px 6px 1px #c9c9c9;
+    @include u-minw(5);
+    @include u-shadow(3);
   }
 
   [type='search'] {
     @include u-height(5);
-    border: 1px solid color('base-light');
-    box-shadow: 2px 4px 6px 1px #c9c9c9;
+    @include u-border(1px);
+    @include u-border('base-light');
+    @include u-shadow(3);
   }
 }
-.usa-form.usa-search, .usa-form-group {
-  max-width: 40rem;
+.usa-form.usa-search{
+   max-width: 45rem;
 
   [type='search'],
   .usa-search__input{
     @include u-width('full');
-    max-width: 40rem;
+    max-width: unset;
   }
   select {
     @include u-margin-top(0);
     @include u-height(5);
-    @include u-border('solid');
     @include u-border(1px);
     @include u-border('base-light');
-    box-shadow: 2px 4px 6px 1px #c9c9c9;
-    option::selected {
-      text-overflow: ellipsis;
-    }
+    @include u-border-right(0);
+    @include u-shadow(3);
     @media only screen and (min-width:480px){
-      border-right-width: 0;
       max-width: 12rem;
     }
-  }
-}
-.usa-form-group.sds-inverse__search, .usa-form-group.usa-search{
-  @include u-display('flex');
-  @include u-flex('row');
-  @media only screen and (min-width:480px){
-    @include u-flex('row');
   }
 }
 
 /*******************************
        Inverse Select
 *******************************/
-.usa-form.usa-search.sds-inverse, .usa-form-group {
+.usa-form.usa-search.sds-inverse {
   select {
     @include u-bg('black');
     @include u-text('white');
@@ -70,16 +60,24 @@
         max-width: unset;
       }
     }
+    .sds-inverse__search{
+      @include u-display('flex');
+      @include u-flex('row');
+      @include u-width('full');
+      @media only screen and (min-width:480px){
+        @include u-flex('row');
+      }
+    }
 }
 
 /************************************
        Big Search USWDS OVERRIDES
 *************************************/
-.usa-search.usa-search--big, .usa-form-group.usa-search--big{
+.usa-search.usa-search--big{
   [type='submit'] {
     @include u-bg('indigo-cool-60');
     @include u-radius(0);
-    @include u-minw(6);
+    @include u-width(5);
     background-image: url('#{$theme-image-path}/search.svg');
     background-repeat: no-repeat;
       @media (min-width: 30em) {
@@ -92,7 +90,6 @@
     .usa-select {
       @include u-font('sans', 'md')
       @include u-height(8);
-
     }
   }
 }
