@@ -156,24 +156,23 @@ module.exports = {
             ]
           },
           {
-            header: 'The Fourth Column',
+            header: 'Policies',
             links: [
               {
-                text: 'Lorem Ipusim',
+                text: 'Privacy Policy',
                 href: 'javascript:void(0);'
               },
               {
-                text: 'Sed ut perspiciatis unde omnis iste',
+                text: 'Disclaimers',
+                href: 'javascript:void(0);',
+              },
+              {
+                text: 'Freedom of Information Act',
                 href: 'javascript:void(0);',
                 external: true
               },
               {
-                text: 'Oexercitat ullamco',
-                href: 'javascript:void(0);',
-                external: true
-              },
-              {
-                text: 'Pencididunt',
+                text: 'Accessibility',
                 href: 'javascript:void(0);'
               }
             ]
