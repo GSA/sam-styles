@@ -41,6 +41,9 @@
     @include u-shadow(2);
   }
 }
+.usa-footer{
+  @include u-font-size('body', 4)
+}
 
 /*-------------------
       Big footer
@@ -68,10 +71,9 @@
 
   .usa-footer__primary-link {
     @include u-padding-y(0);
+    @include u-padding-x(0);
     background: none;
     margin-bottom: units(1);
-    padding-left: 0;
-    padding-right: 0;
   }
 
   .usa-footer__primary-content--collapsible {
@@ -97,13 +99,16 @@
   //@include u-margin-top(4);
   @include u-display("flex");
   @include u-flex("justify-center");
-  @include at-media("tablet") {
-    @include u-display("block");
-  }
+  // @include at-media("tablet") {
+  //   @include u-display("block");
+  // }
 }
-
+.sds-footer__logo-link {
+  display: inherit;
+}
 .sds-footer__logo-link img {
   @include u-width(15);
+  @include u-maxw(10);
 }
 
 .sds-footer__logo-heading {

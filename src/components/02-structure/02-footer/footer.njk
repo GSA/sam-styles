@@ -26,7 +26,7 @@
           <nav class="usa-footer__nav">
             <div class="grid-row grid-gap-4">
               {%- for nav in navigation -%}
-              <div class="grid-col-3">
+              <div class="grid-col-6 tablet:grid-col-3">
                 <section class="usa-footer__primary-content">
                   <span class="usa-footer__primary-link">
                     {{ nav.header }}
@@ -79,13 +79,17 @@
   <div class="usa-footer__secondary-section">
     <div class="grid-container">
       <div class="grid-row grid-gap">
-        <div class="sds-footer__logo grid-col-3">
-          <a href="javascript:void(0);" class="sds-footer__logo-link">
-            <img src="{{ logo | path }}" alt="" />
-          </a>
-          <h3 class="sds-footer__logo-heading">{{ agency }}</h3>
+        <div class="grid-col-12 mobile-lg:grid-col-6 tablet:grid-col-4 margin-bottom-4">
+          <div class="sds-footer__logo">
+            <a class="sds-footer__logo-link" href="javascript:void(0);">
+              <img src="{{ logo | path }}" alt="" />
+            </a>
+            <h3 class="sds-footer__logo-heading">
+              {{ agency }}
+            </h3>
+          </div>
         </div>
-        <div class="sds-footer__note grid-col-9 ">
+        <div class="sds-footer__note grid-col-12 mobile-lg:grid-col-6 tablet:grid-col-8">
           {{ note }}
         </div>
       </div>
