@@ -1,12 +1,354 @@
 <div>
   <div class="grid-row">
-    <ul class="usa-list usa-list--unstyled grid-row flex-wrap">
-      {% for icon in icons %}
-        <li class="display-block padding-2 text-center">
-          {%- render '@icons--single', {icon: icon.name}, true -%}
-          <p class="font-sans-3xs">{{icon.description}}</p>
-        </li>
-      {% endfor %}
+      <ul class="usa-list usa-list--unstyled grid-row flex-wrap">
+  <li class="display-block padding-2 text-center">
+    <i class="sds fa-pentagon fa-2x"></i>
+    <p class="font-sans-3xs">pentagon</p>
+  </li>
+  <li class="display-block padding-2 text-center">
+    <i class="sds fa-triangle fa-2x"></i>
+    <p class="font-sans-3xs">triangle</p>
+  </li>
+  <li class="display-block padding-2 text-center">
+    <i class="sds fa-leaf fa-2x"></i>
+    <p class="font-sans-3xs">leaf</p>
+  </li>
+  <li class="display-block padding-2 text-center">
+    <i class="sds fa-file fa-2x"></i>
+    <p class="font-sans-3xs">file</p>
+  </li>
+  <li class="display-block padding-2 text-center">
+    <i class="sds fa-star fa-2x"></i>
+    <p class="font-sans-3xs">star</p>
+  </li>
+  <li class="display-block padding-2 text-center">
+    <i class="sds fa-flag fa-2x"></i>
+    <p class="font-sans-3xs">flag</p>
+  </li>
+  <li class="display-block padding-2 text-center">
+    <i class="sds fa-reset fa-2x"></i>
+    <p class="font-sans-3xs">reset</p>
+  </li>
+  <li class="display-block padding-2 text-center">
+    <i class="sds fa-exclamation fa-2x"></i>
+    <p class="font-sans-3xs">exclamation</p>
+  </li>
+  <li class="display-block padding-2 text-center">
+    <i class="sds fa-exclamation-circle fa-2x"></i>
+    <p class="font-sans-3xs">exclamation circle</p>
+  </li>
+  <li class="display-block padding-2 text-center">
+    <i class="sds fa-question fa-2x"></i>
+    <p class="font-sans-3xs">question</p>
+  </li>
+  <li class="display-block padding-2 text-center">
+    <i class="sds fa-angle-left fa-2x"></i>
+    <p class="font-sans-3xs">angle left</p>
+  </li>
+  <li class="display-block padding-2 text-center">
+    <i class="sds fa-angle-right fa-2x"></i>
+    <p class="font-sans-3xs">angle right</p>
+  </li>
+  <li class="display-block padding-2 text-center">
+    <i class="sds fa-federal-building fa-2x"></i>
+    <p class="font-sans-3xs">federal building</p>
+  </li>
+  <li class="display-block padding-2 text-center">
+    <i class="sds fa-ellipsis fa-2x"></i>
+    <p class="font-sans-3xs">ellipsis</p>
+  </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-arrow-up fa-2x"></i>
+      <p class="font-sans-3xs">arrow up</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-arrow-down fa-2x"></i>
+      <p class="font-sans-3xs">arrow down</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-arrow fa-2x"></i>
+      <p class="font-sans-3xs">arrow</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-thumb-up fa-2x"></i>
+      <p class="font-sans-3xs">thumb up</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-thumb-down fa-2x"></i>
+      <p class="font-sans-3xs">thumb down</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-download fa-2x"></i>
+      <p class="font-sans-3xs">download</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-upload fa-2x"></i>
+      <p class="font-sans-3xs">upload</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-log-out fa-2x"></i>
+      <p class="font-sans-3xs">log out</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-log-in fa-2x"></i>
+      <p class="font-sans-3xs">log in</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-users fa-2x"></i>
+      <p class="font-sans-3xs">users</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-user fa-2x"></i>
+      <p class="font-sans-3xs">user</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-user-circle fa-2x"></i>
+      <p class="font-sans-3xs">user circle</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-search fa-2x"></i>
+      <p class="font-sans-3xs">search</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-search-circle fa-2x"></i>
+      <p class="font-sans-3xs">search circle</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-question-circle fa-2x"></i>
+      <p class="font-sans-3xs">question circle</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-video-square fa-2x"></i>
+      <p class="font-sans-3xs">video square</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-video-circle fa-2x"></i>
+      <p class="font-sans-3xs">video circle</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-video-play fa-2x"></i>
+      <p class="font-sans-3xs">video play</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-alert-warning fa-2x"></i>
+      <p class="font-sans-3xs">alert warning</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-check-circle fa-2x"></i>
+      <p class="font-sans-3xs">check circle</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-check fa-2x"></i>
+      <p class="font-sans-3xs">check</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-information-circle fa-2x"></i>
+      <p class="font-sans-3xs">information circle</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-alert-info fa-2x"></i>
+      <p class="font-sans-3xs">alert info</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+      <i class="sds fa-alert-error fa-2x"></i>
+      <p class="font-sans-3xs">alert error</p>
+    </li>
+    <li class="display-block padding-2 text-center">
+        <i class="sds fa-bars fa-2x"></i>
+        <p class="font-sans-3xs margin-x-auto">bars</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-bell fa-2x"></i>
+        <p class="font-sans-3xs margin-x-auto">bell</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-book fa-2x"></i>
+        <p class="font-sans-3xs">book</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-bookmark fa-2x"></i>
+        <p class="font-sans-3xs">bookmark</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-calendar fa-2x"></i>
+        <p class="font-sans-3xs">calendar</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-calendar-add fa-2x"></i>
+        <p class="font-sans-3xs">calendar add</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-calendar-check fa-2x"></i>
+        <p class="font-sans-3xs">calendar check</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-envelope fa-2x"></i>
+        <p class="font-sans-3xs">envelope</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-file-chart-line fa-2x"></i>
+        <p class="font-sans-3xs">file-chart-line</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-filter fa-2x"></i>
+        <p class="font-sans-3xs">filter</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-home fa-2x"></i>
+        <p class="font-sans-3xs">home</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-invoice fa-2x"></i>
+        <p class="font-sans-3xs">invoice</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-receipt fa-2x"></i>
+        <p class="font-sans-3xs">receipt</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-link fa-2x"></i>
+        <p class="font-sans-3xs">link</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-unlink fa-2x"></i>
+        <p class="font-sans-3xs">unlink</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-new-note fa-2x"></i>
+        <p class="font-sans-3xs">new-note</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-print fa-2x"></i>
+        <p class="font-sans-3xs">print</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-ruler-pencil fa-2x"></i>
+        <p class="font-sans-3xs">ruler-pencil</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-share fa-2x"></i>
+        <p class="font-sans-3xs">share</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-trash fa-2x"></i>
+        <p class="font-sans-3xs">trash</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-workspace fa-2x"></i>
+        <p class="font-sans-3xs">workspace</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-ship fa-2x"></i>
+        <p class="font-sans-3xs">ship</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-folder fa-2x"></i>
+        <p class="font-sans-3xs">folder</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-folder-alt-1 fa-2x"></i>
+        <p class="font-sans-3xs">folder alt 1</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-folder-alt-2 fa-2x"></i>
+        <p class="font-sans-3xs">folder alt 2</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-open-doors fa-2x"></i>
+        <p class="font-sans-3xs">open doors</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-building fa-2x"></i>
+        <p class="font-sans-3xs">building</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-building-alt fa-2x"></i>
+        <p class="font-sans-3xs">building alt</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-pen-paper fa-2x"></i>
+        <p class="font-sans-3xs">pen and paper</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-tag fa-2x"></i>
+        <p class="font-sans-3xs">tag</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-photo fa-2x"></i>
+        <p class="font-sans-3xs">photo</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-photo-alt fa-2x"></i>
+        <p class="font-sans-3xs">photo alt</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-new-version fa-2x"></i>
+        <p class="font-sans-3xs">new version</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-article fa-2x"></i>
+        <p class="font-sans-3xs">article</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-note fa-2x"></i>
+        <p class="font-sans-3xs">note</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-request fa-2x"></i>
+        <p class="font-sans-3xs">request</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-messages fa-2x"></i>
+        <p class="font-sans-3xs">messages</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-comment fa-2x"></i>
+        <p class="font-sans-3xs">comment</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-mobile fa-2x"></i>
+        <p class="font-sans-3xs">mobile</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-tablet fa-2x"></i>
+        <p class="font-sans-3xs">tablet</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-document fa-2x"></i>
+        <p class="font-sans-3xs">document</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-document-add fa-2x"></i>
+        <p class="font-sans-3xs">document add</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-document-search fa-2x"></i>
+        <p class="font-sans-3xs">document search</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-document-pdf fa-2x"></i>
+        <p class="font-sans-3xs">document pdf</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-add fa-2x"></i>
+        <p class="font-sans-3xs">add</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-exit fa-2x"></i>
+        <p class="font-sans-3xs">exit</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-angle-circle fa-2x"></i>
+        <p class="font-sans-3xs">angle circle</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-add-req fa-2x"></i>
+        <p class="font-sans-3xs">add request</p>
+      </li>
+      <li class="display-block padding-2 text-center">
+        <i class="sds fa-attachment fa-2x"></i>
+        <p class="font-sans-3xs">attachment</p>
+      </li>
     </ul>
   </div>
 </div>

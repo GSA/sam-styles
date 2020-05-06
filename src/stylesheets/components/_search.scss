@@ -1,95 +1,136 @@
-/**********************************
-       SEARCH USWDS OVERRIDES
-***********************************/
-.usa-search{
-  @include u-width('full');
-  @media only screen and (max-width:480px){
-    @include u-flex('row');
-  }
-  [type='submit'] {
-    @include u-bg('indigo-cool-60');
-    @include u-radius(0);
-    @include u-height(5);
-    @include u-minw(5);
-    @include u-shadow(3);
-  }
-
-  [type='search'] {
-    @include u-height(5);
-    @include u-border(1px);
-    @include u-border('base-light');
-    @include u-shadow(3);
-  }
-}
-.usa-form.usa-search{
-   max-width: 45rem;
-
-  [type='search'],
-  .usa-search__input{
-    @include u-width('full');
-    max-width: unset;
-  }
-  select {
-    @include u-margin-top(0);
-    @include u-height(5);
-    @include u-border(1px);
-    @include u-border('base-light');
-    @include u-border-right(0);
-    @include u-shadow(3);
-    @media only screen and (min-width:480px){
-      max-width: 12rem;
-    }
-  }
-}
-
 /*******************************
-       Inverse Select
+       USWDS OVERRIDES
 *******************************/
-.usa-form.usa-search.sds-inverse {
-  select {
-    @include u-bg('black');
-    @include u-text('white');
-    background-image: url('#{$theme-image-path}/arrow-down-white.svg');
-    background-repeat: no-repeat;
-    background-size: 0.75rem;
-  }
-    @media only screen and (max-width:480px){
-      @include u-flex('column');
-      select {
-        @include u-width('full');
-        max-width: unset;
-      }
-    }
-    .sds-inverse__search{
-      @include u-display('flex');
-      @include u-flex('row');
-      @include u-width('full');
-      @media only screen and (min-width:480px){
-        @include u-flex('row');
-      }
-    }
-}
-
-/************************************
-       Big Search USWDS OVERRIDES
-*************************************/
-.usa-search.usa-search--big{
+.usa-search {
   [type='submit'] {
     @include u-bg('indigo-cool-60');
     @include u-radius(0);
-    @include u-width(5);
-    background-image: url('#{$theme-image-path}/search.svg');
-    background-repeat: no-repeat;
-      @media (min-width: 30em) {
-        background-size: 1.5rem;
-      }
+    height: units(5);
   }
-  @media (min-width: 30em) {
-    [type="search"],
-    [type='submit'],
-    .usa-select {
-      @include u-font('sans', 'md')
-      @include u-height(8);
+}
+
+[type='search'],
+.usa-search__input {
+  height: units(5);
+  border: 1px solid color('base-light');
+}
+
+//search fieldset
+.sds-search {
+  @include u-display('block');
+
+  .usa-button {
+    @include u-bg('indigo-cool-60');
+    @include u-radius(0)
+  }
+
+  .usa-button:hover {
+    @include u-bg('blue-warm-70v');
+  }
+
+  form {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  select {
+    width: 150px;
+    border-right-width: 0;
+    @include u-margin(0);
+    @include u-padding-x(2);
+  }
+
+  input {
+    height: 40px;
+    border-right-width: 0;
+    @include u-margin(0);
+  }
+
+  input:focus {
+    box-shadow: 2px 1px 6px 1px #3F57A6;
+    outline: none;
+  }
+
+  button,
+  span {
+    height: 40px !important;
+  }
+}
+
+//big search
+.sds-search--big {
+  box-shadow: 2px 1px 6px 1px #c9c9c9;
+  display: inline;
+
+  .usa-input{
+    height: 65px;
+  }
+  .usa-search.usa-search--small > .search > .usa-button,
+  .usa-search.usa-search--small.usa-search--inverse > div > .usa-button {
+    height: 65px;
+    width: 65px;
+  }
+
+  .usa-search{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .usa-select {
+    border: solid 1px #c9c9c9;
+    border-right-width: 0;
+    max-width: 250px;
+    min-width: 110px;
+    height: 65px;
+    @include u-margin(0);
+    @include u-padding-x(2);
+  }
+  .usa-search.usa-search--small > div,
+  .usa-search.usa-search--small.usa-search--inverse > div {
+    width: 100%;
+  }
+}
+
+//inverse search
+.usa-select--inverse {
+    color: white !important;
+    background-color: black !important;
+
+    &::-ms-expand {
+      color: white;
+      background-color: black;
+      border: none;
     }
+}
+
+@media only screen and (max-width: 600px) {
+  .usa-select--inverse {
+    @include u-display('block');
+    @include u-margin-bottom('2px');
+    height: 38px;
+    width: 100% !important;
+  }
+
+  #inverse-search-dropdown {
+    @include u-display('block');
+    min-width: 300px;
+  }
+
+  .usa-search.usa-search--small.usa-search--inverse{
+    @include u-flex('wrap');
+    @include u-padding(1);
+    width: min-content;
+  }
+
+  .sds-search--big > .usa-search.usa-search--small.usa-search--inverse{
+    @include u-flex('wrap');
+    @include u-padding(1);
+    width: 100%;
+  }
+
+  .sds-search--big > .usa-search.usa-search--small.usa-search--inverse > .usa-select.usa-select--inverse{
+    max-width: unset;
+    width: 100%;
   }
 }

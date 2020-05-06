@@ -1,95 +1,112 @@
-<section class="margin-2">
-  <h2>Small Search</h2>
-
-  <form class="usa-search usa-search--small" role="search">
-      <label class="usa-sr-only" for="search-field-small">Search</label>
-      <input class="usa-input" id="search-field-small" type="search" name="search" placeholder="Search Here">
-      <button class="usa-button" type="submit">
-        <span class="usa-sr-only">Search</span>
-      </button>
-  </form>
-</section>
-
-<section aria-label="Small search component with select" class="margin-2">
-  <form class="usa-form usa-search usa-search--small" role="search">
-    <label class="usa-sr-only" for="options">Dropdown label</label>
-    <select class="usa-select" name="options" id="options">
-      <option value>- Select -</option>
-      <option value="value1">Option A</option>
-      <option value="value2">Option B</option>
-      <option value="value3">Option C</option>
-    </select>
-    <label class="usa-sr-only" for="search-field-small">Search</label>
-    <input class="usa-input" id="search-field-small" type="search" name="search" placeholder="Search Here">
-    <button class="usa-button" type="submit">
-      <span class="usa-sr-only">Search</span>
-    </button>
-  </form>
-</section>
-
-<section aria-label="Inverse small search component with select" class="margin-2">
-  <form class="usa-form usa-search usa-search--small sds-inverse" role="search">
-    <label class="usa-sr-only" for="options">Dropdown label</label>
-    <select class="usa-select" name="options" id="options">
-      <option value>- Select -</option>
-      <option value="value1">Option A</option>
-      <option value="value2">Option B</option>
-      <option value="value3">Option C</option>
-    </select>
-    <div class="sds-inverse__search">
-      <label class="usa-sr-only" for="search-field-small">Search</label>
-      <input class="usa-input" id="search-field-small" type="search" name="search" placeholder="Search Here">
-      <button class="usa-button" type="submit">
-        <span class="usa-sr-only">Search</span>
-      </button>
+<div class="grid-row">
+  <div class="grid-col padding-2">
+    <h4>SDS Search</h4>
+    <div class="sds-search">
+      <form class="usa-search usa-search--small">
+        <div role="search" class="search">
+          <label class="usa-sr-only" for="search-input">Search Here</label>
+          <input class="usa-input" id="search-input" type="search" name="search" placeholder="Search Here">
+          <button class="usa-button" type="submit">
+            <span class="usa-sr-only">Search</span>
+          </button>
+        </div>
+      </form>
     </div>
-  </form>
-</section>
 
-<section aria-label="Big search component" class="margin-2">
-  <h2>Big Search</h2>
-
-  <form class="usa-search usa-search--big" role="search">
-      <label class="usa-sr-only" for="search-field-big">Search</label>
-      <input class="usa-input" id="search-field-big" type="search" name="search" placeholder="Search Here">
-      <button class="usa-button" type="submit">
-        <span class="usa-sr-only">Search</span>
-      </button>
-  </form>
-</section>
-
-<section aria-label="Big search component with select" class="margin-2">
-  <form class="usa-form usa-search usa-search--big" role="search">
-    <label class="usa-sr-only" for="options">Dropdown label</label>
-    <select class="usa-select" name="options" id="options">
-      <option value>- Select -</option>
-      <option value="value1">Option A</option>
-      <option value="value2">Option B</option>
-      <option value="value3">Option C</option>
-    </select>
-    <label class="usa-sr-only" for="search-field-big">Search</label>
-    <input class="usa-input" id="search-field-big" type="search" name="search" placeholder="Search Here">
-    <button class="usa-button" type="submit">
-      <span class="usa-sr-only">Search</span>
-    </button>
-  </form>
-</section>
-
-<section aria-label="Inverse big search component with select" class="margin-2">
-  <form class="usa-form usa-search usa-search--big sds-inverse" role="search">
-    <label class="usa-sr-only" for="options">Dropdown label</label>
-    <select class="usa-select" name="options" id="options">
-      <option value>- Select -</option>
-      <option value="value1">This is a super long example for an option on the select</option>
-      <option value="value2">Option B</option>
-      <option value="value3">Option C</option>
-    </select>
-    <div class="sds-inverse__search">
-      <label class="usa-sr-only" for="search-field-big">Search</label>
-      <input class="usa-input" id="search-field-big" type="search" name="search" placeholder="Search Here">
-      <button class="usa-button" type="submit">
-        <span class="usa-sr-only">Search</span>
-      </button>
+    <h4>SDS Dropdown + Search Example</h4>
+    <div class="sds-search">
+      <form class="usa-search usa-search--small">
+        <label class="usa-sr-only" for="search-options">Select Here</label>
+        <select class="usa-select" name="options" id="search-options">
+          <option value="value">- Select -</option>
+          <option value="value1">Option A</option>
+          <option value="value2">Option B</option>
+          <option value="value3">Option C</option>
+        </select>
+        <div role="search" class="search">
+          <label class="usa-sr-only" for="search-dropdown">Search Here</label>
+          <input class="usa-input" id="search-dropdown" type="search" name="search" placeholder="Search Here">
+          <button class="usa-button" type="submit">
+            <span class="usa-sr-only">Search</span>
+          </button>
+        </div>
+      </form>
     </div>
-  </form>
-</section>
+
+    <h4>SDS Inverse Dropdown + Search Example</h4>
+    <div class="sds-search">
+      <form class="usa-search usa-search--small usa-search--inverse">
+        <label class="usa-sr-only" for="inverse-search-options">Select Here</label>
+        <select class="usa-select--inverse" name="options" id="inverse-search-options">
+          <option value="value">Select...</option>
+          <option value="value1">Option A</option>
+          <option value="value2">Option B</option>
+          <option value="value3">Option C</option>
+        </select>
+        <div role="search">
+          <label class="usa-sr-only" for="inverse-search-dropdown">Search Here</label>
+          <input class="usa-input" id="inverse-search-dropdown" type="search" name="search" placeholder="Search Here">
+          <button class="usa-button" type="submit">
+            <span class="usa-sr-only">Search</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="grid-col padding-2">
+    <h4>SDS Search Big</h4>
+    <div class="sds-search--big">
+      <form class="usa-search usa-search--small">
+        <div role="search" class="search">
+          <label class="usa-sr-only" for="search-input">Search Here</label>
+          <input class="usa-input" id="search-input" type="search" name="search" placeholder="Search Here">
+          <button class="usa-button" type="submit">
+            <span class="usa-sr-only">Search</span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <h4>SDS Dropdown + Search Example</h4>
+    <div class="sds-search--big">
+      <form class="usa-search usa-search--small">
+        <label class="usa-sr-only" for="search-options">Select Here</label>
+        <select class="usa-select" name="options" id="search-options">
+          <option value="value">- Select -</option>
+          <option value="value1">Option A</option>
+          <option value="value2">Option B</option>
+          <option value="value3">Option C</option>
+        </select>
+        <div role="search" class="search">
+          <label class="usa-sr-only" for="search-dropdown">Search Here</label>
+          <input class="usa-input" id="search-dropdown" type="search" name="search" placeholder="Search Here">
+          <button class="usa-button" type="submit">
+            <span class="usa-sr-only">Search</span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <h4>SDS Inverse Dropdown + Search Example</h4>
+    <div class="sds-search--big">
+      <form class="usa-search usa-search--small usa-search--inverse">
+        <label class="usa-sr-only" for="inverse-search-options">Select Here</label>
+        <select class="usa-select--inverse" name="options" id="inverse-search-options">
+          <option value="value">Select...</option>
+          <option value="value1">Option A</option>
+          <option value="value2">Option B</option>
+          <option value="value3">Option C</option>
+        </select>
+        <div role="search">
+          <label class="usa-sr-only" for="inverse-search-dropdown">Search Here</label>
+          <input class="usa-input" id="inverse-search-dropdown" type="search" name="search" placeholder="Search Here">
+          <button class="usa-button" type="submit">
+            <span class="usa-sr-only">Search</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

@@ -1,21 +1,20 @@
-.sds-list {
-  &--unstyled {
-    @include unstyled-list;
-  }
-
-  &--bordered {
-    li {
-      @include bordered-item();
-    }
-  }
-
-  &--flex {
-    > li {
-      display: flex;
-      align-items: center;
-    }
-    svg {
-      @include u-margin-right(2);
-    }
-  }
+.usa-list.sds-list--menu {
+   @include unstyled-list;
+}
+.usa-list.sds-list--menu > li {
+  @include u-border('1px');
+  @include u-border('base-light');
+  @include u-border-top(0);
+  @include u-padding(2);
+  @include u-margin(0);
+  @include u-maxw('none');
+}
+.usa-list.sds-list--menu > li:first-child {
+  @include u-border('1px');
+  @include u-border('base-light');
+  @include u-bg('base-lightest');
+  @include u-text(700);
+}
+.sds-list--related-articles{
+  min-width: 240px;
 }

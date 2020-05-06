@@ -2,8 +2,6 @@ label: Buttons
 status: ready
 preview: "@sam-content"
 default: "primary"
-context:
-  text: Button
 variants:
   - name: secondary
     context:
