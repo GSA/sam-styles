@@ -1,0 +1,58 @@
+status: wip
+preview: "@sam-content"
+default: unordered
+notes: "Lists can be ordered, unordered, or unstyled and have icons and/or be links.
+See Cards -- List for example of adding adding a list to a card.
+Modifiers are unstyled and flex (for icon lists)"
+context:
+  modifiers:
+      - unstyled
+      - flex
+  
+  iconSize: lg
+  card1:
+    title: Data Services
+    contents:
+      - listTitle: APIs
+        items:
+          - text: Getting Started with web services
+            icon: note
+          - text: Go to entity registration API
+            icon: angle-circle
+          - text: Go to exclusions API
+            icon: angle-circle
+      - listTitle: Connect to Service APIs
+        items:
+          - text: Downloading entity registration files
+            icon: note
+          - text: Downloading exclusion files
+            icon: note
+          - text: Go to entity registration downloads
+            icon: angle-circle
+          - text: Go to exclusions downloads
+            icon: angle-circle
+  card2:
+    title: More about Entity Information
+    contents:
+      - listTitle: Exclusion Resources
+        items:
+          - text: Types of exclusions
+            icon: note
+          - text: Legacy CT Codes
+            icon: note
+          - text: Agency Exclusion POCs
+            icon: note
+      - listTitle: User Guides
+        items:
+          - text: Exclusions Managmement User Guide for Federal Users
+            icon: note
+          - text: Data Services ser Guide
+            icon: note
+      - listTitle: Help
+        items:
+          - text: Frequently Asked Questions
+            icon: question-circle
+          - text: Glossary Terms
+            icon: book
+          - text: Videos
+            icon: video-square
