@@ -88,7 +88,7 @@
     [type="search"],
     [type='submit'],
     .usa-select {
-      @include u-font('sans', 'md')
+      @include u-font('sans', 'md');
       @include u-height(8);
     }
   }
