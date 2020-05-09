@@ -84,11 +84,8 @@
                 </h2>
                 <div id="b-a1" class="usa-accordion__content usa-prose">
                     <p>Congress shall make no law respecting an establishment of religion, or prohibiting the free
-                        exercise
-                        thereof; or abridging the freedom of speech, or of the press; or the right of the people
-                        peaceably
-                        to
-                        assemble, and to petition the Government for a redress of grievances.</p>
+                        exercise thereof; or abridging the freedom of speech, or of the press; or the right of the
+                        people peaceably to assemble, and to petition the Government for a redress of grievances.</p>
                 </div>
                 <h2 class="usa-accordion__heading sds-accordion__heading">
                     <button class="usa-accordion__button usa-accordion__block" aria-expanded="false"
@@ -98,13 +95,7 @@
                 </h2>
                 <div id="b-a2" class="usa-accordion__content usa-prose">
                     <p>A well regulated Militia, being necessary to the security of a free State, the right of the
-                        people to
-                        keep and bear Arms, shall not be infringed.</p>
-                    <ul>
-                        <li>This is a list item</li>
-                        <li>Another list item</li>
-                    </ul>
-
+                        people to keep and bear Arms, shall not be infringed.</p>
                 </div>
                 <h2 class="usa-accordion__heading sds-accordion__heading">
                     <button class="usa-accordion__button usa-accordion__block" aria-expanded="false"
@@ -113,12 +104,8 @@
                     </button>
                 </h2>
                 <div id="b-a3" class="usa-accordion__content usa-prose">
-                    <p>No Soldier shall, in time of peace be quartered in any house, without the consent of the
-                        Owner,
-                        nor
-                        in
-                        time of war, but in a manner to be prescribed by law.</p>
-
+                    <p>No Soldier shall, in time of peace be quartered in any house, without the consent of the Owner,
+                        nor in time of war, but in a manner to be prescribed by law.</p>
                 </div>
 
             </div>
@@ -132,21 +119,7 @@
                 </h2>
 
                 <div class="sds-card__content">
-                    {% for content in card1.contents %}
-                    <h3 class="sds-card__title">
-                        {{content.listTitle}}
-                    </h3>
-                    <ul class="sds-list sds-list--unstyled sds-list--flex margin-bottom-4">
-                        {% for item in content.items %}
-                        <li>
-                            {% if item.icon %}{%- render '@icons--single', {icon: item.icon, size: iconSize} -%}{% endif %}
-                            <a class="usa-link" href="#">
-                                {{item.text}}
-                            </a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                    {% endfor %}
+                    {%- render '@landing-page-content', {contents: card1.contents} -%}
                 </div>
             </div>
         </div>
@@ -158,23 +131,8 @@
                 <div class="sds-card__content">
                     <div class="grid-row grid-gap-2">
                         <div class="grid-col-6">
-                            {% for content in card2.contents %}
-                            <h3 class="sds-card__title">
-                                {{content.listTitle}}
-                            </h3>
-                            <ul class="sds-list sds-list--unstyled sds-list--flex margin-bottom-4">
-                                {% for item in content.items %}
-                                <li>
-                                    {% if item.icon %}{%- render '@icons--single', {icon: item.icon, size: iconSize} -%}{% endif %}
-                                    <a class="usa-link" href="#">
-                                        {{item.text}}
-                                    </a>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                            {% endfor %}
+                            {%- render '@landing-page-content', {contents: card2.contents} -%}
                         </div>
-
                         <div class="grid-col-6">
                             <div class="add-aspect-16x9 bg-base-light margin-y-1">
                             </div>

@@ -18,9 +18,11 @@ context:
           - text: Getting Started with web services
             icon: note
           - text: Go to entity registration API
-            icon: angle-circle
+            icon: angle-right
+            circled: true
           - text: Go to exclusions API
-            icon: angle-circle
+            icon: angle-right
+            circled: true
       - listTitle: Connect to Service APIs
         items:
           - text: Downloading entity registration files
@@ -28,9 +30,11 @@ context:
           - text: Downloading exclusion files
             icon: note
           - text: Go to entity registration downloads
-            icon: angle-circle
+            icon: angle-right
+            circled: true
           - text: Go to exclusions downloads
-            icon: angle-circle
+            icon: angle-right
+            circled: true
   card2:
     title: More about Entity Information
     contents:
@@ -51,7 +55,9 @@ context:
       - listTitle: Help
         items:
           - text: Frequently Asked Questions
-            icon: question-circle
+            icon: question
+            circled: true
+            circledStyle: bg-primary-white border-base-dark
           - text: Glossary Terms
             icon: book
           - text: Videos
