@@ -1,0 +1,20 @@
+{% if ordered %}
+  <ol class="sds-list">
+{% else %}
+  <ul class="sds-list{% for modifier in modifiers %} sds-list--{{modifier}}{% endfor %}">
+{% endif %}
+
+  {% for item in items %}
+    <li>
+    {% if item.icon %}{%- render '@icons--single', {icon: item.icon, size: item.iconSize} -%}{% endif %}
+    {% if item.href %}<a class="usa-link" href="{{item.href}}">{% endif %}
+    {{item.text}}
+    {% if item.href %}</a>{% endif %}
+    </li>
+  {% endfor %}
+
+{% if ordered %}
+  </ol>
+{% else %}
+  </ul>
+{% endif %}

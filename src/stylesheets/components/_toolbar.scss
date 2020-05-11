@@ -12,6 +12,28 @@
   overflow: hidden;
   display: inline-block;
   }
+  .sds-toolbar a {
+    text-decoration: none;
+    color: #76766a;
+  }
+  
+  .sds-toolbar .usa-sidenav .usa-sidenav__sublist .usa-current::after {
+    background-color: transparent;
+    border-radius: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 0.25rem;
+    left: 0;
+  }
+  .sds-toolbar .usa-sidenav .usa-sidenav__sublist .usa-current span {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAASCAYAAABit09LAAAABHNCSVQICAgIfAhkiAAAAWRJREFUKJFt0bFrFEEUx/Hvb4b7A5QUgRRBCyFNiiR3cGcp/gMWV0gIaWxsTGETSHGVKdKkCClShViIgqDNFddZyO4OC16TVsxhwN7q9tx5FsawN7np3o8P8+a9UZZlG865M2AJ2Ot0Op8lGclx3vtzYBNYBT6UZfnEzNwdGGN80KhbdV2/L8tyy8w0ByV9aQaS7scY3xVFsZbeeAhcJZ0eOufOiqK47ea63e5XSQfAr6Y0s8eS3oQQlgF0EyqE8BrYB+4ltx9VVXXobt5l3vtj4DydFthrtVo7c5ONx+OV6XT6cwH+MbevqqrqBQgzwyXBzgL3Bzi+hSGEZ8DLVEk6nc1mFwLI8/yppBPgUdLhY4zxVa/Xu1ae55uS3gJrCSq898/b7fZ3+PeFBykCrmKML/4jAAesJ+i3mW2PRqPLZugkfWvUtaTdyWSSDQaDOAdjjPtmlgHXZrY9HA4/9fv9O/v8Cz0+lHP+xemeAAAAAElFTkSuQmCC');
+    background-repeat: no-repeat;
+    margin-left: -1.1rem;
+    padding-left: 1.1rem;
+  }
 
 .sds-toolbar + * {
   margin-left: 25px;
@@ -36,23 +58,25 @@
 }
 
 .sds-toolbar__toggle {
-  background-color: #f7f9fa;
-  border: 1px solid #979797;
-  padding: 6px;
-  border-radius: 4px;
-  width: 45px;
-  height: 44px;
-}
-
-.sds-toolbar__toogle-btn {
   background-color: #fff;
-  display: block;
+  border: 1px solid #000000;
   width: 31px;
   height: 29px;
-  border: 1px solid #000000;
   padding: 5px;
   border-radius: 3px;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.sds-toolbar__toogle-btn {
+  background-color: #f7f9fa;
+  border: 1px solid #979797;
+  width: 64px;
+  height: 44px;
+  padding: 6px;
+  border-radius: 4px;
+  display: block;
+  
+  position: relative;
 }
 
 .sds-toolbar__toogle-btn::before {
@@ -63,6 +87,29 @@
   width: 9px;
   height: 18px;
   transition: all 0.3s ease-in-out;
+  position: absolute;
+    z-index: 1;
+    top: 11px;
+    left: 11px;
+}
+
+.sds-toolbar__toogle-btn::after {
+  content: '';
+  display: block;
+  border: 3px solid silver;
+  border-top: none;
+  border-left: none;
+  height: 8px;
+  width: 8px;
+  margin: 0 0 0 10px;
+  transform: rotate(45deg);
+  transition: transform .2s;
+  position: absolute;
+    right: 8px;
+    top: 17px;
+}
+.sds-toolbar.sds-toolbar--expanded .sds-toolbar__toogle-btn::after {
+  transform: rotate(223deg);
 }
 
 .sds-toolbar__toogle-btn:hover::before {
@@ -115,4 +162,5 @@
 .sds-toolbar__anim--expanded {
   margin-left: 20px;
 }
+
 /* stylelint-enable */

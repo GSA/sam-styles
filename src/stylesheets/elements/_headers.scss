@@ -1,0 +1,29 @@
+$header-colors: (
+  base: (
+    background: 'base-lighter',
+  ),
+  accent-cool: (
+    background: "accent-cool-lighter",
+  ),
+  accent-warm: (
+    background: "accent-warm-lighter",
+  ),
+  feature: (
+    background: "secondary-dark",
+    text: "white"
+  )
+);
+
+@mixin sds-header {
+  @include u-text('base-dark');
+  @each $name, $var in $header-colors {
+    &--#{$name} {
+      @if map-get(map-get($header-colors, $name), background) {
+        @include u-bg(map-get(map-get($header-colors, $name), background));
+      }
+      @if map-get(map-get($header-colors, $name), text) {
+        @include u-text(map-get(map-get($header-colors, $name), text))
+      }
+    }
+  }
+}

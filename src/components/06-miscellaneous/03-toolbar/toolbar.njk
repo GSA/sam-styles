@@ -2,11 +2,11 @@
   <div class="tablet:grid-col-auto display-flex position-relative">
     <div class="sds-toolbar">
       <div class="sds-toolbar__header">
-        <div class="sds-toolbar__toggle">
-          <a class="sds-toolbar__toogle-btn" href="">
-            <span class="usa-sr-only">Open/Close Toolbar</span>
-          </a>
-        </div>
+        <a class="sds-toolbar__toogle-btn" href="">
+          <div class="sds-toolbar__toggle">
+              <span class="usa-sr-only">Open/Close Toolbar</span>
+          </div>
+        </a>
       </div>
       <div class="sds-toolbar__content" hidden="hidden">
         <div class="sds-accordion" data-allow-multiple="data-allow-multiple">
@@ -14,7 +14,10 @@
             <h3>
               <button aria-expanded="false" class="sds-accordion__trigger" aria-controls="accordion-nav-content" id="accordion-nav-id">
                 <span class="sds-accordion__title">
-                  Navigation
+                  <span class="sds-accordion__title-text">
+                    <div>Navigation</div>
+                    <div>Selected Category</div>
+                  </span>
                   <span class="sds-accordion__icon"></span>
                 </span>
               </button>
