@@ -48,6 +48,7 @@
   outline: none !important;
   cursor: pointer;
   border-style: none;
+  background-color: white;
 }
 
 .sds-accordion__trigger:focus,
@@ -71,7 +72,13 @@
 .sds-accordion__trigger:focus .sds-accordion__title {
   //border-color: hsl(216, 94%, 73%);
 }
-
+.sds-accordion__title-text {
+  display: inline-block;
+  font-weight: 400;
+  div:last-child{
+    font-weight: 600;
+  }
+}
 .sds-accordion__trigger:focus .sds-accordion__icon,
 .sds-accordion__trigger:hover .sds-accordion__icon {
   background-color: white;
