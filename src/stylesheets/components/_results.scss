@@ -27,7 +27,7 @@
     }
 
     &--hilite {
-      text-decoration-color: #c3c3c3;
+      text-decoration-color: color('base-lighter');
       text-decoration-style: dashed;
       text-decoration-line: underline;
 
