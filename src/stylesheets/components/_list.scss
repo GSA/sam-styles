@@ -1,5 +1,5 @@
 .sds-list {
-  &--unstyled, &--icon {
+  &--unstyled {
     @include unstyled-list;
   }
 
@@ -12,21 +12,10 @@
   &--flex {
     > li {
       display: flex;
-      > span {
-        &:first-child {
-          @include u-minw(4);
-        }
-        > svg {
-          margin-top: 0.125em;
-        }
-      }
+      align-items: center;
     }
-  }
-  &__title {
-    &:first-child {
-      margin-top: 0;
-      margin-bottom: 0;
+    svg {
+      @include u-margin-right(2);
     }
-    margin-bottom: 0;
   }
 }
