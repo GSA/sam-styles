@@ -70,38 +70,46 @@
   line-height: 0.5rem;
 }
 
-h1 {
+@mixin h1 {
   font-size: units(5);
   @include u-text('bold', 'base');
   line-height: units(6);
 }
 
-h2 {
+@mixin h2 {
   font-size: units(4);
   @include u-text('semibold', 'base-dark');
   line-height: units(5);
 }
 
-h3 {
+@mixin h3 {
   font-size: units(3);
   @include u-text('bold', 'base-dark');
   line-height: units(4);
 }
 
-h4 {
+@mixin h4 {
   font-size: units(2.5);
   @include u-text('semibold', 'base-dark');
   line-height: units(3);
 }
 
-h5 {
+@mixin h5 {
+  font-size: units(2);
+  @include u-text('bold', 'base-dark');
+  line-height: units(2.5);
+}
+
+@mixin h6 {
   font-size: units(2);
   @include u-text('bold', 'base-dark');
   line-height: units(2.5);
 }
 
 h6 {
-  font-size: units(2);
-  @include u-text('bold', 'base-dark');
-  line-height: units(2.5);
+  @include h6;
+}
+
+.heading--light {
+  @include u-text ('normal');
 }
