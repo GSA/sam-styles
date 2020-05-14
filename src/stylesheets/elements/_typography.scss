@@ -1,55 +1,42 @@
-.usa-link {
-  @include u-font ('sans', 'xs');
-  @include u-text ('secondary');
-  @include u-text('no-underline');
+.usa-link,
+.usa-link:visited {
+  color: #3F57A6;
+  text-decoration: none;
+}
 
-  &--small {
-    @include u-font ('sans', '3xs');
-  }
+.usa-link:hover {
+  color: #8A7237;
+  text-decoration: underline;
+}
 
-  &--large {
-    @include u-font ('sans', 'md');
-  }
+.usa-color-text-visited {
+  color: #3F57A6;
+}
 
-  &--hover {
-    @include u-text ('secondary-vivid');
-    @include u-text ('underline');
-    @include u-text ('semibold');
-  }
-  
-  &--visited {
-    @include u-text ('accent-cool-darker'); 
-  }
-  
-  &:hover {
-    @extend .usa-link--hover;
-  }
-  
-  &:visited {
-    @extend .usa-link--visited;
-  }
+.usa-color-text-hover {
+  color: #8A7237;
+  text-decoration: underline;
+}
 
-  &--inverse {
-    @include u-text ('white');
-    
-    &-hover {
-      @include u-text ('semibold');
-      @include u-text ('underline');
-      @include u-text ('secondary-lighter');
-    }
-    
-    &-visited {
-      @include u-text ('accent-cool-lighter');    
-    }
+.usa-dark-background a {
+  color: #D9E8F6;
+}
 
-    &:hover {
-      @extend .usa-link--inverse-hover;
-    }
+.usa-dark-background a:hover {
+  color: #B69FFF;
+}
 
-    &:visited {
-      @extend .usa-link--inverse-visited;
-    }
-  }
+#usa-link--dark-hover {
+  color: #B69FFF;
+  text-decoration: underline;
+}
+
+.usa-link-wrapper {
+  padding: 25px;
+}
+
+.usa-link--external::after {
+  fill: #562b97;
 }
 
 .sds-group {
@@ -83,448 +70,46 @@
   line-height: 0.5rem;
 }
 
-h1 {
+@mixin h1 {
   font-size: units(5);
   @include u-text('bold', 'base');
   line-height: units(6);
 }
 
-h2 {
+@mixin h2 {
   font-size: units(4);
   @include u-text('semibold', 'base-dark');
   line-height: units(5);
 }
 
-h3 {
+@mixin h3 {
   font-size: units(3);
   @include u-text('bold', 'base-dark');
   line-height: units(4);
 }
 
-h4 {
+@mixin h4 {
   font-size: units(2.5);
   @include u-text('semibold', 'base-dark');
   line-height: units(3);
 }
 
-h5 {
+@mixin h5 {
+  font-size: units(2);
+  @include u-text('bold', 'base-dark');
+  line-height: units(2.5);
+}
+
+@mixin h6 {
   font-size: units(2);
   @include u-text('bold', 'base-dark');
   line-height: units(2.5);
 }
 
 h6 {
-  font-size: units(2);
-  @include u-text('bold', 'base-dark');
-  line-height: units(2.5);
-}h1, h2, h3, h4, h5, h6 {
-
-  &.heading {
-  }
+  @include h6;
 }
 
-p {  
-  @include u-font('sans', 'xs');
-  @include u-text('normal', 'base-dark');
-  @include u-height('205');
-  @include u-measure(5);
-}
-
-.p {
-  @extend p;
-  
-  &--error{
-    @include u-text('error-dark');
-  }
-
-  &--large {
-    @include u-font('sans', 'md');
-    @include u-height('3');
-  }
-
-  &--fine-print {
-    @include u-font('sans', '3xs');
-    @include u-height('2');
-  }
-
-  &--bold {
-    @include u-text('bold');
-  }
-
-  &--semi-bold {
-    @include u-text('semibold');
-  }
-
-  &--light {
-    @include u-text('light');
-  }
-
-  &--italic {
-    @include u-text('italic');
-  }
-  
-  &--color {
-    @include u-text('primary');
-  }
-
-  &--ink {
-    @include u-text('ink');
-  }
-
-  &--base {
-    @include u-text('base');
-  }
-
-  // &.page{
-  //   @include u-font('sans', 'md');
-
-  //   &.title {
-  //     @include u-text('semibold', 'base-dark');
-  //   }
-
-  //   &.text{
-  //     @include u-text('normal', 'base-dark');
-      
-  //     &--link{
-  //       @include u-text('bold');
-  //     }
-  //   }
-  // }
-
-
-}
-
-//Go Over
-.usa-color-text-visited {
-  @include u-text('normal');
-}
-  
-h1 {
-  @include u-font('sans', 'xl');
-  @include u-text('bold', 'base');
-  @include u-height(6);
-}
-  
-h2 {
-  @include u-font('sans', 'lg');
-  @include u-text('semibold', 'base-dark');
-  @include u-height(4);  
-}
-
-h3 {
-  @include u-font('sans', 'md');
-  @include u-text('bold', 'base-dark');
-  @include u-height(3);  
-}
-
-h4 {
-  @include u-font('sans', 'md');
-  @include u-text('semibold', 'base-dark');
-  @include u-height(3);  
-}    
-
-h5 {
-  @include u-font('sans', 'xs');
-  @include u-text('bold', 'base-dark');
-  @include u-height('205');  
-}
-
-h6 {
-  @include u-font('sans', 'xs');
-  @include u-text('semibold', 'base-dark');
-  @include u-height('205');  
-}  
-      
-  // Heading helper classes
-  
-.h1 {
-  @extend h1;
-}
-
-.h2 {
-  @extend h2;
-}
-
-.h3{
-  @extend h3;
-}
-
-.h4 {
-  @extend h4;
-}
-
-.h5 {
-  @extend h5;
-}
-
-.h6 {
-  @extend h6;
-}
-
-.h1, .h2, .h3, .h4, .h5, h6 {
-  
-  &--light {
-    @include u-text('normal');
-  }
-}
-
-h1, h2, h3, h4, h5, h6 {
-  
-  .usa-link {
-    font-size: inherit;
-  }
-}
-
-td {
-  white-space: nowrap;
-}
-
-//Input Label
-.input-label {
-  @extend p;
-  @extend .p--ink;
-
-  &--group {
-    @extend .input-label;
-    @extend .p--semi-bold;
-  }
-}
-
-//Entered Text
-.entered-text {
-  @extend p;
-  @extend .p--color;
-}
-
-//Field Paragraph
-.field-paragraph {
-  @extend p;
-}  
-
-//callout
-.callout {
-  @extend .p--large;
-  @extend .p--bold;
-  @extend .p--ink;
-  
-    &--light {
-      @extend .p--large;
-      @extend .p--light;
-  
-      a.usa-link {
-      }
-   }
-   
-    a.usa-link {
-      @include u-font('sans', 'md');
-      @include u-text('normal');
-    }
-}
-
-//Alerts
-.global-title {
-  @extend .h3;
-  @include u-text('semibold');
-}
-
-.global-text {
-  @extend .p--large;
-
-  a.usa-link {
-    @include u-font('sans', 'md');
-    @include u-text('bold');
-  }
-}
-
-.title {
-    @include u-text('semibold', 'base-dark');
-}
-
-.page-title {
-  @extend .h3;
-  @include u-text('semibold');
-}
-
-.page-text {
-  @extend .p--large;
-  
-  a.usa-link {
-    @include u-font('sans', 'md');
-    @include u-text('bold');
-  }
-}
-
-//Filter
-.group-label {
-  @extend .p--fine-print;
-  @extend .p--semi-bold;
-  @extend .p--color;
-}
-
-.filter-label {
-  @extend .p--fine-print;
-  @extend .p--semi-bold;
-}
-
-.input-text {
-  @extend .p--fine-print;
-}
-
-.input-chip {
-  @include u-font('sans', '3xs');    
-  @include u-text('semibold', 'primary');
-}
-
-//Forms & Display Fields
-.section-header {
-  @extend .h2;
-
-  &--sub {
-    @extend .h3;
-    @include u-text('light');
-  }
-}
-
-.field-label {
-  @include u-font('sans', '2xs');
-  @include u-text('normal', 'base-dark');
-  
-  &--large {
-    @extend .p;
-  }
-
-  &--small {
-    @extend .p--fine-print;
-    @extend .p--italic;
-    @extend .p--base;
-  }
-}
-
-.field-value {
-  @extend .p;
-  @extend .p--semi-bold;
-
-  a.usa-link {
-    
-  }
-  
-  &--large {
-    @extend .p--large;
-    @extend .p--semi-bold;
-
-    a.usa-link {
-      @include u-font('sans', 'md');
-    }
-  }
-
-  &--small {
-    @extend .p--fine-print;
-    
-    a.usa-link {
-      @include u-font('sans', '3xs');
-    }
-  }
-}
-
-.field-paragraph {
-  @extend .p;
-
-  a.usa-link {
-  }
-}
-
-//Buttons
-.in-button-text {
-  @include u-font('sans', 'sm');    
-  @include u-text('bold', 'primary');
-}
-
-.under-button-text {
-  @extend .p--fine-print;
-  @extend .p--color;
-}
-
-//Modal
-.modal-heading {
-  @extend .h2;
-}
-
-.modal-text {
-  @extend .p--large;
-  @extend .p--semi-bold;
-}
-
-//Search
-.helper-text {
-  @extend .p;
-  @extend .p--base;
-  @include u-height('205')
-}
-
-//Label
-.tag-label {
-  @extend .p;
-  @extend .p--bold;
-}
-
-.main-navigation {
-  &--primary {
-    @extend .p--large;
-    @extend .p--bold;
-    @extend .p--ink;
-  }
-  
-  &--secondary {
-    @extend .p--fine-print;
-    @extend .p--ink;
-  }
-}
-
-.utility-navigation {
-  &--header {
-    @extend .h2;
-    @include u-text('primary');
-  } 
-}
-
-.side-navigation {
-  &--selected {
-    @include u-font('sans', '2xs');
-    @include u-text('bold', 'primary');
-  }
-  
-  &--unselected {
-    @include u-font('sans', '2xs');
-    @include u-text('semibold', 'base-dark');
-  }
-}  
-  
-.action-menu {
-  &--header {
-    @include u-font('sans', 'sm');
-    @include u-text('semibold', 'base-dark');
-  }
-
-  a.usa-link {
-    @include u-font('sans', 'xs');
-    @include u-text('semibold');
-
-    &--hover {
-      @include u-font('sans', 'xs');
-      @include u-text('semibold');    
-      @include u-text('base-dark');
-    }
-  }
-}  
-
-.footer-navigation {
-  @extend .p;
-      
-  &--group-label {
-    @extend .p--large;
-    @extend .p--bold;
-  }
-
-  a.usa-link {
-  }
+.heading--light {
+  @include u-text ('normal');
 }
