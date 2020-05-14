@@ -1,29 +1,27 @@
 .sds-field {
-  @include grid-row;
-  @include grid-gap(1);
   @include u-text("normal");
-  @include u-font('sans', '2xs');
-  @include u-margin-y(1);
+  @include u-font("sans", "2xs");
   .sds-field__name {
-    @include grid-col("auto");
+    @include u-display("inline-block");
+    @include u-margin-right("2px");
   }
   .sds-field__value {
-    @include grid-col("fill");
+    @include u-display("inline-block");
     @include u-text("bold");
     &--paragraph {
-      @include grid-col("fill");
+      @include u-display("block");
       @include u-text("normal");
       @include u-measure(6);
     }
   }
   &--stacked {
     .sds-field__name {
-      @include grid-col(12);
+      @include u-display("block");
     }
     .sds-field__value {
-      @include grid-col(12);
+      @include u-display("block");
       &--paragraph {
-        @include grid-col(12);
+        @include u-display("block");
       }
     }
   }
@@ -35,9 +33,9 @@
   }
   &--featured {
     .sds-field__name {
-        @include u-text("italic");
-        @include u-text("light");
-        @include u-font('sans', '2xs');
+      @include u-text("italic");
+      @include u-text("light");
+      @include u-font("sans", "2xs");
     }
   }
 }
