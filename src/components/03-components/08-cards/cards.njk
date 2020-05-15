@@ -1,0 +1,107 @@
+<div class="grid-row">
+	<div class="sds-card sds-card--shadowed grid-col-12 tablet:grid-col-6">
+		<div class="sds-card__heading 
+		    {% if card.variant.startsWith('accent') %} sds-card__heading--accent {% endif %} 
+		    {% if card.variant.startsWith('feature') %} sds-card__heading--feature {% endif %} 
+		    grid-row grid-gap-md">
+			  {% if card.variant.startsWith('plain') %}
+			      <div class="grid-col-fill">
+				    <h2>Contract Opportunities</h2>
+				  </div>
+				  <div class="grid-col-auto">
+				    <a class="usa-button usa-button--outline" href="">Link</a>
+				  </div>
+			  {% else %}
+				  	<div class="grid-col">
+					  <h2>Contract Opportunities</h2>
+					</div>
+			  {% endif %}
+		</div>
+		<div class="sds-card__content">
+		  <div class="sds-statistics">
+		    <button class="green statistic">
+		      <div class="value">
+		        <span class="circular">150K+</span></div>
+		      <div class="label">Label</div>
+		    </button>
+		    <button class="blue statistic">
+		      <div class="value">
+		        <span class="circular">999K+</span></div>
+		      <div class="label">Label</div>
+		    </button>
+		    <button class="red statistic">
+		      <div class="value">
+		        <span class="circular">112</span></div>
+		      <div class="label">Label</div>
+		    </button>
+		    <button class="orange statistic">
+		      <div class="value">
+		        <span class="circular">209</span></div>
+		      <div class="label">Label</div>
+		    </button>
+		  </div>
+		</div>
+	</div>
+</div>
+
+<div class="grid-row">
+	<div class="sds-card sds-card--bordered grid-col-12 tablet:grid-col-8">
+		<div class="sds-card__heading 
+			{% if card.variant.startsWith('accent') %} sds-card__heading--accent {% endif %} 
+		    {% if card.variant.startsWith('feature') %} sds-card__heading--feature {% endif %} 
+			grid-row grid-gap-md">
+			  {% if card.variant.startsWith('plain') %}
+			      <div class="grid-col-fill">
+				    <h2>Contract Opportunities</h2>
+				  </div>
+				  <div class="grid-col-auto">
+				    <a class="usa-button usa-button--outline" href="">Link</a>
+				  </div>
+			  {% else %}
+				  	<div class="grid-col-12">
+					  <h2>Contract Opportunities</h2>
+					</div>
+			  {% endif %}
+		</div>
+		<div class="sds-card__content">
+			<ul class="fa-ul" style="font-size: 1.2rem">
+			  <li><a class="usa-link" href=""><span class="fa-li"><i class="sds fa-question-circle"></i></span>How do I run a databank report?</a></li>
+			  <li><a class="usa-link" href=""><span class="fa-li"><i class="sds fa-note"></i></span>Standard</a></li>
+			  <li><a class="usa-link" href=""><span class="fa-li"><i class="sds fa-note"></i></span>Ad-hoc Reports</a></li>
+			  <li><a class="usa-link" href=""><span class="fa-li"><i class="sds fa-video-circle"></i></span>Getting started with reporting in the databank</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="grid-row">
+  <div class="grid-col-4 grid-offset-4">
+	<div class="sds-card sds-card--bordered sds-card--shadowed">
+	  	<div class="sds-card__heading {% if card.variant.startsWith('accent') %} sds-card__heading--accent {% endif %} 
+    			{% if card.variant.startsWith('feature') %} sds-card__heading--feature {% endif %} 
+	  			display-flex flex-column flex-align-center">
+	  		<a class="usa-link" href=""><h3><i class="sds fa-ruler-pencil fa-2x"></i>Workspace</h3></a>
+	  		<h4>Thomas Fielding</h4>
+	  	</div>
+		<div class="sds-card__content">
+		  	<p class="usa-prose">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae. </p>
+		</div>
+	</div>
+  </div>
+</div>
+
+<div class="grid-row">
+	<div class="sds-card sds-card--shadowed grid-col-fill">
+		<div class="grid-row">
+			<div class="sds-card__side-heading {% if card.variant.startsWith('accent') %} sds-card__heading--accent {% endif %} 
+    				{% if card.variant.startsWith('feature') %} sds-card__heading--feature {% endif %} grid-col-auto">
+				<p><i class="sds fa-question-circle fa-2x"></i></p>
+			</div>
+			<div class="sds-card__content grid-col-fill">
+				<h3><a class="usa-link" href="">How do I sign up?</a></h3>
+				<p class="usa-prose">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae. </p>
+				<p><a class="usa-link" href="">Learn More</a></p>
+			</div>
+		</div>
+	</div>
+</div>
