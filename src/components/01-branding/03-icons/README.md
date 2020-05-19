@@ -9,3 +9,5 @@ To use sam-styles icons, you need to know two bits of information to reference a
 ```html
 <i class="sds fa-bell"></i> <!-- this icon's name is `bell` and sam-styles prefix is 'sds' -->
 ```
+
+If using icons in place they need a specific list add the class ```fa-fw```
