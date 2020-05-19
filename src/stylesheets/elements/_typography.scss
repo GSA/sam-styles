@@ -66,11 +66,6 @@
   @include u-text('semibold');
 }
 
-sds-untitled {
-  color: color(base);
-  @include u-text('italic');
-}
-
 .line-height-05 {
   line-height: 0.5rem;
 }
