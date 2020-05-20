@@ -1,7 +1,7 @@
 <h3>SDS Block Alert</h3>
 <div class="sds-alert--block">
   <div class="sds-alert--block-icon grid-col-auto">
-    <i class="sds fa-exclamation fa-2x"></i>
+   {% render '@icon', icon %}
   </div>
   <div class="grid-col">
     <label>Address Needs to be Updated</label>
@@ -12,7 +12,7 @@
 
 <div class="sds-alert--block info">
   <div class="sds-alert--block-icon grid-col-auto">
-    <i class="sds fa-exclamation fa-2x"></i>
+    {% render '@icon', icon %}
   </div>
   <div class="grid-col">
     <label>Address Needs to be Updated</label>
@@ -23,7 +23,7 @@
 
 <div class="sds-alert--block error">
   <div class="sds-alert--block-icon grid-col-auto">
-    <i class="sds fa-exclamation fa-2x"></i>
+    {% render '@icon', icon %}
   </div>
   <div class="grid-col">
     <label>Address Needs to be Updated</label>
