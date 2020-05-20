@@ -1,53 +1,80 @@
+label: Pages
 status: wip
 preview: "@sam-content"
-notes: "Landing Page"
+variants:
+  - name: default
+    label: Full Page
+    status: null
 
-context:
-  iconSize: lg
-  cards:
-    - title: Data Services
-      contents:
-        - listTitle: APIs
-          items:
-            - text: Getting Started with web services
-              icon: note
-            - text: Go to entity registration API
-              icon: angle-right
-            - text: Go to exclusions API
-              icon: angle-right
-        - listTitle: Connect to Service APIs
-          items:
-            - text: Downloading entity registration files
-              icon: note
-            - text: Downloading exclusion files
-              icon: note
-            - text: Go to entity registration downloads
-              icon: angle-right
-            - text: Go to exclusions downloads
-              icon: angle-right
-    - title: More about Entity Information
-      secondCard: true
-      contents:
-        - listTitle: Exclusion Resources
-          items:
-            - text: Types of exclusions
-              icon: note
-            - text: Legacy CT Codes
-              icon: note
-            - text: Agency Exclusion POCs
-              icon: note
-        - listTitle: User Guides
-          items:
-            - text: Exclusions Managmement User Guide for Federal Users
-              icon: note
-            - text: Data Services ser Guide
-              icon: note
-        - listTitle: Help
-          items:
-            - text: Frequently Asked Questions
-              icon: question
-            - text: Glossary Terms
-              icon: book
-            - text: Videos
-              icon: video-square
+  - name: left-right-aside
+    label: Left and Right Aside
+    context:
+      base: sds-card
+      title: Contract Opportunities
+      colors:
+        - title: Accent Cool
+      header:
+        style: left
+      body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae.
+
+  - name: left-aside
+    label: Left Aside
+
+  - name: left-navigation
+    label: Left Navigation
+
+  - name: right-aside
+    label: Right Aside
+
+  - name: landing-page
+    label: Landing Page
+    context:
+      iconSize: lg
+      cards:
+        - title: Data Services
+          contents:
+            - listTitle: APIs
+              items:
+                - text: Getting Started with web services
+                  icon: note
+                - text: Go to entity registration API
+                  icon: angle-right
+                - text: Go to exclusions API
+                  icon: angle-right
+            - listTitle: Connect to Service APIs
+              items:
+                - text: Downloading entity registration files
+                  icon: note
+                - text: Downloading exclusion files
+                  icon: note
+                - text: Go to entity registration downloads
+                  icon: angle-right
+                - text: Go to exclusions downloads
+                  icon: angle-right
+        - title: More about Entity Information
+          secondCard: true
+          contents:
+            - listTitle: Exclusion Resources
+              items:
+                - text: Types of exclusions
+                  icon: note
+                - text: Legacy CT Codes
+                  icon: note
+                - text: Agency Exclusion POCs
+                  icon: note
+            - listTitle: User Guides
+              items:
+                - text: Exclusions Managmement User Guide for Federal Users
+                  icon: note
+                - text: Data Services ser Guide
+                  icon: note
+            - listTitle: Help
+              items:
+                - text: Frequently Asked Questions
+                  icon: question
+                - text: Glossary Terms
+                  icon: book
+                - text: Videos
+                  icon: video-square
+
 
