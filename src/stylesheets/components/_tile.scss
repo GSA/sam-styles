@@ -129,6 +129,7 @@
 // ----------------------
 
 .sds-tile--lg {
+  overflow: hidden;
   .sds-tile__title {
     font-size: 23px !important;
     @include u-padding(1);
@@ -143,8 +144,12 @@
   }
 
   .sds-tile__content {
-    width: 300px;
+    min-width: 300px;
+    width: 100%;
     height: auto;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
