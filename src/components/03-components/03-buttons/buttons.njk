@@ -13,28 +13,40 @@
   <br>
 
 <div class="button-label">
-  <button class="sds-button--circle {{ classes }}"><i class="fa fa-caret-down"></i></button>
+  <button class="sds-button--circle {{ classes }}">
+    {% render '@icon', {icon:'caret-down', prefix: 'fa'} %}
+  </button>
   <label>Default</label>
 </div>
 {% if (category != 'disabled') -%}
 <div class="button-label">
-  <button class="sds-button--circle {{ classes }} usa-button--hover"><i class="fa fa-caret-up"></i></button>
+  <button class="sds-button--circle {{ classes }} usa-button--hover">
+    {% render '@icon', {icon:'caret-up', prefix: 'fa'} %}
+  </button>
   <label>Hover</label>
 </div>
 <div class="button-label">
-  <button class="sds-button--circle {{ classes }} usa-button--active"><i class="fa fa-caret-left"></i></button>
+  <button class="sds-button--circle {{ classes }} usa-button--active">
+    {% render '@icon', {icon:'caret-left', prefix: 'fa'} %}
+  </button>
   <label>Active</label>
 </div>
 <div class="button-label">
-  <button class="sds-button--circle {{ classes }} usa-focus"><i class="fa fa-caret-right"></i></button>
+  <button class="sds-button--circle {{ classes }} usa-focus">
+    {% render '@icon', {icon:'caret-right', prefix: 'fa'} %}
+  </button>
   <label>Focus</label>
 </div>
 <div class="button-label">
-  <button class="sds-button--circle {{ classes }}" disabled="disabled"><i class="fa fa-times"></i></button>
+  <button class="sds-button--circle {{ classes }}" disabled="disabled">
+    {% render '@icon', {icon:'times', prefix: 'fa'} %}
+  </button>
   <label>Disabled</label>
 </div>
 <div class="button-label">
-  <button class="sds-button  {{ classes }}"><i class="fa fa-search"></i></button>
+  <button class="sds-button  {{ classes }}">
+    {% render '@icon', {icon:'search', prefix: 'fa'} %}
+  </button>
   <label>Search</label>
 </div>
 {%- endif -%}

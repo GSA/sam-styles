@@ -2,7 +2,7 @@
   <div class="sds-feedback">
     <button type="button" class="sds-feedback__button simple-toggle" [attr.aria-expanded]="!isCollapsedContent"
       aria-controls="collapseID" (click)="isCollapsedContent = !isCollapsedContent">
-      <i class="sds-feedback__open sds fa-arrow-down"></i>
+      {% render '@icon', {icon: 'arrow-down', classes: 'sds-feedback__open'} %}
       <span class="sds-feedback__title">Feedback</span>
     </button>
     <div id="collapseID" [sdscollapse]="isCollapsedContent" class="sds-feedback__response">
@@ -36,7 +36,7 @@
                     <li class="usa-footer__secondary-link">
                       <a class="usa-link" href="{{ item.href }}">{{ item.text }}
                         {%-  if item.external -%}
-                        <i class="fas fa-external-link-alt fa-xs"></i>
+                          {% render '@icon', {icon:'external-link-alt', prefix: 'fas', classes: 'fa-xs'} %}
                         {%- endif -%}
                       </a>
                     </li>
@@ -65,7 +65,7 @@
           <li>
             <a class="usa-link" href="{{ item.href }}">{{ item.text }}
               {%-  if item.external -%}
-              <i class="fas fa-external-link-alt fa-xs"></i>
+                {% render '@icon', {icon:'external-link-alt', prefix: 'fas', classes: 'fa-xs'} %}
               {%- endif -%}
             </a>
           </li>

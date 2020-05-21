@@ -23,10 +23,10 @@ variants:
         secondary:
           search: false
           links:
-            - sdsIcon: true
-              icon: bars
-            - sdsIcon: true
-              icon: bars
+            - icon:
+                icon: bars
+            - icon:
+                icon: bars
 
   - name: extended-sam
     label: SAM
@@ -58,15 +58,15 @@ variants:
             - text: Request
               current: true
               notification: true
-              sdsIcon: true
-              icon: request
-              iconFlip: true
+              icon:
+                icon: request
+                classes: 'fa-flip-horizontal'
             - text: Messages
-              sdsIcon: true
-              icon: messages
+              icon:
+                icon: messages
             - text: Workspace
-              sdsIcon: true
-              icon: workspace
+              icon:
+                icon: workspace
             - text: Sign Out
-              sdsIcon: true
-              icon: 'log-out'
+              icon:
+                icon: 'log-out'

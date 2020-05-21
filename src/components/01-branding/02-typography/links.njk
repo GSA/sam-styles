@@ -43,7 +43,7 @@
 <div class="usa-link-wrapper">
   <p>
     <a class="usa-link" href="https://i.giphy.com/media/WPzQF6ruiIIVzHNlwX/source.gif">External Link
-      <i class="fas fa-external-link-alt fa-xs"></i>
+      {% render '@icon', {prefix: 'fas', classes: 'fa-xs', icon:'external-link-alt'} %}
     </a>
   </p>
   <p>Source Sans Pro / Regular / 16pt</p>
@@ -51,7 +51,7 @@
 <div class="usa-link-wrapper">
   <p>
     <a class="usa-link sds-icon-link sds-icon-link--left" href="javascript:void(0);">
-      <i class="fa fa-angle-left fa-2x"></i>
+      {% render '@icon', {icon:'angle-left', prefix: 'fa', classes: 'fa-2x'} %}
       Left icon link
     </a>
   </p>
@@ -60,7 +60,7 @@
 <div class="usa-link-wrapper">
   <a class="usa-link sds-icon-link sds-icon-link--right" href="javascript:void(0);">
     Right icon link
-    <i class="fa fa-angle-right fa-2x"></i>
+    {% render '@icon', {icon:'angle-right', prefix: 'fa', classes: 'fa-2x'} %}
   </a>
 </p>
 <p>Source Sans Pro / Regular / 16pt</p>

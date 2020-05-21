@@ -1,8 +1,8 @@
 <button class="usa-nav__close">
   <div class="fa-lg">
     <span class="fa-layers fa-fw">
-      <i class="fa-inverse fas fa-circle" data-fa-transform="grow-2"></i>
-      <i class="fas fa-times" data-fa-transform="shrink-6"></i>
+      {% render '@icon', {icon:'circle', prefix: 'fas', classes:"fa-inverse", dataTransform:'grow-2'} %}
+      {% render '@icon', {icon:'times', prefix: 'fas', dataTransform:'shrink-6'} %}
     </span>
   </div>
   <span class="usa-sr-only">Close</span>

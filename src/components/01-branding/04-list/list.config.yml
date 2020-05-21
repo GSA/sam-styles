@@ -30,11 +30,17 @@ variants:
           - flex
       items:
         - text: List Item
-          icon: bell
+          icon:
+            icon: bell
+            classes: fa-fw
         - text: List Item
-          icon: calendar
+          icon:
+            icon: calendar
+            classes: fa-fw
         - text: List Item
-          icon: book
+          icon:
+            icon: book
+            classes: fa-fw
   - name: icon large
     label: Icon List -- Large
     context:
@@ -43,14 +49,17 @@ variants:
           - flex
       items:
         - text: List Item
-          icon: bell
-          iconSize: 2x
+          icon:
+            icon: bell
+            classes: fa-2x fa-fw
         - text: List Item
-          icon: calendar
-          iconSize: 2x
+          icon:
+            icon: calendar
+            classes: fa-2x fa-fw
         - text: List Item
-          icon: book
-          iconSize: 2x
+          icon:
+            icon: book
+            classes: fa-2x fa-fw
   - name: menu
     label: Menu List
     context:
@@ -72,13 +81,19 @@ variants:
       items:
         - text: List Item
           href: " "
-          icon: bell
+          icon:
+            icon: bell
+            classes: fa-fw
         - text: Quick start guide for creating a login.gov account
           href: " "
-          icon: calendar
+          icon:
+            icon: calendar
+            classes: fa-fw
         - text: List Item
           href: " "
-          icon: book
+          icon:
+            icon: book
+            classes: fa-fw
   - name: menu icon large
     label: Menu List with Icons -- Large
     context:
@@ -88,13 +103,16 @@ variants:
       items:
         - text: List Item
           href: " "
-          icon: bell
-          iconSize: 2x
+          icon:
+            icon: bell
+            classes: fa-2x fa-fw
         - text: Quick start guide for creating a login.gov account
           href: " "
-          icon: calendar
-          iconSize: 2x
+          icon:
+            icon: calendar
+            classes: fa-2x fa-fw
         - text: List Item
           href: " "
-          icon: book
-          iconSize: 2x
+          icon:
+            icon: book
+            classes: fa-2x fa-fw
