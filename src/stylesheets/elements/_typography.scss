@@ -70,46 +70,351 @@
   line-height: 0.5rem;
 }
 
-@mixin h1 {
-  font-size: units(5);
+
+
+
+// @mixin h3 {
+//   font-size: units(3);
+//   @include u-text('bold', 'base-dark');
+//   line-height: units(4);
+// }
+
+// @mixin h4 {
+//   font-size: units(2.5);
+//   @include u-text('semibold', 'base-dark');
+//   line-height: units(3);
+// }
+
+// @mixin h5 {
+//   font-size: units(2);
+//   @include u-text('bold', 'base-dark');
+//   line-height: units(2.5);
+// }
+
+// @mixin h6 {
+//   font-size: units(2);
+//   @include u-text('bold', 'base-dark');
+//   line-height: units(2.5);
+// }
+
+
+
+h1, h2, h3, h4, h5, h6 {
+
+  &.heading {
+
+    &--utility-nav {
+      @include u-font('sans', 'lg');
+      @include u-text('primary'); 
+    }
+    
+    &--action-menu {
+      @include u-font('sans', 'sm');
+      @include u-text('semibold', 'base-dark');
+      
+      &--link {
+        @include u-font('sans', 'xs');
+        @include u-text('semibold');
+        
+        &--visited{
+          @include u-font('sans', 'xs');
+          @include u-text('semibold', 'base-dark');
+        }
+      }
+      // @include u-margin-y(0);
+    }
+    &--footer-nav {
+      
+      &--group-label {
+        @include u-font('sans', 'md');
+        @include u-text('bold', 'base-dark');
+      }
+
+      &--link {
+        @include u-font('sans', 'xs');
+        @include u-text('normal');
+      }
+    }
+
+    &--section {
+      @include u-font('sans', 'lg');
+      @include u-text('semibold', 'base-dark');
+
+      &--sub {
+        @include u-font('sans', 'md');
+        @include u-text('light');
+      }
+    }
+
+    &--modal {
+      @include u-font('sans', 'lg');
+      @include u-text('semibold', 'base-dark');
+    }
+  }
+}
+p {  
+  @include u-font('sans', 'xs');
+  @include u-text('normal', 'base-dark');
+  @include u-height(3);
+  @include u-measure(5);
+}
+
+.p {
+  @extend p;
+  
+  &--error{
+    @include u-text('error-dark');
+  }
+
+  &--large {
+    @include u-font('sans', 'md');
+    @include u-height(4);
+  }
+
+  &--small {
+    @include u-font('sans', '3xs');
+    @include u-height(2);
+  }
+
+  &.global{
+    @include u-font('sans', 'md');
+
+    &.title {
+      @include u-text('semibold', 'base-dark');
+    }
+
+    &.text {
+      @include u-text('normal', 'base-dark');
+      
+      &--link {
+        @include u-text('bold');
+      }
+    }
+  }
+
+  &.page{
+    @include u-font('sans', 'md');
+
+    &.title {
+      @include u-text('semibold', 'base-dark');
+    }
+
+    &.text{
+      @include u-text('normal', 'base-dark');
+      
+      &--link{
+        @include u-text('bold');
+      }
+    }
+  }
+
+  &.callout{
+    @include u-font('sans', 'md');
+    
+    &.field {
+      @include u-text('bold', 'ink');
+
+      &--link{
+        @include u-text('normal');
+      }
+    }
+
+    &.light-text {
+      @include u-text('normal', 'ink');
+    }
+  }
+
+  &.navigation {
+
+    &--primary {
+      @include u-font('sans', 'md');
+      @include u-text('bold', 'ink');
+    }
+
+    &--secondary {
+      @include u-font('sans', '3xs');
+      @include u-text('normal', 'base');
+    }
+
+    &--sidenav {
+      @include u-font('sans', '2xs');
+      @include u-text('bold', 'primary');
+
+      &--unselected{
+        @include u-font('sans', '2xs');
+        @include u-text('semibold', 'base-dark');
+      }
+    }
+  }
+
+  &.field-label {
+    @include u-font('sans', '2xs');
+    @include u-text('normal', 'base-dark');
+    
+    &--large {
+      @include u-font('sans', 'xs');
+    }
+
+    &--small {
+      @include u-font('sans', '3xs');
+      @include u-text('italic');
+    }
+  }
+
+  &.field-value {
+    @include u-font('sans', 'xs');    
+    @include u-text('semibold', 'base-dark');
+    
+    &--large {
+      @include u-font('sans', 'md');
+      @include u-text('semibold');
+    }
+
+    &--small {
+      @include u-font('sans', '3xs');
+      @include u-text('normal');
+    }
+  }
+
+  &.field-paragraph {
+    @include u-font('sans', 'xs');    
+    @include u-text('normal', 'base-dark');
+  }
+
+  &.input-label {
+    @include u-font('sans', 'xs');    
+    @include u-text('normal', 'ink');
+
+    &--group {
+      @include u-text('semibold');
+    }
+
+    &--entered-text {
+      @include u-text('primary');
+    }
+
+    &--field-paragraph {
+      @include u-text('base-dark');
+    }
+  }
+
+  &.group-label {
+    @include u-font('sans', '3xs');    
+    @include u-text('semibold', 'primary');
+  }
+
+  &.filter-label {
+    @include u-font('sans', '3xs');    
+    @include u-text('semibold', 'base-dark');
+  }
+
+  &.input-text {
+    @include u-font('sans', '3xs');    
+    @include u-text('normal', 'base-dark');
+  }
+
+  &.input-chip {
+    @include u-font('sans', '3xs');    
+    @include u-text('semibold', 'primary');
+  }
+
+  &.in-button {
+    @include u-font('sans', 'sm');    
+    @include u-text('bold', 'primary');
+  }
+
+  &.under-button {
+    @include u-font('sans', '3xs');    
+    @include u-text('normal', 'primary');
+  }
+
+  &.modal {
+    @include u-font('sans', 'md');
+    @include u-text('semibold', 'base-dark');
+  }
+
+  &.search-helper-text {
+    @include u-font('sans', 'xs');
+    @include u-text('normal', 'base');
+  }
+
+  &.tag-label {
+    @include u-font('sans', 'xs');
+    @include u-text('bold', 'base-dark');
+  }
+
+}
+
+//Go Over
+.usa-color-text-visited {
+  @include u-text('normal');
+}
+  
+h1 {
+  @include u-font('sans', 'xl');
   @include u-text('bold', 'base');
-  line-height: units(6);
+  @include u-height(6);
 }
-
-@mixin h2 {
-  font-size: units(4);
+  
+h2 {
+  @include u-font('sans', 'lg');
   @include u-text('semibold', 'base-dark');
-  line-height: units(5);
+  @include u-height(5);  
 }
 
-@mixin h3 {
-  font-size: units(3);
+h3 {
+  @include u-font('sans', 'md');
   @include u-text('bold', 'base-dark');
-  line-height: units(4);
+  @include u-height(4);  
 }
 
-@mixin h4 {
-  font-size: units(2.5);
+h4 {
+  @include u-font('sans', 'md');
   @include u-text('semibold', 'base-dark');
-  line-height: units(3);
-}
+  @include u-height(3);  
+}    
 
-@mixin h5 {
-  font-size: units(2);
+h5 {
+  @include u-font('sans', 'xs');
   @include u-text('bold', 'base-dark');
-  line-height: units(2.5);
-}
-
-@mixin h6 {
-  font-size: units(2);
-  @include u-text('bold', 'base-dark');
-  line-height: units(2.5);
+  @include u-height('205');  
 }
 
 h6 {
-  @include h6;
+  @include u-font('sans', 'xs');
+  @include u-text('semibold', 'base-dark');
+  @include u-height('205');  
+}  
+      
+  // Heading helper classes
+  
+.h1 {
+  @extend h1;
 }
 
-.heading--light {
-  @include u-text ('normal');
+.h2 {
+  @extend h2;
+}
+
+.h3{
+  @extend h3;
+}
+
+.h4 {
+  @extend h4;
+}
+
+.h5 {
+  @extend h5;
+}
+
+.h6 {
+  @extend h6;
+}
+
+.h1, .h2, .h3, .h4, .h5, h6 {
+  
+  &--light {
+    @include u-text('normal');
+  }
 }
