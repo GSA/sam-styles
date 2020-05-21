@@ -3,7 +3,7 @@
     background-position: 100% 100%;
     background-repeat: no-repeat;
     @include adjust-responsive-site-margins;
-    @include u-padding-y(4);
+    @include u-padding-bottom(4);
   
     &--image{
       background-image: url('#{$theme-image-path}/landing-hero.png');

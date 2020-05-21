@@ -6,7 +6,7 @@
 
 <main id="main-content">
     <div class="sds-page grid-container">
-        <div class="grid-row sds-page-section sds-hero sds-hero--image">
+        <div class="grid-row sds-page__section sds-hero sds-hero--image">
             <div class="desktop:grid-offset-1 desktop:grid-col-11">
                 <div class="grid-row">
                     <div class="tablet:grid-col-7">
@@ -134,7 +134,7 @@
                                     {% for item in content.items %}
                                     <li>
                                         {% if item.icon %}
-                                            {%- render '@icon', {icon: item.icon} -%}
+                                            {%- render '@icon', item.icon -%}
                                         {% endif %}
                                         <a class="usa-link" href="#">
                                             {{item.text}}

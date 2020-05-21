@@ -6,9 +6,9 @@
 
 {% render '@navbar' %}
 
-<div class="grid-container">
+<div class="sds-page grid-container">
   <div class="grid-row grid-gap-4">
-    <aside class="desktop:grid-col-3">
+    <aside class="sds-page__section desktop:grid-col-3">
       <h3 id="section-heading-h3">Subsection heading (h3)</h3>
 
       <p>
@@ -18,8 +18,7 @@
         present information of less importance.
       </p>
     </aside>
-    <main id="main-content" class="main-content desktop:grid-col-6">
-      <div class="usa-layout-docs__main usa-prose">
+    <main id="main-content" class="sds-page__section main-content desktop:grid-col-6">
         <h1>Page heading (h1)</h1>
 
         <p class="usa-intro">
@@ -64,12 +63,29 @@
           Read the full documentation on our side navigation on the component
           page.
         </p>
-      </div>
+      
     </main>
-    <aside class="desktop:grid-col-3">
-      {% render '@card--single' %}
+    <aside class="sds-page__section desktop:grid-col-3">
+      <div class="sds-card  sds-card--bordered">
+
+        <div class="sds-card__header sds-card__header--base sds-card__header--left">
+
+          <h2 class="sds-card__title">Contract Opportunities</h2>
+
+        </div>
+
+        <div class="sds-card__content">
+
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Sed augue lacus viverra vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore
+          et dolore magna aliqua. Sed augue lacus viverra vitae.
+
+        </div>
+      </div>
     </aside>
 
   </div>
+</div>
 
-  {% render '@footer--gsa' %}
+{% render '@footer--gsa' %}

@@ -69,10 +69,3 @@
 .line-height-05 {
   line-height: 0.5rem;
 }
-
-
-@for $index from 1 through 6 {
-.main-content > h#{$index}:first-child{
-    margin-top: 0;
-  }
-}
