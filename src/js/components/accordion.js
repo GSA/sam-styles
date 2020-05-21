@@ -12,7 +12,7 @@ Array.prototype.slice
     // Create the array of toggle elements for the accordion group
     var triggers = Array.prototype.slice.call(
       accordion.querySelectorAll(
-        ":scope > .sds-accordion__item > h3 > .sds-accordion__trigger"
+        ":scope > .sds-accordion__item  .sds-accordion__trigger"
       )
     );
     var panels = Array.prototype.slice.call(

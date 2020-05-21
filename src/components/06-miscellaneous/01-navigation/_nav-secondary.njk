@@ -5,12 +5,12 @@
       <a href="{{ link.href }}"{% if link.current %} class="usa-current"{% endif %}>
         {% if link.icon and link.notification %}
           <span class="fa-layers fa-fw">
-            <i class="{{ "sds" if link.sdsIcon else "fas" }} fa-{{link.icon}} {{ "fa-flip-horizontal" if link.iconFlip }}"></i>
+            {% render '@icon', link.icon %}
             <span class="fa-layers-counter"></span>
           </span>
         {% endif %}
         {% if link.icon and not link.notification %}
-          <i class="{{ "sds" if link.sdsIcon else "fas" }} fa-{{link.icon}}"></i>
+          {% render '@icon', link.icon %}
         {% endif %}
         <span class="sds-nav__secondary-item-text">{{ link.text }}</span>
       </a>

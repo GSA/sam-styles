@@ -3,14 +3,14 @@
 
   <div class="sds-tile">
     <a href="#" class="sds-tile__content sds-tile--outline">
-      <i class="sds-tile__icon sds fa-new-note text-black"></i>
+      {% render '@icon', {icon:'new-note', classes: 'sds-tile__icon text-black'} %}
       <div class="sds-tile__title">Tile Title</div>
     </a>
   </div>
 
   <div class="sds-tile">
     <a href="#" class="sds-tile__content sds-tile--outline">
-      <i class="sds-tile__icon sds fa-building text-primary"></i>
+      {% render '@icon', {icon:'building', classes: 'sds-tile__icon text-primary'} %}
       <div class="sds-tile__title">Tile Title</div>
       <div class="sds-tile__details">(tile details)</div>
     </a>
@@ -19,7 +19,7 @@
   <div class="sds-tile sds-tile--lg">
     <div href="#" class="sds-tile__content sds-tile--outline">
       <div class="grid-row flex-justify-center">
-        <i class="sds-tile__icon sds fa-building text-secondary"></i>
+        {% render '@icon', {icon:'building', classes: 'sds-tile__icon text-secondary'} %}
         <div class="sds-tile__title">Entity Registration</div>
       </div>
       <div class="sds-tile__details grid-row padding-y-2">
@@ -28,15 +28,15 @@
       <div class="mobile-details mobile-lg:flex-wrap">
         <button class="sds-button sds-button--icon margin-top-2">
           <span class="fa-stack fa-2x">
-            <i class="sds fa-triangle fa-stack-2x text-accent-cool-light fa-1x"></i>
-            <i class="sds fa-folder fa-stack-1x text-base fa-2x"></i>
+            {% render '@icon', {icon:'triangle', classes: 'fa-stack-2x text-accent-cool-light fa-1x'} %}
+            {% render '@icon', {icon:'folder', classes: 'fa-stack-1x text-base fa-2x'} %}
           </span>
           <span class="sds-button--icon__title">Register Entity</span>
         </button>
         <button class="sds-button sds-button--icon margin-top-2">
           <span class="fa-stack fa-2x">
-            <i class="sds fa-pentagon fa-stack-2x text-primary-lighter fa-1x"></i>
-            <i class="sds fa-check-circle fa-stack-1x text-base fa-2x"></i>
+            {% render '@icon', {icon:'pentagon', classes: 'fa-stack-2x text-primary-lighter fa-1x'} %}
+            {% render '@icon', {icon:'check-circle', classes: 'fa-stack-1x text-base fa-2x'} %}
           </span>
           <span class="sds-button--icon__title">Check Status</span>
         </button>
@@ -46,7 +46,7 @@
   <div class="sds-tile sds-tile--lg">
     <a [routerlink]="['landing/entity']" class="sds-tile__content sds-tile--outline">
       <div class="grid-row flex-justify-center margin-top-1">
-        <i class="sds-tile__icon sds fa-building text-base"></i>
+        {% render '@icon', {icon:'building', classes: 'sds-tile__icon text-base'} %}
         <div class="sds-tile__title">Contract Opportunities</div>
       </div>
       <div class="sds-tile__details grid-row text-left padding-y-2">
@@ -55,8 +55,8 @@
       <div class="mobile-details padding-y-2">
         <button class="sds-button sds-button--icon">
           <span class="fa-stack fa-2x">
-            <i class="sds fa-triangle fa-stack-2x text-accent-cool-light fa-1x"></i>
-            <i class="sds fa-folder fa-stack-1x text-base fa-2x"></i>
+            {% render '@icon', {icon:'triangle', classes: 'fa-stack-2x text-accent-cool-light fa-1x'} %}
+            {% render '@icon', {icon:'folder', classes: 'fa-stack-1x text-base fa-2x'} %}
           </span>
           <span class="sds-button--icon__title">Search Opportunities</span>
         </button>

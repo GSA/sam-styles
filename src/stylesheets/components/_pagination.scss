@@ -9,6 +9,7 @@
   margin-right: 15px;
   input {
     margin-top: 0;
+  min-height: 1.75rem;
     @include at-media('mobile-lg') {
       margin-right: 0.5rem;
     }

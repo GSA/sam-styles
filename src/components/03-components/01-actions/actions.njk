@@ -2,18 +2,18 @@
   <div class="tablet:grid-col">
     <h4>Trigger options</h4>
     <button class="sds-button sds-button--circular sds-button--shadow">
-      <i class="sds fa-ellipsis fa-fw" data-fa-transform="grow-5"></i>
+      {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw', dataTransform: 'grow-5'} %}
     </button>
 
     <button class="sds-button sds-button--primary sds-button--circular">
-      <i class="sds fa-ellipsis fa-fw" data-fa-transform="grow-5"></i>
+      {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw', dataTransform: 'grow-5'} %}
     </button>
 
     <button class="sds-button sds-button--labeled-icon">
       Actions
       <span class="fa-layers fa-fw">
-        <i class="fas fa-circle"></i>
-        <i class="sds fa-ellipsis" data-fa-transform="shrink-6"></i>
+        {% render '@icon', {icon:'circle', prefix: 'fas'} %}
+        {% render '@icon', {icon: 'ellipsis', dataTransform: 'shrink-6'} %}
       </span>
     </button>
     <h4>Menu</h4>
@@ -25,7 +25,7 @@
             class="sds-button sds-button--circular"
             aria-label="Close Menu"
           >
-            <i class="fas fa-fw fa-times"></i>
+            {% render '@icon', {icon:'times', prefix: 'fas', classes: 'fa-fw'} %}
           </button>
         </div>
         <button class="sds-menu__item">
@@ -45,20 +45,20 @@
     <button
       class="sds-button sds-button--circular sds-button--small sds-button--shadow"
     >
-      <i class="sds fa-ellipsis fa-fw" data-fa-transform="grow-5"></i>
+      {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw', dataTransform: 'grow-5'} %}
     </button>
 
     <button
       class="sds-button sds-button--primary sds-button--circular sds-button--small"
     >
-      <i class="sds fa-ellipsis fa-fw" data-fa-transform="grow-5"></i>
+    {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw', dataTransform: 'grow-5'} %}
     </button>
 
     <button class="sds-button sds-button--labeled-icon sds-button--small">
       Actions
       <span class="fa-layers fa-fw">
-        <i class="fas fa-circle"></i>
-        <i class="sds fa-ellipsis" data-fa-transform="shrink-6"></i>
+        {% render '@icon', {icon:'circle', prefix: 'fas'} %}
+        {% render '@icon', {icon: 'ellipsis', dataTransform: 'shrink-6'} %}
       </span>
     </button>
     <h4>Menu (small)</h4>
@@ -70,7 +70,7 @@
             class="sds-button sds-button--circular sds-button--small"
             aria-label="Close Menu"
           >
-            <i class="fas fa-fw fa-times"></i>
+            {% render '@icon', {icon:'times', prefix: 'fas', classes: 'fa-fw'} %}
           </button>
         </div>
         <button class="sds-menu__item">

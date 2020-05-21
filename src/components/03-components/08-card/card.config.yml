@@ -56,18 +56,24 @@ variants:
     label: Header Icon Left
     context:
       header:
-        icon: book
+        icon:
+          icon: book
+          classes: fa-2x
   - name: header icon stacked
     label: Header Icon Stacked
     context:
       header:
-        icon: book
+        icon:
+          icon: book
+          classes: fa-2x
         style: stacked
   - name: header icon centered
     label: Header Icon Centered
     context:
         header:
-          icon: book
+          icon:
+            icon: book
+            classes: fa-2x
           style: center
   - name: header button
     label: Header with One Button
@@ -105,7 +111,9 @@ variants:
         - bordered
         - vertical
       header:
-        icon: question-circle
+        icon:
+          icon: question-circle
+          classes: fa-2x
   - name: list
     label: List
     notes: Card layouts can be used for lists. Don't add bordered modifier to card -- just add to list
