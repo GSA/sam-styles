@@ -9,7 +9,7 @@
 
 						{% if header.icon %}
 							<div class="sds-card__icon">
-								{%- render '@icons--single', {icon: header.icon}, true -%}
+								{% render '@icon', header.icon %}
 							</div>
 						{% endif %}
 

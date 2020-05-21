@@ -36,45 +36,74 @@ variants:
             - listTitle: APIs
               items:
                 - text: Getting Started with web services
-                  icon: note
+                  icon:
+                    icon: note
+                    classes: fa-lg fa-fw
                 - text: Go to entity registration API
-                  icon: angle-right
+                  icon:
+                    icon: angle-right
+                    classes: fa-lg fa-fw
                 - text: Go to exclusions API
-                  icon: angle-right
+                  icon:
+                    icon: angle-right
+                    classes: fa-lg fa-fw
             - listTitle: Connect to Service APIs
               items:
                 - text: Downloading entity registration files
-                  icon: note
+                  icon:
+                    icon: note
+                    classes: fa-lg fa-fw
                 - text: Downloading exclusion files
-                  icon: note
+                  icon:
+                    icon: note
+                    classes: fa-lg fa-fw
                 - text: Go to entity registration downloads
-                  icon: angle-right
+                  icon:
+                    icon: angle-right
+                    classes: fa-lg fa-fw
                 - text: Go to exclusions downloads
-                  icon: angle-right
+                  icon:
+                    icon: angle-right
+                    classes: fa-lg fa-fw
         - title: More about Entity Information
           secondCard: true
           contents:
             - listTitle: Exclusion Resources
               items:
                 - text: Types of exclusions
-                  icon: note
+                  icon:
+                    icon: note
+                    classes: fa-fw fa-lg
                 - text: Legacy CT Codes
-                  icon: note
+                  icon:
+                    icon: note
+                    classes: fa-fw fa-lg
                 - text: Agency Exclusion POCs
-                  icon: note
+                  icon:
+                    icon: note
+                    classes: fa-fw fa-lg
             - listTitle: User Guides
               items:
                 - text: Exclusions Managmement User Guide for Federal Users
-                  icon: note
+                  icon:
+                    icon: note
+                    classes: fa-fw fa-lg
                 - text: Data Services ser Guide
-                  icon: note
+                  icon:
+                    icon: note
+                    classes: fa-fw fa-lg
             - listTitle: Help
               items:
                 - text: Frequently Asked Questions
-                  icon: question
+                  icon:
+                    icon: question
+                    classes: fa-fw fa-lg
                 - text: Glossary Terms
-                  icon: book
+                  icon:
+                    icon: book
+                    classes: fa-fw fa-lg
                 - text: Videos
-                  icon: video-square
-
+                  icon:
+                    icon: video-square
+                    classes: fa-fw fa-lg
 

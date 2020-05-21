@@ -7,12 +7,17 @@ variants:
     context:
       label:
         classes: "sds-alert"
-
+      icon:
+        icon: exclamation
+        prefix: fa
   - name: block
     label: Block
     context:
       label:
         classes: "sds-alert--block"
+      icon:
+        icon: exclamation
+        classes: fa-2x
 
   - name: expanded
     label: Expanded

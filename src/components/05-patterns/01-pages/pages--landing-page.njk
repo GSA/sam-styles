@@ -3,9 +3,10 @@
 {% render '@banner' %}
 
 {% render '@header--extended-sam' %}
+
 <main id="main-content">
-    <div class="grid-container">
-        <div class="grid-row sds-hero sds-hero--image">
+    <div class="sds-page grid-container">
+        <div class="grid-row sds-page-section sds-hero sds-hero--image">
             <div class="desktop:grid-offset-1 desktop:grid-col-11">
                 <div class="grid-row">
                     <div class="tablet:grid-col-7">
@@ -50,8 +51,8 @@
                             <div class="sds-button--outline">
                                 <a class="sds-button sds-button--icon text-center">
                                     <span class="fa-stack fa-2x">
-                                        <i class="sds fa-triangle fa-stack-2x text-accent-cool-light fa-1x"></i>
-                                        <i class="sds fa-video-circle fa-stack-1x text-base fa-2x"></i>
+                                        {% render '@icon', {icon:'triangle', classes:"fa-stack-2x text-accent-cool-light fa-1x"} %}
+                                        {% render '@icon', {icon:'video-circle', classes:"fa-stack-1x text-base fa-2x"} %}
                                     </span>
                                     <span class="sds-button--icon__title">Help Me Get Started</span>
                                 </a>
@@ -62,8 +63,8 @@
                             <div class="sds-button--outline">
                                 <a class="sds-button sds-button--icon text-center">
                                     <span class="fa-stack fa-2x">
-                                        <i class="sds fa-triangle fa-stack-2x text-accent-cool-light fa-1x"></i>
-                                        <i class="sds fa-video-circle fa-stack-1x text-base fa-2x"></i>
+                                        {% render '@icon', {icon:'triangle', classes:"fa-stack-2x text-accent-cool-light fa-1x"} %}
+                                        {% render '@icon', {icon:'video-circle', classes:"fa-stack-1x text-base fa-2x"} %}
                                     </span>
                                     <span class="sds-button--icon__title">Go to Entity Registration</span>
                                 </a>
@@ -113,7 +114,6 @@
                 </div>
             </div>
         </div>
-        {{iconSize}}
         <div class="grid-row grid-gap-2">
             {% for card in cards %}
             <div class="tablet:grid-col-{% if card.secondCard %}7{% else %}5{% endif %}">
@@ -133,7 +133,9 @@
                                 <ul class="sds-list sds-list--unstyled sds-list--flex margin-bottom-4">
                                     {% for item in content.items %}
                                     <li>
-                                        {% if item.icon %}{%- render '@icons--single', {icon: item.icon, size: iconSize} -%}{% endif %}
+                                        {% if item.icon %}
+                                            {%- render '@icon', {icon: item.icon} -%}
+                                        {% endif %}
                                         <a class="usa-link" href="#">
                                             {{item.text}}
                                         </a>

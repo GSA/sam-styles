@@ -11,8 +11,8 @@
   </div>
   <button class="usa-menu-btn">
     <span class="fa-layers fa-fw fa-3x">
-      <i class="fas fa-square text-primary"></i>
-      <i class="sds fa-bars" data-fa-transform="shrink-6"></i>
+      {% render '@icon', {icon:'square', prefix:'fas', classes:'text-primary'} %}
+      {% render '@icon', {icon:'bars', dataTransform:'shrink-6'} %}
       {% if header.notification %}
         <span class="fa-layers-counter"></span>
       {% endif %}
