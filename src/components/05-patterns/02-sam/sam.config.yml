@@ -1,30 +1,13 @@
-label: Pages
+label: SAM Templates
 status: wip
 preview: "@sam-content"
 variants:
   - name: default
-    label: Full Page
+    label: Help Results
     status: null
 
-  - name: three-columns
-    label: Three Columns
-    context:
-      base: sds-card
-      title: Contract Opportunities
-      colors:
-        - title: Accent Cool
-      header:
-        style: left
-      body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae.
-
-  - name: left-aside
-    label: Left Aside
-
-  - name: right-aside
-    label: Right Aside
-
-  - name: landing-page
-    label: Landing Page
+  - name: entity-information
+    label: Entity Information
     context:
       iconSize: lg
       cards:
@@ -114,3 +97,4 @@ variants:
                       icon: video-square
                       classes: fa-fw fa-lg
 
+ 

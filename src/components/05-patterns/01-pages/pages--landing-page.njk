@@ -121,7 +121,7 @@
                                     {{content.listTitle}}
                                 </h3>
                                 <ul class="sds-list sds-list--unstyled sds-list--flex margin-bottom-4">
-                                    {% for item in content.items %}
+                                    {% for item in content.list.items %}
                                     <li>
                                         {% if item.icon %}
                                             {%- render '@icon', item.icon -%}
