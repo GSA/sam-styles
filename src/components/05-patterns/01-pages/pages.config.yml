@@ -6,8 +6,8 @@ variants:
     label: Full Page
     status: null
 
-  - name: left-right-aside
-    label: Left and Right Aside
+  - name: three-columns
+    label: three Columns
     context:
       base: sds-card
       title: Contract Opportunities
@@ -20,11 +20,16 @@ variants:
   - name: left-aside
     label: Left Aside
 
-  - name: left-navigation
-    label: Left Navigation
-
   - name: right-aside
     label: Right Aside
+
+
+
+  - name: data-entry-single-page
+    label: Data Entry - Single
+
+  - name: data-entry-multi-page
+    label: Data Entry - Multi
 
   - name: landing-page
     label: Landing Page
