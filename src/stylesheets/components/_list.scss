@@ -1,8 +1,12 @@
 .sds-list {
   @extend .usa-list;
+
   li {
     @include u-padding-bottom(1);
+    max-width: unset;
+    margin-bottom: 0;
   }
+
   &--unstyled {
     @include unstyled-list;
   }
@@ -16,7 +20,7 @@
   &--flex {
     > li {
       display: flex;
-      align-items: center;
+      align-items: top;
     }
     svg {
       @include u-margin-right(2);

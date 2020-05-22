@@ -11,84 +11,112 @@ variants:
       - title: Data Services
         contents:
           - listTitle: APIs
-            items:
-              - text: Getting Started with web services
-                icon:
-                  icon: note
-                  classes: fa-lg fa-fw
-              - text: Go to entity registration API
-                icon:
-                  icon: angle-right
-                  classes: fa-lg fa-fw
-              - text: Go to exclusions API
-                icon:
-                  icon: angle-right
-                  classes: fa-lg fa-fw
+            list:
+              modifiers: ['unstyled', 'flex']
+              items:
+                - text: Getting Started with web services
+                  icon:
+                    icon: note
+                    classes: fa-lg fa-fw
+                  href: ' '
+                - text: Go to entity registration API
+                  icon:
+                    icon: angle-right
+                    classes: fa-lg fa-fw
+                  href: ' '
+                - text: Go to exclusions API
+                  icon:
+                    icon: angle-right
+                    classes: fa-lg fa-fw
+                  href: ' '
           - listTitle: Connect to Service APIs
-            items:
-              - text: Downloading entity registration files
-                icon:
-                  icon: note
-                  classes: fa-lg fa-fw
-              - text: Downloading exclusion files
-                icon:
-                  icon: note
-                  classes: fa-lg fa-fw
-              - text: Go to entity registration downloads
-                icon:
-                  icon: angle-right
-                  classes: fa-lg fa-fw
-              - text: Go to exclusions downloads
-                icon:
-                  icon: angle-right
-                  classes: fa-lg fa-fw
+            list:
+              modifiers: ['unstyled', 'flex']
+              items:
+                - text: Downloading entity registration files
+                  icon:
+                    icon: note
+                    classes: fa-lg fa-fw
+                  href: ' '
+                - text: Downloading exclusion files
+                  icon:
+                    icon: note
+                    classes: fa-lg fa-fw
+                  href: ' '
+                - text: Go to entity registration downloads
+                  icon:
+                    icon: angle-right
+                    classes: fa-lg fa-fw
+                  href: ' '
+                - text: Go to exclusions downloads
+                  icon:
+                    icon: angle-right
+                    classes: fa-lg fa-fw
+                  href: ' '
       - title: More about Entity Information
         secondCard: true
         contents:
           - listTitle: Exclusion Resources
-            items:
-              - text: Types of exclusions
-                icon:
-                  icon: note
-                  classes: fa-fw fa-lg
-              - text: Legacy CT Codes
-                icon:
-                  icon: note
-                  classes: fa-fw fa-lg
-              - text: Agency Exclusion POCs
-                icon:
-                  icon: note
-                  classes: fa-fw fa-lg
+            list:
+              modifiers: ['unstyled', 'flex']
+              items:
+                - text: Types of exclusions
+                  href: ' '
+                  icon:
+                    icon: note
+                    classes: fa-fw fa-lg
+                - text: Legacy CT Codes
+                  href: ' '
+                  icon:
+                    icon: note
+                    classes: fa-fw fa-lg
+                - text: Agency Exclusion POCs
+                  href: ' '
+                  icon:
+                    icon: note
+                    classes: fa-fw fa-lg
           - listTitle: User Guides
-            items:
-              - text: Exclusions Managmement User Guide for Federal Users
-                icon:
-                  icon: note
-                  classes: fa-fw fa-lg
-              - text: Data Services ser Guide
-                icon:
-                  icon: note
-                  classes: fa-fw fa-lg
+            list:
+              modifiers: ['unstyled', 'flex']
+              items:
+                - text: Exclusions Managmement User Guide for Federal Users
+                  href: ' '
+                  icon:
+                    icon: note
+                    classes: fa-fw fa-lg
+                - text: Data Services User Guide
+                  href: ' '
+                  icon:
+                    icon: note
+                    classes: fa-fw fa-lg
           - listTitle: Help
-            items:
-              - text: Frequently Asked Questions
-                icon:
-                  icon: question
-                  classes: fa-fw fa-lg
-              - text: Glossary Terms
-                icon:
-                  icon: book
-                  classes: fa-fw fa-lg
-              - text: Videos
-                icon:
-                  icon: video-square
-                  classes: fa-fw fa-lg
+            list:
+              modifiers: ['unstyled', 'flex']
+              items:
+                - text: Frequently Asked Questions
+                  href: ' '
+                  icon:
+                    icon: question
+                    classes: fa-fw fa-lg
+                - text: Glossary Terms
+                  href: ' '
+                  icon:
+                    icon: book
+                    classes: fa-fw fa-lg
+                - text: Videos
+                  href: ' '
+                  icon:
+                    icon: video-square
+                    classes: fa-fw fa-lg
   - name: help-results
     label: Help Results
     context:
       list:
-        # modifiers:
-          # - menu
+          items:
+            - text: The Integrated Award Environment Digest 2019
+            - text: Offering the ability to search data by number, keyword, or location for exact and immediate results
+            - text: Providing easy to use search filters to quickly find the right wage determination
+      menu:
         items:
           - text: Related Articles
           - text: As a federal Hierarchy Administrator, what data is needed to create an office?
