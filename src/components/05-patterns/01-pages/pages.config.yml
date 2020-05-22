@@ -1,83 +1,103 @@
+name: pages
 status: wip
 preview: "@sam-content"
-notes: "Landing Page"
-
-context:
-  iconSize: lg
-  cards:
-    - title: Data Services
-      contents:
-        - listTitle: APIs
-          items:
-            - text: Getting Started with web services
-              icon:
-                icon: note
-                classes: fa-lg fa-fw
-            - text: Go to entity registration API
-              icon:
-                icon: angle-right
-                classes: fa-lg fa-fw
-            - text: Go to exclusions API
-              icon:
-                icon: angle-right
-                classes: fa-lg fa-fw
-        - listTitle: Connect to Service APIs
-          items:
-            - text: Downloading entity registration files
-              icon:
-                icon: note
-                classes: fa-lg fa-fw
-            - text: Downloading exclusion files
-              icon:
-                icon: note
-                classes: fa-lg fa-fw
-            - text: Go to entity registration downloads
-              icon:
-                icon: angle-right
-                classes: fa-lg fa-fw
-            - text: Go to exclusions downloads
-              icon:
-                icon: angle-right
-                classes: fa-lg fa-fw
-    - title: More about Entity Information
-      secondCard: true
-      contents:
-        - listTitle: Exclusion Resources
-          items:
-            - text: Types of exclusions
-              icon:
-                icon: note
-                classes: fa-fw fa-lg
-            - text: Legacy CT Codes
-              icon:
-                icon: note
-                classes: fa-fw fa-lg
-            - text: Agency Exclusion POCs
-              icon:
-                icon: note
-                classes: fa-fw fa-lg
-        - listTitle: User Guides
-          items:
-            - text: Exclusions Managmement User Guide for Federal Users
-              icon:
-                icon: note
-                classes: fa-fw fa-lg
-            - text: Data Services ser Guide
-              icon:
-                icon: note
-                classes: fa-fw fa-lg
-        - listTitle: Help
-          items:
-            - text: Frequently Asked Questions
-              icon:
-                icon: question
-                classes: fa-fw fa-lg
-            - text: Glossary Terms
-              icon:
-                icon: book
-                classes: fa-fw fa-lg
-            - text: Videos
-              icon:
-                icon: video-square
-                classes: fa-fw fa-lg
-
+default: landing-page
+variants:
+  - name: landing-page
+    notes: "Landing Page"
+    context:
+     iconSize: lg
+     cards:
+      - title: Data Services
+        contents:
+          - listTitle: APIs
+            items:
+              - text: Getting Started with web services
+                icon:
+                  icon: note
+                  classes: fa-lg fa-fw
+              - text: Go to entity registration API
+                icon:
+                  icon: angle-right
+                  classes: fa-lg fa-fw
+              - text: Go to exclusions API
+                icon:
+                  icon: angle-right
+                  classes: fa-lg fa-fw
+          - listTitle: Connect to Service APIs
+            items:
+              - text: Downloading entity registration files
+                icon:
+                  icon: note
+                  classes: fa-lg fa-fw
+              - text: Downloading exclusion files
+                icon:
+                  icon: note
+                  classes: fa-lg fa-fw
+              - text: Go to entity registration downloads
+                icon:
+                  icon: angle-right
+                  classes: fa-lg fa-fw
+              - text: Go to exclusions downloads
+                icon:
+                  icon: angle-right
+                  classes: fa-lg fa-fw
+      - title: More about Entity Information
+        secondCard: true
+        contents:
+          - listTitle: Exclusion Resources
+            items:
+              - text: Types of exclusions
+                icon:
+                  icon: note
+                  classes: fa-fw fa-lg
+              - text: Legacy CT Codes
+                icon:
+                  icon: note
+                  classes: fa-fw fa-lg
+              - text: Agency Exclusion POCs
+                icon:
+                  icon: note
+                  classes: fa-fw fa-lg
+          - listTitle: User Guides
+            items:
+              - text: Exclusions Managmement User Guide for Federal Users
+                icon:
+                  icon: note
+                  classes: fa-fw fa-lg
+              - text: Data Services ser Guide
+                icon:
+                  icon: note
+                  classes: fa-fw fa-lg
+          - listTitle: Help
+            items:
+              - text: Frequently Asked Questions
+                icon:
+                  icon: question
+                  classes: fa-fw fa-lg
+              - text: Glossary Terms
+                icon:
+                  icon: book
+                  classes: fa-fw fa-lg
+              - text: Videos
+                icon:
+                  icon: video-square
+                  classes: fa-fw fa-lg
+  - name: help-results
+    label: Help Results
+    context:
+      list:
+        # modifiers:
+          # - menu
+        items:
+          - text: Related Articles
+          - text: As a federal Hierarchy Administrator, what data is needed to create an office?
+            href: ' '
+          - text: Wage Determination Now in beta.SAM.gov
+            href: ' '
+          - text: Assistance Admin Transition
+            href: ' '
+          - text: Non-Standard Wage
+            href: ' '
+  - name: page-with-sidebar
+    label: Page With Sidebar

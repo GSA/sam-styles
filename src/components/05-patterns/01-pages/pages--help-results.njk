@@ -1,7 +1,6 @@
 <div class="grid-container">
   <div class="grid-row margin-105">
     <div class="grid-col sds-page__content usa-prose">
-
       <a class="usa-link sds-icon-link sds-icon-link--left" href="javascript:void(0);">
         {% render '@icon', {icon:'angle-left', prefix: 'fa', classes:"fa-2x"} %}
         Back to search results
@@ -78,21 +77,7 @@
         </div>
         <div class="desktop:grid-col-3">
           <div class="margin-bottom-4 margin-x-1">
-            <ul class="usa-list sds-list--menu ">
-              <li class="sds-list--menu--header">Related Articles</li>
-              <li>
-                <a class="usa-link">As a federal Hierarchy Administrator, what data is needed to create an office?</a>
-              </li>
-              <li>
-                <a class="usa-link">Wage Determination Now in beta.SAM.gov</a>
-              </li>
-              <li>
-                <a class="usa-link">Assistance Admin Transition</a>
-              </li>
-              <li>
-                <a class="usa-link">Non-Standard Wage</a>
-              </li>
-            </ul>
+            {% render '@list', list %}
           </div>
         </div>
       </div>

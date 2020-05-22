@@ -1,4 +1,8 @@
 .sds-list {
+  @extend .usa-list;
+  li {
+    @include u-padding-bottom(1);
+  }
   &--unstyled {
     @include unstyled-list;
   }
@@ -16,6 +20,12 @@
     }
     svg {
       @include u-margin-right(2);
+    }
+  }
+
+  &--nested {
+    > li:last-of-type {
+      padding-bottom: 0;
     }
   }
 }
