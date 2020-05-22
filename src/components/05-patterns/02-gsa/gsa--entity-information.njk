@@ -33,15 +33,13 @@
                     <div class="tablet:grid-col-7">
                         <h4>Search Entity and Exclusions</h4>
                         <div class="sds-search">
-                            <form class="usa-search usa-search--small">
-                                <div role="search" class="search">
-                                    <label class="usa-sr-only" for="search-input">Search Here</label>
-                                    <input class="usa-input width-full" id="search-input" type="search" name="search"
-                                        placeholder="Search Here">
-                                    <button class="usa-button" type="submit">
-                                        <span class="usa-sr-only">Search</span>
-                                    </button>
-                                </div>
+                            <form class="usa-search usa-search--big" role="search">
+                                <label class="usa-sr-only" for="search-field-big">Search</label>
+                                <input class="usa-input" id="search-field-big" type="search" name="search"
+                                    placeholder="Search Here">
+                                <button class="usa-button" type="submit">
+                                    <span class="usa-sr-only">Search</span>
+                                </button>
                             </form>
                         </div>
                     </div>
@@ -134,7 +132,7 @@
                                     {% for item in content.items %}
                                     <li>
                                         {% if item.icon %}
-                                            {%- render '@icon', item.icon -%}
+                                        {%- render '@icon', item.icon -%}
                                         {% endif %}
                                         <a class="usa-link" href="#">
                                             {{item.text}}

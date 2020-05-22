@@ -23,12 +23,6 @@ variants:
   - name: right-aside
     label: Right Aside
 
-  - name: data-entry-single-page
-    label: Data Entry - Single
-
-  - name: data-entry-multi-page
-    label: Data Entry - Multi
-
   - name: landing-page
     label: Landing Page
     context:
