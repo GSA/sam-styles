@@ -1,53 +1,6 @@
 <main>
 <div class="sds-page">
-    <div class="sds-toolbar">
-        <div class="sds-toolbar__header">
-            <div class="sds-toolbar__toggle">
-                <a class="sds-toolbar__toogle-btn" href="">
-        			<span class="usa-sr-only">Open/Close Toolbar</span>
-      			</a>
-            </div>
-        </div>
-        <div class="sds-toolbar__content" hidden="hidden">
-          <div class="usa-accordion usa-accordion--bordered" aria-multiselectable="true">
-            <h3 class="usa-accordion__heading">
-              <button class="usa-accordion__button usa-accordion__block" aria-expanded="true" aria-controls="editor-menu">
-                System Accounts Editor
-              </button>
-            </h3>
-            <div id="editor=menu" class="usa-accordion__content" hidden>
-                <nav>
-                    <ul class="usa-sidenav">
-                        <li class="usa-sidenav__item">
-                            <a href="">Parent link</a>
-                        </li>
-                        <li class="usa-sidenav__item">
-                            <a href="" class="usa-current">Current page</a>
-                            <ul class="usa-sidenav__sublist">
-                                <li class="usa-sidenav__item">
-                                    <a href="">Child link</a>
-                                </li>
-                                <li class="usa-sidenav__item">
-                                    <a href="">Child link</a>
-                                </li>
-                                <li class="usa-sidenav__item">
-                                    <a href="">Child link</a>
-                                </li>
-                                <li class="usa-sidenav__item">
-                                    <a href="">Child link</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="usa-sidenav__item">
-                            <a href="">Parent link</a>
-                        </li>
-                    </ul>
-                </nav>
-              </div>
-            </div>
-         </div>
-    	<div></div>
-    </div>
+    {%- render '@toolbar' -%}
 	<div class="sds-page-multi__content">
 		<div class="sds-page-multi__banner">
 			<h2 class="untitled">Untitled System Account</h2>

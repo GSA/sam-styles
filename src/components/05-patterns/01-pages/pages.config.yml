@@ -7,7 +7,7 @@ variants:
     status: null
 
   - name: three-columns
-    label: three Columns
+    label: Three Columns
     context:
       base: sds-card
       title: Contract Opportunities
@@ -22,8 +22,6 @@ variants:
 
   - name: right-aside
     label: Right Aside
-
-
 
   - name: data-entry-single-page
     label: Data Entry - Single
