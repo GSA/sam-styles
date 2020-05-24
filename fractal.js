@@ -7,6 +7,9 @@ const pkg = require("./package.json");
 fractal.set('project.title', `SAM Styles (v${pkg.version})`);
 fractal.set('project.version', `v${pkg.version}`);
 fractal.set('project.author', 'GSA Integrated Award Environment');
+fractal.components.set('default.collator', function(markup, item) {
+  return '<!-- Start: @' + item.handle + ' -->\n<strong>' + item.name + '</strong>' + markup + '<hr/>\n<!-- End: @' + item.handle + ' -->\n';
+});
 
 // =============================================================================
 // COMPONENTS

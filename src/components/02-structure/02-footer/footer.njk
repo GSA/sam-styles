@@ -27,21 +27,9 @@
             <div class="grid-row grid-gap-4">
               {%- for nav in navigation -%}
               <div class="grid-col-6 tablet:grid-col-3">
-                <section class="usa-footer__primary-content">
-                  <span class="usa-footer__primary-link">
-                    {{ nav.header }}
-                  </span>
-                  <ul class="usa-list usa-list--unstyled">
-                    {%- for item in nav.links -%}
-                    <li class="usa-footer__secondary-link">
-                      <a class="usa-link" href="{{ item.href }}">{{ item.text }}
-                        {%-  if item.external -%}
-                          {% render '@icon', {icon:'external-link-alt', prefix: 'fas', classes: 'fa-xs'} %}
-                        {%- endif -%}
-                      </a>
-                    </li>
-                    {%- endfor -%}
-                  </ul>
+                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                  <span class="usa-footer__primary-link">{{ nav.header }}</span>
+                  {%- render '@list', nav.links -%}
                 </section>
               </div>
               {%- endfor -%}
@@ -61,7 +49,7 @@
           </button>
         </h2>
         <ul id="a{{loop.index}}" class="sds-footer__nav--accordion-content" hidden>
-          {%- for item in nav.links -%}
+          {%- for item in nav.links.items -%}
           <li>
             <a class="usa-link" href="{{ item.href }}">{{ item.text }}
               {%-  if item.external -%}

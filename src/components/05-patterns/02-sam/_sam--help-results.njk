@@ -1,12 +1,10 @@
 <div class="grid-container">
   <div class="grid-row margin-105">
     <div class="grid-col sds-page__content usa-prose">
-
       <a class="usa-link sds-icon-link sds-icon-link--left" href="javascript:void(0);">
         {% render '@icon', {icon:'angle-left', prefix: 'fa', classes:"fa-2x"} %}
         Back to search results
       </a>
-
       <div class="grid-row">
         <div class="grid-col-fill usa-prose margin-right-1">
           <div class="grid-row">
@@ -38,15 +36,7 @@
                 <p>
                   In beta.SAM.gov, the WDOL functionality falls under the category (what we call ‘domain’) Wage Determinations. In order to use the “Follow” button on beta.SAM.gov to “watch” specific wage determinations, you must log in. When we migrated over the functions of WDOL, we made significant improvements, including:
                 </p>
-                <ul>
-                  <li>The Integrated Award Environment Digest 2019</li>
-                  <li>
-                    Offering the ability to search data by number, keyword, or location for exact and immediate results
-                  </li>
-                  <li>
-                    Providing easy to use search filters to quickly find the right wage determination
-                  </li>
-                </ul>
+                {% render '@list', list %}
                 <p>
                   For more information about the overall evolution of beta.SAM.gov, stay tuned to IAE’s Interact section or visit GSA.gov/IAE.
                 </p>
@@ -78,21 +68,7 @@
         </div>
         <div class="desktop:grid-col-3">
           <div class="margin-bottom-4 margin-x-1">
-            <ul class="usa-list sds-list--menu ">
-              <li class="sds-list--menu--header">Related Articles</li>
-              <li>
-                <a class="usa-link">As a federal Hierarchy Administrator, what data is needed to create an office?</a>
-              </li>
-              <li>
-                <a class="usa-link">Wage Determination Now in beta.SAM.gov</a>
-              </li>
-              <li>
-                <a class="usa-link">Assistance Admin Transition</a>
-              </li>
-              <li>
-                <a class="usa-link">Non-Standard Wage</a>
-              </li>
-            </ul>
+            {% render '@list', menu %}
           </div>
         </div>
       </div>

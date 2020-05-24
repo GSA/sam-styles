@@ -125,6 +125,7 @@
                             <div class="grid-col-6">
                                 {% endif %}
                                 {% for content in card.contents %}
+<<<<<<< HEAD:src/components/05-patterns/02-sam/sam--entity-information.njk
                                 <h3 class="sds-list__title">
                                     {{content.listTitle}}
                                 </h3>
@@ -140,6 +141,12 @@
                                     </li>
                                     {% endfor %}
                                 </ul>
+=======
+                                    <h3 class="sds-list__title">
+                                        {{content.listTitle}}
+                                    </h3>
+                                    {% render '@list', content.list %}
+>>>>>>> master:src/components/05-patterns/01-pages/pages.njk
                                 {% endfor %}
                                 {% if card.secondCard %}
                             </div>

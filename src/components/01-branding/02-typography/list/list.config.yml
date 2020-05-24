@@ -1,6 +1,8 @@
 status: wip
+label: Lists
 preview: "@sam-content"
 default: unordered
+collated: true
 notes: "Lists can be ordered, unordered, or unstyled and have icons and/or be links.
 See Cards -- List for example of adding adding a list to a card.
 Modifiers are unstyled and flex (for icon lists)"
@@ -22,6 +24,17 @@ variants:
     context:
       modifiers:
         - unstyled
+  - name: nested
+    context:
+      items:
+        - text: List Item
+          nested:
+            items:
+              - text: Nested Item
+              - text: Nested Item
+              - text: Nested Item
+        - text: List Item
+        - text: List Item
   - name: icon
     label: Icon List
     context:
