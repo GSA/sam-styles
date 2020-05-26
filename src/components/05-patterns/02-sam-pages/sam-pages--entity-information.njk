@@ -125,28 +125,10 @@
                             <div class="grid-col-6">
                                 {% endif %}
                                 {% for content in card.contents %}
-<<<<<<< HEAD:src/components/05-patterns/02-sam/sam--entity-information.njk
-                                <h3 class="sds-list__title">
-                                    {{content.listTitle}}
-                                </h3>
-                                <ul class="sds-list sds-list--unstyled sds-list--flex margin-bottom-4">
-                                    {% for item in content.items %}
-                                    <li>
-                                        {% if item.icon %}
-                                        {%- render '@icon', item.icon -%}
-                                        {% endif %}
-                                        <a class="usa-link" href="#">
-                                            {{item.text}}
-                                        </a>
-                                    </li>
-                                    {% endfor %}
-                                </ul>
-=======
                                     <h3 class="sds-list__title">
                                         {{content.listTitle}}
                                     </h3>
                                     {% render '@list', content.list %}
->>>>>>> master:src/components/05-patterns/01-pages/pages.njk
                                 {% endfor %}
                                 {% if card.secondCard %}
                             </div>

@@ -1,10 +1,10 @@
-label: SAM Templates
+label: SAM Pages
 status: wip
 preview: "@sam-content"
+default: "help-results"
 variants:
-  - name: default
+  - name: help-results
     label: Help Results
-    status: null
 
   - name: entity-information
     label: Entity Information

@@ -1,7 +1,2 @@
-label: navbar
+label: SDS Navbar
 status: wip
-
-variants:
-  - name: default
-    label: SDS Navbar
-    status: null
