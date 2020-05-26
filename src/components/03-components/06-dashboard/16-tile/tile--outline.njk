@@ -1,48 +1,45 @@
-<div class="grid-row bg-accent-cool-light height-full padding-4">
-
-  <div class="sds-tile--outline sds-tile--outline--sm">
-    <header class="sds-tile__header">
-      <i class="sds fa-new-note fa-3x"></i>
-    </header>
-    <div class="sds-tile__body">
-      <a class="usa-link" href="#">tile link here</a>
-    </div>
-    <div class="sds-tile__footer">
-      <span>link description here</span>
-    </div>
-  </div>
-
-  <div class="sds-tile--outline">
-    <header class="sds-tile__header">
-      <i class="sds fa-building fa-3x"></i>
-      <a class="usa-link" href="#"><h3>Tile Header</h3></a>
-    </header>
-    <div class="sds-tile__body">
-      <p> A tile description can be placed here for users to better understand the links/buttons provided</p>
-    </div>
-    <div class="sds-tile__footer">
-      <button class="sds-button sds-button--icon">
-        <span class="fa-stack fa-2x">
-          <i class="sds fa-triangle fa-stack-2x text-accent-cool-light fa-1x"></i>
-          <i class="sds fa-folder fa-stack-1x text-base fa-2x"></i>
-        </span>
-        <span class="sds-button--icon__title">Button Example</span>
-      </button>
-      <button class="sds-button sds-button--icon">
-        <span class="fa-stack fa-2x">
-          <i class="sds fa-triangle fa-stack-2x text-accent-cool-light fa-1x"></i>
-          <i class="sds fa-folder fa-stack-1x text-base fa-2x"></i>
-        </span>
-        <span class="sds-button--icon__title">Button Example</span>
-      </button>
-      <button class="sds-button sds-button--icon">
-        <span class="fa-stack fa-2x">
-          <i class="sds fa-triangle fa-stack-2x text-accent-cool-light fa-1x"></i>
-          <i class="sds fa-folder fa-stack-1x text-base fa-2x"></i>
-        </span>
-        <span class="sds-button--icon__title">Button Example</span>
-      </button>
+<div class="grid-row bg-accent-cool-light padding-4">
+  <div class="tablet" grid-col"="grid-col"">
+    <div class="sds-tile--outline sds-tile--outline--sm">
+      <header class="sds-tile__header">
+        {% render '@icon', {icon:'new-note', classes: 'sds-tile__icon fa-2x text-base'} %}
+      </header>
+      <div class="sds-tile__body">
+        <a class="usa-link" href="#">tile link here</a>
+      </div>
+      <div class="sds-tile__footer">
+        <span>link description here</span>
+      </div>
     </div>
   </div>
-
+  <div class="tablet" grid-col"="grid-col"">
+    <div class="sds-tile--outline">
+      <header class="sds-tile__header">
+        <i class="sds fa-building fa-3x"></i>
+        <a class="usa-link" href="#">
+          <h3>Tile Header</h3>
+        </a>
+      </header>
+      <div class="sds-tile__body">
+        <p>
+          A tile description can be placed here for users to better understand the links/buttons provided</p>
+      </div>
+      <div class="sds-tile__footer">
+        <button class="sds-button sds-button--icon">
+          <span class="fa-stack fa-2x">
+            {% render '@icon', {icon:'triangle', classes: 'fa-stack-2x text-accent-cool-light fa-1x'} %}
+            {% render '@icon', {icon:'folder', classes: 'fa-stack-1x text-base fa-2x'} %}
+          </span>
+          <span class="sds-button--icon__title">Button Example</span>
+        </button>
+        <button class="sds-button sds-button--icon">
+          <span class="fa-stack fa-2x">
+            {% render '@icon', {icon:'triangle', classes: 'fa-stack-2x text-accent-cool-light fa-1x'} %}
+            {% render '@icon', {icon:'folder', classes: 'fa-stack-1x text-base fa-2x'} %}
+          </span>
+          <span class="sds-button--icon__title">Button Example Longer Text</span>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

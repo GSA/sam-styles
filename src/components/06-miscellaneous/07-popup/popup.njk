@@ -68,7 +68,7 @@
             <div class="sds-popup__content out top-center" id="tooltip-09" role="tooltip" aria-hidden="true">
               <div class="sds-alert bg-base-lightest ">
                 <div class="sds-alert-icon">
-                  <i class="fa fa-exclamation"></i>
+                  {% render '@icon', {icon:'exclamation', prefix: 'fa'} %}
                 </div>
                 <span>Review Required</span>
                 <p>Venenatis dapibus ex</p>
@@ -80,8 +80,8 @@
           <span class="sds-popup border-1px margin-2 padding-1 radius-md" aria-describedby="tooltip-10">
             rich content
             <div class="sds-popup__content out bottom-center" id="tooltip-10" role="tooltip" aria-hidden="true">
-              <div class="radius-md shadow-2 margin-0 width-card-lg 
-              bg-primary-lighter text-left  
+              <div class="radius-md shadow-2 margin-0 width-card-lg
+              bg-primary-lighter text-left
               padding-1 border">
                 <h4 class="margin-0">Lorem ipsum dolor</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In neque nunc, auctor a cursus vitae,
@@ -109,11 +109,11 @@
             <div class="grid-container">
               <div class="grid-row">
                 <div class="tablet:grid-col-1 sds-popup" aria-describedby="tooltip-11">
-                  <i class="sds fa-bars fa-2x"></i>
+                  {% render '@icon', {icon:'bars', classes: 'fa-2x'} %}
                   <div class="sds-popup__content in top-left width-mobile margin-y-neg-2" id="tooltip-11" role="tooltip" aria-hidden="true">
                     <div class="sds-alert--block">
                       <div class="sds-alert--block-icon grid-col-auto">
-                        <i class="sds fa-exclamation-circle fa-2x"></i>
+                        {% render '@icon', {icon:'exclamation-circle', classes: 'fa-2x'} %}
                       </div>
                       <div class="grid-col padding-y-2 padding-right-2">
                         <label>Address Needs to be Updated</label>
@@ -126,12 +126,12 @@
                 </div>
                 <div class="tablet:grid-col-10 text-center">
                   <div class="sds-popup" aria-describedby="tooltip-12">
-                    <i class="sds fa-download fa-2x"></i>
+                    {% render '@icon', {icon:'download', classes: 'fa-2x'} %}
                     <div class="sds-popup__content in top-center margin-bottom-neg-05" id="tooltip-12" role="tooltip" aria-hidden="true">
-                        <div class="radius-md shadow-2 margin-y-neg-205 
+                        <div class="radius-md shadow-2 margin-y-neg-205
                         width-card-lg bg-base-lightest
                         padding-x-1 padding-bottom-1 border">
-                          <i class="sds fa-download fa-2x"></i>
+                          {% render '@icon', {icon:'download', classes: 'fa-2x'} %}
                           <h4> Pop inside</h4>
                           <p>Lorem ipsum sit amet<br />Lorem ipsum</p>
                         </div>
@@ -139,14 +139,12 @@
                   </div>
                 </div>
                 <div class="tablet:grid-col-1 sds-popup text-left" aria-describedby="tooltip-13">
-                  <i class="sds fa-information-circle fa-2x"></i>
+                  {% render '@icon', {icon:'information-circle', classes: 'fa-2x'} %}
                   <div class="sds-popup__content in top-right margin-bottom-neg-05" id="tooltip-13" role="tooltip" aria-hidden="true">
                     <div class="radius-lg shadow-2 margin-y-neg-1x05 width-card-lg bg-white padding-left-1 padding-bottom-1 border">
-                      <i class="sds fa-information-circle fa-2x float-right margin-1"></i><h4> Pop inside</h4>
-                      <ul>
-                        <li>Lorem ipsum sit amet</li>
-                        <li>Lorem ipsum</li>
-                      </ul>
+                      {% render '@icon', {icon:'information-circle', classes: 'fa-2x float-right margin-1'} %}
+                      <h4> Pop inside</h4>
+                      {% render '@list' %}
                     </div>
                     </div>
                 </div>
@@ -165,11 +163,11 @@
               </div>
               <div class="grid-row">
                 <div class="tablet:grid-col-1 sds-popup" aria-describedby="tooltip-14">
-                  <i class="sds fa-user-circle fa-2x"></i>
+                  {% render '@icon', {icon:'user-circle', classes: 'fa-2x'} %}
                   <div class="sds-popup__content in bottom-left" id="tooltip-14" role="tooltip" aria-hidden="true">
                     <div class="sds-alert bg-base-lightest ">
                       <div class="sds-alert-icon">
-                        <i class="fa fa-exclamation"></i>
+                        {% render '@icon', {icon:'exclamation', prefix: 'fa'} %}
                       </div>
                       <span>Review Required</span>
                     </div>
@@ -177,9 +175,9 @@
                 </div>
                 <div class="tablet:grid-col-10 text-center">
                   <div class="sds-popup" aria-describedby="tooltip-15">
-                    <i class="sds fa-new-note fa-2x"></i>
+                    {% render '@icon', {icon:'new-note', classes: 'fa-2x'} %}
                     <div class="sds-popup__content in bottom-center" id="tooltip-15" role="tooltip" aria-hidden="true">
-                      <div class="radius-md shadow-2 margin-0 width-card-lg 
+                      <div class="radius-md shadow-2 margin-0 width-card-lg
                        text-left bg-accent-cool padding-1 border">
 
                           <p>The First item</p><hr class="thin"/>
@@ -193,10 +191,10 @@
                   </div>
                 </div>
                 <div class="tablet:grid-col-1 text-right sds-popup" aria-describedby="tooltip-16">
-                  <i class="sds fa-trash fa-2x"></i>
+                  {% render '@icon', {icon:'trash', classes: 'fa-2x'} %}
                   <div class="sds-popup__content in bottom-right" id="tooltip-16" role="tooltip" aria-hidden="true">
-                      <div class="radius-md shadow-2 margin-0 width-card-lg 
-                      bg-primary-lighter text-left  
+                      <div class="radius-md shadow-2 margin-0 width-card-lg
+                      bg-primary-lighter text-left
                       padding-1 border">
                         <h4 class="margin-0">Lorem ipsum dolor</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In neque nunc, auctor a cursus vitae,
