@@ -4,7 +4,9 @@
 
   <button class="usa-button {{ classes }}">Button</button>
   {% if (category != 'disabled') -%}
+  <!-- do use in production: usa-button--hover -->
     <button class="usa-button {{ classes }} usa-button--hover">Hover</button>
+    <!-- do use in production: usa-button--active -->
     <button class="usa-button {{ classes }} usa-button--active">Active</button>
     <button class="usa-button {{ classes }} usa-focus">Focus</button>
     <button class="usa-button {{ classes }}" disabled="disabled">Disabled</button>
@@ -21,12 +23,14 @@
 </div>
 {% if (category != 'disabled') -%}
 <div class="button-label">
+  <!-- do use in production: usa-button--hover -->
   <button class="usa-button sds-button--circle {{ classes }} usa-button--hover">
     {% render '@icon', {icon:'add', prefix: 'sds'} %}
   </button>
   <label>Hover</label>
 </div>
 <div class="button-label">
+  <!-- do use in production: usa-button--active -->
   <button class="usa-button sds-button--circle {{ classes }} usa-button--active">
     {% render '@icon', {icon:'add', prefix: 'sds'} %}
   </button>
