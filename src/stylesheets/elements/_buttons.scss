@@ -85,6 +85,18 @@
     color: color("secondary-darker");
     box-shadow: $button-stroke color("secondary-darker");
   }
+  
+  &.sds-button--shadow {
+    box-shadow: $button-stroke color("primary"), 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1);
+    &:hover,
+    &.usa-button--hover {
+      box-shadow: $button-stroke color("primary-light"), 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1);
+    }
+    &:active,
+    &.usa-button--active {
+      box-shadow: $button-stroke color("secondary-darker"), 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1);
+    }
+  }
 
   &.usa-button--inverse {
     background-color: transparent;
@@ -128,7 +140,7 @@
     color: color("white");
     background-color: color("base-dark");
   }
-  
+
   &.sds-button--shadow {
     box-shadow: $button-stroke color("base-light"), 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1);
     &:hover,
@@ -264,7 +276,7 @@
 
 // Shadow
 .sds-button--shadow {
-  box-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1);
   &:hover,
   &.usa-button--hover {
     box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1);
