@@ -10,18 +10,9 @@
         <section  id="info-we-gather">
           <h3>Information We Gather</h3>
           <p>The information that is automatically collected and stored includes:</p>
-          <ul>
-            <li>The name of the domain from which you access the Internet, i.e. DHS.gov if you are
-              connecting from a Department of Homeland Security domain or GMU.edu if you are connecting from George
-              Mason University's domain</li>
-            <li>The date and time of your visit</li>
-            <li>The type and version of your Internet browser</li>
-            <li>The operating system of the machine running the Internet browser</li>
-            <li>The Internet address of the website you came from if it linked you directly to
-              this site</li>
-            <li>The technical status of the request you made, i.e. was it successful or was there
-              an error?</li>
-          </ul>
+
+          {%- render '@list', list -%}
+
           <p>If your browser accepts cookies, we may use a session cookie to learn how many
             different visitors come to our site. We use this information for statistical purposes and to help us make
             our site more useful to you.</p>
@@ -58,14 +49,7 @@
             information called a cookie along with the webpage. The main purpose of a cookie is to identify and
             customize webpages for you.</p>
           <p>There are two kinds of cookies:</p>
-          <ul>
-            <li>A session cookie is a line of text that is stored temporarily in your computer's
-              random access memory (RAM). A session cookie is never written to a drive and it is destroyed as soon as
-              you close your browser.</li>
-            <li>A persistent cookie from a website is saved to a file on your hard drive and is
-              called up the next time you visit that website. This lets the website remember what you were interested in
-              the last time you visited.</li>
-          </ul>
+          {% render '@list', list %}
           <p>The SAM.gov site creates only a session cookie when you visit and destroys it as soon
             as you close your browser. There are no persistent cookies created on SAM.gov.</p>
         </section>

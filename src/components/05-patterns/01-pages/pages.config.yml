@@ -1,10 +1,19 @@
-label: Pages
+name: Pages
 status: wip
 preview: "@sam-content"
+default: full-page
 variants:
-  - name: default
+  - name: full-page
     label: Full Page
-    status: null
+    context:
+      list:
+        items:
+          - text: The name of the domain from which you access the Internet, i.e. DHS.gov if you are connecting from a Department of Homeland Security domain or GMU.edu if you are connecting from George Mason University's domain
+          - text: The date and time of your visit
+          - text: The type and version of your Internet browser
+          - text: The operating system of the machine running the Internet browser
+          - text: The Internet address of the website you came from if it linked you directly to this site
+          - text: The technical status of the request you made, i.e. was it successful or was there an error?
 
   - name: three-columns
     label: Three Columns
