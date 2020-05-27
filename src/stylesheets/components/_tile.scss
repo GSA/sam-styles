@@ -1,148 +1,30 @@
-// // Basic tile
-// // ----------------------
-//
-// .sds-tile {
-//   @include u-display('inline-block');
-//   @include u-margin-x(2);
-// }
-//
-// .sds-tile__content {
-//   @include u-display('flex');
-//   @include u-flex('no-wrap');
-//   @include u-flex('column');
-//   @include u-text('center');
-//   @include u-width('full');
-//   @include u-height('card');
-//   text-decoration: none;
-//
-//   &:hover {
-//     text-decoration: none;
-//   }
-//   @media only screen and (min-width: 600px) {
-//     .sds-tile__icon {
-//       @include u-margin-x('auto');
-//       @include u-margin-bottom('105');
-//       text-decoration: none !important;
-//       svg.fa-stack-1x{
-//         font-size: 2em;
-//       }
-//     }
-//
-//     .sds-tile__title {
-//       @include u-font('sans', 'sm');
-//       @include u-text('bold');
-//       @include u-text('black');
-//     }
-//
-//     .sds-tile__details {
-//       @include u-font('sans', 'xs');
-//       @include u-text('black');
-//     }
-//   }
-//   @media only screen and (max-width: 600px) {
-//       @include u-display('flex');
-//       @include u-flex('column');
-//
-//     .sds-tile__icon {
-//       align-self: center;
-//       margin-top: 10px;
-//       width: 60px;
-//       text-decoration: none !important;
-//
-//       svg {
-//         height: 60px !important;
-//         width: 60px !important;
-//       }
-//     }
-//
-//     .sds-tile__title {
-//       @include u-font('sans', 'sm');
-//       @include u-text('bold');
-//       @include u-text('black');
-//     }
-//
-//     .sds-tile__details {
-//       @include u-font('sans', 'xs');
-//       @include u-text('black');
-//     }
-//   }
-// }
-// // Outline tile
-// // ----------------------
-//
-// .sds-tile__content.sds-tile--outline {
-//   @include u-border(2px, 'white');
-//   @include u-padding(2);
-//   @include u-margin-top(4);
-//   background: rgba(240, 245, 249, 0.8);
-//   text-decoration: none !important;
-//   border-radius: 2rem;
-//   @media only screen and (min-width: 600px) {
-//     height: 150px;
-//     width: 195px;
-//
-//     .sds-tile__icon {
-//       width: 48px;
-//       height: 48px;
-//       text-decoration: none !important;
-//     }
-//   }
-//
-//   .sds-tile__title {
-//     @include u-font('sans', '2xs');
-//     @include u-text('semibold');
-//     @extend .usa-link;
-//   }
-//
-//   .sds-tile__details {
-//     @include u-font('sans', 'xs');
-//     @include u-text('base');
-//   }
-// }
-// @media only screen and (max-width: 600px) {
-//   .sds-tile__content.sds-tile--outline {
-//     @include u-display('flex');
-//     @include u-flex('row');
-//     @include u-padding(1);
-//     border-radius: 1rem;
-//     overflow: hidden;
-//     height: 60px;
-//     width: 300px;
-//     margin: 5px auto;
-//   }
-//
-//   .sds-tile__icon {
-//     @include u-height(4);
-//     @include u-width(4);
-//     margin: 10px !important;
-//     text-decoration: none !important;
-//   }
-//
-//   .sds-tile__details,
-//   .sds-tile__title {
-//     margin: auto 2px;
-//   }
-// }
-// // Outline tile lg
-// // ----------------------
-//
-// .sds-tile--lg {
-//   overflow: hidden;
-//   .sds-tile__title {
-//     font-size: 23px !important;
-//     @include u-padding(1);
-//   }
-//   .sds-tile__content {
-//     width: 100%;
-//     height: auto;
-//     align-items: center;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//   }
-// }
+//****************************
+//SDS TILE
+.sds-tile {
+  @include u-display('flex');
+  align-items: center;
+  justify-content: center;
 
+  .sds-tile__body {
+    @include u-display('block');
+    padding-left: 18px;
 
+    header {
+      @include u-font('sans', 'md');
+      @include u-text('bold');
+      
+    }
+    .sds-list {
+      margin-top: 0;
+      padding-left: 0;
+      list-style-type: none;
+
+      li {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
 
 //****************************
 //SDS TILE OUTLINE

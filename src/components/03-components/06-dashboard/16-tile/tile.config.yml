@@ -13,3 +13,12 @@ variants:
     context:
       label:
         classes: "sds-tile--outline"
+
+  - name: list
+    label: List
+    context:
+      modifiers:
+        - list
+        - unstyled
+      body:
+        list: true
