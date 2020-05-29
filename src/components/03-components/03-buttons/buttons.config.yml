@@ -2,6 +2,7 @@ label: Buttons
 status: ready
 preview: "@sam-content"
 default: "primary"
+notes: ".usa-button--hover and .usa-button--active classes are just to show their formatting in this context but should not be used in production"
 context:
   text: Button
 variants:
