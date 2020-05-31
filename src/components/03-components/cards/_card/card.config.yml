@@ -1,0 +1,24 @@
+preview: "@sam"
+handle: card
+status: wip
+default: bordered and shadowed
+notes: A horizontal header may have a title and a button.
+meta:
+  colors:
+    - title: Plain
+    - modifier: base
+      title: Base
+    - modifier: accent-cool
+      title: Accent Cool
+    - modifier: accent-warm
+      title: Accent Warm
+    - modifier: feature
+      title: Feature (Secondary)
+context:
+  title: Contract Opportunities
+  header:
+    style: left
+  modifiers:
+    - shadowed
+    - bordered
+  body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae.

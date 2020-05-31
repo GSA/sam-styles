@@ -21,7 +21,13 @@ components.set("default.preview", "@sam");
 
 // use Nunjucks as the templating engine
 const nunjucks = require("@frctl/nunjucks")({
-  paths: ["src/components"]
+  paths: ["src/components"],
+  filters: {
+    setAttribute: function(dictionary, key, value) {
+      dictionary[key] = value;
+      return dictionary;
+    }
+  }
 });
 
 components.engine(nunjucks);

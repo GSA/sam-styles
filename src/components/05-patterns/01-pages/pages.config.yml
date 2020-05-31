@@ -6,108 +6,125 @@ variants:
   - name: landing-page
     notes: "Landing Page"
     context:
-     iconSize: lg
-     cards:
-      - title: Data Services
-        contents:
-          - listTitle: APIs
-            list:
-              modifiers: ['unstyled', 'flex']
-              items:
-                - text: Getting Started with web services
-                  icon:
-                    icon: note
-                    classes: fa-lg fa-fw
-                  href: ' '
-                - text: Go to entity registration API
-                  icon:
-                    icon: angle-right
-                    classes: fa-lg fa-fw
-                  href: ' '
-                - text: Go to exclusions API
-                  icon:
-                    icon: angle-right
-                    classes: fa-lg fa-fw
-                  href: ' '
-          - listTitle: Connect to Service APIs
-            list:
-              modifiers: ['unstyled', 'flex']
-              items:
-                - text: Downloading entity registration files
-                  icon:
-                    icon: note
-                    classes: fa-lg fa-fw
-                  href: ' '
-                - text: Downloading exclusion files
-                  icon:
-                    icon: note
-                    classes: fa-lg fa-fw
-                  href: ' '
-                - text: Go to entity registration downloads
-                  icon:
-                    icon: angle-right
-                    classes: fa-lg fa-fw
-                  href: ' '
-                - text: Go to exclusions downloads
-                  icon:
-                    icon: angle-right
-                    classes: fa-lg fa-fw
-                  href: ' '
-      - title: More about Entity Information
-        secondCard: true
-        contents:
-          - listTitle: Exclusion Resources
-            list:
-              modifiers: ['unstyled', 'flex']
-              items:
-                - text: Types of exclusions
-                  href: ' '
-                  icon:
-                    icon: note
-                    classes: fa-fw fa-lg
-                - text: Legacy CT Codes
-                  href: ' '
-                  icon:
-                    icon: note
-                    classes: fa-fw fa-lg
-                - text: Agency Exclusion POCs
-                  href: ' '
-                  icon:
-                    icon: note
-                    classes: fa-fw fa-lg
-          - listTitle: User Guides
-            list:
-              modifiers: ['unstyled', 'flex']
-              items:
-                - text: Exclusions Managmement User Guide for Federal Users
-                  href: ' '
-                  icon:
-                    icon: note
-                    classes: fa-fw fa-lg
-                - text: Data Services User Guide
-                  href: ' '
-                  icon:
-                    icon: note
-                    classes: fa-fw fa-lg
-          - listTitle: Help
-            list:
-              modifiers: ['unstyled', 'flex']
-              items:
-                - text: Frequently Asked Questions
-                  href: ' '
-                  icon:
-                    icon: question
-                    classes: fa-fw fa-lg
-                - text: Glossary Terms
-                  href: ' '
-                  icon:
-                    icon: book
-                    classes: fa-fw fa-lg
-                - text: Videos
-                  href: ' '
-                  icon:
-                    icon: video-square
-                    classes: fa-fw fa-lg
+      iconSize: lg
+      cards:
+        - title: Data Services
+          color: accent-cool
+          body:
+            lists:
+              - title:
+                  content: APIs
+                  tag: h3
+                modifiers:
+                  - unstyled
+                  - flex
+                items:
+                  - text: Getting Started with web services
+                    icon:
+                      icon: note
+                      classes: fa-lg fa-fw
+                    href: ' '
+                  - text: Go to entity registration API
+                    icon:
+                      icon: angle-right
+                      classes: fa-lg fa-fw
+                    href: ' '
+                  - text: Go to exclusions API
+                    icon:
+                      icon: angle-right
+                      classes: fa-lg fa-fw
+                    href: ' '
+              - title:
+                  content: Connect to Service APIs
+                  tag: h3
+                modifiers: ['unstyled', 'flex']
+                items:
+                  - text: Downloading entity registration files
+                    icon:
+                      icon: note
+                      classes: fa-lg fa-fw
+                    href: ' '
+                  - text: Downloading exclusion files
+                    icon:
+                      icon: note
+                      classes: fa-lg fa-fw
+                    href: ' '
+                  - text: Go to entity registration downloads
+                    icon:
+                      icon: angle-right
+                      classes: fa-lg fa-fw
+                    href: ' '
+                  - text: Go to exclusions downloads
+                    icon:
+                      icon: angle-right
+                      classes: fa-lg fa-fw
+                    href: ' '
+        - title: More about Entity Information
+          color: accent-cool
+          secondCard: true
+          body:
+            lists:
+              - title:
+                  content: Exclusion Resources
+                  tag: h3
+                modifiers:
+                  - unstyled
+                  - flex
+                items:
+                  - text: Types of exclusions
+                    href: ' '
+                    icon:
+                      icon: note
+                      classes: fa-fw fa-lg
+                  - text: Legacy CT Codes
+                    href: ' '
+                    icon:
+                      icon: note
+                      classes: fa-fw fa-lg
+                  - text: Agency Exclusion POCs
+                    href: ' '
+                    icon:
+                      icon: note
+                      classes: fa-fw fa-lg
+              - title:
+                  content: User Guides
+                  tag: h3
+                modifiers:
+                  - unstyled
+                  - flex
+                items:
+                  - text: Exclusions Managmement User Guide for Federal Users
+                    href: ' '
+                    icon:
+                      icon: note
+                      classes: fa-fw fa-lg
+                  - text: Data Services User Guide
+                    href: ' '
+                    icon:
+                      icon: note
+                      classes: fa-fw fa-lg
+              - title:
+                  content: Help
+                  tag: h3
+                modifiers:
+                - unstyled
+                - flex
+                items:
+                  - text: Frequently Asked Questions
+                    href: ' '
+                    icon:
+                      icon: question
+                      classes: fa-fw fa-lg
+                  - text: Glossary Terms
+                    href: ' '
+                    icon:
+                      icon: book
+                      classes: fa-fw fa-lg
+                  - text: Videos
+                    href: ' '
+                    icon:
+                      icon: video-square
+                      classes: fa-fw fa-lg
   - name: help-results
     label: Help Results
     context:

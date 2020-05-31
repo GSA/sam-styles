@@ -1,11 +1,9 @@
 label: Cards
+preview: "@sam"
 status: wip
-preview: "@sam-content"
-default: default
+default: bordered and shadowed
 notes: A horizontal header may have a title and a button.
-context:
-  base: sds-card
-  title: Contract Opportunities
+meta:
   colors:
     - title: Plain
     - modifier: base
@@ -16,60 +14,70 @@ context:
       title: Accent Warm
     - modifier: feature
       title: Feature (Secondary)
-  header:
-    style: left
-  modifiers:
-    - shadowed
-    - bordered
-  body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae.
+context:
+  card:
+    color: null
+    title: Contract Opportunities
+    header:
+      style: left
+    modifiers:
+      - shadowed
+      - bordered
+    body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae.
 variants:
-  - name: default
-    label: Default
   - name: bordered
     label: Bordered No Shadow
     context:
-      modifiers:
-        - bordered
+      card:
+        modifiers:
+          - bordered
   - name: shadowed
     label: Shadowed No Border
     context:
-      modifiers:
-        - shadowed
+      card:
+        modifiers:
+          - shadowed
   - name: no shadow
     label: No Shadow or Border
     context:
-      modifiers:
+      card:
+        modifiers:
   - name: no header
     label: No Header
     notes: "508: card must have `aria-labelledby` attribute with a corresponding header outside of card"
-    context:
-      header:
+    meta:
       colors:
-        - title: Plain
+    context:
+      card:
+        header: false
   - name: link header
     label: Link Header
     notes: Header can be a link.
     context:
-      header:
-        link: " "
+      card:
+        header:
+          link: " "
   - name: header icon left
     label: Header Icon Left
     context:
-      header:
-        icon:
-          icon: book
-          classes: fa-2x
+      card:
+        header:
+          icon:
+            icon: book
+            classes: fa-2x
   - name: header icon stacked
     label: Header Icon Stacked
     context:
-      header:
-        icon:
-          icon: book
-          classes: fa-2x
-        style: stacked
+      card:
+        header:
+          icon:
+            icon: book
+            classes: fa-2x
+          style: stacked
   - name: header icon centered
     label: Header Icon Centered
     context:
+      card:
         header:
           icon:
             icon: book
@@ -79,47 +87,53 @@ variants:
     label: Header with One Button
     notes: A horizontal card header may have a title and a button.
     context:
-      header:
-        buttons:
-          - modifiers:
-            - outline
-        style: flex
+      card:
+        header:
+          buttons:
+            - modifiers:
+              - outline
+          style: flex
   - name: header buttons
     label: Header with Two Buttons
     notes: A horizontal card header may have a title and two buttons.
     context:
-      header:
-        buttons:
-          - modifiers:
-            - outline
-          - modifiers:
-            - outline
-        style: flex
+      card:
+        header:
+          buttons:
+            - modifiers:
+              - outline
+            - modifiers:
+              - outline
+          style: flex
   - name: header action
     label: Header with Action Button
     notes: A horizontal card header may have an action button. Card headers with actions should have an action modifier "sds-card__header--action"
     context:
-      header:
-        action: true
-        style: action
+      card:
+        header:
+          action: true
+          style: action
   - name: vertical
     label: Vertical Header
     notes: A card can have a vertical header
     context:
-      modifiers:
-        - shadowed
-        - bordered
-        - vertical
-      header:
-        icon:
-          icon: question-circle
-          classes: fa-2x
+      card:
+        modifiers:
+          - shadowed
+          - bordered
+          - vertical
+        header:
+          icon:
+            icon: question-circle
+            classes: fa-2x
   - name: list
     label: List
     notes: Card layouts can be used for lists. Don't add bordered modifier to card -- just add to list
     context:
-      modifiers:
-        - shadowed
-        - list
-      body:
-        list: true
+      card:
+        modifiers:
+          - shadowed
+          - list
+        body:
+          lists:
+            - modifiers: ['bordered', 'unstyled']
