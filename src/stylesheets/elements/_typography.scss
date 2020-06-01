@@ -1,42 +1,55 @@
-.usa-link,
-.usa-link:visited {
-  color: #3F57A6;
-  text-decoration: none;
-}
+.usa-link {
+  @include u-font ('sans', 'xs');
+  @include u-text ('secondary');
+  @include u-text('no-underline');
 
-.usa-link:hover {
-  color: #8A7237;
-  text-decoration: underline;
-}
+  &--small {
+    @include u-font ('sans', '3xs');
+  }
 
-.usa-color-text-visited {
-  color: #3F57A6;
-}
+  &--large {
+    @include u-font ('sans', 'md');
+  }
 
-.usa-color-text-hover {
-  color: #8A7237;
-  text-decoration: underline;
-}
+  &--hover {
+    @include u-text ('secondary-vivid');
+    @include u-text ('underline');
+    @include u-text ('semibold');
+  }
+  
+  &--visited {
+    @include u-text ('accent-cool-darker'); 
+  }
+  
+  &:hover {
+    @extend .usa-link--hover;
+  }
+  
+  &:visited {
+    @extend .usa-link--visited;
+  }
 
-.usa-dark-background a {
-  color: #D9E8F6;
-}
+  &--inverse {
+    @include u-text ('white');
+    
+    &-hover {
+      @include u-text ('semibold');
+      @include u-text ('underline');
+      @include u-text ('secondary-lighter');
+    }
+    
+    &-visited {
+      @include u-text ('accent-cool-lighter');    
+    }
 
-.usa-dark-background a:hover {
-  color: #B69FFF;
-}
+    &:hover {
+      @extend .usa-link--inverse-hover;
+    }
 
-#usa-link--dark-hover {
-  color: #B69FFF;
-  text-decoration: underline;
-}
-
-.usa-link-wrapper {
-  padding: 25px;
-}
-
-.usa-link--external::after {
-  fill: #562b97;
+    &:visited {
+      @extend .usa-link--inverse-visited;
+    }
+  }
 }
 
 .sds-group {
@@ -152,10 +165,11 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 }
+
 p {  
   @include u-font('sans', 'xs');
   @include u-text('normal', 'base-dark');
-  @include u-height(3);
+  @include u-height('205');
   @include u-measure(5);
 }
 
@@ -168,12 +182,32 @@ p {
 
   &--large {
     @include u-font('sans', 'md');
-    @include u-height(4);
+    @include u-height('3');
   }
 
-  &--small {
+  &--fine-print {
     @include u-font('sans', '3xs');
-    @include u-height(2);
+    @include u-height('2');
+  }
+
+  &--bold {
+    @include u-text('bold');
+  }
+
+  &--semi-bold {
+    @include u-text('semibold');
+  }
+
+  &--italic {
+    @include u-text('italic');
+  }
+  
+  &--color {
+    @include u-text('primary');
+  }
+
+  &--ink {
+    @include u-text('ink');
   }
 
   &.global{
@@ -281,23 +315,6 @@ p {
     @include u-text('normal', 'base-dark');
   }
 
-  &.input-label {
-    @include u-font('sans', 'xs');    
-    @include u-text('normal', 'ink');
-
-    &--group {
-      @include u-text('semibold');
-    }
-
-    &--entered-text {
-      @include u-text('primary');
-    }
-
-    &--field-paragraph {
-      @include u-text('base-dark');
-    }
-  }
-
   &.group-label {
     @include u-font('sans', '3xs');    
     @include u-text('semibold', 'primary');
@@ -359,13 +376,13 @@ h1 {
 h2 {
   @include u-font('sans', 'lg');
   @include u-text('semibold', 'base-dark');
-  @include u-height(5);  
+  @include u-height(4);  
 }
 
 h3 {
   @include u-font('sans', 'md');
   @include u-text('bold', 'base-dark');
-  @include u-height(4);  
+  @include u-height(3);  
 }
 
 h4 {
@@ -417,4 +434,37 @@ h6 {
   &--light {
     @include u-text('normal');
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  
+  .usa-link {
+    font-size: inherit;
+  }
+}
+
+td {
+  white-space: nowrap;
+}
+
+.sds-text {
+
+  &.input-label {
+    @extend p;
+    @extend .p--ink;
+
+    &--group {
+      @extend .input-label;
+      @extend .p--semi-bold;
+    }
+  }
+
+  &.entered-text {
+    @extend p;
+    @extend .p--color;
+  }
+
+  &.field-paragraph {
+    @extend p;
+  }  
 }
