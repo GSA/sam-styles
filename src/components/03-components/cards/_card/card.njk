@@ -36,13 +36,25 @@
 		</div>
 	{% endif %}
 
-	<div class="sds-card__content">
+	<div class="sds-card__content{% if body.grid %} grid-row{% endif %}">
 		{% if body.lists %}
+			{% if body.grid %}<div class="grid-col">{% endif %}
 			{% for list in body.lists %}
-				{% render '@list', list, true %}
+
+				{# use list items if declared else use default  #}
+				{%- if list.items %}
+					{% render '@list', list %}
+				{% else %}
+					{% render '@list', list, true %}
+				{% endif -%}
+
 			{% endfor %}
-		{% else %}
-			{{ body }}
+			{% if body.grid %}</div>{% endif %}
+		{% endif %}
+		{% if body.content %}
+			{% if body.grid %}<div class="grid-col">{% endif %}
+				{{ body.content }}
+			{% if body.grid %}</div>{% endif %}
 		{% endif %}
 	</div>
 </div>

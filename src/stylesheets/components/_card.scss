@@ -95,6 +95,10 @@
     box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
   }
 
+  &--height-full {
+    height: 100%;
+  }
+
   &--list {
     border: none;
     .sds-card__header {

@@ -23,7 +23,8 @@ context:
     modifiers:
       - shadowed
       - bordered
-    body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae.
+    body:
+      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae.
 variants:
   - name: bordered
     label: Bordered No Shadow
@@ -136,4 +137,7 @@ variants:
           - list
         body:
           lists:
-            - modifiers: ['bordered', 'unstyled']
+            - modifiers:
+              - bordered
+              - unstyled
+          content: 

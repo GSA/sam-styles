@@ -9,8 +9,14 @@ variants:
       iconSize: lg
       cards:
         - title: Data Services
+          col: 5
+          modifiers:
+            - height-full
+            - bordered
+            - shadowed
           color: accent-cool
           body:
+            content:
             lists:
               - title:
                   content: APIs
@@ -37,7 +43,9 @@ variants:
               - title:
                   content: Connect to Service APIs
                   tag: h3
-                modifiers: ['unstyled', 'flex']
+                modifiers:
+                  - unstyled
+                  - flex
                 items:
                   - text: Downloading entity registration files
                     icon:
@@ -60,9 +68,15 @@ variants:
                       classes: fa-lg fa-fw
                     href: ' '
         - title: More about Entity Information
+          col: 7
           color: accent-cool
-          secondCard: true
+          modifiers:
+            - height-full
+            - bordered
+            - shadowed
           body:
+            grid: true
+            content: <div class="add-aspect-16x9 bg-base-light margin-y-1"></div>
             lists:
               - title:
                   content: Exclusion Resources

@@ -115,35 +115,9 @@
         </div>
         <div class="grid-row grid-gap-2">
             {% for card in cards %}
-            <div class="tablet:grid-col-{% if card.secondCard %}7{% else %}5{% endif %}">
-             {% render '@card', card, true %}
-             </div>
-                {# <div class="sds-card sds-card--bordered height-full">
-                    <h2 class="sds-card__header sds-card__header--accent-cool sds-card__header--left">
-                        {{ card.title }}
-                    </h2>
-                    <div class="sds-card__content">
-                        {% if card.secondCard %}
-                        <div class="grid-row grid-gap-2">
-                            <div class="grid-col-6">
-                                {% endif %}
-                                {% for content in card.contents %}
-                                    <h3 class="sds-list__title">
-                                        {{content.listTitle}}
-                                    </h3>
-                                    {% render '@list', content.list %}
-                                {% endfor %}
-                                {% if card.secondCard %}
-                            </div>
-                            <div class="grid-col-6">
-                                <div class="add-aspect-16x9 bg-base-light margin-y-1">
-                                </div>
-                            </div>
-                        </div>
-                        {% endif %}
-                    </div>
+                <div class="tablet:grid-col-{{card.col}}">
+                    {% render '@card', card, true %}
                 </div>
-            </div> #}
             {% endfor %}
         </div>
     </div>
