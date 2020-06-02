@@ -4,9 +4,8 @@
     background-repeat: no-repeat;
     @include adjust-responsive-site-margins;
     @include u-padding-bottom(4);
-  
     &--image{
-      background-image: url('#{$theme-image-path}/landing-hero.png');
+      background-image: url('#{$theme-image-path}/sam/landing-hero.png');
     }
   }
   .sds-hero .sds-seal {

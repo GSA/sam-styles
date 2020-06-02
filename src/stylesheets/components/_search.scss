@@ -49,7 +49,7 @@
   select {
     @include u-bg('black');
     @include u-text('white');
-    background-image: url('#{$theme-image-path}/arrow-down-white.svg');
+    background-image: url('#{$theme-image-path}/sam/arrow-down-white.svg');
     background-repeat: no-repeat;
     background-size: 0.75rem;
   }
