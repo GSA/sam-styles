@@ -7,7 +7,6 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
 
 .sds-card {
   @include u-padding(0);
-  border-radius: $sds-card-border-radius;
 
   &__title {
     @include u-margin-y(0);
@@ -22,8 +21,6 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     @include sds-header;
     @include u-margin(0);
     @include u-padding(2);
-    border-top-left-radius: $inner-border-radius;
-    border-top-right-radius: $inner-border-radius;
 
     &--flex {
       @include grid-row;
@@ -48,6 +45,9 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     }
 
     &--left, &--center {
+      svg {
+        @include u-margin-right(1);
+      }
       > * {
         display: inline-block;
         vertical-align: bottom;
@@ -92,6 +92,11 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
 
   &--bordered {
     @include u-border('base-light', 'solid', $sds-card-border-width);
+    border-radius: $sds-card-border-radius;
+    .sds-card__header {
+      border-top-left-radius: $inner-border-radius;
+      border-top-right-radius: $inner-border-radius;
+    }
   }
 
   &--shadowed {

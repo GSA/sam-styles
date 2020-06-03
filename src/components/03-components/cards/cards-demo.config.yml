@@ -2,7 +2,24 @@ preview: "@sam-content"
 label: Demo
 status: wip
 default: bordered and shadowed
-notes: A horizontal header may have a title and a button.
+notes: |
+  A horizontal header may have a title and a button.
+  ___
+  **Variables:**
+  - color (*optional*): option of base, accent-cool, accent-warm, or feature
+  - title
+  - modifiers: [shadowed, bordered, vertical, and/or list]
+  - header: *(false if no header)*
+    - style: option of left, stacked, center, action or flex
+    - link: url
+    - icon: @icon
+    - buttons: [@button]
+    - action: Boolean
+  - body
+    - content
+    - lists: [@list]
+
+
 display:
   text-align: center
 meta:
@@ -67,7 +84,7 @@ variants:
         header:
           icon:
             icon: book
-            classes: fa-2x
+            classes: fa-2x fa-fw
   - name: header icon stacked
     label: Header Icon Stacked
     context:
@@ -84,7 +101,7 @@ variants:
         header:
           icon:
             icon: book
-            classes: fa-2x
+            classes: fa-2x fa-fw
           style: center
   - name: header button
     label: Header with One Button
