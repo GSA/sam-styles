@@ -83,86 +83,9 @@
   line-height: 0.5rem;
 }
 
-
-
-
-// @mixin h3 {
-//   font-size: units(3);
-//   @include u-text('bold', 'base-dark');
-//   line-height: units(4);
-// }
-
-// @mixin h4 {
-//   font-size: units(2.5);
-//   @include u-text('semibold', 'base-dark');
-//   line-height: units(3);
-// }
-
-// @mixin h5 {
-//   font-size: units(2);
-//   @include u-text('bold', 'base-dark');
-//   line-height: units(2.5);
-// }
-
-// @mixin h6 {
-//   font-size: units(2);
-//   @include u-text('bold', 'base-dark');
-//   line-height: units(2.5);
-// }
-
-
-
 h1, h2, h3, h4, h5, h6 {
 
   &.heading {
-
-    &--utility-nav {
-      @include u-font('sans', 'lg');
-      @include u-text('primary'); 
-    }
-    
-    &--action-menu {
-      @include u-font('sans', 'sm');
-      @include u-text('semibold', 'base-dark');
-      
-      &--link {
-        @include u-font('sans', 'xs');
-        @include u-text('semibold');
-        
-        &--visited{
-          @include u-font('sans', 'xs');
-          @include u-text('semibold', 'base-dark');
-        }
-      }
-      // @include u-margin-y(0);
-    }
-    &--footer-nav {
-      
-      &--group-label {
-        @include u-font('sans', 'md');
-        @include u-text('bold', 'base-dark');
-      }
-
-      &--link {
-        @include u-font('sans', 'xs');
-        @include u-text('normal');
-      }
-    }
-
-    &--section {
-      @include u-font('sans', 'lg');
-      @include u-text('semibold', 'base-dark');
-
-      &--sub {
-        @include u-font('sans', 'md');
-        @include u-text('light');
-      }
-    }
-
-    &--modal {
-      @include u-font('sans', 'lg');
-      @include u-text('semibold', 'base-dark');
-    }
   }
 }
 
@@ -198,6 +121,10 @@ p {
     @include u-text('semibold');
   }
 
+  &--light {
+    @include u-text('light');
+  }
+
   &--italic {
     @include u-text('italic');
   }
@@ -210,155 +137,26 @@ p {
     @include u-text('ink');
   }
 
-  &.global{
-    @include u-font('sans', 'md');
+  &--base {
+    @include u-text('base');
+  }
 
-    &.title {
-      @include u-text('semibold', 'base-dark');
-    }
+  // &.page{
+  //   @include u-font('sans', 'md');
 
-    &.text {
-      @include u-text('normal', 'base-dark');
+  //   &.title {
+  //     @include u-text('semibold', 'base-dark');
+  //   }
+
+  //   &.text{
+  //     @include u-text('normal', 'base-dark');
       
-      &--link {
-        @include u-text('bold');
-      }
-    }
-  }
+  //     &--link{
+  //       @include u-text('bold');
+  //     }
+  //   }
+  // }
 
-  &.page{
-    @include u-font('sans', 'md');
-
-    &.title {
-      @include u-text('semibold', 'base-dark');
-    }
-
-    &.text{
-      @include u-text('normal', 'base-dark');
-      
-      &--link{
-        @include u-text('bold');
-      }
-    }
-  }
-
-  &.callout{
-    @include u-font('sans', 'md');
-    
-    &.field {
-      @include u-text('bold', 'ink');
-
-      &--link{
-        @include u-text('normal');
-      }
-    }
-
-    &.light-text {
-      @include u-text('normal', 'ink');
-    }
-  }
-
-  &.navigation {
-
-    &--primary {
-      @include u-font('sans', 'md');
-      @include u-text('bold', 'ink');
-    }
-
-    &--secondary {
-      @include u-font('sans', '3xs');
-      @include u-text('normal', 'base');
-    }
-
-    &--sidenav {
-      @include u-font('sans', '2xs');
-      @include u-text('bold', 'primary');
-
-      &--unselected{
-        @include u-font('sans', '2xs');
-        @include u-text('semibold', 'base-dark');
-      }
-    }
-  }
-
-  &.field-label {
-    @include u-font('sans', '2xs');
-    @include u-text('normal', 'base-dark');
-    
-    &--large {
-      @include u-font('sans', 'xs');
-    }
-
-    &--small {
-      @include u-font('sans', '3xs');
-      @include u-text('italic');
-    }
-  }
-
-  &.field-value {
-    @include u-font('sans', 'xs');    
-    @include u-text('semibold', 'base-dark');
-    
-    &--large {
-      @include u-font('sans', 'md');
-      @include u-text('semibold');
-    }
-
-    &--small {
-      @include u-font('sans', '3xs');
-      @include u-text('normal');
-    }
-  }
-
-  &.field-paragraph {
-    @include u-font('sans', 'xs');    
-    @include u-text('normal', 'base-dark');
-  }
-
-  &.group-label {
-    @include u-font('sans', '3xs');    
-    @include u-text('semibold', 'primary');
-  }
-
-  &.filter-label {
-    @include u-font('sans', '3xs');    
-    @include u-text('semibold', 'base-dark');
-  }
-
-  &.input-text {
-    @include u-font('sans', '3xs');    
-    @include u-text('normal', 'base-dark');
-  }
-
-  &.input-chip {
-    @include u-font('sans', '3xs');    
-    @include u-text('semibold', 'primary');
-  }
-
-  &.in-button {
-    @include u-font('sans', 'sm');    
-    @include u-text('bold', 'primary');
-  }
-
-  &.under-button {
-    @include u-font('sans', '3xs');    
-    @include u-text('normal', 'primary');
-  }
-
-  &.modal {
-    @include u-font('sans', 'md');
-    @include u-text('semibold', 'base-dark');
-  }
-
-  &.search-helper-text {
-    @include u-font('sans', 'xs');
-    @include u-text('normal', 'base');
-  }
-
-  &.tag-label {
-    @include u-font('sans', 'xs');
-    @include u-text('bold', 'base-dark');
-  }
 
 }
 
@@ -447,24 +245,252 @@ td {
   white-space: nowrap;
 }
 
-.sds-text {
+//Input Label
+.input-label {
+  @extend p;
+  @extend .p--ink;
 
-  &.input-label {
-    @extend p;
-    @extend .p--ink;
+  &--group {
+    @extend .input-label;
+    @extend .p--semi-bold;
+  }
+}
 
-    &--group {
-      @extend .input-label;
-      @extend .p--semi-bold;
+//Entered Text
+.entered-text {
+  @extend p;
+  @extend .p--color;
+}
+
+//Field Paragraph
+.field-paragraph {
+  @extend p;
+}  
+
+//callout
+.callout {
+  @extend .p--large;
+  @extend .p--bold;
+  @extend .p--ink;
+  
+    &--light {
+      @extend .p--large;
+      @extend .p--light;
+  
+      a.usa-link {
+      }
+   }
+   
+    a.usa-link {
+      @include u-font('sans', 'md');
+      @include u-text('normal');
+    }
+}
+
+//Alerts
+.global-title {
+  @extend .h3;
+  @include u-text('semibold');
+}
+
+.global-text {
+  @extend .p--large;
+
+  a.usa-link {
+    @include u-font('sans', 'md');
+    @include u-text('bold');
+  }
+}
+
+.title {
+    @include u-text('semibold', 'base-dark');
+}
+
+.page-title {
+  @extend .h3;
+  @include u-text('semibold');
+}
+
+.page-text {
+  @extend .p--large;
+  
+  a.usa-link {
+    @include u-font('sans', 'md');
+    @include u-text('bold');
+  }
+}
+
+//Filter
+.group-label {
+  @extend .p--fine-print;
+  @extend .p--semi-bold;
+  @extend .p--color;
+}
+
+.filter-label {
+  @extend .p--fine-print;
+  @extend .p--semi-bold;
+}
+
+.input-text {
+  @extend .p--fine-print;
+}
+
+.input-chip {
+  @include u-font('sans', '3xs');    
+  @include u-text('semibold', 'primary');
+}
+
+//Forms & Display Fields
+.section-header {
+  @extend .h2;
+
+  &--sub {
+    @extend .h3;
+    @include u-text('light');
+  }
+}
+
+.field-label {
+  @include u-font('sans', '2xs');
+  @include u-text('normal', 'base-dark');
+  
+  &--large {
+    @extend .p;
+  }
+
+  &--small {
+    @extend .p--fine-print;
+    @extend .p--italic;
+    @extend .p--base;
+  }
+}
+
+.field-value {
+  @extend .p;
+  @extend .p--semi-bold;
+
+  a.usa-link {
+    
+  }
+  
+  &--large {
+    @extend .p--large;
+    @extend .p--semi-bold;
+
+    a.usa-link {
+      @include u-font('sans', 'md');
     }
   }
 
-  &.entered-text {
-    @extend p;
-    @extend .p--color;
+  &--small {
+    @extend .p--fine-print;
+    
+    a.usa-link {
+      @include u-font('sans', '3xs');
+    }
+  }
+}
+
+.field-paragraph {
+  @extend .p;
+
+  a.usa-link {
+  }
+}
+
+//Buttons
+.in-button-text {
+  @include u-font('sans', 'sm');    
+  @include u-text('bold', 'primary');
+}
+
+.under-button-text {
+  @extend .p--fine-print;
+  @extend .p--color;
+}
+
+//Modal
+.modal-heading {
+  @extend .h2;
+}
+
+.modal-text {
+  @extend .p--large;
+  @extend .p--semi-bold;
+}
+
+//Search
+.helper-text {
+  @extend .p;
+  @extend .p--base;
+  @include u-height('205')
+}
+
+//Label
+.tag-label {
+  @extend .p;
+  @extend .p--bold;
+}
+
+.main-navigation {
+  &--primary {
+    @extend .p--large;
+    @extend .p--bold;
+    @extend .p--ink;
+  }
+  
+  &--secondary {
+    @extend .p--fine-print;
+    @extend .p--ink;
+  }
+}
+
+.utility-navigation {
+  &--header {
+    @extend .h2;
+    @include u-text('primary');
+  } 
+}
+
+.side-navigation {
+  &--selected {
+    @include u-font('sans', '2xs');
+    @include u-text('bold', 'primary');
+  }
+  
+  &--unselected {
+    @include u-font('sans', '2xs');
+    @include u-text('semibold', 'base-dark');
+  }
+}  
+  
+.action-menu {
+  &--header {
+    @include u-font('sans', 'sm');
+    @include u-text('semibold', 'base-dark');
   }
 
-  &.field-paragraph {
-    @extend p;
-  }  
+  a.usa-link {
+    @include u-font('sans', 'xs');
+    @include u-text('semibold');
+
+    &--hover {
+      @include u-font('sans', 'xs');
+      @include u-text('semibold');    
+      @include u-text('base-dark');
+    }
+  }
+}  
+
+.footer-navigation {
+  @extend .p;
+      
+  &--group-label {
+    @extend .p--large;
+    @extend .p--bold;
+  }
+
+  a.usa-link {
+  }
 }
