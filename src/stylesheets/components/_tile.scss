@@ -2,25 +2,25 @@
 //SDS TILE
 .sds-tile {
   @include u-display('flex');
-  align-items: center;
-  justify-content: center;
+  @include u-flex('align-center');
+  @include u-flex('justify-center');
 
   .sds-tile__body {
     @include u-display('block');
-    padding-left: 18px;
+    @include u-padding-left('2');
 
     header {
       @include u-font('sans', 'md');
       @include u-text('bold');
-      
+
     }
     .sds-list {
-      margin-top: 0;
-      padding-left: 0;
+      @include u-margin-top(0);
+      @include u-padding-left(0);
       list-style-type: none;
 
       li {
-        padding-bottom: 0;
+        @include u-padding-bottom(0);
       }
     }
   }
@@ -36,7 +36,7 @@
   @include u-margin(1);
   background: rgba(240, 245, 249, 0.8);
   @include u-width("full");
-  height: auto;
+  @include u-height("auto");
 
   .sds-tile__header {
     @include u-display("flex");
@@ -91,7 +91,7 @@
 
     .sds-tile__header {
       svg {
-        height: 32px;
+        @include u-height(4);
       }
     }
   }
