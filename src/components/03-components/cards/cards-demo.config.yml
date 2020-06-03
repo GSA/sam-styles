@@ -18,8 +18,6 @@ notes: |
   - body
     - content
     - lists: [@list]
-
-
 display:
   text-align: center
 meta:
