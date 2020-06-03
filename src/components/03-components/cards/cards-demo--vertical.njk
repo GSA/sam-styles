@@ -3,7 +3,8 @@
 		<div class="grid-col-12 tablet-lg:grid-col-7">
 			{%- set card = card|setAttribute('color', color.modifier) %}
 			<span>{{color.title}}</span>
-			{%- render '@card--vertical', card %}
+
+			{% render '@card--vertical', card %}
 		</div>
-	{% endfor %}
+	{% endfor -%}
 </div>

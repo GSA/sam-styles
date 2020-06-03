@@ -1,8 +1,10 @@
-label: Cards
-preview: "@sam"
+preview: "@sam-content"
+label: Demo
 status: wip
 default: bordered and shadowed
 notes: A horizontal header may have a title and a button.
+display:
+  text-align: center
 meta:
   colors:
     - title: Plain
@@ -140,4 +142,4 @@ variants:
             - modifiers:
               - bordered
               - unstyled
-          content: 
+          content:

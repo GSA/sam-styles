@@ -1,1 +1,7 @@
-<{{tag}}>{{content}}</{{tag}}>
+<{{tag}}
+  {% if classes -%}
+    class="
+    {%- for class in classes -%}{{class}} {% endfor -%}
+    "
+  {%- endif %}
+>{{content}}</{{tag}}>

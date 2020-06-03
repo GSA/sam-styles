@@ -1,11 +1,13 @@
 /*-------------------
        SDS CARD
 --------------------*/
+$sds-card-border-width: 1px;
+$sds-card-border-radius: border-radius('md');
+$inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width});
 
 .sds-card {
   @include u-padding(0);
-  @include u-radius('md');
-  @include u-bg('white');
+  border-radius: $sds-card-border-radius;
 
   &__title {
     @include u-margin-y(0);
@@ -20,6 +22,8 @@
     @include sds-header;
     @include u-margin(0);
     @include u-padding(2);
+    border-top-left-radius: $inner-border-radius;
+    border-top-right-radius: $inner-border-radius;
 
     &--flex {
       @include grid-row;
@@ -49,7 +53,6 @@
         vertical-align: bottom;
       }
     }
-
 
     &--stacked, &--center {
       text-align: center;
@@ -88,7 +91,7 @@
   }
 
   &--bordered {
-    @include u-border('base-light', 'solid', '1px');
+    @include u-border('base-light', 'solid', $sds-card-border-width);
   }
 
   &--shadowed {
@@ -112,7 +115,8 @@
   &--vertical {
     display: flex;
     .sds-card__header {
-      @include u-border-right('base-light', 'solid', '1px');
+      @include u-border-right('base-light', 'solid', $sds-card-border-width);
+      border-top-right-radius: 0;
     }
   }
 
