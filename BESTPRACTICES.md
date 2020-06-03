@@ -1,4 +1,4 @@
--# SASS/CSS Coding Best Practices
+# SASS/CSS Coding Best Practices
 
 - No inline-styling in the HTML
   - _Readability_
