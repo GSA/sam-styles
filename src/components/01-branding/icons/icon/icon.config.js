@@ -1,4 +1,4 @@
-const icons = [
+var icons = [
   "pentagon",
   "triangle",
   "leaf",
@@ -95,15 +95,23 @@ icons.sort();
  * Helper to convert the list of icon names to a list of icon variants.
  */
 function getIconVariants() {
-  let variants = [];
-  let len = icons.length;
+  var variants = [];
 
-  for (let i = 0; i < len; i++) {
-    let icon = icons[i];
-    let variant = {
+  // example colors
+  var colors = [null, 'primary', 'secondary', 'accent-cool'];
+
+  // loop through example colors for demo
+  var colorRepeat = Math.round(icons.length / colors.length);
+  var colorArray = Array(colorRepeat).fill(colors).flat(1);
+
+  for (var i = 0; i < icons.length; i++) {
+    var icon = icons[i];
+
+    var variant = {
       name: icon,
       context: {
-        icon: icon
+        icon: icon,
+        color: colorArray[i]
       }
     };
     variants.push(variant);
@@ -117,7 +125,7 @@ module.exports = {
   collated: true,
   context: {
     classes: "fa-2x",
-    title: "Screen reader description",
+    title: "Screen reader description"
   },
   collator: function (markup, item) {
     return '<!-- Start: @' + item.handle + ' -->\n<div class="display-inline-block padding-2 text-center"><p>' + item.name + '</p>' + markup + '</div>\n<!-- End: @' + item.handle + ' -->\n';
