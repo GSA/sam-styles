@@ -1,0 +1,8 @@
+context:
+  size: md
+  icons:
+    - icon: circle
+      prefix: fas
+    - icon: address-book
+      prefix: far
+      classes: text-primary
