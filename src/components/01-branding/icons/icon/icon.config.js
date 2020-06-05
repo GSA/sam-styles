@@ -1,4 +1,4 @@
-var icons = [
+const icons = [
   "pentagon",
   "triangle",
   "leaf",
@@ -95,22 +95,22 @@ icons.sort();
  * Helper to convert the list of icon names to a list of icon variants.
  */
 function getIconVariants() {
-  var variants = [];
+  const variants = [];
 
   // example colors
-  var colors = [null, 'primary', 'secondary', 'accent-cool'];
+  const colors = [null, 'primary', 'secondary', 'accent-cool'];
 
   // loop through example colors for demo
-  var colorRepeat = Math.round(icons.length / colors.length);
-  var colorArray = Array(colorRepeat).fill(colors).flat(1);
+  const colorRepeat = Math.round(icons.length / colors.length);
+  const colorArray = Array(colorRepeat).fill(colors).flat(1);
 
-  for (var i = 0; i < icons.length; i++) {
-    var icon = icons[i];
+  for (let i = 0; i < icons.length; i++) {
+    const icon = icons[i];
 
     // set icon color if present in demo color loop
-    var classes =  colorArray[i] ? 'fa-2x text-' + colorArray[i] : 'fa-2x';
+    const classes =  colorArray[i] ? 'fa-2x text-' + colorArray[i] : 'fa-2x';
 
-    var variant = {
+    const variant = {
       name: icon,
       context: {
         icon: icon,
@@ -121,6 +121,14 @@ function getIconVariants() {
   }
   return variants;
 }
+function getCollator(markup, item) {
+    const html =  '<!-- Start: @' + item.handle + ' -->' +
+    '<div class="display-inline-block padding-2 text-center">' +
+      '<p>' + item.name + '</p>' + markup +
+    '</div>' +
+    '<!-- End: @' + item.handle + ' -->';
+    return html;
+}
 
 module.exports = {
   label: "Icon",
@@ -130,7 +138,7 @@ module.exports = {
     title: "Screen reader description"
   },
   collator: function (markup, item) {
-    return '<!-- Start: @' + item.handle + ' -->\n<div class="display-inline-block padding-2 text-center"><p>' + item.name + '</p>' + markup + '</div>\n<!-- End: @' + item.handle + ' -->\n';
+    return getCollator(markup, item);
   },
   default: icons[0],
   variants: getIconVariants()

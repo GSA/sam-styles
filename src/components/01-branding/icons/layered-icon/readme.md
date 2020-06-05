@@ -1,4 +1,4 @@
-Layer 2 to 4 icons
+Layer 2 to 4 Font Awesome icons
 
 ## Types
 For basic use (centering one icon on top of another) use `stack`.
