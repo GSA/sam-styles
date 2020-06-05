@@ -6,8 +6,15 @@ variants:
   - name: landing-page
     notes: "Landing Page"
     context:
-     iconSize: lg
-     cards:
+      tileIcon:
+        type: stack
+        icons:
+          - icon: triangle
+            classes: fa-stack-2x text-accent-cool-light fa-1x
+          - icon: video-circle
+            classes: fa-stack-1x text-base fa-2x
+      iconSize: lg
+      cards:
       - title: Data Services
         contents:
           - listTitle: APIs
@@ -129,3 +136,11 @@ variants:
             href: ' '
   - name: page-with-sidebar
     label: Page With Sidebar
+    context:
+        actionIcon:
+          type: layers
+          icons:
+              -   icon: circle
+                  prefix: fas
+              -   icon: ellipsis
+                  dataTransform: shrink-6
