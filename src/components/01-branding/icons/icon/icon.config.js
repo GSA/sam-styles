@@ -107,8 +107,6 @@ function getIconVariants() {
   let variants = [];
   let len = icons.length;
 
-  let colors = getColors();
-
   for (let i = 0; i < len; i++) {
     let icon = icons[i];
     let variant = {
