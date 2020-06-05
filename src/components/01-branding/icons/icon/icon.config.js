@@ -111,12 +111,10 @@ function getIconVariants() {
 
   for (let i = 0; i < len; i++) {
     let icon = icons[i];
-    let color = colors[i];
     let variant = {
       name: icon,
       context: {
-        icon: icon,
-        color: color
+        icon: icon
       }
     };
     variants.push(variant);
