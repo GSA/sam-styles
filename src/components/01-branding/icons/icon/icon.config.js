@@ -98,12 +98,19 @@ function getIconVariants() {
   let variants = [];
   let len = icons.length;
 
+    // example colors
+    let colors = [null, 'primary', 'secondary', 'accent-cool'];
+      // loop through example colors for demo
+    let colorRepeat = Math.round(icons.length / colors.length);
+    let colorArray = Array(colorRepeat).fill(colors).flat(1);
+
   for (let i = 0; i < len; i++) {
     let icon = icons[i];
     let variant = {
       name: icon,
       context: {
-        icon: icon
+        icon: icon,
+        color: colorArray[i]
       }
     };
     variants.push(variant);
