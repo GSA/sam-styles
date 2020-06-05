@@ -18,3 +18,4 @@ ___
 - **type:**
   - stack *(default)*
   - layers
+- **size:** Font Awesome size of icons **excluding `fa-`** *(defaults to 2x)*
