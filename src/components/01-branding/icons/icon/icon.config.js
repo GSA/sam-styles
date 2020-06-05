@@ -91,30 +91,19 @@ const icons = [
 // Sort icons alphabetically.
 icons.sort();
 
-// example colors
-const colors = [null, 'primary', 'secondary', 'accent-cool'];
-
-// loop through example colors for demo
-const colorRepeat = Math.round(icons.length / colors.length);
-const colorArray = Array(colorRepeat).fill(colors).flat(1);
-
 /**
  * Helper to convert the list of icon names to a list of icon variants.
  */
- function getIconVariants() {
-  const variants = [];
+function getIconVariants() {
+  let variants = [];
+  let len = icons.length;
 
-  for (let i = 0; i < icons.length; i++) {
-    const icon = icons[i];
-
-    // set icon color if present in demo color loop
-    const classes =  colorArray[i] ? 'fa-2x text-' + colorArray[i] : 'fa-2x';
-
-    const variant = {
+  for (let i = 0; i < len; i++) {
+    let icon = icons[i];
+    let variant = {
       name: icon,
       context: {
-        icon: icon,
-        classes: "fa-2x"
+        icon: icon
       }
     };
     variants.push(variant);
@@ -122,24 +111,16 @@ const colorArray = Array(colorRepeat).fill(colors).flat(1);
   return variants;
 }
 
-function getCollator(markup, item) {
-    const html =  '<!-- Start: @' + item.handle + ' -->' +
-    '<div class="display-inline-block padding-2 text-center">' +
-      '<p>' + item.name + '</p>' + markup +
-    '</div>' +
-    '<!-- End: @' + item.handle + ' -->';
-    return html;
-}
-
 module.exports = {
   label: "Icon",
   status: "wip",
   collated: true,
   context: {
-    title: "Screen reader description"
+    classes: "fa-2x",
+    title: "Screen reader description",
   },
   collator: function (markup, item) {
-    return getCollator(markup, item);
+    return '<!-- Start: @' + item.handle + ' -->\n<div class="display-inline-block padding-2 text-center"><p>' + item.name + '</p>' + markup + '</div>\n<!-- End: @' + item.handle + ' -->\n';
   },
   default: icons[0],
   variants: getIconVariants()
