@@ -91,6 +91,8 @@ const icons = [
 // Sort icons alphabetically.
 icons.sort();
 
+const colors = getColors();
+
 function getColors() {
   // example colors
   let colors = ['primary', 'secondary', 'accent-cool'];
@@ -112,7 +114,9 @@ function getIconVariants() {
     let variant = {
       name: icon,
       context: {
-        icon: icon
+        icon: icon,
+        classes: "fa-2x",
+        colors: colors
       }
     };
     variants.push(variant);
@@ -125,7 +129,6 @@ module.exports = {
   status: "wip",
   collated: true,
   context: {
-    classes: "fa-2x",
     title: "Screen reader description",
   },
   collator: function (markup, item) {
