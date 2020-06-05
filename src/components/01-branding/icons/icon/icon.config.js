@@ -114,7 +114,7 @@ const colorArray = Array(colorRepeat).fill(colors).flat(1);
       name: icon,
       context: {
         icon: icon,
-        classes: classes
+        classes: "fa-2x"
       }
     };
     variants.push(variant);
