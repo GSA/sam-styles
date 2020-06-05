@@ -91,6 +91,15 @@ const icons = [
 // Sort icons alphabetically.
 icons.sort();
 
+function getColors() {
+  // example colors
+  let colors = ['primary', 'secondary', 'accent-cool'];
+  // loop through example colors for demo
+  let colorRepeat = Math.round(icons.length / colors.length);
+
+  return Array(colorRepeat).fill(colors).flat(1);
+}
+
 /**
  * Helper to convert the list of icon names to a list of icon variants.
  */
@@ -98,19 +107,16 @@ function getIconVariants() {
   let variants = [];
   let len = icons.length;
 
-    // example colors
-    let colors = [null, 'primary', 'secondary', 'accent-cool'];
-      // loop through example colors for demo
-    let colorRepeat = Math.round(icons.length / colors.length);
-    let colorArray = Array(colorRepeat).fill(colors).flat(1);
+  let colors = getColors();
 
   for (let i = 0; i < len; i++) {
     let icon = icons[i];
+    let color = colors[i];
     let variant = {
       name: icon,
       context: {
         icon: icon,
-        color: colorArray[i]
+        color: color
       }
     };
     variants.push(variant);
