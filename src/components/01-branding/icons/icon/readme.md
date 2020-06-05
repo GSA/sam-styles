@@ -19,11 +19,10 @@ If icons aren't decorative they will need a title attribute and alternate text i
 
 ### Variables
 - **icon:** icon name *(ie: book)*
-- **color *(optional)*:** icon color using theme token (*adding **text-\{{token}}** to classes will do the same thing*)
 - **prefix *(optional)*:** icon library
  - sds *(default)*: SAM custom icons **shown above**
  - fas: font-awesome solid
  - far: font-awesome regular
-- **classes *(optional)*:** additional classes as string
+- **classes *(optional)*:** additional classes as string such as `text-\{{uswds color token}}` to set icon color
 - **title *(optional)*:** title/description for screen readers *(see Semantic section)*
 - **dataTransform *(optional)*:** Use of Font Awesome data-transform property *(see above)*

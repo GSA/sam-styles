@@ -107,11 +107,14 @@ function getIconVariants() {
   for (var i = 0; i < icons.length; i++) {
     var icon = icons[i];
 
+    // set icon color if present in demo color loop
+    var classes =  colorArray[i] ? 'fa-2x text-' + colorArray[i] : 'fa-2x';
+
     var variant = {
       name: icon,
       context: {
         icon: icon,
-        color: colorArray[i]
+        classes: classes
       }
     };
     variants.push(variant);
@@ -124,7 +127,6 @@ module.exports = {
   status: "wip",
   collated: true,
   context: {
-    classes: "fa-2x",
     title: "Screen reader description"
   },
   collator: function (markup, item) {

@@ -1,6 +1,6 @@
 {%- set prefix = prefix or "sds" -%}
 
-<i class="{{prefix}} fa-{{icon}}{% if classes %} {{classes}}{% endif %}{% if color %} text-{{color}}{% endif %}"{% if title %}aria-hidden="true" title="{{title}}"{% endif %}{% if dataTransform %} data-fa-transform="{{dataTransform}}"{% endif %}></i>
+<i class="{{prefix}} fa-{{icon}}{% if classes %} {{classes}}{% endif %}"{% if title %}aria-hidden="true" title="{{title}}"{% endif %}{% if dataTransform %} data-fa-transform="{{dataTransform}}"{% endif %}></i>
 
 {%- if title %}
   <span class="sr-only">{{title}}</span>

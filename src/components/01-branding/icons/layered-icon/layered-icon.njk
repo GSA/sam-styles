@@ -1,5 +1,17 @@
-<span class="fa-layers fa-fw">
-	{%- for icon in icons %}
-    {% render '@icon', icon -%}
-	{% endfor %}
-</span>
+{%- if not size %}
+		{% set size = '2x' %}
+	{% endif -%}
+
+{%- if type == "layers" %}
+	<span class="fa-layers fa-fw fa-{{size}}">
+		{%- for icon in icons %}
+			{% render '@icon', icon -%}
+		{% endfor %}
+	</span>
+{% else %}
+	<span class="fa-stack fa-{{size}}">
+		{%- for icon in icons %}
+			{% render '@icon', icon -%}
+		{% endfor %}
+	</span>
+{%- endif -%}
