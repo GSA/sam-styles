@@ -1,0 +1,46 @@
+{#
+    Creates a button.
+    @param {string} link - use "a" instead of "button". String should be any valid HREF value
+    @param {array}  modifiers - USA "secondary,base,outline,inverse,big,unstyled,hover,active,focus".
+    @param {array}  smodifiers - SDS "circle,small"
+    @param {bool}   disabled - adds disabled attribute 
+    @param {string} ext - other attributes i.e. ( tabindex="0" onclick="alert" )
+    @param {string} text - text of the button 
+#}
+<{%
+if link 
+%}a href="{{link}}{% 
+elif 
+%}button{% 
+endif 
+%} class="usa-button{%
+if modifiers 
+%}{%
+    for modifier in modifiers 
+    %} usa-button--{{ modifier }}{%
+    endfor 
+%}{% 
+endif 
+%}{%
+if smodifiers 
+%}{%
+    for modifier in smodifiers 
+    %} sds-button--{{ modifier }}{%
+    endfor 
+%}{% 
+endif 
+%}{%
+if classes
+%} {{classes}}{%
+endif
+%}"{%
+if disabled 
+%} disabled="disabled"{% 
+endif 
+%}>{{text}}<{%
+if link 
+%}/a{% 
+elif 
+%}/button{% 
+endif 
+%}>

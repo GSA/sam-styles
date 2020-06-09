@@ -5,6 +5,50 @@ default: "primary"
 notes: ".usa-button--hover and .usa-button--active classes are just to show their formatting in this context but should not be used in production"
 context:
   text: Button
+  states:
+    - hover
+    - active
+    - focus
+    - disabled
+  mocos:
+    - buttons: 
+      - name: default
+        text: Defualt
+
+      - name: disabled
+        text: Disabled
+        disabled: true
+
+    - buttons:
+      - name: secondary
+        text: Secondary
+        modifiers: 
+          - 'secondary'
+
+      - name: danger
+        text: Danger
+        modifiers: 
+          - 'danger'
+
+      - name: base
+        text: Base
+        modifiers: 
+          - 'base'
+
+      - name: outline
+        category: outline
+        text: Outline
+        modifiers: 
+          - 'outline'
+
+      - name: outline-inverse
+        category: outline-inverse
+        text: Outline inverse
+        modifiers: 
+          - 'outline'
+          - 'inverse'
+
+
 variants:
   - name: secondary
     context:

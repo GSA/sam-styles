@@ -86,17 +86,17 @@
     box-shadow: $button-stroke color("secondary-darker");
   }
   
-  &.sds-button--shadow {
-    box-shadow: $button-stroke color("primary"), $button-shadow;
-    &:hover,
-    &.usa-button--hover {
-      box-shadow: $button-stroke color("primary-light"), $button-shadow;
-    }
-    &:active,
-    &.usa-button--active {
-      box-shadow: $button-stroke color("secondary-darker"), $button-shadow;
-    }
-  }
+  // &.sds-button--shadow {
+  //   box-shadow: $button-stroke color("primary"), $button-shadow;
+  //   &:hover,
+  //   &.usa-button--hover {
+  //     box-shadow: $button-stroke color("primary-light"), $button-shadow;
+  //   }
+  //   &:active,
+  //   &.usa-button--active {
+  //     box-shadow: $button-stroke color("secondary-darker"), $button-shadow;
+  //   }
+  // }
 
   &.usa-button--inverse {
     background-color: transparent;
@@ -141,17 +141,17 @@
     background-color: color("base-dark");
   }
 
-  &.sds-button--shadow {
-    box-shadow: $button-stroke color("base-light"), $button-shadow;
-    &:hover,
-    &.usa-button--hover {
-      box-shadow: $button-stroke color("base"), $button-shadow;
-    }
-    &:active,
-    &.usa-button--active {
-      box-shadow: $button-stroke color("base-dark"), $button-shadow;
-    }
-  }
+  // &.sds-button--shadow {
+  //   box-shadow: $button-stroke color("base-light"), $button-shadow;
+  //   &:hover,
+  //   &.usa-button--hover {
+  //     box-shadow: $button-stroke color("base"), $button-shadow;
+  //   }
+  //   &:active,
+  //   &.usa-button--active {
+  //     box-shadow: $button-stroke color("base-dark"), $button-shadow;
+  //   }
+  // }
 }
 
 .usa-button--secondary {
@@ -178,17 +178,17 @@
     background-color: transparent;
   }
 
-  &.sds-button--shadow {
-    box-shadow: $button-stroke color("primary"), $button-shadow;
-    &:hover,
-    &.usa-button--hover {
-      box-shadow: $button-stroke color("primary-light"), $button-shadow;
-    }
-    &:active,
-    &.usa-button--active {
-      box-shadow: $button-stroke color("secondary-darker"), $button-shadow;
-    }
-  }
+  // &.sds-button--shadow {
+  //   box-shadow: $button-stroke color("primary"), $button-shadow;
+  //   &:hover,
+  //   &.usa-button--hover {
+  //     box-shadow: $button-stroke color("primary-light"), $button-shadow;
+  //   }
+  //   &:active,
+  //   &.usa-button--active {
+  //     box-shadow: $button-stroke color("secondary-darker"), $button-shadow;
+  //   }
+  // }
 }
 
 .usa-button--danger {
@@ -203,25 +203,6 @@
   &:active {
     color: color("white");
     background-color: color("error-dark");
-  }
-}
-
-// TODO: Remove this style
-// as its only used for example display
-.button-label {
-  text-align: center;
-  display: inline-block;
-  margin: 10px;
-
-  label {
-    display: block;
-    font-size: 14px;
-  }
-  &--right {
-    text-align: right;
-  }
-  &--left {
-    text-align: left;
   }
 }
 

@@ -1,3 +1,4 @@
+
 {%- if (classes == 'usa-button--outline usa-button--inverse') -%}
   <div class="bg-base-darkest padding-1" style="max-width: fit-content">
   {% endif -%}
@@ -6,6 +7,7 @@
   {% if (category != 'disabled') -%}
   <!-- do use in production: usa-button--hover -->
     <button class="usa-button {{ classes }} usa-button--hover">Hover</button>
+    {% render '@button' %}
     <!-- do use in production: usa-button--active -->
     <button class="usa-button {{ classes }} usa-button--active">Active</button>
     <button class="usa-button {{ classes }} usa-focus">Focus</button>
