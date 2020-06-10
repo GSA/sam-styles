@@ -1,11 +1,24 @@
+{% set cardClasses = 'sds-card' %}
+{% if classes %}
+	{% for class in classes %}
+		{% set cardClasses = cardClasses + " " + class %}
+	{% endfor %}
+{% endif %}
+{% if modifiers %}
+	{% for modifier in modifiers %}
+		{% set cardClasses = cardClasses + ' sds-card--' + modifier %}
+	{% endfor %}
+{% endif %}
+
 <!-- Card HTML start -->
 {%- if not header %}
 	<span id="cardHeader" role="header" aria-level="1">{{title}}</span>
 {% endif %}
-<div {% if not header %} aria-labelledby="cardHeader" {% endif %} class="sds-card {% for modifier in modifiers %} sds-card--{{modifier}}{% endfor %}">
+
+<div {% if not header %} aria-labelledby="cardHeader" {% endif %} class="{{cardClasses}}">
+
 	{%- if header %}
 		<div class="sds-card__header{% if color %} sds-card__header--{{color}}{% endif %} sds-card__header--{{header.style}}">
-
 			{%- if header.icon -%}
 				<div class="sds-card__icon">
 					{%- render '@icon', header.icon -%}
@@ -14,11 +27,11 @@
 
 			{%- if header.link -%}
 				<a href="{{header.link}}" class="sds-card__link">
-			{% endif -%}
+				{% endif -%}
 
-			{%- render '@title', {tag: "h2", content: title, classes: ["sds-card__title", 'test'] } -%}
+				{%- render '@title', {tag: "h2", content: title, classes: ["sds-card__title"] } -%}
 
-			{%- if header.link %}
+				{%- if header.link %}
 				</a>
 			{% endif -%}
 
@@ -39,38 +52,28 @@
 		</div>
 	{%- endif -%}
 
-	<div class="sds-card__content{% if body.grid %} grid-row{% endif %}">
+	<div class="sds-card__body{% if body.grid %} grid-row{% endif %}">
+		{% for content in body.content %}
 
-		{%- if body.lists -%}
-			{%- if body.grid %}
+			{%- if body.grid and content.col %}
+				<div class="grid-col-{{content.col}}">
+			{% elseif body.grid %}
 				<div class="grid-col">
 			{% endif -%}
 
-			{%- for list in body.lists -%}
-				{# use list items if declared else use default  #}
-				{%- if list.items -%}
-					{%- render '@list', list -%}
-				{%- else -%}
-					{%- render '@list', list, true -%}
-				{%- endif -%}
-			{%- endfor -%}
-
-			{%- if body.grid %}
-				</div>
-			{% endif -%}
-		{% endif -%}
-
-		{%- if body.content -%}
-			{%- if body.grid %}
-				<div class="grid-col">
+			{% if content.component %}
+				{% set component = "@" + content.component %}
+				{% render component, content.context, content.extend %}
+			{% elseif content.html %}
+				{{ content.html }}
+			{% else %}
+				<p>{{ content.text }}</p>
 			{% endif -%}
 
-			{{ body.content }}
-
 			{%- if body.grid %}
-				</div>
+					</div>
 			{% endif -%}
-		{%- endif -%}
-	</div>
+		{% endfor %}
+		</div>
 </div>
 <!-- Card HTML end -->

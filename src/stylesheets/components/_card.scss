@@ -7,13 +7,26 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
 
 .sds-card {
   @include u-padding(0);
+  @include u-border('base-light', 'solid', $sds-card-border-width);
+  border-radius: $sds-card-border-radius;
+  @include u-shadow(2);
+
+  // TODO: remove after USWDS import order corrected
+  &.shadow-0 {
+    box-shadow: none;
+  }
+
+  // TODO: remove after USWDS import order corrected
+  &.border-width-0 {
+    border: none;
+  }
 
   &__title {
     @include u-margin-y(0);
     display: inline-block;
   }
 
-  &__content {
+  &__body {
     @include u-padding(2);
   }
 
@@ -21,6 +34,8 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     @include sds-header;
     @include u-margin(0);
     @include u-padding(2);
+    border-top-left-radius: $inner-border-radius;
+    border-top-right-radius: $inner-border-radius;
 
     &--flex {
       @include grid-row;
@@ -90,19 +105,6 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     text-align: right;
   }
 
-  &--bordered {
-    @include u-border('base-light', 'solid', $sds-card-border-width);
-    border-radius: $sds-card-border-radius;
-    .sds-card__header {
-      border-top-left-radius: $inner-border-radius;
-      border-top-right-radius: $inner-border-radius;
-    }
-  }
-
-  &--shadowed {
-    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
-  }
-
   &--height-full {
     height: 100%;
   }
@@ -112,7 +114,7 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     .sds-card__header {
       @include bordered-item(true);
     }
-    .sds-card__content {
+    .sds-card__body {
       @include u-padding(0);
     }
   }

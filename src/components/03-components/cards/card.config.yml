@@ -1,7 +1,6 @@
 preview: "@sam"
 handle: card
 status: wip
-default: bordered and shadowed
 notes: A horizontal header may have a title and a button.
 meta:
   colors:
@@ -18,9 +17,6 @@ context:
   title: Contract Opportunities
   header:
     style: left
-  modifiers:
-    - shadowed
-    - bordered
   body:
     grid: false
     content: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae.

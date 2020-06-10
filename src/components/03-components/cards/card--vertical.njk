@@ -10,9 +10,11 @@
 		</div>
 	{% endif -%}
 
-	<div class="sds-card__content">
+	<div class="sds-card__body">
 		<h3 class="sds-card__title">{{title}}</h3>
-		<p class="usa-prose">{{body.content}}</p>
+		{% for content in body.content %}
+			<p>{{content.text}}</p>
+		{% endfor %}
 	</div>
 </div>
 <!-- Card HTML end -->

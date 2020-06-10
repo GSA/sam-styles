@@ -1,14 +1,22 @@
-preview: "@sam-content"
+preview: "@sam"
 label: Demo
 status: wip
-default: bordered and shadowed
 notes: |
-  A horizontal header may have a title and a button.
+  A card can have a horizontal header, a vertical header, or no header.
+
+  **Horizontal Header**
+  May have a title and an icon, one or two buttons, or an action item. Card headers with actions should have an action modifier "sds-card__header--action"
+
+  ***Lists***
+  Cards with horizontal headers can also be lists. Just add list modifier to top level sds-card element(*```sds-card sds-card--list```*)
+
+  **No Header**
+  508: card must have `aria-labelledby` attribute with a corresponding header outside of card
   ___
   **Variables:**
   - color (*optional*): option of base, accent-cool, accent-warm, or feature
-  - title
-  - modifiers: [shadowed, bordered, vertical, and/or list]
+  - title:
+  - modifiers: [vertical and list]
   - header: *(false if no header)*
     - style: option of left, stacked, center, action or flex
     - link: url
@@ -16,8 +24,19 @@ notes: |
     - buttons: [@button]
     - action: Boolean
   - body
-    - content
-    - lists: [@list]
+    - grid: Boolean to use grid
+    - content: [component, text, and/or html]
+      - component
+        - component: component *(ie: list)*
+        - context (*optional*): context for nested component
+        - col (*optional*): column width if body is a grid **default is grid-col**
+        - extend (*optional*): Boolean to extend component's default content
+      - text
+        - text: string
+        - col (*optional*): column width if body is a grid **default is grid-col**
+      - html
+        - html: ```html element```
+        - col (*optional*): column width if body is a grid **default is grid-col**
 display:
   text-align: center
 meta:
@@ -37,32 +56,31 @@ context:
     title: Contract Opportunities
     header:
       style: left
-    modifiers:
-      - shadowed
-      - bordered
     body:
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae.
+      content:
+        - text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae.
 variants:
   - name: bordered
     label: Bordered No Shadow
     context:
       card:
-        modifiers:
-          - bordered
+        classes:
+          - shadow-0
   - name: shadowed
     label: Shadowed No Border
     context:
       card:
-        modifiers:
-          - shadowed
+        classes:
+          - border-width-0
   - name: no shadow
     label: No Shadow or Border
     context:
       card:
-        modifiers:
+        classes:
+          - shadow-0
+          - border-width-0
   - name: no header
     label: No Header
-    notes: "508: card must have `aria-labelledby` attribute with a corresponding header outside of card"
     meta:
       colors:
     context:
@@ -103,7 +121,6 @@ variants:
           style: center
   - name: header button
     label: Header with One Button
-    notes: A horizontal card header may have a title and a button.
     context:
       card:
         header:
@@ -113,7 +130,6 @@ variants:
           style: flex
   - name: header buttons
     label: Header with Two Buttons
-    notes: A horizontal card header may have a title and two buttons.
     context:
       card:
         header:
@@ -125,7 +141,6 @@ variants:
           style: flex
   - name: header action
     label: Header with Action Button
-    notes: A horizontal card header may have an action button. Card headers with actions should have an action modifier "sds-card__header--action"
     context:
       card:
         header:
@@ -133,12 +148,9 @@ variants:
           style: action
   - name: vertical
     label: Vertical Header
-    notes: A card can have a vertical header
     context:
       card:
         modifiers:
-          - shadowed
-          - bordered
           - vertical
         header:
           icon:
@@ -146,15 +158,15 @@ variants:
             classes: fa-2x
   - name: list
     label: List
-    notes: Card layouts can be used for lists. Don't add bordered modifier to card -- just add to list
     context:
       card:
         modifiers:
-          - shadowed
           - list
         body:
-          lists:
-            - modifiers:
-              - bordered
-              - unstyled
           content:
+            - component: list
+              context:
+                modifiers:
+                - bordered
+                - unstyled
+              extend: true

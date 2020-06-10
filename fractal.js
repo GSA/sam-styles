@@ -23,9 +23,14 @@ components.set("default.preview", "@sam");
 const nunjucks = require("@frctl/nunjucks")({
   paths: ["src/components"],
   filters: {
-    setAttribute: function(dictionary, key, value) {
+    setAttribute: function setAttribute(dictionary, key, value) {
       dictionary[key] = value;
       return dictionary;
+    }
+  },
+  globals: {
+    push: function push(array, item) {
+      return array.push(item);
     }
   }
 });
