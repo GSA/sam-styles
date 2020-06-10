@@ -23,11 +23,17 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
 
   &__title {
     @include u-margin-y(0);
-    display: inline-block;
+    @include u-display('inline-block');
   }
 
   &__body {
     @include u-padding(2);
+    > *:first-child {
+      @include u-margin-top(0);
+    }
+    > *:last-child {
+      @include u-margin-bottom(0);
+    }
   }
 
   &__header {
@@ -39,22 +45,23 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
 
     &--flex {
       @include grid-row;
-      display: flex;
+      @include u-display('flex');
+      @include u-flex('align-center');
       .sds-card__title {
         @include grid-col(12);
-        text-align: center;
+        @include u-text('center');
         @include at-media('tablet-lg') {
           @include grid-col('auto');
-          text-align: left;
-          flex: 0 0 auto;
+          @include u-text('left');
+          flex: flex('auto');
         }
       }
       .sds-card__buttons {
         @include grid-col(12);
         @include at-media('tablet-lg') {
           @include grid-col;
-          flex: 1 0 auto;
-          text-align: right;
+          flex: flex('fill');
+          @include u-text('right');
         }
       }
     }
@@ -64,21 +71,20 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
         @include u-margin-right(1);
       }
       > * {
-        display: inline-block;
-        vertical-align: bottom;
+        @include u-display('inline-block');
+        @include u-text('bottom');
       }
     }
 
     &--stacked, &--center {
-      text-align: center;
+      @include u-text('center');
     }
 
     &--action {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      @include u-display('flex');
+      @include u-flex('align-center', 'justify');
       .sds-card__action > * {
-        margin-right: 0;
+        @include u-margin-right(0);
       }
     }
   }
@@ -87,30 +93,28 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     .usa-button {
       @include u-width(full);
       @include at-media('tablet-lg') {
-        width: auto;
-        width: initial;
+        @include u-width('auto');
+        margin-left: units(1);
+        margin-right: units(0);
       }
-    }
-    :last-child {
-      margin-right: 0;
     }
   }
 
   &__link {
-    width: 100%;
+    @include u-width('full');
     color: inherit;
   }
 
   &__action {
-    text-align: right;
+    @include u-text('right');
   }
 
   &--height-full {
-    height: 100%;
+    @include u-height('full');
   }
 
   &--list {
-    border: none;
+    @include u-border(0);
     .sds-card__header {
       @include bordered-item(true);
     }
@@ -120,7 +124,7 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
   }
 
   &--vertical {
-    display: flex;
+    @include u-display('flex');
     .sds-card__header {
       @include u-border-right('base-light', 'solid', $sds-card-border-width);
       border-top-right-radius: 0;
@@ -128,6 +132,6 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
   }
 
   .usa-button--outline {
-    background: white;
+    @include u-bg('white');
   }
 }
