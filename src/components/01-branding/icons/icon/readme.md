@@ -12,7 +12,7 @@ To use sam-styles icons, you need to know two bits of information to reference a
 <i class="sds fa-bell"></i> <!-- this icon's name is `bell` and sam-styles prefix is 'sds' -->
 ```
 
-If using icons in place they need a specific list add the class ```fa-fw```
+If using icons in place they need to be a fixed width (such as a list) add the class ```fa-fw```
 
 ### Semantic
 If icons aren't decorative they will need a title attribute and alternate text inside a sibling element. For more information see [Font Awesome](https://fontawesome.com/how-to-use/on-the-web/other-topics/accessibility)
