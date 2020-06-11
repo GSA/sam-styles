@@ -94,6 +94,7 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
       @include u-width(full);
       @include at-media('tablet-lg') {
         @include u-width('auto');
+        width: initial;
         margin-left: units(1);
         margin-right: units(0);
       }
