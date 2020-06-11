@@ -6,6 +6,13 @@ variants:
   - name: landing-page
     notes: "Landing Page"
     context:
+      tileIcon:
+        type: stack
+        icons:
+          - icon: triangle
+            classes: fa-stack-2x text-accent-cool-light fa-1x
+          - icon: video-circle
+            classes: fa-stack-1x text-base fa-2x
       iconSize: lg
       cards:
         - title: Data Services
@@ -148,7 +155,6 @@ variants:
                       icon:
                         icon: video-square
                         classes: fa-fw fa-lg
-
   - name: help-results
     label: Help Results
     context:
@@ -170,3 +176,11 @@ variants:
             href: ' '
   - name: page-with-sidebar
     label: Page With Sidebar
+    context:
+        actionIcon:
+          type: layers
+          icons:
+              -   icon: circle
+                  prefix: fas
+              -   icon: ellipsis
+                  dataTransform: shrink-6
