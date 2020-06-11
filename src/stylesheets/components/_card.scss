@@ -60,6 +60,8 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
         @include grid-col(12);
         @include at-media('tablet-lg') {
           @include grid-col;
+          // IE
+          flex: 1 0 auto;
           flex: flex('fill');
           @include u-text('right');
         }
@@ -94,7 +96,6 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
       @include u-width(full);
       @include at-media('tablet-lg') {
         @include u-width('auto');
-        width: initial;
         margin-left: units(1);
         margin-right: units(0);
       }
