@@ -3,28 +3,53 @@
   <div class="bg-base-darkest padding-1" style="color:white;max-width: fit-content">
 {% endif -%}
 
-<h5>BUTTON</h5>
-{% render '@buttons--single', button %}
-{% render '@buttons--single', button %}
-
-<h5>DISABLED</h5>
-{% render '@buttons--single', disabledButton %}
-
-<h5>STATES</h5>
 <div class="grid-row">
-<div class="grid-col">
-<h6>HOVER</h6>
-{% render '@buttons--single', hoverButton %}
-</div>
-<div class="grid-col">
-<h6>ACTIVE</h6>
-{% render '@buttons--single', activeButton %}
-</div>
-<div class="grid-col">
-<h6>FOCUS</h6>
-{% render '@buttons--single', focusButton %}
-</div>
-</div>
-{%- if (button.text == 'Outline-inverse') -%}
+  <div class="grid-col display-flex flex-column">
+    <h6 class="text-center">BUTTON</h6>
+    <div class="text-center">{% render '@buttons--single', button %}</div>
+    <h6 class="text-center">CIRCLE BUTTON</h6>
+    <div class="display-flex flex-justify-center">{% render '@buttons--single', button_c %}</div>
   </div>
+  <div class="grid-col display-flex flex-column">
+    <h6 class="text-center">DISABLED</h6>
+    <div class="text-center">{% render '@buttons--single', disabledButton %}</div>
+    <div class="display-flex flex-justify-center padding-top-8">{% render '@buttons--single', disabledButton_c %}</div>
+  </div>
+  <div class="grid-col display-flex flex-column">
+    <h6 class="text-center">HOVER</h6>
+    <div class="text-center">{% render '@buttons--single', hoverButton %}</div>
+    <div class="display-flex flex-justify-center padding-top-8">{% render '@buttons--single', hoverButton_c %}</div>
+  </div>
+  <div class="grid-col display-flex flex-column">
+    <h6 class="text-center">ACTIVE</h6>
+    <div class="text-center">{% render '@buttons--single', activeButton %}</div>
+    <div class="display-flex flex-justify-center padding-top-8">{% render '@buttons--single', activeButton_c %}</div>
+  </div>
+  <div class="grid-col display-flex flex-column">
+    <h6 class="text-center">FOCUS</h6>
+    <div class="text-center">{% render '@buttons--single', focusButton %}</div>
+    <div class="display-flex flex-justify-center padding-top-8">{% render '@buttons--single', focusButton_c %}</div>
+  </div>
+</div>
+<h3>Size and shadow</h3>
+<div class="grid-row">
+  <div class="grid-col display-flex flex-column">
+    <h6 class="text-center">BIG</h6>
+    <div class="text-center">{% render '@buttons--single', bigButton %}</div>
+    <div class="display-flex flex-justify-center padding-top-8">{% render '@buttons--single', bigButton_c %}</div>
+  </div>
+  <div class="grid-col display-flex flex-column">
+    <h6 class="text-center">SMALL</h6>
+    <div class="text-center">{% render '@buttons--single', smallButton %}</div>
+    <div class="display-flex flex-justify-center padding-top-8">{% render '@buttons--single', smallButton_c %}</div>
+  </div>
+  <div class="grid-col display-flex flex-column">
+    <h6 class="text-center">SHADOW</h6>
+    <div class="text-center">{% render '@buttons--single', shadowButton %}</div>
+    <div class="display-flex flex-justify-center padding-top-8">{% render '@buttons--single', shadowButton_c %}</div>
+  </div>
+</div>
+
+{%- if (button.text == 'Outline-inverse') -%}
+</div>
 {% endif -%}

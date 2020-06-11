@@ -58,8 +58,9 @@
   &.sds-button--small {
     height: units(3);
     width: units(3);
+    padding: initial;
   }
-  &.sds-button--large {
+  &.sds-button--big {
     height: units(5);
     width: units(5);
   }
@@ -271,6 +272,10 @@
 
 // Size
 .sds-button.sds-button--small {
+  @include u-font("sans", "2xs");
+  padding: 10px units(2);
+}
+.sds-button--small {
   @include u-font("sans", "2xs");
   padding: 10px units(2);
 }
