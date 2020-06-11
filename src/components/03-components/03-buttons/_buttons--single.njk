@@ -1,1 +1,64 @@
-<button class="usa-button{% if modifiers %}{% for modifier in modifiers %} usa-button--{{ modifier }}{% endfor %}{% endif %}">{{text}}</button>
+{#
+    Creates a button.
+    link        (string) - use "a" instead of "button". String should be any valid HREF value
+    modifiers   (array)  - USA "secondary,base,outline,inverse,big,unstyled,hover,active,focus"
+    smodifiers  (array)  - SDS "circle,small"
+    disabled    (bool)   - adds disabled attribute 
+    classes     (string) - extra classes
+    ext         (string) - other attributes i.e. ( tabindex="0" onclick="alert" )
+    text        (string) - text of the button 
+    icon        (object) - icon before text if there is text {prefix,icon,title} 
+    icon_right  (object) - icon after text if there is text {prefix,icon,title} 
+#}
+<{%
+if link 
+%}a href="{{link}}{% 
+else %}button{% 
+endif 
+%} class="usa-button{%
+if modifiers 
+%}{%
+    for modifier in modifiers 
+    %} usa-button--{{ modifier }}{%
+    endfor 
+%}{% 
+endif 
+%}{%
+if smodifiers 
+%}{%
+    for modifier in smodifiers 
+    %} sds-button--{{ modifier }}{%
+    endfor 
+%}{% 
+endif 
+%}{%
+if classes
+%} {{classes}}{%
+endif
+%}"{%
+if ext
+%} {{ext}}{%
+endif
+%}{%
+if disabled 
+%} disabled="disabled"{% 
+endif 
+%}>{%
+if icons
+%}{% render '@icon', icon %}{#{prefix:'prefix',icon:'icon',title:'tile'}#}{% 
+endif 
+%}{%
+if text 
+%}{{text}}{% 
+endif 
+%}{%
+if icon_right 
+%}{% render '@icon_right', icon_right %}{#{prefix:'prefix',icon:'icon',title:'tile'}#}{% 
+endif 
+%}<{%
+if link 
+%}/a{% 
+else 
+%}/button{% 
+endif 
+%}>
