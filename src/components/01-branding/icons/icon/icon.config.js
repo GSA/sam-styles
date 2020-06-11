@@ -1,3 +1,5 @@
+const _ = require("lodash");
+
 const icons = [
   "pentagon",
   "triangle",
@@ -95,20 +97,39 @@ icons.sort();
  * Helper to convert the list of icon names to a list of icon variants.
  */
 function getIconVariants() {
-  let variants = [];
-  let len = icons.length;
+  const variants = [];
 
-  for (let i = 0; i < len; i++) {
-    let icon = icons[i];
-    let variant = {
+  // example colors
+  let colorsLoop = [null, 'primary', 'secondary', 'accent-cool'];
+
+  // loop through example colors for demo
+  const colorRepeat = _.floor(icons.length, colorsLoop.length);
+  const colors = _.flatten(Array(colorRepeat).fill(colorsLoop));
+
+  for (let i = 0; i < icons.length; i++) {
+    const icon = icons[i];
+
+    // set icon color if present in demo color loop
+    const classes =  colors[i] ? 'fa-2x text-' + colors[i] : 'fa-2x';
+
+    const variant = {
       name: icon,
       context: {
-        icon: icon
+        icon: icon,
+        classes: classes
       }
     };
     variants.push(variant);
   }
   return variants;
+}
+function getCollator(markup, item) {
+    const html =  '<!-- Start: @' + item.handle + ' -->' +
+    '<div class="display-inline-block padding-2 text-center">' +
+      '<p>' + item.name + '</p>' + markup +
+    '</div>' +
+    '<!-- End: @' + item.handle + ' -->';
+    return html;
 }
 
 module.exports = {
@@ -116,11 +137,10 @@ module.exports = {
   status: "wip",
   collated: true,
   context: {
-    classes: "fa-2x",
-    title: "Screen reader description",
+    title: "Screen reader description"
   },
   collator: function (markup, item) {
-    return '<!-- Start: @' + item.handle + ' -->\n<div class="display-inline-block padding-2 text-center"><p>' + item.name + '</p>' + markup + '</div>\n<!-- End: @' + item.handle + ' -->\n';
+    return getCollator(markup, item);
   },
   default: icons[0],
   variants: getIconVariants()

@@ -1,10 +1,5 @@
 <button class="usa-nav__close">
-  <div class="fa-lg">
-    <span class="fa-layers fa-fw">
-      {% render '@icon', {icon:'circle', prefix: 'fas', classes:"fa-inverse", dataTransform:'grow-2'} %}
-      {% render '@icon', {icon:'times', prefix: 'fas', dataTransform:'shrink-6'} %}
-    </span>
-  </div>
+  {% render '@layered-icon', close %}
   <span class="usa-sr-only">Close</span>
 </button>
 <ul class="usa-nav__primary usa-accordion">

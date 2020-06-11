@@ -54,10 +54,7 @@
           <span class="display-none desktop-lg:display-inline-block">
             <button class="sds-button sds-button--labeled-icon">
               Actions
-              <span class="fa-layers fa-fw">
-                {% render '@icon', {icon:'circle', prefix:'fas'} %}
-                {% render '@icon', {icon:'ellipsis-v', prefix:'fas', dataTransform:"shrink-6"} %}
-              </span>
+              {% render '@layered-icon', actionIcon %}
             </button>
           </span>
 
