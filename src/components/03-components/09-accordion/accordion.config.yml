@@ -1,0 +1,15 @@
+label: Accordion
+status: wip
+preview: "@sam-content"
+default: default
+context:
+  text: accordion 
+variants:
+  - name: multiselectable
+    context:
+      category: alternate
+      label: Multiselectable
+      classes: 'usa-accordion' 'usa-accordion--bordered'
+      header: First Amendment
+      p: Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.
+      body: Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.

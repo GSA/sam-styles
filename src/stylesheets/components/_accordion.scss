@@ -1,5 +1,5 @@
-.usa-accordion,
-.usa-accordion.usa-accordion--bordered {
+.usa-accordion{
+&--bordered  {
   @include u-padding-x(1);
   .usa-accordion__button {
     @include u-bg('white');
@@ -62,6 +62,7 @@
       }
     }
   }
+}
 }
 
 .usa-accordion.usa-accordion--bordered{
