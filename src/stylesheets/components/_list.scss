@@ -1,10 +1,11 @@
 .sds-list {
   @extend .usa-list;
-
   li {
-    @include u-padding-bottom(1);
-    max-width: unset;
-    margin-bottom: 0;
+    @include u-margin-bottom(1);
+  }
+
+  svg {
+    @include u-margin-right(1);
   }
 
   &--unstyled {
@@ -17,17 +18,25 @@
     }
   }
 
-  &--flex {
+  &--icon {
+    list-style-type: none;
     > li {
       display: flex;
-      align-items: top;
-    }
-    svg {
-      @include u-margin-right(2);
+      align-items: center;
+      svg {
+        align-self: baseline;
+      }
+      .sds-list__item-content {
+        line-height: 100%;
+      }
+      .usa-link {
+        float: left;
+      }
     }
   }
 
   &--nested {
+    margin-top: 0;
     > li:last-of-type {
       padding-bottom: 0;
     }

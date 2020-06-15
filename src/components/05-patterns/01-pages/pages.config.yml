@@ -19,99 +19,124 @@ variants:
         contents:
           - listTitle: APIs
             list:
-              modifiers: ['unstyled', 'flex']
+              modifiers:
+                - icon
+                - unstyled
               items:
-                - text: Getting Started with web services
+                - link:
+                    text: Getting Started with web services
+                    href: ' '
                   icon:
                     icon: note
                     classes: fa-lg fa-fw
-                  href: ' '
-                - text: Go to entity registration API
+                - link:
+                    text: Go to entity registration API
+                    href: ' '
                   icon:
                     icon: angle-right
                     classes: fa-lg fa-fw
-                  href: ' '
-                - text: Go to exclusions API
+                - link:
+                    text: Go to exclusions API
+                    href: ' '
                   icon:
                     icon: angle-right
                     classes: fa-lg fa-fw
-                  href: ' '
           - listTitle: Connect to Service APIs
             list:
-              modifiers: ['unstyled', 'flex']
+              modifiers:
+                - icon
+                - unstyled
               items:
-                - text: Downloading entity registration files
+                - link:
+                    text: Downloading entity registration files
+                    href: ' '
                   icon:
                     icon: note
                     classes: fa-lg fa-fw
-                  href: ' '
-                - text: Downloading exclusion files
+                - link:
+                    text: Downloading exclusion files
+                    href: ' '
                   icon:
                     icon: note
                     classes: fa-lg fa-fw
-                  href: ' '
-                - text: Go to entity registration downloads
+                - link:
+                    text: Go to entity registration downloads
+                    href: ' '
                   icon:
                     icon: angle-right
                     classes: fa-lg fa-fw
-                  href: ' '
-                - text: Go to exclusions downloads
+                - link:
+                    text: Go to exclusions downloads
+                    href: ' '
                   icon:
                     icon: angle-right
                     classes: fa-lg fa-fw
-                  href: ' '
       - title: More about Entity Information
         secondCard: true
         contents:
           - listTitle: Exclusion Resources
             list:
-              modifiers: ['unstyled', 'flex']
+              modifiers:
+                - icon
+                - unstyled
               items:
-                - text: Types of exclusions
-                  href: ' '
+                - link:
+                    text: Types of exclusions
+                    href: ' '
                   icon:
                     icon: note
                     classes: fa-fw fa-lg
-                - text: Legacy CT Codes
-                  href: ' '
+                - link:
+                    text: Legacy CT Codes
+                    href: ' '
                   icon:
                     icon: note
                     classes: fa-fw fa-lg
-                - text: Agency Exclusion POCs
-                  href: ' '
+                - link:
+                    text: Agency Exclusion POCs
+                    href: ' '
                   icon:
                     icon: note
                     classes: fa-fw fa-lg
           - listTitle: User Guides
             list:
-              modifiers: ['unstyled', 'flex']
+              modifiers:
+                - icon
+                - unstyled
               items:
-                - text: Exclusions Managmement User Guide for Federal Users
-                  href: ' '
+                - link:
+                    text: Exclusions Managmement User Guide for Federal Users
+                    href: ' '
                   icon:
                     icon: note
                     classes: fa-fw fa-lg
-                - text: Data Services User Guide
-                  href: ' '
+                - link:
+                    text: Data Services User Guide
+                    href: ' '
                   icon:
                     icon: note
                     classes: fa-fw fa-lg
           - listTitle: Help
             list:
-              modifiers: ['unstyled', 'flex']
+              modifiers:
+                - icon
+                - unstyled
               items:
-                - text: Frequently Asked Questions
-                  href: ' '
+                - link:
+                    text: Frequently Asked Questions
+                    href: ' '
                   icon:
                     icon: question
                     classes: fa-fw fa-lg
-                - text: Glossary Terms
-                  href: ' '
+                - link:
+                    text: Glossary Terms
+                    href: ' '
                   icon:
                     icon: book
                     classes: fa-fw fa-lg
-                - text: Videos
-                  href: ' '
+                - link:
+                    text: Videos
+                    href: ' '
                   icon:
                     icon: video-square
                     classes: fa-fw fa-lg
@@ -126,14 +151,18 @@ variants:
       menu:
         items:
           - text: Related Articles
-          - text: As a federal Hierarchy Administrator, what data is needed to create an office?
-            href: ' '
-          - text: Wage Determination Now in beta.SAM.gov
-            href: ' '
-          - text: Assistance Admin Transition
-            href: ' '
-          - text: Non-Standard Wage
-            href: ' '
+          - link:
+              text: As a federal Hierarchy Administrator, what data is needed to create an office?
+              href: ' '
+          - link:
+              text: Wage Determination Now in beta.SAM.gov
+              href: ' '
+          - link:
+              text: Assistance Admin Transition
+              href: ' '
+          - link:
+              text: Non-Standard Wage
+              href: ' '
   - name: page-with-sidebar
     label: Page With Sidebar
     context:
