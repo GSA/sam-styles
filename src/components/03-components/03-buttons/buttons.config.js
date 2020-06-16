@@ -65,6 +65,7 @@ function variants() {
           modifiers: null,
           icons: true,
           classes: "usa-focus",
+          modifiers: vmods,
           smodifiers: ['circle'],
         },
         disabledButton_c: {

@@ -19,7 +19,7 @@ endif
 if modifiers 
 %}{%
     for modifier in modifiers 
-    %} usa-button--{{ modifier }}{%
+    %}{% if modifier !== 'default' %} usa-button--{{ modifier }}{%  endif %}{%
     endfor 
 %}{% 
 endif 

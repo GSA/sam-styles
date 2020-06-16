@@ -1,18 +1,21 @@
 .usa-button {
-  @include u-margin-y("1px");
+  // @include u-margin-y("1px");
   @include u-text("secondary-darker");
-  @include u-padding-y(1.5);
-  @include u-padding-x(4);
+  @include u-border('primary');
+  @include u-border-width('2px');
 
   &.usa-button--hover,
   &:hover {
     @include u-bg("primary-light");
+    @include u-border('primary-light');
+    @include u-border-width('2px');
     @include u-text("secondary-darker");
   }
 
   &.usa-button--active,
   &:active {
     @include u-bg("secondary-darker");
+    @include u-border('secondary-darker');
     @include u-text("white");
   }
 
@@ -20,45 +23,34 @@
   &:focus {
     outline-offset: units(2px);
   }
+  &--disabled, &:disabled {
+    box-shadow: none;
+    @include u-border('disabled');
+  }
 }
 
 .sds-button--circle {
   border-radius: 50%;
+  @include u-border('primary');
+  @include u-border-width('2px');
   color: color("secondary-darker");
-  border: 0;
+  // border: 0;
   height: units(4);
   width: units(4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include u-display('flex');
+  @include u-flex('align-center');
+  @include u-flex('justify-center');
   margin: unset;
-  padding: initial;
+  padding: 0;
 
   .svg-inline--fa {
     align-self: center;
   }
 
-  &.usa-button--hover,
-  &:hover {
-    background-color: color("primary-light");
-    color: color("secondary-darker");
-  }
-
-  &.usa-button--active,
-  &:active {
-    background-color: color("secondary-darker");
-    color: color("white");
-  }
-
-  &.usa-focus,
-  &:focus {
-    outline-offset: units(2px);
-  }
-
   &.sds-button--small {
     height: units(3);
     width: units(3);
-    padding: initial;
+    padding: 0;
   }
   &.sds-button--big {
     height: units(5);
@@ -68,7 +60,7 @@
 
 .usa-button--outline {
   background-color: transparent;
-  box-shadow: $button-stroke color("primary");
+  box-shadow: none;
 
   &:visited {
     color: color("primary");
@@ -77,133 +69,111 @@
   &.usa-button--hover,
   &:hover {
     background-color: transparent;
-    box-shadow: $button-stroke color("primary-light");
+    box-shadow: none;
   }
 
   &.usa-button--active,
   &:active {
     background-color: transparent;
     color: color("secondary-darker");
-    box-shadow: $button-stroke color("secondary-darker");
+    box-shadow: none;
   }
   
-  // &.sds-button--shadow {
-  //   box-shadow: $button-stroke color("primary"), $button-shadow;
-  //   &:hover,
-  //   &.usa-button--hover {
-  //     box-shadow: $button-stroke color("primary-light"), $button-shadow;
-  //   }
-  //   &:active,
-  //   &.usa-button--active {
-  //     box-shadow: $button-stroke color("secondary-darker"), $button-shadow;
-  //   }
-  // }
 
   &.usa-button--inverse {
     background-color: transparent;
-    box-shadow: $button-stroke color("primary");
     color: color("white");
+    box-shadow: none;
 
     &:visited {
       color: color("base-lighter");
+      box-shadow: none;
     }
 
     &.usa-button--hover,
     &:hover {
       background-color: transparent;
-      box-shadow: $button-stroke color("base-lightest");
       color: color("base-lightest");
+      box-shadow: none;
     }
 
     &.usa-button--active,
     &:active {
       background-color: transparent;
-      box-shadow: $button-stroke color("white");
       color: color("base-light");
+      box-shadow: none;
+    }
+
+    &:disabled {
+      background-color: transparent;
+      color: color("base-light");
+      box-shadow: none;
     }
   }
 }
-
 .usa-button--base {
   color: color("gold-70");
   background-color: color("accent-warm-lighter");
-  box-shadow: $button-stroke color("base-light");
+  //box-shadow: $button-stroke color("base-light");
+    @include u-border('base-light');
 
   &.usa-button--hover,
   &:hover {
     color: color("gold-70");
     background-color: color("white");
-    box-shadow: $button-stroke color("base");
+    //box-shadow: $button-stroke color("base");
+    @include u-border('base');
   }
 
   &.usa-button--active,
   &:active {
     color: color("white");
     background-color: color("base-dark");
+    @include u-border('base-dark');
   }
-
-  // &.sds-button--shadow {
-  //   box-shadow: $button-stroke color("base-light"), $button-shadow;
-  //   &:hover,
-  //   &.usa-button--hover {
-  //     box-shadow: $button-stroke color("base"), $button-shadow;
-  //   }
-  //   &:active,
-  //   &.usa-button--active {
-  //     box-shadow: $button-stroke color("base-dark"), $button-shadow;
-  //   }
-  // }
 }
 
 .usa-button--secondary {
   background-color: color("primary-lighter");
-  box-shadow: $button-stroke color("primary");
+  // box-shadow: $button-stroke color("primary");
 
   &.usa-button--hover,
   &:hover {
-    box-shadow: $button-stroke color("primary-light");
+    // box-shadow: $button-stroke color("primary-light");
     background-color: color("white");
   }
 
   &.usa-button--active,
   &:active {
     color: color("secondary-darker");
-    box-shadow: $button-stroke color("secondary-darker");
+    // box-shadow: $button-stroke color("secondary-darker");
     background-color: color("white");
   }
 
   &.usa-button--disabled,
   &:disabled {
     color: color("disabled");
-    box-shadow: $button-stroke color("disabled");
+    // box-shadow: $button-stroke color("disabled");
+    @include u-border('disabled');
     background-color: transparent;
   }
-
-  // &.sds-button--shadow {
-  //   box-shadow: $button-stroke color("primary"), $button-shadow;
-  //   &:hover,
-  //   &.usa-button--hover {
-  //     box-shadow: $button-stroke color("primary-light"), $button-shadow;
-  //   }
-  //   &:active,
-  //   &.usa-button--active {
-  //     box-shadow: $button-stroke color("secondary-darker"), $button-shadow;
-  //   }
-  // }
 }
 
 .usa-button--danger {
   background-color: color("error");
+  @include u-border('error');
 
   &.usa-button--hover,
   &:hover {
     background-color: color("error-lighter");
+    @include u-border('error-lighter');
   }
 
   &.usa-button--active,
   &:active {
     color: color("white");
     background-color: color("error-dark");
+    @include u-border('error-dark');
   }
 }
 
@@ -221,7 +191,6 @@
   background-color: color("white");
   border: 0;
   border-radius: radius($theme-button-border-radius);
-  box-shadow: inset 0px 0px 0 1px color("base-lighter");
   color: color("secondary-dark");
   cursor: pointer;
   display: inline-block;
@@ -237,13 +206,12 @@
 
   &:hover,
   &.usa-button--hover {
-    box-shadow: inset 0px 0px 0 1px color("primary");
     text-decoration: none;
   }
 
   &:active,
   &.usa-button--active {
-    box-shadow: inset 0px 0px 0 1px color("secondary-darker");
+    // box-shadow: inset 0px 0px 0 1px color("secondary-darker");
   }
 
   &:focus,
@@ -258,26 +226,26 @@
 
 // Shadow
 .sds-button--shadow {
-  box-shadow: $button-shadow;
+   box-shadow: $button-shadow;
   &:hover,
   &.usa-button--hover {
-    box-shadow: $button-shadow;
+     box-shadow: $button-shadow;
   }
 
   &:active,
   &.usa-button--active {
-    box-shadow: $button-shadow;
+     box-shadow: $button-shadow;
   }
 }
 
 // Size
 .sds-button.sds-button--small {
   @include u-font("sans", "2xs");
-  padding: 10px units(2);
+  // padding: units(1) units(2);
 }
 .sds-button--small {
   @include u-font("sans", "2xs");
-  padding: 10px units(2);
+  padding: units(1) units(2);
 }
 
 /*-------------------
@@ -305,16 +273,11 @@
 }
 
 /*-------------------
-  Circular Buttons
+  Circular Buttons - DEPRECATED: Use .sds-button--circle
 --------------------*/
-// Utility buttons only include an icon
-// DEPRECATED: Use .sds-button--circle
 .sds-button.sds-button--circular {
   @include u-radius("pill");
   @include u-padding-x("105");
-  // Font-Awesome Fixed width class
-  // its slightly narrow to make it
-  // look like a cirle
   .svg-inline--fa.fa-fw {
     width: 1.1em;
   }
@@ -375,8 +338,8 @@
   Icon Button
 --------------------*/
 .sds-button.sds-button--icon {
-  height: 45px;
-  min-width: 225px;
+  height: units(6);
+  min-width: units('card-lg');
   @include u-padding-x(4);
   @include u-radius("lg");
   @include u-display("flex");
@@ -384,12 +347,12 @@
   @include u-flex("justify-center");
 
   svg {
-    margin-right: 15px;
-    width: 45px !important;
+    margin-right: units(2);
+    width:  units(6) !important;
   }
 
   span {
-    font-size: 14px;
+    @include u-font("sans","3xs");
     margin: auto 0;
     @include u-text("bold");
   }
