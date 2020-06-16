@@ -1,0 +1,26 @@
+label: Paragraph Error
+status: wip
+preview: "@sam-content"
+context: 
+    items: 
+      - name: error-paragraph
+        label: Error Paragraph
+        class: p p--error
+        weight: Regular
+        size: 1 rem
+        lheight: 1.25 rem
+        color: Error-Dark (#B51D09)
+      - name: error-large-paragraph
+        label: Error Large Paragraph
+        class: p--large p--error
+        weight: Regular
+        size: 1.13 rem
+        lheight: 1.5 rem
+        color: Error-Dark (#B51D09)
+      - name: error-fineprint-paragraph
+        label: Error Fine Print Paragraph
+        class: p--fine-print p--error
+        weight: Regular
+        size: 0.87 rem
+        lheight: 1 rem
+        color: Error-Dark (#B51D09)

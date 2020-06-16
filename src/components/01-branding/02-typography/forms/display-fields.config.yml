@@ -1,0 +1,96 @@
+label: Display Fields
+status: wip
+preview: "@sam-content"
+context: 
+    items: 
+      - name: section-header
+        label: Section Header
+        class: section-header
+        weight: Semi-Bold
+        size: 1.46 rem
+        lheight: 2 rem
+        color: Base-Dark (#454540)
+      - name: sub-section-header
+        label: Sub-Section Header
+        class: section-header--sub
+        weight: Light
+        size: 1.13 rem
+        lheight: 1.5 rem
+        color: Base-Dark (#454540)        
+      - name: large-field-label
+        label: Large Field Label
+        class: field-label--large
+        weight: Regular
+        size: 1.0 rem
+        lheight: 1.25 rem
+        color: Base-Dark (#454540)
+      - name: field-label
+        label: Field Label
+        class: field-label
+        weight: Regular
+        size: 0.93 rem
+        lheight: 1.25 rem
+        color: Base-Dark (#454540)
+      - name: small-field-label
+        label: Small Field Label
+        class: field-label--small
+        weight: Italics
+        size: 0.87 rem
+        lheight: 1 rem
+        color: Base (#757575)
+      - name: large-field-value
+        label: Large Field Value
+        class: field-value--large
+        weight: Semi-Bold
+        size: 1.13 rem
+        lheight: 1.5 rem
+        color: Base-Dark (#454540)
+      - name: large-field-value-link
+        label: Large Field Value Link
+        class: field-value--large usa-link
+        weight: Semi-Bold
+        size: 1.13 rem
+        lheight: 1.5 rem
+        color: Placeholder (#3F57A6)
+      - name: field-value
+        label: Field Value
+        class: field-value
+        weight: Semi-Bold
+        size: 1.0 rem
+        lheight: 1.25 rem
+        color: Base-Dark (#454540)
+      - name: field-value-link
+        label: Field Value Link
+        class: field-value usa-link
+        weight: Semi-Bold
+        size: 1.0 rem
+        lheight: 1.25 rem
+        color: Placeholder (#3F57A6)
+      - name: small-field-value
+        label: Small Field Value
+        class: field-value--small
+        weight: Regular
+        size: 0.87 rem
+        lheight: 1.0 rem
+        color: Base-Dark (#454540)
+      - name: small-field-value-link
+        label: Small Field Value Link
+        class: field-value--small usa-link
+        weight: Semi-Bold
+        size: 0.87 rem
+        lheight: 1.0 rem
+        color: Placeholder (#3F57A6)
+      - name: field-paragraph
+        label: Field Paragraph
+        class: field-paragraph
+        weight: Regular
+        size: 1.0 rem
+        lheight: 1.25 rem
+        color: Base-Dark (#454540)
+      - name: field-paragraph-link
+        label: Field Paragraph Link
+        class: field-paragraph usa-link
+        weight: Regular
+        size: 1.0 rem
+        lheight: 1.25 rem
+        color: Placeholder (#3F57A6)

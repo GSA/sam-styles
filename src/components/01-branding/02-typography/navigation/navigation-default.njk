@@ -6,7 +6,21 @@
       <th scope="col">Markup</th>
       <th scope="col">Configuration</th>
     </tr>
-  </thead>
+  </thead>  
+  <tbody>
+    {% for item in items %}
+    <tr>
+      <th scope="row"><element class="{{ item.class }}">{{ item.label }}</element></th>
+      {% if item.class %}
+      <td>{{ ('<element class="' + item.class + '"></element>') | escape }}</td>
+      {% else %}
+      <td>{{ '<element></element>' | escape }}</td>
+      {% endif %}
+      <td>Weight: {{ item.weight }} / Size: {{ item.size }} / Line Height: {{ item.lheight }} / Color: {{ item.color }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+<!--
   <tbody>
     <tr>
       <td><element class="main-navigation--primary">Primary</element></td>
@@ -59,4 +73,5 @@
       <td>Weight: Regular / Size: 1.0rem / Line Height: 1.25 / Color: PLACEHOLDER (#3F57A6)</td>
     </tr>                                  
   </tbody>
+-->  
 </table>

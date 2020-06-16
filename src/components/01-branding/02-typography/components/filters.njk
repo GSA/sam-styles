@@ -8,6 +8,20 @@
     </tr>
   </thead>
   <tbody>
+    {% for item in items %}
+    <tr>
+      <th scope="row"><element class="{{ item.class }}">{{ item.label }}</element></th>
+      {% if item.class %}
+      <td>{{ ('<element class="' + item.class + '"></element>') | escape }}</td>
+      {% else %}
+      <td>{{ '<element></element>' | escape }}</td>
+      {% endif %}
+      <td>Weight: {{ item.weight }} / Size: {{ item.size }} / Line Height: {{ item.lheight }} / Color: {{ item.color }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+<!--    
+  <tbody>
     <tr>
       <td><element class="group-label">Group Label</element></td>
       <th scope="row">&ltelement class="group-label">&lt/element></th>
@@ -29,4 +43,5 @@
       <td>Weight: Semi-Bold / Size: 0.75rem / Line Height: 1rem / Color: PLACEHOLDER (#3D4551)</td>
     </tr>                       
   </tbody>
+-->  
 </table>

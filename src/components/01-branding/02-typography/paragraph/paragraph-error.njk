@@ -8,6 +8,19 @@
     </tr>
   </thead>
   <tbody>
+    {% for item in items %}
+    <tr>
+      <th scope="row"><p class="{{ item.class }}">{{ item.label }}</p></th>
+      {% if item.class %}
+      <td>{{ ('<p class="' + item.class + '"></p>') | escape }}</td>
+      {% else %}
+      <td>{{ '<p></p>' | escape }}</td>
+      {% endif %}
+      <td>Weight: {{ item.weight }} / Size: {{ item.size }} / Line Height: {{ item.lheight }} / Color: {{ item.color }}</td>
+    </tr>
+    {% endfor %}
+
+  <!--
     <tr>
       <td><p class="p p--error">Error Paragraph</p></td>
       <th scope="row">&ltp class="p p--error">&lt/p></th>
@@ -24,4 +37,5 @@
       <td>Weight: Regular / Size: 0.87rem / Line Height: 1rem / Color: Error-Dark (#B51D09)</td>
     </tr>
   </tbody>
+  -->
 </table>

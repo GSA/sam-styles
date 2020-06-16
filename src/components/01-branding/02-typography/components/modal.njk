@@ -8,6 +8,20 @@
     </tr>
   </thead>
   <tbody>
+    {% for item in items %}
+    <tr>
+      <th scope="row"><element class="{{ item.class }}">{{ item.label }}</element></th>
+      {% if item.class %}
+      <td>{{ ('<element class="' + item.class + '"></element>') | escape }}</td>
+      {% else %}
+      <td>{{ '<element></element>' | escape }}</td>
+      {% endif %}
+      <td>Weight: {{ item.weight }} / Size: {{ item.size }} / Line Height: {{ item.lheight }} / Color: {{ item.color }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+<!--    
+  <tbody>
     <tr>
       <td><element class="in-button-text">In-Button Text</element></td>
       <th scope="row">&ltelement class="in-button-text">&lt/element></th>
@@ -39,4 +53,5 @@
       <td>Weight: Bold / Size: 1.13rem / Line Height: 1.25rem / Color: Base-Dark (#454540)</td>
     </tr>                                 
   </tbody>
+-->  
 </table>
