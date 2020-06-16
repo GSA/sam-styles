@@ -2,7 +2,7 @@
   {% render '@title', title, true %}
 {% endif %}
 
-{% if ordered %}
+{%- if ordered %}
   <ol class="sds-list{% for modifier in modifiers %} sds-list--{{modifier}}{% endfor %}">
 {% else %}
   <ul class="sds-list {% for modifier in modifiers %} sds-list--{{modifier}}{% endfor %}">
@@ -11,7 +11,7 @@
   {%- for item in items -%}
     <li>
 
-      {% if item.icon %}
+      {%- if item.icon %}
         <span class="sds-list__item-icon">
           {% render '@icon', item.icon %}
         </span>
@@ -19,24 +19,24 @@
         <span class="sds-list__item-content">
       {%- endif -%}
 
-      {% if item.link -%}
-        {% render "@link", item.link %}
+      {%- if item.link %}
+        {% render "@link", item.link -%}
       {%- endif -%}
 
-      {%- if item.text %}
+      {%- if item.text -%}
         {{ item.text }}
-      {% endif -%}
+      {%- endif -%}
 
       {# span needed for styling #}
-      {% if item.icon %}
+      {%- if item.icon %}
         </span>
-      {% endif %}
+      {% endif -%}
 
-      {%- if item.nested %}
+      {%- if item.nested -%}
         {% render '@list', {items: item.nested.items, modifiers:['nested']} %}
       {% endif -%}
     </li>
-  {% endfor %}
+  {%- endfor -%}
 
 {%- if ordered -%}
   </ol>
