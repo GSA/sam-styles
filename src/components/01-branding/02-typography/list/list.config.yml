@@ -3,9 +3,6 @@ label: Lists
 preview: "@sam"
 default: unordered
 collated: true
-notes: "Lists can be ordered, unordered, or unstyled and have icons and/or be links.
-See Cards -- List for example of adding adding a list to a card.
-Modifiers are unstyled and flex (for icon lists)"
 context:
   modifiers:
   items:
