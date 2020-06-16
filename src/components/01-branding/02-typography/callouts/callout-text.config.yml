@@ -1,0 +1,34 @@
+label: Callout
+status: wip
+preview: "@sam-content"
+# context: 
+#     items: 
+#       - name: callout
+#         label: Field
+#         class: callout
+#         weight: Bold
+#         size: 1.13 rem
+#         lheight: 1.5 rem
+#         color: Ink (#2E2E2A)
+#       - name: callout-link
+#         label: Field Link
+#         class: callout usa-link
+#         weight: Bold
+#         size: 1.13 rem
+#         lheight: 1.5 rem
+#         color: Placeholder (#3F57A6)
+#       - name: text
+#         label: Light Text
+#         class: callout--light
+#         weight: Regular
+#         size: 1.13 rem
+#         lheight: 1.5 rem
+#         color: Ink (#2E2E2A)
+#       - name: text-link
+#         label: Light Text Link
+#         class: callout--light usa-link
+#         weight: Regular
+#         size: 1.13 rem
+#         lheight: 1.5 rem
+#         color: Placeholder (#3F57A6)
+  

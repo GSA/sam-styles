@@ -1,0 +1,75 @@
+label: Navigation
+status: wip
+preview: "@sam-content"
+context: 
+    items: 
+      - name: primary-main-navigation
+        label: Primary
+        class: usa-nav__primary
+        weight: Bold
+        size: 1.13 rem
+        lheight: 1.5 rem
+        color: Ink (#2E2E2A)
+      - name: secondary-main-navigation
+        label: Secondary
+        class: usa-nav__secondary
+        weight: Regular
+        size: 0.87 rem
+        lheight: 1.0 rem
+        color: Base (#757575)
+      - name: utility-navigation-header
+        label: Utility
+        class: utility-nav__header
+        weight: Semi-Bold
+        size: 1.46 rem
+        lheight: 2.0 rem
+        color: Placeholder (#4D4438)
+      - name: selected-side-navigation
+        label: Selected
+        class: usa-sidenav__selected
+        weight: Bold
+        size: 0.93 rem
+        lheight: 1.25 rem
+        color: Placeholder (#3F57A6)
+      - name: unselected-side-navigation
+        label: Unselected
+        class: usa-sidenav__unselected
+        weight: Semi-Bold
+        size: 0.93 rem
+        lheight: 1.25 rem
+        color: Base-Dark (#454540)
+      - name: action-menu-header
+        label: Action Menu Header
+        class: action-menu__header
+        weight: Semi-Bold
+        size: 1.06 rem
+        lheight: 1.5 rem
+        color: Base-Dark (#454540)
+      - name: action-menu-link
+        label: Action Menu Link
+        class: action-menu usa-link
+        weight: Semi-Bold
+        size: 1.0 rem
+        lheight: 1.25 rem
+        color: Placeholder (#3F57A6)
+      - name: action-menu-link-hover
+        label: Action Menu Link Hover
+        class: action-menu usa-link--hover
+        weight: Semi-Bold
+        size: 1.0 rem
+        lheight: 1.25 rem
+        color: Base-Dark (#454540)
+      - name: footer-navigation-group-label
+        label: Footer Navigation Group Label
+        class: usa-footer__group-label
+        weight: Bold
+        size: 1.13 rem
+        lheight: 1.5 rem
+        color: Base-Dark (#454540)
+      - name: footer-link
+        label: Footer Link
+        class: usa-footer usa-link
+        weight: Regular
+        size: 1.0 rem
+        lheight: 1.25 rem
+        color: Placeholder (#3F57A6)     

@@ -1,0 +1,33 @@
+label: Filters
+status: wip
+preview: "@sam-content"
+context: 
+    items: 
+      - name: group-label
+        label: Group Label
+        class: group-label
+        weight: Semi-Bold
+        size: 0.87 rem
+        lheight: 1.0 rem
+        color: Placeholder (#3D4551)
+      - name: filter-label
+        label: Filter Label
+        class: filter-label
+        weight: Semi-Bold
+        size: 0.87 rem
+        lheight: 1.0 rem
+        color: Base-Dark (#454540)
+      - name: input-text
+        label: Input Text
+        class: input-text
+        weight: Regular
+        size: 0.87 rem
+        lheight: 1.0 rem
+        color: Base-Dark (#454540)
+      - name: input-chip
+        label: Input Chip
+        class: input-chip
+        weight: Semi-Bold
+        size: 0.75 rem
+        lheight: 1.0 rem
+        color: Placeholder (#3D4551) 

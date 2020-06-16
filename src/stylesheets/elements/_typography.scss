@@ -98,67 +98,37 @@ p {
 
 .p {
   @extend p;
-  
-  &--error{
-    @include u-text('error-dark');
-  }
+}
 
-  &--large {
+p {
+
+  &.sds-big {
     @include u-font('sans', 'md');
     @include u-height('3');
   }
 
-  &--fine-print {
+  &.sds-small {
     @include u-font('sans', '3xs');
     @include u-height('2');
   }
-
-  &--bold {
-    @include u-text('bold');
-  }
-
-  &--semi-bold {
-    @include u-text('semibold');
-  }
-
-  &--light {
-    @include u-text('light');
-  }
-
-  &--italic {
-    @include u-text('italic');
+  
+  &.sds-text-error{
+    @include u-text('error-dark');
   }
   
-  &--color {
+  &.color {
     @include u-text('primary');
   }
 
-  &--ink {
+  &.ink {
     @include u-text('ink');
   }
 
-  &--base {
+  &.base {
     @include u-text('base');
   }
-
-  // &.page{
-  //   @include u-font('sans', 'md');
-
-  //   &.title {
-  //     @include u-text('semibold', 'base-dark');
-  //   }
-
-  //   &.text{
-  //     @include u-text('normal', 'base-dark');
-      
-  //     &--link{
-  //       @include u-text('bold');
-  //     }
-  //   }
-  // }
-
-
 }
+
 
 //Go Over
 .usa-color-text-visited {
@@ -227,9 +197,9 @@ h6 {
   @extend h6;
 }
 
-.h1, .h2, .h3, .h4, .h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   
-  &--light {
+  &.sds-light {
     @include u-text('normal');
   }
 }
@@ -241,256 +211,263 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+//Table expands for content
 td {
   white-space: nowrap;
 }
 
-//Input Label
-.input-label {
-  @extend p;
-  @extend .p--ink;
+// //Input Label
+// .input-label {
+//   @extend p;
+//   @extend .ink;
 
-  &--group {
-    @extend .input-label;
-    @extend .p--semi-bold;
-  }
-}
+//   &--group {
+//     @extend .input-label;
+//     @extend .semi-bold;
+//   }
+// }
 
-//Entered Text
-.entered-text {
-  @extend p;
-  @extend .p--color;
-}
+// //Entered Text
+// .entered-text {
+//   @extend p;
+//   @extend .color;
+// }
 
-//Field Paragraph
-.field-paragraph {
-  @extend p;
-}  
+// //Field Paragraph
+// .field-paragraph {
+//   @extend p;
+// }  
 
-//callout
-.callout {
-  @extend .p--large;
-  @extend .p--bold;
-  @extend .p--ink;
-  
-    &--light {
-      @extend .p--large;
-      @extend .p--light;
-  
-      a.usa-link {
-      }
-   }
-   
-    a.usa-link {
-      @include u-font('sans', 'md');
-      @include u-text('normal');
-    }
-}
+// //Filter
+// .group-label {
+//   @extend .sds-small;
+//   @extend .semi-bold;
+//   @extend .color;
+// }
 
-//Alerts
-.global-title {
-  @extend .h3;
-  @include u-text('semibold');
-}
+// .filter-label {
+//   @extend .sds-small;
+//   @extend .semi-bold;
+// }
 
-.global-text {
-  @extend .p--large;
+// .input-text {
+//   @extend .sds-small;
+// }
 
-  a.usa-link {
-    @include u-font('sans', 'md');
-    @include u-text('bold');
-  }
-}
+// .input-chip {
+//   @include u-font('sans', '3xs');    
+//   @include u-text('semibold', 'primary');
+// }
 
-.title {
-    @include u-text('semibold', 'base-dark');
-}
+// //Forms & Display Fields
+// .sds-display-fields {
+//   //base style - .field-label
+//   @include u-font('sans', '2xs');
+//   @include u-text('normal', 'base-dark');
 
-.page-title {
-  @extend .h3;
-  @include u-text('semibold');
-}
+//   &--large {
+//     @extend .p;
+//   }
 
-.page-text {
-  @extend .p--large;
-  
-  a.usa-link {
-    @include u-font('sans', 'md');
-    @include u-text('bold');
-  }
-}
+//   &--small {
+//     @extend .sds-small;
+//     @extend .italic;
+//     @extend .base;
+//   }
 
-//Filter
-.group-label {
-  @extend .p--fine-print;
-  @extend .p--semi-bold;
-  @extend .p--color;
-}
+//   //header Section-Header
+//   h1, h2, h3, h4, h5, h6 {
+//     @extend .h3;
+//     //sub-section header
+//     &--light {
+//       @extend .h3;
+//       @include u-text ('light');
+//     }
+//   }
+//   //base field value
+//   .field-value {
+//     @extend .p;
+//     @extend .semi-bold;
 
-.filter-label {
-  @extend .p--fine-print;
-  @extend .p--semi-bold;
-}
-
-.input-text {
-  @extend .p--fine-print;
-}
-
-.input-chip {
-  @include u-font('sans', '3xs');    
-  @include u-text('semibold', 'primary');
-}
-
-//Forms & Display Fields
-.section-header {
-  @extend .h2;
-
-  &--sub {
-    @extend .h3;
-    @include u-text('light');
-  }
-}
-
-.field-label {
-  @include u-font('sans', '2xs');
-  @include u-text('normal', 'base-dark');
-  
-  &--large {
-    @extend .p;
-  }
-
-  &--small {
-    @extend .p--fine-print;
-    @extend .p--italic;
-    @extend .p--base;
-  }
-}
-
-.field-value {
-  @extend .p;
-  @extend .p--semi-bold;
-
-  a.usa-link {
+//     a.usa-link {
+//       @extend .p;
+//       @extend .semi-bold;
+//       @include u-text ("primary");
+//     }
     
-  }
+//     &--large {
+//       @extend .sds-big;
+//       @extend .semi-bold;
   
-  &--large {
-    @extend .p--large;
-    @extend .p--semi-bold;
-
-    a.usa-link {
-      @include u-font('sans', 'md');
-    }
-  }
-
-  &--small {
-    @extend .p--fine-print;
-    
-    a.usa-link {
-      @include u-font('sans', '3xs');
-    }
-  }
-}
-
-.field-paragraph {
-  @extend .p;
-
-  a.usa-link {
-  }
-}
-
-//Buttons
-.in-button-text {
-  @include u-font('sans', 'sm');    
-  @include u-text('bold', 'primary');
-}
-
-.under-button-text {
-  @extend .p--fine-print;
-  @extend .p--color;
-}
-
-//Modal
-.modal-heading {
-  @extend .h2;
-}
-
-.modal-text {
-  @extend .p--large;
-  @extend .p--semi-bold;
-}
-
-//Search
-.helper-text {
-  @extend .p;
-  @extend .p--base;
-  @include u-height('205')
-}
-
-//Label
-.tag-label {
-  @extend .p;
-  @extend .p--bold;
-}
-
-.main-navigation {
-  &--primary {
-    @extend .p--large;
-    @extend .p--bold;
-    @extend .p--ink;
-  }
+//       a.usa-link {
+//         @extend .sds-big;
+//         @extend .semi-bold;
+//         @include u-text('primary');
+//       }
+//     }
   
-  &--secondary {
-    @extend .p--fine-print;
-    @extend .p--ink;
-  }
-}
-
-.utility-navigation {
-  &--header {
-    @extend .h2;
-    @include u-text('primary');
-  } 
-}
-
-.side-navigation {
-  &--selected {
-    @include u-font('sans', '2xs');
-    @include u-text('bold', 'primary');
-  }
-  
-  &--unselected {
-    @include u-font('sans', '2xs');
-    @include u-text('semibold', 'base-dark');
-  }
-}  
-  
-.action-menu {
-  &--header {
-    @include u-font('sans', 'sm');
-    @include u-text('semibold', 'base-dark');
-  }
-
-  a.usa-link {
-    @include u-font('sans', 'xs');
-    @include u-text('semibold');
-
-    &--hover {
-      @include u-font('sans', 'xs');
-      @include u-text('semibold');    
-      @include u-text('base-dark');
-    }
-  }
-}  
-
-.footer-navigation {
-  @extend .p;
+//     &--small {
+//       @extend .sds-small;
       
-  &--group-label {
-    @extend .p--large;
-    @extend .p--bold;
-  }
+//       a.usa-link {
+//         @extend .sds-small;
+//         @include u-font('sans', '3xs');
+//       }
+//     }
+//   }
 
-  a.usa-link {
-  }
-}
+
+// }
+
+// .section-header {
+//   @extend .h2;
+
+//   &--sub {
+//     @extend .h3;
+//     @include u-text('light');
+//   }
+// }
+
+// .field-label {
+//   @include u-font('sans', '2xs');
+//   @include u-text('normal', 'base-dark');
+  
+//   &--large {
+//     @extend .p;
+//   }
+
+//   &--small {
+//     @extend .sds-small;
+//     @extend .italic;
+//     @extend .base;
+//   }
+// }
+
+// .field-value {
+//   @extend .p;
+//   @extend .semi-bold;
+
+//   a.usa-link {
+    
+//   }
+  
+//   &--large {
+//     @extend .sds-big;
+//     @extend .semi-bold;
+
+//     a.usa-link {
+//       @include u-font('sans', 'md');
+//     }
+//   }
+
+//   &--small {
+//     @extend .sds-small;
+    
+//     a.usa-link {
+//       @include u-font('sans', '3xs');
+//     }
+//   }
+// }
+
+// .field-paragraph {
+//   @extend .p;
+
+//   a.usa-link {
+//   }
+// }
+
+// //Buttons
+// .in-button-text {
+//   @include u-font('sans', 'sm');    
+//   @include u-text('bold', 'primary');
+// }
+
+// .under-button-text {
+//   @extend .sds-small;
+//   @extend .color;
+// }
+
+// //Modal
+// .modal-heading {
+//   @extend .h2;
+// }
+
+// .modal-text {
+//   @extend .sds-big;
+//   @extend .semi-bold;
+// }
+
+// //Search
+// .helper-text {
+//   @extend .p;
+//   @extend .base;
+//   @include u-height('205')
+// }
+
+// //Label
+// .tag-label {
+//   @extend .p;
+//   @extend .bold;
+// }
+
+// .usa-nav {
+//   &__primary {
+//     @extend .sds-big;
+//     @extend .bold;
+//     @extend .ink;
+//   }
+  
+//   &__secondary {
+//     @extend .sds-small;
+//     @extend .ink;
+//   }
+// }
+
+// .utility-nav {
+//   &__header {
+//     @extend .h2;
+//     @include u-text('primary');
+//   } 
+// }
+
+// .usa-sidenav {
+//   &__selected {
+//     @include u-font('sans', '2xs');
+//     @include u-text('bold', 'primary');
+//   }
+  
+//   &__unselected {
+//     @include u-font('sans', '2xs');
+//     @include u-text('semibold', 'base-dark');
+//   }
+// }  
+  
+// .action-menu {
+//   &__header {
+//     @include u-font('sans', 'sm');
+//     @include u-text('semibold', 'base-dark');
+//   }
+
+//   a.usa-link {
+//     @include u-font('sans', 'xs');
+//     @include u-text('semibold');
+
+//     &--hover {
+//       @include u-font('sans', 'xs');
+//       @include u-text('semibold');    
+//       @include u-text('base-dark');
+//     }
+//   }
+// }  
+
+// .usa-footer {
+//   @extend .p;
+      
+//   &__group-label {
+//     @extend .sds-big;
+//     @extend .bold;
+//   }
+
+//   a.usa-link {
+//   }
+// }
