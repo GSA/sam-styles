@@ -8,3 +8,10 @@ context:
         icon: ellipsis
         classes: fa-fw
         dataTransform: grow-5
+    layeredIcon:
+        type: layers
+        icons:
+            -   icon: circle
+                prefix: fas
+            -   icon: ellipsis
+                dataTransform: shrink-6

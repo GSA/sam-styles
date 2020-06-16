@@ -32,3 +32,14 @@ context:
         links: *subnav_links
       - text: Simple link
         href: 'javascript:void(0)'
+  close:
+    type: layers
+    size: lg
+    icons:
+      - icon: circle
+        prefix: fas
+        classes: fa-inverse
+        dataTransform: grow-2
+      - icon: times
+        prefix: fas
+        dataTransform: shrink-6
