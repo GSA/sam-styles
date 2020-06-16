@@ -21,7 +21,6 @@ variants:
             list:
               modifiers:
                 - icon
-                - unstyled
               items:
                 - link:
                     text: Getting Started with web services
@@ -45,7 +44,6 @@ variants:
             list:
               modifiers:
                 - icon
-                - unstyled
               items:
                 - link:
                     text: Downloading entity registration files
@@ -78,7 +76,6 @@ variants:
             list:
               modifiers:
                 - icon
-                - unstyled
               items:
                 - link:
                     text: Types of exclusions
@@ -102,7 +99,6 @@ variants:
             list:
               modifiers:
                 - icon
-                - unstyled
               items:
                 - link:
                     text: Exclusions Managmement User Guide for Federal Users
@@ -120,7 +116,6 @@ variants:
             list:
               modifiers:
                 - icon
-                - unstyled
               items:
                 - link:
                     text: Frequently Asked Questions

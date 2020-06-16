@@ -146,9 +146,9 @@ variants:
             href: " "
             text: "Sample link"
           icon:
-            icon: archive
+            icon: question-circle
             classes: fa-fw
-            prefix: fas
+            prefix: far
         - text: ". The Defense Logistics Agency (DLA) Commercial and Government Entity (CAGE) portal to search for domestic and foreign entity CAGE Code information."
           link:
             href: " "
@@ -162,7 +162,7 @@ variants:
             href: " "
             text: DUNS Number Request
           icon:
-            icon: archive
+            icon: map-marked-alt
             prefix: fas
             classes: fa-fw
         - text: . The online portal for international entities to request a new NATO CAGE (NCAGE) Code or submit updates to an existing NCAGE Code record.
@@ -170,6 +170,6 @@ variants:
             href: " "
             text: NCAGE Code Request
           icon:
-            icon: archive
+            icon: file-alt
             prefix: fas
             classes: fa-fw

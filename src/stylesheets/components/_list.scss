@@ -2,6 +2,7 @@
   @extend .usa-list;
   li {
     @include u-margin-bottom(1);
+    @include u-measure(6);
   }
 
   svg {
@@ -19,8 +20,10 @@
   }
 
   &--icon {
-    list-style-type: none;
+    @include unstyled-list;
     > li {
+      @include u-measure(6);
+      @include u-margin-bottom(1);
       display: flex;
       align-items: center;
       svg {
