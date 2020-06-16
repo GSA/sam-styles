@@ -26,12 +26,8 @@
       @include u-margin-bottom(1);
       @include u-display('flex');
       @include u-flex('align-center');
-      svg {
+      .sds-list__item-icon {
         align-self: flex-start;
-      }
-      // keep top row of text centered with large or small icons
-      .sds-list__item-content {
-        line-height: 100%;
       }
       .usa-link {
         @include u-float('left');

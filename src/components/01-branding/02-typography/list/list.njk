@@ -12,7 +12,9 @@
     <li>
 
       {% if item.icon %}
-        {% render '@icon', item.icon %}
+        <span class="sds-list__item-icon">
+          {% render '@icon', item.icon %}
+        </span>
         {# span needed for aligning text with icon #}
         <span class="sds-list__item-content">
       {%- endif -%}
