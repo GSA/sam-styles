@@ -1,8 +1,7 @@
 label: Accordion
 status: wip
-preview: "@sam-content"
+preview: "@sam"
 default: Bordered
-# collated: true
 context:
   text: accordion
   classes: 'usa-accordion--bordered'
