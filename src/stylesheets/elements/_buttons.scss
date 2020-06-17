@@ -50,12 +50,12 @@
     height: units(3);
     width: units(3);
     padding: 0;
-    font-size: .6em;
+    font-size: size('body', 1);
   }
   &.sds-button--big {
     height: units(5);
     width: units(5);
-    font-size: 1.2em;
+    font-size: size('body', 8);
   }
 }
 
@@ -347,7 +347,7 @@
   }
   .fa-layers {
     @include u-position("absolute");
-    font-size: 27px;
+    font-size: size('body', 10);
     top: 5px;
     right: 5px;
     .fa-circle {
@@ -360,7 +360,7 @@
   &.sds-button--small {
     @include u-padding-right(4);
     .fa-layers {
-      font-size: 20px;
+      font-size: size('body', 8);
       top: 6px;
     }
   }
