@@ -60,7 +60,9 @@
   position: relative;
 }
 
-.sds-autocomplete-selected .sds-autocomplete-selected__item--disabled {
+.sds-autocomplete-selected .sds-autocomplete-selected__item--disabled,
+.sds-autocomplete[disabled='true'],
+ input [disabled='disabled'] {
   background: #d6d7d9;
   cursor: not-allowed;
   border: 1px solid #aeb0b5;
