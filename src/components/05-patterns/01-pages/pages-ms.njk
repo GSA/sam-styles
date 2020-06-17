@@ -1,18 +1,24 @@
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+{% render '@banner' %}
+
+{% render '@header--extended-sam' %}
 <main id="main-content">
-    <div class="sds-page grid-container">
-        <div class="grid-row sds-page__section sds-hero sds-hero--image">
+    <div class="grid-container">
+        <div class="grid-row sds-hero sds-hero--image">
             <div class="desktop:grid-offset-1 desktop:grid-col-11">
                 <div class="grid-row">
                     <div class="tablet:grid-col-7">
-                        <h1>Landing page</h1>
-                        <p>An entity isorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel venenatis erat. Vivamus 
-                            molestie neque. 
-                            Ut eleifend egestas tincidunt. Sed at euismod nisl. Quisque cursus tempor pellentesque convallis elit sit amet mi.
+                        <h1>Entity information</h1>
+                        <p>An entity is any person or organization that is registered to do business with the federal
+                            government.
+                            You must have an active entity registration in SAM to receive a federal contract or federal
+                            assistance.
                         </p>
                     </div>
                     <div class="tablet:grid-col-5">
                         <div class="sds-seal">
-                            <i class="sds fa-flag fa-2x margin-y-1 text-secondary"></i>
+                            {% render '@icon', {icon:'flag', classes:"fa-2x margin-y-1 text-secondary"} %}
                             <div class="sds-seal__content">
                                 Official U.S. Government Website
                                 <span>100% Free</span>
@@ -26,12 +32,15 @@
                     <div class="tablet:grid-col-7">
                         <h4>Search Entity and Exclusions</h4>
                         <div class="sds-search">
-                            <form class="usa-search usa-search--big" role="search">
-                                <label class="usa-sr-only" for="search-field-big">Search</label>
-                                <input class="usa-input" id="search-field-big" type="search" name="search" placeholder="Search Here">
-                                <button class="usa-button" type="submit">
-                                <span class="usa-sr-only">Search</span>
-                              </button>
+                            <form class="usa-search usa-search--small">
+                                <div role="search" class="search">
+                                    <label class="usa-sr-only" for="search-input">Search Here</label>
+                                    <input class="usa-input width-full" id="search-input" type="search" name="search"
+                                        placeholder="Search Here">
+                                    <button class="usa-button" type="submit">
+                                        <span class="usa-sr-only">Search</span>
+                                    </button>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -40,10 +49,7 @@
                             <h4 class="margin-bottom-1">New to SAM.gov</h4>
                             <div class="sds-button--outline">
                                 <a class="sds-button sds-button--icon text-center">
-                                    <span class="fa-stack fa-2x">
-                                        {% render '@icon', {icon:'triangle', classes:"fa-stack-2x text-accent-cool-light fa-1x"} %}
-                                        {% render '@icon', {icon:'video-circle', classes:"fa-stack-1x text-base fa-2x"} %}
-                                    </span>
+                                    {% render '@layered-icon', tileIcon %}
                                     <span class="sds-button--icon__title">Help Me Get Started</span>
                                 </a>
                             </div>
@@ -52,10 +58,7 @@
                             <h4 class="margin-bottom-1">Ready to Register</h4>
                             <div class="sds-button--outline">
                                 <a class="sds-button sds-button--icon text-center">
-                                    <span class="fa-stack fa-2x">
-                                        {% render '@icon', {icon:'triangle', classes:"fa-stack-2x text-accent-cool-light fa-1x"} %}
-                                        {% render '@icon', {icon:'video-circle', classes:"fa-stack-1x text-base fa-2x"} %}
-                                    </span>
+                                    {% render '@layered-icon', tileIcon %}
                                     <span class="sds-button--icon__title">Go to Entity Registration</span>
                                 </a>
                             </div>
@@ -113,3 +116,4 @@
         </div>
     </div>
 </main>
+{% render '@footer--gsa' %}
