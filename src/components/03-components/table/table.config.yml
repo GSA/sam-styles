@@ -1,0 +1,48 @@
+preview: "@sam-grid"
+status: wip
+default: Bordered
+collated: true
+context:
+  head:
+    headers:
+      - Name
+      - Date Last Saved
+      - Date Last Run
+      - Active
+  body:
+    keys:
+      - name
+      - date
+      - run
+      - active
+    data:
+      - name: 12345
+        date: mm/dd/yyyy
+        run: Lorem ipsum dolor sit amet
+        active: consectetur adipiscing elit sed do eiusmod
+      - name: 12346
+        date: mm/dd/yyyy
+        run: Lorem ipsum dolor sit amet
+        active: consectetur adipiscing elit sed do eiusmod
+      - name: 12347
+        date: mm/dd/yyyy
+        run: Lorem ipsum dolor sit amet
+        active: consectetur adipiscing elit sed do eiusmod
+      - name: 12348
+        date: mm/dd/yyyy
+        run: Lorem ipsum dolor sit amet
+        active: consectetur adipiscing elit sed do eiusmod
+      - name: 12349
+        date: mm/dd/yyyy
+        run: Lorem ipsum dolor sit amet
+        active: consectetur adipiscing elit sed do eiusmod
+      - name: 12350
+        date: mm/dd/yyyy
+        run: Lorem ipsum dolor sit amet
+        active: consectetur adipiscing elit sed do eiusmod
+variants:
+  - name: borderless
+    label: Borderless
+    context:
+      modifiers:
+        - borderless

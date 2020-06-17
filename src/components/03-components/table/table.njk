@@ -1,0 +1,32 @@
+
+<table class="usa-table
+{%- if modifiers -%}
+  {%- for modifier in modifiers %} usa-table--{{modifier}}{%- endfor -%}
+{%- endif -%}
+">
+
+  {% if caption %}
+    <caption>{{caption}}</caption>
+  {% endif %}
+{% if head %}
+  <thead>
+    <tr>
+      {% for header in head.headers %}
+        <th scope="col">{{header}}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+{% endif %}
+{% if body %}
+
+  <tbody>
+{% for row in body.data %}
+    <tr>
+      {% for key in body.keys %}
+        <td>{{row[key]}}</td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+  {% endif %}
+</table>
