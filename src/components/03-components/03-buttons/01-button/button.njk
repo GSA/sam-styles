@@ -1,0 +1,21 @@
+{{name}}{%- if (name == 'Outline-inverse') -%} 
+{% set bkg = "bg-base-darkest text-base-lightest " -%} 
+{% endif -%} 
+{%- if (name == 'White') -%} 
+{% set bkg = "bg-base-lightest " -%} 
+{% endif -%} 
+<div class="{{ bkg }}padding-4">
+<div class="grid-row">
+  <div class="grid-col">{% render '@button--single', button %}</div>
+  <div class="grid-col">
+    {% render '@button--single', hoverButton %}
+    {% render '@button--single', activeButton %}
+    {% render '@button--single', focusButton %}
+  </div>
+</div>
+<div class="padding-y-2">{% render '@button--single', disabledButton %}</div>
+<div class="padding-y-2">{% render '@button--single', iconButton %}</div>
+<div class="padding-y-2">{% render '@button--single', smallButton %}</div>
+<div class="padding-y-2">{% render '@button--single', bigButton %}</div>
+<div class="padding-y-2">{% render '@button--single', shadowButton %}</div>
+</div>

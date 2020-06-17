@@ -44,8 +44,10 @@ if disabled
 %} disabled="disabled"{% 
 endif 
 %}>{%
-if icons
-%}{% render '@icon', icon %}{#{prefix:'prefix',icon:'icon',title:'tile'}#}{% 
+if icon
+%}
+{% render '@icon', icon, true %}{#{prefix:'prefix',icon:'icon',title:'tile'}#}
+{% 
 endif 
 %}{%
 if text 
@@ -53,7 +55,9 @@ if text
 endif 
 %}{%
 if icon_right 
-%}{% render '@icon_right', icon_right %}{#{prefix:'prefix',icon:'icon',title:'tile'}#}{% 
+%}
+{% render '@icon', icon_right %}{#{prefix:'prefix',icon:'icon',title:'tile'}#}
+{% 
 endif 
 %}<{%
 if link 

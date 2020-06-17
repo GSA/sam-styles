@@ -1,21 +1,20 @@
 .usa-button {
-  // @include u-margin-y("1px");
   @include u-text("secondary-darker");
-  @include u-border('primary');
-  @include u-border-width('2px');
+  @include u-border("primary");
+  @include u-border-width("2px");
 
   &.usa-button--hover,
   &:hover {
     @include u-bg("primary-light");
-    @include u-border('primary-light');
-    @include u-border-width('2px');
+    @include u-border("primary-light");
+    @include u-border-width("2px");
     @include u-text("secondary-darker");
   }
 
   &.usa-button--active,
   &:active {
     @include u-bg("secondary-darker");
-    @include u-border('secondary-darker');
+    @include u-border("secondary-darker");
     @include u-text("white");
   }
 
@@ -23,23 +22,23 @@
   &:focus {
     outline-offset: units(2px);
   }
-  &--disabled, &:disabled {
+  &--disabled,
+  &:disabled {
     box-shadow: none;
-    @include u-border('disabled');
+    @include u-border("disabled");
   }
 }
 
 .sds-button--circle {
   border-radius: 50%;
-  @include u-border('primary');
-  @include u-border-width('2px');
+  @include u-border("primary");
+  @include u-border-width("2px");
   color: color("secondary-darker");
-  // border: 0;
   height: units(4);
   width: units(4);
-  @include u-display('flex');
-  @include u-flex('align-center');
-  @include u-flex('justify-center');
+  @include u-display("inline-flex");
+  @include u-flex("align-center");
+  @include u-flex("justify-center");
   margin: unset;
   padding: 0;
 
@@ -51,10 +50,12 @@
     height: units(3);
     width: units(3);
     padding: 0;
+    font-size: .6em;
   }
   &.sds-button--big {
     height: units(5);
     width: units(5);
+    font-size: 1.2em;
   }
 }
 
@@ -78,7 +79,6 @@
     color: color("secondary-darker");
     box-shadow: none;
   }
-  
 
   &.usa-button--inverse {
     background-color: transparent;
@@ -115,21 +115,21 @@
   color: color("gold-70");
   background-color: color("accent-warm-lighter");
   //box-shadow: $button-stroke color("base-light");
-    @include u-border('base-light');
+  @include u-border("base-light");
 
   &.usa-button--hover,
   &:hover {
     color: color("gold-70");
     background-color: color("white");
     //box-shadow: $button-stroke color("base");
-    @include u-border('base');
+    @include u-border("base");
   }
 
   &.usa-button--active,
   &:active {
     color: color("white");
     background-color: color("base-dark");
-    @include u-border('base-dark');
+    @include u-border("base-dark");
   }
 }
 
@@ -154,26 +154,62 @@
   &:disabled {
     color: color("disabled");
     // box-shadow: $button-stroke color("disabled");
-    @include u-border('disabled');
+    @include u-border("disabled");
     background-color: transparent;
   }
 }
 
 .usa-button--danger {
   background-color: color("error");
-  @include u-border('error');
+  @include u-border("error");
 
   &.usa-button--hover,
   &:hover {
     background-color: color("error-lighter");
-    @include u-border('error-lighter');
+    @include u-border("error-lighter");
   }
 
   &.usa-button--active,
   &:active {
     color: color("white");
     background-color: color("error-dark");
-    @include u-border('error-dark');
+    @include u-border("error-dark");
+  }
+}
+
+
+.usa-button--white {
+  background-color: color("white");
+  @include u-border("white");
+
+  &.usa-button--hover,
+  &:hover {
+    background-color: color("base-lighter");
+    @include u-border("base-lighter");
+  }
+
+  &.usa-button--active,
+  &:active {
+    color: color("white");
+    background-color: color("base-light");
+    @include u-border("base-light");
+  }
+}
+.usa-button--accent {
+  background-color: color("accent-cool");
+  @include u-border("accent-cool");
+
+  &.usa-button--hover,
+  &:hover {
+    background-color: color("accent-cool-lighter");
+    @include u-border("accent-cool-lighter");
+  }
+
+  &.usa-button--active,
+  &:active {
+    color: color("white");
+    background-color: color("accent-cool-dark");
+    @include u-border("accent-cool-dark");
   }
 }
 
@@ -211,7 +247,7 @@
 
   &:active,
   &.usa-button--active {
-    // box-shadow: inset 0px 0px 0 1px color("secondary-darker");
+    box-shadow: inset 0px 0px 0 1px color("secondary-darker");
   }
 
   &:focus,
@@ -222,34 +258,30 @@
   &:disabled {
     @include button-disabled;
   }
+
 }
 
 // Shadow
 .sds-button--shadow {
-   box-shadow: $button-shadow;
+  box-shadow: $button-shadow;
   &:hover,
   &.usa-button--hover {
-     box-shadow: $button-shadow;
+    box-shadow: $button-shadow;
   }
-
   &:active,
   &.usa-button--active {
-     box-shadow: $button-shadow;
+    box-shadow: $button-shadow;
   }
 }
 
 // Size
-.sds-button.sds-button--small {
-  @include u-font("sans", "2xs");
-  // padding: units(1) units(2);
-}
+
 .sds-button--small {
   @include u-font("sans", "2xs");
   padding: units(1) units(2);
 }
-
 /*-------------------
-  Primary Buttons
+  SDS Button
 --------------------*/
 .sds-button--primary {
   @include u-bg("primary");
@@ -339,7 +371,7 @@
 --------------------*/
 .sds-button.sds-button--icon {
   height: units(6);
-  min-width: units('card-lg');
+  min-width: units("card-lg");
   @include u-padding-x(4);
   @include u-radius("lg");
   @include u-display("flex");
@@ -348,11 +380,11 @@
 
   svg {
     margin-right: units(2);
-    width:  units(6) !important;
+    width: units(6) !important;
   }
 
   span {
-    @include u-font("sans","3xs");
+    @include u-font("sans", "3xs");
     margin: auto 0;
     @include u-text("bold");
   }
