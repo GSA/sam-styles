@@ -1,32 +1,38 @@
 
-<table class="usa-table
+<table class="sds-table
 {%- if modifiers -%}
-  {%- for modifier in modifiers %} usa-table--{{modifier}}{%- endfor -%}
+  {%- for modifier in modifiers %} sds-table--{{modifier}}{%- endfor -%}
 {%- endif -%}
 ">
 
-  {% if caption %}
+  {%- if caption %}
     <caption>{{caption}}</caption>
-  {% endif %}
+  {% endif -%}
+
 {% if head %}
   <thead>
     <tr>
-      {% for header in head.headers %}
+      {%- for header in head.headers -%}
         <th scope="col">{{header}}</th>
-      {% endfor %}
+      {% endfor -%}
     </tr>
   </thead>
-{% endif %}
-{% if body %}
+{% endif -%}
 
+{%- if body -%}
   <tbody>
-{% for row in body.data %}
+  {%- for row in body.data %}
     <tr>
-      {% for key in body.keys %}
-        <td>{{row[key]}}</td>
-      {% endfor %}
+      {%- for key in body.keys %}
+        {%- if key.heading %}
+          {%- set key = key.value %}
+          <th scope="row">{{ row[key] }}</th>
+        {%- else %}
+          <td>{{row[key]}}</td>
+        {%- endif -%}
+      {%- endfor -%}
     </tr>
-    {% endfor %}
+  {%- endfor %}
   </tbody>
-  {% endif %}
+{%- endif %}
 </table>

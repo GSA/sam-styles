@@ -1,0 +1,18 @@
+.sds-table {
+  @extend .usa-table;
+  border: 1px solid #C9C9C9;
+  font-family: 'Source Sans Pro', sans-serif;
+  thead {
+    border-bottom: 1px solid #C9C9C9;
+    th {
+      background: #F5F5F0;
+      font-weight: 600;
+    }
+  }
+  td, th {
+    border: 0;
+  }
+  &--borderless {
+    border: 0;
+  }
+}

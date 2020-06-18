@@ -11,7 +11,8 @@ context:
       - Active
   body:
     keys:
-      - name
+      - value: name
+        heading: true
       - date
       - run
       - active
@@ -46,3 +47,4 @@ variants:
     context:
       modifiers:
         - borderless
+
