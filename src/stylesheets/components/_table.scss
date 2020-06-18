@@ -1,12 +1,13 @@
+$sds-table-border: "1px";
+
 .sds-table {
   @extend .usa-table;
-  border: 1px solid #C9C9C9;
-  font-family: 'Source Sans Pro', sans-serif;
+  @include u-border('base-light', $sds-table-border);
   thead {
-    border-bottom: 1px solid #C9C9C9;
+    @include u-border-bottom('base-light', $sds-table-border);
     th {
-      background: #F5F5F0;
-      font-weight: 600;
+      @include u-text('semibold');
+      background: $theme-color-base-lighter;
     }
   }
   td, th {
