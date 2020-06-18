@@ -1,3 +1,14 @@
+{#
+  title (string): table title in caption tag
+  modifiers (array<string>): table modifiers
+  head: thead content (optional)
+    headers (array<string>): column header
+  body: tbody content (optional)
+    keys (array<string or object): keys used in data objects which should be displayed (must be in order)
+      value (string): key
+      heading (Boolean): if data should be the row heading (th)
+    data (array): array of data objects with listed keys
+#}
 
 <table class="sds-table
 {%- if modifiers -%}
@@ -5,8 +16,8 @@
 {%- endif -%}
 ">
 
-  {%- if caption %}
-    <caption>{{caption}}</caption>
+  {%- if title %}
+    <caption>{{title}}</caption>
   {% endif -%}
 
 {% if head %}
