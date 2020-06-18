@@ -68,43 +68,8 @@
             </div>
         </div>
         <div class="desktop:grid-offset-1 desktop:grid-col-10 margin-bottom-4">
-            <div class="grid-row">
-                <div class="sds-accordion usa-accordion">
-                    <h2 class="usa-accordion__heading sds-accordion__heading">
-                        <button class="usa-accordion__button usa-accordion__block" aria-expanded="false"
-                            aria-controls="b-a1">
-                            How to search entities and exclusions
-                        </button>
-                    </h2>
-                    <div id="b-a1" class="usa-accordion__content usa-prose">
-                        <p>Congress shall make no law respecting an establishment of religion, or prohibiting the free
-                            exercise thereof; or abridging the freedom of speech, or of the press; or the right of the
-                            people peaceably to assemble, and to petition the Government for a redress of grievances.
-                        </p>
-                    </div>
-                    <h2 class="usa-accordion__heading sds-accordion__heading">
-                        <button class="usa-accordion__button usa-accordion__block" aria-expanded="false"
-                            aria-controls="b-a2">
-                            I am a federal user researching an entity
-                        </button>
-                    </h2>
-                    <div id="b-a2" class="usa-accordion__content usa-prose">
-                        <p>A well regulated Militia, being necessary to the security of a free State, the right of the
-                            people to keep and bear Arms, shall not be infringed.</p>
-                    </div>
-                    <h2 class="usa-accordion__heading sds-accordion__heading">
-                        <button class="usa-accordion__button usa-accordion__block" aria-expanded="false"
-                            aria-controls="b-a3">
-                            I am a federal user who manages exclusions for my agency
-                        </button>
-                    </h2>
-                    <div id="b-a3" class="usa-accordion__content usa-prose">
-                        <p>No Soldier shall, in time of peace be quartered in any house, without the consent of the
-                            Owner,
-                            nor in time of war, but in a manner to be prescribed by law.</p>
-                    </div>
-
-                </div>
+            <div class="grid-row margin-bottom-4">
+              {% render "@accordion" %}
             </div>
         </div>
         <div class="grid-row grid-gap-2">
