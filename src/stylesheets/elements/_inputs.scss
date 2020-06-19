@@ -72,7 +72,10 @@
 }
 
 .usa-form-group--error {
-  border-left: .15rem solid #b50909 !important;
+  @include u-border(2px);
+  @include u-border('error-dark');
+  @include u-border('solid');
+  @include u-margin-neg(-1);
   @include u-margin-top(0);
 
   input.usa-input {
