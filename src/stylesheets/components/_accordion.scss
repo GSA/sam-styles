@@ -26,7 +26,7 @@
       @include u-display('inline-block');
       @include u-position('absolute');
       @include u-right(3);
-      @include u-top(1);
+      top: 0.8rem;
       width: 25px;
       height: 25px;
       background: linear-gradient(#0a3466,#0a3466);
@@ -51,7 +51,7 @@
         @include u-display('inline-block');
         @include u-position('absolute');
         @include u-right(3);
-        @include u-top(1);
+        top: 0.8rem;
         width: 25px;
         height: 25px;
         background: linear-gradient(#0a3466,#0a3466),#e2e2e2;
