@@ -1,84 +1,50 @@
 const _ = require("lodash");
 
-const variantNames = [
-  "default",
+const usavariants = [
   "secondary",
   "base",
-  "danger",
+  "accent-cool",
   "outline",
   "outline-inverse",
-  "accent",
-  "white"
+  "big",
 ];
+const sdsvariants =[
+  "small",
+  "shadow",
+  "white",
+  "danger",
+];
+const usaclasses = usavariants.map(i => 'usa-button--' + i);
+const sdsclasses = sdsvariants.map(i => 'sds-button--' + i);
+usaclasses.splice(usavariants.length-2,1,"usa-button--outline usa-button--inverse");
+const variantNames   = [...usavariants, ...sdsvariants];
+const variantClasses = [...usaclasses,  ...sdsclasses];
+
+module.exports = {
+  label: "Circle",
+  status: "wip",
+  context: {
+    text: null,
+    icon: true,
+  },
+  variants: variants(),
+};
+
 function variants() {
   let variants = [];
-  let len = variantNames.length;
 
-  for (let i = 0; i < len; i++) {
-    let vname = variantNames[i];
-    let vmods = vname.split("-");
-    let title = _.capitalize(vname);
-
+  for (let i = 0; i < variantNames.length; i++) {
+    let name = _.capitalize(variantNames[i]);
+    let button = {
+      text: null,
+      icon: true,
+      classes:variantClasses[i]
+    };
     let variant = {
-      name: vname,
+      name: name,
       context: {
-        name: title,
-        button: {
-          text: title,
-          modifiers: vmods,
-        },
-
-        button: {
-          text: null,
-          icon: true,
-          modifiers: vmods,
-          smodifiers: ["circle"],
-        },
-        hoverButton: {
-          text: null,
-          icon: true,
-          modifiers: [...vmods, "hover"],
-          smodifiers: ["circle"],
-        },
-        activeButton: {
-          text: null,
-          icon: true,
-          modifiers: [...vmods, "active"],
-          smodifiers: ["circle"],
-        },
-        focusButton: {
-          text: null,
-          modifiers: null,
-          icon: true,
-          classes: "usa-focus",
-          modifiers: vmods,
-          smodifiers: ["circle"],
-        },
-        disabledButton: {
-          text: null,
-          icon: true,
-          modifiers: vmods,
-          smodifiers: ["circle"],
-          disabled: true,
-        },
-        bigButton: {
-          text: null,
-          icon:  true,
-          modifiers: vmods,
-          smodifiers: ["circle", "big"],
-        },
-        smallButton: {
-          text: null,
-          icon: true,
-          modifiers: vmods,
-          smodifiers: ["circle", "small"],
-        },
-        shadowButton: {
-          text: null,
-          icon: true,
-          modifiers: vmods,
-          smodifiers: ["circle", "shadow"],
-        },
+        name: name,
+        button: button
       },
     };
     variants.push(variant);
@@ -86,16 +52,4 @@ function variants() {
   return variants;
 }
 
-//    notes: ".usa-button--hover and .usa-button--active classes are just to show their formatting in this context but should not be used in production",
 
-module.exports = {
-  label: "Circle",
-  status: "ready",
-  context: {
-    text: "Button",
-    modifiers: "",
-  },
-  collated: false,
-  default: "default",
-  variants: variants(),
-};

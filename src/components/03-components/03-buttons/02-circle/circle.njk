@@ -1,33 +1,43 @@
-{{name}}{%- if (name == 'Outline-inverse') -%} 
-{% set bkg = "bg-base-darkest text-base-lightest " -%} 
-{% endif -%} 
-{%- if (name == 'White') -%} 
-{% set bkg = "bg-base-lightest " -%} 
-{% endif -%} 
+{{name}}{%- if (name == 'Outline-inverse') -%}
+{% set bkg = "bg-base-darkest text-base-lightest " -%}
+{% endif -%}
+{%- if (name == 'White') -%}
+{% set bkg = "bg-base-lightest " -%}
+{% endif -%}
+
 <div class="{{ bkg }}padding-4">
   <div class="grid-row">
     <div class="grid-col">
-      <div class="padding-y-2"><div class="text-center">{{name}}<br>{% render '@button--single', button %}  </div></div>
-    </div>
-    <div class="grid-col">
-      <div class="grid-row padding-y-2">
-        <div class="text-center grid-col">hover<br>{% render '@button--single', hoverButton %}</div>
-        <div class="text-center grid-col">active<br>{% render '@button--single', activeButton %}</div>
-        <div class="text-center grid-col">focused<br>{% render '@button--single', focusButton %}</div>
+      <div class="padding-y-2">
+        <div class="text-center">{{name}}<br><br>
+          {% render '@circle--single', button %}
+        </div>
       </div>
     </div>
-  </div>
-  <div class="grid-row">
     <div class="grid-col">
-      <div class="padding-y-2"><div class="text-center">Disabled<br>{% render '@button--single', disabledButton %} </div></div>
-      <div class="padding-y-2"><div class="text-center">Small Button<br>
-    
-      
-      <br>{% render '@button--single', smallButton %} </div></div>
-      <div class="padding-y-2"><div class="text-center">Big Button<br>{% render '@button--single', bigButton %} </div></div>
-      <div class="padding-y-2"><div class="text-center">Shadow<br>{% render '@button--single', shadowButton %} </div></div>
-    </div>
-    <div class="grid-col">
+      <div class="grid-row">
+        <div class="grid-col padding-2">
+          <div class="text-center">Hover<br><br>
+            <button class="usa-button sds-button--circle {{button.classes}} usa-button--hover">
+              {% render '@icon' %}
+            </button>
+          </div>
+        </div>
+        <div class="grid-col padding-2">
+          <div class="text-center">Active<br><br>
+            <button class="usa-button sds-button--circle {{button.classes}} usa-button--active">
+              {% render '@icon' %}
+            </button>
+          </div>
+        </div>
+        <div class="grid-col padding-2">
+          <div class="text-center">Focused<br><br>
+            <button class="usa-button sds-button--circle {{button.classes}} usa-focus">
+              {% render '@icon' %}
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

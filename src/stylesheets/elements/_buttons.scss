@@ -27,13 +27,18 @@
     box-shadow: none;
     @include u-border("disabled");
   }
+
+  &--unstyled,
+  &--unstyled.usa-button--hover,
+  &--unstyled.usa-button--active,
+  &:active,
+  &:hover  {
+    border: none;
+  }
 }
 
 .sds-button--circle {
   border-radius: 50%;
-  @include u-border("primary");
-  @include u-border-width("2px");
-  color: color("secondary-darker");
   height: units(4);
   width: units(4);
   @include u-display("inline-flex");
@@ -50,12 +55,12 @@
     height: units(3);
     width: units(3);
     padding: 0;
-    font-size: size('body', 1);
+    font-size: size("body", 1);
   }
   &.sds-button--big {
     height: units(5);
     width: units(5);
-    font-size: size('body', 8);
+    font-size: size("body", 8);
   }
 }
 
@@ -114,14 +119,12 @@
 .usa-button--base {
   color: color("gold-70");
   background-color: color("accent-warm-lighter");
-  //box-shadow: $button-stroke color("base-light");
   @include u-border("base-light");
 
   &.usa-button--hover,
   &:hover {
     color: color("gold-70");
     background-color: color("white");
-    //box-shadow: $button-stroke color("base");
     @include u-border("base");
   }
 
@@ -135,31 +138,44 @@
 
 .usa-button--secondary {
   background-color: color("primary-lighter");
-  // box-shadow: $button-stroke color("primary");
 
   &.usa-button--hover,
   &:hover {
-    // box-shadow: $button-stroke color("primary-light");
     background-color: color("white");
   }
 
   &.usa-button--active,
   &:active {
     color: color("secondary-darker");
-    // box-shadow: $button-stroke color("secondary-darker");
     background-color: color("white");
   }
 
   &.usa-button--disabled,
   &:disabled {
     color: color("disabled");
-    // box-shadow: $button-stroke color("disabled");
     @include u-border("disabled");
     background-color: transparent;
   }
 }
+.usa-button--accent-cool {
+  background-color: color("accent-cool");
+  @include u-border("accent-cool");
 
-.usa-button--danger {
+  &.usa-button--hover,
+  &:hover {
+    background-color: color("accent-cool-lighter");
+    @include u-border("accent-cool-lighter");
+  }
+
+  &.usa-button--active,
+  &:active {
+    color: color("white");
+    background-color: color("accent-cool-dark");
+    @include u-border("accent-cool-dark");
+  }
+}
+
+.sds-button--danger {
   background-color: color("error");
   @include u-border("error");
 
@@ -177,8 +193,7 @@
   }
 }
 
-
-.usa-button--white {
+.sds-button--white {
   background-color: color("white");
   @include u-border("white");
 
@@ -193,23 +208,6 @@
     color: color("white");
     background-color: color("base-light");
     @include u-border("base-light");
-  }
-}
-.usa-button--accent {
-  background-color: color("accent-cool");
-  @include u-border("accent-cool");
-
-  &.usa-button--hover,
-  &:hover {
-    background-color: color("accent-cool-lighter");
-    @include u-border("accent-cool-lighter");
-  }
-
-  &.usa-button--active,
-  &:active {
-    color: color("white");
-    background-color: color("accent-cool-dark");
-    @include u-border("accent-cool-dark");
   }
 }
 
@@ -258,7 +256,6 @@
   &:disabled {
     @include button-disabled;
   }
-
 }
 
 // Shadow
@@ -347,7 +344,7 @@
   }
   .fa-layers {
     @include u-position("absolute");
-    font-size: size('body', 10);
+    font-size: size("body", 10);
     top: 5px;
     right: 5px;
     .fa-circle {
@@ -360,7 +357,7 @@
   &.sds-button--small {
     @include u-padding-right(4);
     .fa-layers {
-      font-size: size('body', 8);
+      font-size: size("body", 8);
       top: 6px;
     }
   }

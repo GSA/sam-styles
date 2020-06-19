@@ -2,20 +2,19 @@
     Creates a button.
     link        (string) - use "a" instead of "button". String should be any valid HREF value
     modifiers   (array)  - USA "secondary,base,outline,inverse,big,unstyled,hover,active,focus"
-    smodifiers  (array)  - SDS "circle,small"
+    smodifiers  (array)  - SDS "small"
     disabled    (bool)   - adds disabled attribute 
     classes     (string) - extra classes
     ext         (string) - other attributes i.e. ( tabindex="0" onclick="alert" )
     text        (string) - text of the button 
-    icon        (object) - icon before text if there is text {prefix,icon,title} 
-    icon_right  (object) - icon after text if there is text {prefix,icon,title} 
+    icon        (object) - icon {prefix,icon,title} 
 #}
 <{%
 if link 
 %}a href="{{link}}{% 
 else %}button{% 
 endif 
-%} class="usa-button{%
+%} class="usa-button sds-button--circle{%
 if modifiers 
 %}{%
     for modifier in modifiers 
@@ -43,23 +42,9 @@ endif
 if disabled 
 %} disabled="disabled"{% 
 endif 
-%}>{%
-if icon
-%}
+%}>
 {% render '@icon', icon, true %}{#{prefix:'prefix',icon:'icon',title:'tile'}#}
-{% 
-endif 
-%}{%
-if text 
-%}{{text}}{% 
-endif 
-%}{%
-if icon_right 
-%}
-{% render '@icon', icon_right %}{#{prefix:'prefix',icon:'icon',title:'tile'}#}
-{% 
-endif 
-%}<{%
+<{%
 if link 
 %}/a{% 
 else 
