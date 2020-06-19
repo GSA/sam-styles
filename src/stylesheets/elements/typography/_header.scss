@@ -1,0 +1,79 @@
+h1 {
+    @include u-font('sans', 'xl');
+    @include u-text('bold', 'base');
+    @include u-line-height('sans', 2);
+  }
+    
+  h2 {
+    @include u-font('sans', 'lg');
+    @include u-text('semibold', 'base-dark');
+    @include u-line-height('sans', 2);
+  }
+  
+  h3 {
+    @include u-font('sans', 'md');
+    @include u-text('bold', 'base-dark');
+    @include u-line-height('sans', 2);
+  }
+  
+  h4 {
+    @include u-font('sans', 'md');
+    @include u-text('semibold', 'base-dark');
+    @include u-line-height('sans', 2);
+  }    
+  
+  h5 {
+    @include u-font('sans', 'xs');
+    @include u-text('bold', 'base-dark');
+    @include u-line-height('sans', 2);
+  }
+  
+  h6 {
+    @include u-font('sans', 'xs');
+    @include u-text('semibold', 'base-dark');
+    @include u-line-height('sans', 2);
+  }  
+  
+  h1, h2, h3, h4, h5, h6 {
+    &.heading {
+    }
+  }
+  
+  // Heading helper classes
+  .h1 {
+    @extend h1;
+  }
+  
+  .h2 {
+    @extend h2;
+  }
+  
+  .h3{
+    @extend h3;
+  }
+  
+  .h4 {
+    @extend h4;
+  }
+  
+  .h5 {
+    @extend h5;
+  }
+  
+  .h6 {
+    @extend h6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    
+    &.sds-light {
+      @include u-text('normal');
+    }
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    
+    .usa-link {
+      font-size: inherit;
+    }
+  }

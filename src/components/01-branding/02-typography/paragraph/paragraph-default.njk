@@ -1,24 +1,3 @@
-    {# {% for item in items %}
-    <tr>
-      <th scope="row"><p class="{{ item.class }}">{{ item.label }}</p></th>
-      {% if item.class %}
-      <td>{{ ('<p class="' + item.class + '"></p>') | escape }}</td>
-      {% else %}
-      <td>{{ '<p></p>' | escape }}</td>
-      {% endif %}
-      <td>Weight: {{ item.weight }} / Size: {{ item.size }} / Line Height: {{ item.lheight }} / Color: {{ item.color }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table> 
-
-{% for item in items %}
-<h3>{{item.label}}</h3>
-<p class="{{ item.class }}">
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-</p>
-{% endfor %} #}
-
 <table class="usa-table">
   <caption>Paragraph</caption>
   <thead>
@@ -32,83 +11,84 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
     <tr>
       <td><p>Paragraph</p></td>
       <th scope="row">&ltp>&lt/p></th>
-      <td>Weight: Regular / Size: 1rem / Line Height: 1.25rem / Color: Base-Dark (#454540)</td>
+      <td>Weight: Regular / Size: 1rem / Line Height: 1.3rem / Color: Base-Dark (#454540)</td>
     </tr>
     <tr>
       <td><p class="sds-big">Large Paragraph</p></td>
       <th scope="row">&ltp class="sds-big">&lt/p></th>      
-      <td>Weight: Regular / Size: 1.13rem / Line Height: 1.5rem / Color: Base-Dark (#454540)</td>
+      <td>Weight: Regular / Size: 1.13rem / Line Height: 1.3rem / Color: Base-Dark (#454540)</td>
     </tr>
     <tr>
       <td><p class="sds-small">Fine Print Paragraph</p></td>
       <th scope="row">&ltp class="sds-small">&lt/p></th>
-      <td>Weight: Regular / Size: 0.87rem / Line Height: 1rem / Color: Base-Dark (#454540)</td>
+      <td>Weight: Regular / Size: 0.87rem / Line Height: 1.3rem / Color: Base-Dark (#454540)</td>
     </tr>
     <tr>
       <td><p class="text-semibold">Semibold Paragraph</p></td>
       <th scope="row">&ltp class="text-semibold">&lt/p></th>
-      <td>Weight: Semibold / Size: 1rem / Line Height: 1.25rem / Color: Base-Dark (#454540)</td>
+      <td>Weight: Semibold / Size: 1rem / Line Height: 1.3rem / Color: Base-Dark (#454540)</td>
     </tr>
     <tr>
       <td><p class="sds-big text-bold">Bold Large Paragraph</p></td>
       <th scope="row">&ltp class="sds-big text-bold">&lt/p></th>
-      <td>Weight: Bold / Size: 1.13rem / Line Height: 1.5rem / Color: Base-Dark (#454540)</td>
+      <td>Weight: Bold / Size: 1.13rem / Line Height: 1.3rem / Color: Base-Dark (#454540)</td>
     </tr>    
     <tr>
       <td><p class="sds-small text-italic">Italic Fine Print Paragraph</p></td>
       <th scope="row">&ltp class="sds-small text-italic">&lt/p></th>
-      <td>Weight: Italic / Size: 0.87rem / Line Height: 1rem / Color: Base-Dark (#454540)</td>
+      <td>Weight: Italic / Size: 0.87rem / Line Height: 1.3rem / Color: Base-Dark (#454540)</td>
     </tr>
     <tr>
       <td><p class="sds-text-error">Error Paragraph</p></td>
       <th scope="row">&ltp class="sds-text-error">&lt/p></th>
-      <td>Weight: Regular / Size: 1rem / Line Height: 1.25rem / Color: Error-Dark (#B51D09)</td>
+      <td>Weight: Regular / Size: 1rem / Line Height: 1.3rem / Color: Error-Dark (#B51D09)</td>
     </tr>
     <tr>
       <td><p class="sds-text-error sds-big">Error Large Paragraph</p></td>
       <th scope="row">&ltp class="sds-text-error sds-big">&lt/p></th>
-      <td>Weight: Regular / Size: 1.13rem / Line Height: 1.5rem / Color: Error-Dark (#B51D09)</td>
+      <td>Weight: Regular / Size: 1.13rem / Line Height: 1.3rem / Color: Error-Dark (#B51D09)</td>
     </tr>
     <tr>
       <td><p class="sds-text-error sds-small">Error Fine Print Paragraph</p></td>
       <th scope="row">&ltp class="sds-text-error sds-small">&lt/p></th>
-      <td>Weight: Regular / Size: 0.87rem / Line Height: 1rem / Color: Error-Dark (#B51D09)</td>
+      <td>Weight: Regular / Size: 0.87rem / Line Height: 1.3rem / Color: Error-Dark (#B51D09)</td>
     </tr>               
   </tbody>
 </table>
 
-<div class="paragraph-example">
+<div class="margin-y-4">
   <h3>Regular Paragraph</h3>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas maecenas pharetra convallis posuere morbi leo. Dapibus ultrices in iaculis nunc sed augue.</p>
 </div>
-&nbsp;
-<div>
+<div class="margin-y-4">
   <h3>Large Paragraph</h3>
   <p class="sds-big">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas maecenas pharetra convallis posuere morbi leo. Dapibus ultrices in iaculis nunc sed augue.</p>
 </div>
-&nbsp;
-<div>
+<div class="margin-y-4">
   <h3>Fine Print Paragraph</h3>
   <p class="sds-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas maecenas pharetra convallis posuere morbi leo. Dapibus ultrices in iaculis nunc sed augue.</p>
 </div>
-&nbsp;
-<div>
+<div class="margin-y-4">
   <h3>Semibold Paragraph</h3>
   <p class="text-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas maecenas pharetra convallis posuere morbi leo. Dapibus ultrices in iaculis nunc sed augue.</p>
 </div>
-&nbsp;
-<div>
+<div class="margin-y-4">
   <h3>Large Bold Paragraph</h3>
   <p class="sds-big text-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas maecenas pharetra convallis posuere morbi leo. Dapibus ultrices in iaculis nunc sed augue.</p>
 </div>
-&nbsp;
-<div>
+<div class="margin-y-4">
   <h3>Fine Print Italic Paragraph</h3>
   <p class="sds-small text-italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas maecenas pharetra convallis posuere morbi leo. Dapibus ultrices in iaculis nunc sed augue.</p>
 </div>
-&nbsp;
-<div>
+<div class="margin-y-4">
   <h3>Error Paragraph</h3>
   <p class="sds-text-error">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas maecenas pharetra convallis posuere morbi leo. Dapibus ultrices in iaculis nunc sed augue.</p>
 </div>
-&nbsp;
+<div class="margin-y-4">
+  <h3>Error Large Paragraph</h3>
+  <p class="sds-text-error sds-big">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas maecenas pharetra convallis posuere morbi leo. Dapibus ultrices in iaculis nunc sed augue.</p>
+</div>
+<div class="margin-y-4">
+  <h3>Error Fine-Print Paragraph</h3>
+  <p class="sds-text-error sds-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas maecenas pharetra convallis posuere morbi leo. Dapibus ultrices in iaculis nunc sed augue.</p>
+</div>
