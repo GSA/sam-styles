@@ -37,7 +37,7 @@
 
     &[aria-expanded=true] {
       background-image: none;
-      color: #0a3466;
+      @include u-text('secondary-dark');
       background-color: white;
     }
 
