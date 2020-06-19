@@ -60,9 +60,13 @@
   position: relative;
 }
 
-.sds-autocomplete-selected .sds-autocomplete-selected__item--disabled {
-  background: #d6d7d9;
+.sds-autocomplete-selected .sds-autocomplete-selected__item--disabled,
+.sds-autocomplete[disabled='true'],
+ input [disabled='disabled'] {
+  @include u-bg('base-lighter');
+  @include u-border('1px');
+  @include u-border('solid');
+  @include u-border('base');
+  @include u-text('base-dark');
   cursor: not-allowed;
-  border: 1px solid #aeb0b5;
-  color: #5b5b5b;
 }

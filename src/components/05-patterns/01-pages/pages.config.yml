@@ -136,53 +136,58 @@ variants:
                     content: APIs
                     tag: h3
                   modifiers:
-                    - unstyled
-                    - flex
+                    - icon
                   items:
-                    - text: Getting Started with web services
+                    - link:
+                        text: Getting Started with web services
+                        href: ' '
                       icon:
                         icon: note
                         classes: fa-lg fa-fw
-                      href: ' '
-                    - text: Go to entity registration API
+                    - link:
+                        text: Go to entity registration API
+                        href: ' '
                       icon:
                         icon: angle-right
                         classes: fa-lg fa-fw
-                      href: ' '
-                    - text: Go to exclusions API
+                    - link:
+                        text: Go to exclusions API
+                        href: ' '
                       icon:
                         icon: angle-right
                         classes: fa-lg fa-fw
-                      href: ' '
               - component: list
                 context:
                   title:
                     content: Connect to Service APIs
                     tag: h3
                   modifiers:
-                    - unstyled
-                    - flex
+                    - icon
                   items:
-                    - text: Downloading entity registration files
+                    - link:
+                        text: Downloading entity registration files
+                        href: ' '
                       icon:
                         icon: note
                         classes: fa-lg fa-fw
-                      href: ' '
-                    - text: Downloading exclusion files
+                    - link:
+                        text: Downloading exclusion files
+                        href: ' '
                       icon:
                         icon: note
                         classes: fa-lg fa-fw
-                      href: ' '
-                    - text: Go to entity registration downloads
+                    - link:
+                        text: Go to entity registration downloads
+                        href: ' '
                       icon:
                         icon: angle-right
                         classes: fa-lg fa-fw
-                      href: ' '
-                    - text: Go to exclusions downloads
+                    - link:
+                        text: Go to exclusions downloads
+                        href: ' '
                       icon:
                         icon: angle-right
                         classes: fa-lg fa-fw
-                      href: ' '
         - title: More about Entity Information
           col: 7
           color: accent-cool
@@ -198,21 +203,23 @@ variants:
                     content: Exclusion Resources
                     tag: h3
                   modifiers:
-                    - unstyled
-                    - flex
+                    - icon
                   items:
-                    - text: Types of exclusions
-                      href: ' '
+                    - link:
+                        text: Types of exclusions
+                        href: ' '
                       icon:
                         icon: note
                         classes: fa-fw fa-lg
-                    - text: Legacy CT Codes
-                      href: ' '
+                    - link:
+                        text: Legacy CT Codes
+                        href: ' '
                       icon:
                         icon: note
                         classes: fa-fw fa-lg
-                    - text: Agency Exclusion POCs
-                      href: ' '
+                    - link:
+                        text: Agency Exclusion POCs
+                        href: ' '
                       icon:
                         icon: note
                         classes: fa-fw fa-lg
@@ -225,16 +232,17 @@ variants:
                     content: User Guides
                     tag: h3
                   modifiers:
-                    - unstyled
-                    - flex
+                    - icon
                   items:
-                    - text: Exclusions Managmement User Guide for Federal Users
-                      href: ' '
+                    - link:
+                        text: Exclusions Managmement User Guide for Federal Users
+                        href: ' '
                       icon:
                         icon: note
                         classes: fa-fw fa-lg
-                    - text: Data Services User Guide
-                      href: ' '
+                    - link:
+                        text: Data Services User Guide
+                        href: ' '
                       icon:
                         icon: note
                         classes: fa-fw fa-lg
@@ -245,22 +253,57 @@ variants:
                     content: Help
                     tag: h3
                   modifiers:
-                  - unstyled
-                  - flex
+                  - icon
                   items:
-                    - text: Frequently Asked Questions
-                      href: ' '
+                    - link:
+                        text: Frequently Asked Questions
+                        href: ' '
                       icon:
                         icon: question
                         classes: fa-fw fa-lg
-                    - text: Glossary Terms
-                      href: ' '
+                    - link:
+                        text: Glossary Terms
+                        href: ' '
                       icon:
                         icon: book
                         classes: fa-fw fa-lg
-                    - text: Videos
-                      href: ' '
+                    - link:
+                        text: Videos
+                        href: ' '
                       icon:
                         icon: video-square
                         classes: fa-fw fa-lg
   
+  - name: help-results
+    label: Help Results
+    context:
+      list:
+          items:
+            - text: The Integrated Award Environment Digest 2019
+            - text: Offering the ability to search data by number, keyword, or location for exact and immediate results
+            - text: Providing easy to use search filters to quickly find the right wage determination
+      menu:
+        items:
+          - text: Related Articles
+          - link:
+              text: As a federal Hierarchy Administrator, what data is needed to create an office?
+              href: ' '
+          - link:
+              text: Wage Determination Now in beta.SAM.gov
+              href: ' '
+          - link:
+              text: Assistance Admin Transition
+              href: ' '
+          - link:
+              text: Non-Standard Wage
+              href: ' '
+  - name: page-with-sidebar
+    label: Page With Sidebar
+    context:
+        actionIcon:
+          type: layers
+          icons:
+              -   icon: circle
+                  prefix: fas
+              -   icon: ellipsis
+                  dataTransform: shrink-6
