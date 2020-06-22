@@ -124,6 +124,7 @@ variants:
         #                 classes: fa-fw fa-lg
       cards:
         - title: Data Services
+<<<<<<< HEAD
           col: 5
           modifiers:
             - height-full
@@ -307,3 +308,90 @@ variants:
                   prefix: fas
               -   icon: ellipsis
                   dataTransform: shrink-6
+=======
+          contents:
+            - listTitle: APIs
+              list:
+                modifiers: ['unstyled', 'flex']
+                items:
+                  - text: Getting Started with web services
+                    icon:
+                      icon: note
+                      classes: fa-lg fa-fw
+                  - text: Go to entity registration API
+                    icon:
+                      icon: angle-right
+                      classes: fa-lg fa-fw
+                  - text: Go to exclusions API
+                    icon:
+                      icon: angle-right
+                      classes: fa-lg fa-fw
+            - listTitle: Connect to Service APIs
+              list:
+                modifiers: ['unstyled', 'flex']
+                items:
+                  - text: Downloading entity registration files
+                    icon:
+                      icon: note
+                      classes: fa-lg fa-fw
+                  - text: Downloading exclusion files
+                    icon:
+                      icon: note
+                      classes: fa-lg fa-fw
+                  - text: Go to entity registration downloads
+                    icon:
+                      icon: angle-right
+                      classes: fa-lg fa-fw
+                  - text: Go to exclusions downloads
+                    icon:
+                      icon: angle-right
+                      classes: fa-lg fa-fw
+        - title: More about Entity Information
+          secondCard: true
+          contents:
+            - listTitle: Exclusion Resources
+              list:
+                modifiers: ['unstyled', 'flex']
+                items:
+                  - text: Types of exclusions
+                    icon:
+                      icon: note
+                      classes: fa-fw fa-lg
+                  - text: Legacy CT Codes
+                    icon:
+                      icon: note
+                      classes: fa-fw fa-lg
+                  - text: Agency Exclusion POCs
+                    icon:
+                      icon: note
+                      classes: fa-fw fa-lg
+            - listTitle: User Guides
+              list:
+                modifiers: ['unstyled', 'flex']
+                items:
+                  - text: Exclusions Managmement User Guide for Federal Users
+                    icon:
+                      icon: note
+                      classes: fa-fw fa-lg
+                  - text: Data Services ser Guide
+                    icon:
+                      icon: note
+                      classes: fa-fw fa-lg
+            - listTitle: Help
+              list:
+                modifiers: ['unstyled', 'flex']
+                items:
+                  - text: Frequently Asked Questions
+                    icon:
+                      icon: question
+                      classes: fa-fw fa-lg
+                  - text: Glossary Terms
+                    icon:
+                      icon: book
+                      classes: fa-fw fa-lg
+                  - text: Videos
+                    icon:
+                      icon: video-square
+                      classes: fa-fw fa-lg
+
+>>>>>>> parent of 7f5b844... Merge branch 'master' into layout-examples

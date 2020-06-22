@@ -1,92 +1,66 @@
 /*-------------------
        SDS CARD
 --------------------*/
-$sds-card-border-width: 1px;
-$sds-card-border-radius: border-radius('md');
-$inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width});
 
 .sds-card {
   @include u-padding(0);
-  @include u-border('base-light', 'solid', $sds-card-border-width);
-  border-radius: $sds-card-border-radius;
-  @include u-shadow(2);
-
-  // TODO: remove after USWDS import order corrected
-  &.shadow-0 {
-    box-shadow: none;
-  }
-
-  // TODO: remove after USWDS import order corrected
-  &.border-width-0 {
-    border: none;
-  }
+  @include u-radius('md');
+  @include u-bg('white');
 
   &__title {
     @include u-margin-y(0);
-    @include u-display('inline-block');
+    display: inline-block;
   }
 
-  &__body {
+  &__content {
     @include u-padding(2);
-    > *:first-child {
-      @include u-margin-top(0);
-    }
-    > *:last-child {
-      @include u-margin-bottom(0);
-    }
   }
 
   &__header {
     @include sds-header;
     @include u-margin(0);
     @include u-padding(2);
-    border-top-left-radius: $inner-border-radius;
-    border-top-right-radius: $inner-border-radius;
 
     &--flex {
       @include grid-row;
-      @include u-display('flex');
-      @include u-flex('align-center');
+      display: flex;
       .sds-card__title {
         @include grid-col(12);
-        @include u-text('center');
+        text-align: center;
         @include at-media('tablet-lg') {
           @include grid-col('auto');
-          @include u-text('left');
-          flex: flex('auto');
+          text-align: left;
+          flex: 0 0 auto;
         }
       }
       .sds-card__buttons {
         @include grid-col(12);
         @include at-media('tablet-lg') {
           @include grid-col;
-          // IE
           flex: 1 0 auto;
-          flex: flex('fill');
-          @include u-text('right');
+          text-align: right;
         }
       }
     }
 
     &--left, &--center {
-      svg {
-        @include u-margin-right(1);
-      }
       > * {
-        @include u-display('inline-block');
-        @include u-text('bottom');
+        display: inline-block;
+        vertical-align: bottom;
       }
     }
 
+
     &--stacked, &--center {
-      @include u-text('center');
+      text-align: center;
     }
 
     &--action {
-      @include u-display('flex');
-      @include u-flex('align-center', 'justify');
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       .sds-card__action > * {
-        @include u-margin-right(0);
+        margin-right: 0;
       }
     }
   }
@@ -95,45 +69,50 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     .usa-button {
       @include u-width(full);
       @include at-media('tablet-lg') {
-        @include u-width('auto');
-        margin-left: units(1);
-        margin-right: units(0);
+        width: auto;
+        width: initial;
       }
+    }
+    :last-child {
+      margin-right: 0;
     }
   }
 
   &__link {
-    @include u-width('full');
+    width: 100%;
     color: inherit;
   }
 
   &__action {
-    @include u-text('right');
+    text-align: right;
   }
 
-  &--height-full {
-    @include u-height('full');
+  &--bordered {
+    @include u-border('base-light', 'solid', '1px');
+  }
+
+  &--shadowed {
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
   }
 
   &--list {
-    @include u-border(0);
+    border: none;
     .sds-card__header {
       @include bordered-item(true);
     }
-    .sds-card__body {
+    .sds-card__content {
       @include u-padding(0);
     }
   }
 
   &--vertical {
-    @include u-display('flex');
+    display: flex;
     .sds-card__header {
-      @include u-border-right('base-light', 'solid', $sds-card-border-width);
-      border-top-right-radius: 0;
+      @include u-border-right('base-light', 'solid', '1px');
     }
   }
 
   .usa-button--outline {
-    @include u-bg('white');
+    background: white;
   }
 }

@@ -1,7 +1,10 @@
 <h3 class="margin-top-0">Basic Tile Example</h3>
 <div class="sds-tile">
   <a href="#" class="sds-tile__content">
-    {% render '@layered-icon', tiles[0].icon %}
+  <span class="sds-tile__icon fa-stack fa-2x">
+    {% render '@icon', {icon:'leaf', classes: 'fa-stack-2x text-accent-cool-light'} %}
+    {% render '@icon', {icon:'pen-paper', classes: 'fa-stack-1x text-base fa-2x'} %}
+  </span>
     <div>
       <div class="sds-tile__title">Tile Title</div>
       <div class="sds-tile__details">tile details</div>
@@ -10,7 +13,10 @@
 </div>
 <div class="sds-tile">
   <a href=" #" class="sds-tile__content">
-    {% render '@layered-icon', tiles[1].icon %}
+    <span class="sds-tile__icon fa-stack fa-2x">
+      {% render '@icon', {icon:'circle', classes: 'fa-stack-2x text-accent-cool-light'} %}
+      {% render '@icon', {icon:'federal-building', classes: 'fa-stack-1x text-base fa-2x'} %}
+    </span>
     <div>
       <div class="sds-tile__title">Tile Title</div>
       <div class="sds-tile__details">tile with a lot more details</div>
