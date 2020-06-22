@@ -15,28 +15,20 @@ module.exports = {
               modifiers: ['unstyled'],
               items: [
                 {
-                  link: {
-                    text: 'Secondary link',
-                    href: 'javascript:void(0);'
-                  }
+                  text: 'Secondary link',
+                  href: 'javascript:void(0);'
                 },
                 {
-                  link: {
-                    text: 'Secondary link',
-                    href: 'javascript:void(0);'
-                  }
+                  text: 'Secondary link',
+                  href: 'javascript:void(0);'
                 },
                 {
-                  link: {
-                    text: `Secondary link that's a bit longer than most of the others`,
-                    href: 'javascript:void(0);'
-                  }
+                  text: `Secondary link that's a bit longer than most of the others`,
+                  href: 'javascript:void(0);'
                 },
                 {
-                  link: {
-                    text: 'Secondary link',
-                    href: 'javascript:void(0);'
-                  }
+                  text: 'Secondary link',
+                  href: 'javascript:void(0);'
                 }
               ]
             }
@@ -47,28 +39,20 @@ module.exports = {
               modifiers: ['unstyled'],
               items: [
                 {
-                  link: {
-                    text: 'Secondary link',
-                    href: 'javascript:void(0);'
-                  }
+                  text: 'Secondary link',
+                  href: 'javascript:void(0);'
                 },
                 {
-                  link: {
-                    text: `Secondary link that's pretty long`,
-                    href: 'javascript:void(0);'
-                  }
+                  text: `Secondary link that's pretty long`,
+                  href: 'javascript:void(0);'
                 },
                 {
-                  link: {
-                    text: 'Secondary link',
-                    href: 'javascript:void(0);'
-                  }
+                  text: `Secondary link`,
+                  href: 'javascript:void(0);'
                 },
                 {
-                  link: {
-                    text: 'Secondary link',
-                    href: 'javascript:void(0);'
-                  }
+                  text: 'Secondary link',
+                  href: 'javascript:void(0);'
                 }
               ]
             }
@@ -79,28 +63,20 @@ module.exports = {
               modifiers: ['unstyled'],
               items: [
                 {
-                  link: {
-                    text: 'Secondary link',
-                    href: 'javascript:void(0);'
-                  }
+                  text: 'Secondary link',
+                  href: 'javascript:void(0);'
                 },
                 {
-                  link: {
-                    text: 'Secondary link',
-                    href: 'javascript:void(0);'
-                  }
+                  text: 'Secondary link',
+                  href: 'javascript:void(0);'
                 },
                 {
-                  link: {
-                    text: 'Secondary link',
-                    href: 'javascript:void(0);'
-                  }
+                  text: `Secondary link`,
+                  href: 'javascript:void(0);'
                 },
                 {
-                  link: {
-                    text: 'Secondary link',
-                    href: 'javascript:void(0);'
-                  }
+                  text: 'Secondary link',
+                  href: 'javascript:void(0);'
                 }
               ]
             }
@@ -126,28 +102,20 @@ module.exports = {
               modifiers: ['unstyled'],
               items: [
                 {
-                  link: {
-                    text: 'About This Site',
-                    href: 'javascript:void(0);'
-                  }
+                  text: 'About This Site',
+                  href: 'javascript:void(0);'
                 },
                 {
-                  link: {
-                    text: 'Release Notes',
-                    href: 'javascript:void(0);'
-                  }
+                  text: 'Release Notes',
+                  href: 'javascript:void(0);'
                 },
                 {
-                  link: {
-                    text: 'Alerts',
-                    href: 'javascript:void(0);'
-                  }
+                  text: 'Alerts',
+                  href: 'javascript:void(0);'
                 },
                 {
-                  link: {
-                    text: 'News',
-                    href: 'javascript:void(0);'
-                  }
+                  text: 'News',
+                  href: 'javascript:void(0);'
                 }
               ]
             }
@@ -158,31 +126,23 @@ module.exports = {
               modifiers: ['unstyled'],
               items: [
                 {
-                  link: {
-                    text: 'Aquisition.gov',
-                    href: 'javascript:void(0);',
-                    external: true
-                  }
+                  text: 'Aquisition.gov',
+                  href: 'javascript:void(0);',
+                  external: true
                 },
                 {
-                  link: {
-                    text: 'USASpending.gov',
-                    href: 'javascript:void(0);',
-                    external: true
-                  }
+                  text: 'USASpending.gov',
+                  href: 'javascript:void(0);',
+                  external: true
                 },
                 {
-                  link: {
-                    text: 'Grants.gov',
-                    href: 'javascript:void(0);',
-                    external: true
-                  }
+                  text: 'Grants.gov',
+                  href: 'javascript:void(0);',
+                  external: true
                 },
                 {
-                  link: {
-                    text: 'More Partners',
+                  text: 'More Partners',
                   href: 'javascript:void(0);'
-                }
                 }
               ]
             }
@@ -193,30 +153,22 @@ module.exports = {
               modifiers: ['unstyled'],
               items: [
                 {
-                  link: {
-                    text: 'Help',
-                    href: 'javascript:void(0);'
-                  }
+                  text: 'Help',
+                  href: 'javascript:void(0);'
                 },
                 {
-                  link: {
-                    text: 'Contact Federal Service Desk',
-                    href: 'javascript:void(0);',
-                    external: true
-                  }
+                  text: 'Contact Federal Service Desk',
+                  href: 'javascript:void(0);',
+                  external: true
                 },
                 {
-                  link: {
-                    text: 'Our Community',
-                    href: 'javascript:void(0);',
-                    external: true
-                  }
+                  text: 'Our Community',
+                  href: 'javascript:void(0);',
+                  external: true
                 },
                 {
-                  link: {
-                    text: 'Policy',
-                    href: 'javascript:void(0);',
-                  }
+                  text: 'Policy',
+                  href: 'javascript:void(0);'
                 }
               ]
             }
@@ -227,29 +179,21 @@ module.exports = {
               modifiers: ['unstyled'],
               items: [
                 {
-                  link: {
-                    text: 'Privacy Policy',
-                    href: 'javascript:void(0);'
-                  }
+                  text: 'Privacy Policy',
+                  href: 'javascript:void(0);'
                 },
                 {
-                  link: {
-                    text: 'Disclaimers',
-                    href: 'javascript:void(0);',
-                  }
+                  text: 'Disclaimers',
+                  href: 'javascript:void(0);',
                 },
                 {
-                  link: {
-                    text: 'Freedom of Information Act',
-                    href: 'javascript:void(0);',
-                    external: true
-                  }
+                  text: 'Freedom of Information Act',
+                  href: 'javascript:void(0);',
+                  external: true
                 },
                 {
-                  link: {
-                    text: 'Accessibility',
-                    href: 'javascript:void(0);'
-                  }
+                  text: 'Accessibility',
+                  href: 'javascript:void(0);'
                 }
               ]
             }

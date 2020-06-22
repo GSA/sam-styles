@@ -2,41 +2,33 @@
   {% render '@title', title, true %}
 {% endif %}
 
-{%- if ordered %}
-  <ol class="sds-list{% for modifier in modifiers %} sds-list--{{modifier}}{% endfor %}">
+{% if ordered %}
+  <ol class="sds-list">
 {% else %}
-  <ul class="sds-list {% for modifier in modifiers %} sds-list--{{modifier}}{% endfor %}">
-{%- endif %}
+  <ul class="sds-list{% for modifier in modifiers %} sds-list--{{modifier}}{% endfor %}">
+{%- endif -%}
 
-  {%- for item in items -%}
+  {%- for item in items %}
     <li>
-
-      {%- if item.icon %}
-        <span class="sds-list__item-icon">
-          {% render '@icon', item.icon %}
-        </span>
-        {# span needed for aligning text with icon #}
-        <span class="sds-list__item-content">
+      {%- if item.icon -%}
+        {%- render '@icon', item.icon -%}
+      {%- endif %}
+      {% if item.href -%}
+        <a class="usa-link" href="{{item.href}}">
       {%- endif -%}
-
-      {%- if item.link %}
-        {% render "@link", item.link -%}
+      {{ item.text }}
+      {%- if item.external -%}
+        {%- render '@icon', {icon:'external-link-alt', prefix: 'fas', classes: 'fa-xs'} -%}
       {%- endif -%}
-
-      {%- if item.text -%}
-        {{ item.text }}
-      {%- endif -%}
-
-      {# span needed for styling #}
-      {%- if item.icon %}
-        </span>
-      {% endif -%}
-
-      {%- if item.nested -%}
+      {%- if item.href -%}
+        </a>
+      {%- endif %}
+      {% if item.nested %}
         {% render '@list', {items: item.nested.items, modifiers:['nested']} %}
-      {% endif -%}
+      {% endif %}
+
     </li>
-  {%- endfor -%}
+  {% endfor %}
 
 {%- if ordered -%}
   </ol>

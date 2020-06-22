@@ -1,8 +1,11 @@
 status: wip
 label: Lists
-preview: "@sam"
+preview: "@sam-content"
 default: unordered
 collated: true
+notes: "Lists can be ordered, unordered, or unstyled and have icons and/or be links.
+See Cards -- List for example of adding adding a list to a card.
+Modifiers are unstyled and flex (for icon lists)"
 context:
   modifiers:
   items:
@@ -36,7 +39,8 @@ variants:
     label: Icon List
     context:
       modifiers:
-          - icon
+          - unstyled
+          - flex
       items:
         - text: List Item
           icon:
@@ -54,7 +58,8 @@ variants:
     label: Icon List -- Large
     context:
       modifiers:
-          - icon
+          - unstyled
+          - flex
       items:
         - text: List Item
           icon:
@@ -74,36 +79,31 @@ variants:
       modifiers:
           - unstyled
       items:
-        - link:
-            text: List Item
-            href: " "
-        - link:
-            text: List Item
-            href: " "
-        - link:
-            text: List Item
-            href: " "
+        - text: List Item
+          href: " "
+        - text: List Item
+          href: " "
+        - text: List Item
+          href: " "
   - name: menu icon
     label: Menu List with Icons
     context:
       modifiers:
-          - icon
+          - unstyled
+          - flex
       items:
-        - link:
-            text: List Item
-            href: " "
+        - text: List Item
+          href: " "
           icon:
             icon: bell
             classes: fa-fw
-        - link:
-            text: Quick start guide for creating a login.gov account
-            href: " "
+        - text: Quick start guide for creating a login.gov account
+          href: " "
           icon:
             icon: calendar
             classes: fa-fw
-        - link:
-            text: List Item
-            href: " "
+        - text: List Item
+          href: " "
           icon:
             icon: book
             classes: fa-fw
@@ -111,62 +111,21 @@ variants:
     label: Menu List with Icons -- Large
     context:
       modifiers:
-          - icon
+          - unstyled
+          - flex
       items:
-        - link:
-            text: List Item
-            href: " "
+        - text: List Item
+          href: " "
           icon:
             icon: bell
             classes: fa-2x fa-fw
-        - link:
-            text: Quick start guide for creating a login.gov account
-            href: " "
+        - text: Quick start guide for creating a login.gov account
+          href: " "
           icon:
             icon: calendar
             classes: fa-2x fa-fw
-        - link:
-            text: List Item
-            href: " "
+        - text: List Item
+          href: " "
           icon:
             icon: book
             classes: fa-2x fa-fw
-  - name: icon-link-text
-    label: List with Icon, Link, and Text
-    context:
-      type: unstyled
-      modifiers:
-          - icon
-      items:
-        - text: ", sample text"
-          link:
-            href: " "
-            text: "Sample link"
-          icon:
-            icon: question-circle
-            classes: fa-fw
-            prefix: far
-        - text: ". The Defense Logistics Agency (DLA) Commercial and Government Entity (CAGE) portal to search for domestic and foreign entity CAGE Code information."
-          link:
-            href: " "
-            text: CAGE Code Search
-          icon:
-            icon: archive
-            prefix: fas
-            classes: fa-fw
-        - text: . The webform where Dun & Bradstreet (D&B) provides a DUNS Number, a unique nine digit identification number, for each physical location of your business. DUNS Number assignment and maintenance is free for all entities required to register with the U.S. government for contracts or grants.
-          link:
-            href: " "
-            text: DUNS Number Request
-          icon:
-            icon: map-marked-alt
-            prefix: fas
-            classes: fa-fw
-        - text: . The online portal for international entities to request a new NATO CAGE (NCAGE) Code or submit updates to an existing NCAGE Code record.
-          link:
-            href: " "
-            text: NCAGE Code Request
-          icon:
-            icon: file-alt
-            prefix: fas
-            classes: fa-fw
