@@ -13,12 +13,9 @@
       @include u-bg('accent-cool-light')
     }
 
-    &:focus,
+   &:focus,
     &:not([disabled]):focus {
-      @include u-outline('secondary-lighter');
-      @include u-outline('1px');
-      outline-style: dashed;
-      outline-offset: 0;
+      outline-offset: -0.25rem;
     }
 
     &::after {
