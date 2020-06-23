@@ -22,18 +22,22 @@
   &:focus {
     outline-offset: units(2px);
   }
-  &--disabled,
-  &:disabled {
-    box-shadow: none;
-    @include u-border("disabled");
-  }
 
-  &--unstyled,
-  &--unstyled.usa-button--hover,
-  &--unstyled.usa-button--active,
-  &:active,
-  &:hover  {
+  &--unstyled {
     border: none;
+    @include u-text("underline");
+    &.usa-button--active,
+    &:active {
+      border: none;
+      @include u-bg("transparent");
+      @include u-text("underline","secondary-darker");
+    }
+    &.usa-button--hover,
+    &:hover {
+      border: none;
+      @include u-bg("transparent");
+      @include u-text("underline","accent-warm-dark");
+    }
   }
 }
 
@@ -208,6 +212,23 @@
     color: color("white");
     background-color: color("base-light");
     @include u-border("base-light");
+  }
+}
+.usa-button,
+.sds-button {
+  &--disabled,
+  &:disabled {
+    box-shadow: none;
+    @include u-border("disabled");
+    @include u-bg("disabled");
+    @include u-text("white");
+    &.usa-button--unstyled,
+    &.sds-button--unstyled {
+      box-shadow: none;
+      @include u-border(0);
+      @include u-bg("transparent");
+      @include u-text("disabled");
+    }
   }
 }
 
