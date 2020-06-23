@@ -14,7 +14,6 @@ variants:
           - text: The operating system of the machine running the Internet browser
           - text: The Internet address of the website you came from if it linked you directly to this site
           - text: The technical status of the request you made, i.e. was it successful or was there an error?
-
   - name: three-columns
     label: Three Columns
     context:
