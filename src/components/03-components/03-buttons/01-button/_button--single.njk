@@ -45,8 +45,7 @@ if disabled
 endif 
 %}>{%
 if icon
-%}
-{% render '@icon', icon, true %}{#{prefix:'prefix',icon:'icon',title:'tile'}#}
+%}{% render '@icon', icon, true %}
 {% 
 endif 
 %}{%
@@ -56,7 +55,7 @@ endif
 %}{%
 if icon_right 
 %}
-{% render '@icon', icon_right %}{#{prefix:'prefix',icon:'icon',title:'tile'}#}
+{% render '@icon', icon_right %}
 {% 
 endif 
 %}<{%
