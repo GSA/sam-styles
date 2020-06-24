@@ -17,13 +17,13 @@ variants:
   - name: three-columns
     label: Three Columns
     context:
-      base: sds-card
       title: Contract Opportunities
-      colors:
-        - title: Accent Cool
+      color: base
       header:
         style: left
-      body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae.
+      body: 
+        content:
+         -text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae.
 
   - name: left-aside
     label: Left Aside
