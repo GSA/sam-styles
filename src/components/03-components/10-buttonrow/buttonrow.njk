@@ -1,36 +1,48 @@
 <h2>Button Row</h2>
 <div class="sds-button-row">
-      <button class="usa-button usa-button--secondary">Back</button>
-      <button class="usa-button usa-button--secondary">Cancel</button>
-      <button class="usa-button usa-button--secondary">Help</button>
-      <button class="usa-button">Forward</button>
-  </div>
+  <button class="usa-button usa-button--secondary">Back</button>
+  <button class="usa-button usa-button--secondary">Cancel</button>
+  <button class="usa-button usa-button--secondary">Help</button>
+  <button class="usa-button">Forward</button>
+</div>
 
 <p>Or use circular buttons and labels</p>
 
-  <div class="sds-button-row">
-    <div class="sds-button-col sds-button-col--left">
-      <button id="back" class="sds-button--circle usa-button--secondary">
-        {% render '@icon', {icon:'caret-left', prefix: 'fa'} %}
-      </button>
-      <label for="back">Go to How many CFDA Number Can My Agency Have?</label>
-    </div>
-    <div class="sds-button-col">
-      <button id="cancel" class="sds-button--circle usa-button--secondary">
-        {% render '@icon', {icon:'times', prefix: 'fa'} %}
-      </button>
-      <label for="cancel">Cancel</label>
-    </div>
-    <div class="sds-button-col">
-      <button id="help" class="sds-button--circle usa-button--secondary">
-        {% render '@icon', {icon:'caret-down', prefix: 'fa'} %}
-      </button>
-      <label for="help">Help</label>
-    </div>
-    <div id="forward" class="sds-button-col sds-button-col--right">
-      <button class="sds-button--circle usa-button--secondary">
-        {% render '@icon', {icon:'caret-right', prefix: 'fa'} %}
-      </button>
-      <label for="forward">Go to What is an Assistance Listing?</label>
-    </div>
+<div class="sds-button-row">
+  <div class="sds-button-col sds-button-col--left">
+    {% 
+    render '@circle--single', {
+    icon: {icon:'caret-left', prefix: 'fa',
+    classes:'fa-1x'},
+    modifiers:['secondary']}
+    %}
+    <label for="back">Go to How many CFDA Number Can My Agency Have?</label>
   </div>
+  <div class="sds-button-col">
+    {% 
+    render '@circle--single', {
+    icon: {icon:'times', prefix: 'fa',
+    classes:'fa-1x'},
+    modifiers:['secondary']} 
+    %}
+    <label for="cancel">Cancel</label>
+  </div>
+  <div class="sds-button-col">
+    {% 
+    render '@circle--single', {
+    icon: {icon:'caret-down', prefix: 'fa',
+    classes:'fa-1x'},
+    modifiers:['secondary']} 
+    %}
+    <label for="help">Help</label>
+  </div>
+  <div id="forward" class="sds-button-col sds-button-col--right">
+    {% 
+    render '@circle--single', {
+    icon: {icon:'caret-right', prefix: 'fa',
+    classes:'fa-1x'},
+    modifiers:['secondary']} 
+    %}
+    <label for="forward">Go to What is an Assistance Listing?</label>
+  </div>
+</div>
