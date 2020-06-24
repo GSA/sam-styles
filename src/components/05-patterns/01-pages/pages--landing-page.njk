@@ -71,7 +71,6 @@
             {% for card in cards %}
                 <div class="tablet:grid-col-{{card.col}}">
                     {% render '@card', card, true %}
-                    {% render '@card', card %}
                 </div>
             {% endfor %}
         </div>
