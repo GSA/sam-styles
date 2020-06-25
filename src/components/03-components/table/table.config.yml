@@ -47,8 +47,8 @@ variants:
     context:
       modifiers:
         - borderless
-  - name: subsection
-    label: Subsection
+  - name: subsections
+    label: Subsections
     context:
       body:
         data:

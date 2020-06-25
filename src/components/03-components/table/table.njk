@@ -32,21 +32,21 @@
 {% endif -%}
 
 {%- if body -%}
-  <tbody>
   {% block data %}
-    {%- for row in body.data -%}
-      <tr>
-        {%- for key in body.keys %}
-          {%- if key.heading %}
-            {%- set key = key.value %}
-            <th scope="row">{{ row[key] }}</th>
-          {%- else %}
-            <td>{{row[key]}}</td>
-          {%- endif -%}
-        {%- endfor -%}
-      </tr>
-    {%- endfor -%}
+    <tbody>
+      {%- for row in body.data -%}
+        <tr>
+          {%- for key in body.keys %}
+            {%- if key.heading %}
+              {%- set key = key.value %}
+              <th scope="row">{{ row[key] }}</th>
+            {%- else %}
+              <td>{{row[key]}}</td>
+            {%- endif -%}
+          {%- endfor -%}
+        </tr>
+      {%- endfor -%}
+    </tbody>
   {% endblock -%}
-  </tbody>
 {%- endif %}
 </table>

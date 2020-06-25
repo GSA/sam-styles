@@ -3,6 +3,20 @@ $sds-table-border: "1px";
 .sds-table {
   @extend .usa-table;
   @include u-border('base-light', $sds-table-border);
+  td, th {
+    border: 0;
+  }
+  tbody {
+    // tiger stripes for tables without subsections
+    :first-child:not(.sds-table__subsection-title) ~ :nth-of-type(even) {
+      & > * {
+        @include u-bg("success-lighter");
+      }
+    }
+    &:not(:first-of-type) {
+      @include u-border-top('base-light', $sds-table-border);
+    }
+  }
   &--borderless {
     border: 0;
   }
@@ -18,11 +32,11 @@ $sds-table-border: "1px";
       @include u-text('semibold');
       @include u-bg('accent-cool-lighter');
     }
-    &:not(:first-child) {
-      @include u-border-top('base-light', $sds-table-border);
+    // tiger stripes for subsections
+    & ~ :nth-of-type(odd) {
+      & > * {
+        @include u-bg("success-lighter");
+      }
     }
-  }
-  td, th {
-    border: 0;
   }
 }
