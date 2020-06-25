@@ -1,0 +1,22 @@
+{% extends "@table" %}
+
+
+{% block data %}
+	{%- for section in body.sections -%}
+		<tr class="sds-table__subsection-title">
+			<th colspan="{{body.keys | length}}" scope="colgroup">{{section.title}}</th>
+		</tr>
+		{%- for data in section.data -%}
+			<tr>
+				{%- for key in body.keys -%}
+					{%- if key.heading %}
+						{%- set key = key.value %}
+						<th scope="row">{{ data[key] }}</th>
+					{%- else %}
+						<td>{{ data[key] }}</td>
+					{%- endif -%}
+				{%- endfor -%}
+			</tr>
+		{%- endfor -%}
+	{%- endfor %}
+{% endblock -%}

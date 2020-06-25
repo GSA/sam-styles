@@ -3,17 +3,26 @@ $sds-table-border: "1px";
 .sds-table {
   @extend .usa-table;
   @include u-border('base-light', $sds-table-border);
-  thead {
+  &--borderless {
+    border: 0;
+  }
+  &__head {
     @include u-border-bottom('base-light', $sds-table-border);
     th {
       @include u-text('semibold');
       background: $theme-color-base-lighter;
     }
   }
-  td, th {
-    border: 0;
+  &__subsection-title {
+    th {
+      @include u-text('semibold');
+      @include u-bg('accent-cool-lighter');
+    }
+    &:not(:first-child) {
+      @include u-border-top('base-light', $sds-table-border);
+    }
   }
-  &--borderless {
+  td, th {
     border: 0;
   }
 }

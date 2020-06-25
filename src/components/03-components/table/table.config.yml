@@ -1,3 +1,4 @@
+label: Tables
 preview: "@sam-grid"
 status: wip
 default: Bordered
@@ -11,8 +12,7 @@ context:
       - Active
   body:
     keys:
-      - value: name
-        heading: true
+      - name
       - date
       - run
       - active
@@ -47,4 +47,29 @@ variants:
     context:
       modifiers:
         - borderless
-
+  - name: subsection
+    label: Subsection
+    context:
+      body:
+        data:
+        sections:
+          - title: Additional Classifications
+            data:
+              - name: 12345
+                date: mm/dd/yyyy
+                run: Lorem ipsum dolor sit amet
+                active: consectetur adipiscing elit sed do eiusmod
+              - name: 12346
+                date: mm/dd/yyyy
+                run: Lorem ipsum dolor sit amet
+                active: consectetur adipiscing elit sed do eiusmod
+          - title: Administration
+            data:
+              - name: 12347
+                date: mm/dd/yyyy
+                run: Lorem ipsum dolor sit amet
+                active: consectetur adipiscing elit sed do eiusmod
+              - name: 12348
+                date: mm/dd/yyyy
+                run: Lorem ipsum dolor sit amet
+                active: consectetur adipiscing elit sed do eiusmod

@@ -8,6 +8,7 @@
       value (string): key
       heading (Boolean): if data should be the row heading (th)
     data (array): array of data objects with listed keys
+    sections (array): use instead of data if using subsections
 #}
 
 <table class="sds-table
@@ -21,7 +22,7 @@
   {% endif -%}
 
 {% if head %}
-  <thead>
+  <thead class="sds-table__head">
     <tr>
       {%- for header in head.headers -%}
         <th scope="col">{{header}}</th>
@@ -32,18 +33,20 @@
 
 {%- if body -%}
   <tbody>
-  {%- for row in body.data %}
-    <tr>
-      {%- for key in body.keys %}
-        {%- if key.heading %}
-          {%- set key = key.value %}
-          <th scope="row">{{ row[key] }}</th>
-        {%- else %}
-          <td>{{row[key]}}</td>
-        {%- endif -%}
-      {%- endfor -%}
-    </tr>
-  {%- endfor %}
+  {% block data %}
+    {%- for row in body.data -%}
+      <tr>
+        {%- for key in body.keys %}
+          {%- if key.heading %}
+            {%- set key = key.value %}
+            <th scope="row">{{ row[key] }}</th>
+          {%- else %}
+            <td>{{row[key]}}</td>
+          {%- endif -%}
+        {%- endfor -%}
+      </tr>
+    {%- endfor -%}
+  {% endblock -%}
   </tbody>
 {%- endif %}
 </table>
