@@ -3,11 +3,14 @@
   modifiers (array<string>): table modifiers
   head: thead content (optional)
     headers (array<string>): column header
-  body: tbody content (optional)
+  body: data content
     keys (array<string or object): keys used in data objects which should be displayed (must be in order)
       value (string): key
       heading (Boolean): if data should be the row heading (th)
-    data (array): array of data objects with listed keys
+    data (array<object>): array of data objects with listed keys
+    sections (array): use instead of data if using subsections
+      title (string): section title
+      data (array<object>): array of data objects with listed keys
 #}
 
 <table class="sds-table
@@ -20,30 +23,32 @@
     <caption>{{title}}</caption>
   {% endif -%}
 
-{% if head %}
-  <thead>
-    <tr>
-      {%- for header in head.headers -%}
-        <th scope="col">{{header}}</th>
-      {% endfor -%}
-    </tr>
-  </thead>
-{% endif -%}
+  {% if head %}
+    <thead class="sds-table__head">
+      <tr>
+        {%- for header in head.headers -%}
+          <th scope="col">{{header}}</th>
+        {% endfor -%}
+      </tr>
+    </thead>
+  {%- endif -%}
 
-{%- if body -%}
-  <tbody>
-  {%- for row in body.data %}
-    <tr>
-      {%- for key in body.keys %}
-        {%- if key.heading %}
-          {%- set key = key.value %}
-          <th scope="row">{{ row[key] }}</th>
-        {%- else %}
-          <td>{{row[key]}}</td>
-        {%- endif -%}
-      {%- endfor -%}
-    </tr>
-  {%- endfor %}
-  </tbody>
-{%- endif %}
+  {%- if body -%}
+    {%- block data %}
+      <tbody>
+        {%- for row in body.data -%}
+          <tr>
+            {%- for key in body.keys %}
+              {%- if key.heading %}
+                {%- set key = key.value %}
+                <th scope="row">{{ row[key] }}</th>
+              {%- else %}
+                <td>{{row[key]}}</td>
+              {%- endif -%}
+            {%- endfor -%}
+          </tr>
+        {%- endfor -%}
+      </tbody>
+    {% endblock -%}
+  {%- endif -%}
 </table>
