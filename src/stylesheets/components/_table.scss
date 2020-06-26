@@ -24,7 +24,7 @@ $sds-table-border: "1px";
     @include u-border-bottom('base-light', $sds-table-border);
     th {
       @include u-text('semibold');
-      background: $theme-color-base-lighter;
+      @include u-bg("base-lighter");
     }
   }
   &__subsection-title {
