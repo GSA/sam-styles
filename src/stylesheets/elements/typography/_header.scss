@@ -34,11 +34,6 @@ h1 {
     @include u-line-height('sans', 2);
   }  
   
-  h1, h2, h3, h4, h5, h6 {
-    &.heading {
-    }
-  }
-  
   // Heading helper classes
   .h1 {
     @extend h1;

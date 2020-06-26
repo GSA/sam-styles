@@ -18,18 +18,6 @@ p {
     &.sds-text-error{
       @include u-text('error-dark');
     }
-    
-    &.color {
-      @include u-text('primary');
-    }
-  
-    &.ink {
-      @include u-text('ink');
-    }
-  
-    &.base {
-      @include u-text('base');
-    }
   }
   
   .p {

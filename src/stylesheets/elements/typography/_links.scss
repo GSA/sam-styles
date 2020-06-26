@@ -66,12 +66,3 @@
 .sds-static {
   @include u-text('semibold');
 }
-
-.line-height-05 {
-  line-height: 0.5rem;
-}
-
-//Table expands for content
-td {
-  white-space: nowrap;
-}
