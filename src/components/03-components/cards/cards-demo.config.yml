@@ -65,7 +65,7 @@ variants:
     context:
       card:
         classes:
-          - shadow-0
+          - shadow-none
   - name: shadowed
     label: Shadowed No Border
     context:
@@ -77,7 +77,7 @@ variants:
     context:
       card:
         classes:
-          - shadow-0
+          - shadow-none
           - border-width-0
   - name: no header
     label: No Header
