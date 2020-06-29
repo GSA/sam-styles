@@ -13,13 +13,13 @@
     @include u-line-height('sans', 3);
   }
 
+  &--visited, &:visited {
+    @include u-text ('violet-70v')
+  }
+
   &--hover, &:hover {
     @include u-text ('yellow-50');
     @include u-text ('underline');
-  }
-  
-  &--visited, &:visited {
-    @include u-text ('violet-70v')
   }
 
   &--inverse {
@@ -66,3 +66,23 @@
 .sds-static {
   @include u-text('semibold');
 }
+
+//taken from elements/links.scss
+.sds-icon-link{
+  @include u-display('inline-flex');
+  @include u-flex('align-center');
+  svg{
+      @include u-flex('align-center');
+  }
+  &--left{
+      svg{
+          @include u-margin-right(1)
+      }
+  }
+  &--right{
+      svg{
+          @include u-margin-left(1)
+      }
+  }
+}
+
