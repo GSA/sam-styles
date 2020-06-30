@@ -5,6 +5,7 @@
     smodifiers  (array)  - SDS "circle,small"
     disabled    (bool)   - adds disabled attribute 
     classes     (string) - extra classes
+    controls    (string) - attribute aria-controls="{{string}}"
     custom      (string) - other attributes i.e. ( tabindex="0" onclick="alert" )
     text        (string) - text of the button 
     icon        (object) - icon before text if there is text {prefix,icon,title} 
@@ -36,6 +37,10 @@ if classes
 %} {{classes}}{%
 endif
 %}"{%
+if controls
+%} aria-controls="{{controls}}"{%
+endif
+%}{%
 if custom
 %} {{custom}}{%
 endif

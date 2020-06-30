@@ -1,10 +1,11 @@
 <footer class="usa-footer usa-footer--big">
   <div class="sds-feedback">
-    <button type="button" class="sds-feedback__button simple-toggle" [attr.aria-expanded]="!isCollapsedContent"
-      aria-controls="collapseID" (click)="isCollapsedContent = !isCollapsedContent">
+     
+    <button type="button" class="sds-feedback__button simple-toggle" aria-controls="collapseID" >
       {% render '@icon', {icon: 'arrow-down', classes: 'sds-feedback__open'} %}
       <span class="sds-feedback__title">Feedback</span>
     </button>
+    {% render '@circle--single', button %}
     <div id="collapseID" [sdscollapse]="isCollapsedContent" class="sds-feedback__response">
       <div>
         <span class="sds-feedback__response-title">One Question
