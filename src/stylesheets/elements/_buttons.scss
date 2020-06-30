@@ -26,6 +26,7 @@
   &--unstyled {
     border: none;
     @include u-text("underline");
+    text-decoration: none;
     &.usa-button--active,
     &:active {
       border: none;
@@ -36,7 +37,7 @@
     &:hover {
       border: none;
       @include u-bg("transparent");
-      @include u-text("underline","accent-warm-dark");
+      @include u-text("underline","warning-darker");
     }
   }
 }
