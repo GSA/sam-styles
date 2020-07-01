@@ -82,3 +82,65 @@
     @include u-border-top(0);
   }
 }
+
+// added from sds-theme-custom-styles
+.usa-accordion__block {
+  background-image: none;
+  background-color: white;
+  padding: 1rem 1.25rem 1rem 1.25rem;
+  font-weight: 600;
+  position: relative;
+  &:hover {
+    @include u-bg('accent-cool-light')
+  }
+
+  &:not([disabled]):focus,
+  &:focus {
+    outline: none;
+    outline-color: #79adfb;
+    outline-style: dashed;
+    outline-width: 1px;
+    outline-offset: 0;
+  }
+
+  &::after {
+    content: '';
+    display:inline-block;
+    width:25px;
+    height:25px;
+    background:linear-gradient(#0a3466,#0a3466);
+    background-position:center;
+    background-size: 54% 1px;
+    background-repeat:no-repeat;
+    position: absolute;
+    right: 27px;
+    top:7px;
+  }
+
+  &[aria-expanded=true] {
+    background-image: none;
+    color: #0a3466;
+    background-color: #eff6fb;
+  }
+
+  &[aria-expanded=false] {
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+
+    &::before {
+      content: '';
+      display:inline-block;
+      width:25px;
+      height:25px;
+      background:linear-gradient(#0a3466,#0a3466),#e2e2e2;
+      background-position:center;
+      background-size: 1px 54%;
+      background-repeat:no-repeat;
+      position: absolute;
+      right: 27px;
+      top:7px;
+      border-radius: 50%;
+    }
+  }
+}

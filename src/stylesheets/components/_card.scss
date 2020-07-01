@@ -11,16 +11,6 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
   border-radius: $sds-card-border-radius;
   @include u-shadow(2);
 
-  // TODO: remove after USWDS import order corrected
-  &.shadow-0 {
-    box-shadow: none;
-  }
-
-  // TODO: remove after USWDS import order corrected
-  &.border-width-0 {
-    border: none;
-  }
-
   &__title {
     @include u-margin-y(0);
     @include u-display('inline-block');

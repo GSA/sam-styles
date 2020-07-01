@@ -69,3 +69,20 @@
 .line-height-05 {
   line-height: 0.5rem;
 }
+
+// Code samples -- added from sds-theme-custom-styles
+code, pre {
+  @include u-font('mono', '3xs');
+  // TODO: add more black-transparent values (1-5)
+  background-color: rgba(0, 0, 0, .05);
+}
+
+code {
+  @include u-padding-y(2px);
+
+  &::before,
+  &::after {
+    letter-spacing: letter-spacing('ls-neg-3');
+    content: '\00a0';
+  }
+}
