@@ -12,6 +12,7 @@
     @include u-height(5);
     @include u-minw(5);
     @include u-shadow(3);
+    @include u-border(0);
   }
 
   [type='search'] {

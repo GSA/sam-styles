@@ -1,0 +1,50 @@
+{{name}}{%- if (name == 'Outline-inverse') -%}
+{% set bkg = "bg-base-darkest text-base-lightest " -%}
+{% endif -%}
+{%- if (name == 'White') -%}
+{% set bkg = "bg-base-lightest " -%}
+{% endif -%}
+
+<div class="{{ bkg }}padding-4">
+  <div class="grid-row">
+    <div class="grid-col">
+      <div class="padding-y-2">
+        <div class="text-center">{{name}}<br><br>
+          {% render '@circle--single', button %}
+        </div>
+      </div>
+    </div>
+    <div class="grid-col">
+      <div class="grid-row">
+        <div class="grid-col padding-2">
+          <div class="text-center">Hover<br><br>
+            <button class="usa-button sds-button--circle {{button.classes}} usa-button--hover">
+              {% render '@icon' %}
+            </button>
+          </div>
+        </div>
+        <div class="grid-col padding-2">
+          <div class="text-center">Active<br><br>
+            <button class="usa-button sds-button--circle {{button.classes}} usa-button--active">
+              {% render '@icon' %}
+            </button>
+          </div>
+        </div>
+        <div class="grid-col padding-2">
+          <div class="text-center">Focused<br><br>
+            <button class="usa-button sds-button--circle {{button.classes}} usa-focus">
+              {% render '@icon' %}
+            </button>
+          </div>
+        </div>
+        <div class="grid-col padding-2">
+          <div class="text-center">Disabled<br><br>
+            <button class="usa-button sds-button--circle {{button.classes}} usa-button--disabled">
+              {% render '@icon' %}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

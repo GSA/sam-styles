@@ -38,7 +38,7 @@
 			{%- if header.buttons %}
 				<div class="sds-card__buttons">
 					{%- for button in header.buttons %}
-						{% render '@buttons--single', {modifiers: button.modifiers }, true -%}
+						{% render '@button--single', {modifiers: button.modifiers }, true -%}
 					{% endfor %}
 				</div>
 			{% endif -%}
