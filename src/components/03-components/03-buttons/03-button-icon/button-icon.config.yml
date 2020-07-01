@@ -1,0 +1,23 @@
+label: Icon Button
+status: wip
+preview: "@sam-content"
+context:
+  label:
+  classes: "sds-button--icon"
+  buttons:
+    - icons:
+        type: stack
+        size: 2x
+        icons:
+          - icon: triangle
+            classes: fa-stack-2x text-accent-cool-light fa-1x
+          - icon: folder
+            classes: fa-stack-1x text-base fa-2x
+    - icons:
+        type: stack
+        size: 2x
+        icons:
+          - icon: pentagon
+            classes: fa-stack-2x text-accent-cool-light fa-1x
+          - icon: check-circle
+            classes: fa-stack-1x text-base fa-2x
