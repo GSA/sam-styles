@@ -56,16 +56,18 @@
     align-self: center;
   }
 
+  &.usa-button--small,
   &.sds-button--small {
     height: units(3);
     width: units(3);
     padding: 0;
     font-size: size("body", 1);
   }
+  &.usa-button--big, 
   &.sds-button--big {
     height: units(5);
     width: units(5);
-    font-size: size("body", 8);
+    font-size: size("body", 6);
   }
 }
 
@@ -201,11 +203,13 @@
 .sds-button--white {
   background-color: color("white");
   @include u-border("white");
+  transition: box-shadow 0.2s ease-out;
 
   &.usa-button--hover,
   &:hover {
-    background-color: color("base-lighter");
-    @include u-border("base-lighter");
+    background-color: color("white");
+    @include u-border("white");
+    @include u-shadow(2);
   }
 
   &.usa-button--active,
@@ -215,6 +219,7 @@
     @include u-border("base-light");
   }
 }
+
 .usa-button,
 .sds-button {
   &--disabled,
@@ -232,6 +237,7 @@
     }
   }
 }
+
 
 /*******************************
       SDS Specific Styles
@@ -295,6 +301,7 @@
 
 // Size
 
+.usa-button--small,
 .sds-button--small {
   @include u-font("sans", "2xs");
   padding: units(1) units(2);

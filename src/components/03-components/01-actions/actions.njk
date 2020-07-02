@@ -1,18 +1,22 @@
 <div class="grid-row">
   <div class="tablet:grid-col">
     <h4>Trigger options</h4>
-    <button class="sds-button sds-button--circular sds-button--shadow">
-      {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw', dataTransform: 'grow-5'} %}
+
+    <button class="usa-button sds-button--circle sds-button--white usa-button--big sds-button--shadow">
+      <i class="sds fa-ellipsis fa-fw" data-fa-transform="grow-5"></i>
+    </button>
+    <button class="usa-button sds-button--circle usa-button--big sds-button--shadow">
+      <i class="sds fa-ellipsis fa-fw" data-fa-transform="grow-5"></i>
     </button>
 
-    <button class="sds-button sds-button--primary sds-button--circular">
-      {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw', dataTransform: 'grow-5'} %}
-    </button>
-
-    <button class="sds-button sds-button--labeled-icon">
+    <button class="usa-button sds-button--white text-secondary-dark padding-1">
       Actions
-      {% render '@layered-icon', layeredIcon %}
+       <span class="fa-layers padding-left-4">
+          <i class="fas fa-circle text-primary" data-fa-transform="grow-8"></i>
+          <i class="sds fa-ellipsis text-secondary-dark" data-fa-transform="shrink-1"></i>
+      </span>
     </button>
+
     <h4>Menu</h4>
     <div class="sds-overlay minw-menu maxw-mobile radius-overlay">
       <div class="sds-menu">
@@ -39,21 +43,20 @@
   </div>
   <div class="tablet:grid-col">
     <h4>Trigger options (small)</h4>
-    <button
-      class="sds-button sds-button--circular sds-button--small sds-button--shadow"
-    >
-      {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw', dataTransform: 'grow-5'} %}
+    
+    <button class="usa-button sds-button--circle sds-button--white sds-button--shadow">
+      <i class="sds fa-ellipsis fa-fw" data-fa-transform="grow-5"></i>
+    </button>
+    <button class="usa-button sds-button--circle sds-button--shadow">
+      <i class="sds fa-ellipsis fa-fw" data-fa-transform="grow-5"></i>
     </button>
 
-    <button
-      class="sds-button sds-button--primary sds-button--circular sds-button--small"
-    >
-    {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw', dataTransform: 'grow-5'} %}
-    </button>
-
-    <button class="sds-button sds-button--labeled-icon sds-button--small">
+    <button class="usa-button sds-button--white sds-button--small hite text-secondary-dark padding-1">
       Actions
-      {% render '@layered-icon', layeredIcon %}
+       <span class="fa-layers padding-left-4">
+          <i class="fas fa-circle text-primary" data-fa-transform="grow-12"></i>
+          <i class="sds fa-ellipsis text-secondary-dark"  data-fa-transform="grow-4"></i>
+      </span>
     </button>
     <h4>Menu (small)</h4>
     <div class="sds-overlay minw-menu maxw-mobile radius-overlay">
