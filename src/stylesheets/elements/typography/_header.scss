@@ -1,13 +1,44 @@
+$header-colors: (
+  base: (
+    background: 'base-lighter',
+  ),
+  accent-cool: (
+    background: "accent-cool-lighter",
+  ),
+  accent-warm: (
+    background: "accent-warm-lighter",
+  ),
+  feature: (
+    background: "secondary-dark",
+    text: "white"
+  )
+);
+
+@mixin sds-header {
+  @include u-text('base-dark');
+  @each $name, $var in $header-colors {
+    &--#{$name} {
+      @if map-get(map-get($header-colors, $name), background) {
+        @include u-bg(map-get(map-get($header-colors, $name), background));
+      }
+      @if map-get(map-get($header-colors, $name), text) {
+        @include u-text(map-get(map-get($header-colors, $name), text))
+      }
+    }
+  }
+}
+
 h1 {
     @include u-font('sans', 'xl');
     @include u-text('bold', 'base');
     @include u-line-height('sans', 2);
   }
     
-  h2 {
+h2 {
     @include u-font('sans', 'lg');
     @include u-text('semibold', 'base-dark');
     @include u-line-height('sans', 2);
+    //@include sds-header;
   }
   
   h3 {
@@ -71,4 +102,8 @@ h1 {
     .usa-link {
       font-size: inherit;
     }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: inherit;
   }
