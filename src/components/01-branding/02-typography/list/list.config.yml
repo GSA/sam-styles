@@ -1,6 +1,6 @@
 status: wip
 label: Lists
-preview: "@sam-grid"
+preview: "@sam"
 default: unordered
 collated: true
 context:
