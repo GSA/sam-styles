@@ -12,9 +12,7 @@
       </div>
       <div class="grid-col-auto">
         <div class="sds-alert--expanded-button">
-          <button aria-controls="alert-info-extension" class="accordion simple-toggle sds-button--circle usa-button--secondary margin-0">
-            {% render '@icon', {icon:'caret-down', prefix: 'fa'} %}
-          </button>
+          {% render '@circle--single', buttons[0] %}
         </div>
       </div>
     </div>
@@ -43,9 +41,7 @@
       </div>
       <div class="grid-col-auto">
         <div class="sds-alert--expanded-button">
-          <button aria-controls="alert-extension" class="accordion simple-toggle sds-button--circle usa-button--secondary margin-0">
-            {% render '@icon', {icon:'caret-down', prefix: 'fa'} %}
-          </button>
+          {% render '@circle--single', buttons[1] %}
         </div>
       </div>
     </div>
@@ -74,9 +70,7 @@
       </div>
       <div class="grid-col-auto">
         <div class="sds-alert--expanded-button">
-          <button aria-controls="alert-error-extension" class="accordion simple-toggle sds-button--circle usa-button--secondary margin-0">
-            {% render '@icon', {icon:'caret-down', prefix: 'fa'} %}
-          </button>
+         {% render '@circle--single', buttons[2] %}
         </div>
       </div>
     </div>
