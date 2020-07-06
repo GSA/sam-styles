@@ -56,6 +56,12 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
           @include u-text('right');
         }
       }
+      .usa-button {
+        @include u-margin-top(1);
+        @include at-media('tablet-lg') {
+          margin-top: 0;
+        }
+      }
     }
 
     &--left, &--center {
