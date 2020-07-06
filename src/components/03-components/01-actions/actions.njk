@@ -11,10 +11,7 @@
 
     <button class="sds-button sds-button--labeled-icon">
       Actions
-      <span class="fa-layers fa-fw">
-        {% render '@icon', {icon:'circle', prefix: 'fas'} %}
-        {% render '@icon', {icon: 'ellipsis', dataTransform: 'shrink-6'} %}
-      </span>
+      {% render '@layered-icon', layeredIcon %}
     </button>
     <h4>Menu</h4>
     <div class="sds-overlay minw-menu maxw-mobile radius-overlay">
@@ -56,10 +53,7 @@
 
     <button class="sds-button sds-button--labeled-icon sds-button--small">
       Actions
-      <span class="fa-layers fa-fw">
-        {% render '@icon', {icon:'circle', prefix: 'fas'} %}
-        {% render '@icon', {icon: 'ellipsis', dataTransform: 'shrink-6'} %}
-      </span>
+      {% render '@layered-icon', layeredIcon %}
     </button>
     <h4>Menu (small)</h4>
     <div class="sds-overlay minw-menu maxw-mobile radius-overlay">

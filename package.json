@@ -1,6 +1,6 @@
 {
   "name": "@gsa-sam/sam-styles",
-  "version": "0.0.70",
+  "version": "0.0.71",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,7 @@
     "@frctl/nunjucks": "^1.0.3",
     "@gsa-sam/icons": "^1.0.0",
     "copy": "^0.3.2",
-    "uswds": "^2.6.0"
+    "uswds": "^2.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.0",

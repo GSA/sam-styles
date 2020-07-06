@@ -16,6 +16,7 @@ USWDS utilities in the documentation:
 https://v2.designsystem.digital.gov/utilities
 ----------------------------------------
 */
+$utilities-use-important: true;
 
 /*
 ----------------------------------------
@@ -54,6 +55,8 @@ $width-settings: (
 Values
 ----------------------------------------
 */
+// color palettes (text)
+$color-palettes: ('palette-color-state');
 
 // .background-color
 
