@@ -7,18 +7,45 @@ variants:
     context:
       label:
         classes: "sds-tile"
+      tiles:
+        - icon:
+            classes: sds-tile__icon
+            size: 2x
+            type: stack
+            icons:
+              - icon: leaf
+                classes: fa-stack-2x text-accent-cool-light
+              - icon: pen-paper
+                classes: fa-stack-1x text-base fa-2x
+        - icon:
+            classes: sds-tile__icon
+            size: 2x
+            type: stack
+            icons:
+              - icon: circle
+                classes: fa-stack-2x text-accent-cool-light
+              - icon: federal-building
+                classes: fa-stack-1x text-base fa-2x
 
   - name: outline
     label: SDS Tile Outline
     context:
       label:
         classes: "sds-tile--outline"
-
-  - name: list
-    label: List
-    context:
-      modifiers:
-        - list
-        - unstyled
-      body:
-        list: true
+      buttons:
+        - icons:
+            type: stack
+            size: 2x
+            icons:
+              - icon: triangle
+                classes: fa-stack-2x text-accent-cool-light fa-1x
+              - icon: folder
+                classes: fa-stack-1x text-base fa-2x
+        - icons:
+            type: stack
+            size: 2x
+            icons:
+              - icon: pentagon
+                classes: fa-stack-2x text-primary-lighter fa-1x
+              - icon: check-circle
+                classes: fa-stack-1x text-base fa-2x

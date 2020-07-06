@@ -8,7 +8,7 @@ fractal.set('project.title', `SAM Styles (v${pkg.version})`);
 fractal.set('project.version', `v${pkg.version}`);
 fractal.set('project.author', 'GSA Integrated Award Environment');
 fractal.components.set('default.collator', function(markup, item) {
-  return '<!-- Start: @' + item.handle + ' -->\n<strong>' + item.name + '</strong>' + markup + '<hr/>\n<!-- End: @' + item.handle + ' -->\n';
+  return '<!-- Start: @' + item.handle + ' -->\n<strong>' + (item.label || item.name) + '</strong>' + markup + '<hr/>\n<!-- End: @' + item.handle + ' -->\n';
 });
 
 // =============================================================================
@@ -21,7 +21,18 @@ components.set("default.preview", "@sam");
 
 // use Nunjucks as the templating engine
 const nunjucks = require("@frctl/nunjucks")({
-  paths: ["src/components"]
+  paths: ["src/components"],
+  filters: {
+    setAttribute: function setAttribute(dictionary, key, value) {
+      dictionary[key] = value;
+      return dictionary;
+    }
+  },
+  globals: {
+    push: function push(array, item) {
+      return array.push(item);
+    }
+  }
 });
 
 components.engine(nunjucks);

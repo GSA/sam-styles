@@ -12,6 +12,7 @@
     @include u-height(5);
     @include u-minw(5);
     @include u-shadow(3);
+    @include u-border(0);
   }
 
   [type='search'] {
@@ -49,7 +50,7 @@
   select {
     @include u-bg('black');
     @include u-text('white');
-    background-image: url('#{$theme-image-path}/arrow-down-white.svg');
+    background-image: url('#{$theme-image-path}/sam/arrow-down-white.svg');
     background-repeat: no-repeat;
     background-size: 0.75rem;
   }

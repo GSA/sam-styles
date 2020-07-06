@@ -1,45 +1,63 @@
-<div class="grid-row bg-accent-cool-light padding-4">
-  <div class="tablet" grid-col"="grid-col"">
-    <div class="sds-tile--outline sds-tile--outline--sm">
-      <header class="sds-tile__header">
-        {% render '@icon', {icon:'new-note', classes: 'sds-tile__icon fa-2x text-base'} %}
-      </header>
-      <div class="sds-tile__body">
-        <a class="usa-link" href="#">tile link here</a>
-      </div>
-      <div class="sds-tile__footer">
-        <span>link description here</span>
+<div class="grid-row grid-gap">
+  <div class="tablet:grid-col-7">
+    <div class="sds-tile--outline">
+      <h3>The Official U.S. Government System for:</h3>
+      <div class="grid-row">
+        <div class="grid-col">
+          <ul class="sds-list  sds-list--unstyled sds-list-link">
+            <li>
+              <a href=" " class=" usa-link"=" usa-link""="usa-link""">Contract Opportunities</a>
+              (was fbo.gov)
+            </li>
+            <li>
+              <a href=" " class=" usa-link"=" usa-link""="usa-link""">Contract Data</a>
+              (Reports ONLY from fpds.gov)
+            </li>
+            <li>
+              <a href=" " class=" usa-link"=" usa-link""="usa-link""">Entity Compliance</a>
+              SCR and Bio-Preferred Reporting
+            </li>
+            <li>
+              <a href=" " class=" usa-link"=" usa-link""="usa-link""">Wage Determinations</a>
+              (was wdol.gov)
+            </li>
+          </ul>
+        </div>
+        <div class="grid-col">
+          <ul class="sds-list  sds-list--unstyled sds-list-link">
+            <li>
+              <a href=" " class=" usa-link"=" usa-link""="usa-link""">Contract Opportunities</a>
+              (was fbo.gov)
+            </li>
+            <li>
+              <a href=" " class=" usa-link"=" usa-link""="usa-link""">Contract Data</a>
+              (Reports ONLY from fpds.gov)
+            </li>
+            <li>
+              <a href=" " class=" usa-link"=" usa-link""="usa-link""">Entity Compliance</a>
+              SCR and Bio-Preferred Reporting
+            </li>
+            <li>
+              <a href=" " class=" usa-link"=" usa-link""="usa-link""">Wage Determinations</a>
+              (was wdol.gov)
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-  <div class="tablet" grid-col"="grid-col"">
-    <div class="sds-tile--outline">
-      <header class="sds-tile__header">
-        <i class="sds fa-building fa-3x"></i>
-        <a class="usa-link" href="#">
-          <h3>Tile Header</h3>
-        </a>
-      </header>
-      <div class="sds-tile__body">
-        <p>
-          A tile description can be placed here for users to better understand the links/buttons provided</p>
-      </div>
-      <div class="sds-tile__footer">
-        <button class="sds-button sds-button--icon">
-          <span class="fa-stack fa-2x">
-            {% render '@icon', {icon:'triangle', classes: 'fa-stack-2x text-accent-cool-light fa-1x'} %}
-            {% render '@icon', {icon:'folder', classes: 'fa-stack-1x text-base fa-2x'} %}
-          </span>
-          <span class="sds-button--icon__title">Button Example</span>
-        </button>
-        <button class="sds-button sds-button--icon">
-          <span class="fa-stack fa-2x">
-            {% render '@icon', {icon:'triangle', classes: 'fa-stack-2x text-accent-cool-light fa-1x'} %}
-            {% render '@icon', {icon:'folder', classes: 'fa-stack-1x text-base fa-2x'} %}
-          </span>
-          <span class="sds-button--icon__title">Button Example Longer Text</span>
-        </button>
-      </div>
+  <div class="tablet:grid-col">
+    <div class="sds-tile--outline flex-justify-center">
+      <h3>Register Your Entity</h3>
+      <p>Assistance listings are detailed public descriptions of federal programs that provide grants, loans, scholarships, insurance, and other types of assistance awards. You may browse assistance listings across all government agencies to form a “big
+        picture” of potential funding options.</p>
+      <button class="sds-button sds-button--icon desktop:width-full margin-y-2">
+        <span class="fa-stack fa-2x">
+          <i class="sds fa-pentagon fa-stack-2x text-primary-light fa-1x"></i>
+          <i class="sds fa-check-circle fa-stack-1x text-base fa-2x"></i>
+        </span>
+        <span class="sds-button--icon__title">Check Registration Status</span>
+      </button>
     </div>
   </div>
 </div>
