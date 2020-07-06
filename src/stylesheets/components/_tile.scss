@@ -29,25 +29,25 @@
 //****************************
 //SDS TILE OUTLINE
 .sds-tile--outline {
-  border: 2px solid white;
+  @include u-border('2px', 'white');
+  @include u-padding(4);
+  @include u-bg('accent-cool-light');
+  @include u-opacity(80);
+  @include u-width('full');
   border-radius: 20px;
-  padding: 32px;
-  background: rgba(240, 245, 249, 0.8);
-  width: 100%;
-  height: auto;
 
   .sds-tile__footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #767676;
+    @include u-display('flex');
+    @include u-flex('column');
+    @include u-flex('align-center');
+    @include u-text('base');
 
     button {
-      margin: 8px auto 8px auto;
+      @include u-margin-y(1);
     }
   }
 
   a {
-    font-weight: bold;
+    @include u-text('bold');
   }
 }
