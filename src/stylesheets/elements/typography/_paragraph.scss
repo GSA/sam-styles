@@ -1,0 +1,25 @@
+p {
+    @include u-font('sans', 'xs');
+    @include u-text('normal', 'base-dark');
+    @include u-line-height('sans', 3);
+    @include u-display('block');
+    @include u-measure(5);
+  
+    &.sds-big {
+      @include u-font('sans', 'md');
+      @include u-line-height('sans', 3);
+    }
+  
+    &.sds-small {
+      @include u-font('sans', '3xs');
+      @include u-line-height('sans', 3);
+    }
+    
+    &.sds-text-error{
+      @include u-text('error-dark');
+    }
+  }
+  
+  .p {
+    @extend p;
+  }

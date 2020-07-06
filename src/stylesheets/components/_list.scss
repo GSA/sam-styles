@@ -1,5 +1,6 @@
 .sds-list {
   @extend .usa-list;
+  @include u-line-height('sans', 3);
   li {
     @include u-margin-bottom(1);
     @include u-measure(6);

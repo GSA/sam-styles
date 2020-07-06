@@ -1,0 +1,149 @@
+
+/*---------
+  HEADING
+-----------*/
+
+<h1></h1>
+<h2></h2>
+<h3></h3>
+<h4></h4>
+<h5></h5>
+<h6></h6>
+
+/*---------------
+  LINK HEADING
+----------------*/
+
+<h1><a class="usa-link"></a></h1>
+<h2><a class="usa-link"></a></h2>
+<h3><a class="usa-link"></a></h3>
+<h4><a class="usa-link"></a></h4>
+<h5><a class="usa-link"></a></h5>
+<h6><a class="usa-link"></a></h6>
+
+/*-----------------
+  HEADING LIGHT
+-----------------*/
+
+<h1 class="sds-light"></h1>
+<h2 class="sds-light"></h2>
+<h3 class="sds-light"></h3>
+<h4 class="sds-light"></h4>
+<h5 class="sds-light"></h5>
+<h6 class="sds-light"></h6>
+
+
+/*------------
+  PARAGRAPH
+------------*/
+
+<p> </p>
+<p class="sds-big"></p>
+<p class="sds-small"></p>
+
+/*-----------------
+  LINK PARAGRAPH
+-----------------*/
+
+<p><a class="usa-link"></a></p>
+<p class="sds-big"><a class="usa-link"></a></p>
+<p class="sds-small"><a class="usa-link"></a></p>
+
+<div class="usa-dark-background">
+	<p><a class="usa-link"></a></p>
+</div>
+
+/*-----------------------------------------------------------------------------------------------
+  ERROR PARAGRAPH
+
+  The error highlight should just standardize the font color so that it can be applied
+  a wide range of tags including paragraph, span, table cell, and list item.  It should never
+  be applied to links.  This could be documented on the "Typesetting" page that is an overview.
+------------------------------------------------------------------------------------------------*/
+
+<p><span class="sds-text-error"></span></p>
+<p class="sds-text-error"></p>
+
+
+/*--------------------------------------------------------------------------------------------------
+MAIN NAVIGATION - Primary
+This is part of the header component, so just make sure the text matches.  Doesn't need separate
+documentation.
+--------------------------------------------------------------------------------------------------*/
+
+<ul class="usa-nav__primary usa-accordion">
+    <li class="usa-nav__primary-item">
+        <a class="usa-nav__link usa-current" href=""><span>Current section</span></a>
+    </li>
+</ul>
+
+/*-----------------------------------------------------------------------------------------------
+MAIN NAVIGATION - Secondary
+This is part of the header component, so just make sure the text matches.  Doesn't need separate
+documentation.
+------------------------------------------------------------------------------------------------*/
+
+<div class="usa-nav__secondary">
+	<ul class="usa-nav__secondary-links">
+        <li class="usa-nav__secondary-item">
+            <a href=""><i class="sds fa-bars"></i>
+				<span class="sds-nav__secondary-item-text">Secondary link</span>
+      		</a>
+      	</li>
+    </ul>
+</div>
+
+/*-----------------------------------------------------------------------------------------------
+UTILITY NAVIGATION (TITLE BAR)
+The navbar needs to be refactored as sds-nav__title-links and the H1 font inside the titlebar 
+styled to match the sketch file.  This should be documented as part of the sds-nav__title-links
+------------------------------------------------------------------------------------------------*/
+<div class="sds-nav__title-links">
+  <h1></h1>
+</div>
+
+
+/*--------------------------------------------------------------------------------------------------
+SIDE NAVIGATION
+This is documented as part of the side nav, where the selected links is just USA current.  We also 
+need styling for a sidenav item that isn't a link.  So there are 4 cases: a link, a selected link, 
+a label, and a selected label. 
+--------------------------------------------------------------------------------------------------*/
+
+<nav aria-label="data entry menu links">
+    <ul class="usa-sidenav">
+        <li class="usa-sidenav__item">
+            <a></a>
+        </li>
+        <li class="usa-sidenav__item usa-current">
+            <a></a>
+        </li>
+        <li class="usa-sidenav__item">
+        </li>
+        <li class="usa-sidenav__item usa-current">
+        </li>
+    </ul>
+</nav>
+
+/*--------------------------------------------------------------------------------------------------
+FOOTER
+https://www.w3.org/WAI/tutorials/page-structure/headings/
+Looking at 508, let's add a sr-only H2 for the footer and make the column labels H3 in the footer.
+So we need to align the H3.usa-footer__primary-link with the "Group Label" in the sketch file
+and the usa-footer__secondary-link with the footer link style in the sketch file.
+--------------------------------------------------------------------------------------------------*/
+<h2 class="sr-only">Page footer</h2>
+<footer class="usa-footer usa-footer--big">
+  <div class="usa-footer__primary-section">
+    <nav class="usa-footer__nav" aria-label="Footer navigation">
+        <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+            <h3 class="usa-footer__primary-link">Topic</h3>
+            <ul class="usa-list usa-list--unstyled">
+            	<li class="usa-footer__secondary-link"><a href="javascript:void(0);">Secondary link</a></li>
+            </ul>
+        </section>
+    </nav>
+  </div>
+</footer>
+
+
