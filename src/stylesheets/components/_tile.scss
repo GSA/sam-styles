@@ -31,10 +31,10 @@
 .sds-tile--outline {
   @include u-border('2px', 'white');
   @include u-padding(4);
-  @include u-bg('accent-cool-light');
-  @include u-opacity(80);
+  @include u-bg('accent-cool-lighter');
   @include u-width('full');
   border-radius: 20px;
+  opacity: 0.8;
 
   .sds-tile__footer {
     @include u-display('flex');
