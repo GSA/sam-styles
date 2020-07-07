@@ -44,7 +44,6 @@ Array.prototype.slice
       {
         let mobileHeader = document.getElementById("sds-mobile-alert")
         mobileHeader.style.display = 'none';
-        console.log('hi');
         let content = document.getElementById("sds-mobile-alert__content")
         content.style.display = 'flex';
         let contentbtn = document.getElementById("sds-mobile-alert__content-btn")

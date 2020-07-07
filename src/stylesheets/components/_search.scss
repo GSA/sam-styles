@@ -1,10 +1,13 @@
 /**********************************
        SEARCH USWDS OVERRIDES
 ***********************************/
-.usa-search{
+.usa-search {
   @include u-width('full');
   @media only screen and (max-width:480px){
     @include u-flex('row');
+  }
+  &[role="search"] {
+    @include u-display('flex');
   }
   [type='submit'] {
     @include u-bg('indigo-cool-60');
