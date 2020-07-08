@@ -3,7 +3,7 @@
   @include u-bg('white');
   @include u-padding-y('105');
   @include u-padding-x(2);
-  @include u-display('flex');
+  @include u-display('none');
   @include u-flex('row', 'align-center');
   @include u-border('2px','error', 'solid');
   @include u-position('absolute');
@@ -27,6 +27,6 @@
     }
   }
   @include at-media('tablet-lg') {
-    @include u-display('none');
+    @include u-display('flex');
   }
 }
