@@ -3,18 +3,15 @@
     <h4>Trigger options</h4>
 
     <button class="usa-button sds-button--circle sds-button--white usa-button--big sds-button--shadow">
-      <i class="sds fa-ellipsis fa-fw" data-fa-transform="grow-5"></i>
+      {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw', dataTransform: 'grow-5'} %}
     </button>
     <button class="usa-button sds-button--circle usa-button--big sds-button--shadow">
-      <i class="sds fa-ellipsis fa-fw" data-fa-transform="grow-5"></i>
+      {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw', dataTransform: 'grow-5'} %}
     </button>
 
     <button class="usa-button sds-button--white text-secondary-dark padding-1">
       Actions
-      <span class="fa-layers padding-left-4">
-        <i class="fas fa-circle text-primary" data-fa-transform="grow-8"></i>
-        <i class="sds fa-ellipsis text-secondary-dark" data-fa-transform="shrink-1"></i>
-      </span>
+      {% render '@layered-icon', layeredIcon %}
     </button>
 
     <h4>Menu</h4>
@@ -51,10 +48,7 @@
 
     <button class="usa-button sds-button--white sds-button--small text-secondary-dark padding-1">
       Actions
-      <span class="fa-layers padding-left-4">
-        <i class="fas fa-circle text-primary" data-fa-transform="grow-12"></i>
-        <i class="sds fa-ellipsis text-secondary-dark"></i>
-      </span>
+      {% render '@layered-icon', layeredIcon2 %}
     </button>
     <h4>Menu (small)</h4>
     <div class="sds-overlay minw-menu maxw-mobile radius-overlay">

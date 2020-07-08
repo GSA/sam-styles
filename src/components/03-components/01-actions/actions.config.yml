@@ -1,5 +1,32 @@
 title: Actions Menu
 status: wip
 preview: "@sam"
-
+context:
+    style: primary
+    label: action
+    icon:
+        icon: ellipsis
+        classes: fa-fw
+        dataTransform: grow-5
+    layeredIcon:
+        type: layers
+        classes:  padding-left-4
+        icons:
+            -   icon: circle
+                prefix: fas
+                classes: text-primary
+                dataTransform: grow-8
+            -   icon: ellipsis
+                classes: text-secondary-dark
+                dataTransform: shrink-1
+    layeredIcon2:
+        type: layers
+        classes:  padding-left-4
+        icons:
+            -   icon: circle
+                prefix: fas
+                classes: text-primary
+                dataTransform: grow-12
+            -   icon: ellipsis
+                classes: text-secondary-dark
 
