@@ -1,17 +1,52 @@
 .sds-field {
   @include u-text("normal");
   @include u-font("sans", "2xs");
+  @include u-text('base-dark');
+
+  h1, h2, h3, h4, h5, h6 {
+    //heading style
+    @extend .h2;
+
+    //heading light style
+    &.sds-light {
+      @extend .h3;
+      @include u-text('light');
+    }
+  }
+
   .sds-field__name {
     @include u-display("inline-block");
     @include u-margin-right("2px");
   }
   .sds-field__value {
+    @include u-font("sans", "xs");
     @include u-display("inline-block");
-    @include u-text("bold");
+    @include u-text("semibold");
+
+    &--small {
+      @include u-font("sans", "3xs");
+      @include u-text("normal");
+      a.usa-link {
+        font-size: inherit;
+      }
+    }
+    
+    &--large {
+      @include u-font("sans", "md");
+      @include u-text("semibold");
+      a.usa-link {
+        font-size: inherit;
+      }
+    }
+
     &--paragraph {
       @include u-display("block");
       @include u-text("normal");
       @include u-measure(6);
+    }
+
+    a.usa-link {
+      font-size: inherit;
     }
   }
   &--stacked {
