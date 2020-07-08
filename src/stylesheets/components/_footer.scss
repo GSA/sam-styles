@@ -96,12 +96,8 @@
 *******************************/
 
 .sds-footer__logo {
-  //@include u-margin-top(4);
   @include u-display("flex");
   @include u-flex("justify-center");
-  // @include at-media("tablet") {
-  //   @include u-display("block");
-  // }
 }
 .sds-footer__logo-link {
   display: inherit;
@@ -185,21 +181,21 @@ footer .usa-link svg[class*="svg-inline"] {
       @include u-font("sans", "lg");
       @include u-text("base");
       @include u-text("bold");
-      display: inline;
+      @include u-display("inline");
     }
 
     .sds-feedback__response-title-thin {
       @include u-font("sans", "lg");
       @include u-text("base");
       @include u-text("normal");
-      display: inline;
+      @include u-display("inline");
     }
 
     .sds-feedback__response-text {
       @include u-font("sans", "md");
       @include u-text("secondary-dark");
       @include u-text("bold");
-      display: block;
+      @include u-display("block");
     }
 
     .sds-feedback__input {
@@ -214,7 +210,10 @@ footer .usa-link svg[class*="svg-inline"] {
         .sds-footer__nav--accordion
 ********************************/
 .sds-footer__nav--accordion {
-  .usa-accordion__heading.sds-accordion__heading .usa-accordion__button.usa-accordion__block {
+  .usa-accordion.usa-accordion--bordered {
+    @include u-padding(0);
+  }
+  .usa-accordion__heading.usa-accordion__button {
     font-size: inherit;
   }
 }
@@ -245,31 +244,16 @@ footer .usa-link svg[class*="svg-inline"] {
       Mobile Styles
 *******************************/
 .sds-footer__nav--accordion {
-  display: block;
+  @include u-display("block");
 }
 .usa-footer__nav {
-  display: none;
+  @include u-display("none");
 }
 @include at-media(mobile-lg) {
   .sds-footer__nav--accordion {
-    display: none;
+    @include u-display("none");
   }
   .usa-footer__nav {
-    display: block;
+    @include u-display("block");
   }
 }
-
-// .usa-footer__primary-section .sds-footer__logo {
-//   display: none;
-// }
-// .usa-footer__secondary-section .sds-footer__logo {
-//   display: block;
-// }
-// @include at-media(tablet) {
-//   .usa-footer__primary-section .sds-footer__logo {
-//     display: block;
-//   }
-//   .usa-footer__secondary-section .sds-footer__logo {
-//     display: none;
-//   }
-// }
