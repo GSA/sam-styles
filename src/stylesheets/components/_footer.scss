@@ -216,29 +216,31 @@ footer .usa-link svg[class*="svg-inline"] {
   .usa-accordion__heading.usa-accordion__button {
     font-size: inherit;
   }
-}
-.sds-footer__nav--accordion-content {
-  @include u-margin(0);
-  @include u-padding(0);
-  @include u-bg("white");
-  li {
-    list-style: none;
-    a {
-      @include u-padding-left(3);
-      @include u-padding-y(1);
-      @include u-display("block");
-    }
-    &:first-child a {
-      @include u-padding-top(1);
-    }
-    &:last-child a {
-      @include u-padding-bottom(1);
-    }
-    a:hover {
-      @include u-bg("base-lightest");
+
+  .usa-accordion__content {
+    @include u-margin(0);
+    @include u-padding(0);
+    @include u-bg("white");
+    li {
+      list-style: none;
+      a {
+        @include u-padding-left(3);
+        @include u-padding-y(1);
+        @include u-display("block");
+      }
+      &:first-child a {
+        @include u-padding-top(1);
+      }
+      &:last-child a {
+        @include u-padding-bottom(1);
+      }
+      a:hover {
+        @include u-bg("base-lightest");
+      }
     }
   }
 }
+
 
 /*******************************
       Mobile Styles
