@@ -20,7 +20,7 @@
         <div class="sds-menu__header">
           <span class="sds-menu__header-title">Actions</span>
           <button class="usa-button sds-button--circle sds-button--white" aria-label="Close Menu">
-            <i class="fas fa-times fa-fw"></i>
+            {% render '@icon', {prefix: 'fas', icon: 'times', classes: 'fa-fw'} %}
           </button>
         </div>
         <button class="sds-menu__item">
@@ -39,11 +39,11 @@
     <h4>Trigger options (small)</h4>
 
     <button class="usa-button sds-button--circle sds-button--white sds-button--shadow">
-      <i class="sds fa-ellipsis fa-fw"></i>
+      {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw'} %}
     </button>
 
     <button class="usa-button sds-button--circle sds-button--shadow">
-      <i class="sds fa-ellipsis fa-fw"></i>
+      {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw'} %}
     </button>
 
     <button class="usa-button sds-button--white sds-button--small text-secondary-dark padding-1">
@@ -56,7 +56,7 @@
         <div class="sds-menu__header">
           <span class="sds-menu__header-title">Actions</span>
           <button class="usa-button sds-button--circle sds-button--white sds-button--small" aria-label="Close Menu">
-            <i class="fas fa-times fa-fw"></i>
+            {% render '@icon', {prefix: 'fas', icon: 'times', classes: 'fa-fw'} %}
           </button>
         </div>
         <button class="sds-menu__item">
