@@ -21,6 +21,11 @@ variants:
     context:
       modifiers:
         - unstyled
+  - name: no-bullets
+    label: List without Bullets
+    context:
+      modifiers:
+        - no-bullets
   - name: nested
     context:
       items:
