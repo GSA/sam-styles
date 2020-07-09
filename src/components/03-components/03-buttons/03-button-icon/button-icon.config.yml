@@ -1,6 +1,6 @@
 label: Icon Button
 status: wip
-preview: "@sam-content"
+preview: "@sam-grid"
 context:
   label:
   classes: "sds-button--icon"
