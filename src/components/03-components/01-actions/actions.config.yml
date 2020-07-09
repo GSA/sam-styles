@@ -28,5 +28,4 @@ context:
                 classes: text-primary
                 dataTransform: grow-12
             -   icon: ellipsis
-                classes: text-secondary-dark
 
