@@ -1,6 +1,6 @@
 label: Tags
 status: wip
-preview: "@sam-grid"
+preview: "@sam-content"
 variants:
   - name: default
     label: Info
