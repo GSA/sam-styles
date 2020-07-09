@@ -1,14 +1,27 @@
-{% if type == 'labeled' %}
-  <button class="usa-button sds-button--white sds-button--small text-secondary-dark padding-1 margin-y-2">
-    Actions
-    {% render '@layered-icon', layeredIcon %}
-  </button>
-{% elif type == 'green' %}
-  <button class="usa-button sds-button--circle sds-button--shadow">
-    {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw', dataTransform: 'grow-5'} %}
+
+{%- set scale = 'usa-button--big' -%}
+{%- if size == 'small' -%}
+  {%- set scale = 'sds-button--small' -%}
+{%- endif -%}
+
+{%- if type == 'labeled' %}
+        {% if size == 'small' %}
+        <button class="usa-button sds-button--white text-secondary-dark padding-1 margin-y-2 {{scale}}">
+        Actions
+        {% render '@layered-icon', layeredIcon , true %}
+        {% else %}
+        <button class="usa-button sds-button--white text-secondary-dark padding-1 margin-y-2">
+        Actions
+        {% render '@layered-icon', layeredIcon2 , true %}
+        {% endif %}
   </button>
 {% else %}
-  <button class="usa-button sds-button--circle sds-button--white sds-button--shadow">
-    {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw', dataTransform: 'grow-5'} %}
+  <button class="usa-button sds-button--circle{%- if type == 'white' %} sds-button--white{% endif %} sds-button--shadow{%- if size != 'small' %}  {{scale}}{% endif %}">
+        {% if size == 'small' %}
+        {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw', dataTransform: 'shrink-1' }, true %}
+        {% else %}
+        {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw', dataTransform: 'grow-5' }, true %}
+        {% endif %}
   </button>
 {% endif %}
+
