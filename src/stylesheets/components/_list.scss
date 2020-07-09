@@ -14,6 +14,10 @@
     @include unstyled-list;
   }
 
+  &--no-bullets {
+    list-style: none;
+  }
+
   &--bordered {
     li {
       @include bordered-item();
