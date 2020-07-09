@@ -1,9 +1,6 @@
 {% if type == 'labeled' %}
   <button class="usa-button sds-button--white sds-button--small text-secondary-dark padding-1 margin-y-2">
     Actions
-      <button class="usa-button sds-button--circle sds-button--white sds-button--small" aria-label="Close Menu">
-        {% render '@icon', {prefix: 'fas', icon: 'times', classes: 'fa-fw'} %}
-      </button>
     {% render '@layered-icon', layeredIcon %}
   </button>
 {% elif type == 'green' %}

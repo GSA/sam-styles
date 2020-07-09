@@ -8,6 +8,8 @@ context:
         icon: ellipsis
         classes: fa-fw
         dataTransform: grow-5
+    foo:
+        type: labeled
     layeredIcon:
         type: layers
         classes:  padding-left-4
@@ -28,3 +30,14 @@ context:
                 dataTransform: grow-12
             -   icon: ellipsis
 
+
+layeredIcon:
+    type: layers
+    classes:  padding-left-4
+    icons:
+        -   icon: circle
+            prefix: fas
+            classes: text-primary
+            dataTransform: grow-8
+        -   icon: ellipsis
+            dataTransform: shrink-1
