@@ -17,7 +17,6 @@ context:
                 classes: text-primary
                 dataTransform: grow-8
             -   icon: ellipsis
-                classes: text-secondary-dark
                 dataTransform: shrink-1
     layeredIcon2:
         type: layers
