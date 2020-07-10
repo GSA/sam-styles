@@ -1,6 +1,6 @@
 title: Actions Menu
 status: wip
-preview: "@sam-content"
+preview: "@sam"
 context:
     style: primary
     label: action
@@ -10,8 +10,26 @@ context:
         dataTransform: grow-5
     layeredIcon:
         type: layers
+        classes:  padding-left-4
+        size: fa-1x
+        icons:
+            -   icon: circle
+                size: fa-1x
+                prefix: fas
+                classes: text-primary
+                dataTransform: grow-8
+            -   icon: ellipsis
+                prefix: sds
+                dataTransform: shrink-1
+                size: fa-1x
+    layeredIcon2:
+        type: layers
+        classes:  padding-left-4
+        size: fa-1x
         icons:
             -   icon: circle
                 prefix: fas
+                classes: text-primary
+                dataTransform: grow-12
             -   icon: ellipsis
-                dataTransform: shrink-6
+                prefix: sds
