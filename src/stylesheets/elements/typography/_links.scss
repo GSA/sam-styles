@@ -38,6 +38,10 @@
       @include u-text('blue-5');
     }
   }
+  .usa-link__external-icon {
+    @include u-margin-left('05');
+    vertical-align: inherit;
+  }
 }
 
 .sds-group {
