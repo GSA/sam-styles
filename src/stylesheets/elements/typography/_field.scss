@@ -42,7 +42,7 @@
     &--paragraph {
       @include u-display("block");
       @include u-text("normal");
-      @include u-measure(6);
+      @include u-measure($theme-text-measure-wide);
     }
 
     a.usa-link {
