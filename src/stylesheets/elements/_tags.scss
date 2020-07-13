@@ -3,7 +3,7 @@
   @include u-bg("violet-warm-10v");
   @include u-border("indigo-warm-50");
   @include u-border("1px");
-  font-weight: 600;
+  font-weight: font-weight('semibold');
   border-radius: 0;
   @include u-text("base-darker");
 }
@@ -11,7 +11,7 @@
 .sds-tag--info-white {
   background-color: white;
   border: 1px solid #76766a;
-  font-weight: 600;
+  font-weight: font-weight('semibold');
   border-radius: 0;
   @include u-text("base-darker");
 }
@@ -42,7 +42,7 @@
   @include u-font("sans", "3xs");
   @include u-text("base-dark");
   line-height: 20px;
-  font-weight: 600;
+  font-weight: font-weight('semibold');
   padding: 0 5px 4px 0;
   border-radius: 0;
   margin-right: 5px;
@@ -57,7 +57,7 @@
   @include u-text("base-dark");
   @include u-border("1px");
   line-height: 1rem;
-  font-weight: 550;
+  font-weight: font-weight('semibold');
   padding: 6px 7px 7px 7px;
   @include u-border("base-light");
   margin-right: 14px;
@@ -186,7 +186,7 @@ Label Title
 .sds-type--label-title {
   font-size: 14px;
   font-style: italic;
-  font-weight: lighter;
+  font-weight: font-weight('thin');
   margin: 0;
   color: #5d5d52;
 }

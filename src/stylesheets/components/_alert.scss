@@ -62,7 +62,7 @@
 
   label {
     @include u-display('block');
-    font-weight: 600;
+    font-weight: font-weight('semibold');
     font-style: italic;
   }
 

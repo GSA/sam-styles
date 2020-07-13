@@ -28,7 +28,8 @@
     }
 
     .content .summary > .action {
-      font-weight: 700;
+      font-weight: font-weight('bold');
+      text-decoration: none;
       color: #212121;
     }
 
