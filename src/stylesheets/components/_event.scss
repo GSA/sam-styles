@@ -24,7 +24,8 @@
     }
 
     .content .summary {
-      line-height: 18px;
+      font-size: size('body', 'sm');
+      line-height: line-height('body', 2);
     }
 
     .content .summary > .action {
@@ -34,7 +35,8 @@
     }
 
     .content .summary > .date {
-      font-size: 13px;
+      font-size: size('body', '3xs');
+      line-height: line-height('body', 3);
       background: #F1F1F1;
       font-style: italic;
       float: right;
@@ -46,11 +48,9 @@
       @include u-margin-top('05');
       @include u-margin-right(2);
       @include u-padding-right(2);
-      @include u-font('sans','xs');
       @include u-text('justify');
       overflow: hidden;
       position: relative;
-      line-height: 1.2em;
       max-height: 4.6em;
     }
     .meta:before {
