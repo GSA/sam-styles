@@ -12,7 +12,7 @@ module.exports = {
           {
             header: 'Topic',
             links: {
-              modifiers: ['unstyled'],
+              modifiers: ['no-bullets'],
               items: [
                 {
                   link: {
@@ -44,7 +44,7 @@ module.exports = {
           {
             header: 'Topic',
             links: {
-              modifiers: ['unstyled'],
+              modifiers: ['no-bullets'],
               items: [
                 {
                   link: {
@@ -76,7 +76,7 @@ module.exports = {
           {
             header: 'Topic',
             links: {
-              modifiers: ['unstyled'],
+              modifiers: ['no-bullets'],
               items: [
                 {
                   link: {
@@ -123,7 +123,7 @@ module.exports = {
           {
             header: 'About This Site',
             links: {
-              modifiers: ['unstyled'],
+              modifiers: ['no-bullets'],
               items: [
                 {
                   link: {
@@ -162,7 +162,7 @@ module.exports = {
           {
             header: 'Our Partners',
             links: {
-              modifiers: ['unstyled'],
+              modifiers: ['no-bullets'],
               items: [
                 {
                   link: {
@@ -197,7 +197,7 @@ module.exports = {
           {
             header: 'Policies',
             links: {
-              modifiers: ['unstyled'],
+              modifiers: ['no-bullets'],
               items: [
                 {
                   link: {
@@ -230,7 +230,7 @@ module.exports = {
           {
             header: 'Customer Service',
             links: {
-              modifiers: ['unstyled'],
+              modifiers: ['no-bullets'],
               items: [
                 {
                   link: {
