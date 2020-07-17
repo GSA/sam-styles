@@ -5,6 +5,24 @@ context:
 variants:
   - name: default
     label: Desktop/tablet
+  - name: mobile
+    context:
+      button_header:
+        type: layers
+        size: lg
+        classes: margin-right-4
+        icons:
+          - icon: circle
+            prefix: fas
+            classes: fa-inverse 
+            dataTransform: grow-2
+          - icon: angle-left
+            prefix: fas
+            dataTransform: shrink-6
+      button_footer:
+        modifiers: 
+          - secondary
+        text: Apply
   - name: mobile-nav
     context:
       button_header:
