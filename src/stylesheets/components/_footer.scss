@@ -200,7 +200,6 @@ footer .usa-link svg[class*="svg-inline"] {
     }
 
     .sds-feedback__input {
-      @include u-height('card');
       @include u-width(full);
       @include u-bg("base-lighter");
       border: none;
