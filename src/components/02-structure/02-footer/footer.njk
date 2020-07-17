@@ -1,5 +1,6 @@
 <footer class="usa-footer usa-footer--big">
   <div class="sds-feedback">
+    <h4 class="sr-only">Feedback</h4>
     <button type="button" class="sds-feedback__button simple-toggle" [attr.aria-expanded]="!isCollapsedContent" aria-controls="collapseID" (click)="isCollapsedContent = !isCollapsedContent">
       {% render '@icon', {icon: 'arrow-down', classes: 'sds-feedback__open'} %}
       <span class="sds-feedback__title">Feedback</span>
@@ -10,8 +11,8 @@
         </span>
         <span class="sds-feedback__response-title-thin">
           Survey</span>
-        <p class="sds-feedback__response-text">What changes or improvements would you suggest?</p>
-        <input class="sds-feedback__input" type="text">
+        <label for="feedback" class="sds-feedback__response-text">What changes or improvements would you suggest?</label>
+        <input id="feedback" class="sds-feedback__input" type="text">
         <p class="text-right">
           <button class="usa-button usa-button--secondary">Submit</button>
         </p>
@@ -27,7 +28,7 @@
               {%- for nav in navigation -%}
                 <div class="grid-col-6 tablet:grid-col-3">
                   <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
-                    <span class="usa-footer__primary-link">{{ nav.header }}</span>
+                    <h4 class="usa-footer__primary-link">{{ nav.header }}</h4>
                     {%- render '@list', nav.links -%}
                   </section>
                 </div>
@@ -41,11 +42,11 @@
       <div class="usa-accordion usa-accordion--bordered">
         <!-- -->
         {%- for nav in navigation -%}
-          <h2 class="usa-accordion__heading">
+          <h4 class="usa-accordion__heading">
             <button class="usa-accordion__button {% if loop.first %} border-top-1px border-base-light {% endif %}" aria-expanded="{{expanded}}" aria-controls="b-a{{loop.index}}">
               {{nav.header}}
             </button>
-          </h2>
+          </h4>
           <div id="b-a{{loop.index}}" class="usa-accordion__content">
             {%- render '@list', nav.links -%}
           </div>
@@ -61,7 +62,7 @@
       <div class="grid-col-12 mobile-lg:grid-col-6 tablet:grid-col-4 margin-bottom-4">
         <div class="sds-footer__logo">
           <a class="sds-footer__logo-link" href="javascript:void(0);">
-            <img src="{{ logo | path }}" alt=""/>
+            <img src="{{ logo | path }}" alt="GSA logo"/>
           </a>
           <h3 class="sds-footer__logo-heading">
             {{ agency }}
