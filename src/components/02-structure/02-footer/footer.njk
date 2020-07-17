@@ -12,7 +12,7 @@
         <span class="sds-feedback__response-title-thin">
           Survey</span>
         <label for="feedback" class="sds-feedback__response-text">What changes or improvements would you suggest?</label>
-        <input id="feedback" class="sds-feedback__input" type="text">
+        <textarea id="feedback" class="sds-feedback__input" type="text"></textarea>
         <p class="text-right">
           <button class="usa-button usa-button--secondary">Submit</button>
         </p>
@@ -62,7 +62,7 @@
       <div class="grid-col-12 mobile-lg:grid-col-6 tablet:grid-col-4 margin-bottom-4">
         <div class="sds-footer__logo">
           <a class="sds-footer__logo-link" href="javascript:void(0);">
-            <img src="{{ logo | path }}" alt="GSA logo"/>
+            <img src="{{ logo | path }}" alt="{{ alttext }}"/>
           </a>
           <h3 class="sds-footer__logo-heading">
             {{ agency }}

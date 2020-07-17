@@ -200,10 +200,11 @@ footer .usa-link svg[class*="svg-inline"] {
     }
 
     .sds-feedback__input {
-      height: 150px;
-      width: 100%;
-      border: none;
+      @include u-height('card');
+      @include u-width(full);
       @include u-bg("base-lighter");
+      border: none;
+      resize: none;
     }
   }
 }

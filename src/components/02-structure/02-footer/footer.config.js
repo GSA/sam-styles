@@ -8,6 +8,7 @@ module.exports = {
       context: {
         agency: 'Name of Agency',
         logo: '/assets/images/logo-img.png',
+        alttext: 'Agency Logo',
         navigation: [
           {
             header: 'Topic',
@@ -119,6 +120,7 @@ module.exports = {
       context: {
         agency: 'General Services Administration',
         logo: '/assets/images/logo-gsa.svg',
+        alttext: 'GSA Logo',
         navigation: [
           {
             header: 'About This Site',
