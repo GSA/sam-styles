@@ -121,14 +121,21 @@ module.exports = {
         logo: '/assets/images/logo-gsa.svg',
         navigation: [
           {
-            header: 'Our Website',
+            header: 'About This Site',
             links: {
               modifiers: ['unstyled'],
               items: [
                 {
                   link: {
-                    text: 'About This Site',
+                    text: 'About Us',
                     href: 'javascript:void(0);'
+                  }
+                },
+                {
+                  link: {
+                    text: 'Our Community',
+                    href: 'javascript:void(0);',
+                    external: true
                   }
                 },
                 {
@@ -181,41 +188,7 @@ module.exports = {
                 {
                   link: {
                     text: 'More Partners',
-                  href: 'javascript:void(0);'
-                }
-                }
-              ]
-            }
-          },
-          {
-            header: 'Customer Service',
-            links: {
-              modifiers: ['unstyled'],
-              items: [
-                {
-                  link: {
-                    text: 'Help',
                     href: 'javascript:void(0);'
-                  }
-                },
-                {
-                  link: {
-                    text: 'Contact Federal Service Desk',
-                    href: 'javascript:void(0);',
-                    external: true
-                  }
-                },
-                {
-                  link: {
-                    text: 'Our Community',
-                    href: 'javascript:void(0);',
-                    external: true
-                  }
-                },
-                {
-                  link: {
-                    text: 'Policy',
-                    href: 'javascript:void(0);',
                   }
                 }
               ]
@@ -235,7 +208,7 @@ module.exports = {
                 {
                   link: {
                     text: 'Disclaimers',
-                    href: 'javascript:void(0);',
+                    href: 'javascript:void(0);'
                   }
                 },
                 {
@@ -248,6 +221,45 @@ module.exports = {
                 {
                   link: {
                     text: 'Accessibility',
+                    href: 'javascript:void(0);'
+                  }
+                }
+              ]
+            }
+          },
+          {
+            header: 'Customer Service',
+            links: {
+              modifiers: ['unstyled'],
+              items: [
+                {
+                  link: {
+                    text: 'Help',
+                    href: 'javascript:void(0);'
+                  }
+                },
+                {
+                  link: {
+                    text: 'Check Registration Status',
+                    href: 'javascript:void(0);'
+                  }
+                },
+                {
+                  link: {
+                    text: 'Federal Service Desk',
+                    href: 'javascript:void(0);',
+                    external: true
+                  }
+                },
+                {
+                  link: {
+                    text: 'External Resources',
+                    href: 'javascript:void(0);'
+                  }
+                },
+                {
+                  link: {
+                    text: 'Contact Us',
                     href: 'javascript:void(0);'
                   }
                 }

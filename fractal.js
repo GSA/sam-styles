@@ -49,7 +49,7 @@ fractal.docs.set("path", __dirname + "/docs");
 const themeConfig = {
   skin: "white",
   nav: ["docs", "components"],
-  panels: ["html", "notes", "resources"],
+  panels: ["notes", "html", "resources"],
   styles: ["default", "/theme.css"],
   scripts: ["default", "/theme.js"]
 };
