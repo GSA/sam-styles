@@ -62,7 +62,7 @@ unclassed elements:
 ----------------------------------------
 */
 
-$theme-global-paragraph-styles: true;
+// $theme-global-paragraph-styles: false;
 // $theme-global-link-styles: false;
 $theme-global-content-styles: true;
 
@@ -406,4 +406,4 @@ $theme-prose-font-family: "sans";
 $theme-lead-font-family: "heading";
 // $theme-lead-font-size: "lg";
 // $theme-lead-line-height: 6;
-// $theme-lead-measure: 6;
+$theme-lead-measure: 5;

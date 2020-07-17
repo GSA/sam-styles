@@ -126,7 +126,7 @@ function getIconVariants() {
 function getCollator(markup, item) {
     const html =  '<!-- Start: @' + item.handle + ' -->' +
     '<div class="display-inline-block padding-2 text-center">' +
-      '<p>' + item.name + '</p>' + markup +
+      '<span class="display-block">' + item.name + '</span>' + markup +
     '</div>' +
     '<!-- End: @' + item.handle + ' -->';
     return html;

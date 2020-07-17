@@ -36,45 +36,34 @@ h1, h2, h3, h4, h5, h6 {
   &.sds-light {
     @include u-text('normal');
   }
-  .usa-link {
-    font-size: inherit;
-    line-height: inherit;
-  }
-}
-
-h1 {
-  @include u-text('base');
-}
-
-h2, h4, h6 {
-  @include u-text('semibold');
-}
-
-h6 {
-  text-transform: none;
 }
 
 // Heading helper classes
-.h1 {
-  @extend h1;
+h1, .h1 {
+  @include h1;
+  @include u-text('base');
 }
 
-.h2 {
-  @extend h2;
+h2, .h2 {
+  @include h2;
+  @include u-text('semibold');
 }
 
-.h3{
-  @extend h3;
+h3, .h3{
+  @include h3;
 }
 
-.h4 {
-  @extend h4;
+h4, .h4 {
+  @include h4;
+  @include u-text('semibold');
 }
 
-.h5 {
-  @extend h5;
+h5, .h5 {
+  @include h5;
 }
 
-.h6 {
-  @extend h6;
+h6, .h6 {
+  @include h6;
+  @include u-text('semibold');
+  text-transform: none;
 }

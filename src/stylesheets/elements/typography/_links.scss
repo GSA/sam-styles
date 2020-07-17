@@ -1,7 +1,5 @@
 .usa-link {
-  @include u-font ('sans', 'xs');
   @include u-text('no-underline');
-  @include u-line-height('sans', 3);
 
   &--small {
     @include u-font ('sans', '3xs');

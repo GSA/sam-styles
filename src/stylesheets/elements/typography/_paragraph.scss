@@ -1,7 +1,6 @@
 p {
     @include u-text('base-dark');
     @include u-display('block');
-    @include u-margin-y(1em);
 
     &.sds-big {
       @include u-font('sans', 'md');
