@@ -1,6 +1,6 @@
 <footer class="usa-footer usa-footer--big">
   <div class="sds-feedback">
-    <h4 class="sr-only">Feedback</h4>
+    <h2 class="sr-only">Feedback</h2>
     <button type="button" class="sds-feedback__button simple-toggle" [attr.aria-expanded]="!isCollapsedContent" aria-controls="collapseID" (click)="isCollapsedContent = !isCollapsedContent">
       {% render '@icon', {icon: 'arrow-down', classes: 'sds-feedback__open'} %}
       <span class="sds-feedback__title">Feedback</span>
@@ -28,7 +28,7 @@
               {%- for nav in navigation -%}
                 <div class="grid-col-6 tablet:grid-col-3">
                   <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
-                    <h4 class="usa-footer__primary-link">{{ nav.header }}</h4>
+                    <h2 class="usa-footer__primary-link">{{ nav.header }}</h2>
                     {%- render '@list', nav.links -%}
                   </section>
                 </div>
@@ -42,11 +42,11 @@
       <div class="usa-accordion usa-accordion--bordered">
         <!-- -->
         {%- for nav in navigation -%}
-          <h4 class="usa-accordion__heading">
+          <h2 class="usa-accordion__heading">
             <button class="usa-accordion__button {% if loop.first %} border-top-1px border-base-light {% endif %}" aria-expanded="{{expanded}}" aria-controls="b-a{{loop.index}}">
               {{nav.header}}
             </button>
-          </h4>
+          </h2>
           <div id="b-a{{loop.index}}" class="usa-accordion__content">
             {%- render '@list', nav.links -%}
           </div>
