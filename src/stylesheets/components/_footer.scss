@@ -196,6 +196,7 @@ footer .usa-link svg[class*="svg-inline"] {
       @include u-text("secondary-dark");
       @include u-text("bold");
       @include u-display("block");
+      @include u-margin-y(2);
     }
 
     .sds-feedback__input {
