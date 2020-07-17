@@ -5,7 +5,7 @@
 {%- if ordered %}
   <ol class="sds-list{% for modifier in modifiers %} sds-list--{{modifier}}{% endfor %}">
 {% else %}
-  <ul class="sds-list {% for modifier in modifiers %} sds-list--{{modifier}}{% endfor %}">
+  <ul class="sds-list{% for modifier in modifiers %} sds-list--{{modifier}}{% endfor %}">
 {%- endif %}
 
   {%- for item in items -%}

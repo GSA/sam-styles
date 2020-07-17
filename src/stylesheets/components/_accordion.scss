@@ -4,7 +4,7 @@
   .usa-accordion__button {
     @include u-bg('white');
     @include u-padding-x('205');
-    @include u-padding-y('2');
+    @include u-padding-y(2);
     @include u-text('semibold');
     @include u-position('relative');
     background-image: none;
