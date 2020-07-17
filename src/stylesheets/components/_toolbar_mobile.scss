@@ -1,0 +1,36 @@
+.sds-toolbar-mobile,
+.sds-toolbar-mobile__header,
+.sds-toolbar-mobile__content,
+.sds-toolbar-mobile__footer{
+  transition: all 0.2s ease-out;
+  width: 100vw;
+}
+.sds-toolbar-mobile {
+  @include u-display('flex');
+  @include u-flex('column');
+  flex-flow: column;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  @include u-bg('white');
+}
+.sds-toolbar-mobile__header,
+.sds-toolbar-mobile__footer{
+  @include u-padding(2);
+  @include u-bg('accent-cool-lighter');
+  @include u-shadow(2);
+  @include u-display('flex');
+}
+
+.sds-toolbar-mobile__footer{
+  box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+.sds-toolbar-mobile__content {
+  flex: 1;
+  overflow: scroll;
+  > .sds-accordion__item{
+    @include u-bg('transparent');
+  }
+}

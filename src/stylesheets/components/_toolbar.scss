@@ -1,4 +1,3 @@
-/* stylelint-disable */
 .sds-toolbar,
 .sds-toolbar__header,
 .sds-toolbar__content,
@@ -161,6 +160,7 @@
 
 .sds-toolbar__anim--expanded {
   margin-left: 20px;
+  outline: 1px solid red;
 }
 
 .sds-accordion__trigger {
