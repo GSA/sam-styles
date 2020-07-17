@@ -1,6 +1,5 @@
 name: Pages
 status: wip
-preview: "@sam-content"
 default: full-page
 variants:
   - name: full-page

@@ -1,3 +1,7 @@
+.usa-tag:last-of-type {
+  margin-right: units(0.5);
+}
+
 // Info tags
 .sds-tag--info-purple {
   @include u-bg("violet-warm-10v");

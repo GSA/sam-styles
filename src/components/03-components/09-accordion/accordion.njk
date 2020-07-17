@@ -1,56 +1,3 @@
-{#
-<div class="usa-accordion">
-
-  <h2 class="usa-accordion__heading">
-    <button class="usa-accordion__button" aria-expanded="true" aria-controls="a1">
-      {{header}}
-    </button>
-  </h2>
-  <div id="a1" class="usa-accordion__content usa-prose">
-    <p>{{body}}</p>
-  </div>
-
-
-  <h2 class="usa-accordion__heading">
-    <button class="usa-accordion__button" aria-expanded="false" aria-controls="a2">
-      {{header}}
-    </button>
-  </h2>
-  <div id="a2" class="usa-accordion__content usa-prose">
-    <p>{{body}}</p>
-    {% render '@list' %}
-  </div>
-
-  <h2 class="usa-accordion__heading">
-    <button class="usa-accordion__button" aria-expanded="false" aria-controls="a3">
-      {{header}}
-    </button>
-  </h2>
-  <div id="a3" class="usa-accordion__content usa-prose">
-    <p>{{body}}</p>
-  </div>
-
-  <h2 class="usa-accordion__heading">
-    <button class="usa-accordion__button" aria-expanded="false" aria-controls="a4">
-      {{header}}
-    </button>
-  </h2>
-  <div id="a4" class="usa-accordion__content usa-prose">
-    <p>{{body}}.</p>
-
-  </div>
-
-  <h2 class="usa-accordion__heading">
-    <button class="usa-accordion__button" aria-expanded="false" aria-controls="a5">
-      {{header}}
-    </button>
-  </h2>
-  <div id="a5" class="usa-accordion__content usa-prose">
-    <p>{{header}}</p>
-  </div>
-</div>
-#}
-
 <div class="usa-accordion usa-accordion--bordered" {% if multiselect %} aria-multiselectable="true"{% endif %}>
 
   {% for section in sections %}
@@ -59,7 +6,7 @@
         {{section.header}}
       </button>
     </h2>
-    <div id="b-a{{loop.index}}" class="usa-accordion__content usa-prose">
+    <div id="b-a{{loop.index}}" class="usa-accordion__content">
       {{section.body}}
     </div>
   {% endfor %}

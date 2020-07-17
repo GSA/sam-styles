@@ -10,8 +10,13 @@
     @include u-margin-right(1);
   }
 
+  &__title {
+    @include u-margin-y(1em);
+  }
+
   &--unstyled {
     @include unstyled-list;
+    padding-left: 0;
   }
 
   &--no-bullets {
