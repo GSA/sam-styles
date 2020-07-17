@@ -10,17 +10,13 @@
     @include u-margin-right(1);
   }
 
-  &__title {
-    @include u-margin-y(1em);
-  }
-
   &--unstyled {
     @include unstyled-list;
-    padding-left: 0;
   }
 
   &--no-bullets {
     list-style: none;
+    padding-left: 0;
   }
 
   &--bordered {
@@ -30,7 +26,8 @@
   }
 
   &--icon {
-    @include unstyled-list;
+    list-style: none;
+    padding-left: 0;
     > li {
       @include u-measure($theme-text-measure-wide);
       @include u-margin-bottom(1);
