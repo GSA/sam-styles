@@ -403,7 +403,7 @@ $theme-text-measure-wide: 6;
 $theme-prose-font-family: "sans";
 
 // Lead text
-$theme-lead-font-family: "heading";
+$theme-lead-font-family: "body";
 // $theme-lead-font-size: "lg";
-// $theme-lead-line-height: 6;
+$theme-lead-line-height: $theme-body-line-height;
 $theme-lead-measure: 5;
