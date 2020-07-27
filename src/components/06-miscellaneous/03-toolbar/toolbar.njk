@@ -1,17 +1,29 @@
 <div class="grid-row margin-105">
-  <div class="tablet:grid-col-auto display-flex position-relative">
+  <div class="mobile:grid-col-12 tablet:grid-col-auto display-flex position-relative">
     <div class="sds-toolbar">
-      <div class="sds-toolbar__header">
+
+      <div class="sds-toolbar-mobile__select tablet:display-none">
+          <button href="#" class="sds-toolbar-mobile__select-button" data-toggle="display-none" data-target="toolbarModules">
+              <div>Navigation</div>
+              <div>Selected Category</div>
+          </button>
+          <button class="sds-toolbar-mobile__select-button" data-toggle="display-none" data-target="toolbarFilters">
+              Filter By
+          </button>
+      </div>
+
+
+      <div class="sds-toolbar__header display-none tablet:display-block">
         <a class="sds-toolbar__toogle-btn" href="">
           <div class="sds-toolbar__toggle">
               <span class="usa-sr-only">Open/Close Toolbar</span>
           </div>
         </a>
       </div>
-      <div class="sds-toolbar__content" hidden="hidden">
+      <div class="sds-toolbar__content display-none tablet:display-block" hidden="hidden">
         <div class="sds-accordion" data-allow-multiple="data-allow-multiple">
           <div class="sds-accordion__item">
-             
+
               <button aria-expanded="false" class="sds-accordion__trigger" aria-controls="accordion-nav-content" id="accordion-nav-id">
                 <span class="sds-accordion__title" role="heading">
                   <span class="sds-accordion__title-text">
@@ -21,7 +33,7 @@
                   <span class="sds-accordion__icon"></span>
                 </span>
               </button>
-             
+
             <div id="accordion-nav-content" role="region" aria-labelledby="accordion-nav-id" class="sds-accordion__panel" hidden="">
               <div class="sds-accordion__panel-body">
                 <nav>
@@ -55,26 +67,26 @@
             </div>
           </div>
           <div class="sds-accordion__item">
-             
+
               <button aria-expanded="false" class="sds-accordion__trigger" aria-controls="accordion-filters-content" id="accordion-filters-id">
                 <span class="sds-accordion__title" role="heading">
                   Filters
                   <span class="sds-accordion__icon"></span>
                 </span>
               </button>
-             
+
             <div id="accordion-filters-content" role="region" aria-labelledby="accordion-filters-id" class="sds-accordion__panel" hidden="">
               <div class="sds-accordion__panel-body">
                 <div class="sds-accordion sds-accordion--basic" data-allow-multiple="data-allow-multiple">
                   <div class="sds-accordion__item">
-                     
+
                       <button aria-expanded="false" class="sds-accordion__trigger" aria-controls="accordion-serv-class-content" id="accordion-serv-class-id">
                         <span class="sds-accordion__title" role="heading">
                           Service Classifications
                           <span class="sds-accordion__icon"></span>
                         </span>
                       </button>
-                     
+
                     <div id="accordion-serv-class-content" role="region" aria-labelledby="accordion-serv-class-id" class="sds-accordion__panel" hidden="">
                       <div class="sds-accordion__panel-body">
                         <label class="usa-label" for="input-type-naics">NAICS</label >
@@ -105,14 +117,14 @@
                     </div>
                   </div>
                   <div class="sds-accordion__item">
-                     
+
                       <button aria-expanded="false" class="sds-accordion__trigger" aria-controls="accordion-entity-content" id="accordion-entity-id">
                         <span class="sds-accordion__title" role="heading">
                           Entity Name/UEI
                           <span class="sds-accordion__icon"></span>
                         </span>
                       </button>
-                     
+
                     <div id="accordion-entity-content" role="region" aria-labelledby="accordion-entity-id" class="sds-accordion__panel" hidden="">
                       <div class="sds-accordion__panel-body">
                         <label class="usa-label" for="input-type-entity">Name</label >
@@ -134,7 +146,7 @@
       Showing 1 to 10 of 21 registrations
     </div>
 
-     Frontier Allied Partners, Inc 
+     Frontier Allied Partners, Inc
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet faucibus arcu id bibendum. Mauris eleifend massa purus, eu volutpat erat placerat egestas.
     </p>
@@ -162,7 +174,7 @@
             <div class="mobile-lg:grid-col-4 tablet:grid-col-auto">
               <h3 class="usa-footer__logo-heading">
                 General Services Administration
-               
+
             </div>
           </div>
         </div>
@@ -254,3 +266,34 @@
     </div>
   </div>
 </footer>
+
+<!-- For demonstration purposes we show the content in a full screen overlay -->
+<div class="demo-full-screen-view display-none" id="toolbarModules">
+  <div id="sds-toolbar-mobile__navigation" class="sds-toolbar-mobile">
+      <div class="sds-toolbar-mobile__header" data-toggle="display-none" data-target="toolbarModules">
+          {% render '@layered-icon', button_header %}
+          Navigate to
+      </div>
+      <div class="sds-toolbar-mobile__content">
+          {% include '@toolbar--partial-menus' %}
+      </div>
+  </div>
+</div>
+
+<!-- For demonstration purposes we show the content in a full screen overlay -->
+<div class="demo-full-screen-view display-none" id="toolbarFilters">
+  <div id="sds-toolbar-mobile__filters" class="sds-toolbar-mobile">
+      <div class="sds-toolbar-mobile__header" data-toggle="display-none" data-target="toolbarFilters">
+          {% render '@layered-icon', button_header %}
+          Filter By
+      </div>
+      <div class="sds-toolbar-mobile__content">
+          {% include '@toolbar--partial-filters' %}
+      </div>
+      <div class="sds-toolbar-mobile__footer" data-toggle="display-none" data-target="toolbarFilters">
+          {% render '@button--single',button_footer,true %}
+      </div>
+  </div>
+</div>
+
+
