@@ -54,7 +54,7 @@
   }
   .sds-dialog-title {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: font-weight('semibold');
   }
   .sds-dialog-subtitle{
     font-size: 20px;
@@ -85,14 +85,14 @@
   .sds-dialog-title {
     text-align: center;
     font-size: 28px;
-    font-weight: 600;
+    font-weight: font-weight('semibold');
     margin-top: 14px;
     margin-bottom: 10px;
   }
   .sds-dialog-content {
     text-align: center;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: font-weight('normal');
     color: #5c5c5c;
   }
   .sds-dialog-actions {

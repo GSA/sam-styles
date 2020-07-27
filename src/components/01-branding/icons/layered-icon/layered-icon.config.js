@@ -105,6 +105,6 @@ module.exports = {
     }
   ],
   collator: function (markup, item) {
-    return '<!-- Start: @' + item.handle + ' -->\n<div class="grid-col text-center"><h4>' + item.label + '</h4>' + markup + '</div>\n<!-- End: @' + item.handle + ' -->\n';
+    return '<!-- Start: @' + item.handle + ' -->\n<div class="grid-col text-center"><span class="h4 display-block">' + item.label + '</span>' + markup + '</div>\n<!-- End: @' + item.handle + ' -->\n';
   },
 };

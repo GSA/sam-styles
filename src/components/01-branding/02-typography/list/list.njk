@@ -1,4 +1,5 @@
 {% if title %}
+  {%- set title = title|setAttribute('classes', ['sds-list__title']) %}
   {% render '@title', title, true %}
 {% endif %}
 

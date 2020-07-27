@@ -2,4 +2,7 @@ status: wip
 preview: "@sam-grid"
 variants:
   - name: links
-
+    context:
+      external:
+        text: External Link
+        external: true
