@@ -166,7 +166,7 @@
 .sds-accordion__trigger {
   display: block;
   font-size: 17px;
-  font-weight: 600;
+  font-weight: font-weight('semibold');
   margin: 0;
   padding: 0;
   position: relative;
@@ -201,9 +201,9 @@
 }
 .sds-accordion__title-text {
   display: inline-block;
-  font-weight: 400;
+  font-weight: font-weight('normal');
   div:last-child{
-    font-weight: 600;
+    font-weight: font-weight('semibold');
   }
 }
 .sds-accordion__item {

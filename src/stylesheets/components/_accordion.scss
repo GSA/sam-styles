@@ -88,7 +88,7 @@
   background-image: none;
   background-color: white;
   padding: 1rem 1.25rem 1rem 1.25rem;
-  font-weight: 600;
+  font-weight: font-weight('semibold');
   position: relative;
   &:hover {
     @include u-bg('accent-cool-light')

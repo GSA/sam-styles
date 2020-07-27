@@ -1,9 +1,9 @@
 .sds-list {
   @extend .usa-list;
-  @include u-line-height('sans', 3);
   li {
+    @include u-line-height('body', 5);
     @include u-margin-bottom(1);
-    @include u-measure(6);
+    @include u-measure($theme-text-measure-wide);
   }
 
   svg {
@@ -17,6 +17,7 @@
   &--no-bullets {
     padding-left: 0;
     list-style: none;
+    padding-left: 0;
   }
 
   &--bordered {
@@ -26,9 +27,10 @@
   }
 
   &--icon {
-    @include unstyled-list;
+    list-style: none;
+    padding-left: 0;
     > li {
-      @include u-measure(6);
+      @include u-measure($theme-text-measure-wide);
       @include u-margin-bottom(1);
       @include u-display('flex');
       @include u-flex('align-center');

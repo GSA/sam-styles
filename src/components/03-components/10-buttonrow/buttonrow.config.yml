@@ -1,6 +1,6 @@
 label: Button Row
 status: wip
-preview: "@sam-content"
+preview: "@sam-grid"
 default: "primary"
 
 

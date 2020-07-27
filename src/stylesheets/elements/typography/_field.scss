@@ -1,5 +1,4 @@
 .sds-field {
-  @include u-text("normal");
   @include u-font("sans", "2xs");
   @include u-text('base-dark');
 
@@ -10,7 +9,6 @@
     //heading light style
     &.sds-light {
       @extend .h3;
-      @include u-text('light');
     }
   }
 
@@ -19,7 +17,7 @@
     @include u-margin-right("2px");
   }
   .sds-field__value {
-    @include u-font("sans", "xs");
+    @include u-font("sans", $theme-body-font-size);
     @include u-display("inline-block");
     @include u-text("semibold");
 
@@ -42,7 +40,7 @@
     &--paragraph {
       @include u-display("block");
       @include u-text("normal");
-      @include u-measure(6);
+      @include u-measure($theme-text-measure-wide);
     }
 
     a.usa-link {

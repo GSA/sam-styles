@@ -33,75 +33,37 @@ $header-colors: (
 
 h1, h2, h3, h4, h5, h6 {
   @include u-text('base-dark');
-  @include u-line-height('sans', 2);
   &.sds-light {
     @include u-text('normal');
   }
-  .usa-link {
-    font-size: inherit;
-  }
 }
 
-h1 {
-    @include u-font('sans', 'xl');
-    @include u-text('bold', 'base');
-    @include u-line-height('sans', 2);
-  }
-    
-h2 {
-    @include u-font('sans', 'lg');
-    @include u-text('semibold', 'base-dark');
-    @include u-line-height('sans', 2);
-  }
-  
-h3 {
-    @include u-font('sans', 'md');
-    @include u-text('bold', 'base-dark');
-    @include u-line-height('sans', 2);
-  }
-  
-h4 {
-    @include u-font('sans', 'md');
-    @include u-text('semibold', 'base-dark');
-    @include u-line-height('sans', 2);
-  }    
-  
-h5 {
-    @include u-font('sans', 'xs');
-    @include u-text('bold', 'base-dark');
-    @include u-line-height('sans', 2);
-  }
-  
-h6 {
-    @include u-font('sans', 'xs');
-    @include u-text('semibold', 'base-dark');
-    @include u-line-height('sans', 2);
-  }  
-  
-  // Heading helper classes
-  .h1 {
-    @extend h1;
-  }
-  
-  .h2 {
-    @extend h2;
-  }
-  
-  .h3{
-    @extend h3;
-  }
-  
-  .h4 {
-    @extend h4;
-  }
-  
-  .h5 {
-    @extend h5;
-  }
-  
-  .h6 {
-    @extend h6;
-  }
-  
+// Heading helper classes
+h1, .h1 {
+  @include h1;
+  @include u-text('base');
+}
 
+h2, .h2 {
+  @include h2;
+  @include u-text('semibold');
+}
 
+h3, .h3{
+  @include h3;
+}
+
+h4, .h4 {
+  @include h4;
+  @include u-text('semibold');
+}
+
+h5, .h5 {
+  @include h5;
+}
+
+h6, .h6 {
+  @include h6;
+  @include u-text('semibold');
+  text-transform: none;
+}
