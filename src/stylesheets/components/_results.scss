@@ -2,6 +2,10 @@
   @include u-margin-top(1);
   @include u-margin-bottom('205');
 
+  a:visited {
+    @include u-text('violet-70v');
+  }
+
   .action-menu {
     height: 100%;
     display: flex;

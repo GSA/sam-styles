@@ -11,10 +11,6 @@
     @include u-line-height('sans', 3);
   }
 
-  &--visited, &:visited {
-    @include u-text ('violet-70v')
-  }
-
   &--hover, &:hover {
     @include u-text ('yellow-50');
     @include u-text ('underline');
