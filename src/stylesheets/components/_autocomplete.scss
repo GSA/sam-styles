@@ -1,16 +1,29 @@
 
 .sds-autocomplete {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-  font-size: 15px;
-  position: absolute;
-  background-color: white;
-  width: 100%;
+  @include u-font('sans', 'xs');
+  @include u-position('absolute');
+  @include u-z('top');
+  @include u-overflow-y('scroll');
+  @include u-overflow-x('hidden');
+  @include u-width('full');
+  @include u-bg('white');
   max-height: 320px;
-  overflow-y: scroll;
-  overflow-x: hidden;
   max-width: units($theme-input-max-width);
-  z-index: 2;
 
+  /* Custom Shadow */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+
+  /* Use unstyled list for top level and child UL's */
+  @extend .usa-list;
+  @extend .usa-list--unstyled;
+
+  ul {
+    @extend .usa-list;
+    @extend .usa-list--unstyled;
+  }
+
+
+  /* Scroll bar style */
   /* width */
   &::-webkit-scrollbar {
     height: 10px;
@@ -19,54 +32,67 @@
 
   /* Track */
   &::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    @include u-bg('base-lighter');
   }
 
   /* Handle */
   &::-webkit-scrollbar-thumb {
-    background: #888;
+    @include u-bg('base');
     border-radius: 0;
   }
 
   /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    @include u-bg('base-dark');
   }
-}
 
-.sds-autocomplete .sds-autocomplete__item {
-  border-top: 1px solid #ccc;
-  padding: 5px 10px;
-  cursor: pointer;
-}
+  /* Item */
+  .sds-autocomplete__item {
+    @include u-padding(1);
+    cursor: pointer;
+  }
 
-.sds-autocomplete .sds-autocomplete__item.sds-autocomplete__item--selected {
-  background-color: #0071bc;
-  color: white;
-}
+  /* Item hover or selected */
+  .sds-autocomplete__item:hover, .sds-autocomplete__item--selected {
+    @include u-bg('secondary');
+    @include u-text('white');
+  }
 
-// sds-autcomplete-selected
-.sds-autocomplete-selected .sds-autocomplete-selected__item {
-  border-radius: 2px;
-  background-color: color('primary-lighter');
-  border: 1px solid color('primary');
-  display: inline-block;
-  font-size: 14px;
-  margin-top: 5px;
-  margin-bottom: 0px;
-  padding: 3px 8px;
-  width: calc(100% - 16px);
-  max-width: 30rem;
-  position: relative;
-}
+  /* Item Group */
+  .sds-autocomplete__group {
+    div.sds-autocomplete__item {
+      @include u-bg('base-lightest');
+      @include u-text('semibold');
+    }
 
-.sds-autocomplete-selected .sds-autocomplete-selected__item--disabled,
-.sds-autocomplete[disabled='true'],
- input [disabled='disabled'] {
-  @include u-bg('base-lighter');
-  @include u-border('1px');
-  @include u-border('solid');
-  @include u-border('base');
-  @include u-text('base-dark');
-  cursor: not-allowed;
+    div.sds-autocomplete__item:hover, div.sds-autocomplete__item--selected {
+      @include u-bg('secondary');
+      @include u-text('white');
+    }
+
+    /* Child with group */
+    .sds-autocomplete__group {
+      .sds-autocomplete__item {
+        @include u-padding-left(2);
+      }
+
+      ul > li.sds-autocomplete__item {
+        @include u-padding-left(4);
+      }
+    }
+
+    /* Grandchildren Items */
+    & > ul > li.sds-autocomplete__item {
+      @include u-padding-left(2);
+    }
+  }
+
+  /* Disabled */
+  .sds-autocomplete__item--disabled, .sds-autocomplete__item--disabled:hover {
+    @include u-text('base');
+    @include u-bg('white');
+    @include u-text('italic');
+    cursor: not-allowed;
+  }
+
 }
