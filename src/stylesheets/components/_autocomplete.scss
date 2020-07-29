@@ -13,7 +13,7 @@
   /* Custom Shadow */
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
 
-  /* Pull in unstyled list for top level and child UL's */
+  /* Use unstyled list for top level and child UL's */
   @extend .usa-list;
   @extend .usa-list--unstyled;
 
@@ -33,7 +33,6 @@
   /* Track */
   &::-webkit-scrollbar-track {
     @include u-bg('base-lighter');
-    cursor: pointer;
   }
 
   /* Handle */
@@ -67,7 +66,8 @@
     }
 
     div.sds-autocomplete__item:hover, div.sds-autocomplete__item--selected {
-      @include u-text('secondary');
+      @include u-bg('secondary');
+      @include u-text('white');
     }
 
     /* Child with group */
@@ -91,6 +91,7 @@
   .sds-autocomplete__item--disabled, .sds-autocomplete__item--disabled:hover {
     @include u-text('base');
     @include u-bg('white');
+    @include u-text('italic');
     cursor: not-allowed;
   }
 
