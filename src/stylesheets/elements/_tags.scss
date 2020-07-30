@@ -36,6 +36,27 @@
   @include button-unstyled;
   font-size: 12px;
   margin-left: 5px;
+  @include u-text('ink');
+}
+
+// Chip tag input
+.sds-tag.sds-tag--input {
+  max-width: units($theme-input-max-width);
+  @include u-width('full');
+  @include u-position('relative');
+
+  .sds--tag__item {
+    div:first-child, .sds-tag__primary-text {
+      @include u-text('semibold');
+    }
+  }
+
+  .sds-tag__close {
+    @include u-position('absolute');
+    @include u-top('05');
+    @include u-right('05');
+    cursor: pointer;
+  }
 }
 
 // Status tag
