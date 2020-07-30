@@ -29,7 +29,7 @@
   padding: 2px 5px;
   @include u-display('inline-flex');
   @include u-align-items("align-start");
-  margin-bottom: 5px;
+  @include u-margin-top('05');
 }
 
 .sds-tag.sds-tag--chip .sds-tag__close {
@@ -38,6 +38,10 @@
   margin-left: 5px;
   @include u-text('ink');
   cursor: pointer;
+
+  &:hover {
+    @include u-text('base');
+  }
 }
 
 // Chip tag input
