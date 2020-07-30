@@ -37,6 +37,7 @@
   font-size: 12px;
   margin-left: 5px;
   @include u-text('ink');
+  cursor: pointer;
 }
 
 // Chip tag input
@@ -55,7 +56,6 @@
     @include u-position('absolute');
     @include u-top('05');
     @include u-right('05');
-    cursor: pointer;
   }
 }
 
