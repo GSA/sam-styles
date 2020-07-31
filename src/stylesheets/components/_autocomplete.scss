@@ -85,6 +85,14 @@
     & > ul > li.sds-autocomplete__item {
       @include u-padding-left(2);
     }
+
+    &.sds-autocomplete__group--disabled {
+      div.sds-autocomplete__item:hover, div.sds-autocomplete__item--selected {
+        @include u-bg('base-lightest');
+        @include u-text('ink');
+        cursor: auto;
+      }
+    }
   }
 
   /* Disabled */
