@@ -29,13 +29,38 @@
   padding: 2px 5px;
   @include u-display('inline-flex');
   @include u-align-items("align-start");
-  margin-bottom: 5px;
+  @include u-margin-top('05');
 }
 
 .sds-tag.sds-tag--chip .sds-tag__close {
   @include button-unstyled;
   font-size: 12px;
   margin-left: 5px;
+  @include u-text('ink');
+  cursor: pointer;
+
+  &:hover {
+    @include u-text('base');
+  }
+}
+
+// Chip tag input
+.sds-tag.sds-tag--input {
+  max-width: units($theme-input-max-width);
+  @include u-width('full');
+  @include u-position('relative');
+
+  .sds--tag__item {
+    div:first-child, .sds-tag__primary-text {
+      @include u-text('semibold');
+    }
+  }
+
+  .sds-tag__close {
+    @include u-position('absolute');
+    @include u-top('05');
+    @include u-right('05');
+  }
 }
 
 // Status tag
