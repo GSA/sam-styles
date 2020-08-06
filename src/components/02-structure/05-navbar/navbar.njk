@@ -38,27 +38,7 @@
         </div>
 
         <div class="tablet-lg:order-2 margin-left-2">
-          <!-- Actions Menu Trigger: Desktop-->
-          <span class="display-none desktop-lg:display-inline-block">
-            <button class="sds-button sds-button--labeled-icon">
-              Actions
-              <span class="fa-layers fa-fw">
-                {%- render '@icon', {prefix: 'fas', classes: 'fa-fw', icon:'circle'} -%}
-                {%- render '@icon', {prefix: 'fas', classes: 'fa-fw', icon:'ellipsis-v', dataTransform:'shrink-6'} -%}
-              </span>
-            </button>
-          </span>
-
-          <!-- Actions Menu Trigger: Tablet-->
-          <span class="desktop-lg:display-none ">
-            <span class="display-none tablet-lg:display-inline-block">
-              <button class="sds-button sds-button--primary sds-button--circular">
-                {%- render '@icon', {prefix: 'fas', classes: 'fa-fw', icon:'ellipsis-v'} -%}
-              </button>
-            </span>
-          </span>
-
-          <!-- Actions Menu Trigger: Mobile-->
+          <!-- Actions Menu Trigger-->
           {% render '@actions--single', {type: 'labeled'}, true %}
         </div>
       </div>
