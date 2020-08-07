@@ -52,10 +52,18 @@
     cursor: pointer;
   }
 
-  /* Item hover or selected */
-  .sds-autocomplete__item:hover, .sds-autocomplete__item--selected {
+  /* Item hover or highlighted */
+  .sds-autocomplete__item:hover, .sds-autocomplete__item--highlighted {
     @include u-bg('secondary');
     @include u-text('white');
+  }
+
+  /* Item selected */
+  .sds-autocomplete__item--selected, .sds-autocomplete__item--selected:hover {
+    @include u-text('base');
+    @include u-bg('white');
+    @include u-text('italic');
+    cursor: auto;
   }
 
   /* Item Group */
@@ -65,9 +73,18 @@
       @include u-text('semibold');
     }
 
-    div.sds-autocomplete__item:hover, div.sds-autocomplete__item--selected {
+    /* Group hover or highlighted */
+    div.sds-autocomplete__item:hover, div.sds-autocomplete__item--highlighted {
       @include u-bg('secondary');
       @include u-text('white');
+    }
+
+    /* Item selected */
+    div.sds-autocomplete__item--selected, div.sds-autocomplete__item--selected:hover {
+      @include u-text('base-dark');
+      @include u-bg('base-lightest');
+      @include u-text('italic');
+      cursor: auto;
     }
 
     /* Child with group */
@@ -86,12 +103,11 @@
       @include u-padding-left(2);
     }
 
-    &.sds-autocomplete__group--disabled {
-      div.sds-autocomplete__item:hover, div.sds-autocomplete__item--selected {
-        @include u-bg('base-lightest');
-        @include u-text('ink');
-        cursor: auto;
-      }
+    & > div.sds-autocomplete__item--disabled, & > div.sds-autocomplete__item--disabled:hover {
+      @include u-bg('base-lightest');
+      @include u-text('ink');
+      @include u-text('no-italic');
+      cursor: auto;
     }
   }
 
@@ -100,7 +116,7 @@
     @include u-text('base');
     @include u-bg('white');
     @include u-text('italic');
-    cursor: not-allowed;
+    cursor: auto;
   }
 
 }
