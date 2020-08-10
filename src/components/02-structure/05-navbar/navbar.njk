@@ -1,0 +1,47 @@
+<div class="sds-navbar border-bottom border-base-lighter">
+  <div class="sds-navbar__content">
+    <div class="grid-row">
+      <div
+        class="grid-col-12 tablet-lg:grid-col-auto display-flex flex-align-center margin-bottom-1 tablet-lg:margin-bottom-0">
+        <!-- Back Button -->
+        <button class="usa-button sds-button--circle sds-button--white sds-button--big margin-right-1">
+          <i class="fas fa-chevron-left " aria-hidden="true" title="Screen reader description"></i>
+          <span class="sr-only">Title Here</span>
+        </button>
+        <!-- Page Title -->
+        <span class="sds-navbar__title">
+          Title here
+        </span>
+      </div>
+      <div class="grid-col-12 tablet-lg:grid-col-fill display-flex flex-align-center">
+        <div class="tablet-lg:order-1">
+          <!-- Buttons -->
+          <button class="usa-button usa-button--secondary">Button</button>
+          <button class="usa-button margin-top-05 tablet:margin-top-0">
+            Button
+          </button>
+        </div>
+        <div class="flex-fill">
+          <!-- Search -->
+          <form class="usa-search usa-search--small margin-x-105 margin-top-05 tablet:margin-top-0">
+            <div role="search">
+              <label class="usa-sr-only" for="search-field-small">Search</label>
+              <input
+                class="usa-input width-card-lg widescreen:width-mobile display-none desktop-lg:display-inline-block"
+                id="search-field-small" type="search" name="search"
+                placeholder="Entity an entity ID, name, or keyword" />
+              <button class="usa-button" type="submit">
+                <span class="usa-sr-only">Search</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="tablet-lg:order-2 margin-left-2">
+          <!-- Actions Menu Trigger-->
+          {% render '@actions--single', {type: 'labeled'}, true %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
