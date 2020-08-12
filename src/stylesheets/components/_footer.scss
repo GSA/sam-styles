@@ -40,7 +40,7 @@
 
     // Apply SDS plus/minus icon (after)
     &::after {
-      background-image: url('/assets/images/bg-minus.svg');
+      background-image: url('#{$theme-image-path}/sam/bg-minus.svg');
       background-repeat: no-repeat;
       align-items: center;
       background-size: contain;
@@ -68,7 +68,7 @@
 
       // Apply SDS plus/minus icon (after)
       &::after {
-        background-image: url('/assets/images/bg-plus.svg');
+        background-image: url('#{$theme-image-path}/sam/bg-plus.svg');
       }
 
     }
