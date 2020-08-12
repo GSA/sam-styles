@@ -1,78 +1,110 @@
-<footer class="usa-footer usa-footer--big">
-  <div class="sds-feedback">
-    <h2 class="sr-only">Feedback</h2>
-    <button type="button" class="sds-feedback__button simple-toggle" [attr.aria-expanded]="!isCollapsedContent" aria-controls="collapseID" (click)="isCollapsedContent = !isCollapsedContent">
-      {% render '@icon', {icon: 'arrow-down', classes: 'sds-feedback__open'} %}
-      <span class="sds-feedback__title">Feedback</span>
-    </button>
-    <div id="collapseID" [sdscollapse]="isCollapsedContent" class="sds-feedback__response">
-      <div>
-        <span class="sds-feedback__response-title">One Question
-        </span>
-        <span class="sds-feedback__response-title-thin">
-          Survey</span>
-        <label for="feedback" class="sds-feedback__response-text">What changes or improvements would you suggest?</label>
-        <textarea id="feedback" class="sds-feedback__input" rows="8"></textarea>
-        <p class="text-right">
-          <button class="usa-button usa-button--secondary">Submit</button>
-        </p>
-      </div>
-    </div>
-  </div>
+<footer class="usa-footer usa-footer--big" role="contentinfo">
   <div class="usa-footer__primary-section">
-    <div class="grid-container">
-      <div class="grid-row grid-gap">
+    <div class="grid-container margin-x-0 mobile-lg:margin-x-auto padding-x-0 mobile-lg:padding-x-auto">
+      <div class="grid-row grid-gap-0 mobile-lg:grid-gap">
         <div class="tablet:grid-col-12">
-          <nav class="usa-footer__nav">
-            <div class="grid-row grid-gap-4">
-              {%- for nav in navigation -%}
-                <div class="grid-col-6 tablet:grid-col-3">
-                  <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
-                    <h2 class="usa-footer__primary-link">{{ nav.header }}</h2>
-                    {%- render '@list', nav.links -%}
-                  </section>
-                </div>
-              {%- endfor -%}
+          <nav class="usa-footer__nav margin-x-0 mobile-lg:margin-x-2 padding-x-0 mobile-lg:padding-x-2">
+            <div class="grid-row grid-gap-0 mobile-lg:grid-gap-4">
+              <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                  <h4 class="usa-footer__primary-link">Topic</h4>
+                  <ul class="usa-list usa-list--unstyled">
+                    <li class="usa-footer__secondary-link">
+                      <a href="javascript:void(0);">Secondary link</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="javascript:void(0);">Secondary link</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="javascript:void(0);">Secondary link that's a bit longer than most of the others</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="javascript:void(0);">Secondary link</a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+              <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                  <h4 class="usa-footer__primary-link">Topic</h4>
+                  <ul class="usa-list usa-list--unstyled">
+                    <li class="usa-footer__secondary-link">
+                      <a href="javascript:void(0);">Secondary link</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="javascript:void(0);">Secondary link that's pretty long</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="javascript:void(0);">Secondary link</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="javascript:void(0);">Secondary link</a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+              <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                  <h4 class="usa-footer__primary-link">Topic</h4>
+                  <ul class="usa-list usa-list--unstyled">
+                    <li class="usa-footer__secondary-link">
+                      <a href="javascript:void(0);">Secondary link</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="javascript:void(0);">Secondary link</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="javascript:void(0);">Secondary link</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="javascript:void(0);">Secondary link</a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+              <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                  <h4 class="usa-footer__primary-link">Topic</h4>
+                  <ul class="usa-list usa-list--unstyled">
+                    <li class="usa-footer__secondary-link">
+                      <a href="javascript:void(0);">Secondary link</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="javascript:void(0);">Secondary link</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="javascript:void(0);">Secondary link</a>
+                    </li>
+                    <li class="usa-footer__secondary-link">
+                      <a href="javascript:void(0);">Secondary link</a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
             </div>
           </nav>
         </div>
       </div>
     </div>
-    <nav class="sds-footer__nav--accordion">
-      <div class="usa-accordion usa-accordion--bordered">
-        <!-- -->
-        {%- for nav in navigation -%}
-          <h2 class="usa-accordion__heading">
-            <button class="usa-accordion__button {% if loop.first %} border-top-1px border-base-light {% endif %}" aria-expanded="{{expanded}}" aria-controls="b-a{{loop.index}}">
-              {{nav.header}}
-            </button>
-          </h2>
-          <div id="b-a{{loop.index}}" class="usa-accordion__content">
-            {%- render '@list', nav.links -%}
-          </div>
-        {%- endfor -%}
-        <!-- -->
-      </div>
-    </nav>
   </div>
-</div>
-<div class="usa-footer__secondary-section">
-  <div class="grid-container">
-    <div class="grid-row grid-gap">
-      <div class="grid-col-12 mobile-lg:grid-col-6 tablet:grid-col-4 margin-bottom-4">
-        <div class="sds-footer__logo">
-          <a class="sds-footer__logo-link" href="javascript:void(0);">
-            <img src="{{ logo | path }}" alt="{{ alttext }}"/>
-          </a>
-          <h3 class="sds-footer__logo-heading">
-            {{ agency }}
-          </h3>
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="grid-col-12 mobile-lg:grid-col-6 tablet:grid-col-4 margin-bottom-4">
+          <div class="sds-footer__logo">
+            <a class="sds-footer__logo-link" href="javascript:void(0);">
+              <img src="/assets/images/logo-gsa.svg" alt="GSA Logo"/>
+            </a>
+            <h3 class="sds-footer__logo-heading">
+                          General Services Administration
+                      </h3>
+          </div>
         </div>
-      </div>
-      <div class="sds-footer__note grid-col-12 mobile-lg:grid-col-6 tablet:grid-col-8">
-        {{ note }}
+        <div class="sds-footer__note grid-col-12 mobile-lg:grid-col-6 tablet:grid-col-8">
+                  This is a U.S. General Services Administration Federal Government computer system that is <strong>"FOR OFFICIAL USE ONLY."</strong> This system is subject to monitoring. Individuals found performing unauthorized activities are subject
+                  to disciplinary action including criminal prosecution.
+              </div>
       </div>
     </div>
   </div>
-</div>
 </footer>
