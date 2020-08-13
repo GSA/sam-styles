@@ -26,7 +26,6 @@ const SKIP_COMPONENTS = [
   // Any components that need to be temporarily skipped can be put
   // here.
   'sam',
-  'sam-content',
   'page-with-sidebar',
   'state-color', // Is not a component - will be moved to docs section
   'theme-color', // Is not a component - will be moved to docs section

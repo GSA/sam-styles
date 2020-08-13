@@ -8,3 +8,10 @@
 .sds-navbar .sds-navbar__content {
   @include grid-container($theme-header-max-width);
 }
+.sds-navbar__title{
+  
+  @include u-font('heading','md') ;
+  @include u-text('semibold') ;
+ 
+
+}

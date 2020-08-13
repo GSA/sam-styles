@@ -1,28 +1,16 @@
 <div class="grid-row">
   <div class="tablet:grid-col">
     <h4>Trigger options</h4>
-    <button class="sds-button sds-button--circular sds-button--shadow">
-      {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw', dataTransform: 'grow-5'} %}
-    </button>
-
-    <button class="sds-button sds-button--primary sds-button--circular">
-      {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw', dataTransform: 'grow-5'} %}
-    </button>
-
-    <button class="sds-button sds-button--labeled-icon">
-      Actions
-      {% render '@layered-icon', layeredIcon %}
-    </button>
+    {% render '@actions--single', {type:'white'}, true %}
+    {% render '@actions--single', true %}
+    {% render '@actions--single', {type: 'labeled'}, true %}
     <h4>Menu</h4>
     <div class="sds-overlay minw-menu maxw-mobile radius-overlay">
       <div class="sds-menu">
         <div class="sds-menu__header">
           <span class="sds-menu__header-title">Actions</span>
-          <button
-            class="sds-button sds-button--circular"
-            aria-label="Close Menu"
-          >
-            {% render '@icon', {icon:'times', prefix: 'fas', classes: 'fa-fw'} %}
+          <button class="usa-button sds-button--circle sds-button--white" aria-label="Close Menu">
+            {% render '@icon', {prefix: 'fas', icon: 'times', classes: 'fa-fw'} %}
           </button>
         </div>
         <button class="sds-menu__item">
@@ -39,32 +27,16 @@
   </div>
   <div class="tablet:grid-col">
     <h4>Trigger options (small)</h4>
-    <button
-      class="sds-button sds-button--circular sds-button--small sds-button--shadow"
-    >
-      {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw', dataTransform: 'grow-5'} %}
-    </button>
-
-    <button
-      class="sds-button sds-button--primary sds-button--circular sds-button--small"
-    >
-    {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw', dataTransform: 'grow-5'} %}
-    </button>
-
-    <button class="sds-button sds-button--labeled-icon sds-button--small">
-      Actions
-      {% render '@layered-icon', layeredIcon %}
-    </button>
+    {% render '@actions--single', {type: 'white', size:'small'}, true %}
+    {% render '@actions--single', { size:'small'}, true %}
+    {% render '@actions--single', {type: 'labeled', size:'small'}, true %}
     <h4>Menu (small)</h4>
     <div class="sds-overlay minw-menu maxw-mobile radius-overlay">
       <div class="sds-menu sds-menu--small">
         <div class="sds-menu__header">
           <span class="sds-menu__header-title">Actions</span>
-          <button
-            class="sds-button sds-button--circular sds-button--small"
-            aria-label="Close Menu"
-          >
-            {% render '@icon', {icon:'times', prefix: 'fas', classes: 'fa-fw'} %}
+          <button class="usa-button sds-button--circle sds-button--white sds-button--small" aria-label="Close Menu">
+            {% render '@icon', {prefix: 'fas', icon: 'times', classes: 'fa-fw'} %}
           </button>
         </div>
         <button class="sds-menu__item">

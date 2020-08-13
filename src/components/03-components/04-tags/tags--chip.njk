@@ -1,17 +1,53 @@
+<h2>Chips</h2>
 <span class="{{ label.classes }}">Normal</span>
 
- <span class="sds-tag sds-tag--chip">
+<span class="sds-tag sds-tag--chip">
   Normal with close icon
   <button class="sds-tag__close">
     <span class="fas fa-times" aria-hidden="true"></span>
   </button>
 </span>
 <div class="width-10">
-  
- <span class="sds-tag sds-tag--chip">
+
+  <span class="sds-tag sds-tag--chip">
   Wrapping with close icon
   <button class="sds-tag__close">
-    <span class="fas fa-times" aria-hidden="true"></span>
-  </button>
-</span>
+      <span class="fas fa-times" aria-hidden="true"></span>
+    </button>
+  </span>
 </div>
+
+<h2>Input Chips</h2>
+
+<input aria-autocomplete="list" autocomplete="off" class="usa-input padding-right-3" type="text" aria-label="Auto Complete" id="autocomplete5" placeholder="Enter text" aria-activedescendant="">
+
+
+<ul aria-live="polite" aria-relevant="additions" class="usa-list usa-list--unstyled sds-autocomplete-selected" role="listbox" aria-label="Autocomplete 5 results">
+  <li role="option">
+    <div class="sds-tag sds-tag--chip sds-tag--input">
+      <div class="sds--tag__item">
+        <div>Level 1</div>
+        <div>id 1</div>
+      </div>
+      <button class="sds-tag__close">
+        <span class="fas fa-times" aria-hidden="true"></span>
+      </button>
+    </div>
+  </li>
+  <li role="option">
+    <div class="sds-tag sds-tag--chip sds-tag--input">
+      <div class="sds--tag__item">
+        <div>Level 2</div>
+        <div>id 2</div>
+      </div>
+    </div>
+  </li>
+  <li role="option">
+    <div class="sds-tag sds-tag--chip sds-tag--input sds-tag--disabled">
+      <div class="sds--tag__item">
+        <div>Level 2</div>
+        <div>id 2</div>
+      </div>
+    </div>
+  </li>
+</ul>

@@ -64,7 +64,7 @@
 
 //soften error styles
 .usa-error-message {
-  font-weight: 500 !important;
+  font-weight: font-weight('medium');
 }
 
 .usa-input--error, .usa-input.usa-focus, .usa-input.usa-input--success {
@@ -81,4 +81,14 @@
   input.usa-input {
     @extend .usa-input--error;
   }
+}
+
+//checkbox
+.usa-checkbox__label[aria-checked=mixed]::before {
+    @include u-bg('primary');
+    box-shadow: 0 0 0 2px #70E17B;
+    background-image: url('#{$theme-image-path}/minus-white.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: .75rem auto;
 }

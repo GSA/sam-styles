@@ -11,7 +11,7 @@
 
     .value {
       color: #323A45;
-      font-weight: 700;
+      font-weight: font-weight('bold');
       font-size: 24px;
       letter-spacing: -0.6px;
       text-align: center;
@@ -121,7 +121,7 @@
     .value {
       color: #0071bc;
       font-size: 24px;
-      font-weight: 700;
+      font-weight: font-weight('bold');
       line-height: 42px;
       margin: auto;
       letter-spacing: -0.63px;
@@ -130,7 +130,7 @@
     .label {
       color: #5b616b;
       font-size: 14px;
-      font-weight: 400;
+      font-weight: font-weight('normal');
       line-height: 14px;
       text-align: center;
       padding: 0 5px 5px;

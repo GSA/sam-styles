@@ -8,11 +8,12 @@ module.exports = {
       context: {
         agency: 'Name of Agency',
         logo: '/assets/images/logo-img.png',
+        alttext: 'Agency Logo',
         navigation: [
           {
             header: 'Topic',
             links: {
-              modifiers: ['unstyled'],
+              modifiers: ['no-bullets'],
               items: [
                 {
                   link: {
@@ -44,7 +45,7 @@ module.exports = {
           {
             header: 'Topic',
             links: {
-              modifiers: ['unstyled'],
+              modifiers: ['no-bullets'],
               items: [
                 {
                   link: {
@@ -76,7 +77,7 @@ module.exports = {
           {
             header: 'Topic',
             links: {
-              modifiers: ['unstyled'],
+              modifiers: ['no-bullets'],
               items: [
                 {
                   link: {
@@ -119,16 +120,24 @@ module.exports = {
       context: {
         agency: 'General Services Administration',
         logo: '/assets/images/logo-gsa.svg',
+        alttext: 'GSA Logo',
         navigation: [
           {
-            header: 'Our Website',
+            header: 'About This Site',
             links: {
-              modifiers: ['unstyled'],
+              modifiers: ['no-bullets'],
               items: [
                 {
                   link: {
-                    text: 'About This Site',
+                    text: 'About Us',
                     href: 'javascript:void(0);'
+                  }
+                },
+                {
+                  link: {
+                    text: 'Our Community',
+                    href: 'javascript:void(0);',
+                    external: true
                   }
                 },
                 {
@@ -155,7 +164,7 @@ module.exports = {
           {
             header: 'Our Partners',
             links: {
-              modifiers: ['unstyled'],
+              modifiers: ['no-bullets'],
               items: [
                 {
                   link: {
@@ -181,41 +190,7 @@ module.exports = {
                 {
                   link: {
                     text: 'More Partners',
-                  href: 'javascript:void(0);'
-                }
-                }
-              ]
-            }
-          },
-          {
-            header: 'Customer Service',
-            links: {
-              modifiers: ['unstyled'],
-              items: [
-                {
-                  link: {
-                    text: 'Help',
                     href: 'javascript:void(0);'
-                  }
-                },
-                {
-                  link: {
-                    text: 'Contact Federal Service Desk',
-                    href: 'javascript:void(0);',
-                    external: true
-                  }
-                },
-                {
-                  link: {
-                    text: 'Our Community',
-                    href: 'javascript:void(0);',
-                    external: true
-                  }
-                },
-                {
-                  link: {
-                    text: 'Policy',
-                    href: 'javascript:void(0);',
                   }
                 }
               ]
@@ -224,7 +199,7 @@ module.exports = {
           {
             header: 'Policies',
             links: {
-              modifiers: ['unstyled'],
+              modifiers: ['no-bullets'],
               items: [
                 {
                   link: {
@@ -235,7 +210,7 @@ module.exports = {
                 {
                   link: {
                     text: 'Disclaimers',
-                    href: 'javascript:void(0);',
+                    href: 'javascript:void(0);'
                   }
                 },
                 {
@@ -248,6 +223,45 @@ module.exports = {
                 {
                   link: {
                     text: 'Accessibility',
+                    href: 'javascript:void(0);'
+                  }
+                }
+              ]
+            }
+          },
+          {
+            header: 'Customer Service',
+            links: {
+              modifiers: ['no-bullets'],
+              items: [
+                {
+                  link: {
+                    text: 'Help',
+                    href: 'javascript:void(0);'
+                  }
+                },
+                {
+                  link: {
+                    text: 'Check Registration Status',
+                    href: 'javascript:void(0);'
+                  }
+                },
+                {
+                  link: {
+                    text: 'Federal Service Desk',
+                    href: 'javascript:void(0);',
+                    external: true
+                  }
+                },
+                {
+                  link: {
+                    text: 'External Resources',
+                    href: 'javascript:void(0);'
+                  }
+                },
+                {
+                  link: {
+                    text: 'Contact Us',
                     href: 'javascript:void(0);'
                   }
                 }

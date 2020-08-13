@@ -1,6 +1,6 @@
 label: Alerts
 status: wip
-preview: "@sam-content"
+preview: "@sam-grid"
 variants:
   - name: default
     label: Default

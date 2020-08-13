@@ -16,6 +16,13 @@ hr.thin {
   @include u-border-top("base-lighter");
 }
 
+hr.fine {
+  border: 0;
+  height: 0;
+  @include u-border-top(1px);
+  @include u-border-top("base-light");
+}
+
 .border--hairline {
   border: 0 !important;
   box-shadow: 0 0 0 1px color("base-light");

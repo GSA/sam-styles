@@ -85,6 +85,11 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
         @include u-margin-right(0);
       }
     }
+
+    // remove margin top from first sibling of a heading that isn't in a vertical card
+    .sds-card__title + * {
+      @include u-margin-top(0);
+    }
   }
 
   &__buttons {
