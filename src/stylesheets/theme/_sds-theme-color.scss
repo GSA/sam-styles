@@ -98,6 +98,6 @@ General colors
 
 // Links
 $theme-link-color        : 'indigo-cool-60';
-$theme-link-visited-color: 'violet-70v';
+$theme-link-visited-color: $theme-link-color;
 $theme-link-hover-color  : 'yellow-50';
 $theme-link-active-color : 'indigo-cool-70';

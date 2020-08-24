@@ -11,10 +11,6 @@
     @include u-line-height('sans', 3);
   }
 
-  &--visited, &:visited {
-    @include u-text ('violet-70v')
-  }
-
   &--hover, &:hover {
     @include u-text ('yellow-50');
     @include u-text ('underline');
@@ -27,11 +23,7 @@
       @include u-text ('secondary-lighter');
       @include u-text ('underline');
     }
-    
-    &--visited, &:visited {
-      @include u-text ('accent-cool-lighter');    
-    }
-    
+
     &--active, &:active {
       @include u-text('blue-5');
     }
@@ -88,3 +80,6 @@
   }
 }
 
+.sds-link--display-visited:visited {
+  @include u-text('violet-70v');
+}
