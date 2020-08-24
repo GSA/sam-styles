@@ -55,24 +55,6 @@ variants:
           icon:
             icon: book
             classes: fa-fw
-  - name: icon large
-    label: Icon List -- Large
-    context:
-      modifiers:
-          - icon
-      items:
-        - text: List Item
-          icon:
-            icon: bell
-            classes: fa-2x fa-fw
-        - text: List Item
-          icon:
-            icon: calendar
-            classes: fa-2x fa-fw
-        - text: List Item
-          icon:
-            icon: book
-            classes: fa-2x fa-fw
   - name: menu
     label: Menu List
     context:
@@ -112,30 +94,6 @@ variants:
           icon:
             icon: book
             classes: fa-fw
-  - name: menu icon large
-    label: Menu List with Icons -- Large
-    context:
-      modifiers:
-          - icon
-      items:
-        - link:
-            text: List Item
-            href: " "
-          icon:
-            icon: bell
-            classes: fa-2x fa-fw
-        - link:
-            text: Quick start guide for creating a login.gov account
-            href: " "
-          icon:
-            icon: calendar
-            classes: fa-2x fa-fw
-        - link:
-            text: List Item
-            href: " "
-          icon:
-            icon: book
-            classes: fa-2x fa-fw
   - name: icon-link-text
     label: List with Icon, Link, and Text
     context:
