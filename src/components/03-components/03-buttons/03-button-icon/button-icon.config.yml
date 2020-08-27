@@ -3,7 +3,7 @@ status: wip
 preview: "@sam-grid"
 context:
   label:
-  classes: "sds-button--icon"
+  classes: "sds-button--icon sds-button--icon-lg"
   buttons:
     - icons:
         type: stack
@@ -15,7 +15,7 @@ context:
             classes: fa-stack-1x text-base fa-2x
     - icons:
         type: stack
-        size: 2x
+        size: 1x
         icons:
           - icon: pentagon
             classes: fa-stack-2x text-accent-cool-light fa-1x

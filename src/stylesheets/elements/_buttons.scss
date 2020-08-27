@@ -63,7 +63,7 @@
     padding: 0;
     font-size: size("body", 1);
   }
-  &.usa-button--big, 
+  &.usa-button--big,
   &.sds-button--big {
     height: units(5);
     width: units(5);
@@ -432,5 +432,49 @@
     border: solid 1px color("primary");
     border-radius: radius($theme-button-border-radius);
     margin: auto;
+  }
+}
+
+/*-------------------
+  Icon Button LG
+--------------------*/
+.sds-button.sds-button--icon-lg{
+  @include u-padding(2);
+  @include u-shadow(2);
+  @include u-border(2px);
+  @include u-border('accent-cool-light');
+  @include u-radius('lg');
+  @include u-text('left');
+  @include u-margin(1);
+
+  .sds-button__header {
+    @include u-display('flex');
+    @include u-flex('row');
+    @include u-flex('align-center');
+    @include u-flex(1);
+
+    h1, h2, h3, h4, h5, h6 {
+      @include u-font('sans', 'md');
+      @include u-text('bold');
+    }
+
+    p {
+      @include u-margin-bottom(1);
+    }
+
+    svg, span {
+      @include u-margin-top(0);
+      @include u-margin-x(2);
+    }
+  }
+  span {
+    @include u-color('base');
+    @include u-text('italic');
+    @include u-margin-top(1);
+    @include u-text('normal');
+  }
+
+  &:hover {
+    @include u-border('primary');
   }
 }
