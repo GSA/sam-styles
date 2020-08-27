@@ -4,12 +4,10 @@
     @include u-line-height('body', 5);
     @include u-margin-bottom(1);
     @include u-measure($theme-text-measure-wide);
-    @include u-font('sans', 'xs');
   }
 
   svg {
     @include u-margin-right(1);
-    @include u-font('sans', 'lg');
   }
 
   &--unstyled {
@@ -42,6 +40,10 @@
       .usa-link {
         @include u-float('left');
       }
+    }
+    svg {
+      @include u-margin-right(1);
+      @include u-font('sans', 'lg');
     }
   }
 
