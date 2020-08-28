@@ -41,6 +41,10 @@
         @include u-float('left');
       }
     }
+    svg {
+      @include u-margin-right(1);
+      @include u-font('sans', 'lg');
+    }
   }
 
   &--nested {
