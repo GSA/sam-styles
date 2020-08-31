@@ -1,7 +1,6 @@
 <h4>SDS Icon Button Examples</h4>
 
 <div class="bg-accent-cool-light grid-container padding-3 display-flex">
-
   <button class="sds-button sds-button--icon">
     {% render '@layered-icon', buttons[0].icons %}
     <span class="sds-button--icon__title">Register Entity</span>
@@ -18,5 +17,14 @@
       <span class="sds-button--icon__title">Help Me Get Started</span>
     </button>
   </div>
-</div>
 
+  <button class="sds-button sds-button--icon-lg">
+    <div class="sds-button__header">
+      <h4>Public Building or Works</h4>
+      {% render '@layered-icon', buttons[1].icons %}
+    </div>
+    <p>Wage rates for laborers and mechanics</p>
+    <span>Davis-Bacon Act (DBA)</span>
+  </button>
+
+</div>
