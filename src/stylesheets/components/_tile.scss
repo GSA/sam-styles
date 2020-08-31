@@ -7,7 +7,7 @@
 
   .sds-tile__body {
     @include u-display('block');
-    @include u-padding-left('2');
+    @include u-padding-left(2);
 
     header {
       @include u-font('sans', 'md');
