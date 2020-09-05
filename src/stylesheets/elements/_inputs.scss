@@ -59,6 +59,7 @@
     @include u-font('sans', '3xs');
     @include u-margin-top(0.5);
     height: 2.1rem;
+    @include u-padding-y("2px");
   }
 }
 
@@ -91,4 +92,12 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: .75rem auto;
+}
+
+
+// input small (firefox fix)
+.usa-input--sm {
+  height: 14px;
+  line-height: 14px;
+  @include u-padding-y('2px');
 }
