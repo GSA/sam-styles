@@ -24,5 +24,9 @@
     );
     color: color('secondary-darker');
     font-weight: font-weight('semibold');
+    &.sds-sidenav__label {
+      @include u-display('block');
+      padding: units(1) 0 units(2);
+    }
   }
 }
