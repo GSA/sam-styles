@@ -21,7 +21,7 @@
             background-color: grey;
             position: absolute;
             top: 0;
-            left: 0.42em;
+            left: 0.5em;
             z-index: -1;
         }
         &:first-of-type::before {
@@ -43,8 +43,10 @@
     }
 
     .sds-history__bullet {
-        width: 0.95em;
-        height: 0.9em;
+        width: 1em;
+        height: 1em;
+        min-width: 1em;
+        min-height: 1em;
         box-sizing: border-box;
         border-radius: 50%;
         background: white;
@@ -53,7 +55,8 @@
         @include u-bg("base-light");
         .svg-inline--fa {
             position: absolute;
-            top: 43.2%;
+            top: calc(50% - .5em);
+            left: .25em;
         }
 
         // color variants
