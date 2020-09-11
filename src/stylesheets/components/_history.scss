@@ -1,7 +1,7 @@
 //****************************
-//SDS TIMELINE
+//SDS history
 
-.sds-timeline {
+.sds-history {
     ul {
         padding: 1em 0 0 2em;
         margin: 0;
@@ -21,7 +21,7 @@
             background-color: grey;
             position: absolute;
             top: 0;
-            left: 0.3em;
+            left: 0.42em;
             z-index: -1;
         }
         &:first-of-type::before {
@@ -42,15 +42,19 @@
         }
     }
 
-    .sds-timeline__bullet {
-        width: 0.7em;
-        height: 0.6em;
+    .sds-history__bullet {
+        width: 0.95em;
+        height: 0.9em;
         box-sizing: border-box;
         border-radius: 50%;
         background: white;
         z-index: 1;
         margin-right: 1em;
         @include u-bg("base-light");
+        .svg-inline--fa {
+            position: absolute;
+            top: 43.2%;
+        }
 
         // color variants
         &--blue {
