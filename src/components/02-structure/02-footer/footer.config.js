@@ -125,7 +125,7 @@ module.exports = {
           {
             header: 'About This Site',
             links: {
-              modifiers: ['no-bullets'],
+              modifiers: ['unstyled'],
               items: [
                 {
                   link: {

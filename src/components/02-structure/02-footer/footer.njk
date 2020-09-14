@@ -1,4 +1,4 @@
-<footer class="usa-footer usa-footer--big">
+<footer class="usa-footer usa-footer--big" role="contentinfo">
   <div class="sds-feedback">
     <h2 class="sr-only">Feedback</h2>
     <button type="button" class="sds-feedback__button simple-toggle" [attr.aria-expanded]="!isCollapsedContent" aria-controls="collapseID" (click)="isCollapsedContent = !isCollapsedContent">
@@ -20,59 +20,48 @@
     </div>
   </div>
   <div class="usa-footer__primary-section">
-    <div class="grid-container">
-      <div class="grid-row grid-gap">
+    <div class="grid-container margin-x-0 mobile-lg:margin-x-auto padding-x-0 mobile-lg:padding-x-auto">
+      <div class="grid-row grid-gap-0 mobile-lg:grid-gap">
         <div class="tablet:grid-col-12">
-          <nav class="usa-footer__nav">
-            <div class="grid-row grid-gap-4">
+          <nav class="usa-footer__nav margin-x-0 mobile-lg:margin-x-2 padding-x-0 mobile-lg:padding-x-2">
+            <div class="grid-row grid-gap-0 mobile-lg:grid-gap-4">
               {%- for nav in navigation -%}
-                <div class="grid-col-6 tablet:grid-col-3">
-                  <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
-                    <h2 class="usa-footer__primary-link">{{ nav.header }}</h2>
-                    {%- render '@list', nav.links -%}
-                  </section>
-                </div>
+              <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                  <h4 class="usa-footer__primary-link">{{ nav.header }}</h4>
+                  <ul class="usa-list usa-list--unstyled">
+                    {%- for item in nav.links.items -%}
+                      <li class="usa-footer__secondary-link">
+                        <a href="{{item.link.href}}">{{item.link.text}}</a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </section>
+              </div>
               {%- endfor -%}
             </div>
           </nav>
         </div>
       </div>
     </div>
-    <nav class="sds-footer__nav--accordion">
-      <div class="usa-accordion usa-accordion--bordered">
-        <!-- -->
-        {%- for nav in navigation -%}
-          <h2 class="usa-accordion__heading">
-            <button class="usa-accordion__button {% if loop.first %} border-top-1px border-base-light {% endif %}" aria-expanded="{{expanded}}" aria-controls="b-a{{loop.index}}">
-              {{nav.header}}
-            </button>
-          </h2>
-          <div id="b-a{{loop.index}}" class="usa-accordion__content">
-            {%- render '@list', nav.links -%}
-          </div>
-        {%- endfor -%}
-        <!-- -->
-      </div>
-    </nav>
   </div>
-</div>
-<div class="usa-footer__secondary-section">
-  <div class="grid-container">
-    <div class="grid-row grid-gap">
-      <div class="grid-col-12 mobile-lg:grid-col-6 tablet:grid-col-4 margin-bottom-4">
-        <div class="sds-footer__logo">
-          <a class="sds-footer__logo-link" href="javascript:void(0);">
-            <img src="{{ logo | path }}" alt="{{ alttext }}"/>
-          </a>
-          <h3 class="sds-footer__logo-heading">
-            {{ agency }}
-          </h3>
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="grid-col-12 mobile-lg:grid-col-6 tablet:grid-col-4 margin-bottom-4">
+          <div class="sds-footer__logo">
+            <a class="sds-footer__logo-link" href="javascript:void(0);">
+              <img src="{{ logo | path }}" alt="{{ alttext }}"/>
+            </a>
+            <h3 class="sds-footer__logo-heading">
+              {{ agency }}
+            </h3>
+          </div>
         </div>
-      </div>
-      <div class="sds-footer__note grid-col-12 mobile-lg:grid-col-6 tablet:grid-col-8">
-        {{ note }}
+        <div class="sds-footer__note grid-col-12 mobile-lg:grid-col-6 tablet:grid-col-8">
+          {{ note }}
+        </div>
       </div>
     </div>
   </div>
-</div>
 </footer>
