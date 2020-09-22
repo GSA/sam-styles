@@ -250,11 +250,11 @@
   min-width: 256px;
   box-shadow: 1px 3px 5px rgba(0,0,0, 25);
 
+ 
+
   .sds-toast-icon {
       @include u-margin-y('2');
       @include u-margin-left('2');
-     
-
   }
 
   .sds-toast-close{
@@ -265,10 +265,14 @@
   }
 
   .sds-toast-text{
-    @include u-font('sans', 'md');
+    @include u-font('sans', 'sm');
+ 
     @include u-margin-x('1');
     @include u-margin-y('2');
-  
+    
+    @include at-media('mobile') {
+      @include u-font('sans', 'md');
+    }
   }
 
 
