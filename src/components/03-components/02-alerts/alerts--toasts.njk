@@ -1,0 +1,22 @@
+<h3>SDS Toasts</h3>
+<div class="sds-toast info grid-row">
+  
+  <div class="sds-toast-icon grid-col-auto">
+    {% render '@icon', {prefix: 'far', icon: 'info-circle', classes: 'fa-2x'} %}
+  </div>
+  <span class="sds-toast-text grid-col-fill">Information Saved</span>
+  <div class="sds-toast-close grid-col-auto">
+     {% render '@icon', {prefix: 'fas', icon: 'times', classes: 'fa-fw'} %}
+  </div>
+</div>
+
+<div class="sds-toast success margin-top-2 grid-row">
+  <div class="sds-toast-icon grid-col-auto">
+    {% render '@icon', {prefix: 'far', icon: 'check-circle', classes: 'fa-2x'} %}
+  </div>
+  <span class="sds-toast-text grid-col-fill">Your information will be saved before leaving editor view</span>
+  <div class="sds-toast-close  grid-col-auto">
+     {% render '@icon', {prefix: 'fas', icon: 'times', classes: 'fa-fw'} %}
+  </div>
+</div>
+

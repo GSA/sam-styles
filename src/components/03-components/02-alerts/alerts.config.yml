@@ -85,3 +85,9 @@ variants:
             prefix: fa
             classes:
             title: false
+  - name: toasts
+    label: Toasts
+    context:
+      label:
+        classes: "sds-toast"
+   
