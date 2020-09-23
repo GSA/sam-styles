@@ -239,6 +239,7 @@
   }
 }
 
+
 //ALERT--TOASTS 
 .sds-toast{
 
@@ -246,10 +247,14 @@
   @include u-display('inline-flex');
   @include u-flex('align-center');
   @include u-radius('lg');
-  max-width: 456px;
+
+  max-width:calc(100vw-48px);
   min-width: 256px;
   box-shadow: 1px 3px 5px rgba(0,0,0, 25);
 
+  @include at-media('mobile') {
+    max-width: 456px;
+  }
  
 
   .sds-toast-icon {
