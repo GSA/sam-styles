@@ -287,20 +287,20 @@
       
       border:solid 2px;
       
-      @include u-border('info');
+      @include u-border('secondary-light');
 
       .sds-toast__icon {
-          @include u-text('info')
+          @include u-text('secondary-light')
        
       }
   }
 
   &.sds-toast--success{
       border:solid 2px;
-      @include u-border('success');
+      @include u-border('primary-dark');
 
       .sds-toast__icon {
-        @include u-text('success')
+        @include u-text('primary-dark')
       }
   }
 }
