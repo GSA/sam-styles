@@ -17,7 +17,7 @@
     @include u-padding-top('1px');
     @include u-margin-x('05');
   }
-  
+
   //SDS ALERT INFO
   &.info {
     border: solid 0.1rem #00BDE3;
@@ -285,19 +285,22 @@
 
   &.sds-toast--info {
       
-      border:solid 2px #5994f6;
+      border:solid 2px;
+      
+      @include u-border('info');
 
       .sds-toast__icon {
-          color:#5994f6;
+          @include u-text('info')
        
       }
   }
 
   &.sds-toast--success{
-      border:solid 2px #00a91c;
-      
+      border:solid 2px;
+      @include u-border('success');
+
       .sds-toast__icon {
-        color:#00a91c;
+        @include u-text('success')
       }
   }
 }
