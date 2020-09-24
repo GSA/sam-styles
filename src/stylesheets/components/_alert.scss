@@ -266,7 +266,7 @@
   .sds-toast__close{
     @include u-margin-right('1');
     @include u-margin-top('1');
-    color: #979797;
+    @include u-text('disabled-dark');
     align-self: baseline;
     cursor: pointer;
   }
