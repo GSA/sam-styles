@@ -247,10 +247,10 @@
   @include u-display('inline-flex');
   @include u-flex('align-center');
   @include u-radius('lg');
+  @include u-shadow(2);
 
   max-width:calc(100vw-48px);
   min-width: 256px;
-  box-shadow: 1px 3px 5px rgba(0,0,0, 25);
 
   @include at-media('mobile') {
     max-width: 456px;
