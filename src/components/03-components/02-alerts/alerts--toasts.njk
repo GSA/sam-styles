@@ -1,25 +1,17 @@
 <h3>SDS Toasts</h3>
-
+{% for toast in toasts %}
 <div class="grid-row">
-  <div class="sds-toast sds-toast--info">
+  <div class="sds-toast sds-toast--{{toast.modifier}} margin-top-2">
 
     <div class="sds-toast__icon grid-col-auto">
-      {% render '@icon', {icon: 'alert-info', classes: 'fa-2x'} %}
+      {% render '@icon', {icon:toast.icon, classes: 'fa-2x'} %}
     </div>
-    <span class="sds-toast__content grid-col-fill">Information Saved</span>
+    <span class="sds-toast__content grid-col-fill">{{toast.text}}</span>
     <div class="sds-toast__close grid-col-auto">
       {% render '@icon', {prefix: 'fas', icon: 'times', classes: 'fa-fw'} %}
     </div>
   </div>
 </div>
-<div class="grid-row">
-  <div class="sds-toast sds-toast--success margin-top-2">
-    <div class="sds-toast__icon grid-col-auto">
-      {% render '@icon', { icon: 'check-circle', classes: 'fa-2x'} %}
-    </div>
-    <span class="sds-toast__content grid-col-fill">Your information will be saved before leaving editor view</span>
-    <div class="sds-toast__close  grid-col-auto">
-      {% render '@icon', {prefix: 'fas', icon: 'times', classes: 'fa-fw'} %}
-    </div>
-  </div>
+{% endfor %}
+
 </div>
