@@ -1,7 +1,7 @@
 label: Toasts
 status: wip
 preview: "@sam-grid"
-
+default: toasts
 context:
   label:
   classes: "sds-toast"
