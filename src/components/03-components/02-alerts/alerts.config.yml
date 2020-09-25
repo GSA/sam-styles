@@ -85,18 +85,7 @@ variants:
             prefix: fa
             classes:
             title: false
-  - name: toasts
-    label: Toasts
-    context:
-      label:
-        classes: "sds-toast"
-      toasts:
-        - text: Information Saved
-          modifier: info
-          icon: alert-info
-        - text: Your information will be saved before leaving editor view
-          modifier: success
-          icon: check-circle
+
 
 
 
