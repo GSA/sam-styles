@@ -1,13 +1,7 @@
 .sds-toast {
     @include grid-row;
-    @include u-text('semibold');
-    max-width: calc(100vw-48px);
+    @include u-text('semibold'); 
     @include u-margin-top('2');
-    min-width: 256px;
-
-    @include at-media('mobile') {
-        max-width: 456px;
-    }
 
     &.sds-toast--info {
         .sds-toast__content {
@@ -32,6 +26,11 @@
     }
 
     .sds-toast__content {
+        max-width: 80vw;
+        min-width: 256px;
+        @include at-media('mobile-lg') {
+            max-width: 456px;
+        }
         @include u-display('inline-flex');
         @include u-flex('align-center');
         @include u-radius('lg');
