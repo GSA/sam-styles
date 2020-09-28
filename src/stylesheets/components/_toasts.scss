@@ -1,11 +1,11 @@
 .sds-toast {
     @include grid-row;
     @include u-text('semibold'); 
-    @include u-margin-top('2');
+    @include u-margin-top(2);
 
     &.sds-toast--info {
         .sds-toast__content {
-            border: solid 2px;
+            @include u-border('2px');
             @include u-border('secondary-light');
         }
 
@@ -16,7 +16,7 @@
 
     &.sds-toast--success {
         .sds-toast__content {
-            border: solid 2px;
+            @include u-border('2px');
             @include u-border('primary-dark');      
         }
 
@@ -26,7 +26,7 @@
     }
 
     .sds-toast__content {
-        @include u-margin-x('3');
+        @include u-margin-x(3);
         min-width: 256px;
         @include at-media('mobile-lg') {
             max-width: 456px;
@@ -38,13 +38,13 @@
     }
 
     .sds-toast__content__icon {
-        @include u-margin-y('2');
-        @include u-margin-left('2');
+        @include u-margin-y(2);
+        @include u-margin-left(2);
     }
 
     .sds-toast__content__close {
-        @include u-margin-right('1');
-        @include u-margin-top('1');
+        @include u-margin-right(1);
+        @include u-margin-top(1);
         @include u-text('disabled-dark');
         align-self: baseline;
         cursor: pointer;
@@ -53,8 +53,8 @@
     .sds-toast__content__text {
         @include u-font('sans', 'sm');
         @include u-flex("fill");
-        @include u-margin-x('1');
-        @include u-margin-y('2');
+        @include u-margin-x(1);
+        @include u-margin-y(2);
 
         @include at-media('mobile') {
             @include u-font('sans', 'md');
