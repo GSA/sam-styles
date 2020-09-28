@@ -1,0 +1,19 @@
+label: Toasts
+status: wip
+preview: "@sam-grid"
+default: toasts
+context:
+  label:
+  classes: "sds-toast"
+  toasts:
+    - text: Information Saved
+      modifier: info
+      icon: alert-info
+    - text: Your information will be saved before leaving editor view
+      modifier: success
+      icon: check-circle
+
+variants:
+  - name: toasts
+    label: Toasts
+ 

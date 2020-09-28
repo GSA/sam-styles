@@ -17,6 +17,7 @@
     @include u-padding-top('1px');
     @include u-margin-x('05');
   }
+
   //SDS ALERT INFO
   &.info {
     border: solid 0.1rem #00BDE3;
@@ -238,3 +239,5 @@
     text-overflow: ellipsis;
   }
 }
+
+

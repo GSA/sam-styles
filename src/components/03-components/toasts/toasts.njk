@@ -1,0 +1,18 @@
+<h3>SDS Toasts</h3>
+
+{% for toast in toasts %}
+  <div class="sds-toast sds-toast--{{toast.modifier}}">
+      <div class="sds-toast__content">
+        <div class="sds-toast__content__icon">
+          {% render '@icon', {
+            icon: toast.icon,
+            classes: 'fa-2x'
+          } %}
+        </div>
+        <span class="sds-toast__content__text">{{toast.text}}</span>
+      <div class="sds-toast__content__close">
+        {% render '@icon', {prefix: 'fas', icon: 'times', classes: 'fa-fw'} %}
+      </div>
+    </div>
+  </div>
+{% endfor %}
