@@ -1,0 +1,164 @@
+//****************************
+//SDS history
+
+ul.sds-history {
+
+    padding: 1em 0 0 2em;
+    margin: 0;
+    list-style: none;
+    position: relative;
+
+
+    li {
+        position: relative;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        &::before {
+            content: " ";
+            height: 100%;
+            width: 1px;
+
+            @include u-bg("base-light");
+            position: absolute;
+            top: 0;
+            left: calc(0.5em - 0.5px);
+            z-index: -1;
+        }
+        &:first-of-type::before {
+            top: 50%;
+        }
+        &:last-of-type::before {
+            height: 50%;
+        }
+
+        .sds-card {
+            width: 100%;
+            @include u-padding-y(1);
+            @include u-padding-x(2);
+            margin: units(1);
+            p:first-of-type {
+                margin: 0;
+            }
+        }
+    }
+
+    .sds-history__bullet {
+        width: 1em;
+        height: 1em;
+        min-width: 1em;
+        min-height: 1em;
+        box-sizing: border-box;
+        border-radius: 50%;
+        background: white;
+        z-index: 1;
+        margin-right: 1em;
+        @include u-bg("base-light");
+        .svg-inline--fa {
+            position: absolute;
+            top: calc(50% - 0.5em);
+            left: 0.25em;
+            z-index: 1;
+        }
+        &--selected {
+            @include u-bg("base");
+        }
+
+        // color variants
+        &--blue {
+            @include u-bg("info-dark");
+        }
+        &--red {
+            @include u-bg("error");
+        }
+        &--green {
+            @include u-bg("success");
+        }
+        &--gray {
+            @include u-bg("base-light");
+        }
+        &--dark-gray {
+            @include u-bg("base");
+        }
+        &--yellow {
+            @include u-bg("warning");
+        }
+        &--blue {
+            @include u-bg("secondary-vivid");
+        }
+        &--light-blue {
+            @include u-bg("info");
+        }
+        &--brown {
+            @include u-bg("warning-darker");
+        }
+
+        // state variants
+        &--danger {
+            @include u-bg("error");
+        }
+        &--info {
+            @include u-bg("info");
+        }
+        &--info-lighter {
+            @include u-bg("info-lighter");
+        }
+        &--info-light {
+            @include u-bg("info-light");
+        }
+        &--info-dark {
+            @include u-bg("info-dark");
+        }
+        &--info-darker {
+            @include u-bg("info-darker");
+        }
+        &--error {
+            @include u-bg("error");
+        }
+        &--error-lighter {
+            @include u-bg("error-lighter");
+        }
+        &--error-light {
+            @include u-bg("error-light");
+        }
+        &--error-dark {
+            @include u-bg("error-dark");
+        }
+        &--error-darker {
+            @include u-bg("error-darker");
+        }
+        &--warning {
+            @include u-bg("warning");
+        }
+        &--warning-lighter {
+            @include u-bg("warning-lighter");
+        }
+        &--warning-light {
+            @include u-bg("warning-light");
+        }
+        &--warning-dark {
+            @include u-bg("warning-dark");
+        }
+        &--warning-darker {
+            @include u-bg("warning-darker");
+        }
+        &--success {
+            @include u-bg("success");
+        }
+        &--success-lighter {
+            @include u-bg("success-lighter");
+        }
+        &--success-light {
+            @include u-bg("success-light");
+        }
+        &--success-dark {
+            @include u-bg("success-dark");
+        }
+        &--success-darker {
+            @include u-bg("success-darker");
+        }
+        &--disabled {
+            @include u-bg("disabled");
+        }
+    }
+}
