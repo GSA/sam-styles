@@ -135,6 +135,7 @@
   margin-left: -1px;
   margin-right: -1px;
   margin-bottom: -1px;
+  @include u-display('block');
 }
 
 .sds-toolbar.sds-toolbar--expanded
@@ -283,7 +284,11 @@
 }
 
 .sds-accordion__panel-body {
-  padding: 8px 5px;
+  padding: 8px 5px 8px 0px;
+
+  .usa-form-group {
+    padding-left: 11px;
+  }
 }
 
 /* Accordion -- Basic */
