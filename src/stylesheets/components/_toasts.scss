@@ -27,10 +27,11 @@
  
 
     .sds-toast__content {
-        @include u-margin-x(3);
         min-width: 256px;
+        @include u-width('full');
         @include at-media('mobile-lg') {
             max-width: 456px;
+            @include u-width('auto');
         }
         @include u-display('inline-flex');
         @include u-flex('align-center');
