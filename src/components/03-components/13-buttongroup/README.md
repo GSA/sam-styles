@@ -1,3 +1,3 @@
 ## Button Group
 
-Button Group Notes
+Button group notes
