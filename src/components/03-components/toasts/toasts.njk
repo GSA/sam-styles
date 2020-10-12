@@ -1,8 +1,8 @@
 <h3>SDS Toasts</h3>
 
 {% for toast in toasts %}
-<div class="toast-{{toast.modifier}}">
-  <div class="sds-toast sds-toast">
+
+  <div class="sds-toast sds-toast--{{toast.modifier}}">
       <div class="sds-toast__content">
         <div class="sds-toast__content__icon">
           {% render '@icon', {
@@ -16,5 +16,5 @@
       </div>
     </div>
   </div>
-</div>
+
 {% endfor %}
