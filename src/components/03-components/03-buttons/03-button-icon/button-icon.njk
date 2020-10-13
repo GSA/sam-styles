@@ -1,30 +1,74 @@
 <h4>SDS Icon Button Examples</h4>
 
-<div class="bg-accent-cool-light grid-container padding-3 display-flex">
-  <button class="sds-button sds-button--icon">
-    {% render '@layered-icon', buttons[0].icons %}
-    <span class="sds-button--icon__title">Register Entity</span>
-  </button>
-
-  <button class="sds-button sds-button--icon">
-    {% render '@layered-icon', buttons[1].icons %}
-    <span class="sds-button--icon__title">Check Status</span>
-  </button>
-
-  <div class="sds-button--outline">
-    <button class="sds-button sds-button--icon text-center">
+<div class="bg-accent-cool-light padding-3 display-flex flex-wrap grid-row">
+  <div class="grid-col">
+    {# buttons with icons #}
+    <button class="sds-button sds-button--icon">
       {% render '@layered-icon', buttons[0].icons %}
-      <span class="sds-button--icon__title">Help Me Get Started</span>
+      <span class="sds-button--icon__title">Register Entity</span>
     </button>
   </div>
-
-  <button class="sds-button sds-button--icon-lg">
-    <div class="sds-button__header">
-      <h4>Public Building or Works</h4>
+  <div class="grid-col">
+    <button class="sds-button sds-button--icon">
       {% render '@layered-icon', buttons[1].icons %}
-    </div>
-    <p>Wage rates for laborers and mechanics</p>
-    <span>Davis-Bacon Act (DBA)</span>
-  </button>
+      <span class="sds-button--icon__title">Check Status</span>
+    </button>
+  </div>
+  <div class="grid-col">
 
+    <div class="sds-button--outline">
+      <button class="sds-button sds-button--icon text-center">
+        {% render '@layered-icon', buttons[0].icons %}
+        <span class="sds-button--icon__title">Help Me Get Started</span>
+      </button>
+    </div>
+  </div>
+  <div class="grid-col">
+    <button class="sds-button sds-button--icon-lg">
+      <div class="sds-button__header">
+        <h4>Public Building or Works</h4>
+        {% render '@layered-icon', buttons[1].icons %}
+      </div>
+      <p>Wage rates for laborers and mechanics</p>
+      <span>Davis-Bacon Act (DBA)</span>
+    </button>
+  </div>
+</div>
+
+<div class="grid-container width-tablet margin-auto">
+  <div class="grid-row grid-gap">
+    <div class="grid-col">
+      <button class="sds-button sds-button--icon-lg">
+        <div class="sds-button__header">
+          {% render '@layered-icon', buttons[2].icons %}
+        </div>
+        <div class="sds-button__body">
+          <span class="usa-tag">pdf</span>
+          <span>Limited to 5,000 records</span>
+        </div>
+      </button>
+    </div>
+    <div class="grid-col">
+      <button class="sds-button sds-button--icon-lg">
+        <div class="sds-button__header">
+          {% render '@layered-icon', buttons[3].icons %}
+        </div>
+        <div class="sds-button__body">
+          <span class="usa-tag">doc</span>
+          {# <span>Limited to 5,000 records</span> #}
+        </div>
+      </button>
+    </div>
+    <div class="grid-col">
+      <button class="sds-button sds-button--icon-lg">
+        <div class="sds-button__header">
+          {% render '@layered-icon', buttons[4].icons %}
+        </div>
+        <div class="sds-button__body">
+          <span class="usa-tag">csv</span>
+          <span>Limited to 1,000,000 records</span>
+        </div>
+      </button>
+    </div>
+  </div>
 </div>

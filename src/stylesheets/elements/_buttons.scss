@@ -445,13 +445,15 @@
   @include u-border('accent-cool-light');
   @include u-radius('lg');
   @include u-text('left');
-  @include u-margin(1);
+  @include u-margin-y(1);
 
   .sds-button__header {
     @include u-display('flex');
     @include u-flex('row');
-    @include u-flex('align-center');
     @include u-flex(1);
+    padding-bottom: 0.5rem;
+    flex-grow: 0;
+    margin: auto;
 
     h1, h2, h3, h4, h5, h6 {
       @include u-font('sans', 'md');
@@ -465,6 +467,7 @@
     svg, span {
       @include u-margin-top(0);
       @include u-margin-x(2);
+
     }
   }
   span {
@@ -472,9 +475,33 @@
     @include u-text('italic');
     @include u-margin-top(1);
     @include u-text('normal');
+    flex-wrap: wrap;
   }
 
   &:hover {
     @include u-border('primary');
+  }
+}
+
+.sds-button.sds-button--icon-lg{
+  height: 100%;
+  width: 100%;
+  @include u-text('center');
+  @include u-display('flex');
+  @include u-flex('column');
+  align-items: center;
+
+  .usa-tag {
+    @include u-text('white');
+    @include u-text('no-italic');
+    @include u-margin-x('auto');
+    @include u-padding-y('1');
+  }
+
+  .sds-button__body {
+    @include u-text('center');
+    @include u-display('flex');
+    @include u-flex('column');
+    flex-grow: 1;
   }
 }
