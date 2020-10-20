@@ -5,7 +5,7 @@
   @include u-margin('105');
 
   .sds-button-group__item > .usa-button {
-    @include u-margin-x(-1px);
+    @include u-margin-x('-1px');
   }
 
   .sds-button-group__item:not(:first-child):not(:last-child) > .usa-button {
