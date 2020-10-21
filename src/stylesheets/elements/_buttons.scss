@@ -448,8 +448,7 @@
 /*-------------------
   Icon Button LG
 --------------------*/
-.sds-button {
-  .sds-button--icon-lg {
+.sds-button.sds-button--icon-lg {
     @include u-padding(2);
     @include u-shadow(2);
     @include u-border(2px);
@@ -499,7 +498,7 @@
     &:hover {
       @include u-border('primary');
     }
-  }
+  
 }
 
 .sds-button.sds-button--icon-lg {
