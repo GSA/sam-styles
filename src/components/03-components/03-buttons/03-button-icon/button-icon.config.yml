@@ -21,3 +21,21 @@ context:
             classes: fa-stack-2x text-accent-cool-light fa-1x
           - icon: check-circle
             classes: fa-stack-1x text-base fa-2x
+    - icons:
+        type:
+        size: 1x
+        icons:
+          - icon: document-pdf
+            classes: text-base fa-2x
+    - icons:
+        type:
+        size: 1x
+        icons:
+          - icon: document-add
+            classes: text-base fa-2x
+    - icons:
+        type:
+        size: 1x
+        icons:
+          - icon: document-search
+            classes: text-base fa-2x
