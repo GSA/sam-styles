@@ -240,4 +240,30 @@
   }
 }
 
+//STICKY ALERT
+.sds-alert--sticky{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: -1px;
 
+  span{
+    font-weight: 600;
+    text-transform: uppercase;
+    @include u-margin-x(1);
+  }
+
+  p{
+    margin: 0;
+    max-width: unset;
+  }
+
+  &.info{
+    border: 2px solid #00bde3;
+    background-color: #e7f6f8;
+  }
+}

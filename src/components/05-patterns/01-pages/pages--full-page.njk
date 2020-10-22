@@ -1,5 +1,4 @@
 <div class="sds-page grid-container">
-
 	<main id="main-content" class="grid-row sds-page__section main-content">
 		<div class="desktop:grid-offset-1 desktop:grid-col-10">
 
@@ -68,3 +67,75 @@
 		</div>
 	</main>
 </div>
+<div class="sds-alert--sticky info">
+	{% render '@icon', {icon: 'alert-info', classes: 'fa-2x'} %}
+	<span>Warning:</span>
+	<p>This is a previous version of this exclusion record. Do not use it for decision-making purposes.  Select <b>Current Record</b> from the version field to return to the current record.</p>
+</div>
+<footer class="usa-footer usa-footer--big" role="contentinfo">
+  <div class="sds-feedback">
+    <h2 class="sr-only">Feedback</h2>
+    <button type="button" class="sds-feedback__button simple-toggle" [attr.aria-expanded]="!isCollapsedContent" aria-controls="collapseID" (click)="isCollapsedContent = !isCollapsedContent">
+      {% render '@icon', {icon: 'arrow-down', classes: 'sds-feedback__open'} %}
+      <span class="sds-feedback__title">Feedback</span>
+    </button>
+    <div id="collapseID" [sdscollapse]="isCollapsedContent" class="sds-feedback__response">
+      <div>
+        <span class="sds-feedback__response-title">One Question
+        </span>
+        <span class="sds-feedback__response-title-thin">
+          Survey</span>
+        <label for="feedback" class="sds-feedback__response-text">What changes or improvements would you suggest?</label>
+        <textarea id="feedback" class="sds-feedback__input" rows="8"></textarea>
+        <p class="text-right">
+          <button class="usa-button usa-button--secondary">Submit</button>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="usa-footer__primary-section">
+    <div class="grid-container margin-x-0 mobile-lg:margin-x-auto padding-x-0 mobile-lg:padding-x-auto">
+      <div class="grid-row grid-gap-0 mobile-lg:grid-gap">
+        <div class="tablet:grid-col-12">
+          <nav class="usa-footer__nav margin-x-0 mobile-lg:margin-x-2 padding-x-0 mobile-lg:padding-x-2">
+            <div class="grid-row grid-gap-0 mobile-lg:grid-gap-4">
+              {%- for nav in navigation -%}
+              <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                  <h4 class="usa-footer__primary-link">{{ nav.header }}</h4>
+                  <ul class="usa-list usa-list--unstyled">
+                    {%- for item in nav.links.items -%}
+                      <li class="usa-footer__secondary-link">
+                        <a href="{{item.link.href}}">{{item.link.text}}</a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </section>
+              </div>
+              {%- endfor -%}
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="grid-col-12 mobile-lg:grid-col-6 tablet:grid-col-4 margin-bottom-4">
+          <div class="sds-footer__logo">
+            <a class="sds-footer__logo-link" href="javascript:void(0);">
+              <img src="{{ logo | path }}" alt="{{ alttext }}"/>
+            </a>
+            <h3 class="sds-footer__logo-heading">
+              {{ agency }}
+            </h3>
+          </div>
+        </div>
+        <div class="sds-footer__note grid-col-12 mobile-lg:grid-col-6 tablet:grid-col-8">
+          {{ note }}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

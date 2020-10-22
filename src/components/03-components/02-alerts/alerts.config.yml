@@ -18,7 +18,6 @@ variants:
       icon:
         icon: exclamation
         classes: fa-2x
-
   - name: expanded
     label: Expanded
     context:
@@ -85,8 +84,11 @@ variants:
             prefix: fa
             classes:
             title: false
-
-
-
-
-   
+  - name: sticky
+    label: Sticky
+    context:
+      label:
+        classes: "sds-alert--sticky"
+      icon:
+        icon: alert-info
+        classes: fa-3x
