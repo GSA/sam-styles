@@ -240,4 +240,55 @@
   }
 }
 
+//SDS ALERT STICKY
+.sds-alert--sticky{
+  @include u-display('flex');
+  @include u-flex('row');
+  @include u-flex('align-center');
+  @include u-width('full');
+  @include u-padding(1);
+  @include u-margin-y(1);
+  @include u-position('sticky');
+  @include u-bottom(0);
 
+  span{
+    @include u-text('semibold');
+    @include u-text('uppercase');
+    @include u-margin-right(1);
+
+  }
+
+  p{
+    @include u-margin-top(0);
+    @include u-margin-left(1);
+    @include u-maxw('none');
+  }
+
+  &.info{
+    @include u-bg('info-lighter');
+    @include u-border(2px);
+    @include u-border('info');
+
+    svg {
+      @include u-text('info');
+    }
+  }
+  &.warning{
+    @include u-bg('warning-lighter');
+    @include u-border(2px);
+    @include u-border('warning');
+
+    svg {
+      @include u-text('warning');
+    }
+  }
+  &.error{
+    @include u-bg('error-lighter');
+    @include u-border(2px);
+    @include u-border('error');
+
+    svg {
+      @include u-text('error');
+    }
+  }
+}
