@@ -12,6 +12,12 @@ context:
     - text: Your information will be saved before leaving editor view
       modifier: success
       icon: check-circle
+    - text: Check items for accuracy
+      modifier: warning
+      icon: alert-warning
+    - text: Something went wrong
+      modifier: error
+      icon: alert-error
 
 variants:
   - name: toasts
