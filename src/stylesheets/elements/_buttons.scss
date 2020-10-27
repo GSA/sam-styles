@@ -514,7 +514,7 @@
     @include u-text('white');
     @include u-text('no-italic');
     @include u-margin-x('auto');
-    @include u-padding-y('1');
+    @include u-padding-y(1);
   }
 
   .sds-button__body {
