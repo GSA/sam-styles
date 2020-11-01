@@ -1,0 +1,173 @@
+<div class="grid-container">
+    <div class="grid-row">
+
+        <div class="sidenav-cards">
+
+            <div class="grid-row">
+                <div class="usa-card" id="modulecard">
+                    <div class="usa-card__container">
+                        <header class="usa-card__header display-inline-flex tablet:display-none">
+                            <span class="fa-layers fa-lg margin-right-4 display-none" id="moduleBack">
+                                <i class="fas fa-circle fa-inverse" data-fa-transform="grow-2"></i>
+                                <i class="fas fa-angle-left" data-fa-transform="shrink-6"></i>
+                            </span>
+                            <h2 class="usa-card__heading" id="moduletoggler">Select Module</h2>
+                        </header>
+
+                        <!--nrnrnrnr-->
+                        <div class="sds-accordion display-none tablet:display-block" id="accordion" data-allow-multiple="data-allow-multiple">
+                            <div class="sds-accordion__item sds-accordion__item--expanded">
+
+                                <button aria-expanded="true" class="sds-accordion__trigger" aria-controls="accordion-nav-content" id="accordion-nav-id">
+                                    <span class="sds-accordion__title" role="heading">
+                                        <span class="sds-accordion__title-text">
+                                            <div>Navigation</div>
+                                            <div>Selected Category</div>
+                                        </span>
+                                        <span class="sds-accordion__icon"></span>
+                                    </span>
+                                </button>
+
+                                <div id="accordion-nav-content" role="region" aria-labelledby="accordion-nav-id" class="sds-accordion__panel">
+                                    <div class="sds-accordion__panel-body">
+                                        <nav id="selectlist">
+                                            <ul class="usa-sidenav">
+                                                <li class="usa-sidenav__item">
+                                                    <a href="">Parent link</a>
+                                                </li>
+                                                <li class="usa-sidenav__item">
+                                                    <a href="" class="usa-current">Current page</a>
+                                                    <ul class="usa-sidenav__sublist">
+                                                        <li class="usa-sidenav__item">
+                                                            <a href="">Child link</a>
+                                                        </li>
+                                                        <li class="usa-sidenav__item">
+                                                            <a href="">Child link</a>
+                                                        </li>
+                                                        <li class="usa-sidenav__item">
+                                                            <a href="">Child link</a>
+                                                        </li>
+                                                        <li class="usa-sidenav__item">
+                                                            <a href="">Child link</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="usa-sidenav__item">
+                                                    <a href="">Parent link</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!--nrnrnrnr-->
+
+                    </div>
+                </div>
+                <div class="usa-card" id="filtercard">
+                    <div class="usa-card__container">
+                        <header class="usa-card__header display-inline-flex tablet:display-none" >
+                            <span class="fa-layers fa-lg margin-right-4 display-none" id="filterBack">
+                                <i class="fas fa-circle fa-inverse" data-fa-transform="grow-2"></i>
+                                <i class="fas fa-angle-left" data-fa-transform="shrink-6"></i>
+                            </span>
+                            <h2 class="usa-card__heading" id="filtertoggler">Filter By</h2>
+                        </header>
+
+                        <div class="sds-accordion display-none tablet:display-block"  id="filterAccordion" data-allow-multiple="data-allow-multiple">
+                            <div class="sds-accordion__item">
+
+                                <button aria-expanded="false" class="sds-accordion__trigger" aria-controls="accordion-filters-content" id="accordion-filters-id">
+                                    <span class="sds-accordion__title" role="heading">
+                                                     Filters
+                                            <span class="sds-accordion__icon"></span>
+                                    </span>
+                                </button>
+
+                                <div id="accordion-filters-content" role="region" aria-labelledby="accordion-filters-id" class="sds-accordion__panel" hidden="">
+                                    <div class="sds-accordion__panel-body">
+                                        <div class="sds-accordion sds-accordion--basic" data-allow-multiple="data-allow-multiple">
+                                            <div class="sds-accordion__item">
+
+                                                <button aria-expanded="false" class="sds-accordion__trigger" aria-controls="accordion-serv-class-content" id="accordion-serv-class-id">
+                                                    <span class="sds-accordion__title" role="heading">
+                                                                        Service Classifications
+                                                             <span class="sds-accordion__icon"></span>
+                                                    </span>
+                                                </button>
+
+                                                <div id="accordion-serv-class-content" role="region" aria-labelledby="accordion-serv-class-id" class="sds-accordion__panel" hidden="">
+                                                    <div class="sds-accordion__panel-body">
+                                                        <label class="usa-label" for="input-type-naics">NAICS</label>
+                                                        <input class="usa-input" id="input-type-naics" name="input-type-naics" type="text">
+                                                        <div class="selected-chips margin-top-05">
+                                                            <span class="sds-tag sds-tag--chip">
+                                                                    111140 -- Wheat Farming
+                                                                                <button class="sds-tag__close">
+                                                                    <svg class="svg-inline--fa fa-times fa-w-11" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" data-fa-i2svg="">
+                                                                        <path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
+                                                                    </svg>
+                                                                    <!-- <span class="fas fa-times" aria-hidden="true"></span> -->
+                                                                </button>
+                                                            </span>
+                                                            <span class="sds-tag sds-tag--chip">
+                                                                         212222 -- Silver Ore Mining
+                                                                            <button class="sds-tag__close">
+                                                                    <svg class="svg-inline--fa fa-times fa-w-11" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" data-fa-i2svg="">
+                                                                        <path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
+                                                                    </svg>
+                                                                    <!-- <span class="fas fa-times" aria-hidden="true"></span> -->
+                                                                </button>
+                                                            </span>
+                                                            <span class="sds-tag sds-tag--chip">
+                                                                            541850 -- Outdoor Advertising
+                                                                            <button class="sds-tag__close">
+                                                                    <svg class="svg-inline--fa fa-times fa-w-11" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" data-fa-i2svg="">
+                                                                        <path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
+                                                                    </svg>
+                                                                    <!-- <span class="fas fa-times" aria-hidden="true"></span> -->
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                        <label class="usa-label" for="input-type-psc">PSC</label>
+                                                        <input class="usa-input" id="input-type-psc" name="input-type-psc" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sds-accordion__item">
+
+                                                <button aria-expanded="false" class="sds-accordion__trigger" aria-controls="accordion-entity-content" id="accordion-entity-id">
+                                                    <span class="sds-accordion__title" role="heading">
+                                                          Entity Name/UEI
+                                                        <span class="sds-accordion__icon"></span>
+                                                    </span>
+                                                </button>
+
+                                                <div id="accordion-entity-content" role="region" aria-labelledby="accordion-entity-id" class="sds-accordion__panel" hidden="">
+                                                    <div class="sds-accordion__panel-body">
+                                                        <label class="usa-label" for="input-type-entity">Name</label>
+                                                        <input class="usa-input" id="input-type-entity" name="input-type-entity" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sds-page__content margin-top-4">
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet faucibus arcu id bibendum. Mauris eleifend massa purus, eu volutpat erat placerat egestas.
+            </p>
+        </div>
+    </div>
+
+</div>

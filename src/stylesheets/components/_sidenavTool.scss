@@ -1,0 +1,69 @@
+.sidenav-cards {
+    list-style: none;
+
+    @include grid-col(12);
+    width: 100%;
+    @include at-media('tablet') {  
+            @include grid-col(4);
+            
+    }
+}
+
+.sds-page__content{
+    @include grid-col(12);
+    @include at-media('tablet') {
+        @include grid-col(8);  
+    }
+}
+
+
+.usa-card{
+   
+    @include grid-col(6);
+    @include at-media('tablet') {  
+        @include grid-col(12);
+    }
+    .usa-card__header{
+     @include   u-flex('justify-center');
+    }
+
+    &.expanded{       
+            z-index: 9999; 
+            width: 100%; 
+            height: 100%; 
+            position: absolute; 
+            top: 0; 
+            left: 0;  
+            border: none;
+            @include at-media('tablet') {  
+                position: relative; 
+            }  
+            .usa-card__header{
+                @include   u-flex('justify-start');
+               }
+    }
+  
+}
+
+.usa-card__header{
+    background-color: #eff6fb;
+    font: 400 13.3333px Arial;
+    @include at-media('tablet') {  
+    }
+}
+
+
+.sds-toolbar{
+    @include grid-col(12);
+    @include at-media('tablet') {  
+        @include grid-col(4);
+    }
+    .sds-toolbar__content{
+        display: none;
+    }
+    &.sds-toolbar--expanded{
+        .sds-toolbar__content{
+            display: block;
+        }
+    }
+}
