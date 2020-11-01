@@ -1,6 +1,5 @@
 .sidenav-cards {
     list-style: none;
-
     @include grid-col(12);
     width: 100%;
     @include at-media('tablet') {  
@@ -18,13 +17,17 @@
 
 
 .usa-card{
-   
+    @include u-padding-y(0);
     @include grid-col(6);
     @include at-media('tablet') {  
         @include grid-col(12);
     }
+
     .usa-card__header{
      @include   u-flex('justify-center');
+     background-color: #eff6fb;
+     font: 400 13.3333px Arial;
+     cursor: pointer;
     }
 
     &.expanded{       
@@ -41,6 +44,7 @@
             }  
             .usa-card__container{
                 @include u-margin-x(0);
+                @include u-border(0);
             }
             .usa-card__header{
                 @include   u-flex('justify-start');
@@ -49,12 +53,7 @@
   
 }
 
-.usa-card__header{
-    background-color: #eff6fb;
-    font: 400 13.3333px Arial;
-    @include at-media('tablet') {  
-    }
-}
+
 
 
 .sds-toolbar{

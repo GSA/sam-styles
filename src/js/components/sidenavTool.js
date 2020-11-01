@@ -17,26 +17,25 @@ const filterBackButton=document.querySelector("#filterBack");
 
 //methods for toggling expanded view
 filterToggler.addEventListener("click", event => {
-  filterAccordion.classList.remove("display-none");
-  filterCard.classList.add("expanded");
-  filterBackButton.classList.remove("display-none");
-});
-
-moduleToggler.addEventListener("click", event => {
-    accordion.classList.remove("display-none");
-    modudeCard.classList.add("expanded");
-    moduleBackButton.classList.remove("display-none");
-});
-
-//Methods for clicking back buttons
-moduleBackButton.addEventListener("click", event => {
-    accordion.classList.add("display-none");
-    modudeCard.classList.remove("expanded");
-    moduleBackButton.classList.add("display-none");
-});
-
-filterBackButton.addEventListener("click", event => {
+  if( filterCard.classList.contains("expanded"))  {
     filterAccordion.classList.add("display-none");
     filterCard.classList.remove("expanded");
     filterBackButton.classList.add("display-none");
+    } else{
+    filterAccordion.classList.remove("display-none");
+    filterCard.classList.add("expanded");
+    filterBackButton.classList.remove("display-none");
+}
+});
+
+moduleToggler.addEventListener("click", event => {
+    if(modudeCard.classList.contains("expanded")){
+        accordion.classList.add("display-none");
+        modudeCard.classList.remove("expanded");
+        moduleBackButton.classList.add("display-none");
+    } else{
+        accordion.classList.remove("display-none");
+        modudeCard.classList.add("expanded");
+        moduleBackButton.classList.remove("display-none");
+    }
 });
