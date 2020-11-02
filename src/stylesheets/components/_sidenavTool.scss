@@ -1,72 +1,26 @@
 .sidenav-cards {
-    list-style: none;
     @include grid-col(12);
-    width: 100%;
     @include at-media('tablet') {  
-            @include grid-col(4);
-            
+            @include grid-col(4);         
     }
 }
 
 .sds-page__content{
+
     @include grid-col(12);
+    @include u-padding-x(4);
+    @include u-padding-top(6);
     @include at-media('tablet') {
         @include grid-col(8);  
+        @include u-padding-top(0);
+       
     }
 }
 
-
-.usa-card{
-    @include u-padding-y(0);
-    @include grid-col(6);
-    @include at-media('tablet') {  
-        @include grid-col(12);
-    }
-
-    .usa-card__header{
-     @include   u-flex('justify-center');
-     background-color: #eff6fb;
-     font: 400 13.3333px Arial;
-     cursor: pointer;
-    }
-
-    &.expanded{       
-            z-index: 9999; 
-            width: 100%; 
-            height: 100%; 
-            position: absolute; 
-            top: 0; 
-            left: 0;  
-            border: none;
-            background: white;
-            @include at-media('tablet') {  
-                position: relative; 
-            }  
-            .usa-card__container{
-                @include u-margin-x(0);
-                @include u-border(0);
-            }
-            .usa-card__header{
-                @include   u-flex('justify-start');
-            }
-    }
-  
-}
-
-
-
-
-.sds-toolbar{
+.sds-accordion{
     @include grid-col(12);
-    @include at-media('tablet') {  
-        @include grid-col(4);
-    }
-    .sds-toolbar__content{
-        display: none;
-    }
-    &.sds-toolbar--expanded{
-        .sds-toolbar__content{
-            display: block;
-        }
-    }
+}
+.sidenav-cards{
+    @include u-border('base-lighter');
+    @include u-padding(1);
 }
