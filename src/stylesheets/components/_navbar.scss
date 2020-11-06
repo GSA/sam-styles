@@ -9,9 +9,18 @@
   @include grid-container($theme-header-max-width);
 }
 .sds-navbar__title{
-  
   @include u-font('heading','md') ;
   @include u-text('semibold') ;
- 
+}
 
+.sds-navbar-blank {
+  min-height: 3rem;
+}
+
+.sds-nav__secondary-blank {
+  bottom: 3rem;
+}
+
+.usa-navbar {
+  justify-content: flex-end;
 }
