@@ -27,7 +27,7 @@ $theme-font-sans: 'source-sans-pro';
     }
   }
 
-  &--sidenav {
+  &--styled {
   @include u-border(0);
   a { 
     @include u-font-family('sans');
