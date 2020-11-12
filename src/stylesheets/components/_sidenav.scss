@@ -16,6 +16,7 @@ $theme-font-sans: 'source-sans-pro';
   }
 
   .usa-current {
+    
     @include add-bar($theme-sidenav-current-border-width, "secondary-darker", "left", 0, 0, 0);
     color: color("secondary-darker");
     font-weight: font-weight("semibold");
@@ -29,6 +30,7 @@ $theme-font-sans: 'source-sans-pro';
 
   &--styled {
   @include u-border(0);
+    @include u-bg('white');
   a { 
     @include u-font-family('sans');
       @include u-font-size('body', 'xs');
@@ -41,11 +43,7 @@ $theme-font-sans: 'source-sans-pro';
      @include u-border-top(0);
       @include u-border-x('1px');
       @include u-border-bottom('1px');
-      @include u-border('base-lighter');
-
-     
-     
-
+      @include u-border('base-light');
       &:first-of-type {
         @include u-border-top('1px');
       }
