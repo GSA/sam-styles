@@ -215,7 +215,7 @@ $theme-font-sans: 'source-sans-pro';
       .sds-card__subtitle {
         @include u-margin-y(0);
         @include u-display('inline-block');
-        @include u-text('secondary-light');
+        @include u-text('secondary-dark');
         @include u-text('bold');
       }
     }
