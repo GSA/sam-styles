@@ -1,0 +1,30 @@
+<div class="margin-top-2 sds-card {% for modifier in modifiers %} sds-card--collapsed  sds-card--{{modifier}}{% endfor %}" >
+	{%- if header %}
+		<div class="sds-card__header sds-card__header--action" aria-expanded="false">
+			    <div class="sds-card__title">{{title}}<br/><span class="sds-card__subtitle">{{subtitle}}</span></div>
+				
+                <div class="sds-card__action sds-card__collapse"></div>
+		</div>
+	{% endif -%}
+
+	<div class="sds-card__body">
+		{% for content in body.content %}
+			<p>{{content.text}}</p>
+		{% endfor %}
+	</div>
+</div>
+
+<div class="margin-top-2 sds-card {% for modifier in modifiers %} sds-card--{{modifier}}{% endfor %}" >
+	{%- if header %}
+		<div class="sds-card__header sds-card__header--action" aria-expanded="true">
+			    <div class="sds-card__title">{{title}}<br/><span class="sds-card__subtitle">{{subtitle}}</span></div>
+                <div class="sds-card__action sds-card__collapse"></div>
+		</div>
+	{% endif -%}
+
+	<div class="sds-card__body sds-card__body sds-card__body--accent-cool">
+		{% for content in body.content %}
+			<p>{{content.text}}</p>
+		{% endfor %}
+	</div>
+</div>
