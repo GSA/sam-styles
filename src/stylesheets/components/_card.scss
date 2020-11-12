@@ -103,11 +103,7 @@ $theme-font-sans: 'source-sans-pro';
         @include u-margin-right(0);
       }
     }
-
-
-
-
-
+    
     .sds-card__collapse {
       transition: transform 0.2s ease-in;
       width: 33px;
@@ -116,8 +112,6 @@ $theme-font-sans: 'source-sans-pro';
       right: 10px;
       border-radius: 50%;
       background-color: #e2e2e2;
-
-
     }
 
     .sds-card__collapse::before {
@@ -129,7 +123,7 @@ $theme-font-sans: 'source-sans-pro';
       position: absolute;
       left: 9px;
       bottom: 16px;
-      transform: rotate(90deg);
+      transform: rotate(180deg);
       transition: width 0.2s ease-in;
     }
 
@@ -195,7 +189,7 @@ $theme-font-sans: 'source-sans-pro';
 
 
     .sds-card__collapse::before {
-      transform: rotate(180deg);
+      transform: rotate(90deg);
     }
   }
 
