@@ -29,9 +29,9 @@
   max-height: 65vh;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  .text-base{
+  .sds-dialog-content--centered{
     p {
-      max-width: none;
+      margin: auto;
     }
   }
 }
