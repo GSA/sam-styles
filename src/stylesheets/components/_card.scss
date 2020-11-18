@@ -210,6 +210,9 @@ $theme-font-sans: 'source-sans-pro';
       @include u-font-size('body', 'xs');
       @include u-text('semibold');
     }
+    .sds-accordion__title{
+      @include u-padding-left(0);
+    }
 
     .sds-card__title {
       .sds-card__subtitle {
