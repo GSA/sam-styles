@@ -32,6 +32,7 @@ $theme-font-sans: 'source-sans-pro';
   @include u-border(0);
     @include u-bg('white');
   a { 
+    color: color("ink");
     @include u-font-family('sans');
       @include u-font-size('body', 'xs');
       @include u-text('semibold');
