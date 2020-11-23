@@ -122,3 +122,10 @@
     color: #5994f6;
   }
 }
+
+.sds-dialog--full {
+  .sds-dialog__container {
+    @extend .sds-dialog__container;
+    padding: 0;
+  }
+}
