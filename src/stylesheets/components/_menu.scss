@@ -10,6 +10,15 @@
   padding: 0 10px 5px 20px;
   margin-bottom: 3px;
   border-bottom: 1px solid #eae6e6;
+  button{
+    border: 2px solid color('base-light');
+    &:hover{
+      border-color: color('primary');
+    }
+    &:active{
+      border-color: color('secondary-dark');;
+    }
+  }
 }
 
 .sds-menu__header-title {
