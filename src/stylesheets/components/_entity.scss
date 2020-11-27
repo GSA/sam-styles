@@ -1,4 +1,6 @@
 .sds-section {
+    @include u-margin-top(3);
+
     &>div:first-child {
         @include u-border-bottom('2px');
         @include u-border-bottom('base');

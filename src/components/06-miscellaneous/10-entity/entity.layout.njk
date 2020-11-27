@@ -3,27 +3,31 @@
     <div class="grid-row">
         <div class="tablet:grid-col-3">Sidebar goes here</div>
         <div class="tablet:grid-col-9">
-            <div class="sds-section">
-                <div class="grid-row">
-                    <div class="sds-section__box"></div>
-                    <div class="sds-section__header">
-                        {{ section.title }}
-                    </div>
-                </div>
-                {%- for entity in section.entities -%}
-                    <div class="sds-entity">
-                        <div class="sds-entity__header">
-                        {{entity.header}}
-                    </div>
-                        <div class="grid row">
-                            <div class="sds-entity__element">
-                                <div class="sds-entity__element__header">Entity Structure</div>
-                                <div class="sds-entity__element__text">U.S. Government Entity</div>
-                            </div>
+            {%- for section in sections -%}
+                <div class="sds-section">
+                    <div class="grid-row">
+                        <div class="sds-section__box"></div>
+                        <div class="sds-section__header">
+                            {{ section.title }}
                         </div>
                     </div>
-                {%- endfor -%}
-            </div>
+                    {%- for entity in section.entities -%}
+                        <div class="sds-entity">
+                            <div class="sds-entity__header">
+                                {{entity.header}}
+                            </div>
+                            <div class="grid-row">
+                                {%- for item in entity.entityItems -%}
+                                    <div class="sds-entity__element tablet:grid-col-{{item.colSize}}">
+                                        <div class="sds-entity__element__header">{{item.heading}}</div>
+                                        <div class="sds-entity__element__text">{{item.text}}</div>
+                                    </div>
+                                {%- endfor -%}
+                            </div>
+                        </div>
+                    {%- endfor -%}
+                </div>
+            {%- endfor -%}
         </div>
     </div>
 </div>

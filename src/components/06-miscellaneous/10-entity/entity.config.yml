@@ -1,8 +1,33 @@
 label: Entity Layout
 status: wip
 context:
-  section:
-    title: BUSINESS INFORMATION
-    entities:
-      - entity: 
-        header: Business Types
+  sections:
+    - section:
+      title: ENTITY TYPES
+      entities:
+        - entity: 
+          header: Business Types
+          entityItems:
+            - item:
+              heading: Entity Structure
+              text: U.S. Government Entity
+              colSize: 4
+            - item:
+              heading: Entity Type
+              text: U.S. Federal Government
+              colSize: 4  
+            - item:
+              heading: Organization Factors
+              text: (blank)
+              colSize: 4
+            - item:
+              heading: Profit Strucutre
+              text: (blank)
+              colSize: 4  
+    - section:
+      title: POINTS OF CONTACT
+      entities: 
+        - entity:
+          header: Electronic Business
+       
+                
