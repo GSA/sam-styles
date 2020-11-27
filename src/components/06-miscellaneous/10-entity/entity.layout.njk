@@ -1,0 +1,29 @@
+<!--This is to figure out what we have and waht we don't move code around as you wish-->
+<div class="grid-container">
+    <div class="grid-row">
+        <div class="tablet:grid-col-3">Sidebar goes here</div>
+        <div class="tablet:grid-col-9">
+            <div class="sds-section">
+                <div class="grid-row">
+                    <div class="sds-section__box"></div>
+                    <div class="sds-section__header">
+                        {{ section.title }}
+                    </div>
+                </div>
+                {%- for entity in section.entities -%}
+                    <div class="sds-entity">
+                        <div class="sds-entity__header">
+                        {{entity.header}}
+                    </div>
+                        <div class="grid row">
+                            <div class="sds-entity__element">
+                                <div class="sds-entity__element__header">Entity Structure</div>
+                                <div class="sds-entity__element__text">U.S. Government Entity</div>
+                            </div>
+                        </div>
+                    </div>
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+label: Entity Layout
+status: wip
+context:
+  section:
+    title: BUSINESS INFORMATION
+    entities:
+      - entity: 
+        header: Business Types

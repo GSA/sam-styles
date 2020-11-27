@@ -1,0 +1,46 @@
+.sds-section {
+    &>div:first-child {
+        @include u-border-bottom('2px');
+        @include u-border-bottom('base');
+        @include u-padding-bottom(0.5);
+    }
+
+    &__header {
+        @include u-font('body', 'md');
+        @include u-text('base');
+        @include u-text('semibold');
+    }
+
+    &__box {
+        float: left;
+        height: 10px;
+        width: 10px;
+        @include u-margin-top(0.5);
+        @include u-bg('secondary-lighter');
+        @include u-margin-right(1);
+    }
+}
+
+.sds-entity {
+
+    @include u-margin-top(2);
+
+  
+    &__header {
+        @include grid-row;
+        @include u-text('bold');
+        @include u-border-bottom('1px');
+        @include u-border-bottom('base-light');
+        @include u-padding-bottom(0.5);
+    }
+    &__element{
+        @include u-margin-top(2);
+        @include u-font-size('body', '2xs');
+        &__text{
+           
+            @include u-text('bold');
+        }
+    }
+
+
+}
