@@ -4,7 +4,6 @@
 $sds-card-border-width: 1px;
 $sds-card-border-radius: border-radius('md');
 $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width});
-$theme-font-sans: 'source-sans-pro';
 
 .sds-card {
   @include u-padding(0);
