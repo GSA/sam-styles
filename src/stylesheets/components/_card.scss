@@ -48,7 +48,6 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
       .sds-card__title {
         @include grid-col(12);
         @include u-text('center');
-
         @include at-media('tablet-lg') {
           @include grid-col('auto');
           @include u-text('left');
@@ -58,7 +57,6 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
 
       .sds-card__buttons {
         @include grid-col(12);
-
         @include at-media('tablet-lg') {
           @include grid-col;
           // IE
@@ -70,7 +68,6 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
 
       .usa-button {
         @include u-margin-top(1);
-
         @include at-media('tablet-lg') {
           margin-top: 0;
         }
@@ -185,7 +182,6 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     .sds-card__body {
       display: none;
     }
-
 
     .sds-card__collapse::before {
       transform: rotate(90deg);
