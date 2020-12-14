@@ -13,6 +13,19 @@
   &--unstyled {
     @include unstyled-list;
   }
+  &--subdomain {
+    @include unstyled-list;
+    @include u-font('sans', 'sm');
+    @include u-text('semibold');
+    li{
+      @include u-margin-y(2);
+    }
+    .usa-link{
+      &--active{
+        @include u-text('ink');
+      }
+    }
+  }
 
   &--no-bullets {
     padding-left: 0;

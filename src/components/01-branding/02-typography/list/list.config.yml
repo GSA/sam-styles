@@ -70,6 +70,21 @@ variants:
         - link:
             text: List Item
             href: " "
+  - name: subdomain
+    label: Subdomain List
+    context:
+      modifiers:
+          - subdomain
+      items:
+        - link:
+            text: List Item
+            href: " "
+        - link:
+            text: List Item
+            href: " "
+        - link:
+            text: List Item
+            href: " "          
   - name: menu icon
     label: Menu List with Icons
     context:

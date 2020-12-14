@@ -16,6 +16,10 @@
     text-decoration: none;
     color: #76766a;
   }
+  .sds-toolbar .usa-sidenav--styled a { 
+    color: color("ink");
+  }
+
 
   .sds-toolbar .usa-sidenav .usa-sidenav__sublist .usa-current::after {
     background-color: transparent;
