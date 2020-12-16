@@ -1,0 +1,13 @@
+sds-icon.action-icon > * > * {
+  @include u-bg('primary');
+  @include u-text('white');
+  @include u-border(0);
+  border-radius: 50%;
+}
+
+sds-icon.external-link > * > * {
+  font-size: inherit;
+  @include u-margin-left(1);
+  @include u-text('top');
+  @include u-display('inline');
+}

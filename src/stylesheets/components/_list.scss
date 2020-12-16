@@ -51,6 +51,7 @@
     }
     svg {
       @include u-margin-right(1);
+      @include u-display('block');
       font-size: 1.25rem;
     }
   }
