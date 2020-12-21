@@ -79,10 +79,6 @@ const icons = [
   "comment",
   "mobile",
   "tablet",
-  "document",
-  "document-add",
-  "document-search",
-  "document-pdf",
   "add",
   "exit",
   "angle-circle",
@@ -124,9 +120,10 @@ function getIconVariants() {
   return variants;
 }
 function getCollator(markup, item) {
-    const html =  '<!-- Start: @' + item.handle + ' -->' +
+    const html ='<!-- Start: @' + item.handle + ' -->' +
     '<div class="display-inline-block padding-2 text-center">' +
-      '<span class="display-block">' + item.name + '</span>' + markup +
+    '<p><i>To Be Deprecated</i></p>' +
+    '<span class="display-block">' + item.name + '</span>' + markup +
     '</div>' +
     '<!-- End: @' + item.handle + ' -->';
     return html;
