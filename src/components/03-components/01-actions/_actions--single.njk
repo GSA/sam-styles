@@ -8,11 +8,11 @@
         {% if size == 'small' %}
         <button class="usa-button sds-button--white text-secondary-dark padding-1 margin-y-2 {{scale}}">
         Actions
-        {% render '@layered-icon', layeredIcon , true %}
+        {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw', dataTransform: 'shrink-1' }, true %}
         {% else %}
         <button class="usa-button sds-button--white text-secondary-dark padding-1 margin-y-2">
         Actions
-        {% render '@layered-icon', layeredIcon2 , true %}
+        {% render '@icon', {icon: 'ellipsis', classes: 'fa-fw', dataTransform: 'shrink-1' }, true %}
         {% endif %}
   </button>
 {% else %}
@@ -24,4 +24,3 @@
         {% endif %}
   </button>
 {% endif %}
-

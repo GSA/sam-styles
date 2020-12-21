@@ -1,5 +1,6 @@
 <button class="usa-nav__close">
-  {% render '@layered-icon', close %}
+  {# {% render '@layered-icon', close %} #}
+  {% render '@icon', {icon: 'exit', classes: 'fa-fw', dataTransform: 'shrink-1' }, true %}
   <span class="usa-sr-only">Close</span>
 </button>
 <ul class="usa-nav__primary usa-accordion">
