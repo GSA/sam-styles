@@ -96,3 +96,9 @@
 .usa-checkbox.text-align-end{
   text-align: end;
 }
+
+@-moz-document url-prefix() {
+  .usa-checkbox{
+    position: relative;
+  }
+}
