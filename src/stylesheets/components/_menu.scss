@@ -4,8 +4,8 @@
 }
 
 .sds-menu__header {
-  display: flex;
-  align-items: center;
+  @include u-display('flex');
+  @include u-flex('align-center');
   justify-content: space-between;
   padding: 0 10px 5px 20px;
   margin-bottom: 3px;
@@ -69,6 +69,7 @@
 
     .svg-inline--fa {
       align-self: center;
+      height: 1.5em;
     }
 
     &.sds-button--small {
@@ -119,8 +120,8 @@
       width: 125px;
       @include u-radius('lg');
       svg {
-        color: white;
-        background-color: #1A4480;
+        @include u-text('white');
+        @include u-bg('secondary-dark');
         border-radius: 50%;
         padding: .25rem;
         margin-left: 8px;
