@@ -75,7 +75,7 @@ const icons = [
   "article",
   "note",
   "request",
-  "messages",
+  "notifications",
   "comment",
   "mobile",
   "tablet",
