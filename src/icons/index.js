@@ -21,7 +21,7 @@ import { sdsShare } from "./sdsShare";
 import { sdsTrash } from "./sdsTrash";
 import { sdsWorkspace } from "./sdsWorkspace";
 import { sdsRequest } from "./sdsRequest";
-import { sdsNotifications } from "./sdsNotifications";
+import { sdsMessages } from "./sdsMessages";
 import { sdsLogOut } from "./sdsLogOut";
 import { sdsLogIn } from "./sdsLogIn";
 import { sdsExclamation } from "./sdsExclamation";
@@ -112,7 +112,7 @@ const _iconsCache = {
   sdsUserCircle: sdsUserCircle,
   sdsWorkspace: sdsWorkspace,
   sdsRequest: sdsRequest,
-  sdsNotifications: sdsNotifications,
+  sdsMessages: sdsMessages,
   sdsLogOut: sdsLogOut,
   sdsLogIn: sdsLogIn,
   sdsExclamation: sdsExclamation,
@@ -205,7 +205,7 @@ export {
   sdsUserCircle,
   sdsWorkspace,
   sdsRequest,
-  sdsNotifications,
+  sdsMessages,
   sdsLogOut,
   sdsLogIn,
   sdsExclamation,

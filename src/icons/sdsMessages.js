@@ -1,7 +1,7 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 var prefix = 'sds';
-var iconName = 'notifications';
+var iconName = 'messages';
 var width = 512;
 var height = 512;
 var ligatures = [];
@@ -19,7 +19,7 @@ exports.definition = {
     svgPathData
   ]};
 
-exports.sdsNotifications = exports.definition;
+exports.sdsMessages = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;

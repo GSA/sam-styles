@@ -63,7 +63,7 @@ variants:
                 classes: 'fa-flip-horizontal'
             - text: Notifications
               icon:
-                icon: notifications
+                icon: messages
             - text: Workspace
               icon:
                 icon: workspace
