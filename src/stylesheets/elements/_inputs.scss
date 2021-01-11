@@ -92,3 +92,13 @@
     background-position: center center;
     background-size: .75rem auto;
 }
+
+.usa-checkbox.text-align-end{
+  text-align: end;
+}
+
+@-moz-document url-prefix() {
+  .usa-checkbox, .usa-fieldset{
+    position: relative;
+  }
+}
