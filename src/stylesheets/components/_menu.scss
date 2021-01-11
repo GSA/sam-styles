@@ -4,8 +4,8 @@
 }
 
 .sds-menu__header {
-  display: flex;
-  align-items: center;
+  @include u-display('flex');
+  @include u-flex('align-center');
   justify-content: space-between;
   padding: 0 10px 5px 20px;
   margin-bottom: 3px;
@@ -54,4 +54,78 @@
   .sds-menu__item {
     @include u-font('sans', '2xs');
   }
+}
+
+// sds action menu
+.sds-button--action {
+    border-radius: 50%;
+    height: units(4);
+    width: units(4);
+    @include u-display("inline-flex");
+    @include u-flex("align-center");
+    @include u-flex("justify-center");
+    margin: unset;
+    padding: 0;
+
+    .svg-inline--fa {
+      align-self: center;
+      height: 1.5em;
+    }
+
+    &.sds-button--small {
+      height: units(3);
+      width: units(3);
+      padding: 0;
+      font-size: size("body", 1);
+    }
+
+    &.sds-button--big,
+    &.usa-button--big {
+      height: units(5);
+      width: units(5);
+      font-size: size("body", 6);
+    }
+    background-color: color("white");
+    @include u-border("white");
+    transition: box-shadow 0.2s ease-out;
+
+    &.usa-button--hover,
+    &:hover {
+      background-color: color("white");
+      @include u-border("white");
+      @include u-shadow(2);
+    }
+
+    &:active {
+      @include u-border("secondary-dark");
+      box-shadow: $button-shadow;
+      color: #1A4480;
+    }
+
+    &.usa-button--hover,
+    &:hover {
+      box-shadow: $button-shadow;
+    }
+    span{
+      display: none;
+    }
+
+    @include at-media('tablet-lg') {
+      span {
+        display: inline;
+        color: #1A4480;
+      }
+
+      height: 40px;
+      width: 125px;
+      @include u-radius('lg');
+      svg {
+        @include u-text('white');
+        @include u-bg('secondary-dark');
+        border-radius: 50%;
+        padding: .25rem;
+        margin-left: 8px;
+        height: 1.25em;
+      }
+    }
 }
