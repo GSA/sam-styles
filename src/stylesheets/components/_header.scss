@@ -55,7 +55,37 @@
 .sds-header__logo {
   @include u-height(4);
   @include at-media($theme-header-min-width) {
-    @include u-height(5);
+  @include u-height(5);
   }
 }
 
+/*-------------------
+  sds-subheader
+--------------------*/
+.sds-subheader {
+  @include u-display('block');
+  @include u-bg('base-lighter');
+  @include u-height(8);
+  @include u-margin-top(-2);
+  @include u-padding-y('2');
+  @include u-padding-x('2');
+  justify-content: center;
+
+  h1, h2, h3, h4, h5, h6 {
+    @include u-font('sans', 'md');
+    @include u-text('normal');
+    @include u-margin-top('0');
+    @include u-margin-x(4);
+  }
+
+  @include at-media($theme-header-min-width) {
+    div {
+      max-width: 87.5rem;
+      margin: auto;
+      display: flex;
+      align-items: center;
+
+      @include u-padding-x('4');
+    }
+  }
+}
