@@ -12,7 +12,7 @@
     @include u-display('flex');
     @include u-flex('align-end');
     @include u-flex('justify-center');
-    @include u-flex('column');
+   @include u-flex('column');
   }
 
   &.sds-results-child {
@@ -64,6 +64,20 @@
 .sds-result-item__title {
   @include u-margin-bottom(1);
   @include u-flex('align-center');
+
+  .sds-result-item__header{
+    @include u-display('flex');
+    @include u-flex('row');
+    @include u-padding-bottom(1);
+    @include u-border-bottom('05');
+    @include u-border-x(0);
+    @include u-border-top(0);
+    @include u-border('base-lighter');
+    @include at-media('tablet') {
+      @include u-border(0);
+    }
+  }
+
   .sds-result-item__square {
     @include u-height(2);
     @include u-width(2);
