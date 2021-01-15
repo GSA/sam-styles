@@ -99,7 +99,7 @@
   <div class="grid-container margin-top-3 desktop:margin-top-5 margin-bottom-9">
     <div class="grid-row grid-gap-4">
       {# aside #}
-      <div class="sds-page__section desktop:grid-col-3">
+      <div class="sds-page__section desktop:grid-col-3 display-none desktop:display-block">
         <div class="sds-sidepanel">
           <div class="sds-card mobile-only ">
             <div class="sds-card__header grid-row  sds-card__header--accent-cool">
@@ -117,35 +117,36 @@
               </div>
             </div>
           </div>
-          <div class="sds-card sds-card--collapsible">
-            <div class="sds-card__header sds-card__header--action" aria-expanded="false">
-              <div class="sds-card__title">Select Domain<br/>
-                <span class="sds-card__subtitle">Contract Opportunities</span></div>
-              <div class="sds-card__action sds-card__collapse"></div>
-            </div>
+          <div class="sds-card">
             <div class="sds-card__body sds-card__body--accent-cool">
               <nav>
                 <ul class="usa-sidenav usa-sidenav--styled">
-                  <li class="usa-sidenav__item">
-                    <a href="">All Domains</a>
-                  </li>
                   <li class="usa-sidenav__item usa-current">
-                    <a href="">Contract Opportunities</a>
+                    <a href="">Entity Registration</a>
                   </li>
                   <li class="usa-sidenav__item">
-                    <a href="">Contract Data</a>
+                    <a href="">Business Information</a>
                   </li>
                   <li class="usa-sidenav__item">
-                    <a href="">Federal Assistance</a>
+                    <a href="">Entity Types</a>
                   </li>
                   <li class="usa-sidenav__item">
-                    <a href="">Entity Information</a>
+                    <a href="">Financial Information</a>
                   </li>
                   <li class="usa-sidenav__item">
-                    <a href="">Federal Hierarchy</a>
+                    <a href="">Points od Contact</a>
                   </li>
                   <li class="usa-sidenav__item">
-                    <a href="">Wage Determinations</a>
+                    <a href="">Assertions</a>
+                  </li>
+                  <li class="usa-sidenav__item">
+                    <a href="">Reps and Certs</a>
+                  </li>
+                  <li class="usa-sidenav__item">
+                    <a href="">Exclusions</a>
+                  </li>
+                  <li class="usa-sidenav__item">
+                    <a href="">Integrity Information</a>
                   </li>
                 </ul>
               </nav>
@@ -156,37 +157,391 @@
       {# results list #}
       <div id="main-content" class="sds-page__section  desktop:grid-col-fill">
         {# page header #}
-        <div class="sds-result-item__header grid-row">
+        <div class="sds-result-item__title grid-row">
           {# LOGO PLACEHOLDER #}
-          <div class="tablet:grid-col-auto margin-3 circle-15 padding-top-5 bg-secondary-dark text-center"><span class="text-white">LOGO PLACEHOLDER</span></div>
-          <div class="tablet:grid-col-fill">
-          <h1 class="margin-top-3">Justice, Department of (DOJ)</h1>
-          <div class="grid-row flex-justify-end">
-            <div class="tablet:grid-col-fill">
-              <span class="usa-tag sds-tag--info-purple">DUNS</span>
-              <span>Unique Entity ID</span>
-              <h2>123456789</h2>
+          <div class="grid-col-auto display-flex flex-row">
+            <div class="margin-3 circle-15 padding-top-5 bg-secondary-dark text-center">
+              <span class="text-white">LOGO PLACEHOLDER</span>
             </div>
-            <div class="tablet:grid-col-fill">
-              <span>CAGE/NCAGE</span>
-              <h2>N123F</h2>
-            </div>
-            <div class="tablet:grid-col-auto">
-              <span class="sds-type--label-title">Expiration Date</span>
-              <span class="sds-tag sds-tag--outline flex-justify-center"> Jan 19, 2021</span>
-            </div>
-            <div class="tablet:grid-col-auto">
-              <span class="sds-type--label-title">Status</span>
-              <span class="sds-tag sds-tag--outline">
-                <i class="sds-status sds-status--sm sds-status--lightblue"></i>Active</span>
-            </div>
+            <h1 class="margin-top-3 tablet:display-none display-block">Justice, Department of (DOJ)</h1>
           </div>
+          <div class="grid-col-fill">
+            <h1 class="margin-top-3 display-none tablet:display-block">Justice, Department of (DOJ)</h1>
+            <div class="grid-row grid-gap flex-justify-end">
+              <div class="tablet:grid-col-fill grid-col">
+                <span class="usa-tag sds-tag--info-purple">DUNS</span>
+                <span>Unique Entity ID</span>
+                <h2>123456789</h2>
+              </div>
+              <div class="tablet:grid-col-fill grid-col">
+                <span>CAGE/NCAGE</span>
+                <h2>N123F</h2>
+              </div>
+              <div class="tablet:grid-col-auto grid-col">
+                <span class="sds-type--label-title">Expiration Date</span>
+                <span class="sds-tag sds-tag--outline flex-justify-center">
+                  Jan 19, 2021</span>
+              </div>
+              <div class="tablet:grid-col-auto grid-col">
+                <span class="sds-type--label-title">Status</span>
+                <span class="sds-tag sds-tag--outline">
+                  <i class="sds-status sds-status--sm sds-status--lightblue"></i>Active</span>
+              </div>
+            </div>
           </div>
         </div>
         {# page content #}
-        <div class="sds-result-item"></div>
+        <div class="sds-result-item">
+          <div class="grid-row">
+            <div class="tablet:grid-col-fill grid-row">
+              <div class="sds-tile--outline">
+                <div class="grid-row">
+                  <div class="grid-col">
+                    <span class="sds-field--large">Physical Address</span>
+                    <ul class="sds-list sds-list--unstyled">
+                      <li>10 Federal ST STE 12</li>
+                      <li>SALEM, MASSACHUSETTS</li>
+                      <li>01970-3875, United States</li>
+                    </ul>
+                  </div>
+                  <div class="grid-col">
+                    <span class="sds-field--large">Mailing Address</span>
+                    <ul class="sds-list sds-list--unstyled">
+                      <li>5 Main ST</li>
+                      <li>SALEM, MASSACHUSETTS</li>
+                      <li>01970-3875, United States</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tablet:grid-col-3 tablet:margin-x-2 grid-col">
+              <span class="sds-field--large padding-bottom-1">Purpose of Registration</span>
+              <ul class="sds-list sds-list--unstyled">
+                <li>
+                  <b>All Awards</b>
+                </li>
+                <li>
+                  <span class="usa-tag sds-tag--info-white">SAM</span>Unique Entity ID</li>
+                <li>
+                  <b>R923EY6LP29J</b>
+                </li>
+              </ul>
+            </div>
+            <div class="tablet:grid-col-3 grid-col">
+              <div class="grid-row">
+                <div class="sds-alert--basic">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle height-4 width-4" viewbox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                  </svg>
+                  <ul class="sds-list sds-list--unstyled">
+                    <li>Review Exclusions</li>
+                    <li>Review Debt Subject to Offset</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-row sds-field">
+            <label class="sds-field__value--large usa-label margin-right-2" for="options">Version</label>
+            <form class="usa-form margin-top-1">
+              <label class="usa-label display-none" for="options">Version</label>
+              <select class="usa-select" name="options" id="options">
+                <option value="value">Current Record</option>
+                <option value="value1">Option A</option>
+                <option value="value2">Option B</option>
+                <option value="value3">Option for Record with a long name</option>
+              </select>
+            </form>
+          </div>
+        </div>
+        {# BUSINESS INFORMATION SECTION #}
+        <div class="sds-result-item__title grid-row">
+          <div class="sds-result-item__square"></div>
+          <h2>BUSINESS INFORMATION</h2>
+        </div>
+        <div class="sds-result-item">
+          <div class="grid-row">
+            <div class="grid-col-6 tablet:grid-col sds-field">
+              <span class="sds-field--large">Doing Business As</span>
+              <span class="sds-field__value">Dakota Water Science Center</span>
+            </div>
+            <div class="grid-col-6 tablet:grid-col sds-field">
+              <span class="sds-field--large">Division Name</span>
+              <span class="sds-field__value">(blank)</span>
+            </div>
+            <div class="grid-col-6 tablet:grid-col sds-field">
+              <span class="sds-field--large">State/COunty of Incorporation</span>
+              <span class="sds-field__value">(blank)</span>
+            </div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-col-6 tablet:grid-col sds-field">
+              <span class="sds-field--large">URL</span>
+              <span class="sds-field__value">
+                <a class="usa-link">dakotawater.gov</a>
+              </span>
+            </div>
+            <div class="grid-col-6 tablet:grid-col sds-field">
+              <span class="sds-field--large">Division Number</span>
+              <span class="sds-field__value">(blank)</span>
+            </div>
+            <div class="grid-col-6 tablet:grid-col sds-field">
+              <span class="sds-field--large">Congressional District</span>
+              <span class="sds-field__value">South Dakota</span>
+            </div>
+          </div>
+        </div>
+        <div class="sds-result-item__title grid-row">
+          <h3>Registration Dates</h3>
+        </div>
+        <div class="sds-result-item">
+          <div class="grid-row">
+            <div class="grid-col-6 tablet:grid-col sds-field">
+              <span class="sds-field--large">Activation Date</span>
+              <span class="sds-field__value">Dec 11, 2018</span>
+            </div>
+            <div class="grid-col-6 tablet:grid-col sds-field">
+              <span class="sds-field--large">Initial Registration Date</span>
+              <span class="sds-field__value">March 10, 2005</span>
+            </div>
+            <div class="grid-col-6 tablet:grid-col sds-field">
+              <span class="sds-field--large">Submission Date</span>
+              <span class="sds-field__value">Dec 11, 2018</span>
+            </div>
+          </div>
+        </div>
+        <div class="sds-result-item__title grid-row">
+          <h3>Entity Dates</h3>
+        </div>
+        <div class="sds-result-item">
+          <div class="grid-row">
+            <div class="grid-col-6 tablet:grid-col-4 sds-field">
+              <span class="sds-field--large">Entity Start Date</span>
+              <span class="sds-field__value">March 10, 2005</span>
+            </div>
+            <div class="grid-col-6 tablet:grid-col-4 sds-field">
+              <span class="sds-field--large">Fiscal Year End CLose Date</span>
+              <span class="sds-field__value">Dec 31</span>
+            </div>
+          </div>
+        </div>
+        <div class="sds-result-item__title grid-row">
+          <h3>Immediate Owner</h3>
+        </div>
+        <div class="sds-result-item">
+          <div class="grid-row">
+            <div class="grid-col-6 tablet:grid-col-4 sds-field">
+              <span class="sds-field--large">CAGE</span>
+              <span class="sds-field__value">(blank)</span>
+            </div>
+            <div class="grid-col-6 tablet:grid-col-4 sds-field">
+              <span class="sds-field--large">Legal Business Name</span>
+              <span class="sds-field__value">(blank)</span>
+            </div>
+          </div>
+        </div>
+        <div class="sds-result-item__title grid-row">
+          <h3>Executive Compensation</h3>
+        </div>
+        <div class="sds-result-item">
+          <div class="grid-row">
+            <p>Registrants in the System for Award Management (SAM) respond to the Executive Compensation questions in accordance with Section 6202 of P.L. 110-252, amending the Federal Funding Accountability and Transparency Act (P.L. 109-282). This information
+              is not displayed in SAM. It is sent to USAspending.gov for display in association with an eligible award. Maintaining an active registration in SAM demonstrates the registrant responded to the questions.</p>
+          </div>
+        </div>
+        {# ENTITY TYPES SECTION #}
+        <div class="sds-result-item__title grid-row">
+          <div class="sds-result-item__square"></div>
+          <h2>ENTITY TYPES</h2>
+        </div>
+        <div class="sds-result-item__title grid-row">
+          <h3>Business Types</h3>
+        </div>
+        <div class="sds-result-item">
+          <div class="grid-row">
+            <div class="grid-col-6 tablet:grid-col-4 sds-field">
+              <span class="sds-field--large">Entity Structure</span>
+              <span class="sds-field__value">U.S. Government Entity</span>
+            </div>
+            <div class="grid-col-6 tablet:grid-col-4 sds-field">
+              <span class="sds-field--large">Entity Type</span>
+              <span class="sds-field__value">U.S. Federal Government</span>
+            </div>
+            <div class="grid-col-6 tablet:grid-col-4 sds-field">
+              <span class="sds-field--large">Organization Factors</span>
+              <span class="sds-field__value">(blank)</span>
+            </div>
+            <div class="grid-col-6 tablet:grid-col-4 sds-field">
+              <span class="sds-field--large">Profit Structure</span>
+              <span class="sds-field__value">(blank)</span>
+            </div>
+          </div>
+        </div>
+        <div class="sds-result-item__title grid-row">
+          <h3>Government Types</h3>
+        </div>
+        <div class="sds-result-item">
+          <div class="grid-row">
+            <div class="grid-col-6 tablet:grid-col-4 sds-field">
+              <span class="sds-field--large">CAGE</span>
+              <span class="sds-field__value">(blank)</span>
+            </div>
+            <div class="grid-col-6 tablet:grid-col-4 sds-field">
+              <span class="sds-field--large">Legal Business Name</span>
+              <span class="sds-field__value">(blank)</span>
+            </div>
+          </div>
+        </div>
+        <div class="sds-result-item__title grid-row">
+          <h3>Other Entity Qualifiers</h3>
+        </div>
+        <div class="sds-result-item">
+          <div class="grid-row">
+            <p>Educational Institution, State Controlled, Institution of Higher Learning</p>
+          </div>
+        </div>
+        {# FINANCIAL INFORMATION #}
+        <div class="sds-result-item__title grid-row">
+          <div class="sds-result-item__square"></div>
+          <h2>FINANCIAL INFORMATION</h2>
+        </div>
+        <div class="sds-result-item">
+          <div class="grid-row">
+            <div class="grid-col-6 tablet:grid-col-4 sds-field">
+              <span class="sds-field--large">Accepts Credit Card Payments</span>
+              <span class="sds-field__value">No</span>
+            </div>
+            <div class="grid-col-6 tablet:grid-col-4 sds-field">
+              <span class="sds-field--large">Debt Subject to Offset</span>
+              <span class="sds-field__value">No</span>
+            </div>
+          </div>
+        </div>
+        {# POINTS OF CONTACT #}
+        <div class="sds-result-item__title grid-row">
+          <div class="sds-result-item__square"></div>
+          <h2>POINTS OF CONTACT</h2>
+        </div>
+        <div class="sds-result-item__title grid-row">
+          <h3>Electronic Business</h3>
+        </div>
+        <div class="sds-result-item">
+          <div class="sds-card border-width-0">
+            <div class="sds-card__header sds-card__header--left">
+              <h2 class="sds-card__title">James McStay</h2>
+            </div>
+            <div class="sds-card__body grid-row">
+              <div class="grid-col-6 tablet:grid-col sds-field">
+                <span class="sds-field--large">email</span>
+                <span class="sds-field__value">compliance@usaid.gov)</span>
+              </div>
+              <div class="grid-col-6 tablet:grid-col sds-field">
+                <span class="sds-field--large">Phone Number</span>
+                <span class="sds-field__value">(123) 123-7894</span>
+              </div>
+              <div class="grid-col-6 tablet:grid-col sds-field">
+                <span class="sds-field--large">Department</span>
+                <span class="sds-field__value">
+                  <a class="usa-link">Department Of Agriculture</a>
+                </span>
+              </div>
+              <div class="grid-col-6 tablet:grid-col sds-field">
+                <span class="sds-field--large">Phone Number</span>
+                <span class="sds-field__value">n/a</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sds-result-item__title grid-row">
+          <h3>Government Business</h3>
+        </div>
+        <div class="sds-result-item">
+          <h4>Primary Contact</h4>
+          <div class="sds-card border-width-0">
+            <div class="sds-card__header sds-card__header--left">
+              <h2 class="sds-card__title">James McStay</h2>
+            </div>
+            <div class="sds-card__body grid-row">
+              <div class="grid-col-6 tablet:grid-col sds-field">
+                <span class="sds-field--large">email</span>
+                <span class="sds-field__value">compliance@usaid.gov)</span>
+              </div>
+              <div class="grid-col-6 tablet:grid-col sds-field">
+                <span class="sds-field--large">Phone Number</span>
+                <span class="sds-field__value">(123) 123-7894</span>
+              </div>
+              <div class="grid-col-6 tablet:grid-col sds-field">
+                <span class="sds-field--large">Department</span>
+                <span class="sds-field__value">
+                  <a class="usa-link">Department Of Agriculture</a>
+                </span>
+              </div>
+              <div class="grid-col-6 tablet:grid-col sds-field">
+                <span class="sds-field--large">Phone Number</span>
+                <span class="sds-field__value">n/a</span>
+              </div>
+            </div>
+          </div>
+          <h4>Alternate Contact</h4>
+          <div class="sds-card border-width-0">
+            <div class="sds-card__header sds-card__header--left">
+              <h2 class="sds-card__title">James McStay</h2>
+            </div>
+            <div class="sds-card__body grid-row">
+              <div class="grid-col-6 tablet:grid-col sds-field">
+                <span class="sds-field--large">email</span>
+                <span class="sds-field__value">compliance@usaid.gov)</span>
+              </div>
+              <div class="grid-col-6 tablet:grid-col sds-field">
+                <span class="sds-field--large">Phone Number</span>
+                <span class="sds-field__value">(123) 123-7894</span>
+              </div>
+              <div class="grid-col-6 tablet:grid-col sds-field">
+                <span class="sds-field--large">Department</span>
+                <span class="sds-field__value">
+                  <a class="usa-link">Department Of Agriculture</a>
+                </span>
+              </div>
+              <div class="grid-col-6 tablet:grid-col sds-field">
+                <span class="sds-field--large">Phone Number</span>
+                <span class="sds-field__value">n/a</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sds-result-item__title grid-row">
+          <h3>Past Performace</h3>
+        </div>
+        <div class="sds-result-item">
+          <div class="sds-card border-width-0">
+            <div class="sds-card__header sds-card__header--left">
+              <h2 class="sds-card__title">James McStay</h2>
+            </div>
+            <div class="sds-card__body grid-row">
+              <div class="grid-col-6 tablet:grid-col sds-field">
+                <span class="sds-field--large">email</span>
+                <span class="sds-field__value">compliance@usaid.gov)</span>
+              </div>
+              <div class="grid-col-6 tablet:grid-col sds-field">
+                <span class="sds-field--large">Phone Number</span>
+                <span class="sds-field__value">(123) 123-7894</span>
+              </div>
+              <div class="grid-col-6 tablet:grid-col sds-field">
+                <span class="sds-field--large">Department</span>
+                <span class="sds-field__value">
+                  <a class="usa-link">Department Of Agriculture</a>
+                </span>
+              </div>
+              <div class="grid-col-6 tablet:grid-col sds-field">
+                <span class="sds-field--large">Phone Number</span>
+                <span class="sds-field__value">n/a</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </div>
