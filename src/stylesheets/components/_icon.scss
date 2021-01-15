@@ -11,3 +11,56 @@ sds-icon.external-link > * > * {
   @include u-text('top');
   @include u-display('inline');
 }
+
+.sds-stack{
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 2.5em;
+
+  &.sds-xs{
+    font-size: .75em;
+  }
+  &.sds-sm{
+    font-size: .875em;
+  }
+  &.sds-lg{
+    font-size: 1.33em;
+  }
+  &.sds-2x{
+    font-size: 2em;
+  }
+  &.sds-3x{
+    font-size: 3em;
+  }
+  &.sds-4x{
+    font-size: 4em;
+  }
+  &.sds-5x{
+    font-size: 5em;
+  }
+  &.sds-6x{
+    font-size: 6em;
+  }
+  &.sds-7x{
+    font-size: 7em;
+  }
+  &.sds-8x{
+    font-size: 8em;
+  }
+  &.sds-9x{
+    font-size: 9em;
+  }
+  &.sds-10x{
+    font-size: 10em;
+  }
+
+  .sds-stack-icon{
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+}
