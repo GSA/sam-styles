@@ -247,4 +247,17 @@
   }
 }
 
+//ALERT-BASIC
+.sds-alert--basic{
+  @include u-text('secondary-dark');
+  @include u-display('flex');
+  @include u-flex('row');
 
+  svg{
+    @include u-height(6);
+    @include u-width(6);
+    @include u-margin-right(1);
+    @include u-text('secondary-light');
+    align-self: center;
+  }
+}

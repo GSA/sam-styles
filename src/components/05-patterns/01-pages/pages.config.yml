@@ -185,3 +185,6 @@ variants:
                       icon:
                         icon: video-square
                         classes: fa-fw fa-lg
+
+  - name: display-page
+    label: Display Page
