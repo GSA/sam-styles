@@ -83,7 +83,8 @@ const icons = [
   "exit",
   "angle-circle",
   "add-req",
-  "attachment"
+  "attachment",
+  "stackblitz",
 ];
 
 // Sort icons alphabetically.
