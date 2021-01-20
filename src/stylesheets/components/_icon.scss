@@ -18,7 +18,7 @@ sds-icon.external-link > * > * {
   line-height: 2em;
   position: relative;
   vertical-align: middle;
-  width: 2.5em;
+  width: 2em;
 
   &.sds-xs{
     font-size: .75em;
@@ -60,7 +60,14 @@ sds-icon.external-link > * > * {
   .sds-stack-icon{
     left: 0;
     position: absolute;
-    text-align: center;
     width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  svg{
+    display: block;
   }
 }
