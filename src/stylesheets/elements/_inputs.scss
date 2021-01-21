@@ -97,8 +97,16 @@
   text-align: end;
 }
 
+//IAE-45479 fix in FF
 @-moz-document url-prefix() {
   .usa-checkbox, .usa-fieldset{
+    position: relative;
+  }
+}
+
+//IAE-45479 fix in IE11
+@media all and (-ms-high-contrast:none) {
+  *::-ms-backdrop, .usa-checkbox, .usa-fieldset{
     position: relative;
   }
 }
