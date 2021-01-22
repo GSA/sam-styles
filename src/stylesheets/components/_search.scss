@@ -40,9 +40,6 @@
     @include u-border('base-light');
     @include u-border-right(0);
     @include u-shadow(3);
-    @media only screen and (min-width:480px){
-      max-width: 12rem;
-    }
   }
 }
 
