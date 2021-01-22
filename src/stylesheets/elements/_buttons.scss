@@ -27,12 +27,14 @@
     border: none;
     @include u-text("underline");
     text-decoration: none;
+
     &.usa-button--active,
     &:active {
       border: none;
       @include u-bg("transparent");
       @include u-text("underline","secondary-darker");
     }
+
     &.usa-button--hover,
     &:hover {
       border: none;
@@ -56,15 +58,15 @@
     align-self: center;
   }
 
-
   &.sds-button--small {
     height: units(3);
     width: units(3);
     padding: 0;
     font-size: size("body", 1);
   }
-  &.usa-button--big,
-  &.sds-button--big {
+
+  &.sds-button--big,
+  &.usa-button--big {
     height: units(5);
     width: units(5);
     font-size: size("body", 6);
@@ -123,6 +125,7 @@
     }
   }
 }
+
 .usa-button--base {
   color: color("gold-70");
   background-color: color("accent-warm-lighter");
@@ -164,6 +167,7 @@
     background-color: transparent;
   }
 }
+
 .usa-button--accent-cool {
   background-color: color("accent-cool");
   @include u-border("accent-cool");
@@ -220,16 +224,17 @@
   }
 }
 
-.usa-button,
-.sds-button {
+.sds-button,
+.usa-button {
   &--disabled,
   &:disabled {
     box-shadow: none;
     @include u-border("disabled");
     @include u-bg("disabled");
     @include u-text("white");
-    &.usa-button--unstyled,
-    &.sds-button--unstyled {
+
+    &.sds-button--unstyled,
+    &.usa-button--unstyled {
       box-shadow: none;
       @include u-border(0);
       @include u-bg("transparent");
@@ -237,8 +242,6 @@
     }
   }
 }
-
-
 /*******************************
       SDS Specific Styles
 *******************************/
@@ -266,18 +269,18 @@
     color: color("white");
   }
 
-  &:hover,
-  &.usa-button--hover {
+  &.usa-button--hover,
+  &:hover {
     text-decoration: none;
   }
 
-  &:active,
-  &.usa-button--active {
-    box-shadow: inset 0px 0px 0 1px color("secondary-darker");
+  &.usa-button--active,
+  &:active {
+    box-shadow: inset 0 0 0 1px color("secondary-darker");
   }
 
-  &:focus,
-  &.usa-focus {
+  &.usa-focus,
+  &:focus {
     outline-offset: units(0.5);
   }
 
@@ -285,24 +288,23 @@
     @include button-disabled;
   }
 }
-
 // Shadow
 .sds-button--shadow {
   box-shadow: $button-shadow;
-  &:hover,
-  &.usa-button--hover {
+
+  &.usa-button--hover,
+  &:hover {
     box-shadow: $button-shadow;
   }
-  &:active,
-  &.usa-button--active {
+
+  &.usa-button--active,
+  &:active {
     box-shadow: $button-shadow;
   }
 }
-
 // Size
-
-.usa-button--small,
-.sds-button--small {
+.sds-button--small,
+.usa-button--small {
   @include u-font("sans", "2xs");
   padding: units(1) units(2);
 }
@@ -312,6 +314,7 @@
 .sds-button--primary {
   @include u-bg("primary");
   @include u-shadow("none");
+
   &.usa-button--hover,
   &:hover {
     background-color: color("primary-light");
@@ -329,69 +332,77 @@
     outline-offset: units(2px);
   }
 }
-
 /*-------------------
   Circular Buttons - DEPRECATED: Use .sds-button--circle
 --------------------*/
 .sds-button.sds-button--circular {
   @include u-radius("pill");
   @include u-padding-x("105");
+
   .svg-inline--fa.fa-fw {
     width: 1.1em;
   }
+
   &.sds-button--small .svg-inline--fa.fa-fw {
     width: 0.8em;
   }
 }
-
 /*-------------------
   Labeled Icon Button
 --------------------*/
 .sds-button.sds-button--labeled-icon {
-  color: color("indigo-cool-60");
+  color: color("indigo-cool-70");
   box-shadow: none;
   transition: box-shadow 0.2s ease-out;
   @include u-position("relative");
   @include u-padding-right(5);
   @include u-padding-left(2);
-  &:hover,
-  &.usa-button--hover {
+
+  &.usa-button--hover,
+  &:hover {
     @include u-shadow(2);
   }
-  &:active,
-  &.usa-button--active {
+
+  &.usa-button--active,
+  &:active {
     color: color("secondary-dark");
-    box-shadow: inset 0px 0px 0 1px color("secondary-darker");
+    box-shadow: inset 0 0 0 1px color("secondary-darker");
+
     .fa-layers {
       .fa-circle {
         color: color("secondary-darker") !important;
       }
+
       .svg-inline--fa:not(.fa-circle) {
         color: color("white");
       }
     }
   }
+
   .fa-layers {
     @include u-position("absolute");
     font-size: size("body", 10);
     top: 5px;
     right: 5px;
+
     .fa-circle {
       color: color("primary");
     }
+
     .svg-inline--fa:not(.fa-circle) {
       color: color("secondary-dark");
     }
   }
+
   &.sds-button--small {
     @include u-padding-right(4);
+
     .fa-layers {
       font-size: size("body", 8);
       top: 6px;
     }
   }
 }
-
 /*-------------------
   Icon Button
 --------------------*/
@@ -416,7 +427,7 @@
   }
 
   .sds-button--icon__title {
-    margin: 5px 0px;
+    margin: 5px 0;
   }
 }
 
@@ -434,47 +445,82 @@
     margin: auto;
   }
 }
-
 /*-------------------
   Icon Button LG
 --------------------*/
-.sds-button.sds-button--icon-lg{
-  @include u-padding(2);
-  @include u-shadow(2);
-  @include u-border(2px);
-  @include u-border('accent-cool-light');
-  @include u-radius('lg');
-  @include u-text('left');
-  @include u-margin(1);
+.sds-button{
+  &.sds-button--icon-lg {
+    @include u-padding(2);
+    @include u-shadow(2);
+    @include u-border(2px);
+    @include u-border('accent-cool-light');
+    @include u-radius('lg');
+    @include u-text('left');
+    @include u-margin-y(1);
 
-  .sds-button__header {
+    .sds-button__header {
+      @include u-display('flex');
+      @include u-flex('row');
+      @include u-flex(1);
+      padding-bottom: 0.5rem;
+      flex-grow: 0;
+      margin: auto;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        @include u-font('sans', 'md');
+        @include u-text('bold');
+      }
+
+      p {
+        @include u-margin-bottom(1);
+      }
+
+      span,
+      svg {
+        @include u-margin-top(0);
+        @include u-margin-x(2);
+      }
+    }
+
+    span {
+      @include u-color('base');
+      @include u-text('italic');
+      @include u-margin-top(1);
+      @include u-text('normal');
+      flex-wrap: wrap;
+    }
+
+    &--selected,
+    &:hover {
+      @include u-border('primary');
+    }
+  }
+}
+
+.sds-button.sds-button--icon-lg {
+  height: 100%;
+  width: 100%;
+  @include u-text('center');
+  @include u-display('flex');
+  @include u-flex('column');
+  align-items: center;
+
+  .usa-tag {
+    @include u-text('white');
+    @include u-text('no-italic');
+    @include u-margin-x('auto');
+    @include u-padding-y(1);
+  }
+
+  .sds-button__body {
+    @include u-text('center');
     @include u-display('flex');
-    @include u-flex('row');
-    @include u-flex('align-center');
-    @include u-flex(1);
-
-    h1, h2, h3, h4, h5, h6 {
-      @include u-font('sans', 'md');
-      @include u-text('bold');
-    }
-
-    p {
-      @include u-margin-bottom(1);
-    }
-
-    svg, span {
-      @include u-margin-top(0);
-      @include u-margin-x(2);
-    }
-  }
-  span {
-    @include u-color('base');
-    @include u-text('italic');
-    @include u-margin-top(1);
-    @include u-text('normal');
-  }
-
-  &:hover {
-    @include u-border('primary');
+    @include u-flex('column');
+    flex-grow: 1;
   }
 }

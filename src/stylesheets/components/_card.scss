@@ -14,15 +14,21 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
   &__title {
     @include u-margin-y(0);
     @include u-display('inline-block');
+
   }
 
   &__body {
     @include u-padding(2);
-    > *:first-child {
+
+    >*:first-child {
       @include u-margin-top(0);
     }
-    > *:last-child {
+
+    >*:last-child {
       @include u-margin-bottom(0);
+    }
+    &--accent-cool{
+      @include u-bg('accent-cool-lighter');
     }
   }
 
@@ -33,10 +39,12 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     border-top-left-radius: $inner-border-radius;
     border-top-right-radius: $inner-border-radius;
 
+
     &--flex {
       @include grid-row;
       @include u-display('flex');
       @include u-flex('align-center');
+
       .sds-card__title {
         @include grid-col(12);
         @include u-text('center');
@@ -46,6 +54,7 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
           flex: flex('auto');
         }
       }
+
       .sds-card__buttons {
         @include grid-col(12);
         @include at-media('tablet-lg') {
@@ -56,6 +65,7 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
           @include u-text('right');
         }
       }
+
       .usa-button {
         @include u-margin-top(1);
         @include at-media('tablet-lg') {
@@ -64,30 +74,69 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
       }
     }
 
-    &--left, &--center {
+    &--left,
+    &--center {
       svg {
         @include u-margin-right(1);
       }
-      > * {
+
+      >* {
         @include u-display('inline-block');
         @include u-text('bottom');
       }
     }
 
-    &--stacked, &--center {
+    &--stacked,
+    &--center {
       @include u-text('center');
     }
 
     &--action {
       @include u-display('flex');
       @include u-flex('align-center', 'justify');
-      .sds-card__action > * {
+
+      .sds-card__action>* {
         @include u-margin-right(0);
       }
     }
+    
+    .sds-card__collapse {
+      transition: transform 0.2s ease-in;
+      width: 33px;
+      height: 33px;
+      transform: rotate(180deg);
+      right: 10px;
+      border-radius: 50%;
+      background-color: #e2e2e2;
+    }
+
+    .sds-card__collapse::before {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 0;
+      border-bottom: solid 1px #0a3466;
+      position: absolute;
+      left: 9px;
+      bottom: 16px;
+      transform: rotate(180deg);
+      transition: width 0.2s ease-in;
+    }
+
+    .sds-card__collapse::after {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 0;
+      border-bottom: solid 1px #0a3466;
+      position: absolute;
+      left: 9px;
+      bottom: 16px;
+      transition: width 0.2s ease-in;
+    }
 
     // remove margin top from first sibling of a heading that isn't in a vertical card
-    .sds-card__title + * {
+    .sds-card__title+* {
       @include u-margin-top(0);
     }
   }
@@ -95,6 +144,7 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
   &__buttons {
     .usa-button {
       @include u-width(full);
+
       @include at-media('tablet-lg') {
         @include u-width('auto');
         margin-left: units(1);
@@ -118,19 +168,54 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
 
   &--list {
     @include u-border(0);
+
     .sds-card__header {
       @include bordered-item(true);
     }
+
     .sds-card__body {
       @include u-padding(0);
     }
   }
 
+  &--collapsed {
+    .sds-card__body {
+      display: none;
+    }
+
+    .sds-card__collapse::before {
+      transform: rotate(90deg);
+    }
+  }
+
   &--vertical {
     @include u-display('flex');
+
     .sds-card__header {
       @include u-border-right('base-light', 'solid', $sds-card-border-width);
       border-top-right-radius: 0;
+    }
+  }
+
+  &--collapsible {
+    @include u-radius(0);
+    .sds-card__header {
+      cursor: pointer;
+      @include u-font-family('sans');
+      @include u-font-size('body', 'xs');
+      @include u-text('semibold');
+    }
+    .sds-accordion__title{
+      @include u-padding-left(0);
+    }
+
+    .sds-card__title {
+      .sds-card__subtitle {
+        @include u-margin-y(0);
+        @include u-display('inline-block');
+        @include u-text('secondary-dark');
+        @include u-text('bold');
+      }
     }
   }
 

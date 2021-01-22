@@ -20,7 +20,7 @@ variants:
       color: base
       header:
         style: left
-      body: 
+      body:
         content:
          -text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed augue lacus viverra vitae.
 
@@ -33,13 +33,6 @@ variants:
   - name: landing-page
     notes: "Landing Page"
     context:
-      tileIcon:
-        type: stack
-        icons:
-          - icon: triangle
-            classes: fa-stack-2x text-accent-cool-light fa-1x
-          - icon: video-circle
-            classes: fa-stack-1x text-base fa-2x
       iconSize: lg
       cards:
         - title: Data Services
@@ -193,3 +186,5 @@ variants:
                         icon: video-square
                         classes: fa-fw fa-lg
 
+  - name: display-page
+    label: Display Page

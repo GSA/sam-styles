@@ -1,30 +1,87 @@
 <h4>SDS Icon Button Examples</h4>
 
-<div class="bg-accent-cool-light grid-container padding-3 display-flex">
-  <button class="sds-button sds-button--icon">
-    {% render '@layered-icon', buttons[0].icons %}
-    <span class="sds-button--icon__title">Register Entity</span>
-  </button>
-
-  <button class="sds-button sds-button--icon">
-    {% render '@layered-icon', buttons[1].icons %}
-    <span class="sds-button--icon__title">Check Status</span>
-  </button>
-
-  <div class="sds-button--outline">
-    <button class="sds-button sds-button--icon text-center">
-      {% render '@layered-icon', buttons[0].icons %}
-      <span class="sds-button--icon__title">Help Me Get Started</span>
+<div class="bg-accent-cool-light padding-3 display-flex flex-wrap grid-row">
+  <div class="grid-col">
+    {# buttons with icons #}
+    <button class="sds-button sds-button--icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-check height-3" viewbox="0 0 16 16">
+        <path
+          fill-rule="evenodd"
+          d="M9.828 4H2.19a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91H9v1H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181L15.546 8H14.54l.265-2.91A1 1 0 0 0 13.81 4H9.828zm-2.95-1.707L7.587 3H2.19c-.24 0-.47.042-.684.12L1.5 2.98a1 1 0 0 1 1-.98h3.672a1 1 0 0 1 .707.293z"/>
+        <path fill-rule="evenodd" d="M15.854 10.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708l1.146 1.147 2.646-2.647a.5.5 0 0 1 .708 0z"/>
+      </svg>
+      <span class="sds-button--icon__title">Register Entity</span>
     </button>
   </div>
+  <div class="grid-col">
+    <button class="sds-button sds-button--icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle height-3" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L8 9.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  <path fill-rule="evenodd" d="M8 2.5A5.5 5.5 0 1 0 13.5 8a.5.5 0 0 1 1 0 6.5 6.5 0 1 1-3.25-5.63.5.5 0 1 1-.5.865A5.472 5.472 0 0 0 8 2.5z"/>
+</svg>
+      <span class="sds-button--icon__title">Check Status</span>
+    </button>
+  </div>
+  <div class="grid-col">
 
-  <button class="sds-button sds-button--icon-lg">
-    <div class="sds-button__header">
-      <h4>Public Building or Works</h4>
-      {% render '@layered-icon', buttons[1].icons %}
+    <div class="sds-button--outline">
+      <button class="sds-button sds-button--icon text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle height-3" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5A.5.5 0 0 0 4 8z"/>
+</svg>
+        <span class="sds-button--icon__title">Help Me Get Started</span>
+      </button>
     </div>
-    <p>Wage rates for laborers and mechanics</p>
-    <span>Davis-Bacon Act (DBA)</span>
-  </button>
+  </div>
+  <div class="grid-col">
+    <button class="sds-button sds-button--icon-lg">
+      <div class="sds-button__header">
+        <h4>Public Building or Works</h4>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-building height-3" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694L1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"/>
+  <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"/>
+</svg>
+      </div>
+      <p>Wage rates for laborers and mechanics</p>
+      <span>Davis-Bacon Act (DBA)</span>
+    </button>
+  </div>
+</div>
 
+<div class="grid-container width-tablet margin-auto">
+  <div class="grid-row grid-gap">
+    <div class="grid-col">
+      <button class="sds-button sds-button--icon-lg">
+        <div class="sds-button__header">
+          <i class="sds fa-document-pdf fa-2x" aria-hidden="true" title="Screen reader description"></i>
+        </div>
+        <div class="sds-button__body">
+          <span class="usa-tag">pdf</span>
+          <span>Limited to 5,000 records</span>
+        </div>
+      </button>
+    </div>
+    <div class="grid-col">
+      <button class="sds-button sds-button--icon-lg">
+        <div class="sds-button__header">
+          <i class="sds fa-document-add fa-2x" aria-hidden="true" title="Screen reader description"></i>
+        </div>
+        <div class="sds-button__body">
+          <span class="usa-tag">doc</span>
+        </div>
+      </button>
+    </div>
+    <div class="grid-col">
+      <button class="sds-button sds-button--icon-lg">
+        <div class="sds-button__header">
+          <i class="sds fa-document-search fa-2x" aria-hidden="true" title="Screen reader description"></i>
+        </div>
+        <div class="sds-button__body">
+          <span class="usa-tag">csv</span>
+          <span>Limited to 1,000,000 records</span>
+        </div>
+      </button>
+    </div>
+  </div>
 </div>

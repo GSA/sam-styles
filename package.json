@@ -1,6 +1,6 @@
 {
     "name": "@gsa-sam/sam-styles",
-    "version": "0.0.84",
+    "version": "0.0.94",
     "description": "",
     "main": "index.js",
     "scripts": {
@@ -27,6 +27,7 @@
         "@frctl/mandelbrot": "^1.2.0",
         "@frctl/nunjucks": "^1.0.3",
         "@gsa-sam/icons": "^1.0.0",
+        "bootstrap-icons": "^1.2.1",
         "copy": "^0.3.2",
         "uswds": "2.6.0"
     },

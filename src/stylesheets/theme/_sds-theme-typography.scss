@@ -35,7 +35,7 @@ Accepts true or false
 ----------------------------------------
 */
 
-$theme-respect-user-font-size: true;
+$theme-respect-user-font-size: true !default;
 
 // $theme-root-font-size only applies when
 // $theme-respect-user-font-size is set to

@@ -1,9 +1,7 @@
 $sds-table-border: "1px";
 
 %sds-table--highlight {
-  @include u-text('semibold');
   @include u-bg('accent-cool-lighter');
-  @include u-border-top('base-light', $sds-table-border);
 }
 
 %sds-table--cell {

@@ -1,8 +1,7 @@
+{# <p><b>To be deprecated</b></p> #}
 {%- set prefix = prefix or "sds" -%}
-
 <i class="{{prefix}} fa-{{icon}}{% if classes %} {{classes}}{% endif %}"{% if title %}aria-hidden="true" title="{{title}}"{% endif %}{% if dataTransform %} data-fa-transform="{{dataTransform}}"{% endif %}></i>
 
 {%- if title %}
   <span class="sr-only">{{title}}</span>
 {% endif -%}
-

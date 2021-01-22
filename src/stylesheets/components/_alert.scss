@@ -154,11 +154,17 @@
   .sds-alert--header {
     @include u-border-y(1px);
     @include u-border-y('yellow-20v');
-    @include u-padding('105');
-    min-width: 375px;
+
+    .sds-alert--container {
+      @include at-media($theme-header-min-width) {
+        @include grid-container($theme-header-max-width);
+        display: block;
+        height: auto;
+      }
+    }
 
     .sds-alert--header__icon {
-      @include u-margin-x('205');
+      @include u-margin-right('205');
       @include u-margin-y(1);
       @include u-height(6);
       @include u-width(6);
@@ -207,7 +213,7 @@
 .sds-mobile-alert {
   flex-wrap: nowrap;
   .sds-alert--header__icon-mobile {
-    @include u-margin-x('205');
+    @include u-margin-right('205');
     @include u-margin-y(1);
     @include u-height(5);
     @include u-width(5);
@@ -240,4 +246,17 @@
   }
 }
 
+//ALERT-BASIC
+.sds-alert--basic{
+  @include u-text('secondary-dark');
+  @include u-display('flex');
+  @include u-flex('row');
 
+  svg{
+    @include u-height(6);
+    @include u-width(6);
+    @include u-margin-right(1);
+    @include u-text('secondary-light');
+    align-self: center;
+  }
+}
