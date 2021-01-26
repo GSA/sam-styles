@@ -9,7 +9,7 @@
 .sds-toolbar {
   z-index: 2;
   border: 1px solid #fff;
-  overflow: hidden;
+  overflow: visible;
   display: inline-block;
   }
   .sds-toolbar a {
@@ -136,9 +136,10 @@
 
 /* Accordion inside toolbar tweaks */
 .sds-toolbar.sds-toolbar--expanded .sds-toolbar__content > .sds-accordion {
-  margin-left: -1px;
+  margin-left: -3px;
   margin-right: -1px;
-  margin-bottom: -1px;
+  margin-bottom: -3px;
+  padding: 3px;
   @include u-display('block');
 }
 
