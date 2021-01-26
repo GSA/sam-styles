@@ -38,11 +38,12 @@
     max-height: 65vh;
     overflow: auto;
     line-height: 20px;
-    -webkit-overflow-scrolling: touch;
-    .sds-dialog-content--centered {
-        p {
-            margin: auto;
-        }
+    -webkit-overflow-scrolling: touch;   
+}
+
+.sds-dialog-content.sds-dialog-content--centered {
+    p {
+        margin: auto;
     }
 }
 
