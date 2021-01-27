@@ -7,6 +7,7 @@
   @include u-margin('05');
   animation: load 1s 1;
   animation-timing-function: ease-out;
+  animation-delay: 2s;
   @keyframes load {
     0% {
       @include u-bg('base-light');
