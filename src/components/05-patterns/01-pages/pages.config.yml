@@ -188,3 +188,6 @@ variants:
 
   - name: display-page
     label: Display Page
+
+  - name: loading-results
+    label: Loading Results Page

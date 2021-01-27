@@ -1,0 +1,39 @@
+// loading class
+.sds-load__circle,
+.sds-load__content,
+.sds-load__element,
+.sds-load__title {
+  @include u-bg('base-light');
+  @include u-margin('05');
+  animation: load 1s 1;
+  animation-timing-function: ease-out;
+  @keyframes load {
+    0% {
+      @include u-bg('base-light');
+      opacity: 0;
+    }
+
+    100% {
+      @include u-bg('base-light');
+      opacity: 1;
+    }
+  }
+}
+.sds-load {
+  @include u-display('flex');
+  @include u-flex('justify')
+}
+.sds-load__title {
+  @include u-height(3);
+}
+.sds-load__content {
+  @include u-height(9);
+}
+.sds-load__element {
+  @include u-height(6);
+}
+.sds-load__circle {
+  @include u-height(5);
+  @include u-width(5);
+  border-radius: 50%;
+}
