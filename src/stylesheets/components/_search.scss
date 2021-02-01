@@ -56,6 +56,7 @@
     background-image: url('#{$theme-image-path}/sam/arrow-down-white.svg');
     background-repeat: no-repeat;
     background-size: 0.75rem;
+    background-size: 12px;
   }
     @media only screen and (max-width:480px){
       @include u-flex('column');
@@ -86,6 +87,7 @@
     background-repeat: no-repeat;
       @media (min-width: 30em) {
         background-size: 1.5rem;
+        background-size: 24px;
       }
   }
   @media (min-width: 30em) {
