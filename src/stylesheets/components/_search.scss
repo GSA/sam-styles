@@ -53,10 +53,6 @@
   select {
     @include u-bg('black');
     @include u-text('white');
-    // background-image: url('#{$theme-image-path}/sam/arrow-down-white.svg');
-    // background-repeat: no-repeat;
-    // background-size: 0.75rem;
-    // background-size: 12px;
   }
   ::after {
     content: "";
@@ -103,12 +99,6 @@
     @include u-bg('indigo-cool-60');
     @include u-radius(0);
     @include u-width(5);
-    background-image: url('#{$theme-image-path}/search.svg');
-    background-repeat: no-repeat;
-      @media (min-width: 30em) {
-        background-size: 1.5rem;
-        background-size: 24px;
-      }
   }
   @media (min-width: 30em) {
     [type="search"],
