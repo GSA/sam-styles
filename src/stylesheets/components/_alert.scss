@@ -53,12 +53,17 @@
   @include u-display('flex');
   @include u-flex('row', 'justify');
   @include u-margin-top('105');
+  @include u-padding('05');
 
   .sds-alert--block-icon {
     @include u-bg('warning-lighter');
     @include u-text('warning');
     @include u-radius('lg');
     margin: auto 10px;
+
+    svg {
+      justify-content: center;
+    }
   }
 
   label {
