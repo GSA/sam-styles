@@ -51,7 +51,7 @@
   @include u-maxw('mobile');
   @include u-radius('lg');
   @include u-display('flex');
-  @include u-flex('row', 'justify');
+  @include u-flex('row');
   @include u-margin-top('105');
   @include u-padding('05');
 
@@ -59,11 +59,7 @@
     @include u-bg('warning-lighter');
     @include u-text('warning');
     @include u-radius('lg');
-    margin: auto 10px;
-
-    svg {
-      justify-content: center;
-    }
+    margin: 10px 15px;
   }
 
   label {
