@@ -53,16 +53,36 @@
   select {
     @include u-bg('black');
     @include u-text('white');
+    // background-image: url('#{$theme-image-path}/sam/arrow-down-white.svg');
+    // background-repeat: no-repeat;
+    // background-size: 0.75rem;
+    // background-size: 12px;
+  }
+  ::after {
+    content: "";
+    position: absolute;
+    left: 41%;
+    top: 50%;
     background-image: url('#{$theme-image-path}/sam/arrow-down-white.svg');
     background-repeat: no-repeat;
-    background-size: 0.75rem;
-    background-size: 12px;
+    width:0.75rem;
+    height: 0.75rem;
   }
     @media only screen and (max-width:480px){
       @include u-flex('column');
       select {
         @include u-width('full');
         max-width: unset;
+      }
+      ::after {
+        content: "";
+        position: absolute;
+        left: 92%;
+        top: 20%;
+        background-image: url('#{$theme-image-path}/sam/arrow-down-white.svg');
+        background-repeat: no-repeat;
+        width:0.75rem;
+        height: 0.75rem;
       }
     }
     .sds-inverse__search{
