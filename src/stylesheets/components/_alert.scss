@@ -101,6 +101,10 @@
   @include u-padding(3);
   max-width: 90%;
 
+  .grid-row {
+    flex-wrap:nowrap;
+  }
+
   .usa-button--circle {
     @include u-margin(0, !important);
   }
