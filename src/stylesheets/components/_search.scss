@@ -51,22 +51,16 @@
 *******************************/
 .usa-form.usa-search.sds-inverse {
   select {
-    @include u-bg('black');
-    @include u-text('white');
-  }
-
-  ::after {
-    content: "";
-    position: absolute;
-    left: 40%;
-    top: 50%;
-    background-image: url('#{$theme-image-path}/sam/arrow-down-white.svg');
-    width:0.75rem;
-    height: 0.75rem;
+  @include u-bg('black');
+  @include u-text('white');
+  background-image: url('#{$theme-image-path}/sam/arrow-down-white.svg');
+  background-repeat: no-repeat;
+  background-size: 0.75rem;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$theme-image-path}/sam/arrow-down-white.svg', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='#{$theme-image-path}/sam/arrow-down-white.svg',
     sizingMethod='scale')";
-    }
+}
+
 
     @media only screen and (max-width:480px){
       @include u-flex('column');
@@ -74,16 +68,7 @@
         @include u-width('full');
         max-width: unset;
       }
-      ::after {
-        content: "";
-        position: absolute;
-        left: 92%;
-        top: 20%;
-        background-image: url('#{$theme-image-path}/sam/arrow-down-white.svg');
-        background-repeat: no-repeat;
-        width:0.75rem;
-        height: 0.75rem;
-      }
+
     }
     .sds-inverse__search{
       @include u-display('flex');
