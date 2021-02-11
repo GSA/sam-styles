@@ -359,3 +359,32 @@ Label Title
 .sds-status--disabled {
   @include u-bg("disabled");
 }
+
+//Roadmap tags
+.label-done {
+  background-color: #70e17b;
+  color: #1b1b1b;
+  font-weight: 700;
+}
+
+.label-in-progress {
+  background-color: #ffbe2e;
+  color: #1b1b1b;
+  font-weight: 700;
+}
+
+.label-upcoming {
+  color: #5c5c5c;
+  border-color: #adadad;
+  border-width: 1px;
+  border-style: solid;
+  background-color: transparent;
+}
+
+.label-done,
+.label-in-progress,
+.label-upcoming {
+  line-height: 1.5;
+  margin-left: 0.75rem;
+  text-decoration: none;
+}
