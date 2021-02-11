@@ -2,10 +2,12 @@
   @include u-margin-top(1);
   @include u-margin-bottom('205');
   @include u-padding('105');
-  @include u-border-top('05');
-  @include u-border-x(0);
-  @include u-border-bottom(0);
-  @include u-border('base-lighter');
+  &.sds-result-item__divided{
+    @include u-border-top('05');
+    @include u-border-x(0);
+    @include u-border-bottom(0);
+    @include u-border('base-lighter');
+  }
 
   .action-menu {
     @include u-height('full');
