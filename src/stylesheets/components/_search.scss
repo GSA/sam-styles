@@ -46,40 +46,6 @@
   }
 }
 
-/*******************************
-       Inverse Select
-*******************************/
-.usa-form.usa-search.sds-inverse {
-  select {
-  @include u-bg('black');
-  @include u-text('white');
-  background-image: url('#{$theme-image-path}/sam/arrow-down-white.svg');
-  background-repeat: no-repeat;
-  background-size: 0.75rem;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$theme-image-path}/sam/arrow-down-white.svg', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='#{$theme-image-path}/sam/arrow-down-white.svg',
-    sizingMethod='scale')";
-}
-
-
-    @media only screen and (max-width:480px){
-      @include u-flex('column');
-      select {
-        @include u-width('full');
-        max-width: unset;
-      }
-
-    }
-    .sds-inverse__search{
-      @include u-display('flex');
-      @include u-flex('row');
-      @include u-width('full');
-      @media only screen and (min-width:480px){
-        @include u-flex('row');
-      }
-    }
-}
-
 /************************************
        Big Search USWDS OVERRIDES
 *************************************/
