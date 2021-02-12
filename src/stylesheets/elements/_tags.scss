@@ -362,28 +362,29 @@ Label Title
 
 //Roadmap tags
 .label-done {
-  background-color: #70e17b;
-  color: #1b1b1b;
+  @extend .roadmap-label;
+  @include u-bg("primary");
+  @include u-text("ink");
   font-weight: 700;
 }
 
 .label-in-progress {
-  background-color: #ffbe2e;
-  color: #1b1b1b;
+  @extend .roadmap-label;
+  @include u-bg("warning");
+  @include u-text("ink");
   font-weight: 700;
 }
 
 .label-upcoming {
-  color: #5c5c5c;
-  border-color: #adadad;
+  @extend .roadmap-label;
+  @include u-text("base-light");
+  @include u-border("base-light");
   border-width: 1px;
   border-style: solid;
   background-color: transparent;
 }
 
-.label-done,
-.label-in-progress,
-.label-upcoming {
+.roadmap-label {
   line-height: 1.5;
   margin-left: 0.75rem;
   text-decoration: none;
