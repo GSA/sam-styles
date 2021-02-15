@@ -377,8 +377,8 @@ Label Title
 
 .label-upcoming {
   @extend .roadmap-label;
-  @include u-text("base-light");
-  @include u-border("base-light");
+  @include u-text("base");
+  @include u-border("base");
   border-width: 1px;
   border-style: solid;
   background-color: transparent;
