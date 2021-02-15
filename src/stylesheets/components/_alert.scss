@@ -51,14 +51,15 @@
   @include u-maxw('mobile');
   @include u-radius('lg');
   @include u-display('flex');
-  @include u-flex('row', 'justify');
+  @include u-flex('row');
   @include u-margin-top('105');
+  @include u-padding('05');
 
   .sds-alert--block-icon {
     @include u-bg('warning-lighter');
     @include u-text('warning');
     @include u-radius('lg');
-    margin: auto 10px;
+    margin: 10px 15px;
   }
 
   label {
@@ -99,6 +100,10 @@
   @include u-margin(3);
   @include u-padding(3);
   max-width: 90%;
+
+  .grid-row {
+    flex-wrap:nowrap;
+  }
 
   .usa-button--circle {
     @include u-margin(0, !important);
