@@ -14,6 +14,7 @@
 
 .usa-footer__nav {
   @include u-maxw('full');
+  @include u-padding-bottom(1);
 }
 
 .sds-footer__logo {
