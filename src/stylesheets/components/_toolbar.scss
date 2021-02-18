@@ -37,6 +37,10 @@
     background-repeat: no-repeat;
     margin-left: -1.1rem;
     padding-left: 1.1rem;
+
+    .usa-sidenav a{
+      @include u-padding-y(0);
+    }
   }
 
 .sds-toolbar + * {
