@@ -86,6 +86,8 @@ import { sdsAngleCircle } from "./sdsAngleCircle";
 import { sdsAddReq } from "./sdsAddReq";
 import { sdsAttachment } from "./sdsAttachment";
 import { sdsReceipt } from "./sdsReceipt";
+import { sdsStackblitz } from "./sdsStackblitz";
+
 const prefix = "sds";
 
 const _iconsCache = {
@@ -176,7 +178,8 @@ const _iconsCache = {
   sdsAddReq: sdsAddReq,
   sdsAttachment: sdsAttachment,
   sdsUnlink: sdsUnlink,
-  sdsReceipt: sdsReceipt
+  sdsReceipt: sdsReceipt,
+  sdsStackblitz: sdsStackblitz,
 };
 
 export {
@@ -269,5 +272,6 @@ export {
   sdsAttachment,
   sdsUnlink,
   sdsDocumentPdf,
-  sdsReceipt
+  sdsReceipt,
+  sdsStackblitz,
 };

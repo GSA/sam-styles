@@ -13,6 +13,19 @@
   &--unstyled {
     @include unstyled-list;
   }
+  &--subdomain {
+    @include unstyled-list;
+    @include u-font('sans', 'sm');
+    @include u-text('semibold');
+    li{
+      @include u-margin-y(2);
+    }
+    .usa-link{
+      &--active{
+        @include u-text('ink');
+      }
+    }
+  }
 
   &--no-bullets {
     padding-left: 0;
@@ -33,17 +46,14 @@
       @include u-measure($theme-text-measure-wide);
       @include u-margin-bottom(1);
       @include u-display('flex');
-      @include u-flex('align-center');
-      .sds-list__item-icon {
-        align-self: flex-start;
-      }
       .usa-link {
         @include u-float('left');
       }
     }
     svg {
       @include u-margin-right(1);
-      @include u-font('sans', 'lg');
+      @include u-display('block');
+      font-size: 1.25rem;
     }
   }
 

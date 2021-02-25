@@ -61,7 +61,7 @@ variants:
               icon:
                 icon: request
                 classes: 'fa-flip-horizontal'
-            - text: Messages
+            - text: Notifications
               icon:
                 icon: messages
             - text: Workspace

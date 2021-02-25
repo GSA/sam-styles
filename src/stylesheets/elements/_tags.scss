@@ -359,3 +359,33 @@ Label Title
 .sds-status--disabled {
   @include u-bg("disabled");
 }
+
+//Roadmap tags
+.label-done {
+  @extend .roadmap-label;
+  @include u-bg("primary");
+  @include u-text("ink");
+  font-weight: 700;
+}
+
+.label-in-progress {
+  @extend .roadmap-label;
+  @include u-bg("warning");
+  @include u-text("ink");
+  font-weight: 700;
+}
+
+.label-upcoming {
+  @extend .roadmap-label;
+  @include u-text("base");
+  @include u-border("base");
+  border-width: 1px;
+  border-style: solid;
+  background-color: transparent;
+}
+
+.roadmap-label {
+  line-height: 1.5;
+  margin-left: 0.75rem;
+  text-decoration: none;
+}

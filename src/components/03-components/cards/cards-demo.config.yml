@@ -54,6 +54,7 @@ context:
   card:
     color: null
     title: Contract Opportunities
+    subtitle: Lorem Ipsum
     header:
       style: left
     body:
@@ -156,6 +157,16 @@ variants:
           icon:
             icon: question-circle
             classes: fa-2x
+  - name: collapsible
+    label: Collapsible Card
+    context: 
+      card: 
+        modifiers:
+          - collapsible
+        body:
+          type:
+            - collapsed
+      
   - name: list
     label: List
     context:

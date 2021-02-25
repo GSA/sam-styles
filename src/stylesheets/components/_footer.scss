@@ -7,17 +7,19 @@
 --------------------*/
 
 
-.usa-footer__secondary-link a, .usa-footer__primary-link:hover {
+.usa-footer__secondary-link a,
+.usa-footer__primary-link:hover {
   @include u-text("no-underline");
 }
 
 .usa-footer__nav {
   @include u-maxw('full');
+  @include u-padding-bottom(1);
 }
 
 .sds-footer__logo {
   @include u-display("flex");
-  @include u-flex("justify-center");
+  @include u-flex("justify-start");
 }
 
 .sds-footer__logo-link {
@@ -102,6 +104,7 @@
       border: none;
       border-radius: 50%;
     }
+
     .sds-feedback__closed {
       @include u-padding(1);
       @include u-bg("primary");
@@ -110,6 +113,7 @@
       border: none;
       border-radius: 50%;
     }
+
     .sds-feedback__title {
       @include u-font("sans", "sm");
       @include u-text("base-dark");
@@ -156,4 +160,3 @@
     }
   }
 }
-

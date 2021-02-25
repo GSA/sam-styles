@@ -9,13 +9,17 @@
 .sds-toolbar {
   z-index: 2;
   border: 1px solid #fff;
-  overflow: hidden;
+  overflow: visible;
   display: inline-block;
   }
   .sds-toolbar a {
     text-decoration: none;
     color: #76766a;
   }
+  .sds-toolbar .usa-sidenav--styled a {
+    color: color("ink");
+  }
+
 
   .sds-toolbar .usa-sidenav .usa-sidenav__sublist .usa-current::after {
     background-color: transparent;
@@ -46,7 +50,7 @@
   border: 1px solid #d8d8d8;
   box-shadow: 0 14px 24px 0 rgba(0, 0, 0, 0.06);
   width: 300px;
-  height: fit-content;
+  height: 100%;
 }
 
 .sds-toolbar__header {
@@ -132,9 +136,10 @@
 
 /* Accordion inside toolbar tweaks */
 .sds-toolbar.sds-toolbar--expanded .sds-toolbar__content > .sds-accordion {
-  margin-left: -1px;
+  margin-left: -3px;
   margin-right: -1px;
-  margin-bottom: -1px;
+  margin-bottom: -3px;
+  padding: 3px;
   @include u-display('block');
 }
 

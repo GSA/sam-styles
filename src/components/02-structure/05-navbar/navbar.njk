@@ -39,7 +39,11 @@
 
         <div class="tablet-lg:order-2 margin-left-2">
           <!-- Actions Menu Trigger-->
-          {% render '@actions--single', {type: 'labeled'}, true %}
+          <button class="usa-button sds-button--action">
+            <span>Actions</span>
+            <i class="sds fa-ellipsis fa-fw" aria-hidden="true" title="Screen reader description" ></i>
+            <span class="sr-only">Screen reader description</span>
+          </button>
         </div>
       </div>
     </div>
