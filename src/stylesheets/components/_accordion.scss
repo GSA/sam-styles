@@ -144,3 +144,17 @@
     }
   }
 }
+
+.sds-card {
+  .usa-accordion--bordered.sds-accordion-next {
+    @include u-padding-x(0);
+  }
+  .sds-accordion-next {
+    .sds-accordion-title {
+      @include u-text('secondary-dark');
+    }
+  }
+  .sds-accordion-next .mat-accordion .mat-expansion-panel .mat-expanded .sds-accordion-title {
+    @include u-text('base-dark');
+  }
+}
