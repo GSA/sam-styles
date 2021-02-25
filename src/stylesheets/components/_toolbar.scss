@@ -366,5 +366,10 @@
   box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
 }
 
+.usa-sidenav__sublist {
+  li {
+    @include u-margin-bottom(0);
+  }
+}
 
 /* stylelint-enable */
