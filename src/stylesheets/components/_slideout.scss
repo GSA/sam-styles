@@ -2,13 +2,14 @@ $slide-out-width: 15rem;
 
 .dialog-slide-out {
   position: fixed !important;
-  bottom: 0;
-  top: 0;
+  bottom: 0px;
+  top: 0px;
   width: $slide-out-width;
   height: 100%;
+  right: 0px;
 
   &.sds-dialog__container{
-    max-height: unset;
+    max-height: none;
     padding: 0;
   }
 }
