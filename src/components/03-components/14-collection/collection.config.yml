@@ -3,22 +3,22 @@ status: wip
 preview: "@sam-grid"
 variants:
   - name: default
-    label: Collection
+    label: Default
     context:
       label:
         classes: "collection"
   - name: media
-    label: Collection Media
+    label: Media
     context:
       label:
         classes: "collection--media"
   - name: calendar
-    label: Collection Calendar
+    label: Calendar
     context:
       label:
         classes: "collection--calendar"
   - name: heading
-    label: Collection Heading
+    label: Heading
     context:
       label:
         classes: "collection--condensed"

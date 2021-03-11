@@ -1,0 +1,33 @@
+label: Step Indicator
+status: wip
+preview: "@sam-grid"
+variants:
+  - name: default
+    label: Default
+    context:
+      label:
+        classes: "usa-step-indicator"
+
+  - name: no labels
+    label: No Labels
+    context:
+      label:
+        classes: "usa-step-indicator--no-labels"
+
+  - name: Centered
+    label: Centered
+    context:
+      label:
+        classes: "usa-step-indicator--center"
+
+  - name: counters
+    label: Counters
+    context:
+      label:
+        classes: "usa-step-indicator--counters"
+
+  - name: small
+    label: Small
+    context:
+      label:
+        classes: "usa-step-indicator--counters-sm"
