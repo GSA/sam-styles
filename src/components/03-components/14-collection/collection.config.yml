@@ -1,0 +1,24 @@
+label: Collection
+status: wip
+preview: "@sam-grid"
+variants:
+  - name: default
+    label: Collection
+    context:
+      label:
+        classes: "collection"
+  - name: media
+    label: Collection Media
+    context:
+      label:
+        classes: "collection--media"
+  - name: calendar
+    label: Collection Calendar
+    context:
+      label:
+        classes: "collection--calendar"
+  - name: heading
+    label: Collection Heading
+    context:
+      label:
+        classes: "collection--condensed"
