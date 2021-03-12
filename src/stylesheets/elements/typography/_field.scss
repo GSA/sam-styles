@@ -15,11 +15,19 @@
   .sds-field__name {
     @include u-display("inline-block");
     @include u-margin-right("2px");
+    // class used to vertically align field name to tag text
+    &.has-usa-tag{
+      vertical-align: middle;
+      padding-top: 4px;
+    }
   }
   .sds-field__value {
     @include u-font("sans", $theme-body-font-size);
     @include u-display("inline-block");
     @include u-text("semibold");
+    &.left-align{
+      margin-left: -3.5rem;
+    }
 
     &--small {
       @include u-font("sans", "3xs");
