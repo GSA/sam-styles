@@ -1,0 +1,42 @@
+.usa-step-indicator__segment--complete {
+  &::before {
+    @include u-bg('secondary-dark');
+  }
+
+  &::after {
+    @include u-bg('secondary-dark');
+  }
+
+  .usa-step-indicator__segment-label {
+    @include u-text('secondary-dark');
+  }
+}
+
+.usa-step-indicator__segment--current {
+  &::before {
+    @include u-bg('secondary-light');
+  }
+
+  &::after {
+    @include u-bg('secondary-light');
+  }
+
+  .usa-step-indicator__segment-label {
+    @include u-text('secondary-light');
+  }
+}
+
+.usa-step-indicator__total-steps {
+ @include u-text('secondary-light');
+}
+.usa-step-indicator__current-step {
+  @include u-bg('secondary-light');
+}
+
+.usa-step-indicator--counters .usa-step-indicator__segment--complete::before, .usa-step-indicator--counters-sm .usa-step-indicator__segment--complete::before {
+  @include u-bg('secondary-dark');
+}
+
+.usa-step-indicator--counters .usa-step-indicator__segment--current::before, .usa-step-indicator--counters-sm .usa-step-indicator__segment--current::before {
+  @include u-bg('secondary-light');
+}
