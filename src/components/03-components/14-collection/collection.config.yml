@@ -17,8 +17,8 @@ variants:
     context:
       label:
         classes: "collection--calendar"
-  - name: heading
-    label: Heading
+  - name: condensed
+    label: Condensed
     context:
       label:
         classes: "collection--condensed"
