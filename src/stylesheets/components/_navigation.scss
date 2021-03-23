@@ -99,6 +99,9 @@
       @include u-top('neg-05');
       @include u-right(-2px);
     }
+    &:hover, &.usa-current{
+    @include add-bar('2px', 'primary', 'bottom', 1, 1, -2px);
+   }
   }
 }
 
