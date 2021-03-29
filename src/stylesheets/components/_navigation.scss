@@ -65,8 +65,10 @@
 
 .usa-nav__secondary-links {
   .usa-nav__secondary-item {
-    svg {
-      color: color('black');
+    .counter-icon{
+      color: red;
+      margin-top: -1rem;
+      margin-right: -1.1rem;
     }
     @include at-media($theme-header-min-width) {
       padding-left: units(3);
