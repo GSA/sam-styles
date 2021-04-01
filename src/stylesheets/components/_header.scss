@@ -11,9 +11,10 @@
 .usa-menu-btn {
   @include button-unstyled;
 
-  .fa-layers-counter {
-    @include u-top('neg-1px');
-    @include u-right(2px);
+  .counter-icon{
+    color: red !important;
+    margin-top: -2.4em;
+    margin-left: 2.4em;
   }
 }
 
