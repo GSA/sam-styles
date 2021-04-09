@@ -143,6 +143,7 @@
     .sds-dialog__container {
         @extend .sds-dialog__container;
         height: 100vh;
+        max-height: none;
         padding: 0;
     }
 }
