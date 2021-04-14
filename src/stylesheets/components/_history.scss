@@ -3,7 +3,7 @@
 
 ul.sds-history {
 
-    padding: 1em 0 0 2em;
+    padding: 2em 0 0 2em;
     margin: 0;
     list-style: none;
     position: relative;
@@ -18,11 +18,10 @@ ul.sds-history {
             content: " ";
             height: 100%;
             width: 1px;
-
-            @include u-bg("base-light");
+            @include u-bg("accent-cool");
             position: absolute;
             top: 0;
-            left: calc(0.5em - 0.5px);
+            left: calc(1em - 1px);
             z-index: -1;
         }
         &:first-of-type::before {
@@ -44,24 +43,16 @@ ul.sds-history {
     }
 
     .sds-history__bullet {
-        width: 1em;
-        height: 1em;
-        min-width: 1em;
-        min-height: 1em;
+        width: 35px;
+        height: 32px;
         box-sizing: border-box;
         border-radius: 50%;
-        background: white;
         z-index: 1;
-        margin-right: 1em;
-        @include u-bg("base-light");
-        .svg-inline--fa {
-            position: absolute;
-            top: calc(50% - 0.5em);
-            left: 0.25em;
-            z-index: 1;
-        }
+        @include u-bg("white");
+        @include u-border("black");
         &--selected {
-            @include u-bg("base");
+            @include u-bg("secondary-light");
+            @include u-border("secondary-light");
         }
 
         // color variants
