@@ -29,7 +29,7 @@
     @include u-bg('secondary-dark');
   }
 
-  .usa-step-indicator__segment-label {
+  .usa-step-indicator__segment-label{
     @include u-text('secondary-dark');
   }
 }
@@ -46,4 +46,7 @@
   .usa-step-indicator__segment-label {
     @include u-text('secondary-light');
   }
+}
+.usa-step-indicator__segment-label {
+    @include u-text('no-underline');
 }
