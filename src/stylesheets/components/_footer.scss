@@ -12,6 +12,10 @@
   @include u-text("no-underline");
 }
 
+.usa-footer__secondary-link a:hover {
+  @include u-color('secondary-dark');
+}
+
 .usa-footer__nav {
   @include u-maxw('full');
   @include u-padding-bottom(1);
