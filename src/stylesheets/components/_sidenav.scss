@@ -3,13 +3,13 @@
     border-top: none;
   }
 
-  a {
+  a:not(.usa-button) {
     color: color("ink");
     font-weight: font-weight("semibold");
 
     &:hover {
-      background-color: color("base-lightest");
-      color: color("secondary-light");
+      background-color: transparent;
+      color: color("secondary");
     }
   }
 
