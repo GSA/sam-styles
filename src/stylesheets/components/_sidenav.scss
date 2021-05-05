@@ -53,7 +53,26 @@
       }
 
     }
+  }
 
+  &.sds-subpanel {
+    .usa-sidenav__item {
+      a:not(.usa-button) {
+        @include typeset-link;
+        text-decoration: none;
+        font-weight: font-weight("semibold");
 
+        &:hover {
+          @include u-border('1px', 'base-light');
+          color: color("base-dark");
+          background-color: color("base-lightest");
+          
+        }
+      }
+
+      a.usa-link--active {
+        color: color("base-dark");
+      }
+    }
   }
 }
