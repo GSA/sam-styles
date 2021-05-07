@@ -4,7 +4,8 @@
 {%- if (name == 'White') -%}
 {% set bkg = "bg-base-lightest " -%}
 {% endif -%}
-<div class="{{ bkg }}padding-4">
+<h4 class="padding-left-4">Current SAM buttons</h4>
+<div class="{{ bkg }}padding-x-4">
   <div class="grid-row">
     <div class="grid-col">
       <div class="padding-y-2">{% render '@button--single', button %}</div>
@@ -22,6 +23,56 @@
         </div>
         <div class="grid-col padding-2">
           <button class="usa-button {{button.classes}} usa-button--disabled">Disabled</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 class="padding-left-4">Current USWDS buttons</h4>
+<div class="{{ bkg }}padding-x-4">
+  <div class="grid-row">
+    <div class="grid-col">
+      <div class="padding-y-2">
+        <div class="padding-y-2"><button class="usa-theme usa-button {{button.classes}} usa-theme">Button</div>
+      </div>
+    </div>
+    <div class="grid-col">
+      <div class="grid-row">
+        <div class="grid-col padding-2">
+          <button class="usa-theme usa-button {{button.classes}} usa-button--hover">Hover</button>
+        </div>
+        <div class="grid-col padding-2">
+          <button class="usa-theme usa-button {{button.classes}} usa-button--active">Active</button>
+        </div>
+        <div class="grid-col padding-2">
+          <button class="usa-theme usa-button {{button.classes}} usa-focus">Focused</button>
+        </div>
+        <div class="grid-col padding-2">
+          <button class="usa-theme usa-button {{button.classes}} usa-button--disabled">Disabled</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 class="padding-left-4">USWDS pattern using SAM theme buttons</h4>
+<div class="{{ bkg }}padding-x-4">
+  <div class="grid-row">
+    <div class="grid-col">
+      <div class="padding-y-2"><button class="usa-theme usa-button {{button.classes}} usa-pattern">Button</div>
+    </div>
+    <div class="grid-col">
+      <div class="grid-row">
+        <div class="grid-col padding-2">
+          <button class="usa-pattern usa-button {{button.classes}} usa-button--hover">Hover</button>
+        </div>
+        <div class="grid-col padding-2">
+          <button class="usa-pattern usa-button {{button.classes}} usa-button--active">Active</button>
+        </div>
+        <div class="grid-col padding-2">
+          <button class="usa-pattern usa-button {{button.classes}} usa-focus">Focused</button>
+        </div>
+        <div class="grid-col padding-2">
+          <button class="usa-pattern usa-button {{button.classes}} usa-button--disabled">Disabled</button>
         </div>
       </div>
     </div>

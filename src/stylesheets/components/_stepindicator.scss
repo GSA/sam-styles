@@ -47,3 +47,7 @@
     @include u-text('secondary-light');
   }
 }
+// BREAK THEMES
+.usa-step-indicator.usa-step-indicator--counters{
+  @import "../theme/_uswds-theme-color.scss";
+}

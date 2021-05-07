@@ -4,10 +4,6 @@
 /*-------------------
        Header
 --------------------*/
-.SAM-theme{
-  @import 'sds-theme-color';
-}
-
 .usa-menu-btn {
   @include button-unstyled;
 
@@ -91,4 +87,13 @@
       }
     }
   }
+}
+
+/*-------------------
+ USWDS THEME
+--------------------*/
+.usa-header--extended .usa-nav__primary-item > .usa-current::after {
+  &--blue {
+      @include u-bg("info-dark");
+    }
 }

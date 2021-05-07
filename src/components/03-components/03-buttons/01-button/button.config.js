@@ -18,6 +18,7 @@ const sdsvariants =[
 const usaclasses = usavariants.map(i => 'usa-button--' + i);
 const sdsclasses = sdsvariants.map(i => 'sds-button--' + i);
 usaclasses.splice(usavariants.length-2,1,"usa-button--outline usa-button--inverse");
+// const usaclasses = usavariants.map(i => 'usa-theme' + i);
 const variantNames   = [...usavariants, ...sdsvariants];
 const variantClasses = [...usaclasses,  ...sdsclasses];
 
@@ -50,4 +51,3 @@ function variants() {
   }
   return variants;
 }
-
