@@ -1,0 +1,13 @@
+.switch-theme-button{
+    padding-left: 4px;
+    -webkit-font-smoothing: inherit;
+    color: #005ea2;
+    text-decoration: underline;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    font-weight: 400;
+    margin: 0;
+    text-align: left;
+}

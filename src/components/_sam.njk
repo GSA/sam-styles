@@ -17,9 +17,11 @@
 
   </head>
   <body>
-    {% block body %}
-      {{ yield }}
-    {% endblock %}
+    <div id="containing-div" hidden>
+      {% block body %}
+        {{ yield }}
+      {% endblock %}
+    </div>
 
     <script src="{{ '/assets/scripts/uswds/uswds.min.js' | path }}"></script>
     <script src="{{ '/sds.js' | path }}"></script>
