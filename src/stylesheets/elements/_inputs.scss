@@ -132,3 +132,12 @@
     position: relative;
   }
 }
+
+// textarea/input character count
+.usa-character-count {
+  max-width: min-content;
+  textarea {
+    width: 320px;
+    max-width: none;
+  }
+}
