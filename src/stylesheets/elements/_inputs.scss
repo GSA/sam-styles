@@ -100,6 +100,15 @@
 
 }
 
+// Checkbox and Radio
+.usa-checkbox__label::before, .usa-radio__label::before {
+  margin-right: 0.5rem;
+}
+
+.usa-checkbox__label-description,  .usa-radio__label-description {
+  font-size: 85%;
+}
+
 //checkbox
 .usa-checkbox__label[aria-checked=mixed]::before {
   @include u-bg('primary');
