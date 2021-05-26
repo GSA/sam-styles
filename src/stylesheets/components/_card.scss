@@ -189,11 +189,23 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
   }
 
   &--vertical {
-    @include u-display('flex');
+    @include at-media('tablet-lg') {
+      @include u-display('flex');
 
-    .sds-card__header {
-      @include u-border-right('base-light', 'solid', $sds-card-border-width);
-      border-top-right-radius: 0;
+      .sds-card__header {
+        @include u-border-right('base-light', 'solid', $sds-card-border-width);
+        border-top-right-radius: 0;
+      }
+    }
+
+    @include at-media('mobile') {
+      .sds-card__header {
+        text-align: center;
+      }
+
+      .sds-card__body {
+        text-align: center;
+      }
     }
   }
 
