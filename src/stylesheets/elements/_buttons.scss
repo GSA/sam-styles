@@ -76,12 +76,12 @@
 .usa-button--outline {
   background-color: transparent;
   box-shadow: none;
-  @include u-border("base");
+  @include u-border("primary");
   @include u-text("ink");
   @include u-border-width('05');
 
   &:visited {
-    color: color("ink");
+    color: color("primary-dark");
     @include u-border("base-dark");
     @include u-border-width("2px");
     @include u-border-width('05');
@@ -92,7 +92,7 @@
     background-color: transparent;
     box-shadow: none;
     @include u-text("ink");
-    @include u-border("base-dark");
+    @include u-border("primary-dark");
     @include u-border-width('05');
   }
 
@@ -100,7 +100,7 @@
   &:active {
     background-color: transparent;
     color: color("ink");
-    @include u-border("base-darker");
+    @include u-border("primary-darker");
     @include u-border-width('05');
     box-shadow: none;
   }
