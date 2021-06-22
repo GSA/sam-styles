@@ -5,16 +5,16 @@
 
   &.usa-button--hover,
   &:hover {
-    @include u-bg("primary-light");
-    @include u-border("primary-light");
+    @include u-bg("primary-dark");
+    @include u-border("primary-dark");
     @include u-border-width("2px");
-    @include u-text("secondary-darker");
+    @include u-text("white");
   }
 
   &.usa-button--active,
   &:active {
-    @include u-bg("secondary-darker");
-    @include u-border("secondary-darker");
+    @include u-bg("primary-darker");
+    @include u-border("primary-darker");
     @include u-text("white");
   }
 
@@ -39,7 +39,7 @@
     &:hover {
       border: none;
       @include u-bg("transparent");
-      @include u-text("underline","warning-darker");
+      @include u-text("underline","ink");
     }
   }
 }
@@ -76,27 +76,40 @@
 .usa-button--outline {
   background-color: transparent;
   box-shadow: none;
+  @include u-border("base");
+  @include u-text("ink");
+  @include u-border-width('05');
 
   &:visited {
-    color: color("primary");
+    color: color("ink");
+    @include u-border("base-dark");
+    @include u-border-width("2px");
+    @include u-border-width('05');
   }
 
   &.usa-button--hover,
   &:hover {
     background-color: transparent;
     box-shadow: none;
+    @include u-text("ink");
+    @include u-border("base-dark");
+    @include u-border-width('05');
   }
 
   &.usa-button--active,
   &:active {
     background-color: transparent;
-    color: color("secondary-darker");
+    color: color("ink");
+    @include u-border("base-darker");
+    @include u-border-width('05');
     box-shadow: none;
   }
 
   &.usa-button--inverse {
     background-color: transparent;
     color: color("white");
+    @include u-border("primary");
+    @include u-border-width('05');
     box-shadow: none;
 
     &:visited {
@@ -106,58 +119,89 @@
 
     &.usa-button--hover,
     &:hover {
-      background-color: transparent;
-      color: color("base-lightest");
+      @include u-border("primary-dark");
       box-shadow: none;
     }
 
     &.usa-button--active,
     &:active {
-      background-color: transparent;
-      color: color("base-light");
+      @include u-border("primary-darker");
       box-shadow: none;
     }
 
     &:disabled {
       background-color: transparent;
+      @include u-border("base");
       color: color("base-light");
       box-shadow: none;
     }
   }
 }
 
-.usa-button--base {
+.usa-button--accent-warm {
   color: color("gold-70");
-  background-color: color("accent-warm-lighter");
-  @include u-border("base-light");
+  background-color: color("accent-warm-light");
+  @include u-border("accent-warm-light");
 
   &.usa-button--hover,
   &:hover {
     color: color("gold-70");
-    background-color: color("white");
-    @include u-border("base");
+    background-color: color("accent-warm");
+    @include u-border("accent-warm");
   }
 
   &.usa-button--active,
   &:active {
-    color: color("white");
-    background-color: color("base-dark");
-    @include u-border("base-dark");
+    color: color("ink");
+    background-color: color("accent-warm-dark");
+    @include u-border("accent-warm-dark");
   }
 }
 
-.usa-button--secondary {
+.usa-button--primary-lighter {
   background-color: color("primary-lighter");
+  color: color("secondary-darker");
+  @include u-border("primary-lighter");
 
   &.usa-button--hover,
   &:hover {
-    background-color: color("white");
+    background-color: color("primary-light");
+    @include u-border("primary-light");
+    color: color("secondary-darker");
   }
 
   &.usa-button--active,
   &:active {
     color: color("secondary-darker");
-    background-color: color("white");
+    background-color: color("primary");
+    @include u-border("primary");
+  }
+
+  &.usa-button--disabled,
+  &:disabled {
+    color: color("disabled");
+    @include u-border("disabled");
+    background-color: transparent;
+  }
+}
+
+.usa-button--secondary {
+  background-color: color("secondary");
+  color: color("white");
+  @include u-border("secondary");
+
+  &.usa-button--hover,
+  &:hover {
+    background-color: color("secondary-dark");
+    @include u-border("secondary-dark");
+    color: color("white");
+  }
+
+  &.usa-button--active,
+  &:active {
+    color: color("white");
+    background-color: color("secondary-darker");
+    @include u-border("secondary-darker");
   }
 
   &.usa-button--disabled,
@@ -171,42 +215,28 @@
 .usa-button--accent-cool {
   background-color: color("accent-cool");
   @include u-border("accent-cool");
+  @include u-text("black");
 
   &.usa-button--hover,
   &:hover {
-    background-color: color("accent-cool-lighter");
-    @include u-border("accent-cool-lighter");
-  }
-
-  &.usa-button--active,
-  &:active {
-    color: color("white");
     background-color: color("accent-cool-dark");
     @include u-border("accent-cool-dark");
-  }
-}
-
-.sds-button--danger {
-  background-color: color("error");
-  @include u-border("error");
-
-  &.usa-button--hover,
-  &:hover {
-    background-color: color("error-lighter");
-    @include u-border("error-lighter");
+    @include u-text("black");
   }
 
   &.usa-button--active,
   &:active {
-    color: color("white");
-    background-color: color("error-dark");
-    @include u-border("error-dark");
+    color: color("ink");
+    background-color: color("accent-cool-darker");
+    @include u-border("accent-cool-darker");
+    @include u-text("black");
   }
 }
 
 .sds-button--white {
   background-color: color("white");
   @include u-border("white");
+  @include u-text("secondary-darker");
   transition: box-shadow 0.2s ease-out;
 
   &.usa-button--hover,
@@ -214,13 +244,15 @@
     background-color: color("white");
     @include u-border("white");
     @include u-shadow(2);
+    @include u-text("secondary-darker");
   }
 
   &.usa-button--active,
   &:active {
     color: color("white");
-    background-color: color("base-light");
-    @include u-border("base-light");
+    background-color: color("white");
+    @include u-border("white");
+    @include u-text("secondary-darker");
   }
 }
 
@@ -523,287 +555,4 @@
     @include u-flex('column');
     flex-grow: 1;
   }
-}
-
-// ******************************
-// ******************************
-// SAM THEME USWDS PATTERN
-// ******************************
-// ******************************
-$usa-primary: #005ea2;
-$usa-primary-dark: #1a4480;
-$usa-primary-darker: #162e51;
-$usa-secondary: #d83933;
-$usa-secondary-dark: #b50909;
-$usa-secondary-darker: #8b0a03;
-$usa-base: #5c5c5c;
-$usa-base-dark: #2E2D2E;
-$usa-base-darker: #757575;
-$usa-accent-cool: #00bde3;
-$usa-accent-cool-dark: #28a0cb;
-$usa-accent-cool-darker: #07648d;
-
-
-.usa-theme.usa-button {
-  background-color: $usa-primary;
-  color: white;
-  border: none;
-
-  &.usa-button--disabled {
-    @include u-bg('disabled');
-    color: white;
-  }
-
-  &.usa-button--hover {
-    background-color: $usa-primary-dark;
-  }
-
-  &.usa-button--active {
-    background-color: $usa-primary-darker;
-  }
-
-  &--secondary {
-    background-color: $usa-secondary;
-
-    &.usa-button--hover {
-      background-color: $usa-secondary-dark;
-    }
-
-    &.usa-button--active {
-      background-color: $usa-secondary-darker;
-    }
-  }
-
-  &--base {
-    background-color: $usa-base;
-
-    &.usa-button--hover {
-      background-color: $usa-base-dark;
-    }
-
-    &.usa-button--active {
-      background-color: $usa-base-darker;
-    }
-  }
-
-  &--accent-cool {
-    background-color: $usa-accent-cool;
-    color: black;
-
-    &.usa-button--hover {
-      background-color: $usa-accent-cool-dark;
-    }
-
-    &.usa-button--active {
-      background-color: $usa-accent-cool-darker;
-    }
-  }
-}
-
-.usa-theme.usa-button--unstyled {
-  @include u-bg('white');
-  color: $usa-primary;
-
-  &.usa-button--hover {
-    color: $usa-primary-dark;
-    @include u-bg('white');
-  }
-
-  &.usa-button--active {
-    color: $usa-primary-darker;
-    @include u-bg('white');
-  }
-
-  &.usa-button--disabled {
-    @include u-text('disabled');
-    @include u-bg('white');
-  }
-}
-
-.usa-theme.usa-button--outline {
-  @include u-bg('white');
-  border: $usa-primary 2px solid;
-  color: $usa-primary;
-
-  &.usa-button--hover {
-    color: $usa-primary-dark;
-    @include u-bg('white');
-  }
-
-  &.usa-button--active {
-    color: $usa-primary-darker;
-    @include u-bg('white');
-  }
-
-  &.usa-button--disabled {
-    @include u-bg('disabled');
-    @include u-text('white');
-    @include u-border(0);
-  }
-}
-
-
-.usa-pattern.usa-button {
-  @include u-bg('primary');
-  @include u-text('secondary-dark');
-
-  &.usa-button--disabled {
-    @include u-bg('disabled');
-    @include u-text('white');
-  }
-
-  &.usa-button--hover {
-    @include u-bg('primary-dark');
-    @include u-text('white');
-  }
-
-  &.usa-button--active {
-    @include u-bg('primary-darker');
-    @include u-text('white');
-    @include u-border(0);
-  }
-}
-
-.usa-pattern.usa-button--secondary {
-  @include u-bg('secondary');
-  @include u-text('white');
-
-  &.usa-button--hover {
-    @include u-bg('secondary-dark');
-  }
-
-  &.usa-button--active {
-    @include u-bg('secondary-darker');
-    @include u-border(0);
-    @include u-text('white');
-  }
-  @include u-text('white');
-
-  &.usa-button--disabled {
-    @include u-bg('disabled');
-    @include u-text('white');
-  }
-}
-
-.usa-pattern.usa-button--base {
-  @include u-bg('base');
-  @include u-text('white');
-
-  &.usa-button--hover {
-    @include u-bg('base-dark');
-  }
-
-  &.usa-button--active {
-    @include u-bg('base-darker');
-    @include u-border(0);
-  }
-
-  &.usa-button--disabled {
-    @include u-bg('disabled');
-    @include u-text('white');
-  }
-}
-
-.usa-pattern.usa-button--unstyled {
-  @include u-bg('white');
-  @include u-text('primary');
-  text-decoration: underline;
-
-  &.usa-button--hover {
-    @include u-text('primary-darker');
-    @include u-bg('white');
-  }
-
-  &.usa-button--active {
-    @include u-text('primary-darker');
-    @include u-bg('white');
-  }
-
-  &.usa-button--disabled {
-    @include u-text('disabled');
-    @include u-bg('white');
-  }
-}
-
-.usa-pattern.usa-button--accent-cool {
-  @include u-bg('accent-cool');
-  @include u-text('secondary-dark');
-
-  &.usa-button--hover {
-    @include u-bg('accent-cool-dark');
-  }
-
-  &.usa-button--active {
-    @include u-bg('accent-cool-darker');
-    @include u-border(0);
-  }
-
-  &.usa-button--disabled {
-    @include u-bg('disabled');
-    @include u-text('white');
-  }
-}
-
-.usa-pattern.usa-button--outline {
-  @include u-bg('white');
-  @include u-text('primary');
-  @include u-border(2px);
-  @include u-border('primary');
-
-  &.usa-button--hover {
-    @include u-text('primary-dark');
-    @include u-border('primary-dark');
-    @include u-border(2px);
-    @include u-bg('white');
-  }
-
-  &.usa-button--active {
-    @include u-text('primary-darker');
-    @include u-border('primary-darker');
-    @include u-border(2px);
-    @include u-bg('white');
-  }
-
-  &.usa-button--disabled {
-    @include u-bg('disabled');
-    @include u-text('white');
-    @include u-border(0);
-  }
-}
-
-
-
-@mixin set-text-from-bg(
-  $bg-color: "default",
-  $preferred-text-color: "default",
-  $fallback-text-color: "default",
-  $wcag-target: "AA",
-  $context: false
-) {
-  $accessible-color-token: get-color-token-from-bg(
-    $bg-color,
-    $preferred-text-color,
-    $fallback-text-color,
-    $wcag-target,
-    $context
-  );
-  color: color($accessible-color-token);
-}
-
-@mixin set-text-and-bg(
-  $bg-color: "default",
-  $preferred-text-color: "default",
-  $fallback-text-color: "default",
-  $wcag-target: "AA",
-  $context: false
-) {
-  @include set-text-from-bg(
-    $bg-color,
-    $preferred-text-color,
-    $fallback-text-color,
-    $wcag-target,
-    $context
-  );
-  $bg-color: if($bg-color == "default", get-default("bg-color"), $bg-color);
-  background-color: color($bg-color);
 }

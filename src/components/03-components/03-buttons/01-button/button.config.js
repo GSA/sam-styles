@@ -1,9 +1,10 @@
 const _ = require("lodash");
 
 const usavariants = [
+  "primary-lighter",
   "secondary",
-  "base",
   "unstyled",
+  "accent-warm",
   "accent-cool",
   "outline",
   "outline-inverse",
@@ -13,7 +14,6 @@ const sdsvariants =[
   "small",
   "shadow",
   "white",
-  "danger",
 ];
 const usaclasses = usavariants.map(i => 'usa-button--' + i);
 const sdsclasses = sdsvariants.map(i => 'sds-button--' + i);

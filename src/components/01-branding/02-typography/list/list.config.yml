@@ -21,11 +21,6 @@ variants:
     context:
       modifiers:
         - unstyled
-  - name: no-bullets
-    label: List without Bullets
-    context:
-      modifiers:
-        - no-bullets
   - name: nested
     context:
       items:
@@ -37,24 +32,6 @@ variants:
               - text: Nested Item
         - text: List Item
         - text: List Item
-  - name: icon
-    label: Icon List
-    context:
-      modifiers:
-          - icon
-      items:
-        - text: List Item
-          icon:
-            icon: bell
-            classes: fa-fw
-        - text: List Item
-          icon:
-            icon: calendar
-            classes: fa-fw
-        - text: List Item
-          icon:
-            icon: book
-            classes: fa-fw
   - name: menu
     label: Menu List
     context:
@@ -84,7 +61,7 @@ variants:
             href: " "
         - link:
             text: List Item
-            href: " "          
+            href: " "
   - name: menu icon
     label: Menu List with Icons
     context:
