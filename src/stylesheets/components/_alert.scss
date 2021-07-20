@@ -317,3 +317,14 @@
     align-self: center;
   }
 }
+
+//USA-Site-Alert
+.usa-site-alert.usa-site-alert--emergency {
+  @include u-bg('error-dark');
+  .usa-alert {
+    @include u-bg('error-dark');
+  }
+    .usa-alert__heading, .usa-alert__text{
+      color: white;
+    }
+}

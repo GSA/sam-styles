@@ -12,20 +12,15 @@
       title (string): section title
       data (array<object>): array of data objects with listed keys
 #}
-<div class="sds-table__container
-  {%- if modifiers -%}
-    {%- for modifier in modifiers %} sds-table__container--{{modifier}}{% endfor -%}
-  {%- endif -%}"
->
-  <table class="sds-table">
 
+  <table class="usa-table">
     {%- if title %}
       <caption>{{title}}</caption>
     {% endif -%}
 
     {% if head %}
       <thead>
-        <tr class="sds-table__row">
+        <tr>
           {%- for header in head.headers -%}
             <th scope="col">{{header}}</th>
           {% endfor -%}
@@ -37,7 +32,7 @@
       {%- block data %}
         <tbody>
           {%- for row in body.data -%}
-            <tr class="sds-table__row">
+            <tr>
               {%- for key in body.keys %}
                 {%- if key.heading %}
                   {%- set key = key.value %}
@@ -52,4 +47,3 @@
       {% endblock -%}
     {%- endif -%}
   </table>
-</div>

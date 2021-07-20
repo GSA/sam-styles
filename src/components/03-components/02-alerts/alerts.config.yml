@@ -27,7 +27,7 @@ variants:
       buttons:
         - classes: accordion simple-toggle
           modifiers:
-            - secondary
+            - primary-lighter
           custom: aria-controls="alert-info-extension"
           icon:
             icon: caret-down
@@ -36,7 +36,7 @@ variants:
             title: false
         - classes: accordion simple-toggle
           modifiers:
-            - secondary
+            - primary-lighter
           custom: aria-controls="alert-extension"
           icon:
             icon: caret-down
@@ -45,7 +45,7 @@ variants:
             title: false
         - classes: accordion simple-toggle
           modifiers:
-            - secondary
+            - primary-lighter
           custom: aria-controls="alert-error-extension"
           icon:
             icon: caret-down
@@ -60,7 +60,7 @@ variants:
       buttons:
         - custom: aria-controls="alert1"
           modifiers:
-            - secondary
+            - primary-lighter
           classes: sds-alert--header__close simple-toggle
           icon:
             icon: times
@@ -69,7 +69,7 @@ variants:
             title: false
         - custom: aria-controls="alert2"
           modifiers:
-            - secondary
+            - primary-lighter
           classes: sds-alert--header__close simple-toggle
           icon:
             icon: times
@@ -78,15 +78,15 @@ variants:
             title: false
         - custom: aria-controls="alert3"
           modifiers:
-            - secondary
+            - primary-lighter
           classes: sds-alert--header__close simple-toggle
           icon:
             icon: times
             prefix: fa
             classes:
             title: false
-
-
-
-
-   
+  - name: uswds
+    label: USWDS
+    context:
+      label:
+        classes: "usa-alert"
