@@ -13,7 +13,9 @@
       data (array<object>): array of data objects with listed keys
 #}
 
-  <table class="usa-table">
+  <table class="usa-table   {%- if modifiers -%}
+    {%- for modifier in modifiers %} usa-table--{{modifier}}{% endfor -%}
+  {%- endif -%}">
     {%- if title %}
       <caption>{{title}}</caption>
     {% endif -%}
