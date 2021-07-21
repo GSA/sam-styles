@@ -155,3 +155,9 @@
     max-width: none;
   }
 }
+
+//small label variation
+.usa-label.usa-label--sm {
+  @include u-font('sans', '3xs');
+  @include u-text('semibold');
+}
