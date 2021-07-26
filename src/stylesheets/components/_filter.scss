@@ -17,3 +17,11 @@
 .sds-panel {
   padding: units('05') units(1);
 }
+
+.sds-filters--horizontal {
+  display: flex; 
+  formly-field {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+}

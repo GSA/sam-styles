@@ -56,3 +56,8 @@ section {
     }
   }
 }
+
+// USWDS does not support space between flex
+.flex-justify-space-between {
+  justify-content: space-between; 
+}
