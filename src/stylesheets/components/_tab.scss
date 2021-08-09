@@ -54,3 +54,37 @@
     width: 50%;
   }
 }
+
+// Style for tabs when used inside filters
+.sds-tabs--formly {
+  @include u-display('flex');
+
+
+  .sds-tabs__item {
+    @include u-padding-x('2px');
+    @include u-bg('base-lighter');
+    @include u-text('secondary-dark');
+    @include u-border-top('1px', 'secondary-lighter');
+    @include u-border-right('1px', 'secondary-lighter');
+    @include u-border-bottom('1px', 'secondary-lighter');
+    font-weight: font-weight('bold');
+    width: 50%;
+    border-left: none;
+  }
+
+  .sds-tabs__item:hover {
+    @include u-bg('base-lightest');
+  }
+
+  .sds-tabs__item[aria-selected="true"] {
+    @include u-bg('base-lightest');
+    border-bottom: none;
+    @include u-text('ink');
+  }
+
+  + .sds-tabs__content {
+    @include u-padding-x(1);
+    border-left: none;
+    border-right: none;
+  }
+}
