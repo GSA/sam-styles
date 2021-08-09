@@ -1,93 +1,3 @@
-//SDS ALERT
-
-.sds-alert {
-  @include u-padding('05');
-  @include u-radius('lg');
-  border: solid 0.1rem #fbc036;
-  width: 175px;
-
-  .sds-alert-icon {
-    @include u-display('inline-block');
-    @include u-text('center');
-    @include u-height(3);
-    @include u-width(3);
-    @include u-text('white');
-    @include u-bg('warning');
-    @include u-radius('pill');
-    @include u-padding-top('1px');
-    @include u-margin-x('05');
-  }
-  //SDS ALERT INFO
-  &.info {
-    border: solid 0.1rem #00BDE3;
-
-    .sds-alert-icon {
-      @include u-bg('info');
-    }
-  }
-  //SDS ALERT ERROR
-  &.error {
-    border: solid 0.1rem #fb5a47;
-
-    .sds-alert-icon {
-      @include u-bg('error');
-    }
-  }
-
-  &.sds-alert--small {
-    @include u-margin(0);
-    @include u-margin-top(1);
-    @include u-padding(0.5);
-    @include u-border('1px');
-    max-width: none;
-  }
-}
-//SDS ALERT BLOCK
-
-.sds-alert--block {
-  @include u-bg('warning-lighter');
-  @include u-maxw('mobile');
-  @include u-radius('lg');
-  @include u-display('flex');
-  @include u-flex('row');
-  @include u-margin-top('105');
-  @include u-padding('05');
-
-  .sds-alert--block-icon {
-    @include u-bg('warning-lighter');
-    @include u-text('warning');
-    @include u-radius('lg');
-    margin: 10px 15px;
-  }
-
-  label {
-    @include u-display('block');
-    font-weight: font-weight('semibold');
-    font-style: italic;
-  }
-
-  span {
-    @include u-display('block');
-  }
-  //SDS INFO ALERT BLOCK
-  &.info {
-    @include u-bg('info-lighter');
-
-    .sds-alert--block-icon {
-      @include u-bg('info-lighter');
-      @include u-text('info');
-    }
-  }
-  //SDS ERROR ALERT BLOCK
-  &.error {
-    @include u-bg('error-lighter');
-
-    .sds-alert--block-icon {
-      @include u-bg('error-lighter');
-      @include u-text('error');
-    }
-  }
-}
 // Alert tag - Warning
 
 .sds-alert--expanded {
@@ -212,7 +122,6 @@
   }
 }
 //ALERT--HEADER Mobile
-
 .sds-mobile-alert {
   flex-wrap: nowrap;
 
@@ -250,73 +159,6 @@
     text-overflow: ellipsis;
   }
 }
-//SDS ALERT STICKY
-.sds-alert--sticky {
-  @include u-display('flex');
-  @include u-flex('row');
-  @include u-flex('align-center');
-  @include u-width('full');
-  @include u-padding(1);
-  @include u-margin-y(1);
-  @include u-position('sticky');
-  @include u-bottom(0);
-
-  span {
-    @include u-text('semibold');
-    @include u-text('uppercase');
-    @include u-margin-right(1);
-  }
-
-  p {
-    @include u-margin-top(0);
-    @include u-margin-left(1);
-    @include u-maxw('none');
-  }
-
-  &.info {
-    @include u-bg('info-lighter');
-    @include u-border(2px);
-    @include u-border('info');
-
-    svg {
-      @include u-text('info');
-    }
-  }
-
-  &.warning {
-    @include u-bg('warning-lighter');
-    @include u-border(2px);
-    @include u-border('warning');
-
-    svg {
-      @include u-text('warning');
-    }
-  }
-
-  &.error {
-    @include u-bg('error-lighter');
-    @include u-border(2px);
-    @include u-border('error');
-
-    svg {
-      @include u-text('error');
-    }
-  }
-}
-//ALERT-BASIC
-.sds-alert--basic {
-  @include u-text('secondary-dark');
-  @include u-display('flex');
-  @include u-flex('row');
-
-  svg {
-    @include u-height(6);
-    @include u-width(6);
-    @include u-margin-right(1);
-    @include u-text('secondary-light');
-    align-self: center;
-  }
-}
 
 //USA-Site-Alert
 .usa-site-alert.usa-site-alert--emergency {
@@ -327,4 +169,93 @@
     .usa-alert__heading, .usa-alert__text{
       color: white;
     }
+}
+
+//USA ALERTS
+.usa-alert{
+  @include u-display('flex');
+  @include u-flex('align-center');
+  @include u-border('1px');
+  @include u-border('solid');
+  @include u-radius('lg');
+  @include u-margin(3);
+  @include u-padding(3);
+  @include u-bg('white');
+  max-width: 90%;
+  background-image: none;
+
+  &::before{
+    display: none;
+  }
+
+  &--info{
+    @include u-border('info');
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+  &--warning{
+    @include u-border('warning');
+  }
+  &--error{
+    @include u-border('error-dark');
+  }
+  &--success{
+    @include u-border('success');
+  }
+
+  &--slim {
+    @include u-padding-y('05');
+    svg {
+      @include u-square(3);
+    }
+  }
+
+  svg {
+    @include u-square(5);
+    @include u-display('block');
+  }
+
+  .usa-alert__body{
+    padding-left: 1.75rem;
+
+    p{
+      max-width: none;
+    }
+  }
+
+&--sm {
+    width: 175px;
+    padding: 0.25rem;
+
+    svg {
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 50%;
+    }
+
+    .usa-alert__body {
+      padding: 0 0 0 0.25rem;
+    }
+  }
+
+  &--sticky{
+      @include u-display('flex');
+      @include u-flex('row');
+      @include u-flex('align-center');
+      @include u-width('full');
+      @include u-padding(1);
+      @include u-margin-y(1);
+      @include u-position('sticky');
+      @include u-bottom(0);
+    }
+}
+.usa-site-alert {
+  background-color: white;
+  .usa-alert {
+    background-color: white;
+  }
+}
+.usa-site-alert.usa-site-alert--emergency{
+    background-color: white;
 }
