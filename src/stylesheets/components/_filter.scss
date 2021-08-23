@@ -24,4 +24,31 @@
     display: inline-block;
     margin-right: 1rem;
   }
+
+  .horizontal-filters {
+    @media only screen and (max-width: 800px){
+      display: none;
+    }
+  }
+
+  .search-input {
+    @include u-margin-left(2);
+    margin-top: -8px;
+    flex: auto;
+  }
+
+  .filters-modal {
+    display: none;
+    @media only screen and (max-width: 800px){
+      display: flex;
+    }
+  }
+
+  .horizontal-reset {
+    margin-left: auto;
+    @include u-margin-top('neg-2px');
+    @media only screen and (max-width: 800px){
+      display: none;
+    }
+  }
 }
