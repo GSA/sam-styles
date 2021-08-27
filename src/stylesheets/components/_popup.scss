@@ -2,7 +2,8 @@
   position: relative;
   display: inline-block;
 }
-.sds-popup:focus .sds-popup__content, 
+
+.sds-popup:focus .sds-popup__content,
 .sds-popup:hover .sds-popup__content {
   z-index: 10;
   opacity: 1;
@@ -132,13 +133,13 @@
     &.bottom-center {
       top: 100%;
       left: 0;
-      text-align: center
+      text-align: center;
     }
 
     &.bottom-left {
       top: 100%;
       left: 0;
-      text-align: left
+      text-align: left;
     }
 
     &.left-middle {
@@ -157,21 +158,20 @@
     }
 
     .tooltip {
-      @include u-display('inline-block');
-      @include u-bg('base-dark');
-      @include u-border('1px');
-      @include u-border('solid');
-      @include u-border('base-darkest');
-      @include u-text('base-lightest');
-      @include u-font('sans', '3xs');
-      @include u-padding-x('2px');
-      @include u-padding-y('05');
-      @include u-text('no-wrap');
-      @include u-margin('1px');
+      @include u-display("inline-block");
+      @include u-bg("base-dark");
+      @include u-border("1px");
+      @include u-border("solid");
+      @include u-border("base-darkest");
+      @include u-text("base-lightest");
+      @include u-font("sans", "3xs");
+      @include u-padding-x("2px");
+      @include u-padding-y("05");
+      @include u-text("no-wrap");
+      @include u-margin("1px");
     }
   }
 }
-
 
 // ============================
 .sds-tooltip,
@@ -223,7 +223,7 @@
     left: 0;
     top: 0;
     right: 100%;
-    text-align: end;
+    text-align: center;
     height: 100%;
 
     *:first-child {
@@ -237,14 +237,14 @@
   &.bottom {
     top: 100%;
     left: 0;
-    text-align: center
+    text-align: center;
   }
 
   &.left {
     left: 0;
     top: 0;
     right: 0%;
-    text-align: start;
+    text-align: center;
     height: 100%;
 
     *:first-child {
@@ -257,17 +257,19 @@
 
   .tooltip {
     font-weight: normal;
-    @include u-display('inline-block');
-    @include u-bg('base-dark');
-    @include u-border('1px');
-    @include u-border('solid');
-    @include u-border('base-darkest');
-    @include u-text('base-lightest');
-    @include u-font('sans', '3xs');
-    @include u-padding-x('2px');
-    @include u-padding-y('05');
-    @include u-text('no-wrap');
-    @include u-margin('1px');
+    @include u-bg("base-dark");
+    @include u-border("1px");
+    @include u-border("solid");
+    @include u-border("base-darkest");
+    @include u-text("base-lightest");
+    @include u-font("sans", "3xs");
+    @include u-padding-x("2px");
+    @include u-padding-y("05");
+    @include u-text("normal");
+    @include u-margin("1px");
+    min-width: 300px;
+    max-width: 500px;
+    text-indent: 0 !important;
   }
 }
 
@@ -286,6 +288,7 @@
   &.bottom {
     top: 100%;
     left: 0;
+    text-align: center;
   }
 
   &.left {
@@ -295,8 +298,8 @@
   }
 
   &.tooltip {
-    @include u-border('1px');
-    @include u-border('base-darkest');
+    @include u-border("1px");
+    @include u-border("base-darkest");
     background-color: white;
   }
 
