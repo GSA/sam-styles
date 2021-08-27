@@ -133,13 +133,13 @@
     &.bottom-center {
       top: 100%;
       left: 0;
-      text-align: center
+      text-align: center;
     }
 
     &.bottom-left {
       top: 100%;
       left: 0;
-      text-align: left
+      text-align: left;
     }
 
     &.left-middle {
@@ -158,21 +158,20 @@
     }
 
     .tooltip {
-      @include u-display('inline-block');
-      @include u-bg('base-dark');
-      @include u-border('1px');
-      @include u-border('solid');
-      @include u-border('base-darkest');
-      @include u-text('base-lightest');
-      @include u-font('sans', '3xs');
-      @include u-padding-x('2px');
-      @include u-padding-y('05');
-      @include u-text('no-wrap');
-      @include u-margin('1px');
+      @include u-display("inline-block");
+      @include u-bg("base-dark");
+      @include u-border("1px");
+      @include u-border("solid");
+      @include u-border("base-darkest");
+      @include u-text("base-lightest");
+      @include u-font("sans", "3xs");
+      @include u-padding-x("2px");
+      @include u-padding-y("05");
+      @include u-text("no-wrap");
+      @include u-margin("1px");
     }
   }
 }
-
 
 // ============================
 .sds-tooltip,
@@ -238,7 +237,7 @@
   &.bottom {
     top: 100%;
     left: 0;
-    text-align: center
+    text-align: center;
   }
 
   &.left {
@@ -258,19 +257,18 @@
 
   .tooltip {
     font-weight: normal;
-    @include u-display('inline-block');
-    @include u-bg('base-dark');
-    @include u-border('1px');
-    @include u-border('solid');
-    @include u-border('base-darkest');
-    @include u-text('base-lightest');
-    @include u-font('sans', '3xs');
-    @include u-padding-x('2px');
-    @include u-padding-y('05');
-    @include u-text('normal');
-    @include u-margin('1px');
+    @include u-bg("base-dark");
+    @include u-border("1px");
+    @include u-border("solid");
+    @include u-border("base-darkest");
+    @include u-text("base-lightest");
+    @include u-font("sans", "3xs");
+    @include u-padding-x("2px");
+    @include u-padding-y("05");
+    @include u-text("normal");
+    @include u-margin("1px");
     min-width: 300px;
-    text-indent: 0 !important;
+    max-width: 500px;
   }
 }
 
@@ -290,7 +288,7 @@
   &.bottom {
     top: 100%;
     left: 0;
-    text-align: center
+    text-align: center;
   }
 
   &.left {
@@ -300,8 +298,8 @@
   }
 
   &.tooltip {
-    @include u-border('1px');
-    @include u-border('base-darkest');
+    @include u-border("1px");
+    @include u-border("base-darkest");
     background-color: white;
   }
 
