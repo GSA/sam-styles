@@ -269,6 +269,7 @@
     @include u-margin("1px");
     min-width: 300px;
     max-width: 500px;
+    text-indent: 0 !important;
   }
 }
 
