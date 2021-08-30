@@ -32,9 +32,13 @@
   }
 
   .search-input {
+    margin-top: -12px;
     @include u-margin-left(2);
-    margin-top: -8px;
     flex: auto;
+    @media only screen and (max-width: 800px){
+      @include u-margin-top(0.5);
+      @include u-margin-left(0);
+    }
   }
 
   .filters-modal {
