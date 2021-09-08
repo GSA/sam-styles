@@ -24,22 +24,22 @@
   }
 
   &--unstyled {
+    @include u-text($theme-link-color);
     border: none;
-    @include u-text("underline");
-    text-decoration: none;
+
 
     &.usa-button--active,
     &:active {
       border: none;
       @include u-bg("transparent");
-      @include u-text("underline","secondary-darker");
+      @include u-text($theme-link-active-color);
     }
 
     &.usa-button--hover,
     &:hover {
+      @include u-text($theme-link-hover-color);
       border: none;
       @include u-bg("transparent");
-      @include u-text("underline","warning-darker");
     }
   }
 }
