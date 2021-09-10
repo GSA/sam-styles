@@ -26,6 +26,8 @@
   &--unstyled {
     @include u-text($theme-link-color);
     border: none;
+    text-decoration: none;
+
 
 
     &.usa-button--active,
@@ -40,6 +42,7 @@
       @include u-text($theme-link-hover-color);
       border: none;
       @include u-bg("transparent");
+      text-decoration: underline;
     }
   }
 }
