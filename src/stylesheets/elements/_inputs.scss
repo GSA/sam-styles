@@ -119,14 +119,6 @@
   background-size: .75rem auto;
 }
 
-// .usa-checkbox__label[aria-checked=mixed]::before {
-//   @include u-bg('primary');
-//   box-shadow: 0 0 0 2px #70E17B;
-//   background-image: url('#{$theme-image-path}/minus-white.svg');
-//   background-repeat: no-repeat;
-//   background-position: center center;
-//   background-size: .75rem auto;
-// }
 
 .usa-checkbox.text-align-end {
   text-align: end;
