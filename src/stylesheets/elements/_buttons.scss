@@ -236,7 +236,7 @@
 .usa-button--base {
   background-color: color("base-lighter");
   color: color("ink");
-  @include u-border("ink");
+  @include u-border("base-lighter");
 
   &.usa-button--hover,
   &:hover {
