@@ -240,16 +240,16 @@
 
   &.usa-button--hover,
   &:hover {
-    background-color: color("primary-light");
-    @include u-border("primary-light");
-    color: color("secondary-darker");
+    background-color: color("base-light");
+    @include u-border("base-light");
+    color: color("ink");
   }
 
   &.usa-button--active,
   &:active {
-    color: color("secondary-darker");
-    background-color: color("primary");
-    @include u-border("primary");
+    color: color("white");
+    background-color: color("base");
+    @include u-border("base");
   }
 
   &.usa-button--disabled,
