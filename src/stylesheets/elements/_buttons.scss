@@ -76,9 +76,9 @@
 .usa-button--outline {
   background-color: transparent;
   box-shadow: none;
-  @include u-border("primary");
-  @include u-text("ink");
-  @include u-border-width('05');
+  // @include u-border("primary");
+  // @include u-text("ink");
+  // @include u-border-width('05');
 
   &:visited {
     color: color("primary-dark");
