@@ -9,6 +9,7 @@ const usavariants = [
   "outline",
   "outline-inverse",
   "big",
+  'base'
 ];
 const sdsvariants =[
   "small",

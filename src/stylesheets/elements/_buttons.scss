@@ -233,6 +233,33 @@
   }
 }
 
+.usa-button--base {
+  background-color: color("base-lighter");
+  color: color("ink");
+  @include u-border("ink");
+
+  &.usa-button--hover,
+  &:hover {
+    background-color: color("primary-light");
+    @include u-border("primary-light");
+    color: color("secondary-darker");
+  }
+
+  &.usa-button--active,
+  &:active {
+    color: color("secondary-darker");
+    background-color: color("primary");
+    @include u-border("primary");
+  }
+
+  &.usa-button--disabled,
+  &:disabled {
+    color: color("disabled");
+    @include u-border("disabled");
+    background-color: transparent;
+  }
+}
+
 .sds-button--white {
   background-color: color("white");
   @include u-border("white");
