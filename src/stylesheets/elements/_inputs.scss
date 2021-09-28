@@ -100,6 +100,15 @@
 
 }
 
+// Checkbox and Radio
+.usa-checkbox__label::before, .usa-radio__label::before {
+  margin-right: 0.5rem;
+}
+
+.usa-checkbox__label-description,  .usa-radio__label-description {
+  font-size: 85%;
+}
+
 //checkbox
 .usa-checkbox__label[aria-checked=mixed]::before {
   @include u-bg('primary');
@@ -131,4 +140,24 @@
   .usa-fieldset {
     position: relative;
   }
+}
+
+// textarea/input character count
+.usa-character-count {
+  max-width: min-content;
+  .usa-hint {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  textarea {
+    width: 320px;
+    max-width: none;
+  }
+}
+
+//small label variation
+.usa-label.usa-label--sm {
+  @include u-font('sans', '3xs');
+  @include u-text('semibold');
 }

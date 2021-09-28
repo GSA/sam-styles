@@ -6,14 +6,18 @@
     General footer
 --------------------*/
 
-
 .usa-footer__secondary-link a,
 .usa-footer__primary-link:hover {
   @include u-text("no-underline");
 }
 
+.usa-footer__secondary-link a:hover {
+  color: #7a591a;
+  // @include u-color('secondary-dark');
+}
+
 .usa-footer__nav {
-  @include u-maxw('full');
+  @include u-maxw("full");
   @include u-padding-bottom(1);
 }
 
@@ -31,10 +35,8 @@
   @include u-maxw(10);
 }
 
-
 .usa-footer__primary-content--collapsible {
   .usa-footer__primary-link {
-
     // override USWDS arrow icon (before)
     &::before {
       content: none !important;
@@ -42,7 +44,7 @@
 
     // Apply SDS plus/minus icon (after)
     &::after {
-      background-image: url('#{$theme-image-path}/sam/bg-minus.svg');
+      background-image: url("#{$theme-image-path}/sam/bg-minus.svg");
       background-repeat: no-repeat;
       align-items: center;
       background-size: contain;
@@ -61,18 +63,14 @@
         content: none;
       }
     }
-
   }
 
   &.hidden {
-
     .usa-footer__primary-link {
-
       // Apply SDS plus/minus icon (after)
       &::after {
-        background-image: url('#{$theme-image-path}/sam/bg-plus.svg');
+        background-image: url("#{$theme-image-path}/sam/bg-plus.svg");
       }
-
     }
   }
 }

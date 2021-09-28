@@ -252,6 +252,33 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     }
   }
 
+  &--vertical {
+
+    @include at-media('mobile') {
+      .sds-card__header {
+        text-align: center;
+      }
+
+      .sds-card__body {
+        text-align: center;
+      }
+    }
+    
+    @include at-media('tablet-lg') {
+      @include u-display('flex');
+
+      .sds-card__header {
+        @include u-border-right('base-light', 'solid', $sds-card-border-width);
+        text-align: left;
+        border-top-right-radius: 0;
+      }
+
+      .sds-card__body {
+        text-align: left;
+      }
+    }
+  }
+
   &--collapsible {
     @include u-radius(0);
 

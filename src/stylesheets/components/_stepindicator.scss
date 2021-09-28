@@ -1,9 +1,9 @@
 .usa-step-indicator__total-steps {
-  @include u-text('secondary-light');
+  @include u-text('secondary');
 }
 
 .usa-step-indicator__current-step {
-  @include u-bg('secondary-light');
+  @include u-bg('secondary');
 }
 
 .usa-step-indicator--counters .usa-step-indicator__segment--complete::before,
@@ -13,7 +13,7 @@
 
 .usa-step-indicator--counters .usa-step-indicator__segment--current::before,
 .usa-step-indicator--counters-sm .usa-step-indicator__segment--current::before {
-  @include u-bg('secondary-light');
+  @include u-bg('secondary');
 }
 
 .usa-step-indicator__segment:after {
@@ -36,15 +36,15 @@
 
 .usa-step-indicator__segment--current {
   &::before {
-    @include u-bg('secondary-light');
+    @include u-bg('secondary');
   }
 
   &::after {
-    @include u-bg('secondary-light');
+    @include u-bg('secondary');
   }
 
   .usa-step-indicator__segment-label {
-    @include u-text('secondary-light');
+    @include u-text('secondary');
   }
 }
 // BREAK THEMES
