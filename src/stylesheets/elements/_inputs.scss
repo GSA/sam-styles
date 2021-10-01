@@ -143,17 +143,9 @@
 }
 
 // textarea/input character count
-.usa-character-count {
-  max-width: min-content;
-  .usa-hint {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-
-  textarea {
-    width: 320px;
-    max-width: none;
-  }
+.usa-character-count__message {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 //small label variation
