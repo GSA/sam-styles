@@ -1,6 +1,6 @@
 {
   "name": "@gsa-sam/sam-styles",
-  "version": "0.0.119",
+  "version": "0.0.120-beta.1",
   "description": "",
   "main": "index.js",
   "scripts": {
