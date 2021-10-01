@@ -17,3 +17,42 @@
 .sds-panel {
   padding: units('05') units(1);
 }
+
+.sds-filters--horizontal {
+  display: flex; 
+  formly-field {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+
+  .horizontal-filters {
+    @media only screen and (max-width: 800px){
+      display: none;
+    }
+  }
+
+  .search-input {
+    margin-top: -12px;
+    @include u-margin-left(2);
+    flex: auto;
+    @media only screen and (max-width: 800px){
+      @include u-margin-top(0.5);
+      @include u-margin-left(0);
+    }
+  }
+
+  .filters-modal {
+    display: none;
+    @media only screen and (max-width: 800px){
+      display: flex;
+    }
+  }
+
+  .horizontal-reset {
+    margin-left: auto;
+    @include u-margin-top('neg-2px');
+    @media only screen and (max-width: 800px){
+      display: none;
+    }
+  }
+}

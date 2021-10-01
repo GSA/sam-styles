@@ -10,11 +10,13 @@
     min-height: inherit;
     max-height: 90vh;
     position: relative;
-     ::-webkit-scrollbar {
+
+    ::-webkit-scrollbar {
         -webkit-appearance: none;
         width: 7px;
     }
-     ::-webkit-scrollbar-thumb {
+
+    ::-webkit-scrollbar-thumb {
         border-radius: 4px;
         background-color: rgba(0, 0, 0, .5);
         box-shadow: 0 0 1px rgba(255, 255, 255, .5);
@@ -38,7 +40,7 @@
     max-height: 65vh;
     overflow: auto;
     line-height: 20px;
-    -webkit-overflow-scrolling: touch;   
+    -webkit-overflow-scrolling: touch;
 }
 
 .sds-dialog-content.sds-dialog-content--centered {
@@ -62,23 +64,27 @@
         position: absolute;
         right: 20px;
         top: 15px;
-        width: 15px;
+        width: 20px;
         height: 20px;
         text-align: center;
         color: #9b9b9b;
     }
+
     .sds-dialog-title {
         font-size: 24px;
         font-weight: font-weight('semibold');
     }
+
     .sds-dialog-subtitle {
         font-size: 20px;
     }
+
     .sds-dialog-actions {
         margin-bottom: -10px;
         margin-top: 20px;
         justify-content: flex-end;
     }
+
     // Centers text and flex content
     .sds-dialog-section--centered {
         @include u-text('center');
@@ -93,10 +99,12 @@
     border-style: solid;
     border-radius: 8px;
     background-color: #fcfcfb;
+
     .sds-dialog-icon {
         text-align: center;
         margin-top: 5px;
     }
+
     .sds-dialog-title {
         text-align: center;
         font-size: 28px;
@@ -104,6 +112,7 @@
         margin-top: 14px;
         margin-bottom: 10px;
     }
+
     .sds-dialog-content {
         text-align: center;
         font-size: 20px;
@@ -111,6 +120,7 @@
         font-weight: font-weight('normal');
         color: #5c5c5c;
     }
+
     .sds-dialog-actions {
         margin-top: 30px;
         margin-bottom: 0px;
@@ -120,6 +130,7 @@
 
 .sds-dialog--alert-error {
     border-color: #ee601d;
+
     .sds-dialog-icon {
         color: #ee601d;
     }
@@ -127,6 +138,7 @@
 
 .sds-dialog--alert-warning {
     border-color: #febe2e;
+
     .sds-dialog-icon {
         color: #febe2e;
     }
@@ -134,8 +146,17 @@
 
 .sds-dialog--alert-info {
     border-color: #5994f6;
+
     .sds-dialog-icon {
         color: #5994f6;
+    }
+}
+
+.sds-dialog--alert-success {
+    @include u-border('primary-dark');
+
+    .sds-dialog-icon {
+        color: color("primary");
     }
 }
 
@@ -143,6 +164,10 @@
     .sds-dialog__container {
         @extend .sds-dialog__container;
         height: 100vh;
-        padding: 0;
+        height: 100vh;
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 5px;
+        padding-top: 4px;
     }
 }
