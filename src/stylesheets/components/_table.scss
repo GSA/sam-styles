@@ -5,18 +5,13 @@ $usa-table-border: "1px";
 }
 
 %usa-table--cell {
-  @include u-padding-y(1);
-  @include u-padding-x(2);
-  color: inherit;
   font-size: inherit;
   border: 0;
 }
 
-.usa-table {
-    @extend .usa-table;
+%usa-table {
     width: 100%;
     border-collapse: separate;
-    margin: 0;
 
     @include u-border('base-light', $usa-table-border);
     height: inherit;
@@ -47,13 +42,6 @@ $usa-table-border: "1px";
     tbody {
       th, td {
         @extend %usa-table--cell;
-      }
-
-      // tiger stripes for tables without subsections or expandable rows
-      &:only-of-type:not(tr) {
-        tr:nth-of-type(even) > td {
-          @include u-bg("base-lightest");
-        }
       }
 
       &.usa-table__subsection {

@@ -6,10 +6,13 @@ $sds-card-border-radius: border-radius('md');
 $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width});
 
 .usa-card {
-  @include u-padding(0);
-  @include u-border('base-light', 'solid', $sds-card-border-width);
-  border-radius: $sds-card-border-radius;
-  @include u-shadow(2);
+
+  .usa-card__container {
+    @include u-padding(0);
+    @include u-border('base-light', 'solid', $sds-card-border-width);
+    border-radius: $sds-card-border-radius;
+    @include u-shadow(2);
+  }
 
   .usa-link{
       @include u-width('full');
@@ -121,9 +124,6 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     .usa-card__header {
       @include bordered-item(true);
     }
-  }
-  .usa-button--outline {
-    @include u-bg('white');
   }
 }
 
