@@ -423,7 +423,7 @@
     width: units(6) !important;
   }
 
-  span {
+  .sds-button--icon__title {
     margin: auto 0;
     @include u-text("bold");
   }
@@ -485,7 +485,7 @@
       }
     }
 
-    span {
+    .sds-button--icon__title {
       @include u-color('base');
       @include u-text('italic');
       @include u-margin-top(1);
