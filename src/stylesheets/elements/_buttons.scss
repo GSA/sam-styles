@@ -411,6 +411,7 @@
 --------------------*/
 .sds-button.sds-button--icon {
   width: auto;  
+  height: fit-content;
   @include u-padding-x(4);
   @include u-radius("lg");
   @include u-display("flex");
@@ -425,10 +426,6 @@
   span {
     margin: auto 0;
     @include u-text("bold");
-  }
-
-  .sds-button--icon__title {
-    margin: 5px 0;
   }
 }
 
