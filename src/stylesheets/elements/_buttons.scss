@@ -501,6 +501,8 @@
 }
 
 .sds-button.sds-button--icon-lg {
+  height: 100%;
+  width: 100%;
   @include u-text('center');
   @include u-display('flex');
   @include u-flex('column');
