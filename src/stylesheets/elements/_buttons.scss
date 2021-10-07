@@ -410,8 +410,8 @@
   Icon Button
 --------------------*/
 .sds-button.sds-button--icon {
-  height: units(6);
-  min-width: units("card-lg");
+  width: auto;  
+  height: fit-content;
   @include u-padding-x(4);
   @include u-radius("lg");
   @include u-display("flex");
@@ -423,14 +423,9 @@
     width: units(6) !important;
   }
 
-  span {
-    @include u-font("sans", "3xs");
+  .sds-button--icon__title {
     margin: auto 0;
     @include u-text("bold");
-  }
-
-  .sds-button--icon__title {
-    margin: 5px 0;
   }
 }
 
@@ -490,7 +485,7 @@
       }
     }
 
-    span {
+    .sds-button--icon__title {
       @include u-color('base');
       @include u-text('italic');
       @include u-margin-top(1);
