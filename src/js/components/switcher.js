@@ -1,4 +1,4 @@
-const uswdsStyleSheet = '/sds2.css';
+const uswdsStyleSheet = '/uswds.css';
 const sdsStyleSheet = '/sds.css';
 
 if(localStorage.getItem('styleToApply') === null){
