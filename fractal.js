@@ -57,7 +57,7 @@ const themeConfig = {
 const sdsTheme = mandelbrot(themeConfig);
 
 sdsTheme.addLoadPath(__dirname + "/theme-overrides");
-sdsTheme.addStatic(__dirname + '/theme-overrides/assets');
+// sdsTheme.addStatic(__dirname + '/theme-overrides/assets');
 
 fractal.web.theme(sdsTheme);
 
