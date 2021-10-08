@@ -47,7 +47,3 @@
     @include u-text('secondary');
   }
 }
-// BREAK THEMES
-.usa-step-indicator.usa-step-indicator--counters{
-  @import "../themes/SAM/_uswds-theme-color.scss";
-}
