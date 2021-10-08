@@ -50,14 +50,13 @@ const themeConfig = {
   skin: "white",
   nav: ["docs", "components"],
   panels: ["notes", "html", "resources"],
-  styles: ["default", "/theme.css", '/tweaks.css'],
+  styles: ["default", "/theme.css", '/assets/css/tweaks.css'],
   scripts: ["default", "/theme.js"]
 };
 
 const sdsTheme = mandelbrot(themeConfig);
 
 sdsTheme.addLoadPath(__dirname + "/theme-overrides");
-// sdsTheme.addStatic(__dirname + '/theme-overrides/assets');
 
 fractal.web.theme(sdsTheme);
 
