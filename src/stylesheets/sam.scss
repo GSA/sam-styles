@@ -3,7 +3,5 @@
           SDS THEME
 *******************************/
 
-@import './theme/styles';
-@import '~uswds/dist/scss/uswds';
-@import './elements/index';
-@import './components/index';
+@import './themes/SAM/styles';
+@import 'uswds.scss'
