@@ -1,5 +1,6 @@
-const uswdsStyleSheet = '/uswds.css';
-const sdsStyleSheet = '/sds.css';
+const uswdsStyleSheet = 'uswds.css';
+const sdsStyleSheet ='sds.css';
+const stylesheetPathRegex = /((?:\.\.\/)*\/?)(?:sds|uswds)\.css/g;
 
 if(localStorage.getItem('styleToApply') === null){
     localStorage.setItem('styleToApply', 'sds');
@@ -8,21 +9,22 @@ if(localStorage.getItem('styleToApply') === null){
 
 const containingDiv = document.querySelector('#containing-div');
 
-
 updateStyleSheet();
 
 function updateStyleSheet(){
     const links = document.getElementsByTagName('link');
-    let index;
+    let index = 0;
+    let prefix = '/';
     for (let i = 0; i < links.length; i++) {
         const element = links.item(i);
-
-        if(element.getAttribute('href') === sdsStyleSheet || element.getAttribute('href') === uswdsStyleSheet){
+        const matches = stylesheetPathRegex.exec(element.getAttribute('href'));
+        if(stylesheetPathRegex.lastIndex !== 0){
             index = i;
+            prefix = matches[1];
             break;
-        }     
+        }
     }
-    links.item(index).setAttribute('href', localStorage.getItem('styleToApply') === 'sds' ? sdsStyleSheet : uswdsStyleSheet);
+    links.item(index).setAttribute('href', prefix + (localStorage.getItem('styleToApply') === 'sds' ? sdsStyleSheet : uswdsStyleSheet));
     setTimeout(()=>{
         containingDiv.hidden = null;
     }, 50)
