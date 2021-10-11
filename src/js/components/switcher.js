@@ -9,7 +9,8 @@ if(localStorage.getItem('styleToApply') === null){
 
 const containingDiv = document.querySelector('#containing-div');
 
-
+console.log(sdsStyleSheet)
+console.log(uswdsStyleSheet)
 updateStyleSheet();
 
 function updateStyleSheet(){
@@ -23,7 +24,7 @@ function updateStyleSheet(){
             break;
         }     
     }
-    links.item(index).setAttribute('href', localStorage.getItem('styleToApply') === 'sds' ? sdsStyleSheet : uswdsStyleSheet);
+    // links.item(index).setAttribute('href', localStorage.getItem('styleToApply') === 'sds' ? sdsStyleSheet : uswdsStyleSheet);
     setTimeout(()=>{
         containingDiv.hidden = null;
     }, 50)
