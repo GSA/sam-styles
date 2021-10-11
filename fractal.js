@@ -50,7 +50,7 @@ const themeConfig = {
   skin: "white",
   nav: ["docs", "components"],
   panels: ["notes", "html", "resources"],
-  styles: ["default", "/theme.css"],
+  styles: ["default", "/theme.css", '/assets/css/tweaks.css'],
   scripts: ["default", "/theme.js"]
 };
 

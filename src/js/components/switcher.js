@@ -1,5 +1,6 @@
-const uswdsStyleSheet = '/uswds.css';
-const sdsStyleSheet = '/sds.css';
+const path = require('path');
+const uswdsStyleSheet = path.join(__dirname, '/uswds.css');
+const sdsStyleSheet = path.join(__dirname, '/sds.css');
 
 if(localStorage.getItem('styleToApply') === null){
     localStorage.setItem('styleToApply', 'sds');
