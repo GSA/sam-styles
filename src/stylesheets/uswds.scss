@@ -5,6 +5,16 @@
 
 @import './themes/USWDS/required-vars';
 
-@import '~uswds/dist/scss/uswds';
+/** Add mixins first so that sam styles elements and components compile **/
+@import '~uswds/dist/scss/packages/required';
+
+/** Add custom css from SAM for components that do no exist in USWDS **/
 @import './elements/index';
 @import './components/index';
+
+/** Add remaining uswds packages last to override changes in sam-styles */
+@import '~uswds/dist/scss/packages/global';
+
+@import '~uswds/dist/scss/packages/uswds-components';
+
+@import '~uswds/dist/scss/packages/uswds-utilities';
