@@ -1,0 +1,104 @@
+/*
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+========================================
+========================================
+========================================
+----------------------------------------
+USWDS 2.2.0
+----------------------------------------
+COLOR SETTINGS
+----------------------------------------
+Read more about settings and
+USWDS color tokens in the documentation:
+https://v2.designsystem.digital.gov/style-tokens/color
+----------------------------------------
+*/
+
+/*
+----------------------------------------
+Theme palette colors
+----------------------------------------
+*/
+
+// Base colors
+$theme-color-base-family  : 'gray-cool';
+$theme-color-base-lightest: 'gray-cool-2';
+$theme-color-base-lighter : 'gray-cool-4';
+$theme-color-base-light   : 'gray-cool-20';
+$theme-color-base         : 'gray-cool-50';
+$theme-color-base-dark    : 'gray-cool-70';
+$theme-color-base-darker  : 'gray-cool-70';
+$theme-color-base-darkest : 'gray-cool-80';
+$theme-color-base-ink     : 'gray-cool-80';
+
+
+// Primary colors
+$theme-color-primary-family  : 'green-warm-vivid';
+$theme-color-primary-lightest: false;
+$theme-color-primary-lighter : 'green-warm-5v';
+$theme-color-primary-light   : 'green-warm-10v';
+$theme-color-primary         : 'green-warm-20v';
+$theme-color-primary-vivid   : 'green-warm-30v';
+$theme-color-primary-dark    : 'green-warm-40v';
+$theme-color-primary-darker  : 'green-warm-50v';
+$theme-color-primary-darkest : false;
+
+// Secondary colors
+$theme-color-secondary-family  : 'red-cool-vivid';
+$theme-color-secondary-lightest: false;
+$theme-color-secondary-lighter : 'red-cool-30v';
+$theme-color-secondary-light   : 'red-cool-40v';
+$theme-color-secondary         : 'red-cool-50v';
+$theme-color-secondary-vivid   : 'red-cool-60v';
+$theme-color-secondary-dark    : 'red-cool-70v';
+$theme-color-secondary-darker  : 'red-cool-80v';
+$theme-color-secondary-darkest : false;
+
+// Accent warm colors
+$theme-color-accent-warm-family  : 'blue';
+$theme-color-accent-warm-lightest: false;
+$theme-color-accent-warm-lighter : 'blue-5';
+$theme-color-accent-warm-light   : 'blue-10';
+$theme-color-accent-warm         : 'blue-20';
+$theme-color-accent-warm-dark    : 'blue-30';
+$theme-color-accent-warm-darker  : 'blue-40';
+$theme-color-accent-warm-darkest : false;
+
+// Accent cool colors
+$theme-color-accent-cool-family  : 'gold';
+$theme-color-accent-cool-lightest: false;
+$theme-color-accent-cool-lighter : 'gold-5';
+$theme-color-accent-cool-light   : 'gold-10';
+$theme-color-accent-cool         : 'gold-20';
+$theme-color-accent-cool-dark    : 'gold-30';
+$theme-color-accent-cool-darker  : 'gold-40';
+$theme-color-accent-cool-darkest : false;
+
+/*
+----------------------------------------
+State palette colors
+----------------------------------------
+*/
+
+// Error colors
+$theme-color-error-family : 'green-vivid';
+$theme-color-error-lighter: 'green-20v';
+$theme-color-error-light  : 'green-30v';
+$theme-color-error        : 'green-40v';
+$theme-color-error-dark   : 'green-60v';
+$theme-color-error-darker : 'green-70v';
+
+/*
+----------------------------------------
+General colors
+----------------------------------------
+*/
+
+// Links
+$theme-link-color        : 'indigo-cool-60';
+$theme-link-visited-color: $theme-link-color;
+$theme-link-hover-color  : 'yellow-50';
+$theme-link-active-color : 'indigo-cool-70';
