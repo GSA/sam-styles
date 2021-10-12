@@ -25,6 +25,10 @@ module.exports = {
       path.resolve(__dirname, "src/js/index.js"),
       path.resolve(__dirname, "src/stylesheets/uswds.scss")
     ],
+    custom: [
+      path.resolve(__dirname, "src/js/index.js"),
+      path.resolve(__dirname, "src/stylesheets/custom.scss")
+    ],
     icons: path.resolve(__dirname, "src/icons/icons.js")
   },
   output: {

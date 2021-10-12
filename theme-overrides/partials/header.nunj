@@ -5,29 +5,25 @@
     </button>
     <a href="{{ path('/') }}" class="Header-title" data-pjax>{{ frctl.get('project.title') | default('Component Library') }}</a>
     <p>Switch Theme:</p>
-    <button class="switch-theme-button" id="uswds-style">USWDS</button>
-    <button class="switch-theme-button" id="sds-style">SDS</button>
-    <script>
-        const uswdsLink = document.querySelector('#uswds-style');
-        const sdsLink = document.querySelector('#sds-style');
+    <select id="theme-selector" (change)="">
+        <option value="sds">SDS</option>
+        <option value="uswds">USWDS</option>
+        <option value="custom">Custom</option>
+    </select>
 
+    <script>
+        const themeSelector = document.querySelector('#theme-selector');
+        themeSelector.addEventListener('change', function (){
+            updateStyle(themeSelector.value)
+        });
         const appliedStyle = localStorage.getItem('styleToApply');
-        if(appliedStyle === 'sds'){
-            sdsLink.hidden = true;
-        } else {
-            uswdsLink.hidden = true;
-        }
+        themeSelector.value = appliedStyle;
 
         function updateStyle(styleToApply){
             localStorage.setItem('styleToApply', styleToApply);
             location.reload();
         }
-        uswdsLink.onclick = function (){
-            updateStyle('uswds')
-        };
-        sdsLink.onclick = function(){
-            updateStyle('sds')
-        };
+
     </script>
 
 </div>

@@ -1,6 +1,7 @@
 const uswdsStyleSheet = 'uswds.css';
 const sdsStyleSheet ='sds.css';
-const stylesheetPathRegex = /((?:\.\.\/)*\/?)(?:sds|uswds)\.css/g;
+const customStyleSheet ='custom.css';
+const stylesheetPathRegex = /((?:\.\.\/)*\/?)(?:sds|uswds|custom)\.css/g;
 
 if(localStorage.getItem('styleToApply') === null){
     localStorage.setItem('styleToApply', 'sds');
@@ -24,7 +25,7 @@ function updateStyleSheet(){
             break;
         }
     }
-    links.item(index).setAttribute('href', prefix + (localStorage.getItem('styleToApply') === 'sds' ? sdsStyleSheet : uswdsStyleSheet));
+    links.item(index).setAttribute('href', prefix + (`${localStorage.getItem('styleToApply')}.css`));
     setTimeout(()=>{
         containingDiv.hidden = null;
     }, 50)
