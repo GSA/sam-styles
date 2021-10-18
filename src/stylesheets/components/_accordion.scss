@@ -27,6 +27,8 @@
       &:disabled {
         text-decoration: unset;
         pointer-events: none;
+        background-color: transparent;
+        color: color("base-light");
       }
   
       &::after {
