@@ -5,4 +5,14 @@
   td {
     background-color: color('base-lightest');
   }
+
+  .usa-date-picker__calendar__date--selected {
+    @include u-bg('primary-darker');
+    @include u-text('white');
+  }
+
+  .usa-date-picker__calendar__date--selected:focus {
+    @include u-bg('primary-darker');
+    @include u-text('white');
+  }
 }
