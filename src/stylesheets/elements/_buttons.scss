@@ -1,14 +1,13 @@
 .usa-button {
-  @include u-text("secondary-darker");
+  @include set-text-and-bg("primary");
   @include u-border("primary");
   @include u-border-width("2px");
 
   &.usa-button--hover,
   &:hover {
-    @include u-bg("primary-dark");
+    @include set-text-and-bg("primary-dark");
     @include u-border("primary-dark");
     @include u-border-width("2px");
-    @include u-text("white");
   }
 
   &.usa-button--active,
@@ -27,6 +26,7 @@
     @include u-text($theme-link-color);
     border: none;
     text-decoration: none;
+    background-color: transparent;
 
 
 
@@ -162,21 +162,18 @@
 }
 
 .usa-button--primary-lighter {
-  background-color: color("primary-lighter");
-  color: color("secondary-darker");
+  @include set-text-and-bg("primary-lighter");
   @include u-border("primary-lighter");
 
   &.usa-button--hover,
   &:hover {
-    background-color: color("primary-light");
+    @include set-text-and-bg("primary-light");
     @include u-border("primary-light");
-    color: color("secondary-darker");
   }
 
   &.usa-button--active,
   &:active {
-    color: color("secondary-darker");
-    background-color: color("primary");
+    @include set-text-and-bg("primary");
     @include u-border("primary");
   }
 
@@ -189,21 +186,18 @@
 }
 
 .usa-button--secondary {
-  background-color: color("secondary");
-  color: color("white");
+  @include set-text-and-bg("secondary");
   @include u-border("secondary");
 
   &.usa-button--hover,
   &:hover {
-    background-color: color("secondary-dark");
+    @include set-text-and-bg("secondary-dark");
     @include u-border("secondary-dark");
-    color: color("white");
   }
 
   &.usa-button--active,
   &:active {
-    color: color("white");
-    background-color: color("secondary-darker");
+    @include set-text-and-bg("secondary-darker");
     @include u-border("secondary-darker");
   }
 
