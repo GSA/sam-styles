@@ -11,12 +11,10 @@ context:
         links:
           - text: Child link
           - text: Child link
-            current: true
             links:
               - text: Grandchild link
               - text: Grandchild link
               - text: Grandchild link
-                current: true
               - text: Grandchild link
           - text: Child link
           - text: Child link
