@@ -2,7 +2,7 @@
   
     @include u-padding-x(1);
 
-    .usa-accordion__button {
+    .usa-accordion__button:not(.usa-banner__button) {
       @include u-bg("white");
       @include u-padding-right("205");
       @include u-padding-left(8);
