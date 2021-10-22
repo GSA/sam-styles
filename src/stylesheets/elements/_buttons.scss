@@ -412,6 +412,7 @@
 .sds-button.sds-button--icon {
   width: auto;  
   height: fit-content;
+  line-height: 1.0;
   @include u-padding-x(4);
   @include u-radius("lg");
   @include u-display("flex");
@@ -427,6 +428,16 @@
     margin: auto 0;
     @include u-text("bold");
   }
+
+  &--selected,
+  &:hover {
+    @include u-border("secondary");
+    @include u-border-width("2px");
+  }
+
+  &:disabled {
+    @include button-disabled;
+  }
 }
 
 .sds-button--outline {
@@ -438,7 +449,7 @@
   width: fit-content;
 
   .sds-button--icon {
-    border: solid 1px color("primary");
+    border: solid 1px color("secondary");
     border-radius: radius($theme-button-border-radius);
     margin: auto;
   }
@@ -495,7 +506,13 @@
 
     &--selected,
     &:hover {
-      @include u-border('primary');
+      @include u-border('secondary');
+    }
+
+    &:disabled {
+      background-color: 'base-light';
+      color: color("white");
+      box-shadow: none;
     }
   }
 }
