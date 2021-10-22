@@ -121,7 +121,7 @@
     }
   }
 
-  .usa-accordion__button {
+  .usa-accordion__button:not(.usa-banner__button) {
     background-color: inherit;
     @include u-padding-x(1);
     @include u-padding-y(1);
@@ -200,5 +200,12 @@
   }
   .sds-accordion-next .sds-accordion-title {
     @include u-text("base-dark");
+  }
+}
+
+// Side navigation inside accordions
+.usa-accordion {
+  nav {
+    margin-left: -20px;
   }
 }
