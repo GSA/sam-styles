@@ -94,7 +94,7 @@
   width: 128px;
   @include u-bg("base-lightest");
 }
-.sds-tag.sds-tag--outline {
+.sds-tag--outline {
   &--blue {
     @include u-border("info-dark");
   }
