@@ -21,6 +21,12 @@
     opacity: opacity(50);
   }
 }
+
+.usa-nav-container {
+  @include u-padding-x(0);
+  max-width: none;
+}
+
 /*-------------------
  usa-header--extended
 --------------------*/
@@ -37,8 +43,7 @@
 
   .usa-nav {
     @include at-media($theme-header-min-width) {
-      border-top: units(1px) solid color('base-lighter');
-      box-shadow: 0 -10px white, 0 2px 11px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 2px rgba(0, 0, 0, 0.15);
     }
   }
 }
@@ -96,4 +101,11 @@
   &--blue {
       @include u-bg("info-dark");
     }
+}
+
+.usa-nav__inner > .usa-nav__primary {
+  button {
+    font-size: 100%;
+    font-weight: font-weight("normal");
+  }
 }

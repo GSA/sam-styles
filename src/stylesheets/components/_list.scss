@@ -1,3 +1,9 @@
+.usa-list--icon {
+  svg {
+    @include u-margin-right(1);
+  }
+}
+
 .usa-list--icon, .usa-list--subdomain{
   list-style-type: none;
   padding-left: 0;
@@ -8,4 +14,18 @@
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.sds-list--icon {
+  list-style: none;
+  li {
+    @include u-margin-bottom(1);
+    @include u-display('flex');
+  }
+
+  svg {
+    @include u-margin-right(1);
+    @include u-display('block');
+    font-size: 1.25rem;
+  }
 }
