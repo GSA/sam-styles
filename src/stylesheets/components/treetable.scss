@@ -51,9 +51,9 @@ table.sds-tree-table {
         .usa-button {
           cursor: pointer;
           top: 0.25rem;
-          color: #d9e8f6;
+          color: color('accent-cool');
           svg {
-            background-color: black;
+            background-color: color('ink');
             border-radius: 50%;
           }
         }
