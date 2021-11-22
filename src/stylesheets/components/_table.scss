@@ -21,12 +21,37 @@ $usa-table-border: "1px";
       border: 0;
     }
 
+    .usa-table__header__button{
+      background-color: transparent;
+      border: 0px;
+      &:hover{
+        border: 2px;
+        cursor: pointer;
+      }
+      .usa-icon{
+        height: 1.5rem;
+        width: 1.5rem;
+        vertical-align: middle;
+        &>g.unsorted{
+          fill: #757575;
+        }
+      }
+    }
+
+    tr{
+      height: 3rem;
+    }
+
     thead {
       th, td {
         @extend %usa-table--cell;
         @include u-border-bottom('base-light', $usa-table-border);
         @include u-text('semibold');
         @include u-bg("base-lighter");
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1rem;
       }
     }
 
@@ -36,12 +61,21 @@ $usa-table-border: "1px";
         @include u-border-top('base-light', $usa-table-border);
         @include u-text('semibold');
         @include u-bg("base-lighter");
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1rem;
       }
     }
 
     tbody {
       th, td {
         @extend %usa-table--cell;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1rem;
+
       }
 
       &.usa-table__subsection {
@@ -70,6 +104,23 @@ $usa-table-border: "1px";
       // remove double border with thead bottom border
       &:first-of-type > tr > th {
         border-top: 0;
+      }
+    }
+    &--striped {
+      tbody {
+        tr:nth-child(even) {
+          td,
+          th {
+            background-color: color($theme-table-stripe-background-color);
+            color: color($theme-table-stripe-text-color);
+          }
+        }
+        tr:nth-child(odd) {
+          td,
+          th {
+            background-color: white;
+          }
+        }
       }
     }
 
