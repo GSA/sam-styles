@@ -111,8 +111,7 @@ $usa-table-border: "1px";
         tr:nth-child(even) {
           td,
           th {
-            background-color: color($theme-table-stripe-background-color);
-            color: color($theme-table-stripe-text-color);
+            @include u-bg("base-lightest");
           }
         }
         tr:nth-child(odd) {
