@@ -14,7 +14,7 @@
 }
 
 .sds-navbar--blank {
-  min-height: 3rem;
+  min-height: 1.5rem;
 }
 
 .sds-nav__secondary--blank {
@@ -23,4 +23,8 @@
 
 .usa-navbar {
   justify-content: flex-end;
+}
+
+.usa-nav__secondary {
+  bottom: 3rem;
 }
