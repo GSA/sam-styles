@@ -148,9 +148,5 @@ table.sds-tree-table {
       }
     }
 
-    tr[aria-level="#{$i}"][aria-expanded="true"] .vertical-border {
-      margin-left: #{($i * 1.5) - 0.5}rem;
-    }
-
   }
 }
