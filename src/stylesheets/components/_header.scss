@@ -25,10 +25,22 @@
     opacity: opacity(50);
   }
 }
+
+.usa-nav__primary button {
+  font-size: unset;
+  font-weight: unset;
+}
+
 /*-------------------
  usa-header--extended
 --------------------*/
 .usa-header--extended {
+
+  .usa-nav-container {
+    max-width: 100%;
+    @include u-padding-x(0);
+  }
+
   .usa-nav__link:not(.usa-current):hover::after {
     content: none;
   }
@@ -46,6 +58,38 @@
     }
   }
 }
+
+/************************
+    MEGA MENU / SUBMENU
+***********************/
+.usa-nav__submenu {
+  background-color: color('white');
+  color: color('ink');
+
+  .usa-nav__submenu-item a {
+    color: color($theme-link-color);
+  }
+
+  .usa-nav__submenu-item a:hover {
+    color: color($theme-link-color);
+    text-decoration: underline;
+  }
+}
+
+.usa-megamenu.usa-nav__submenu {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.usa-megamenu.usa-nav__submenu::before {
+  content: none;
+}
+
+.usa-megamenu.usa-nav__submenu::after {
+  content: none;
+}
+
+
 /*******************************
       SDS Specific Styles
 *******************************/

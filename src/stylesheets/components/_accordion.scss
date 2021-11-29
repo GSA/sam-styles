@@ -1,4 +1,4 @@
-.usa-accordion:not(.sds-accordion--filters) {
+.usa-accordion:not(.sds-accordion--filters):not(.usa-nav__primary) {
   
     @include u-padding-x(1);
 
