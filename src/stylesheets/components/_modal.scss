@@ -1,0 +1,17 @@
+.usa-modal {
+  .usa-modal__close {
+    background-color: transparent;
+    padding: 0.25rem 0.25rem;
+    border: none;
+    img{
+      width: 9px;
+    }
+  }
+}
+.usa-modal-overlay{
+  background: rgb(14,52,88,.7);
+  .usa-modal__main{
+    margin: 0px;
+    padding-top: 0px;
+  }
+}
