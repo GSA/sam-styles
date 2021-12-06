@@ -249,7 +249,7 @@ $sds-table-border: "1px";
         td,
         th {
           background-color: color($theme-table-stripe-background-color);
-          color: color($theme-table-stripe-text-color);
+          color: color("ink");
         }
       }
       tr:nth-child(odd) {
