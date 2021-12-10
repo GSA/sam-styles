@@ -1,6 +1,6 @@
 {
   "name": "@gsa-sam/sam-styles",
-  "version": "0.0.120-beta.2",
+  "version": "0.0.126",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -29,7 +29,7 @@
     "@gsa-sam/icons": "^1.0.0",
     "bootstrap-icons": "^1.2.1",
     "copy": "^0.3.2",
-    "uswds": "2.11.1"
+    "uswds": "^2.11.2"
   },
   "devDependencies": {
     "@babel/core": "^7.5.0",
