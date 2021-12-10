@@ -87,7 +87,7 @@ $usa-table-border: "1px";
 }
 
 .sds-table__container {
-  @include u-border('base-light', $sds-table-border);
+  @include u-border('base-light', $usa-table-border);
   height: inherit;
   max-height: inherit;
   overflow: auto;
@@ -130,13 +130,13 @@ $usa-table-border: "1px";
         Must include :not(.mat-header-cell) in order to prevent a 2 px border from forming when sds-table extends usa-table
         */
         &:first-child:not(.mat-header-cell){
-          @include u-border-left('base-light', $sds-table-border); 
+          @include u-border-left('base-light', $usa-table-border); 
         }
         &:last-child:not(.mat-header-cell){
-          @include u-border-right('base-light', $sds-table-border); 
+          @include u-border-right('base-light', $usa-table-border); 
         }
         &:not(.mat-header-cell){
-          @include u-border-top('base-light', $sds-table-border);
+          @include u-border-top('base-light', $usa-table-border);
         }
       }
     }
@@ -144,15 +144,15 @@ $usa-table-border: "1px";
       tr{
         &:last-child{
           td:not(.mat-cell) {
-            @include u-border-bottom('base-light', $sds-table-border);
+            @include u-border-bottom('base-light', $usa-table-border);
           }
         }
         th,td{
           &:first-child:not(.mat-cell){
-            @include u-border-left('base-light', $sds-table-border);
+            @include u-border-left('base-light', $usa-table-border);
           }
           &:last-child:not(.mat-cell){
-            @include u-border-right('base-light', $sds-table-border);
+            @include u-border-right('base-light', $usa-table-border);
           }
         }
       }
@@ -171,7 +171,7 @@ $usa-table-border: "1px";
         border-right: 0px;
       }
       &:not(.mat-header-cell){
-        @include u-border-bottom('base-light', $sds-table-border);
+        @include u-border-bottom('base-light', $usa-table-border);
       }
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;

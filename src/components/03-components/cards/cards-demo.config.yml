@@ -42,9 +42,9 @@ display:
 meta:
   colors:
     - title: Plain
-    - modifier: base
+    - modifier: base-lighter
       title: Base
-    - modifier: accent-cool
+    - modifier: accent-cool-lighter
       title: Accent Cool
     - modifier: accent-warm
       title: Accent Warm
