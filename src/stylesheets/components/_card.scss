@@ -7,67 +7,29 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
 
 .usa-card {
 
-  .usa-card__container {
+  &__container {
     @include u-padding(0);
     @include u-border('base-light', 'solid', $sds-card-border-width);
     border-radius: $sds-card-border-radius;
     @include u-shadow(2);
+    @include u-margin-x(0);
+    line-height: 1.15;
   }
 
-  .usa-link{
-      @include u-width('full');
-      color: inherit;
+  &__header--flex {
+    display: flex;
+    justify-content: space-between;
   }
-  &__title {
-    @include u-margin-y(0);
-    @include u-display('inline-block');
 
-  }
-  &__body {
-    @include u-padding(2);
-
-    >*:first-child {
-      @include u-margin-top(0);
-    }
-
-    >*:last-child {
-      @include u-margin-bottom(0);
-    }
-    &--accent-cool{
-      @include u-bg('accent-cool-lighter');
-    }
-  }
   &__header {
-    @include sds-header;
-    @include u-margin(0);
-    @include u-padding(2);
-    border-top-left-radius: $inner-border-radius;
-    border-top-right-radius: $inner-border-radius;
 
-
-    &--flex {
-      @include grid-row;
-      @include u-display('flex');
-      @include u-flex('align-center');
-
-      .usa-card__heading{
-        @include u-flex('fill');
-      }
-
-      .usa-button.usa-button--outline {
-        @include u-display('flex');
-        padding: 0.75rem 1.25rem;
-        margin: auto 0.5rem;
-
-      .usa-button {
-        @include u-margin-top(1);
-        @include at-media('tablet-lg') {
-          margin-top: 0;
-        }
-      }
-      }
+    h1, h2, h3, h4, h5, h6 {
+      color: inherit;
     }
-    &--left,
+
+
+    @include u-padding-y($theme-card-padding-perimeter);
+
     &--center {
       svg {
         @include u-margin-right(1);
@@ -78,10 +40,12 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
         @include u-text('bottom');
       }
     }
+
     &--stacked,
     &--center {
       @include u-text('center');
     }
+
     &--action {
       @include u-display('flex');
 
@@ -92,12 +56,8 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
         margin-top: 0;
       }
     }
-
-    // remove margin top from first sibling of a heading that isn't in a vertical card
-    .sds-card__title+* {
-      @include u-margin-top(0);
-    }
   }
+
   &__buttons {
     .usa-button {
       @include u-width(full);
@@ -109,6 +69,7 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
       }
     }
   }
+
   &--height-full {
     @include u-height('full');
   }
@@ -125,99 +86,46 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
       @include bordered-item(true);
     }
   }
+
+  .sds-card__header--flex {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
-
-.sds-card {
-  @include u-border('base-light', 'solid', $sds-card-border-width);
-  border-radius: $sds-card-border-radius;
-  @include u-shadow(2);
-
-  &__header {
-    @include sds-header;
-
-    .sds-card__collapse {
-      transition: transform 0.2s ease-in;
-      width: 33px;
-      height: 33px;
-      transform: rotate(180deg);
-      right: 10px;
-      border-radius: 50%;
-      background-color: #e2e2e2;
+.usa-card.sds-card--vertical {
+  .usa-card__container {
+    @include at-media('mobile') {
+      flex-direction: column;
     }
-
-    .sds-card__collapse::before {
-      content: '';
-      display: block;
-      width: 14px;
-      height: 0;
-      border-bottom: solid 1px #0a3466;
-      position: absolute;
-      left: 9px;
-      bottom: 16px;
-      transform: rotate(180deg);
-      transition: width 0.2s ease-in;
-    }
-
-    .sds-card__collapse::after {
-      content: '';
-      display: block;
-      width: 14px;
-      height: 0;
-      border-bottom: solid 1px #0a3466;
-      position: absolute;
-      left: 9px;
-      bottom: 16px;
-      transition: width 0.2s ease-in;
-    }
-
-    &--action {
-      @include u-display('flex');
-      @include u-flex('align-center', 'justify');
-
-      .sds-card__action > * {
-        @include u-margin-right(0);
-      }
+    
+    @include at-media('tablet-lg') {
+      flex-direction: row;
     }
   }
+}
 
-  &__body {
-    @include u-padding(2);
+.sds-card--collapsible {
+  @include u-radius(0);
+  @include u-margin-bottom(0);
 
-    > *:first-child {
-      @include u-margin-top(0);
-    }
-
-    > *:last-child {
-      @include u-margin-bottom(0);
-    }
-
-    &--accent-cool {
-      @include u-bg('accent-cool-lighter');
-    }
-  }
-
-  &--vertical {
-    @include u-display('flex');
-
-    .sds-card__header {
-      @include u-border-right('base-light', 'solid', $sds-card-border-width);
-      border-top-right-radius: 0;
-      @include u-padding(2);
-    }
-  }
-
-  &__collapse {
+  /** Expansion indicator on the right for collapsible cards **/
+  .sds-card__collapse {
     transition: transform 0.2s ease-in;
     width: 33px;
     height: 33px;
     transform: rotate(180deg);
     right: 10px;
     border-radius: 50%;
-    background-color: #e2e2e2;
+    background-color: color('base-lightest');
+    @include u-margin-bottom(0);
+  
+    .sds-card__collapse::before {
+      transform: rotate(90deg);
+    }
   }
-
-  &__collapse::before {
+  
+  .sds-card__collapse::before {
     content: '';
     display: block;
     width: 14px;
@@ -229,8 +137,8 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     transform: rotate(180deg);
     transition: width 0.2s ease-in;
   }
-
-  &__collapse::after {
+  
+  .sds-card__collapse::after {
     content: '';
     display: block;
     width: 14px;
@@ -242,65 +150,29 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     transition: width 0.2s ease-in;
   }
 
-  &--collapsed {
-    .sds-card__body {
-      display: none;
-    }
+  .usa-card__header {
+    cursor: pointer;
+    @include u-font-family('sans');
+    @include u-text('semibold');
+    @include u-padding(2);
 
-    .sds-card__collapse::before {
-      transform: rotate(90deg);
-    }
-  }
-
-  &--vertical {
-
-    @include at-media('mobile') {
-      .sds-card__header {
-        text-align: center;
-      }
-
-      .sds-card__body {
-        text-align: center;
-      }
-    }
-    
-    @include at-media('tablet-lg') {
-      @include u-display('flex');
-
-      .sds-card__header {
-        @include u-border-right('base-light', 'solid', $sds-card-border-width);
-        text-align: left;
-        border-top-right-radius: 0;
-      }
-
-      .sds-card__body {
-        text-align: left;
-      }
-    }
-  }
-
-  &--collapsible {
-    @include u-radius(0);
-
-    .sds-card__header {
-      cursor: pointer;
-      @include u-font-family('sans');
+    .usa-card__heading {
       @include u-font-size('body', 'xs');
-      @include u-text('semibold');
-      @include u-padding(2);
     }
 
-    .sds-accordion__title {
-      @include u-padding-left(0);
+    .sds-card__subtitle {
+      @include u-margin-y(0);
+      @include u-display('inline-block');
+      @include u-text('secondary-dark');
+      @include u-text('bold');
     }
+  }
 
-    .sds-card__title {
-      .sds-card__subtitle {
-        @include u-margin-y(0);
-        @include u-display('inline-block');
-        @include u-text('secondary-dark');
-        @include u-text('bold');
-      }
-    }
+  .usa-card__body {
+    display: none;
+  }
+
+  .usa-card__header[aria-expanded=true] + .usa-card__body {
+    display: block;
   }
 }
