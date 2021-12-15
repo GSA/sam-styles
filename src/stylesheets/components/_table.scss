@@ -1,81 +1,263 @@
-$usa-table-border: "1px";
+$sds-table-border: "1px";
 
-%usa-table--highlight {
+%sds-table--highlight {
   @include u-bg('accent-cool-lighter');
 }
 
-%usa-table--cell {
+%sds-table--cell {
+  @include u-padding-y(1);
+  @include u-padding-x(2);
+  color: inherit;
   font-size: inherit;
   border: 0;
 }
 
-%usa-table {
-    width: 100%;
-    border-collapse: separate;
+.sds-table {
+  @extend .usa-table;
+  width: 100%;
+  border-collapse: separate;
+  margin: 0;
 
-    @include u-border('base-light', $usa-table-border);
-    height: inherit;
-    max-height: inherit;
-    overflow: auto;
-    &--borderless {
-      border: 0;
-    }
-
-    thead {
-      th, td {
-        @extend %usa-table--cell;
-        @include u-border-bottom('base-light', $usa-table-border);
-        @include u-text('semibold');
-        @include u-bg("base-lighter");
-      }
-    }
-
-    tfoot {
-      th, td {
-        @extend %usa-table--cell;
-        @include u-border-top('base-light', $usa-table-border);
-        @include u-text('semibold');
-        @include u-bg("base-lighter");
-      }
-    }
-
-    tbody {
-      th, td {
-        @extend %usa-table--cell;
-      }
-
-      &.usa-table__subsection {
-        tr > th {
-          @include u-text('semibold');
-          @include u-bg('accent-cool-lighter');
-        }
-      }
-    }
-
-    // sticky column border
-    .usa-table__heading--sticky:first-child, .usa-table__cell--sticky:first-child {
-      @include u-border-right('base-light', $usa-table-border);
-    }
-
-    &__subsection {
-      tr:first-child > th {
-        @extend %usa-table--highlight;
-      }
-      // tiger stripes for subsections
-      tr:nth-of-type(odd) {
-        td {
-          @include u-bg("base-lightest");
-        }
-      }
-      // remove double border with thead bottom border
-      &:first-of-type > tr > th {
-        border-top: 0;
-      }
-    }
-
-    .sds-button.usa-button--unstyled {
-      color: inherit;
-      padding: 0;
-      background: inherit;
+  thead {
+    th, td {
+      @extend %sds-table--cell;
+      @include u-border-bottom('base-light', $sds-table-border);
+      @include u-text('semibold');
+      @include u-bg("base-lighter");
     }
   }
+
+  tfoot {
+    th, td {
+      @extend %sds-table--cell;
+      @include u-border-top('base-light', $sds-table-border);
+      @include u-text('semibold');
+      @include u-bg("base-lighter");
+    }
+  }
+
+  tbody {
+    th, td {
+      @extend %sds-table--cell;
+    }
+
+    // tiger stripes for tables without subsections or expandable rows
+    &:only-of-type:not(.sds-table--expansion) {
+      .sds-table__row:nth-of-type(even) > td {
+        @include u-bg("base-lightest");
+      }
+    }
+
+    &.sds-table__subsection {
+      th {
+        @include u-text('semibold');
+      }
+    }
+  }
+
+  // sticky column border
+  .sds-table__heading--sticky:first-child, .sds-table__cell--sticky:first-child {
+    @include u-border-right('base-light', $sds-table-border);
+  }
+
+  &__subsection {
+    tr:first-child > th {
+      @extend %sds-table--highlight;
+    }
+    // tiger stripes for subsections
+    tr:nth-of-type(odd) {
+      td {
+        @include u-bg("base-lightest");
+      }
+    }
+    // remove double border with thead bottom border
+    &:first-of-type > tr > th {
+      border-top: 0;
+    }
+  }
+
+  // expansion tables
+  &--expansion {
+    // tiger stripes for expansion tables
+    .sds-table__row:nth-child(4n + 3):not(.sds-table__row--expanded) {
+      td {
+        @include u-bg("base-lightest");
+      }
+    }
+
+    // detail row parent when expanded
+    .sds-table__row--expanded {
+      td {
+        @extend %sds-table--highlight;
+      }
+      // remove double border with thead bottom border
+      &:first-of-type > td {
+        border-top: 0;
+      }
+      // detail row when expanded
+      + .sds-table__row--detail {
+        display: table-row;
+      }
+    }
+
+    // wrapper
+    .sds-table__cell__expanded-wrapper {
+      overflow: hidden;
+      display: flex;
+    }
+
+    // detail row when collapsed
+    .sds-table__row--detail {
+      height: 0;
+      display: table-row;
+
+      .sds-table__cell--detail {
+        @include u-border-bottom('base-light', $sds-table-border);
+        @include u-padding-top(0);
+        @include u-padding-bottom(0);
+      }
+    }
+  }
+
+  .sds-button.usa-button--unstyled {
+    color: inherit;
+    padding: 0;
+    background: inherit;
+  }
+}
+
+.sds-table__container {
+  @include u-border('base-light', $sds-table-border);
+  height: inherit;
+  max-height: inherit;
+  overflow: auto;
+  &--borderless {
+    border: 0;
+  }
+}
+
+.usa-table{
+  .usa-table__header__button{
+    background-color: transparent;
+    border: 0px;
+    &:hover{
+      border: 2px; 
+      cursor: pointer;
+    }
+    .usa-icon{
+      height: 1.5rem;
+      width: 1.5rem;
+      vertical-align: middle;
+      &>g.unsorted{
+        fill: #757575;
+      }
+    }
+  }
+  tr{
+    height: 3rem;
+  }
+  &--compact{
+    tr{
+      height: 100%;
+    }
+  }
+
+  &:not(.usa-table--borderless){
+    thead{
+      th,td {
+        /**
+        Overrides remaining borders to ensure correct color and width.
+        Must include :not(.mat-header-cell) in order to prevent a 2 px border from forming when sds-table extends usa-table
+        */
+        &:first-child:not(.mat-header-cell){
+          @include u-border-left('base-light', $sds-table-border); 
+        }
+        &:last-child:not(.mat-header-cell){
+          @include u-border-right('base-light', $sds-table-border); 
+        }
+        &:not(.mat-header-cell){
+          @include u-border-top('base-light', $sds-table-border);
+        }
+      }
+    }
+    tbody{
+      tr{
+        &:last-child{
+          td:not(.mat-cell) {
+            @include u-border-bottom('base-light', $sds-table-border);
+          }
+        }
+        th,td{
+          &:first-child:not(.mat-cell){
+            @include u-border-left('base-light', $sds-table-border);
+          }
+          &:last-child:not(.mat-cell){
+            @include u-border-right('base-light', $sds-table-border);
+          }
+        }
+      }
+    }
+  }
+  
+  thead {
+    th, td {
+      /**
+        Removes internal borders so that only borders on the outside edges of header remain
+      */
+      &:not(:first-child){
+        border-left: 0px;
+      }
+      &:not(:last-child){
+        border-right: 0px;
+      }
+      &:not(.mat-header-cell){
+        @include u-border-bottom('base-light', $sds-table-border);
+      }
+      padding-bottom: 0.5rem;
+      padding-top: 0.5rem;
+      padding-left: 1.5rem;
+      padding-right: 1rem;
+      background-color: color($theme-table-header-background-color);
+      
+    }
+  }
+  tbody {
+    tr{
+      th, td {
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1rem;
+
+        /**
+        Removing internal horizontal borders from rows that divide the body into rows
+        */
+        border-bottom: 0px;
+        border-top: 0px;
+
+        /**
+        Removing internal vertical borders from cells that divide the rows into columns
+        */
+        border-left: 0px;
+        border-right: 0px;
+      }
+    }
+  }
+  &--striped {
+    tbody {
+      tr:nth-child(even) {
+        td,
+        th {
+          background-color: color($theme-table-stripe-background-color);
+          color: color("ink");
+        }
+      }
+      tr:nth-child(odd) {
+        td,
+        th {
+          background-color: white;
+        }
+      }
+    }
+  }
+}
