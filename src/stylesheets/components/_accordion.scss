@@ -1,5 +1,4 @@
 .usa-accordion:not(.sds-accordion--filters):not(.usa-nav__primary) {
-  
   @include u-padding-x(1);
 
   .usa-accordion__button:not(.usa-banner__button) {
@@ -90,122 +89,121 @@
     @include u-border-bottom(1px);
     border-color: color("base-light");
   }
-
 }
 
 .usa-accordion.sds-accordion--filters {
-.usa-accordion__heading {
-  min-height: 36px;
-}
-
-.usa-accordion__heading:first-of-type {
-  .usa-accordion__button {
-    border-top: none;
+  .usa-accordion__heading {
+    min-height: 36px;
   }
-}
 
-.usa-accordion__content {
-  @include u-bg("white");
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 3px 0px inset;
-  margin: 0px;
-  padding: 0.5em 1em;
-  @include u-font("sans", "xs");
-  font-size: 0.87rem;
-  .usa-input,
-  .usa-textarea,
-  .usa-range,
-  .usa-select,
-  .usa-fieldset,
-  .usa-hint {
+  .usa-accordion__heading:first-of-type {
+    .usa-accordion__button {
+      border-top: none;
+    }
+  }
+
+  .usa-accordion__content {
+    @include u-bg("white");
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 3px 0px inset;
+    margin: 0px;
+    padding: 0.5em 1em;
+    @include u-font("sans", "xs");
     font-size: 0.87rem;
-  }
-}
-
-.usa-accordion__button:not(.usa-banner__button) {
-  background-color: inherit;
-  @include u-padding-x(1);
-  @include u-padding-y(1);
-  font-size: 0.87rem;
-  font-weight: 400;
-  background-image: none;
-  border: none;
-
-  &:hover {
-    @include u-bg("accent-cool-light");
+    .usa-input,
+    .usa-textarea,
+    .usa-range,
+    .usa-select,
+    .usa-fieldset,
+    .usa-hint {
+      font-size: 0.87rem;
+    }
   }
 
-  &:focus,
-  &:not([disabled]):focus {
-    outline-offset: -0.25rem;
-  }
-  &::after {
-    background: none;
-    border-style: solid;
-    border-width: 0.1em 0.1em 0 0;
-    position: relative;
-    content: "";
-    height: 0.5em;
-    right: 0.25em;
-    top: 0.25em;
-    left: 0;
-    border-radius: unset;
-    transform: rotate(135deg);
-    vertical-align: top;
-    width: 0.5em;
-    transition: transform 0.2s ease-in;
-    float: right;
-  }
-  &::before {
-    content: none !important;
-  }
+  .usa-accordion__button:not(.usa-banner__button) {
+    background-color: inherit;
+    @include u-padding-x(1);
+    @include u-padding-y(1);
+    font-size: 0.87rem;
+    font-weight: 400;
+    background-image: none;
+    border: none;
 
-  &[aria-expanded="true"]:after {
-    background: none;
-    border-style: solid;
-    border-width: 0.1em 0.1em 0 0;
-    position: relative;
-    content: "";
-    height: 0.5em;
-    right: 0.25em;
-    top: 0.25em;
-    transform: rotate(-45deg);
-    vertical-align: top;
-    width: 0.5em;
-    transition: transform 0.2s ease-in;
-    float: right;
-  }
+    &:hover {
+      @include u-bg("accent-cool-light");
+    }
 
-  &[aria-expanded="true"]:before {
-    content: none !important;
+    &:focus,
+    &:not([disabled]):focus {
+      outline-offset: -0.25rem;
+    }
+    &::after {
+      background: none;
+      border-style: solid;
+      border-width: 0.1em 0.1em 0 0;
+      position: relative;
+      content: "";
+      height: 0.5em;
+      right: 0.25em;
+      top: 0.25em;
+      left: 0;
+      border-radius: unset;
+      transform: rotate(135deg);
+      vertical-align: top;
+      width: 0.5em;
+      transition: transform 0.2s ease-in;
+      float: right;
+    }
+    &::before {
+      content: none !important;
+    }
+
+    &[aria-expanded="true"]:after {
+      background: none;
+      border-style: solid;
+      border-width: 0.1em 0.1em 0 0;
+      position: relative;
+      content: "";
+      height: 0.5em;
+      right: 0.25em;
+      top: 0.25em;
+      transform: rotate(-45deg);
+      vertical-align: top;
+      width: 0.5em;
+      transition: transform 0.2s ease-in;
+      float: right;
+    }
+
+    &[aria-expanded="true"]:before {
+      content: none !important;
+    }
   }
-}
 }
 
 .usa-accordion--bordered {
-.usa-accordion__content {
-  @include u-border(1px);
-  @include u-border("base-light");
-  @include u-border-top(0);
-}
+  .usa-accordion__content {
+    @include u-border(1px);
+    @include u-border("base-light");
+    @include u-border-top(0);
+  }
 }
 
 .sds-card {
-.usa-accordion--bordered.sds-accordion-next {
-  @include u-padding-x(0);
-}
-.sds-accordion-next {
-  .sds-accordion-title {
-    @include u-text("secondary-dark");
+  .usa-accordion--bordered.sds-accordion-next {
+    @include u-padding-x(0);
   }
-}
-.sds-accordion-next .sds-accordion-title {
-  @include u-text("base-dark");
-}
+  .sds-accordion-next {
+    .sds-accordion-title {
+      @include u-text("secondary-dark");
+    }
+  }
+  .sds-accordion-next .sds-accordion-title {
+    @include u-text("base-dark");
+  }
 }
 
 // Side navigation inside accordions
 .usa-accordion {
-nav {
-  margin-left: -20px;
-}
+  nav {
+    margin-left: -20px;
+  }
 }
