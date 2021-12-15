@@ -164,11 +164,11 @@
 .usa-button--primary-lighter {
   background-color: color("primary-lighter");
   color: color("secondary-darker");
-  @include u-border("primary-lighter");
+  @include u-border("primary");
 
   &.usa-button--hover,
   &:hover {
-    background-color: color("primary-light");
+    background-color: color("white");
     @include u-border("primary-light");
     color: color("secondary-darker");
   }

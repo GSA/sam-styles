@@ -16,17 +16,24 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     line-height: 1.15;
   }
 
-  &__header--flex {
-    display: flex;
-    justify-content: space-between;
-  }
-
   &__header {
 
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6, .usa-link:not(:hover) {
       color: inherit;
+      margin: none;
+
+      + * {
+        margin: unset
+      }
     }
 
+    .usa-link {
+      text-decoration: none;
+    }
+
+    .usa-button {
+      padding: 0.75rem 1.25rem;
+    }
 
     @include u-padding-y($theme-card-padding-perimeter);
 
@@ -90,6 +97,7 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
   .sds-card__header--flex {
     display: flex;
     justify-content: space-between;
+    align-items: center;;
   }
 }
 
@@ -102,6 +110,16 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     @include at-media('tablet-lg') {
       flex-direction: row;
     }
+  }
+
+  .usa-card__header {
+    border-right: 1px solid #cac9c0;
+  }
+}
+
+.sds-card--collapsible.sds-card--collapsed {
+  .sds-card__collapse::after {
+    transform: rotate(90deg);
   }
 }
 
@@ -137,7 +155,7 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     transform: rotate(180deg);
     transition: width 0.2s ease-in;
   }
-  
+
   .sds-card__collapse::after {
     content: '';
     display: block;
@@ -147,6 +165,7 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     position: absolute;
     left: 9px;
     bottom: 16px;
+    transform: rotate(180deg);
     transition: width 0.2s ease-in;
   }
 

@@ -19,7 +19,7 @@
 	<div class="usa-card__container{{cardClasses}}">
 		{%- if header %}
 		<div
-			class="usa-card__header{% if color %} bg-{{color}}{% endif %} usa-card__header--{{header.style}}">
+			class="usa-card__header{% if color %} bg-{{color}}{% endif %} {{header.style}}">
 			{%- if header.icon -%}
 			<div class="sds-icon">
 				{%- render '@icon', header.icon -%}

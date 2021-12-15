@@ -17,7 +17,7 @@ variants:
     label: Three Columns
     context:
       title: Contract Opportunities
-      color: base
+      color: base-lighter
       header:
         style: left
       body:
