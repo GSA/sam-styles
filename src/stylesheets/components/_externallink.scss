@@ -3,5 +3,5 @@
 *************************************/
 .usa-link--external ::after {
     background-position: 0% 60%;
-    background-image: url('../../img/sam/box-arrow-up-right.svg');
+    background-image: url('#{$theme-image-path}/sam/box-arrow-up-right.svg');
 }
