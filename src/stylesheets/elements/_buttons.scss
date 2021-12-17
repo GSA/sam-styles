@@ -1,13 +1,13 @@
 .usa-button {
   @include u-text("secondary-darker");
   @include u-border("primary");
-  @include u-border-width("2px");
+  @include u-border-width("05");
 
   &.usa-button--hover,
   &:hover {
     @include u-bg("primary-dark");
     @include u-border("primary-dark");
-    @include u-border-width("2px");
+    @include u-border-width("05");
     @include u-text("white");
   }
 
@@ -27,8 +27,6 @@
     @include u-text($theme-link-color);
     border: none;
     text-decoration: none;
-
-
 
     &.usa-button--active,
     &:active {
@@ -86,7 +84,6 @@
   &:visited {
     color: color("primary-dark");
     @include u-border("base-dark");
-    @include u-border-width("2px");
     @include u-border-width('05');
   }
 
@@ -294,14 +291,11 @@
     @include u-border("disabled");
     @include u-bg("disabled");
     @include u-text("white");
+  }
 
-    &.sds-button--unstyled,
-    &.usa-button--unstyled {
-      box-shadow: none;
-      @include u-border(0);
-      @include u-bg("transparent");
-      @include u-text("disabled");
-    }
+  &.sds-button--unstyled,
+  &.usa-button--unstyled {
+    @include button-unstyled;
   }
 }
 /*******************************
