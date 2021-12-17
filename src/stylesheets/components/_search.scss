@@ -16,7 +16,8 @@
     @include u-minw(5);
     @include u-shadow(3);
     @include u-border(0);
-    @include u-text('white')
+    @include u-text('white');
+    background-position: center center;
   }
 
   [type='search'] {
@@ -72,6 +73,16 @@
 
   .usa-search__submit-text {
     @include sr-only;
+  }
+}
+
+.usa-search.usa-search--small {
+  [type='submit'] {    
+    background-image: url('#{$theme-image-path}/usa-icons-bg/search--white.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 1.5rem;
+    width: 3rem;
   }
 }
 
