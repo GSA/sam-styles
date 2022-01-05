@@ -136,7 +136,7 @@ $sds-table-border: "1px";
   }
 }
 
-.usa-table{
+.usa-table {
   .usa-table__header__button{
     background-color: transparent;
     border: 0px;
@@ -162,7 +162,7 @@ $sds-table-border: "1px";
     }
   }
 
-  &:not(.usa-table--borderless){
+  &:not(.usa-table--borderless):not(.sds-tree-table) {
     thead{
       th,td {
         /**
