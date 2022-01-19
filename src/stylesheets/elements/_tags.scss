@@ -67,7 +67,6 @@
 
 .sds-tag[class*="sds-tag--status"] {
   white-space: nowrap;
-  text-transform: uppercase;
   @include u-font("sans", "3xs");
   @include u-text("base-dark");
   line-height: 20px;
@@ -75,8 +74,9 @@
   padding: 0 5px 4px 0;
   border-radius: 0;
   margin-right: 5px;
-  display: inline-block;
   width: auto;
+  display: flex;
+  align-items: center;
 }
 
 // Outline tag
@@ -264,9 +264,6 @@ Label Title
 }
 
 // color variants
-.sds-status--blue {
-  @include u-bg("info-dark");
-}
 .sds-status--red {
   @include u-bg("error");
 }
@@ -358,6 +355,12 @@ Label Title
 }
 .sds-status--disabled {
   @include u-bg("disabled");
+}
+.sds-status--indigo-warm {
+  @include u-bg("indigo-warm-30v");
+}
+.sds-status--gold-dark {
+  @include u-bg("gold-70");
 }
 
 //Roadmap tags
