@@ -40,11 +40,6 @@
   background-size: contain;
 }
 
-.usa-banner__button[aria-expanded=true]::after {
-  right: 0;
-  top: 0;
-}
-
 .usa-banner__header-description {
   display: none;
   @media (min-width: 830px) {
