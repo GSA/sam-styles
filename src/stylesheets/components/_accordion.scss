@@ -121,6 +121,10 @@
     }
   }
 
+  .usa-accordion__content .usa-form-group:first-of-type {
+    margin-top: 0.5rem;
+  }
+
   .usa-accordion__button:not(.usa-banner__button) {
     background-color: inherit;
     @include u-padding-x(1);
