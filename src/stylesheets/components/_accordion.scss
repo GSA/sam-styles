@@ -122,7 +122,7 @@
   }
 
   .usa-accordion__content .usa-form-group:first-of-type {
-    margin-top: 0.5rem;
+    @include u-margin-top(1);
   }
 
   .usa-accordion__button:not(.usa-banner__button) {
