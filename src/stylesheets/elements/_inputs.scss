@@ -59,12 +59,6 @@
   @include u-text('semibold');
 }
 
-.usa-label--description {
-  @include u-font('sans', '2xs');
-}
-
-
-
 //select
 .usa-select {
   @include add-background-svg('sam/arrow-down');
