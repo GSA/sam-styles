@@ -54,6 +54,8 @@
     @include u-minw(9);
     padding-left: 1rem;
     padding-right: 1rem;
+    background-image: url('#{$theme-image-path}/usa-icons-bg/search--white.svg');
+    background-size: 0 0;
     & > img{
       display: block;
       height: 2.5rem;
