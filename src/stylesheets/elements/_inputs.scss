@@ -54,6 +54,11 @@
   }
 }
 
+.usa-label {
+  @include u-font('sans', 'xs');
+  @include u-text('semibold');
+}
+
 //select
 .usa-select {
   @include add-background-svg('sam/arrow-down');
@@ -78,7 +83,9 @@
 }
 
 .usa-input--disabled {
+  color: color('base-darker');
   border-color: color('base-light');
+  background-color: color('base-lighter');
 }
 
 .usa-label--disabled {
@@ -101,16 +108,19 @@
 }
 
 // Checkbox and Radio
-.usa-checkbox__label::before, .usa-radio__label::before {
+.usa-checkbox__label::before,
+.usa-radio__label::before {
   margin-right: 0.5rem;
 }
 
-.usa-checkbox__label-description,  .usa-radio__label-description {
+.usa-checkbox__label-description,
+.usa-radio__label-description {
   font-size: 85%;
 }
 
 //checkbox
-.usa-checkbox__input[aria-checked=mixed]+.usa-checkbox__label:before, .usa-checkbox__input[aria-checked=mixed]:disabled+.usa-checkbox__label:before {
+.usa-checkbox__input[aria-checked=mixed]+.usa-checkbox__label:before,
+.usa-checkbox__input[aria-checked=mixed]:disabled+.usa-checkbox__label:before {
   @include u-bg('primary');
   box-shadow: 0 0 0 2px #70E17B;
   background-image: url('#{$theme-image-path}/minus-white.svg');
@@ -146,6 +156,7 @@
 // textarea/input character count
 .usa-character-count {
   max-width: min-content;
+
   .usa-hint {
     display: flex;
     flex-direction: row-reverse;
