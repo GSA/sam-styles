@@ -1,0 +1,21 @@
+.usa-range{
+    &::-webkit-slider-runnable-track {
+      background: #c9c9c9;
+      border: none;
+    }
+  
+    &::-webkit-slider-thumb {
+      background-color: #5994f6;
+      border: 1px solid #5994f6;
+      box-shadow: none;
+    }
+  
+    &:focus{
+      &::-webkit-slider-thumb {
+        border: 1px solid #2e2e2a;
+        background-color: #81aefc;
+      }
+    }
+  }
+  
+  
