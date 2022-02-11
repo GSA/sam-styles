@@ -173,3 +173,8 @@
   @include u-font('sans', '3xs');
   @include u-text('semibold');
 }
+
+
+.usa-checkbox, .usa-radio {
+  @include checkbox-and-radio-colors($selected-color: "primary-darker");
+}

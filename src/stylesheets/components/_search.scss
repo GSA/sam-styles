@@ -13,7 +13,7 @@
     @include u-bg('indigo-cool-60');
     @include u-radius(0);
     @include u-height(5);
-    @include u-minw(5);
+    // @include u-minw(5);
     @include u-shadow(3);
     @include u-border(0);
   }
@@ -51,14 +51,15 @@
 *************************************/
 .usa-search.usa-search--big{
   [type='submit'] {
-    @include u-bg('indigo-cool-60');
-    @include u-radius(0);
-    @include u-width(5);
-    background-image: url('#{$theme-image-path}/search.svg');
-    background-repeat: no-repeat;
-      @media (min-width: 30em) {
-        background-size: 1.5rem;
-      }
+    @include u-minw(9);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-size: 0 0;
+    & > img{
+      display: block;
+      height: 2.5rem;
+      width: 2.5rem;
+    }
   }
   @media (min-width: 30em) {
     [type="search"],
