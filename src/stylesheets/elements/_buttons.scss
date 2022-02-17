@@ -147,6 +147,27 @@
     background-color: color("base-dark");
     @include u-border("base-dark");
   }
+
+  /*Adjust usa-icon down slightly to center in circle*/
+  &.sds-button--circle{
+    .usa-icon{
+      &[ng-reflect-size="xs"]{
+        margin-top: -0.1rem;
+      }
+      &[ng-reflect-size="sm"]{
+        margin-top: 0;
+      }
+      &[ng-reflect-size="lg"]{
+        margin-top: 0.3rem;
+      }
+      &[ng-reflect-size="2x"]{
+        margin-top: 0.4rem;
+      }
+      &[ng-reflect-size="3x"]{
+        margin-top: 0.6rem;
+      }
+    }
+  }
 }
 
 .usa-button--secondary {
