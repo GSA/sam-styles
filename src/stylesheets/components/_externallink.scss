@@ -1,7 +1,10 @@
 /************************************
    External link override USWDS image
 *************************************/
-.usa-link--external ::after {
-    background-position: 0% 60%;
-    background-image: url('#{$theme-image-path}/sam/box-arrow-up-right.svg');
+.usa-link--external {
+    display: inline;
+    &::after {
+        background-position: 0% 60%;
+        background-image: url('#{$theme-image-path}/sam/box-arrow-up-right.svg');
+    }
 }
