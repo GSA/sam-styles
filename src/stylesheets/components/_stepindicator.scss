@@ -1,49 +1,60 @@
 .usa-step-indicator__total-steps {
-  @include u-text('secondary');
+  @include u-text("secondary");
 }
 
 .usa-step-indicator__current-step {
-  @include u-bg('secondary');
+  @include u-bg("secondary");
 }
 
 .usa-step-indicator--counters .usa-step-indicator__segment--complete::before,
-.usa-step-indicator--counters-sm .usa-step-indicator__segment--complete::before {
-  @include u-bg('secondary-dark');
+.usa-step-indicator--counters-sm
+  .usa-step-indicator__segment--complete::before {
+  @include u-bg("secondary-dark");
 }
 
 .usa-step-indicator--counters .usa-step-indicator__segment--current::before,
 .usa-step-indicator--counters-sm .usa-step-indicator__segment--current::before {
-  @include u-bg('secondary');
+  @include u-bg("secondary");
 }
 
 .usa-step-indicator__segment:after {
-  @include u-bg('base-light');
+  @include u-bg("base-light");
 }
 
 .usa-step-indicator__segment--complete {
   &::before {
-    @include u-bg('secondary-dark');
+    @include u-bg("secondary-dark");
   }
 
   &::after {
-    @include u-bg('secondary-dark');
+    @include u-bg("secondary-dark");
   }
 
   .usa-step-indicator__segment-label {
-    @include u-text('secondary-dark');
+    @include u-text("secondary-dark");
   }
 }
 
 .usa-step-indicator__segment--current {
   &::before {
-    @include u-bg('secondary');
+    @include u-bg("secondary");
   }
 
   &::after {
-    @include u-bg('secondary');
+    @include u-bg("secondary");
   }
 
   .usa-step-indicator__segment-label {
-    @include u-text('secondary');
+    @include u-text("secondary");
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .usa-step-indicator__segment-label {
+    display: block !important;
+    font-size: 1.06rem;
+    margin-top: calc(0.5rem + 0.5rem);
+    padding-right: 2rem;
+    text-align: left;
   }
 }
