@@ -7,8 +7,7 @@
 }
 
 .usa-step-indicator--counters .usa-step-indicator__segment--complete::before,
-.usa-step-indicator--counters-sm
-  .usa-step-indicator__segment--complete::before {
+.usa-step-indicator--counters-sm .usa-step-indicator__segment--complete::before {
   @include u-bg("secondary-dark");
 }
 
@@ -53,8 +52,9 @@
   .usa-step-indicator__segment-label {
     display: block !important;
     font-size: 1.06rem;
-    margin-top: calc(0.5rem + 0.5rem);
+    margin-top: 1rem;
     padding-right: 2rem;
     text-align: left;
+    background-color: transparent !important;
   }
 }
