@@ -48,6 +48,10 @@
   }
 }
 
+.usa-step-indicator {
+  background-color: transparent !important;
+}
+
 @media only screen and (max-width: 640px) {
   .usa-step-indicator__segment-label {
     display: block !important;
@@ -55,6 +59,5 @@
     margin-top: 1rem;
     padding-right: 2rem;
     text-align: left;
-    background-color: transparent !important;
   }
 }
