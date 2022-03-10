@@ -178,3 +178,15 @@
 .usa-checkbox, .usa-radio {
   @include checkbox-and-radio-colors($selected-color: "primary-darker");
 }
+
+.usa-radio {
+  &.horizontal {
+    display: inline-flex;
+    flex-wrap: nowrap;
+
+    .horizontal-option {
+      padding-right: 3rem;
+      flex-wrap: nowrap;
+    }
+  }
+}
