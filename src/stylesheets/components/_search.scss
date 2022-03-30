@@ -16,6 +16,12 @@
     // @include u-minw(5);
     @include u-shadow(3);
     @include u-border(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    usa-icon{
+      color: white;
+    }
   }
 
   [type='search'] {
