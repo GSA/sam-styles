@@ -124,6 +124,14 @@ $sds-table-border: "1px";
     padding: 0;
     background: inherit;
   }
+
+  tr.sds-table__row--hovered{
+    td{
+      @include u-bg('base-light');
+      cursor: pointer;
+    }
+  }
+  
 }
 
 .sds-table__container {
