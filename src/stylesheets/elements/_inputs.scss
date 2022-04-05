@@ -1,12 +1,12 @@
 //sds form layout
 .sds-form-wrapper {
-  @include u-bg('accent-cool-light');
+  @include u-bg("accent-cool-light");
   justify-content: center;
 }
 
 .sds-form.usa-form.usa-form--large {
-  @include u-bg('white');
-  @include u-padding('105');
+  @include u-bg("white");
+  @include u-padding("105");
   max-width: 50rem;
 
   @media (min-width: 30em) {
@@ -37,35 +37,35 @@
   }
 
   .sds-form-extension {
-    @include u-display('none');
+    @include u-display("none");
 
-    @include at-media('desktop') {
-      @include u-display('inline-block');
+    @include at-media("desktop") {
+      @include u-display("inline-block");
     }
   }
 
   .sds-form-extension-btn {
-    @include u-display('block');
+    @include u-display("block");
     @include u-margin-y(1);
 
-    @include at-media('desktop') {
-      @include u-display('none');
+    @include at-media("desktop") {
+      @include u-display("none");
     }
   }
 }
 
 .usa-label {
-  @include u-font('sans', 'xs');
-  @include u-text('semibold');
+  @include u-font("sans", "xs");
+  @include u-text("semibold");
 }
 
 //select
 .usa-select {
-  @include add-background-svg('sam/arrow-down');
+  @include add-background-svg("sam/arrow-down");
   background-size: 0.6rem;
 
   &.usa-select--small {
-    @include u-font('sans', '3xs');
+    @include u-font("sans", "3xs");
     @include u-margin-top(0.5);
     height: 2.1rem;
   }
@@ -73,38 +73,35 @@
 
 //soften error styles
 .usa-error-message {
-  font-weight: font-weight('medium');
+  font-weight: font-weight("medium");
 }
 
 .usa-input--error,
 .usa-input.usa-focus,
 .usa-input.usa-input--success {
-  border-width: .1rem !important;
+  border-width: 0.1rem !important;
 }
 
 .usa-input--disabled {
-  color: color('base-darker');
-  border-color: color('base-light');
-  background-color: color('base-lighter');
+  color: color("base-darker");
+  border-color: color("base-light");
+  background-color: color("base-lighter");
 }
 
 .usa-label--disabled {
   color: color("base-light");
 }
 
-
 .usa-form-group--error {
   @include u-border-left(2px);
-  @include u-border-left('error-dark');
-  @include u-border-left('solid');
-  @include u-margin-top(0);
+  @include u-border-left("error-dark");
+  @include u-border-left("solid");
+  @include u-margin-top(2rem);
   margin-left: -1.15rem;
 
   input.usa-input {
     @extend .usa-input--error;
   }
-
-
 }
 
 // Checkbox and Radio
@@ -119,16 +116,15 @@
 }
 
 //checkbox
-.usa-checkbox__input[aria-checked=mixed]+.usa-checkbox__label:before,
-.usa-checkbox__input[aria-checked=mixed]:disabled+.usa-checkbox__label:before {
-  @include u-bg('primary');
-  box-shadow: 0 0 0 2px #70E17B;
-  background-image: url('#{$theme-image-path}/minus-white.svg');
+.usa-checkbox__input[aria-checked="mixed"]+.usa-checkbox__label:before,
+.usa-checkbox__input[aria-checked="mixed"]:disabled+.usa-checkbox__label:before {
+  @include u-bg("primary");
+  box-shadow: 0 0 0 2px #70e17b;
+  background-image: url("#{$theme-image-path}/minus-white.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: .75rem auto;
+  background-size: 0.75rem auto;
 }
-
 
 .usa-checkbox.text-align-end {
   text-align: end;
@@ -144,7 +140,7 @@
 }
 
 //IAE-45479 fix in IE11
-@media all and (-ms-high-contrast:none) {
+@media all and (-ms-high-contrast: none) {
 
   *::-ms-backdrop,
   .usa-checkbox,
@@ -170,11 +166,11 @@
 
 //small label variation
 .usa-label.usa-label--sm {
-  @include u-font('sans', '3xs');
-  @include u-text('semibold');
+  @include u-font("sans", "3xs");
+  @include u-text("semibold");
 }
 
-
-.usa-checkbox, .usa-radio {
+.usa-checkbox,
+.usa-radio {
   @include checkbox-and-radio-colors($selected-color: "primary-darker");
 }
