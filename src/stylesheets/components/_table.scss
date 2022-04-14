@@ -127,7 +127,7 @@ $sds-table-border: "1px";
 
   tr.sds-table__row--hovered{
     td{
-      @include u-bg('base-light');
+      @include u-bg('base-light', !important);
       cursor: pointer;
     }
   }
