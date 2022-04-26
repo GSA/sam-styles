@@ -99,4 +99,16 @@
       }
     }
   }
-}
+  a.link-has-children:not(.usa-current) {
+    @include u-text ('indigo-cool-60');
+
+    &:hover {
+      @include u-text ('yellow-50');
+      @include u-text ('underline');
+    }
+
+    &:active {
+      @include u-text('blue-5');
+
+    }
+  }
