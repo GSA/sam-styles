@@ -116,10 +116,10 @@
 }
 
 //checkbox
-.usa-checkbox__input[aria-checked="mixed"]+.usa-checkbox__label:before,
-.usa-checkbox__input[aria-checked="mixed"]:disabled+.usa-checkbox__label:before {
+.usa-checkbox__input[aria-checked="mixed"] + .usa-checkbox__label:before,
+.usa-checkbox__input[aria-checked="mixed"]:disabled + .usa-checkbox__label:before {
   @include u-bg("primary");
-  box-shadow: 0 0 0 2px #70e17b;
+  box-shadow: 0 0 0 2px $theme-color-primary-darker;
   background-image: url("#{$theme-image-path}/minus-white.svg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -132,7 +132,6 @@
 
 //IAE-45479 fix in FF
 @-moz-document url-prefix() {
-
   .usa-checkbox,
   .usa-fieldset {
     position: relative;
@@ -141,7 +140,6 @@
 
 //IAE-45479 fix in IE11
 @media all and (-ms-high-contrast: none) {
-
   *::-ms-backdrop,
   .usa-checkbox,
   .usa-fieldset {
