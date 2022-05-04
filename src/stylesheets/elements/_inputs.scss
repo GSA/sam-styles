@@ -119,7 +119,7 @@
 .usa-checkbox__input[aria-checked="mixed"]+.usa-checkbox__label:before,
 .usa-checkbox__input[aria-checked="mixed"]:disabled+.usa-checkbox__label:before {
   @include u-bg("primary");
-  box-shadow: 0 0 0 2px $theme-color-primary;
+  box-shadow: 0 0 0 2px #70e17b;
   background-image: url("#{$theme-image-path}/minus-white.svg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -176,19 +176,19 @@
   .usa-checkbox__input:checked+.usa-checkbox__label,
   .usa-radio__input:checked+.usa-radio__label {
     &::before {
-      background-color: $theme-color-primary !important;
+      background-color: #70e17b !important;
     }
   }
 
   .usa-checkbox__input:checked+.usa-checkbox__label {
     &::before {
-      box-shadow: 0 0 0 2px $theme-color-primary !important;
+      box-shadow: 0 0 0 2px #70e17b !important;
     }
   }
 
   .usa-radio__input:checked+.usa-radio__label {
     &::before {
-      box-shadow: 0 0 0 2px $theme-color-primary, inset 0 0 0 2px white !important;
+      box-shadow: 0 0 0 2px #70e17b, inset 0 0 0 2px white !important;
     }
   }
 }
