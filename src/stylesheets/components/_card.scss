@@ -191,8 +191,12 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
   &--vertical {
 
     @include at-media('mobile') {
+      @include u-display('flex');
+
       .sds-card__header {
-        text-align: center;
+        align-items: center;
+        justify-content: left;
+        text-align: left; 
       }
 
       .sds-card__body {
