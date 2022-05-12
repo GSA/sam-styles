@@ -116,8 +116,8 @@
 }
 
 //checkbox
-.usa-checkbox__input[aria-checked="mixed"]+.usa-checkbox__label:before,
-.usa-checkbox__input[aria-checked="mixed"]:disabled+.usa-checkbox__label:before {
+.usa-checkbox__input[aria-checked="mixed"] + .usa-checkbox__label:before,
+.usa-checkbox__input[aria-checked="mixed"]:disabled + .usa-checkbox__label:before {
   @include u-bg("primary");
   box-shadow: 0 0 0 2px #70e17b;
   background-image: url("#{$theme-image-path}/minus-white.svg");
@@ -132,7 +132,6 @@
 
 //IAE-45479 fix in FF
 @-moz-document url-prefix() {
-
   .usa-checkbox,
   .usa-fieldset {
     position: relative;
@@ -141,7 +140,6 @@
 
 //IAE-45479 fix in IE11
 @media all and (-ms-high-contrast: none) {
-
   *::-ms-backdrop,
   .usa-checkbox,
   .usa-fieldset {
@@ -172,21 +170,21 @@
 
 .usa-checkbox,
 .usa-radio {
-
-  .usa-checkbox__input:checked+.usa-checkbox__label,
-  .usa-radio__input:checked+.usa-radio__label {
+  background-color: transparent !important;
+  .usa-checkbox__input:checked + .usa-checkbox__label,
+  .usa-radio__input:checked + .usa-radio__label {
     &::before {
       background-color: #70e17b !important;
     }
   }
 
-  .usa-checkbox__input:checked+.usa-checkbox__label {
+  .usa-checkbox__input:checked + .usa-checkbox__label {
     &::before {
       box-shadow: 0 0 0 2px #70e17b !important;
     }
   }
 
-  .usa-radio__input:checked+.usa-radio__label {
+  .usa-radio__input:checked + .usa-radio__label {
     &::before {
       box-shadow: 0 0 0 2px #70e17b, inset 0 0 0 2px white !important;
     }
