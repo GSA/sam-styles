@@ -80,6 +80,15 @@
   background-color: transparent;
   box-shadow: none;
 
+  // Add color variants here
+  &.usa-button--secondary {
+  	@include u-border("secondary");
+  }
+
+  &.usa-button--secondary-light {
+  	@include u-border("secondary-light");
+  }
+
   &:visited {
     color: color("primary");
   }
