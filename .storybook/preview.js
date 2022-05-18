@@ -7,4 +7,6 @@ export const parameters = {
     },
   },
 };
-import "!style-loader!css-loader!sass-loader!../scss/sam-styles/index.scss";
+// import "!style-loader!css-loader!sass-loader!../scss/sam-styles/index.scss";
+
+import "!style-loader!css-loader!sass-loader!../sam-styles/index.scss";
