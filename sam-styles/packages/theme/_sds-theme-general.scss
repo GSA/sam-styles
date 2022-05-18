@@ -7,25 +7,124 @@
 ========================================
 ========================================
 ----------------------------------------
-USWDS 2.2.0
+USWDS 2.13.1
 ----------------------------------------
 GENERAL SETTINGS
 ----------------------------------------
 Read more about settings and
 USWDS style tokens in the documentation:
-https://v2.designsystem.digital.gov/style-tokens
+https://designsystem.digital.gov/design-tokens
 ----------------------------------------
 */
+
+/*
+----------------------------------------
+Image path
+----------------------------------------
+Relative image file path
+----------------------------------------
+*/
+
+$theme-image-path: "../img";
+
+/*
+----------------------------------------
+Show compile warnings
+----------------------------------------
+Show Sass warnings when functions and
+mixins use non-standard tokens.
+AND
+Show updates and notifications.
+----------------------------------------
+*/
+
+$theme-show-compile-warnings: true;
+$theme-show-notifications: true;
+
+/*
+----------------------------------------
+Namespace
+----------------------------------------
+*/
+
+$theme-namespace: (
+  "grid": (
+    namespace: "grid-",
+    output: true,
+  ),
+  "utility": (
+    namespace: "u-",
+    output: false,
+  ),
+);
+
+/*
+----------------------------------------
+Prefix separator
+----------------------------------------
+Set the character the separates
+responsive and state prefixes from the
+main class name.
+The default (":") needs to be preceded
+by two backslashes to be properly
+escaped.
+----------------------------------------
+*/
+
+$theme-prefix-separator: "\\:";
+
+/*
+----------------------------------------
+Layout grid
+----------------------------------------
+Should the layout grid classes output
+with !important
+----------------------------------------
+*/
+
+$theme-layout-grid-use-important: false;
+
+/*
+----------------------------------------
+Border box sizing
+----------------------------------------
+When set to true, sets the box-sizing
+property of all site elements to
+`border-box`.
+----------------------------------------
+*/
+
+$theme-global-border-box-sizing: true;
+
+/*
+----------------------------------------
+Focus styles
+----------------------------------------
+*/
+
+$theme-focus-color: "blue-40v";
+$theme-focus-offset: 0;
+$theme-focus-style: solid;
+$theme-focus-width: 0.5;
+
+/*
+----------------------------------------
+Icons
+----------------------------------------
+*/
+
+$theme-icon-image-size: 2;
+
 @mixin adjust-responsive-site-margins {
-    margin-left: -(units($theme-site-margins-mobile-width));
-    margin-right: -(units($theme-site-margins-mobile-width));
-    padding-left: (units($theme-site-margins-mobile-width));
-    padding-right: (units($theme-site-margins-mobile-width));
-    @include at-media($theme-site-margins-breakpoint) {
-        margin-left: -(units($theme-site-margins-width));
-        margin-right: -(units($theme-site-margins-width));
-        padding-left: (units($theme-site-margins-width));
-        padding-right: (units($theme-site-margins-width));
-    }
+  margin-left: -(units($theme-site-margins-mobile-width));
+  margin-right: -(units($theme-site-margins-mobile-width));
+  padding-left: (units($theme-site-margins-mobile-width));
+  padding-right: (units($theme-site-margins-mobile-width));
+  @include at-media($theme-site-margins-breakpoint) {
+    margin-left: -(units($theme-site-margins-width));
+    margin-right: -(units($theme-site-margins-width));
+    padding-left: (units($theme-site-margins-width));
+    padding-right: (units($theme-site-margins-width));
   }
-$button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+}
+$button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);

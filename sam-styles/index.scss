@@ -1,6 +1,6 @@
 $theme-image-path: "~uswds/src/img";
 $theme-font-path: "~uswds/src/fonts";
 $theme-hero-image: "~uswds/src/img/hero.png";
-
+@import "./packages/theme/sds-theme-color";
 @import "../node_modules/uswds/dist/scss/stylesheets/uswds.scss";
 @import "./packages/index.scss";
