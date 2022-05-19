@@ -1,5 +1,5 @@
 import { createButton } from "./Button";
-
+import ButtonTemplate from "./button-variants.html";
 export default {
   title: "Components/Button",
   argTypes: {
@@ -28,4 +28,8 @@ export const Default = Template.bind({});
 
 Default.args = {
   label: "Button",
+};
+
+export const Variants = () => {
+  return ButtonTemplate;
 };
