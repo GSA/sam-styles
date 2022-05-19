@@ -83,6 +83,28 @@
   // Add color variants here
   &.usa-button--secondary {
   	@include u-border("secondary");
+    background-color: white;
+
+    &:visited {
+      color: color("secondary");
+      box-shadow: none;
+    }
+
+    &.usa-button--hover,
+    &:hover {
+      background-color: white;
+      color: color("secondary-darker");
+      border-color: color("secondary-lighter");
+      box-shadow: none;
+    }
+
+    &.usa-button--active,
+    &:active {
+      background-color: white;
+      color: color("secondary-darker");
+      border-color: color("secondary-darker");
+      box-shadow: none;
+    }
   }
 
   &.usa-button--secondary-light {

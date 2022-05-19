@@ -6,6 +6,7 @@ const usavariants = [
   "unstyled",
   "accent-cool",
   "outline",
+  "outline-secondary",
   "outline-inverse",
   "big",
 ];
@@ -18,6 +19,7 @@ const sdsvariants =[
 const usaclasses = usavariants.map(i => 'usa-button--' + i);
 const sdsclasses = sdsvariants.map(i => 'sds-button--' + i);
 usaclasses.splice(usavariants.length-2,1,"usa-button--outline usa-button--inverse");
+usaclasses.splice(usavariants.length-3,1,"usa-button--outline usa-button--secondary");
 const variantNames   = [...usavariants, ...sdsvariants];
 const variantClasses = [...usaclasses,  ...sdsclasses];
 
