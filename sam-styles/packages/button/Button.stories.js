@@ -27,8 +27,8 @@ export const Variants = () => {
   return ButtonTemplate;
 };
 
-export const Default = Template.bind({});
+export const Basic = Template.bind({});
 
-Default.args = {
+Basic.args = {
   label: "Button",
 };
