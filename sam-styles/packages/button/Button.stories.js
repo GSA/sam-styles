@@ -11,7 +11,7 @@ export default {
     },
     size: {
       control: { type: "select" },
-      options: ["big", "small"],
+      options: ["", "big", "small"],
     },
     focusType: {
       control: { type: "select" },
