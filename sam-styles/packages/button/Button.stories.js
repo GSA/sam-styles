@@ -23,13 +23,12 @@ export default {
 const Template = ({ label, ...args }) => {
   return createButton({ label, ...args });
 };
+export const Variants = () => {
+  return ButtonTemplate;
+};
 
 export const Default = Template.bind({});
 
 Default.args = {
   label: "Button",
-};
-
-export const Variants = () => {
-  return ButtonTemplate;
 };
