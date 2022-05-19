@@ -86,23 +86,23 @@
     background-color: white;
 
     &:visited {
-      color: color("secondary");
+      color: black;
       box-shadow: none;
     }
 
     &.usa-button--hover,
     &:hover {
-      background-color: white;
-      color: color("secondary-darker");
-      border-color: color("secondary-lighter");
+      background-color: color("secondary-lighter");
+      color: black;
+      border-color: color("secondary-light");
       box-shadow: none;
     }
 
     &.usa-button--active,
     &:active {
-      background-color: white;
-      color: color("secondary-darker");
-      border-color: color("secondary-darker");
+      background-color: color("secondary");
+      color: white;
+      border-color: color("secondary");
       box-shadow: none;
     }
   }
