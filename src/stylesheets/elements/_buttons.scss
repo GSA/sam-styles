@@ -80,6 +80,38 @@
   background-color: transparent;
   box-shadow: none;
 
+  // Add color variants here
+  &.usa-button--secondary {
+    @include u-border("secondary");
+    @include u-text("semibold", "ink");
+    background-color: white;
+
+    &:visited {
+      color: black;
+      box-shadow: none;
+    }
+
+    &.usa-button--hover,
+    &:hover {
+      background-color: color("secondary-lighter");
+      color: black;
+      border-color: color("secondary-light");
+      box-shadow: none;
+    }
+
+    &.usa-button--active,
+    &:active {
+      background-color: color("secondary");
+      color: white;
+      border-color: color("secondary");
+      box-shadow: none;
+    }
+  }
+
+  &.usa-button--secondary-light {
+  	@include u-border("secondary-light");
+  }
+
   &:visited {
     color: color("primary");
   }
