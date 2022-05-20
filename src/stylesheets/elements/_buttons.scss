@@ -82,7 +82,7 @@
 
   // Add color variants here
   &.usa-button--secondary {
-  	@include u-border("secondary");
+    @include u-border("secondary");
     @include u-text("semibold", "ink");
     background-color: white;
 
