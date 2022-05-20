@@ -1,0 +1,78 @@
+/**********************************
+       SEARCH USWDS OVERRIDES
+***********************************/
+.usa-search {
+  @include u-width("full");
+
+  @media only screen and (max-width: 480px) {
+    @include u-flex("row");
+  }
+
+  &[role="search"] {
+    @include u-display("flex");
+  }
+
+  [type="submit"] {
+    @include u-bg("indigo-cool-60");
+    @include u-radius(0);
+    @include u-height(5);
+    // @include u-minw(5);
+    @include u-shadow(3);
+    @include u-border(0);
+  }
+
+  [type="search"] {
+    @include u-height(5);
+    @include u-border(1px);
+    @include u-border("base-light");
+    @include u-shadow(3);
+  }
+}
+
+.usa-form.usa-search {
+  max-width: 45rem;
+
+  [type="search"],
+  .usa-search__input {
+    @include u-width("full");
+    max-width: unset;
+  }
+
+  select {
+    @include u-margin-top(0);
+    @include u-height(5);
+    @include u-border(1px);
+    @include u-border("base-light");
+    @include u-border-right(0);
+    @include u-shadow(3);
+
+    @media only screen and (min-width: 480px) {
+      @include u-maxw("mobile");
+    }
+  }
+}
+
+/************************************
+         Big Search USWDS OVERRIDES
+  *************************************/
+.usa-search.usa-search--big {
+  [type="submit"] {
+    @include u-minw(9);
+    background-size: 0 0;
+
+    & > img {
+      display: block;
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+
+  @media (min-width: 30em) {
+    [type="search"],
+    [type="submit"],
+    .usa-select {
+      @include u-font("sans", "md");
+      @include u-height(8);
+    }
+  }
+}
