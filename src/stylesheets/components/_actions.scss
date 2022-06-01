@@ -1,0 +1,30 @@
+.sds-button--actions {
+    border-radius: 50%;
+    height: units(4);
+    width: units(4);
+    @include u-display("inline-flex");
+    @include u-flex("align-center");
+    @include u-flex("justify-center");
+    margin: unset;
+    padding: 0;
+    @include u-bg('white');
+    @include u-text('secondary-dark');
+    
+    &.sds-button--actions--hover,  
+    &:hover{
+        @include u-bg("white");
+        @include u-border("primary-light");
+        @include u-border-width("2px");
+        @include u-text("secondary-darker");
+        box-shadow: 0px 0px 20px -1px #162e51;
+    }
+
+    &.sds-button--actions--active, 
+    &:active{
+        @include u-bg("white");
+        @include u-border("secondary-darker");
+        @include u-border-width("2px");
+        @include u-text("secondary-darker");
+        box-shadow: 0px 0px 0 1px #162e51;
+    }  
+}
