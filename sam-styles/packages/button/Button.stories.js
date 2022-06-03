@@ -1,33 +1,17 @@
-import {createButton} from "./Button";
 import ButtonTemplate from "./button-variants.html";
 export default {
   title: "Components/Button",
   argTypes: {
     label: {control: "text"},
-    onClick: {action: "onClick"},
     type: {
       control: {type: "select"},
-      options: [
-        "primary",
-        "secondary",
-        "base",
-        "unstyled",
-        "accent-cool",
-        "outline",
-        "outline-inverse",
-        "shadow",
-        "white",
-        "danger",
-      ],
+      options: ["primary", "secondary", "base", "unstyled", "accent-cool", "outline", "outline-inverse"],
     },
     size: {
       control: {type: "select"},
       options: ["", "big", "small"],
     },
-    focusType: {
-      control: {type: "select"},
-      options: ["", "hover", "active", "focus", "disabled"],
-    },
+
     color: {
       control: {type: "select"},
       options: ["", "light", "lighter", "lightest", "vivid", "dark", "darker"],
@@ -35,36 +19,84 @@ export default {
   },
 };
 
-const Template = ({label, ...args}) => {
-  return createButton({label, ...args});
+const CustomTemplate = (args) => {
+  var sizeD = "";
+  if (args.size) {
+    if (args.size === "small") {
+      sizeD = "sds-button--small";
+    } else {
+      sizeD = `usa-button--${args.size}`;
+    }
+  }
+  var typeD = args.type ? `usa-button--${args.type}` : "";
+
+  const colorType = args.type ? args.type : "primary";
+  const colorD = args.type && args.color ? `bg-${colorType}-${args.color}` : "";
+
+  return `<button
+    type="button"
+    class="usa-button ${typeD} ${sizeD} ${colorD}"
+    >${args.label}</button
+>
+<button
+    type="button"
+    class="usa-button ${typeD} ${sizeD} ${colorD} usa-button--hover"
+    >Hover</button
+>
+<button
+    type="button"
+    class="usa-button ${typeD} ${sizeD} ${colorD} usa-button--active"
+    >Active</button
+>
+<button
+    type="button"
+    class="usa-button ${typeD} ${sizeD} ${colorD} usa-focus"
+    >Focus</button
+>
+
+<button
+    type="button"
+    class="usa-button ${typeD} ${sizeD} ${colorD}"
+disabled="disabled"
+    >Disabled</button
+>
+`;
 };
 
 export const Variants = () => {
   return ButtonTemplate;
 };
 
-export const Default = Template.bind({});
+export const Default = CustomTemplate.bind({});
 Default.args = {label: "Default"};
 
-export const AccentCool = Template.bind({});
+export const Secondary = CustomTemplate.bind({});
+Secondary.args = {label: "Secondary", type: "secondary"};
+
+export const AccentCool = CustomTemplate.bind({});
 AccentCool.args = {
   label: "Accent",
   type: "accent-cool",
 };
 
-export const Base = Template.bind({});
+export const Base = CustomTemplate.bind({});
 Base.args = {
   label: "Base",
   type: "base",
 };
+export const Small = CustomTemplate.bind({});
+Small.args = {
+  label: "Small",
+  size: "small",
+};
 
-export const Big = Template.bind({});
+export const Big = CustomTemplate.bind({});
 Big.args = {
   label: "Big",
   size: "big",
 };
 
-export const Outline = Template.bind({});
+export const Outline = CustomTemplate.bind({});
 Outline.args = {
   label: "Outline",
   type: "outline",
@@ -76,10 +108,7 @@ Outline.args = {
 //   type: "outline-inverse",
 // };
 
-export const Secondary = Template.bind({});
-Secondary.args = {label: "Secondary", type: "secondary"};
-
-export const Unstyled = Template.bind({});
+export const Unstyled = CustomTemplate.bind({});
 Unstyled.args = {
   label: "Unstled",
   type: "unstyled",
