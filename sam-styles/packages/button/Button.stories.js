@@ -1,27 +1,42 @@
-import { createButton } from "./Button";
+import {createButton} from "./Button";
 import ButtonTemplate from "./button-variants.html";
 export default {
   title: "Components/Button",
   argTypes: {
-    label: { control: "text" },
-    onClick: { action: "onClick" },
+    label: {control: "text"},
+    onClick: {action: "onClick"},
     type: {
-      control: { type: "select" },
-      options: ["", "secondary", "base", "unstyled", "accent-cool", "outline", "outline-inverse", "shadow", "white", "danger"],
+      control: {type: "select"},
+      options: [
+        "primary",
+        "secondary",
+        "base",
+        "unstyled",
+        "accent-cool",
+        "outline",
+        "outline-inverse",
+        "shadow",
+        "white",
+        "danger",
+      ],
     },
     size: {
-      control: { type: "select" },
+      control: {type: "select"},
       options: ["", "big", "small"],
     },
     focusType: {
-      control: { type: "select" },
+      control: {type: "select"},
       options: ["", "hover", "active", "focus", "disabled"],
+    },
+    color: {
+      control: {type: "select"},
+      options: ["", "light", "lighter", "lightest", "vivid", "dark", "darker"],
     },
   },
 };
 
-const Template = ({ label, ...args }) => {
-  return createButton({ label, ...args });
+const Template = ({label, ...args}) => {
+  return createButton({label, ...args});
 };
 
 export const Variants = () => {
@@ -29,7 +44,7 @@ export const Variants = () => {
 };
 
 export const Default = Template.bind({});
-Default.args = { label: "Default" };
+Default.args = {label: "Default"};
 
 export const AccentCool = Template.bind({});
 AccentCool.args = {
@@ -62,7 +77,7 @@ Outline.args = {
 // };
 
 export const Secondary = Template.bind({});
-Secondary.args = { label: "Secondary", type: "secondary" };
+Secondary.args = {label: "Secondary", type: "secondary"};
 
 export const Unstyled = Template.bind({});
 Unstyled.args = {
