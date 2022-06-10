@@ -2,12 +2,12 @@ title: Actions Menu
 status: wip
 preview: "@sam"
 context:
-    - tyle: primary
-      label: action
-      icon:
-        icon: ellipsis
-        classes: fa-fw
-        dataTransform: grow-5
+  style: primary
+  label: action
+  icon:
+    icon: ellipsis
+    classes: fa-fw
+    dataTransform: grow-5
    
     
 
