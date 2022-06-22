@@ -1,7 +1,7 @@
 $sds-table-border: "1px";
 
 %sds-table--highlight {
-  @include u-bg('accent-cool-lighter');
+  @include u-bg("accent-cool-lighter");
 }
 
 %sds-table--cell {
@@ -19,25 +19,28 @@ $sds-table-border: "1px";
   margin: 0;
 
   thead {
-    th, td {
+    th,
+    td {
       @extend %sds-table--cell;
-      @include u-border-bottom('base-light', $sds-table-border);
-      @include u-text('semibold');
+      @include u-border-bottom("base-light", $sds-table-border);
+      @include u-text("semibold");
       @include u-bg("base-lighter");
     }
   }
 
   tfoot {
-    th, td {
+    th,
+    td {
       @extend %sds-table--cell;
-      @include u-border-top('base-light', $sds-table-border);
-      @include u-text('semibold');
+      @include u-border-top("base-light", $sds-table-border);
+      @include u-text("semibold");
       @include u-bg("base-lighter");
     }
   }
 
   tbody {
-    th, td {
+    th,
+    td {
       @extend %sds-table--cell;
     }
 
@@ -50,14 +53,15 @@ $sds-table-border: "1px";
 
     &.sds-table__subsection {
       th {
-        @include u-text('semibold');
+        @include u-text("semibold");
       }
     }
   }
 
   // sticky column border
-  .sds-table__heading--sticky:first-child, .sds-table__cell--sticky:first-child {
-    @include u-border-right('base-light', $sds-table-border);
+  .sds-table__heading--sticky:first-child,
+  .sds-table__cell--sticky:first-child {
+    @include u-border-right("base-light", $sds-table-border);
   }
 
   &__subsection {
@@ -112,7 +116,7 @@ $sds-table-border: "1px";
       display: table-row;
 
       .sds-table__cell--detail {
-        @include u-border-bottom('base-light', $sds-table-border);
+        @include u-border-bottom("base-light", $sds-table-border);
         @include u-padding-top(0);
         @include u-padding-bottom(0);
       }
@@ -125,17 +129,16 @@ $sds-table-border: "1px";
     background: inherit;
   }
 
-  tr.sds-table__row--hovered{
-    td{
-      @include u-bg('base-light', !important);
+  tr.sds-table__row--hovered {
+    td {
+      @include u-bg("base-light", !important);
       cursor: pointer;
     }
   }
-  
 }
 
 .sds-table__container {
-  @include u-border('base-light', $sds-table-border);
+  @include u-border("base-light", $sds-table-border);
   height: inherit;
   max-height: inherit;
   overflow: auto;
@@ -145,93 +148,96 @@ $sds-table-border: "1px";
 }
 
 .usa-table {
-  .usa-table__header__button{
+  .usa-table__header__button {
     background-color: transparent;
     border: 0px;
-    &:hover{
-      border: 2px; 
+    &:hover {
+      border: 2px;
       cursor: pointer;
     }
-    .usa-icon{
+    .usa-icon {
       height: 1.5rem;
       width: 1.5rem;
       vertical-align: middle;
-      &>g.unsorted{
+      & > g.unsorted {
         fill: #757575;
       }
     }
   }
-  tr{
+  tr {
     height: 3rem;
   }
-  &--compact{
-    tr{
+  &--compact {
+    tr {
       height: 100%;
     }
   }
 
   &:not(.usa-table--borderless):not(.sds-tree-table) {
-    thead{
-      th,td {
+    thead {
+      th,
+      td {
         /**
         Overrides remaining borders to ensure correct color and width.
         Must include :not(.mat-header-cell) in order to prevent a 2 px border from forming when sds-table extends usa-table
         */
-        &:first-child:not(.mat-header-cell){
-          @include u-border-left('base-light', $sds-table-border); 
+        &:first-child:not(.mat-header-cell) {
+          @include u-border-left("base-light", $sds-table-border);
         }
-        &:last-child:not(.mat-header-cell){
-          @include u-border-right('base-light', $sds-table-border); 
+        &:last-child:not(.mat-header-cell) {
+          @include u-border-right("base-light", $sds-table-border);
         }
-        &:not(.mat-header-cell){
-          @include u-border-top('base-light', $sds-table-border);
+        &:not(.mat-header-cell) {
+          @include u-border-top("base-light", $sds-table-border);
         }
       }
     }
-    tbody{
-      tr{
-        &:last-child{
+    tbody {
+      tr {
+        &:last-child {
           td:not(.mat-cell) {
-            @include u-border-bottom('base-light', $sds-table-border);
+            @include u-border-bottom("base-light", $sds-table-border);
           }
         }
-        th,td{
-          &:first-child:not(.mat-cell){
-            @include u-border-left('base-light', $sds-table-border);
+        th,
+        td {
+          &:first-child:not(.mat-cell) {
+            @include u-border-left("base-light", $sds-table-border);
           }
-          &:last-child:not(.mat-cell){
-            @include u-border-right('base-light', $sds-table-border);
+          &:last-child:not(.mat-cell) {
+            @include u-border-right("base-light", $sds-table-border);
           }
         }
       }
     }
   }
-  
+
   thead {
-    th, td {
+    th,
+    td {
       /**
         Removes internal borders so that only borders on the outside edges of header remain
       */
-      &:not(:first-child){
+      &:not(:first-child) {
         border-left: 0px;
       }
-      &:not(:last-child){
+      &:not(:last-child) {
         border-right: 0px;
       }
-      &:not(.mat-header-cell){
-        @include u-border-bottom('base-light', $sds-table-border);
+      &:not(.mat-header-cell) {
+        @include u-border-bottom("base-light", $sds-table-border);
       }
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;
       padding-left: 1.5rem;
       padding-right: 1rem;
       background-color: color($theme-table-header-background-color);
-      
     }
   }
   tbody {
-    tr{
-      th, td {
+    tr {
+      th,
+      td {
         padding-bottom: 0.5rem;
         padding-top: 0.5rem;
         padding-left: 1.5rem;
@@ -266,6 +272,12 @@ $sds-table-border: "1px";
           background-color: white;
         }
       }
+    }
+  }
+
+  thead {
+    th[aria-sort] {
+      background-color: color($theme-table-header-background-color);
     }
   }
 }
