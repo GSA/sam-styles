@@ -268,4 +268,9 @@ $sds-table-border: "1px";
       }
     }
   }
+  thead {
+    th[aria-sort] {
+      background-color: color($theme-table-header-background-color);
+    }
+  }
 }
