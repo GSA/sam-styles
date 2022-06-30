@@ -1,0 +1,47 @@
+.usa-alert__heading {
+  color: color("base-dark");
+  @include u-font("sans", "md");
+  font-weight: font-weight("semibold");
+}
+.usa-site-alert.usa-site-alert--emergency {
+  @include u-bg("error-dark");
+
+  .usa-alert {
+    @include u-bg("error-dark");
+  }
+  .usa-alert__heading,
+  .usa-alert__text {
+    color: white;
+  }
+}
+.usa-alert {
+  @include u-border("2px");
+  svg {
+    color: color("info");
+  }
+  &--warning {
+    @include u-border("warning");
+
+    svg {
+      color: color("warning");
+    }
+  }
+  &--error {
+    @include u-border("error-dark");
+
+    svg {
+      color: color("error-dark");
+      transform: rotate(-45deg);
+    }
+  }
+  &--success {
+    @include u-border("success");
+
+    svg {
+      color: color("success");
+    }
+  }
+}
+.usa-site-alert.usa-site-alert--emergency {
+  background-color: white;
+}
