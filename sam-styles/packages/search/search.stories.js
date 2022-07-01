@@ -1,11 +1,11 @@
 export default {
   title: "Components/Search",
   argTypes: {
-    ariaLabel: { type: "string" },
-    label: { type: "string" },
-    formClass: { type: "string" },
-    for: { type: "string" },
-    id: { type: "string" },
+    ariaLabel: {type: "string"},
+    label: {type: "string"},
+    formClass: {type: "string"},
+    for: {type: "string"},
+    id: {type: "string"},
   },
 };
 
@@ -16,7 +16,7 @@ const Template = (args) => {
           <label class="usa-sr-only" for="${args.for}">Search</label>
           <input class="usa-input" id="${args.id}" type="search" name="search" placeholder="Search Here">
           <button class="usa-button" type="submit">
-          <img src="../../assets/images/search.svg" class="usa-search__submit-icon" alt="Search">
+          <img src="search.svg" class="usa-search__submit-icon" alt="Search">
       </button>
   </form>
 </section>`;
@@ -36,7 +36,7 @@ const TemplateForOptions = (args) => {
       <input class="usa-input" id="${args.id}" type="search" name="search" placeholder="Search Here">
 
           <button class="usa-button" type="submit">
-          <img src="../../assets/images/search.svg" class="usa-search__submit-icon" alt="Search">
+          <img src="search.svg" class="usa-search__submit-icon" alt="Search">
       </button>
   </form>
 </section>`;
