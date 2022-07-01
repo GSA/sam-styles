@@ -19,8 +19,3 @@ export const Default = Template.bind({});
 Default.args = {
   label: "Text input label",
 };
-
-// export const Focus = Template.bind({});
-// Focus.args = {
-//   class: "usa-focus",
-// };
