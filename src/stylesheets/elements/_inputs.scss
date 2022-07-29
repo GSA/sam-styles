@@ -197,6 +197,7 @@
     flex-wrap: nowrap;
 
     .horizontal-option {
+      display: inline-flex;
       padding-right: 3rem;
       flex-wrap: nowrap;
     }
