@@ -185,8 +185,7 @@
   cursor: pointer;
 }
 
-.sds-tooltip:hover .sds-tooltip__content,
-.sds-tooltip:focus .sds-tooltip__content,
+.sds-tooltip .tooltip-expanded.sds-tooltip__content,
 .sds-popover__content.sds-popover__hidden,
 .sds-popover__content.sds-popover__shown {
   display: block;
