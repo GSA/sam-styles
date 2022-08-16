@@ -201,6 +201,7 @@
 .sds-tag--borderless {
   @include u-font("sans", "3xs");
   @include u-text("base-dark");
+  @include u-border("1px");
   line-height: 1rem;
   font-weight: font-weight('semibold');
   padding: 6px 7px 7px 7px;
@@ -208,7 +209,13 @@
   display: flex;
   width: 128px;
   @include u-bg("base-lightest");
-  border-width: 0;
+  @include u-border("base-light");
+}
+
+.sds-tag--borderless:nth-child(n+2) {
+  @include u-border("1px");
+  @include u-border("base-light");
+  border-top: 0;
 }
 
 .sds-tag--small {
