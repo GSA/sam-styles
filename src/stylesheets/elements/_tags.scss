@@ -194,22 +194,11 @@
 }
 
 .sds-tag-container {
-  display: flex;
-  flex-direction: column;
+  @extend .flex-align-stretch;
 }
 
 .sds-tag--borderless {
-  @include u-font("sans", "3xs");
-  @include u-text("base-dark");
-  @include u-border("1px");
-  line-height: 1rem;
-  font-weight: font-weight('semibold');
-  padding: 6px 7px 7px 7px;
-  margin-right: 14px;
-  display: flex;
-  width: 128px;
-  @include u-bg("base-lightest");
-  @include u-border("base-light");
+  @extend .sds-tag;
 }
 
 .sds-tag--borderless:nth-child(n+2) {
