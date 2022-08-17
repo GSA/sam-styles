@@ -7,7 +7,7 @@
   @include u-bg("violet-warm-10v");
   @include u-border("indigo-warm-50");
   @include u-border("1px");
-  font-weight: font-weight('semibold');
+  font-weight: font-weight("semibold");
   border-radius: 0;
   @include u-text("base-darker");
 }
@@ -15,7 +15,7 @@
 .sds-tag--info-white {
   background-color: white;
   border: 1px solid #76766a;
-  font-weight: font-weight('semibold');
+  font-weight: font-weight("semibold");
   border-radius: 0;
   @include u-text("base-darker");
 }
@@ -27,39 +27,40 @@
   border: 1px solid color("primary");
   @include u-font("sans", "3xs");
   padding: 2px 5px;
-  @include u-display('inline-flex');
+  @include u-display("inline-flex");
   @include u-align-items("align-start");
-  @include u-margin-top('05');
+  @include u-margin-top("05");
 }
 
 .sds-tag.sds-tag--chip .sds-tag__close {
   @include button-unstyled;
   font-size: 12px;
   margin-left: 5px;
-  @include u-text('ink');
+  @include u-text("ink");
   cursor: pointer;
 
   &:hover {
-    @include u-text('base');
+    @include u-text("base");
   }
 }
 
 // Chip tag input
 .sds-tag.sds-tag--input {
   max-width: units($theme-input-max-width);
-  @include u-width('full');
-  @include u-position('relative');
+  @include u-width("full");
+  @include u-position("relative");
 
   .sds--tag__item {
-    div:first-child, .sds-tag__primary-text {
-      @include u-text('semibold');
+    div:first-child,
+    .sds-tag__primary-text {
+      @include u-text("semibold");
     }
   }
 
   .sds-tag__close {
-    @include u-position('absolute');
-    @include u-top('05');
-    @include u-right('05');
+    @include u-position("absolute");
+    @include u-top("05");
+    @include u-right("05");
   }
 }
 
@@ -70,7 +71,7 @@
   @include u-font("sans", "3xs");
   @include u-text("base-dark");
   line-height: 20px;
-  font-weight: font-weight('semibold');
+  font-weight: font-weight("semibold");
   padding: 0 5px 4px 0;
   border-radius: 0;
   margin-right: 5px;
@@ -86,7 +87,7 @@
   @include u-text("base-dark");
   @include u-border("1px");
   line-height: 1rem;
-  font-weight: font-weight('semibold');
+  font-weight: font-weight("semibold");
   padding: 6px 7px 7px 7px;
   @include u-border("base-light");
   margin-right: 14px;
@@ -94,6 +95,7 @@
   width: 128px;
   @include u-bg("base-lightest");
 }
+
 .sds-tag--outline {
   &--blue {
     @include u-border("info-dark");
@@ -191,6 +193,14 @@
   }
 }
 
+.sds-tag-container {
+  @extend .flex-align-stretch;
+}
+
+.sds-tag-container > .sds-tag:nth-child(n + 2) {
+  @include u-border-top(0);
+}
+
 .sds-tag--small {
   @include u-font("sans", "3xs");
 }
@@ -215,7 +225,7 @@ Label Title
 .sds-type--label-title {
   font-size: 14px;
   font-style: italic;
-  font-weight: font-weight('thin');
+  font-weight: font-weight("thin");
   margin: 0;
   color: #5d5d52;
 }
