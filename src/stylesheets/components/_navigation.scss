@@ -84,10 +84,6 @@
       color: color('secondary');
       text-decoration: none;
     }
-    &.usa-current::after {
-      left: 0;
-      right: 0;
-    }
     @include at-media-max($theme-header-min-width) {
       padding: units(1) units(2);
     }
@@ -98,7 +94,9 @@
     }
     &:hover,
     &.usa-current {
-      @include add-bar('2px', 'primary', 'bottom', 1, 1, -2px);
+      .sds-nav__secondary-item-text {
+        @include add-bar('2px', 'primary', 'bottom', 1, 0, 'neg-105');
+      }
     }
   }
 }
@@ -116,7 +114,7 @@ Navigation close button
 *******************************/
 
 .sds-nav__secondary-item-text {
-  padding-left: units(0.5);
+  margin-left: units(0.5);
   @include at-media($theme-header-min-width) {
     @include u-display('none');
   }
