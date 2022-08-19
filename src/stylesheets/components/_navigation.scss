@@ -66,6 +66,9 @@
     }
     @include at-media($theme-header-min-width) {
       padding-left: units(3);
+      & + .usa-nav__secondary-item::before {
+        color: color('base-light');
+      }
     }
     @include at-media('tablet-lg') {
       padding-left: units(0.5);
