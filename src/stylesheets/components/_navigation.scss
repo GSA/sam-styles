@@ -36,6 +36,7 @@
   > .usa-nav__primary-item {
     font-size: font-size($theme-navigation-font-family, 'md');
     > a {
+      color: color('ink');
       font-weight: font-weight('normal');
       &:hover {
         color: color('secondary');
@@ -51,21 +52,14 @@
 .usa-nav__secondary {
   @include at-media-max($theme-header-min-width) {
     .usa-current {
-      @include add-bar(
-        $theme-sidenav-current-border-width,
-        'primary',
-        'left',
-        'pill',
-        1,
-        1
-      );
+      @include add-bar($theme-sidenav-current-border-width, 'primary', 'left', 'pill', 1, 1);
     }
   }
 }
 
 .usa-nav__secondary-links {
   .usa-nav__secondary-item {
-    .counter-icon{
+    .counter-icon {
       color: red;
       margin-top: -1.7em;
       margin-right: -1.5em;
@@ -84,6 +78,7 @@
   }
 
   a {
+    color: color('ink');
     @include u-padding-bottom('105');
     &:hover {
       color: color('secondary');
@@ -101,9 +96,10 @@
       @include u-top('neg-05');
       @include u-right(-2px);
     }
-    &:hover, &.usa-current{
-    @include add-bar('2px', 'primary', 'bottom', 1, 1, -2px);
-   }
+    &:hover,
+    &.usa-current {
+      @include add-bar('2px', 'primary', 'bottom', 1, 1, -2px);
+    }
   }
 }
 
