@@ -288,4 +288,15 @@ $sds-table-border: "1px";
       }
     }
   }
+  &--stacked-header {
+    @include at-media-max("mobile-lg") {
+      tr{
+        td{
+          &:first-child{
+            padding-left: 0.75rem;
+          }
+        }
+      }
+    }
+  }
 }
