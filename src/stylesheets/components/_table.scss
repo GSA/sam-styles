@@ -124,14 +124,6 @@ $sds-table-border: "1px";
     padding: 0;
     background: inherit;
   }
-
-  tr.sds-table__row--hovered,
-  tr.usa-table__row--hovered{
-    td{
-      @include u-bg('base-light', !important);
-      cursor: pointer;
-    }
-  }
   
 }
 
@@ -146,6 +138,15 @@ $sds-table-border: "1px";
 }
 
 .usa-table {
+
+  tr.sds-table__row--hovered,
+  tr.usa-table__row--hovered{
+    td{
+      @include u-bg('base-light', !important);
+      cursor: pointer;
+    }
+  }
+  
   .usa-table__header__button{
     background-color: transparent;
     border: 0px;
