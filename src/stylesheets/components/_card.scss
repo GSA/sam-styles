@@ -11,14 +11,34 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
   border-radius: $sds-card-border-radius;
   @include u-shadow(2);
 
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__file {
+    @extend .sds-card;
+    @include u-bg($theme-color-base-lightest);
+    @include u-border('base-dark', 'solid', $sds-card-border-width);
+  }
+
   &__title {
     @include u-margin-y(0);
     @include u-display('inline-block');
 
+    &--file {
+      @include u-padding(1);
+      @include u-color($theme-color-base-light);
+    }
   }
 
   &__body {
     @include u-padding(2);
+
+    >* {
+      border-radius: $sds-card-border-radius;
+    }
 
     >*:first-child {
       @include u-margin-top(0);
