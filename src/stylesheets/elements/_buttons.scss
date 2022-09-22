@@ -259,6 +259,25 @@
   }
 }
 
+.usa-button--lightbg-darktext {
+  background-color: color("secondary-lighter");
+  @include u-border("secondary-light");
+  color: color("secondary-darker");
+
+  &.usa-button--hover,
+  &:hover {
+    background-color: color("secondary-light");
+    @include u-border("secondary");
+  }
+
+  &.usa-button--active,
+  &:active {
+    color: color("white");
+    background-color: color("secondary");
+    @include u-border("secondary-vivid");
+  }
+}
+
 .sds-button,
 .usa-button {
   &--disabled,
