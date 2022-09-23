@@ -139,13 +139,8 @@ $sds-table-border: "1px";
 
 .usa-table {
 
-  &.full-width {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+  &--full-width {
+    width: 100%;
   }
   
   tr.sds-table__row--hovered,
