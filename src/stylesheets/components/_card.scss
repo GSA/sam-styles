@@ -11,6 +11,10 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
   border-radius: $sds-card-border-radius;
   @include u-shadow(2);
 
+  &__secondary--border {
+    @include u-border('secondary-vivid', 'solid', $sds-card-border-width);
+  }
+
   &__title {
     @include u-margin-y(0);
     @include u-display('inline-block');
