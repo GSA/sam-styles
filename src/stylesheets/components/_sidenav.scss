@@ -1,4 +1,55 @@
 .usa-sidenav {
+  &.whitebg {
+    margin-top: 0;
+    @include u-bg('white');
+    list-style-type: none;
+    @include u-border-top('1px');
+    @include u-border-x('1px');
+    @include u-border-bottom('1px');
+    @include u-border('base-light');
+
+    a:not(.usa-button) {
+      color: color("secondary-dark");
+      font-weight: font-weight("semibold");
+      text-decoration: none;
+      list-style-type: none;
+  
+      &:hover {
+        background-color: transparent;
+        color: color("ink");
+      }
+    }
+
+    .usa-current {   
+      @include u-bg('white'); 
+      @include add-bar($theme-sidenav-current-border-width, "transparent", "left", 0, 0, 0);
+      color: color("secondary-darker");
+      font-weight: font-weight("semibold");
+
+      &.sds-sidenav__label {
+        @include u-display("block");
+        padding: units(1) 0 units(1) units(2);
+        cursor: pointer;
+      }
+    }      
+
+    .usa-sidenav__sublist .usa-current span {
+      background: url('/node_modules/@gsa-sam/sam-styles/src/img/arrow-right.svg'); 
+      background-size: 10px;   
+      background-repeat: no-repeat;
+      margin-left: -1.1rem;
+      padding-left: 1.1rem;
+    
+      .usa-sidenav a{
+        @include u-padding-y(0);
+      }
+    }
+
+    .usa-sidenav__item .usa-sidenav__item .usa-sidenav__item {
+      @include u-bg('base-lighter');
+    }
+  }
+
   &__item .usa-sidenav__item {
     border-top: none;
   }
@@ -13,8 +64,7 @@
     }
   }
 
-  .usa-current {
-    
+  .usa-current {    
     @include add-bar($theme-sidenav-current-border-width, "secondary-darker", "left", 0, 0, 0);
     color: color("secondary-darker");
     font-weight: font-weight("semibold");
@@ -25,7 +75,6 @@
       cursor: pointer;
     }
   }
-
 
   .usa-sidenav__sublist .usa-current::after {
     background-color: transparent;
@@ -38,7 +87,7 @@
     width: 0.25rem;
     left: 0;
   }
-
+  
   .usa-sidenav__sublist .usa-current span {
     background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAASCAYAAABit09LAAAABHNCSVQICAgIfAhkiAAAAWRJREFUKJFt0bFrFEEUx/Hvb4b7A5QUgRRBCyFNiiR3cGcp/gMWV0gIaWxsTGETSHGVKdKkCClShViIgqDNFddZyO4OC16TVsxhwN7q9tx5FsawN7np3o8P8+a9UZZlG865M2AJ2Ot0Op8lGclx3vtzYBNYBT6UZfnEzNwdGGN80KhbdV2/L8tyy8w0ByV9aQaS7scY3xVFsZbeeAhcJZ0eOufOiqK47ea63e5XSQfAr6Y0s8eS3oQQlgF0EyqE8BrYB+4ltx9VVXXobt5l3vtj4DydFthrtVo7c5ONx+OV6XT6cwH+MbevqqrqBQgzwyXBzgL3Bzi+hSGEZ8DLVEk6nc1mFwLI8/yppBPgUdLhY4zxVa/Xu1ae55uS3gJrCSq898/b7fZ3+PeFBykCrmKML/4jAAesJ+i3mW2PRqPLZugkfWvUtaTdyWSSDQaDOAdjjPtmlgHXZrY9HA4/9fv9O/v8Cz0+lHP+xemeAAAAAElFTkSuQmCC');
     background-repeat: no-repeat;
@@ -75,7 +124,6 @@
         color: color('secondary-dark');
         font-weight: font-weight('bold');
       }
-
     }
   }
 
@@ -101,7 +149,8 @@
   }
 }
 
-.dropdown-usa-sidenav {
-  @extend .usa-sidenav;
-  @include u-bg('white');
-}
+
+
+
+
+
