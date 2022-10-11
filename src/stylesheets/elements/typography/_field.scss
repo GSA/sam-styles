@@ -1,13 +1,17 @@
-formly-field {
-  display: block;
-  margin-top: 1.5rem;
+formly-form .usa-form-group {
+  margin-top: 0;
 }
 
 .sds-field {
   @include u-font("sans", "2xs");
-  @include u-text('base-dark');
+  @include u-text("base-dark");
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     //heading style
     @extend .h2;
 
@@ -21,7 +25,7 @@ formly-field {
     @include u-display("inline-block");
     @include u-margin-right("2px");
     // class used to vertically align field name to tag text
-    &.has-usa-tag{
+    &.has-usa-tag {
       vertical-align: middle;
       padding-top: 4px;
     }
@@ -30,7 +34,7 @@ formly-field {
     @include u-font("sans", $theme-body-font-size);
     @include u-display("inline-block");
     @include u-text("semibold");
-    &.left-align{
+    &.left-align {
       margin-left: -3.5rem;
     }
 
@@ -41,7 +45,7 @@ formly-field {
         font-size: inherit;
       }
     }
-    
+
     &--large {
       @include u-font("sans", "md");
       @include u-text("semibold");
