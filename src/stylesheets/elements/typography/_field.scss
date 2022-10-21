@@ -1,10 +1,10 @@
 formly-field {
-  display: block;
-  margin-top: 1.5rem;
+   @include u-display('block');
+   @include u-margin-top('105');
 }
 
 formly-form .usa-form-group {
-  margin-top: 0 !important;
+  @include u-margin-top(0);
 }
 
 .sds-field {
