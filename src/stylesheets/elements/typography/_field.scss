@@ -1,12 +1,3 @@
-formly-field {
-   @include u-display('block');
-   @include u-margin-top('105');
-}
-
-formly-form .usa-form-group {
-  @include u-margin-top(0);
-}
-
 .sds-field {
   @include u-font("sans", "2xs");
   @include u-text("base-dark");
