@@ -4,6 +4,19 @@
   justify-content: center;
 }
 
+formly-field {
+  display: block;
+  margin-top: 1.5rem;
+}
+
+formly-form .usa-form-group {
+  margin-top: 0 !important;
+}
+
+sds-filters usa-accordion formly-field:first-child {
+  margin-top: 0 !important;
+}
+
 .sds-form.usa-form.usa-form--large {
   @include u-bg("white");
   @include u-padding("105");
