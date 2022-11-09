@@ -1,5 +1,7 @@
+$border-color: color('base-light');
+
 .usa-sidenav {
-    border-top: 1px black solid;
+    border-top: 1px $border-color solid;
 
     .usa-sidenav__sublist {
         .usa-sidenav__sublist {
@@ -30,23 +32,23 @@
     }
 
     &>.sidenav__item {
-        border-left: 1px black solid;
-        border-right: 1px black solid;
+        border-left: 1px $border-color solid;
+        border-right: 1px $border-color solid;
 
         & a {
-            border-bottom: 1px black solid;
+            border-bottom: 1px $border-color solid;
         }
     }
 
     &>.usa-sidenav__item {
-        border-left: 1px black solid;
-        border-right: 1px black solid;
+        border-left: 1px $border-color solid;
+        border-right: 1px $border-color solid;
 
         &>span,
         &>a,
         usa-link-template>span,
         usa-link-template>a {
-            border-bottom: 1px black solid;
+            border-bottom: 1px $border-color solid;
         }
 
         usa-link-template>span {
@@ -102,7 +104,7 @@
 
             .usa-sidenav__sublist {
                 a {
-                    border-bottom: 1px black solid;
+                    border-bottom: 1px $border-color solid;
                 }
             }
         }
