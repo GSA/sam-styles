@@ -13,6 +13,13 @@ formly-form .usa-form-group {
   margin-top: 0 !important;
 }
 
+.single-form-control .usa-input,
+.single-form-control .usa-select,
+.single-form-control .usa-textarea,
+.single-form-control .usa-range {
+  margin-top: 0 !important;
+}
+
 sds-filters usa-accordion formly-field:first-child {
   margin-top: 0 !important;
 }
@@ -129,8 +136,8 @@ sds-filters usa-accordion formly-field:first-child {
 }
 
 //checkbox
-.usa-checkbox__input[aria-checked="mixed"] + .usa-checkbox__label:before,
-.usa-checkbox__input[aria-checked="mixed"]:disabled + .usa-checkbox__label:before {
+.usa-checkbox__input[aria-checked="mixed"]+.usa-checkbox__label:before,
+.usa-checkbox__input[aria-checked="mixed"]:disabled+.usa-checkbox__label:before {
   @include u-bg("primary");
   box-shadow: 0 0 0 2px #70e17b;
   background-image: url("#{$theme-image-path}/minus-white.svg");
@@ -145,6 +152,7 @@ sds-filters usa-accordion formly-field:first-child {
 
 //IAE-45479 fix in FF
 @-moz-document url-prefix() {
+
   .usa-checkbox,
   .usa-fieldset {
     position: relative;
@@ -153,6 +161,7 @@ sds-filters usa-accordion formly-field:first-child {
 
 //IAE-45479 fix in IE11
 @media all and (-ms-high-contrast: none) {
+
   *::-ms-backdrop,
   .usa-checkbox,
   .usa-fieldset {
@@ -184,20 +193,21 @@ sds-filters usa-accordion formly-field:first-child {
 .usa-checkbox,
 .usa-radio {
   background-color: transparent !important;
-  .usa-checkbox__input:checked + .usa-checkbox__label,
-  .usa-radio__input:checked + .usa-radio__label {
+
+  .usa-checkbox__input:checked+.usa-checkbox__label,
+  .usa-radio__input:checked+.usa-radio__label {
     &::before {
       background-color: #70e17b !important;
     }
   }
 
-  .usa-checkbox__input:checked + .usa-checkbox__label {
+  .usa-checkbox__input:checked+.usa-checkbox__label {
     &::before {
       box-shadow: 0 0 0 2px #70e17b !important;
     }
   }
 
-  .usa-radio__input:checked + .usa-radio__label {
+  .usa-radio__input:checked+.usa-radio__label {
     &::before {
       box-shadow: 0 0 0 2px #70e17b, inset 0 0 0 2px white !important;
     }
