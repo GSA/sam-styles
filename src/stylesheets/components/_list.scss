@@ -3,7 +3,7 @@
   li {
     @include u-line-height('body', 5);
     @include u-margin-bottom(1);
-    @include u-measure($theme-text-measure-wide);
+    @include u-measure(none);
   }
 
   svg {
@@ -60,4 +60,7 @@
       padding-bottom: 0;
     }
   }
+  
+  max-width: 88ex;
 }
+
