@@ -88,7 +88,9 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
 
     &--stacked,
     &--center {
-      @include u-text('center');
+      @include u-display('flex');
+      justify-content: center;
+      align-items: center;
     }
 
     &--action {

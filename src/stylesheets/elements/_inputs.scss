@@ -194,6 +194,10 @@ sds-filters usa-accordion formly-field:first-child {
 .usa-radio {
   background-color: transparent !important;
 
+  &__tooltip{
+    display: inline;
+  }
+
   .usa-checkbox__input:checked+.usa-checkbox__label,
   .usa-radio__input:checked+.usa-radio__label {
     &::before {
