@@ -1,5 +1,6 @@
 .sds-list {
   @extend .usa-list;
+  @include u-measure(none);
   li {
     @include u-line-height('body', 5);
     @include u-margin-bottom(1);
@@ -60,7 +61,5 @@
       padding-bottom: 0;
     }
   }
-  
-  max-width: 88ex;
 }
 
