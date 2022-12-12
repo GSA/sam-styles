@@ -1,6 +1,6 @@
 .sds-list {
   @extend .usa-list;
-  @include u-measure(none);
+  @include u-measure($theme-text-measure-wide);
   li {
     @include u-line-height('body', 5);
     @include u-margin-bottom(1);
