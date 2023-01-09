@@ -1,0 +1,114 @@
+<footer class="usa-footer usa-footer--big" role="contentinfo">
+    <div class="sds-feedback">
+        <h2 class="sr-only">Feedback</h2>
+        <button type="button" class="sds-feedback__button simple-toggle" [attr.aria-expanded]="!isCollapsedContent" aria-controls="collapseID" (click)="isCollapsedContent = !isCollapsedContent">
+            <i class="sds text-ink fa-arrow-down sds-feedback__open"></i>
+            <span class="sds-feedback__title">Feedback</span>
+        </button>
+        <div id="collapseID" [sdscollapse]="isCollapsedContent" class="sds-feedback__response">
+            <div>
+                <span class="sds-feedback__response-title">One Question
+                </span>
+                <span class="sds-feedback__response-title-thin">
+                    Survey</span>
+                <label for="feedback" class="sds-feedback__response-text">What changes or improvements would you suggest?</label>
+                <textarea id="feedback" class="sds-feedback__input" rows="8"></textarea>
+                <p class="text-right  button-width">
+                    <button class="usa-button bg-primary-light usa-focus">Submit</button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="usa-footer__primary-section">
+        <div class="grid-container margin-x-0 mobile-lg:margin-x-auto padding-x-0 mobile-lg:padding-x-auto">
+            <div class="grid-row grid-gap-0 mobile-lg:grid-gap">
+                <div class="tablet:grid-col-12">
+                    <nav class="usa-footer__nav margin-x-0 mobile-lg:margin-x-2 padding-x-0 mobile-lg:padding-x-2">
+                        <div class="grid-row grid-gap-0 mobile-lg:grid-gap-4">
+                            <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+                                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                                    <h4 class="usa-footer__primary-link">Topic</h4>
+                                    <ul class="usa-list usa-list--unstyled">
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Secondary link</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Secondary link</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Secondary link that's a bit longer than most of the others</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Secondary link</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </div>
+                            <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+                                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                                    <h4 class="usa-footer__primary-link">Topic</h4>
+                                    <ul class="usa-list usa-list--unstyled">
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Secondary link</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Secondary link that's pretty long</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Secondary link</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Secondary link</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </div>
+                            <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+                                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                                    <h4 class="usa-footer__primary-link">Topic</h4>
+                                    <ul class="usa-list usa-list--unstyled">
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Secondary link</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Secondary link</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Secondary link</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Secondary link</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="usa-footer__secondary-section">
+        <div class="grid-container">
+            <div class="grid-row grid-gap">
+                <div class="grid-col-12 mobile-lg:grid-col-6 tablet:grid-col-4 margin-bottom-4">
+                    <div class="sds-footer__logo">
+                        <a class="sds-footer__logo-link" href="javascript:void(0);">
+                            <!--img src="../assets/images/logo-img.png" alt="Agency Logo" -->
+                        </a>
+                        <h3 class="sds-footer__logo-heading">
+                            Name of Agency
+                        </h3>
+                    </div>
+                </div>
+                <div class="sds-footer__note grid-col-12 mobile-lg:grid-col-6 tablet:grid-col-8">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nibh
+                    sapien, ultrices et efficitur eu, aliquet in sem. Ut vestibulum
+                    elementum enim, at <strong>"ELEMENTUM VELIT PRETIUM"</strong> a. In
+                    suscipit felis at dui aliquet, ut pharetra sapien condimentum. Ut
+                    vulputate scelerisque purus ut condimentum.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

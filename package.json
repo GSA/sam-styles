@@ -33,6 +33,7 @@
     "style-loader": "^3.3.1"
   },
   "dependencies": {
-    "uswds": "^3.0.0-beta.3"
+    "@uswds/uswds": "^3.3.0",
+    "sass-embedded": "^1.57.1"
   }
 }

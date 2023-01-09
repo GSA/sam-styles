@@ -1,0 +1,139 @@
+<footer class="usa-footer usa-footer--big" role="contentinfo">
+    <div class="sds-feedback">
+        <h2 class="sr-only">Feedback</h2>
+        <button type="button" class="sds-feedback__button simple-toggle" [attr.aria-expanded]="!isCollapsedContent" aria-controls="collapseID" (click)="isCollapsedContent = !isCollapsedContent">
+            <i class="sds text-ink fa-arrow-down sds-feedback__open"></i>
+            <span class="sds-feedback__title">Feedback</span>
+        </button>
+        <div id="collapseID" [sdscollapse]="isCollapsedContent" class="sds-feedback__response">
+            <div>
+                <span class="sds-feedback__response-title">One Question
+                </span>
+                <span class="sds-feedback__response-title-thin">
+                    Survey</span>
+                <label for="feedback" class="sds-feedback__response-text">What changes or improvements would you suggest?</label>
+                <textarea id="feedback" class="sds-feedback__input" rows="8"></textarea>
+                <p class="text-right  button-width">
+                    <button class="usa-button bg-primary-light usa-focus">Submit</button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="usa-footer__primary-section">
+        <div class="grid-container margin-x-0 mobile-lg:margin-x-auto padding-x-0 mobile-lg:padding-x-auto">
+            <div class="grid-row grid-gap-0 mobile-lg:grid-gap">
+                <div class="tablet:grid-col-12">
+                    <nav class="usa-footer__nav margin-x-0 mobile-lg:margin-x-2 padding-x-0 mobile-lg:padding-x-2">
+                        <div class="grid-row grid-gap-0 mobile-lg:grid-gap-4">
+                            <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+                                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                                    <h4 class="usa-footer__primary-link">About This Site</h4>
+                                    <ul class="usa-list usa-list--unstyled">
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">About Us</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Our Community</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Release Notes</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Alerts</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">News</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </div>
+                            <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+                                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                                    <h4 class="usa-footer__primary-link">Our Partners</h4>
+                                    <ul class="usa-list usa-list--unstyled">
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Aquisition.gov</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">USASpending.gov</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Grants.gov</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">More Partners</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </div>
+                            <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+                                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                                    <h4 class="usa-footer__primary-link">Policies</h4>
+                                    <ul class="usa-list usa-list--unstyled">
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Privacy Policy</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Disclaimers</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Freedom of Information Act</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Accessibility</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </div>
+                            <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+                                <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                                    <h4 class="usa-footer__primary-link">Customer Service</h4>
+                                    <ul class="usa-list usa-list--unstyled">
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Help</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Check Entity Status</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Federal Service Desk</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">External Resources</a>
+                                        </li>
+                                        <li class="usa-footer__secondary-link">
+                                            <a href="javascript:void(0);">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="usa-footer__secondary-section">
+        <div class="grid-container">
+            <div class="grid-row grid-gap">
+                <div class="grid-col-12 mobile-lg:grid-col-6 tablet:grid-col-4 margin-bottom-4">
+                    <div class="sds-footer__logo">
+                        <a class="sds-footer__logo-link" href="javascript:void(0);">
+                            <!--img src="../../assets/images/logo-gsa.svg" alt="GSA Logo" /-->
+                        </a>
+                        <h3 class="sds-footer__logo-heading">
+                            General Services Administration
+                        </h3>
+                    </div>
+                </div>
+                <div class="sds-footer__note grid-col-12 mobile-lg:grid-col-6 tablet:grid-col-8">
+                    This is a U.S. General Services Administration Federal Government
+                    computer system that is <strong>"FOR OFFICIAL USE ONLY."</strong> This
+                    system is subject to monitoring. Individuals found performing
+                    unauthorized activities are subject to disciplinary action including
+                    criminal prosecution.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

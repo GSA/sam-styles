@@ -10,9 +10,9 @@
 
 // USWDS Settings
 // -------------------------------------
-@import "sds-theme-general";
-@import "sds-theme-typography";
-@import "sds-theme-spacing";
-@import "sds-theme-color";
-@import "sds-theme-utilities";
-@import "sds-theme-components";
+@forward "sds-theme-general";
+@forward "sds-theme-typography";
+@forward "sds-theme-spacing";
+@forward "sds-theme-color";
+@forward "sds-theme-utilities";
+@forward "sds-theme-components";
