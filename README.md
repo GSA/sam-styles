@@ -9,3 +9,5 @@ We're using [Fractal](http://fractal.build) to generate an interactive component
 ```sh
 npm start
 ```
+
+Build test
