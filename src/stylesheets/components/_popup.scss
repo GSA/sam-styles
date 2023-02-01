@@ -267,6 +267,7 @@
     @include u-padding-y("05");
     @include u-text("normal");
     @include u-margin("1px");
+    position: fixed;
     min-width: 300px;
     max-width: 500px;
     text-indent: 0 !important;
