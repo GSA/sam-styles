@@ -1,0 +1,17 @@
+.sds-hero {
+    @include u-height('full');
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    @include adjust-responsive-site-margins;
+    @include u-padding-y(4);
+
+    &--image{
+      background-image: url('#{$theme-image-path}/sam/landing-hero.png');
+    }
+  }
+  .sds-hero .sds-seal {
+    margin-right: -(units($theme-site-margins-mobile-width));
+    @include at-media($theme-site-margins-breakpoint) {
+        margin-right: -(units($theme-site-margins-width));
+    }
+  }

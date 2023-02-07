@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  stories: ["../sam-styles/packages/**/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: ["../src/packages/**/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -38,7 +38,7 @@ module.exports = {
               sourceMap: true,
               sassOptions: {
                 includePaths: [
-                  "./sam-styles/packages",
+                  "./src/packages",
                   "./node_modules/@uswds/uswds/packages",
                   "./node_modules/@uswds"
                 ],
@@ -47,8 +47,20 @@ module.exports = {
             },
           },
         ],
-        include: path.resolve(__dirname, "../sam-styles/index.scss"),
+        include: path.resolve(__dirname, "../src/index.scss"),
       },
+      /*{
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "javascript/auto",
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name].[ext]",
+            //outputPath: "../dist/img",
+          },
+        },
+        include: path.resolve(__dirname, "../src/icons/index.js"),
+      },*/
     );
 
     return config;
