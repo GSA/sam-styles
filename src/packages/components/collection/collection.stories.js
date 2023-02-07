@@ -1,7 +1,7 @@
-import DefaultCollection from "../collection/templates/default.html";
-import MediaCollection from "../collection/templates/media.html";
-import CalenderCollection from "../collection/templates/calender.html";
-import CondensedCollection from "../collection/templates/condensed.html";
+import DefaultCollection from "./templates/default.html";
+import MediaCollection from "./templates/media.html";
+import CalenderCollection from "./templates/calender.html";
+import CondensedCollection from "./templates/condensed.html";
 
 export default {
   title: "Components/Collection",
