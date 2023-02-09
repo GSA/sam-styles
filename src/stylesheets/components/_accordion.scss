@@ -2,6 +2,12 @@
 
   @include u-padding-x(1);
 
+  &.usa-accordion--accent_cool {
+    .usa-accordion__button:not(.usa-banner__button) {
+      @include u-bg("accent-cool-lighter");
+    }
+  }
+
   .usa-accordion__button:not(.usa-banner__button) {
     @include u-bg("white");
     @include u-padding-right("205");
