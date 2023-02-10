@@ -127,12 +127,7 @@ export default {
       <div class="grid-col-12 tablet-lg:grid-col-7  margin-top-2">
           <div class="sds-card sds-card--vertical sds-card--shadowed sds-card--bordered">
               <div class="sds-card__header">
-                  <fa-icon class="ng-fa-icon" size="7x">
-                      <svg aria-hidden="true" focusable="false" data-prefix="sds" data-icon="search" class="svg-inline--fa fa-search fa-w-16 fa-7x search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                          <path fill="currentColor" d="M459.32,436.69,345.51,322.89A167.24,167.24,0,0,0,384,216c0-92.63-75.36-168-168-168S48,123.37,48,216s75.37,168,168,168a167.24,167.24,0,0,0,106.89-38.49l113.8,113.81a16,16,0,0,0,22.63-22.63ZM80,216c0-75,61-136,136-136s136,61,136,136S291,352,216,352,80,291,80,216Z">
-                          </path>
-                      </svg>
-                  </fa-icon>
+                <i class="bi bi-search size-6x"></i>
               </div>
               <div class="sds-card__body margin-2">
                   <h1 class="sds-card__title">No matches found</h1>

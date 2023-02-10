@@ -1,8 +1,8 @@
-import ButtonTemplate from "./button-variants.html";
-import OutlineSecondaryTemplate from "./outline-secondary.html";
-import OutlineInverseTemplate from "./outline-inverse.html";
-import WhiteTemplate from "./white.html";
-import ShadowTemplate from "./shadow.html";
+import ButtonTemplate from "./templates/button-variants.html";
+import OutlineSecondaryTemplate from "./templates/outline-secondary.html";
+import OutlineInverseTemplate from "./templates/outline-inverse.html";
+import WhiteTemplate from "./templates/white.html";
+import ShadowTemplate from "./templates/shadow.html";
 
 export default {
   title: "Components/Button/Standard",

@@ -1,0 +1,67 @@
+.sds-load__circle,
+.sds-load__content,
+.sds-load__element,
+.sds-load__title {
+  @include u-bg('base-lightest');
+  animation-name: placeHolderShimmer;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  background-image: -webkit-gradient(linear, left center, right center, from(#f5f5f0), color-stop(.2, #f9f9f7), color-stop(.4, #f5f5f0), to(#f5f5f0));
+  background-image: -webkit-linear-gradient(left, #f5f5f0 0%, #f9f9f7 20%, #f5f5f0 40%, #f5f5f0 100%);
+  background-repeat: no-repeat;
+  border-radius: 2px;
+}
+
+/** Animation frame for chrome and safari **/
+@-webkit-keyframes placeHolderShimmer {
+  0% {
+    background-position: -300px 0;
+  }
+
+  100% {
+    background-position: 500px 0;
+  }
+}
+
+/** Animation frame for firefox */
+@-moz-keyframes placeHolderShimmer {
+  0% {
+    background-position: -300px 0;
+  }
+
+  100% {
+    background-position: 500px 0;
+  }
+}
+
+/** Default fall back on other browsers */
+@keyframes placeholderShimmer {
+  0% {
+    background-position: -300px 0;
+  }
+
+  100% {
+    background-position: 500px 0;
+  }
+}
+
+.sds-load {
+  @include u-display('flex');
+  @include u-flex('justify')
+}
+.sds-load__title {
+  @include u-height(1);
+}
+.sds-load__content {
+  @include u-height(2);
+}
+.sds-load__element {
+  @include u-height(1);
+}
+.sds-load__circle {
+  @include u-height(5);
+  @include u-width(5);
+  border-radius: 50%;
+}

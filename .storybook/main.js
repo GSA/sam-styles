@@ -8,7 +8,7 @@ module.exports = {
     "@storybook/addon-interactions",
     "@whitespace/storybook-addon-html",
   ],
-  staticDirs: ["../src/img"],
+  staticDirs: ['../public/assets/images'],
   framework: "@storybook/html",
   core: {
     builder: "@storybook/builder-webpack5",

@@ -2,11 +2,11 @@
     @include u-height('full');
     background-position: 100% 100%;
     background-repeat: no-repeat;
-    @include adjust-responsive-site-margins;
+    @include sam.adjust-responsive-site-margins;
     @include u-padding-y(4);
 
     &--image{
-      background-image: url('#{$theme-image-path}/sam/landing-hero.png');
+      background-image: ("/landing-hero.png");
     }
   }
   .sds-hero .sds-seal {

@@ -1,9 +1,6 @@
 /*-------------------
        SDS CARD
 --------------------*/
-//@import "src/packages/branding/elements/typography/header.scss";
-//@import "src/packages/branding/elements/borders.scss";
-
 $sds-card-border-width: 1px;
 $sds-card-border-radius: border-radius('md');
 $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width});
@@ -36,28 +33,11 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
   }
 
   &__header {
-    //@include sds-header;
+    @include sam.sds-header;
     @include u-margin(0);
     @include u-padding(2);
     border-top-left-radius: $inner-border-radius;
     border-top-right-radius: $inner-border-radius;
-
-    &--base{
-      background-color: #f5f5f0;
-    }
-
-    &--accent-cool{
-      background-color: #eff6fb;;
-    }
-
-    &--accent-warm{
-      background-color: #f5f0e6;
-    }
-
-    &--feature {
-      background-color: #1a4480;
-      color: white;
-    }
 
 
     &--flex {
@@ -121,7 +101,7 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
         @include u-margin-right(0);
       }
     }
- 
+    
     .sds-card__collapse {
       transition: transform 0.2s ease-in;
       width: 33px;
@@ -192,12 +172,7 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     @include u-border(0);
 
     .sds-card__header {
-      //@include bordered-item(true);
-        color: #454540;
-        margin: 0;
-        padding: 1rem;
-        border-top-left-radius: calc(0.25rem - 1px);
-        border-top-right-radius: calc(0.25rem - 1px);
+      @include sam.bordered-item(true);
     }
 
     .sds-card__body {
@@ -274,4 +249,3 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     @include u-bg('white');
   }
 }
-

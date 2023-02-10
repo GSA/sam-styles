@@ -1,3 +1,11 @@
+/*******************************
+       USWDS OVERRIDES
+*******************************/
+
+/*-------------------
+    General footer
+--------------------*/
+
 .usa-footer__secondary-link a,
 .usa-footer__primary-link:hover {
   @include u-text("no-underline");
@@ -6,10 +14,6 @@
 .usa-footer__secondary-link a:hover {
   color: #7a591a;
   // @include u-color('secondary-dark');
-}
-
-.button-width{
-    max-width: 64ex;
 }
 
 .usa-footer__nav {
@@ -65,7 +69,7 @@
     .usa-footer__primary-link {
       // Apply SDS plus/minus icon (after)
       &::after {
-       // background-image: url("#{$theme-image-path}/sam/bg-plus.svg");
+        //background-image: url("/bg-plus.svg");
       }
     }
   }
@@ -89,7 +93,6 @@
     @include u-flex("align-center");
     width: 140px;
     margin: auto;
-
 
     .sds-feedback__open {
       @include u-padding(1);

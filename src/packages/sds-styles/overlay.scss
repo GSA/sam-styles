@@ -1,0 +1,6 @@
+.sds-overlay {
+    @include u-overflow('auto');
+    @include u-bg('white');
+    @include u-shadow(3);
+  }
+  

@@ -1,3 +1,9 @@
+import BlockTemplate from "./templates/block.html";
+import DefaultTemplate from "./templates/default.html";
+import ExpandedTemplate from "./templates/expanded.html";
+import HeaderTemplate from "./templates/header.html";
+import StickyTemplate from "./templates/sticky.html";
+
 export default {
   title: "Components/Alert",
   argTypes: {
@@ -31,7 +37,29 @@ const NoHeaderAlertTemplate = (args) => {
 </div>
 `;
 };
-export const Default = AlertTemplate.bind({});
+
+export const Default = () => {
+  return DefaultTemplate;
+};
+
+export const Block = () => {
+  return BlockTemplate;
+};
+
+export const Expanded = () => {
+  return ExpandedTemplate;
+};
+
+export const Header = () => {
+  return HeaderTemplate;
+};
+
+export const Sticky = () => {
+  return StickyTemplate;
+};
+
+
+/*export const Default = AlertTemplate.bind({});
 Default.args = {
   class: "",
   role: "",
@@ -87,4 +115,4 @@ Warning.args = {
   class: "usa-alert--warning",
   title: "Warning status",
   text: 'Lorem ipsum dolor sit amet, <a class="usa-link" href="javascript:void(0);">consectetur adipiscing</a> elit, sed do eiusmod.',
-};
+}; */
