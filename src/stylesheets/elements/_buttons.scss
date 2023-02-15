@@ -1,6 +1,5 @@
 .usa-button {
   @include u-text("secondary-darker");
-  @include u-border("primary");
   @include u-border-width("2px");
 
   &.usa-button--hover,
@@ -108,8 +107,40 @@
     }
   }
 
+  // Add color variants here
+  &.usa-button--secondary-dark {
+    @include u-border("secondary-dark");
+    @include u-text("semibold", "ink");
+    background-color: white;
+
+    &:visited {
+      color: black;
+      box-shadow: none;
+    }
+
+    &.usa-button--hover,
+    &:hover {
+      background-color: color("secondary-dark");
+      color: black;
+      border-color: color("secondary-dark");
+      box-shadow: none;
+    }
+
+    &.usa-button--active,
+    &:active {
+      background-color: color("secondary-dark");
+      color: white;
+      border-color: color("secondary-dark");
+      box-shadow: none;
+    }
+  }
+
   &.usa-button--secondary-light {
-  	@include u-border("secondary-light");
+    @include u-border("secondary-light");
+  }
+
+  &.usa-button--secondary-dark {
+    @include u-border("secondary-dark");
   }
 
   &:visited {
@@ -261,6 +292,7 @@
 
 .sds-button,
 .usa-button {
+
   &--disabled,
   &:disabled {
     box-shadow: none;
@@ -277,6 +309,7 @@
     }
   }
 }
+
 /*******************************
       SDS Specific Styles
 *******************************/
@@ -323,6 +356,7 @@
     @include button-disabled;
   }
 }
+
 // Shadow
 .sds-button--shadow {
   box-shadow: $button-shadow;
@@ -337,12 +371,14 @@
     box-shadow: $button-shadow;
   }
 }
+
 // Size
 .sds-button--small,
 .usa-button--small {
   @include u-font("sans", "2xs");
   padding: units(1) units(2);
 }
+
 /*-------------------
   SDS Button
 --------------------*/
@@ -367,6 +403,7 @@
     outline-offset: units(2px);
   }
 }
+
 /*-------------------
   Circular Buttons - DEPRECATED: Use .sds-button--circle
 --------------------*/
@@ -382,6 +419,7 @@
     width: 0.8em;
   }
 }
+
 /*-------------------
   Labeled Icon Button
 --------------------*/
@@ -438,11 +476,12 @@
     }
   }
 }
+
 /*-------------------
   Icon Button
 --------------------*/
 .sds-button.sds-button--icon {
-  width: auto;  
+  width: auto;
   height: fit-content;
   line-height: 1.0;
   @include u-padding-x(4);
@@ -486,10 +525,11 @@
     margin: auto;
   }
 }
+
 /*-------------------
   Icon Button LG
 --------------------*/
-.sds-button{
+.sds-button {
   &.sds-button--icon-lg {
     @include u-padding(2);
     @include u-shadow(2);
