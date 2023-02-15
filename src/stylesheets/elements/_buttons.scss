@@ -13,15 +13,18 @@
 
   &.usa-button--active,
   &:active {
-    @include u-bg("secondary-darker");
-    @include u-border("secondary-darker");
+    @include u-bg("primary-dark");
+    @include u-border("primary-dark");
     @include u-text("white");
   }
 
   &.usa-focus,
   &:focus {
-    outline-offset: units(2px);
+    outline-offset: units(2px) !important;
+    border-radius: 0;
+    outline-width: 2px
   }
+
 
   &--unstyled {
     @include u-text($theme-link-color);
@@ -34,56 +37,167 @@
     &:active {
       border: none;
       @include u-bg("transparent");
-      @include u-text($theme-link-active-color);
+      @include u-text("semibold", $theme-link-active-color);
     }
 
     &.usa-button--hover,
     &:hover {
-      @include u-text($theme-link-hover-color);
+      @include u-text("semibold", $theme-link-active-color);
       border: none;
       @include u-bg("transparent");
       text-decoration: underline;
     }
+
+
+  }
+
+  &.bg-primary-lighter {
+    @include u-border("primary");
+
+    &.usa-button--hover,
+    &:hover {
+      @include u-text("semibold", $theme-link-active-color);
+      background-color: white !important;
+    }
+
+    &.usa-button--active,
+    &:active {
+      background-color: white !important;
+      @include u-border("primary-dark");
+      @include u-text("semibold", $theme-link-active-color);
+    }
+
+    &:disabled {
+      background-color: color('white') !important;
+      @include u-text("semibold", $theme-link-active-color);
+      @include u-border("base-light");
+      box-shadow: none;
+    }
+
+  }
+
+  &.bg-secondary-lighter {
+    @include u-border("secondary");
+    @include u-text("semibold", $theme-link-active-color);
+
+    &.usa-button--hover,
+    &:hover {
+      @include u-text("semibold", $theme-link-active-color);
+      background-color: white !important;
+    }
+
+    &.usa-button--active,
+    &:active {
+      background-color: white !important;
+      @include u-border("secondary-dark");
+      @include u-text("semibold", $theme-link-active-color);
+    }
+
+    &:disabled {
+      background-color: color('white') !important;
+      @include u-text("semibold", $theme-link-active-color);
+      @include u-border("base-light");
+      box-shadow: none;
+    }
+  }
+
+  &.bg-base-lighter {
+    @include u-border("base-light");
+    @include u-text("semibold", $theme-link-active-color);
+
+    &.usa-button--hover,
+    &:hover {
+      @include u-text("semibold", $theme-link-active-color);
+      background-color: white !important;
+    }
+
+    &.usa-button--active,
+    &:active {
+      background-color: color("base-lightest") !important;
+      @include u-border("base-dark");
+      @include u-text("semibold", $theme-link-active-color);
+    }
+
+    &:disabled {
+      background-color: color('white') !important;
+      @include u-text("semibold", $theme-link-active-color);
+      @include u-border("base-light");
+      box-shadow: none;
+    }
+  }
+
+  &.bg-accent-cool-lighter {
+    @include u-border("accent-cool-light");
+
+    &.usa-button--hover,
+    &:hover {
+      @include u-text("semibold", $theme-link-active-color);
+      @include u-border("accent-cool");
+      background-color: white !important;
+    }
+
+    &.usa-button--active,
+    &:active {
+      background-color: white !important;
+      @include u-border("accent-cool-dark");
+      @include u-text("semibold", $theme-link-active-color);
+    }
+
+    &:disabled {
+      background-color: color('white') !important;
+      @include u-text("semibold", $theme-link-active-color);
+      @include u-border("base-light");
+      box-shadow: none;
+    }
+  }
+
+  &.bg-accent-warm-lighter {
+    @include u-border("accent-warm-light");
+
+    &.usa-button--hover,
+    &:hover {
+      @include u-text("semibold", $theme-link-active-color);
+      @include u-border("accent-warm");
+      background-color: white !important;
+    }
+
+    &.usa-button--active,
+    &:active {
+      background-color: white !important;
+      @include u-border("accent-warm-dark");
+      @include u-text("semibold", $theme-link-active-color);
+    }
+
+    &:disabled {
+      background-color: color('white') !important;
+      @include u-text("semibold", $theme-link-active-color);
+      @include u-border("base-light");
+      box-shadow: none;
+    }
+
   }
 }
 
-.sds-button--circle {
-  border-radius: 50%;
-  height: units(4);
-  width: units(4);
-  @include u-display("inline-flex");
-  @include u-flex("align-center");
-  @include u-flex("justify-center");
-  margin: unset;
-  padding: 0;
 
-  .svg-inline--fa {
-    align-self: center;
-  }
-
-  &.sds-button--small {
-    height: units(3);
-    width: units(3);
-    padding: 0;
-    font-size: size("body", 1);
-  }
-
-  &.sds-button--big,
-  &.usa-button--big {
-    height: units(5);
-    width: units(5);
-    font-size: size("body", 6);
-  }
-}
 
 .usa-button--outline {
+  @include u-border("primary");
   background-color: transparent;
   box-shadow: none;
+
+  &:disabled {
+    background-color: color('white') !important;
+    color: color($theme-link-active-color) !important;
+    font-weight: bold;
+    @include u-text("semibold", $theme-link-active-color);
+    @include u-border("base-darker");
+    box-shadow: none;
+  }
 
   // Add color variants here
   &.usa-button--secondary {
     @include u-border("secondary");
-    @include u-text("semibold", "ink");
+    @include u-text("semibold", $theme-link-active-color);
     background-color: white;
 
     &:visited {
@@ -93,23 +207,23 @@
 
     &.usa-button--hover,
     &:hover {
-      background-color: color("secondary-lighter");
-      color: black;
+      background-color: color("white");
+      @include u-text("semibold", $theme-link-active-color);
       border-color: color("secondary-light");
       box-shadow: none;
     }
 
     &.usa-button--active,
     &:active {
-      background-color: color("secondary");
-      color: white;
-      border-color: color("secondary");
+      background-color: color("white");
+      @include u-text("semibold", $theme-link-active-color);
+      border-color: color("secondary-dark");
       box-shadow: none;
     }
   }
 
   &.usa-button--secondary-light {
-  	@include u-border("secondary-light");
+    @include u-border("secondary-light");
   }
 
   &:visited {
@@ -127,6 +241,91 @@
     background-color: transparent;
     color: color("secondary-darker");
     box-shadow: none;
+  }
+
+  // Add color variants for base
+  &.usa-button--base {
+    @include u-border("base");
+    @include u-text("semibold", $theme-link-active-color);
+    background-color: white;
+
+    &:visited {
+      color: black;
+      box-shadow: none;
+    }
+
+    &.usa-button--hover,
+    &:hover {
+      background-color: color("white");
+      @include u-text("semibold", $theme-link-active-color);
+      border-color: color("base-light");
+      box-shadow: none;
+    }
+
+    &.usa-button--active,
+    &:active {
+      background-color: color("white");
+      @include u-text("semibold", $theme-link-active-color);
+      border-color: color("base-dark");
+      box-shadow: none;
+    }
+  }
+
+  // Add color variants for accent-cool
+  &.usa-button--accent-cool {
+    @include u-border("accent-cool");
+    @include u-text("semibold", $theme-link-active-color);
+    background-color: white;
+
+    &:visited {
+      color: black;
+      box-shadow: none;
+    }
+
+    &.usa-button--hover,
+    &:hover {
+      background-color: color("white");
+      @include u-text($theme-link-active-color);
+      border-color: color("accent-cool-light");
+      box-shadow: none;
+    }
+
+    &.usa-button--active,
+    &:active {
+      background-color: color("white");
+      @include u-text($theme-link-active-color);
+      border-color: color("accent-cool-dark");
+      box-shadow: none;
+    }
+  }
+
+  // Add color variants for accent-warm
+  &.usa-button--accent-warm {
+    @include u-border("accent-warm");
+    @include u-text("semibold", $theme-link-active-color);
+    background-color: white;
+
+    &:visited {
+      color: black;
+      box-shadow: none;
+    }
+
+    &.usa-button--hover,
+    &:hover {
+      background-color: color("white");
+      @include u-text("semibold", $theme-link-active-color);
+
+      border-color: color("accent-warm-light");
+      box-shadow: none;
+    }
+
+    &.usa-button--active,
+    &:active {
+      background-color: color("white");
+      @include u-text("semibold", $theme-link-active-color);
+      border-color: color("accent-warm-dark");
+      box-shadow: none;
+    }
   }
 
   &.usa-button--inverse {
@@ -161,38 +360,23 @@
   }
 }
 
-.usa-button--base {
-  color: color("gold-70");
-  background-color: color("accent-warm-lighter");
-  @include u-border("base-light");
+.usa-button--secondary {
+  background-color: color("secondary");
+  @include u-border("secondary");
+  color: color("white");
 
   &.usa-button--hover,
   &:hover {
-    color: color("gold-70");
-    background-color: color("white");
-    @include u-border("base");
+    background-color: color("secondary-light");
+    @include u-border("secondary-light");
+    color: color("white");
   }
 
   &.usa-button--active,
   &:active {
     color: color("white");
-    background-color: color("base-dark");
-    @include u-border("base-dark");
-  }
-}
-
-.usa-button--secondary {
-  background-color: color("primary-lighter");
-
-  &.usa-button--hover,
-  &:hover {
-    background-color: color("white");
-  }
-
-  &.usa-button--active,
-  &:active {
-    color: color("secondary-darker");
-    background-color: color("white");
+    background-color: color("secondary-dark");
+    @include u-border("secondary-dark");
   }
 
   &.usa-button--disabled,
@@ -203,21 +387,91 @@
   }
 }
 
+
+.usa-button--base {
+  @include u-text("white");
+  background-color: color("base");
+  @include u-border("base");
+
+  &.usa-button--hover,
+  &:hover {
+    @include u-text("semibold", $theme-link-active-color);
+    background-color: color("base-light");
+    @include u-border("base-light");
+  }
+
+  &.usa-button--active,
+  &:active {
+    color: color("white");
+    background-color: color("base-dark");
+    @include u-border("base-dark");
+  }
+}
+
+
 .usa-button--accent-cool {
   background-color: color("accent-cool");
   @include u-border("accent-cool");
 
   &.usa-button--hover,
   &:hover {
-    background-color: color("accent-cool-lighter");
-    @include u-border("accent-cool-lighter");
+    background-color: color("accent-cool-light");
+    @include u-border("accent-cool-light");
   }
 
   &.usa-button--active,
   &:active {
     color: color("white");
-    background-color: color("accent-cool-dark");
-    @include u-border("accent-cool-dark");
+    background-color: color("accent-cool-darker");
+    @include u-border("accent-cool-darker");
+  }
+}
+
+.usa-button--accent-warm {
+  background-color: color("accent-warm");
+  @include u-border("accent-warm");
+
+  &.usa-button--hover,
+  &:hover {
+    background-color: color("accent-warm-light");
+    @include u-border("accent-warm-light");
+  }
+
+  &.usa-button--active,
+  &:active {
+    color: color("white");
+    background-color: color("accent-warm-darker");
+    @include u-border("accent-warm-darker");
+  }
+}
+
+
+.sds-button--circle {
+  border-radius: 50%;
+  height: units(4);
+  width: units(4);
+  @include u-display("inline-flex");
+  @include u-flex("align-center");
+  @include u-flex("justify-center");
+  margin: unset;
+  padding: 0;
+
+  .svg-inline--fa {
+    align-self: center;
+  }
+
+  &.sds-button--small {
+    height: units(3);
+    width: units(3);
+    padding: 0;
+    font-size: size("body", 1);
+  }
+
+  &.sds-button--big,
+  &.usa-button--big {
+    height: units(5);
+    width: units(5);
+    font-size: size("body", 6);
   }
 }
 
@@ -261,6 +515,7 @@
 
 .sds-button,
 .usa-button {
+
   &--disabled,
   &:disabled {
     box-shadow: none;
@@ -277,6 +532,7 @@
     }
   }
 }
+
 /*******************************
       SDS Specific Styles
 *******************************/
@@ -323,6 +579,7 @@
     @include button-disabled;
   }
 }
+
 // Shadow
 .sds-button--shadow {
   box-shadow: $button-shadow;
@@ -337,12 +594,14 @@
     box-shadow: $button-shadow;
   }
 }
+
 // Size
 .sds-button--small,
 .usa-button--small {
   @include u-font("sans", "2xs");
   padding: units(1) units(2);
 }
+
 /*-------------------
   SDS Button
 --------------------*/
@@ -367,6 +626,7 @@
     outline-offset: units(2px);
   }
 }
+
 /*-------------------
   Circular Buttons - DEPRECATED: Use .sds-button--circle
 --------------------*/
@@ -382,6 +642,7 @@
     width: 0.8em;
   }
 }
+
 /*-------------------
   Labeled Icon Button
 --------------------*/
@@ -438,11 +699,12 @@
     }
   }
 }
+
 /*-------------------
   Icon Button
 --------------------*/
 .sds-button.sds-button--icon {
-  width: auto;  
+  width: auto;
   height: fit-content;
   line-height: 1.0;
   @include u-padding-x(4);
@@ -486,10 +748,11 @@
     margin: auto;
   }
 }
+
 /*-------------------
   Icon Button LG
 --------------------*/
-.sds-button{
+.sds-button {
   &.sds-button--icon-lg {
     @include u-padding(2);
     @include u-shadow(2);
