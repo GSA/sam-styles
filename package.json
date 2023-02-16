@@ -35,6 +35,7 @@
   "dependencies": {
     "@uswds/uswds": "^3.3.0",
     "bootstrap-icons": "^1.10.3",
+    "react-syntax-highlighter": "^15.5.0",
     "sass-embedded": "^1.57.1"
   }
 }

@@ -2,7 +2,7 @@
     <div class="sds-feedback">
         <h2 class="sr-only">Feedback</h2>
         <button type="button" class="sds-feedback__button simple-toggle" [attr.aria-expanded]="!isCollapsedContent" aria-controls="collapseID" (click)="isCollapsedContent = !isCollapsedContent">
-            <i class="sds text-ink sds-feedback__open"></i>
+            <i class="sds text-ink fa-arrow-down sds-feedback__open"></i>
             <span class="sds-feedback__title">Feedback</span>
         </button>
         <div id="collapseID" [sdscollapse]="isCollapsedContent" class="sds-feedback__response">
@@ -94,7 +94,7 @@
                 <div class="grid-col-12 mobile-lg:grid-col-6 tablet:grid-col-4 margin-bottom-4">
                     <div class="sds-footer__logo">
                         <a class="sds-footer__logo-link" href="javascript:void(0);">
-                            <img src="../../../images/logo-img.png" alt="Agency Logo" >
+                            <img src="/logo-img.png" alt="Agency Logo" >
                         </a>
                         <h3 class="sds-footer__logo-heading">
                             Name of Agency
