@@ -53,5 +53,5 @@ export default {
     </div>
   `;
   };
-  export const Default = Template.bind({});
+  export const Toasts = Template.bind({});
   

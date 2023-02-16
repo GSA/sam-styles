@@ -87,5 +87,5 @@ const Template = () => {
 `;
 };
 
-export const Default = Template.bind({});
+export const Radio = Template.bind({});
 

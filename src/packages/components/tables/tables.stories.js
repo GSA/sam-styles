@@ -2,9 +2,9 @@ import Table from "./templates/table.html";
 
 
 export default {
-  title: "Components/Table",
+  title: "Components",
 };
 
-export const Default = () => {
+export const Tables = () => {
   return Table;
 };

@@ -37,7 +37,7 @@ const Template = (args) => {
 `;
 };
 
-export const Default = Template.bind({});
-Default.args = {
+export const Input = Template.bind({});
+Input.args = {
   label: "Text input label",
 };

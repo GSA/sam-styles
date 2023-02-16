@@ -107,7 +107,7 @@
     @include u-margin(0, !important);
   }
 
-  .fa-alert-warning {
+  .bi-exclamation-triangle {
     @include u-text('warning');
     margin: auto 10px;
   }
@@ -134,7 +134,7 @@
     }
   }
 
-  .fa-alert-info {
+  .bi-info-circle {
     margin: auto 10px;
     color: #00BDE3;
   }
@@ -147,7 +147,7 @@
     }
   }
 
-  .fa-alert-error {
+  .bi-slash-circle {
     margin: auto 10px;
     color: #E9695F;
   }

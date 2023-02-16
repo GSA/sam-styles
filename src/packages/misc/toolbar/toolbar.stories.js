@@ -244,5 +244,5 @@ export default {
   </footer>
   `;
   };
-  export const Default = Template.bind({});
+  export const Toolbar = Template.bind({});
   

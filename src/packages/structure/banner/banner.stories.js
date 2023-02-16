@@ -1,7 +1,7 @@
 import GovernmentBanner from "./template/banner.html"
 
 export default {
-    title: "Structure/Banner",
+    title: "Structure/GovtBaner",
   };
 
   export const GovtBaner = () => {

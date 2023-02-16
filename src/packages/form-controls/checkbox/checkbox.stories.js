@@ -89,5 +89,5 @@ const Template = () => {
 
 
 
-export const Default = Template.bind({});
+export const Checkboxes = Template.bind({});
 //export const CheckboxTile = TileTemplate.bind({});

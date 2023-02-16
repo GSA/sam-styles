@@ -1,3 +1,7 @@
+//@use "../theme/settings" as general;
+//@use "uswds-core" as *;
+//$theme-sam-hero-image: "#{$theme-image-path}/landing-hero.jpg" !default;
+
 .sds-hero {
     @include u-height('full');
     background-position: 100% 100%;
@@ -6,7 +10,12 @@
     @include u-padding-y(4);
 
     &--image{
-      background-image: ("/landing-hero.png");
+      //background: ('/landing-hero.png');
+      background: url('../src/packages/images/landing-hero.png'); 
+      //background-image: url("#{general.$theme-sam-image-path}/landing-hero.png");
+      // Hero
+      //$theme-hero-image: "#{$theme-image-path}/hero.jpg" !default;
+
     }
   }
   .sds-hero .sds-seal {

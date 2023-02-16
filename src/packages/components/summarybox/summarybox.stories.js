@@ -1,9 +1,9 @@
-import SummaryBox from "./summarybox.html";
+import Summarybox from "./summarybox.html";
 
 export default {
   title: "Components/SummaryBox",
 };
 
-export const Default = () => {
-  return SummaryBox;
+export const SummaryBox = () => {
+  return Summarybox;
 };

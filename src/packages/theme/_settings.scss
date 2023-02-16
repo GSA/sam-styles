@@ -190,6 +190,8 @@ Values
 
 );
 
+$theme-sam-image-path: "../src/packages/images" !default;
+
 @mixin adjust-responsive-site-margins {
     margin-left: -(units($theme-site-margins-mobile-width));
     margin-right: -(units($theme-site-margins-mobile-width));

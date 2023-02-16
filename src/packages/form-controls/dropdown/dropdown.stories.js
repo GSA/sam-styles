@@ -34,8 +34,8 @@ export default {
   `;
   };
   
-  export const Default = Template.bind({});
-  Default.args = {
+  export const Dropdown = Template.bind({});
+  Dropdown.args = {
     label: "Text input label",
   };
   

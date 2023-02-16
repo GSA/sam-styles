@@ -82,5 +82,5 @@ export default {
   </ul>
   `;
   };
-  export const Default = Template.bind({});
+  export const AutoComplete = Template.bind({});
   

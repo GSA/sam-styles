@@ -16,8 +16,8 @@ export default {
         <div class="sds-button-col sds-button-col--left">
     
             <button class="usa-button sds-button--circle usa-button--secondary">
-                <i class="fa text-ink fa-caret-left" aria-hidden="true" title="Screen reader description"></i>
-                <span class="sr-only">Screen reader description</span>
+                <i class="fa text-ink bi-caret-left-fill" aria-hidden="true" title="Screen reader description"></i>
+                <span class="sr-only"></span>
     
             </button>
             <label for="back">Go to How many CFDA Number Can My Agency Have?</label>
@@ -25,8 +25,8 @@ export default {
         <div class="sds-button-col">
     
             <button class="usa-button sds-button--circle usa-button--secondary">
-                <i class="fa text-ink fa-times" aria-hidden="true" title="Screen reader description"></i>
-                <span class="sr-only">Screen reader description</span>
+                <i class="fa text-ink bi-x size-lg" aria-hidden="true" title="Screen reader description"></i>
+                <span class="sr-only"></span>
     
             </button>
             <label for="cancel">Cancel</label>
@@ -34,8 +34,8 @@ export default {
         <div class="sds-button-col">
     
             <button class="usa-button sds-button--circle usa-button--secondary">
-                <i class="fa text-ink fa-caret-down" aria-hidden="true" title="Screen reader description"></i>
-                <span class="sr-only">Screen reader description</span>
+                <i class="fa text-ink bi-caret-down-fill" aria-hidden="true" title="Screen reader description"></i>
+                <span class="sr-only"></span>
     
             </button>
             <label for="help">Help</label>
@@ -43,8 +43,8 @@ export default {
         <div id="forward" class="sds-button-col sds-button-col--right">
     
             <button class="usa-button sds-button--circle usa-button--secondary">
-                <i class="fa text-ink fa-caret-right" aria-hidden="true" title="Screen reader description"></i>
-                <span class="sr-only">Screen reader description</span>
+                <i class="fa text-ink bi-caret-right-fill" aria-hidden="true" title="Screen reader description"></i>
+                <span class="sr-only"></span>
     
             </button>
             <label for="forward">Go to What is an Assistance Listing?</label>

@@ -1,7 +1,7 @@
 import PopUpTemplate from "./pop-up.html"
 
 export default {
-    title: "Miscellaneous/Pop-up",
+    title: "Miscellaneous/PopUp",
   };
 
   export const PopUp = () => {

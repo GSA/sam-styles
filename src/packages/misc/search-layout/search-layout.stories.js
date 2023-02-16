@@ -1,5 +1,5 @@
 export default {
-    title: "Miscellaneous/Search-Layout",
+    title: "Miscellaneous/SearchLayout",
   };
   const Template = () => {
       return `<div class="margin-3 grid-row grid-gap">
@@ -142,5 +142,5 @@ export default {
   </div>
   `;
   };
-  export const Default = Template.bind({});
+  export const SearchLayout = Template.bind({});
   

@@ -8,15 +8,13 @@ module.exports = {
     "@storybook/addon-interactions",
     "@whitespace/storybook-addon-html",
   ],
-  staticDirs: ['../public/assets/images'],
+  staticDirs: ['../src/packages/images'],
   framework: "@storybook/html",
   core: {
     builder: "@storybook/builder-webpack5",
   },
   webpackFinal: async (config, { configType }) => {
-    // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
-    // You can change the configuration based on that.
-    // 'PRODUCTION' is used when building the static version of storybook.
+    
     config.module.rules.push(
       {
         test: /\.s(c|a)ss$/i,
@@ -49,20 +47,7 @@ module.exports = {
         ],
         include: path.resolve(__dirname, "../src/index.scss"),
       },
-      /*{
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "javascript/auto",
-        use: {
-          loader: "file-loader",
-          options: {
-            name: "[name].[ext]",
-            //outputPath: "../dist/img",
-          },
-        },
-        include: path.resolve(__dirname, "../src/icons/index.js"),
-      },*/
     );
-
     return config;
   },
 };

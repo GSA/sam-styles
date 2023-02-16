@@ -139,8 +139,8 @@ export default {
   `;
   };
   
-  export const Default = Template.bind({});
-  Default.args = {
+  export const AddressForm = Template.bind({});
+  AddressForm.args = {
     label: "Text input label",
   };
   

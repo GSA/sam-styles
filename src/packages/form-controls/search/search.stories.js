@@ -1,4 +1,6 @@
-export default {
+import SearchLayout from "./templates/search.html"
+
+/*export default {
   title: "Form Elements/Search",
   argTypes: {
     ariaLabel: {type: "string"},
@@ -16,8 +18,8 @@ const Template = (args) => {
           <label class="usa-sr-only" for="${args.for}">Search</label>
           <input class="usa-input" id="${args.id}" type="search" name="search" placeholder="Search Here">
           <button class="usa-button" type="submit">
-          <img src="/search.svg" class="usa-search__submit-icon" alt="Search">
-      </button>
+          <img src="../../images/search.svg" class="usa-search__submit-icon" alt="Search">
+          </button>
   </form>
 </section>`;
 };
@@ -74,4 +76,12 @@ BigSearchOptions.args = {
   formClass: "usa-search--big",
   for: "search-field-big",
   id: "search-field-big",
+};*/
+
+export default {
+  title: "Form Elements/Search",
+};
+
+export const Search = () => {
+  return SearchLayout;
 };

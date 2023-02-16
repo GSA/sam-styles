@@ -4,6 +4,6 @@ export default {
   title: "Components/Pagination",
 };
 
-export const Default = () => {
+export const Pagination = () => {
   return Head;
 };

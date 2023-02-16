@@ -1,6 +1,6 @@
 import { createRangeSlider } from "./range-slider";
 export default {
-  title: "Components/Range",
+  title: "Components/RangeSlider",
   argTypes: {
     label: { control: "text" },
     onClick: { action: "onClick" },
@@ -23,5 +23,5 @@ const Template = ({ label, ...args }) => {
   return createRangeSlider({ label, ...args });
 };
 
-export const Default = Template.bind({});
-Default.args = { label: "Default" };
+export const RangeSlider = Template.bind({});
+RangeSlider.args = { label: "Default" };

@@ -13,5 +13,5 @@ export default {
     </select>
   `;
   };
-  export const Default = Template.bind({});
+  export const Sort = Template.bind({});
   

@@ -29,8 +29,8 @@ export default {
     `;
   };
   
-  export const Default = Template.bind({});
-  Default.args = {
+  export const NameForm = Template.bind({});
+  NameForm.args = {
     label: "Text input label",
   };
   
