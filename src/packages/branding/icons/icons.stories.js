@@ -4,10 +4,6 @@ export default {
   title: "Branding/Icons",
 };
 
-export const Icon = () => {
-  return Icons;
-};
-
 export const IconLibrary = () => {
     return IconsLibrary;
 };
