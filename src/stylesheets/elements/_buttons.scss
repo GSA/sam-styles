@@ -121,7 +121,7 @@
     &.usa-button--hover,
     &:hover {
       background-color: color("secondary-dark");
-      color: black;
+     color: white !important;
       border-color: color("secondary-dark");
       box-shadow: none;
     }
