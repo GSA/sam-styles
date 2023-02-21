@@ -109,7 +109,7 @@
   }
 
   &.usa-button--secondary-light {
-  	@include u-border("secondary-light");
+    @include u-border("secondary-light");
   }
 
   &:visited {
@@ -261,6 +261,7 @@
 
 .sds-button,
 .usa-button {
+
   &--disabled,
   &:disabled {
     box-shadow: none;
@@ -277,6 +278,7 @@
     }
   }
 }
+
 /*******************************
       SDS Specific Styles
 *******************************/
@@ -323,6 +325,7 @@
     @include button-disabled;
   }
 }
+
 // Shadow
 .sds-button--shadow {
   box-shadow: $button-shadow;
@@ -337,12 +340,14 @@
     box-shadow: $button-shadow;
   }
 }
+
 // Size
 .sds-button--small,
 .usa-button--small {
   @include u-font("sans", "2xs");
   padding: units(1) units(2);
 }
+
 /*-------------------
   SDS Button
 --------------------*/
@@ -367,6 +372,7 @@
     outline-offset: units(2px);
   }
 }
+
 /*-------------------
   Circular Buttons - DEPRECATED: Use .sds-button--circle
 --------------------*/
@@ -382,6 +388,7 @@
     width: 0.8em;
   }
 }
+
 /*-------------------
   Labeled Icon Button
 --------------------*/
@@ -438,11 +445,12 @@
     }
   }
 }
+
 /*-------------------
   Icon Button
 --------------------*/
 .sds-button.sds-button--icon {
-  width: auto;  
+  width: auto;
   height: fit-content;
   line-height: 1.0;
   @include u-padding-x(4);
@@ -486,10 +494,11 @@
     margin: auto;
   }
 }
+
 /*-------------------
   Icon Button LG
 --------------------*/
-.sds-button{
+.sds-button {
   &.sds-button--icon-lg {
     @include u-padding(2);
     @include u-shadow(2);
