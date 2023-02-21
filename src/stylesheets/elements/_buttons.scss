@@ -1,5 +1,6 @@
 .usa-button {
   @include u-text("secondary-darker");
+  @include u-border("primary");
   @include u-border-width("2px");
 
   &.usa-button--hover,
@@ -103,34 +104,6 @@
       background-color: color("secondary");
       color: white;
       border-color: color("secondary");
-      box-shadow: none;
-    }
-  }
-
-  // Add color variants here
-  &.usa-button--secondary-dark {
-    @include u-border("secondary-dark");
-    @include u-text("semibold", "ink");
-    background-color: white;
-
-    &:visited {
-      color: black;
-      box-shadow: none;
-    }
-
-    &.usa-button--hover,
-    &:hover {
-      background-color: color("secondary-dark");
-      color: black;
-      border-color: color("secondary-dark");
-      box-shadow: none;
-    }
-
-    &.usa-button--active,
-    &:active {
-      background-color: color("secondary-dark");
-      color: white;
-      border-color: color("secondary-dark");
       box-shadow: none;
     }
   }

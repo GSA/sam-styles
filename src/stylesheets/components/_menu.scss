@@ -141,6 +141,41 @@
   }
 }
 
+.sds-button--menu {
+  color: color("secondary-dark") !important;
+
+  usa-icon {
+    font-size: 1.25rem;
+  }
+
+  &.usa-button {
+    border-color: color("secondary-dark") !important;
+    background-color: white;
+
+    &:visited {
+      color: color("secondary-dark") !important;
+      box-shadow: none;
+    }
+
+    &.usa-button--hover,
+    &:hover {
+      background-color: color("secondary-dark") !important;
+      color: white !important;
+      border-color: color("secondary-dark") !important;
+      box-shadow: none;
+    }
+
+    &.usa-button--active,
+    &:active {
+      background-color: color("secondary-dark") !important;
+      color: white;
+      border-color: color("secondary-dark") !important;
+      box-shadow: none;
+    }
+  }
+}
+
+
 @media only screen and (min-width: 400px) and (max-width:800px) {
   .sds-button--menu {
     padding: 1em 0.5em;
