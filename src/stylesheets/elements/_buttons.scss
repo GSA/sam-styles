@@ -112,10 +112,6 @@
     @include u-border("secondary-light");
   }
 
-  &.usa-button--secondary-dark {
-    @include u-border("secondary-dark");
-  }
-
   &:visited {
     color: color("primary");
   }
