@@ -2,9 +2,16 @@
 
   @include u-padding-x(1);
 
+  &.border-0 {
+    .usa-accordion__button:not(.usa-banner__button) {
+      border: none !important;
+    }
+  }
+
   &.usa-accordion--accent_cool {
     .usa-accordion__button:not(.usa-banner__button) {
       @include u-bg("accent-cool-lighter");
+
     }
   }
 
@@ -56,7 +63,6 @@
     &[aria-expanded="true"] {
       background-image: none;
       @include u-text("secondary-dark");
-      background-color: white;
     }
 
     &[aria-expanded="false"] {
@@ -114,7 +120,7 @@
     @include u-bg("white");
     box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 3px 0px inset;
     margin: 0px;
-    padding: 1em;
+    padding: 0.5em 1em;
     @include u-font("sans", "xs");
     font-size: 0.87rem;
 
