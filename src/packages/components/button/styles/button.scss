@@ -55,7 +55,6 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
   &.bg-primary-lighter {
     @include u-border("primary");
-    background-color: #e7f5e1 !important;
 
     &.usa-button--hover,
     &:hover {
@@ -67,7 +66,6 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     &:active {
       background-color: white !important;
       @include u-border("primary-dark");
-      background-color: #e7f5e1 !important;
       @include u-text("semibold", $theme-link-active-color);
     }
 
@@ -82,6 +80,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
   &.bg-secondary-lighter {
     @include u-border("secondary");
+    background-color: #ADCDFF !important;
     @include u-text("semibold", $theme-link-active-color);
 
     &.usa-button--hover,
@@ -92,7 +91,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
     &.usa-button--active,
     &:active {
-      background-color: white !important;
+      background-color: #ADCDFF !important;
       @include u-border("secondary-dark");
       @include u-text("semibold", $theme-link-active-color);
     }
