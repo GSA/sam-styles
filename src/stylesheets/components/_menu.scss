@@ -145,10 +145,13 @@
   color: color("secondary-dark") !important;
 
   usa-icon {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    vertical-align: -0.4rem
   }
 
   &.usa-button {
+    line-height: 1.5;
+    font-size: 17px;
     border-color: color("secondary-dark") !important;
     background-color: white;
 
