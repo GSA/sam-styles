@@ -13,11 +13,10 @@
 
   &.sds-toast--info {
     .sds-toast__content {
-      @include u-border('secondary-light');
+      @include u-border('info');
     }
-  
     .sds-toast__content__icon {
-      @include u-text('secondary-light');
+      @include u-text('info');
     }
   }
   
