@@ -3,6 +3,7 @@ import DefaultTemplate from "./templates/default.html";
 import ExpandedTemplate from "./templates/expanded.html";
 import HeaderTemplate from "./templates/header.html";
 import StickyTemplate from "./templates/sticky.html";
+import OverviewTemplate from "./templates/overview.html";
 
 export default {
   title: "Components/Alert",
@@ -13,6 +14,8 @@ export default {
     text: {type: "string"},
   },
 };
+
+export const __namedExportsOrder = ['Expanded', 'Header', 'Sticky', 'Default_Deprecated', 'Block_Deprecated'];
 
 const AlertTemplate = (args) => {
   return `<div class="usa-alert ${args.class}" role="${args.role}">
@@ -38,11 +41,11 @@ const NoHeaderAlertTemplate = (args) => {
 `;
 };
 
-export const Default = () => {
+export const Default_Deprecated = () => {
   return DefaultTemplate;
 };
 
-export const Block = () => {
+export const Block_Deprecated = () => {
   return BlockTemplate;
 };
 
@@ -56,6 +59,10 @@ export const Header = () => {
 
 export const Sticky = () => {
   return StickyTemplate;
+};
+
+export const Overview = () => {
+  return OverviewTemplate;
 };
 
 
