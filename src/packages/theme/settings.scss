@@ -1,7 +1,11 @@
+
+$sam-font-path: "../node_modules/@uswds/uswds/dist/fonts" !default;
+$sam-image-path: "../node_modules/@uswds/uswds/dist/img" !default;
+
 @use "uswds-core" with (
     
-    $theme-font-path: "../node_modules/@uswds/uswds/dist/fonts",
-    $theme-image-path: "../node_modules/@uswds/uswds/dist/img",
+$theme-font-path: $sam-font-path,
+$theme-image-path: $sam-image-path,
 
 /*
 ----------------------------------------
@@ -189,19 +193,3 @@ Values
     $margin-palettes: ('palette-units-em','palette-margin-default'),
 
 );
-
-$theme-sam-image-path: "../src/packages/images" !default;
-
-@mixin adjust-responsive-site-margins {
-    margin-left: -(units($theme-site-margins-mobile-width));
-    margin-right: -(units($theme-site-margins-mobile-width));
-    padding-left: (units($theme-site-margins-mobile-width));
-    padding-right: (units($theme-site-margins-mobile-width));
-
-    @include at-media($theme-site-margins-breakpoint) {
-        margin-left: -(units($theme-site-margins-width));
-        margin-right: -(units($theme-site-margins-width));
-        padding-left: (units($theme-site-margins-width));
-        padding-right: (units($theme-site-margins-width));
-    }
-}
