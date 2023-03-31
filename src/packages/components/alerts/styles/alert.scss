@@ -151,6 +151,19 @@
     margin: auto 10px;
     color: #E9695F;
   }
+
+  &.success {
+    border: solid 0.1rem #00a91c;
+
+    .usa-button--circle {
+      @include u-margin(0, !important);
+    }
+  }
+
+  .bi-check-circle {
+    margin: auto 10px;
+    color: #00a91c;
+  }
 }
 // Alert--Header
 .sds-alert--header {
@@ -315,5 +328,74 @@
     @include u-margin-right(1);
     @include u-text('secondary-light');
     align-self: center;
+  }
+}
+//ALERT-Default
+.sds-alert--default {
+  border: solid 0.1rem #FEBE2E;
+  @include u-radius('lg');
+  @include u-display('flex');
+  @include u-flex('align-center');
+  @include u-margin(3);
+  @include u-padding(3);
+  max-width: 90%;
+
+  .grid-row {
+    flex-wrap: nowrap;
+  }
+
+  .usa-button--circle {
+    @include u-margin(0, !important);
+  }
+
+  .bi-exclamation-triangle {
+    @include u-text('warning');
+    margin: auto 10px;
+  }
+
+  .sds-alert--default-content {
+    @include u-display('inline-block');
+    margin: auto;
+    max-width: 75%;
+  }
+
+  // Alert tag - Info
+  &.info {
+    border: solid 0.1rem #00BDE3;
+
+    .usa-button--circle {
+      @include u-margin(0, !important);
+    }
+  }
+
+  .bi-info-circle {
+    margin: auto 10px;
+    color: #00BDE3;
+  }
+  // Alert tag - Error
+  &.error {
+    border: solid 0.1rem #E9695F;
+
+    .usa-button--circle {
+      @include u-margin(0, !important);
+    }
+  }
+
+  .bi-slash-circle {
+    margin: auto 10px;
+    color: #E9695F;
+  }
+
+  &.success {
+    border: solid 0.1rem #00a91c;
+
+    .usa-button--circle {
+      @include u-margin(0, !important);
+    }
+  }
+
+  .bi-check-circle {
+    margin: auto 10px;
+    color: #00a91c;
   }
 }
