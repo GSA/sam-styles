@@ -4,29 +4,84 @@ import ExpandedTemplate from "./templates/expanded.html";
 import HeaderTemplate from "./templates/header.html";
 import StickyTemplate from "./templates/sticky.html";
 import OverviewTemplate from "./templates/overview.html";
+//import DefaultNew from "./templates/new_default.html";
 
 export default {
   title: "Components/Alert",
   argTypes: {
     class: {type: "string"},
-    role: {type: "string"},
-    title: {type: "string"},
-    text: {type: "string"},
+    //role: {type: "string"},
+    //title: {type: "string"},
+    //text: {type: "string"},
   },
 };
 
-export const __namedExportsOrder = ['Expanded', 'Header', 'Sticky', 'Default_Deprecated', 'Block_Deprecated'];
+export const __namedExportsOrder = ['Default','Expanded', 'Header', 'Sticky', 'Default_deprecated', 'Block_deprecated'];
 
 const AlertTemplate = (args) => {
-  return `<div class="usa-alert ${args.class}" role="${args.role}">
-  <div class="usa-alert__body">
-    
-      <h4 class="usa-alert__heading">${args.title}</h4>
-    <p class="usa-alert__text">
-      ${args.text}
-    </p>
-  </div>
+  return `
+<h3>SDS Alert Default</h3>
+<div class="sds-alert--default info ${args.class}">
+    <div class="grid-container width-full maxw-full margin-0 padding-0">
+        <div class="grid-row">
+            <div class="grid-col-auto">
+                <i class="sds bi-info-circle size-2x"></i>
+            </div>
+            <div class="grid-col-fill">
+                <span class="sds-alert--default-content">
+                    <b>Less important than Global Alerts</b> Consectetur adipiscing elit, sed do eiusmod tempor indididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                </span>
+            </div>
+        </div>
+    </div>
 </div>
+
+<div class="sds-alert--default ${args.class}">
+    <div class="grid-container width-full maxw-full margin-0 padding-0">
+        <div class="grid-row">
+            <div class="grid-col-auto">
+                <i class="sds bi-exclamation-triangle size-2x"></i>
+            </div>
+            <div class="grid-col-fill">
+                <span class="sds-alert--default-content">
+                    <b>Less important than Global Alerts</b> Consectetur adipiscing elit, sed do eiusmod tempor indididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sds-alert--default error ${args.class}">
+    <div class="grid-container width-full maxw-full margin-0 padding-0">
+        <div class="grid-row">
+            <div class="grid-col-auto">
+                <i class="sds bi-slash-circle size-2x"></i>
+            </div>
+            <div class="grid-col-fill">
+                <span class="sds-alert--default-content">
+                    <b>Error Alerts Lorem Ipsum</b> Consectetur adipiscing elit, sed do eiusmod tempor indididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sds-alert--default success ${args.class}">
+    <div class="grid-container width-full maxw-full margin-0 padding-0">
+        <div class="grid-row">
+            <div class="grid-col-auto">
+                <i class="sds bi-check-circle size-2x"></i>
+            </div>
+            <div class="grid-col-fill">
+                <span class="sds-alert--default-content">
+                    <b>Less important than Global Alerts</b> Consectetur adipiscing elit, sed do eiusmod tempor indididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 `;
 };
 
@@ -40,12 +95,16 @@ const NoHeaderAlertTemplate = (args) => {
 </div>
 `;
 };
+//export const Default = () => {
+//  return DefaultNew;
+//};
 
-export const Default_Deprecated = () => {
+
+export const Default_deprecated = () => {
   return DefaultTemplate;
 };
 
-export const Block_Deprecated = () => {
+export const Block_deprecated = () => {
   return BlockTemplate;
 };
 
@@ -61,20 +120,20 @@ export const Sticky = () => {
   return StickyTemplate;
 };
 
-export const Overview = () => {
-  return OverviewTemplate;
-};
+//export const Overview = () => {
+//  return OverviewTemplate;
+//};
 
 
-/*export const Default = AlertTemplate.bind({});
+export const Default = AlertTemplate.bind({});
 Default.args = {
   class: "",
-  role: "",
-  title: "",
-  text: 'Lorem ipsum dolor sit amet, <a class="usa-link" href="javascript:void(0);">consectetur adipiscing</a> elit, sed do eiusmod.',
+  //role: "",
+  //title: "",
+  //text: 'Lorem ipsum dolor sit amet, <a class="usa-link" href="javascript:void(0);">consectetur adipiscing</a> elit, sed do eiusmod.',
 };
 
-export const Emergency = AlertTemplate.bind({});
+/*export const Emergency = AlertTemplate.bind({});
 Emergency.args = {
   class: "usa-alert--emergency",
   role: "alert",
