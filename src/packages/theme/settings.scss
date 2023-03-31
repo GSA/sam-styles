@@ -1,11 +1,11 @@
 
-$sam-font-path: "../node_modules/@uswds/uswds/dist/fonts" !default;
-$sam-image-path: "../node_modules/@uswds/uswds/dist/img" !default;
+$sam-uswds-font-path: "../node_modules/@uswds/uswds/dist/fonts" !default;
+$sam-uswds-image-path: "../node_modules/@uswds/uswds/dist/img" !default;
 
 @use "uswds-core" with (
-    
-$theme-font-path: $sam-font-path,
-$theme-image-path: $sam-image-path,
+
+$theme-font-path: $sam-uswds-font-path,
+$theme-image-path: $sam-uswds-image-path,
 
 /*
 ----------------------------------------
