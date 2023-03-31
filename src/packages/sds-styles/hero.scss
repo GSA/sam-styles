@@ -1,21 +1,30 @@
-//@use "../theme/settings" as general;
-//@use "uswds-core" as *;
-//$theme-sam-hero-image: "#{$theme-image-path}/landing-hero.jpg" !default;
+@use "uswds-core" as *;
+@use "src/packages/theme/variables" as *;
+
+@mixin adjust-responsive-site-margins {
+  margin-left: -(units($theme-site-margins-mobile-width));
+  margin-right: -(units($theme-site-margins-mobile-width));
+  padding-left: (units($theme-site-margins-mobile-width));
+  padding-right: (units($theme-site-margins-mobile-width));
+
+  @include at-media($theme-site-margins-breakpoint) {
+      margin-left: -(units($theme-site-margins-width));
+      margin-right: -(units($theme-site-margins-width));
+      padding-left: (units($theme-site-margins-width));
+      padding-right: (units($theme-site-margins-width));
+  }
+}
+
 
 .sds-hero {
     @include u-height('full');
     background-position: 100% 100%;
     background-repeat: no-repeat;
-    @include sam.adjust-responsive-site-margins;
+    @include adjust-responsive-site-margins;
     @include u-padding-y(4);
 
     &--image{
-      //background: ('/landing-hero.png');
-      background: url('../src/packages/images/landing-hero.png'); 
-      //background-image: url("#{general.$theme-sam-image-path}/landing-hero.png");
-      // Hero
-      //$theme-hero-image: "#{$theme-image-path}/hero.jpg" !default;
-
+      background-image: url("#{$sam-image-path}/landing-hero.png");
     }
   }
   .sds-hero .sds-seal {
