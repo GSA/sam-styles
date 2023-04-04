@@ -12,7 +12,7 @@ export default {
     class: {type: "string"},
     //role: {type: "string"},
     //title: {type: "string"},
-    //text: {type: "string"},
+    text: {type: "string"},
   },
 };
 
@@ -21,60 +21,60 @@ export const __namedExportsOrder = ['Default','Expanded', 'Header', 'Sticky', 'D
 const AlertTemplate = (args) => {
   return `
 <h3>SDS Alert Default</h3>
-<div class="sds-alert--default info ${args.class}">
+<div class="sds-alert info ${args.class}">
     <div class="grid-container width-full maxw-full margin-0 padding-0">
         <div class="grid-row">
             <div class="grid-col-auto">
                 <i class="sds bi-info-circle size-2x"></i>
             </div>
             <div class="grid-col-fill">
-                <span class="sds-alert--default-content">
-                    <b>Less important than Global Alerts</b> Consectetur adipiscing elit, sed do eiusmod tempor indididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                <span class="sds-alert-content">
+                    <b>Less important than Global Alerts</b></br>${args.text}
                 </span>
             </div>
         </div>
     </div>
 </div>
 
-<div class="sds-alert--default ${args.class}">
+<div class="sds-alert ${args.class}">
     <div class="grid-container width-full maxw-full margin-0 padding-0">
         <div class="grid-row">
             <div class="grid-col-auto">
                 <i class="sds bi-exclamation-triangle size-2x"></i>
             </div>
             <div class="grid-col-fill">
-                <span class="sds-alert--default-content">
-                    <b>Less important than Global Alerts</b> Consectetur adipiscing elit, sed do eiusmod tempor indididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                <span class="sds-alert-content">
+                    <b>Less important than Global Alerts</b></br>${args.text}
                 </span>
             </div>
         </div>
     </div>
 </div>
 
-<div class="sds-alert--default error ${args.class}">
+<div class="sds-alert error ${args.class}">
     <div class="grid-container width-full maxw-full margin-0 padding-0">
         <div class="grid-row">
             <div class="grid-col-auto">
                 <i class="sds bi-slash-circle size-2x"></i>
             </div>
             <div class="grid-col-fill">
-                <span class="sds-alert--default-content">
-                    <b>Error Alerts Lorem Ipsum</b> Consectetur adipiscing elit, sed do eiusmod tempor indididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                <span class="sds-alert-content">
+                    <b>Error Alerts Lorem Ipsum</b></br>${args.text}
                 </span>
             </div>
         </div>
     </div>
 </div>
 
-<div class="sds-alert--default success ${args.class}">
+<div class="sds-alert success ${args.class}">
     <div class="grid-container width-full maxw-full margin-0 padding-0">
         <div class="grid-row">
             <div class="grid-col-auto">
                 <i class="sds bi-check-circle size-2x"></i>
             </div>
             <div class="grid-col-fill">
-                <span class="sds-alert--default-content">
-                    <b>Less important than Global Alerts</b> Consectetur adipiscing elit, sed do eiusmod tempor indididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                <span class="sds-alert-content">
+                    <b>Less important than Global Alerts</b></br>${args.text}
                 </span>
             </div>
         </div>
@@ -130,7 +130,7 @@ Default.args = {
   class: "",
   //role: "",
   //title: "",
-  //text: 'Lorem ipsum dolor sit amet, <a class="usa-link" href="javascript:void(0);">consectetur adipiscing</a> elit, sed do eiusmod.',
+  text: 'Consectetur adipiscing elit, sed do eiusmod tempor indididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
 };
 
 /*export const Emergency = AlertTemplate.bind({});

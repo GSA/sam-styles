@@ -1,6 +1,6 @@
 //SDS ALERT
 
-.sds-alert {
+.sds-alert--deprecated {
   @include u-padding('05');
   @include u-radius('lg');
   border: solid 0.1rem #fbc036;
@@ -331,7 +331,7 @@
   }
 }
 //ALERT-Default
-.sds-alert--default {
+.sds-alert {
   border: solid 0.1rem #FEBE2E;
   @include u-radius('lg');
   @include u-display('flex');
@@ -353,10 +353,9 @@
     margin: auto 10px;
   }
 
-  .sds-alert--default-content {
+  .sds-alert-content {
     @include u-display('inline-block');
     margin: auto;
-    max-width: 75%;
   }
 
   // Alert tag - Info
