@@ -55,8 +55,8 @@ const NoTextTemplate = () => {
 </ol>`;
 };
 
-export const Default = Template.bind({});
+export const ProcessList = Template.bind({});
 
-export const Custom = CustomTemplate.bind({});
+//export const Custom = CustomTemplate.bind({});
 
-export const NoText = NoTextTemplate.bind({});
+//export const NoText = NoTextTemplate.bind({});
