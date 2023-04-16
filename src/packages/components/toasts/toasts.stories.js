@@ -11,7 +11,7 @@ export default {
             </div>
             <span class="sds-toast__content__text">Information Saved</span>
             <div class="sds-toast__content__close">
-                <i class="fas text-ink fa-times fa-fw"></i>
+                <i class="fas text-ink bi-x size-lg"></i>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@ export default {
             </div>
             <span class="sds-toast__content__text">Your information will be saved before leaving editor view</span>
             <div class="sds-toast__content__close">
-                <i class="fas text-ink fa-times fa-fw"></i>
+                <i class="fas text-ink bi-x size-lg"></i>
             </div>
         </div>
     </div>
@@ -35,7 +35,7 @@ export default {
             </div>
             <span class="sds-toast__content__text">Check items for accuracy</span>
             <div class="sds-toast__content__close">
-                <i class="fas text-ink fa-times fa-fw"></i>
+                <i class="fas text-ink bi-x size-lg"></i>
             </div>
         </div>
     </div>
@@ -47,7 +47,7 @@ export default {
             </div>
             <span class="sds-toast__content__text">Something went wrong</span>
             <div class="sds-toast__content__close">
-                <i class="fas text-ink fa-times fa-fw"></i>
+                <i class="fas text-ink bi-x size-lg"></i>
             </div>
         </div>
     </div>
