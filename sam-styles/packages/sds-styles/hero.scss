@@ -1,5 +1,5 @@
 @use "uswds-core" as *;
-@use "src/packages/theme/variables" as *;
+@use "sam-styles/packages/theme/variables" as *;
 
 @mixin adjust-responsive-site-margins {
   margin-left: -(units($theme-site-margins-mobile-width));
