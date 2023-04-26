@@ -35,6 +35,9 @@
   "dependencies": {
     "@uswds/uswds": "^3.3.0",
     "bootstrap-icons": "^1.10.3",
+    "postcss-import": "^15.1.0",
+    "postcss-loader": "^7.2.4",
+    "postcss-preset-env": "^8.3.2",
     "react-syntax-highlighter": "^15.5.0",
     "sass-embedded": "^1.57.1"
   }

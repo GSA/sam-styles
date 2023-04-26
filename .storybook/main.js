@@ -29,7 +29,25 @@ module.exports = {
               esModule: false,
             },
           },
-          
+          {
+            loader: "postcss-loader",
+            options: {
+              sourceMap: true,
+              postcssOptions: (loaderContext) => {
+                return {
+                  plugins: [
+                    ["postcss-import", { root: loaderContext.resourcePath }],
+                    //["postcss-discard-comments", { removeAll: true }],
+                    "postcss-preset-env",
+                    //[
+                    //  "postcss-csso",
+                    //  { forceMediaMerge: false, comments: false },
+                    //],
+                  ],
+                };
+              },
+            },
+          },
           {
             loader: "sass-loader",
             options: {

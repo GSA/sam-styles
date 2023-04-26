@@ -1,3 +1,6 @@
+@use "uswds-core" as *;
+@use "sam-styles/packages/theme/variables" as *;
+
 .usa-banner__header-action {
     color: color('ink');
   }
@@ -16,7 +19,7 @@
   .usa-banner__header-flag {
     width: 16px;
     height: 11px;
-    background-image: url('#{$theme-image-path}/us_flag_small.png');
+    background-image: url('#{$sam-image-path}/us_flag_small.png');
     background-repeat: no-repeat;
   }
   
@@ -35,7 +38,6 @@
     background-image: url('#{$theme-image-path}/icon-https.svg');
     background-size: contain;
   }
-  
   .usa-banner__header-description {
     display: none;
     @media (min-width: 830px) {

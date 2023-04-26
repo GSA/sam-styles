@@ -1,47 +1,47 @@
     .usa-range{
     &::-webkit-slider-runnable-track {
-      //@include range-track;
+      @include sam.range-track;
     }
   
     &::-moz-range-track {
-      //@include range-track;
+      @include sam.range-track;
     }
   
     &::-ms-track {
-      //@include range-track;
+      @include sam.range-track;
     }
     
     &::-webkit-slider-thumb {
-      @include range-thumb;
+      @include sam.range-thumb;
     }
   
     &::-moz-range-thumb {
-      @include range-thumb;
+      @include sam.range-thumb;
     }
   
     &::-ms-thumb {
-      @include range-thumb;
+      @include sam.range-thumb;
     }
   
     &::-ms-fill-lower {
-      @include range-ms-fill;
+      @include sam.range-ms-fill;
     }
   
     &::-ms-fill-upper {
-      @include range-ms-fill;
+      @include sam.range-ms-fill;
     }
     
     &:focus{
       &::-webkit-slider-thumb {
-        @include range-focus;
+        @include sam.range-focus;
       }
   
       &::-moz-range-thumb {
-        @include range-focus;
+        @include sam.range-focus;
       }
   
       &::-ms-thumb {
-        @include range-focus;
+        @include sam.range-focus;
       }
     }
     }
