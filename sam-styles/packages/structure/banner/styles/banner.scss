@@ -1,0 +1,49 @@
+@use "uswds-core" as *;
+@use "sam-styles/packages/theme/variables" as *;
+
+.usa-banner__header-action {
+    color: color('ink');
+  }
+  
+  .usa-banner__button {
+    @include u-text('base-dark', underline, baseline);
+    &:hover {
+      @include u-text($theme-link-hover-color);
+    }
+  }
+  
+  /*******************************
+        SDS Specific Styles
+  *******************************/
+  
+  .usa-banner__header-flag {
+    width: 16px;
+    height: 11px;
+    background-image: url('#{$sam-image-path}/us_flag_small.png');
+    background-repeat: no-repeat;
+  }
+  
+  .usa-banner__content .usa-banner__guidance .usa-banner__icon {
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+  }
+  
+  .usa-banner__content .usa-banner__guidance:first-child .usa-banner__icon {
+    background-image: url('#{$theme-image-path}/icon-dot-gov.svg');
+    background-size: contain;
+  }
+  
+  .usa-banner__content .usa-banner__guidance:last-child .usa-banner__icon {
+    background-image: url('#{$theme-image-path}/icon-https.svg');
+    background-size: contain;
+  }
+  .usa-banner__header-description {
+    display: none;
+    @media (min-width: 830px) {
+      display: inline-block;
+      flex-grow: 1;
+      text-align: right;
+      padding-right: 10px;
+    }
+  }

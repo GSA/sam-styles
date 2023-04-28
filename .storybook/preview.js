@@ -15,5 +15,5 @@ export const parameters = {
   },
 };
 // import "!style-loader!css-loader!sass-loader!../scss/sam-styles/index.scss";
-import "../src/index.scss";
+import "../sam-styles/index.scss";
 

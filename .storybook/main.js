@@ -1,14 +1,14 @@
 const path = require("path");
 
 module.exports = {
-  stories: ["../src/packages/**/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: ["../sam-styles/packages/**/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@whitespace/storybook-addon-html",
   ],
-  staticDirs: ['../src/packages/images'],
+  staticDirs: ['../sam-styles/packages/images'],
   framework: "@storybook/html",
   core: {
     builder: "@storybook/builder-webpack5",
@@ -29,14 +29,32 @@ module.exports = {
               esModule: false,
             },
           },
-          
+          {
+            loader: "postcss-loader",
+            options: {
+              sourceMap: true,
+              postcssOptions: (loaderContext) => {
+                return {
+                  plugins: [
+                    ["postcss-import", { root: loaderContext.resourcePath }],
+                    //["postcss-discard-comments", { removeAll: true }],
+                    "postcss-preset-env",
+                    //[
+                    //  "postcss-csso",
+                    //  { forceMediaMerge: false, comments: false },
+                    //],
+                  ],
+                };
+              },
+            },
+          },
           {
             loader: "sass-loader",
             options: {
               sourceMap: true,
               sassOptions: {
                 includePaths: [
-                  "./src/packages",
+                  "./sam-styles/packages",
                   "./node_modules/@uswds/uswds/packages",
                   "./node_modules/@uswds"
                 ],
@@ -45,7 +63,7 @@ module.exports = {
             },
           },
         ],
-        include: path.resolve(__dirname, "../src/index.scss"),
+        include: path.resolve(__dirname, "../sam-styles/index.scss"),
       },
     );
     return config;
