@@ -17,10 +17,9 @@
   *******************************/
   
   .usa-banner__header-flag {
-    width: 16px;
-    height: 11px;
-    background-image: url('#{$sam-image-path}/us_flag_small.png');
-    background-repeat: no-repeat;
+    width: 1rem;
+    height: auto;
+   
   }
   
   .usa-banner__content .usa-banner__guidance .usa-banner__icon {
