@@ -9,12 +9,12 @@
   @include u-border-left('1px', 'base-dark');
   @include u-border-top('1px', 'base-dark');
   @include u-display('inline-block');
-  @include u-padding-x(8);
   @include u-padding-y(1);
   cursor: pointer;
   font-weight: font-weight('bold');
   margin-bottom: -1px;
   border-radius: 10px 10px 0 0;
+  min-width: 128px;
   max-width: 50%;
   overflow: auto;
   text-overflow: ellipsis;
@@ -53,7 +53,7 @@
   @include u-border-bottom('1px', 'base-dark');
 
   .sds-tabs__item {
-    width: 50%;
+    width: 100%;
   }
 }
 
