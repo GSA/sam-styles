@@ -1,11 +1,13 @@
 
 $sam-uswds-font-path: "../node_modules/@uswds/uswds/dist/fonts" !default;
 $sam-uswds-image-path: "../node_modules/@uswds/uswds/dist/img" !default;
+$sam-uswds-respect-user-font-size: true !default;
 
 @use "uswds-core" with (
 
 $theme-font-path: $sam-uswds-font-path,
 $theme-image-path: $sam-uswds-image-path,
+$theme-respect-user-font-size: $sam-uswds-respect-user-font-size,
 
 /*
 ----------------------------------------
@@ -110,7 +112,6 @@ COMPONENT SETTINGS
     $theme-grid-container-max-width: 'widescreen',
     //$theme-page-margins-bottom: 8,
 
-    $theme-respect-user-font-size: true,
     $theme-global-content-styles: true,
     $theme-font-role-heading: "sans",
     $theme-font-role-body: "sans",
