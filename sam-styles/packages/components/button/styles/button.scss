@@ -39,17 +39,16 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     &:active {
       border: none;
       @include u-bg("transparent");
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
     }
 
     &.usa-button--hover,
     &:hover {
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
       border: none;
       @include u-bg("transparent");
       text-decoration: underline;
     }
-
 
   }
 
@@ -58,7 +57,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
     &.usa-button--hover,
     &:hover {
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
       background-color: white !important;
     }
 
@@ -66,12 +65,12 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     &:active {
       background-color: white !important;
       @include u-border("primary-dark");
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
     }
 
     &:disabled {
       background-color: color('white') !important;
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
       @include u-border("base-light");
       box-shadow: none;
     }
@@ -81,11 +80,11 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   &.bg-secondary-lighter {
     @include u-border("secondary");
     background-color: #ADCDFF !important;
-    @include u-text("semibold", $theme-link-active-color);
+    @include u-text("bold", $theme-link-active-color);
 
     &.usa-button--hover,
     &:hover {
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
       background-color: white !important;
     }
 
@@ -93,12 +92,12 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     &:active {
       background-color: #ADCDFF !important;
       @include u-border("secondary-dark");
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
     }
 
     &:disabled {
       background-color: color('white') !important;
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
       @include u-border("base-light");
       box-shadow: none;
     }
@@ -106,11 +105,11 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
   &.bg-base-lighter {
     @include u-border("base-light");
-    @include u-text("semibold", $theme-link-active-color);
+    @include u-text("bold", $theme-link-active-color);
 
     &.usa-button--hover,
     &:hover {
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
       background-color: white !important;
     }
 
@@ -118,12 +117,12 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     &:active {
       background-color: color("base-lightest") !important;
       @include u-border("base-dark");
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
     }
 
     &:disabled {
       background-color: color('white') !important;
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
       @include u-border("base-light");
       box-shadow: none;
     }
@@ -134,7 +133,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
     &.usa-button--hover,
     &:hover {
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
       @include u-border("accent-cool");
       background-color: white !important;
     }
@@ -143,12 +142,12 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     &:active {
       background-color: white !important;
       @include u-border("accent-cool-dark");
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
     }
 
     &:disabled {
       background-color: color('white') !important;
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
       @include u-border("base-light");
       box-shadow: none;
     }
@@ -159,7 +158,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
     &.usa-button--hover,
     &:hover {
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
       @include u-border("accent-warm");
       background-color: white !important;
     }
@@ -168,19 +167,18 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     &:active {
       background-color: white !important;
       @include u-border("accent-warm-dark");
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
     }
 
     &:disabled {
       background-color: color('white') !important;
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
       @include u-border("base-light");
       box-shadow: none;
     }
 
   }
 }
-
 
 
 .usa-button--outline {
@@ -192,15 +190,18 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     background-color: color('white') !important;
     color: color($theme-link-active-color) !important;
     font-weight: bold;
-    @include u-text("semibold", $theme-link-active-color);
+    @include u-text("bold", $theme-link-active-color);
     @include u-border("base-darker");
-    box-shadow: none;
+
+    &:hover {
+      box-shadow: none;
+    }
   }
 
   // Add color variants here
   &.usa-button--secondary {
     @include u-border("secondary");
-    @include u-text("semibold", $theme-link-active-color);
+    @include u-text("bold", $theme-link-active-color);
     background-color: white;
 
     &:visited {
@@ -211,7 +212,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     &.usa-button--hover,
     &:hover {
       background-color: color("white");
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
       border-color: color("secondary-light");
       box-shadow: none;
     }
@@ -219,7 +220,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     &.usa-button--active,
     &:active {
       background-color: color("white");
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
       border-color: color("secondary-dark");
       box-shadow: none;
     }
@@ -249,7 +250,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   // Add color variants for base
   &.usa-button--base {
     @include u-border("base");
-    @include u-text("semibold", $theme-link-active-color);
+    @include u-text("bold", $theme-link-active-color);
     background-color: white;
 
     &:visited {
@@ -260,7 +261,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     &.usa-button--hover,
     &:hover {
       background-color: color("white");
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
       border-color: color("base-light");
       box-shadow: none;
     }
@@ -268,7 +269,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     &.usa-button--active,
     &:active {
       background-color: color("white");
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
       border-color: color("base-dark");
       box-shadow: none;
     }
@@ -277,7 +278,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   // Add color variants for accent-cool
   &.usa-button--accent-cool {
     @include u-border("accent-cool");
-    @include u-text("semibold", $theme-link-active-color);
+    @include u-text("bold", $theme-link-active-color);
     background-color: white;
 
     &:visited {
@@ -305,7 +306,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   // Add color variants for accent-warm
   &.usa-button--accent-warm {
     @include u-border("accent-warm");
-    @include u-text("semibold", $theme-link-active-color);
+    @include u-text("bold", $theme-link-active-color);
     background-color: white;
 
     &:visited {
@@ -316,7 +317,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     &.usa-button--hover,
     &:hover {
       background-color: color("white");
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
 
       border-color: color("accent-warm-light");
       box-shadow: none;
@@ -325,7 +326,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     &.usa-button--active,
     &:active {
       background-color: color("white");
-      @include u-text("semibold", $theme-link-active-color);
+      @include u-text("bold", $theme-link-active-color);
       border-color: color("accent-warm-dark");
       box-shadow: none;
     }
@@ -398,7 +399,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
   &.usa-button--hover,
   &:hover {
-    @include u-text("semibold", $theme-link-active-color);
+    @include u-text("bold", $theme-link-active-color);
     background-color: color("base-light");
     @include u-border("base-light");
   }
@@ -525,11 +526,13 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     @include u-border("disabled");
     @include u-bg("disabled");
     @include u-text("white");
+    border-width: 2px !important;
+    border-style: solid !important;
+    border-color: color("base-light") !important;
 
     &.sds-button--unstyled,
     &.usa-button--unstyled {
       box-shadow: none;
-      @include u-border(0);
       @include u-bg("transparent");
       @include u-text("disabled");
     }
