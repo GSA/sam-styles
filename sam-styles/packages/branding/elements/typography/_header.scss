@@ -64,6 +64,6 @@ h5, .h5 {
 
 h6, .h6 {
   @include h6;
-  @include u-text('bold');
+  @include u-text('semibold');
   text-transform: none;
 }
