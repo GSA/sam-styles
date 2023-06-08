@@ -66,6 +66,6 @@ $header-colors: (
   
   h6, .h6 {
     @include h6;
-    @include u-text('bold');
+    @include u-text('semibold');
     text-transform: none;
   }
