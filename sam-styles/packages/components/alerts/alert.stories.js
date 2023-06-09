@@ -22,7 +22,7 @@ const AlertTemplate = (args) => {
     <div class="grid-container width-full maxw-full margin-0 padding-0">
         <div class="grid-row">
             <div class="grid-col-auto">
-                <i class="sds bi-info-circle size-2x"></i>
+                <i class="sds text-info bi-info-circle size-2x"></i>
             </div>
             <div class="grid-col-fill">
                 <span class="sds-alert-content">
@@ -37,7 +37,7 @@ const AlertTemplate = (args) => {
     <div class="grid-container width-full maxw-full margin-0 padding-0">
         <div class="grid-row">
             <div class="grid-col-auto">
-                <i class="sds bi-exclamation-triangle size-2x"></i>
+                <i class="sds text-warning bi-exclamation-triangle size-2x"></i>
             </div>
             <div class="grid-col-fill">
                 <span class="sds-alert-content">
@@ -52,7 +52,7 @@ const AlertTemplate = (args) => {
     <div class="grid-container width-full maxw-full margin-0 padding-0">
         <div class="grid-row">
             <div class="grid-col-auto">
-                <i class="sds bi-slash-circle size-2x"></i>
+                <i class="sds text-error bi-slash-circle size-2x"></i>
             </div>
             <div class="grid-col-fill">
                 <span class="sds-alert-content">
@@ -67,7 +67,7 @@ const AlertTemplate = (args) => {
     <div class="grid-container width-full maxw-full margin-0 padding-0">
         <div class="grid-row">
             <div class="grid-col-auto">
-                <i class="sds bi-check-circle size-2x"></i>
+                <i class="sds text-success bi-check-circle size-2x"></i>
             </div>
             <div class="grid-col-fill">
                 <span class="sds-alert-content">
