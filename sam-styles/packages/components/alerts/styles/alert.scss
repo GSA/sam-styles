@@ -1,9 +1,14 @@
 //SDS ALERT
+$info: #00BDE3;
+$warning: #fbc036;
+$error: #fb5a47;
+$success: #00a91c;
+
 
 .sds-alert--deprecated {
   @include u-padding('05');
   @include u-radius('lg');
-  border: solid 0.1rem #fbc036;
+  border: solid 0.1rem $warning;
   width: 175px;
 
   .sds-alert-icon {
@@ -17,17 +22,19 @@
     @include u-padding-top('1px');
     @include u-margin-x('05');
   }
+
   //SDS ALERT INFO
   &.info {
-    border: solid 0.1rem #00BDE3;
+    border: solid 0.1rem $info;
 
     .sds-alert-icon {
       @include u-bg('info');
     }
   }
+
   //SDS ALERT ERROR
   &.error {
-    border: solid 0.1rem #fb5a47;
+    border: solid 0.1rem $error;
 
     .sds-alert-icon {
       @include u-bg('error');
@@ -42,6 +49,7 @@
     max-width: none;
   }
 }
+
 //SDS ALERT BLOCK
 
 .sds-alert--block {
@@ -69,6 +77,7 @@
   span {
     @include u-display('block');
   }
+
   //SDS INFO ALERT BLOCK
   &.info {
     @include u-bg('info-lighter');
@@ -78,6 +87,7 @@
       @include u-text('info');
     }
   }
+
   //SDS ERROR ALERT BLOCK
   &.error {
     @include u-bg('error-lighter');
@@ -88,10 +98,11 @@
     }
   }
 }
+
 // Alert tag - Warning
 
 .sds-alert--expanded {
-  border: solid 0.1rem #FEBE2E;
+  border: solid 0.1rem $warning;
   @include u-radius('lg');
   @include u-display('flex');
   @include u-flex('align-center');
@@ -104,11 +115,10 @@
   }
 
   .usa-button--circle {
-    @include u-margin(0, !important);
+    @include u-margin(0,  !important);
   }
 
   .bi-exclamation-triangle {
-    @include u-text('warning');
     margin: auto 10px;
   }
 
@@ -125,46 +135,46 @@
   .sds-alert--expanded-content-extended {
     padding-left: 52px;
   }
+
   // Alert tag - Info
   &.info {
-    border: solid 0.1rem #00BDE3;
+    border: solid 0.1rem $info;
 
     .usa-button--circle {
-      @include u-margin(0, !important);
+      @include u-margin(0,  !important);
     }
   }
 
   .bi-info-circle {
     margin: auto 10px;
-    color: #00BDE3;
   }
+
   // Alert tag - Error
   &.error {
-    border: solid 0.1rem #E9695F;
+    border: solid 0.1rem $error;
 
     .usa-button--circle {
-      @include u-margin(0, !important);
+      @include u-margin(0,  !important);
     }
   }
 
   .bi-slash-circle {
     margin: auto 10px;
-    color: #E9695F;
   }
 
   &.success {
-    border: solid 0.1rem #00a91c;
+    border: solid 0.1rem $success;
 
     .usa-button--circle {
-      @include u-margin(0, !important);
+      @include u-margin(0,  !important);
     }
   }
 
   .bi-check-circle {
     margin: auto 10px;
-    color: #00a91c;
   }
 }
+
 // Alert--Header
 .sds-alert--header {
   @include u-border-y(1px);
@@ -199,7 +209,7 @@
     }
 
     &:hover {
-      box-shadow: 0 0 11px rgba(33,33,33,.2);
+      box-shadow: 0 0 11px rgba(33, 33, 33, .2);
     }
   }
 
@@ -224,6 +234,7 @@
     @include u-padding-bottom('1px');
   }
 }
+
 //ALERT--HEADER Mobile
 
 .sds-mobile-alert {
@@ -241,6 +252,7 @@
     @include u-margin-y(1);
   }
 }
+
 //ALERT--HEADER Mobile Content
 .sds-mobile-alert__content {
   @include u-padding-y('05');
@@ -263,6 +275,7 @@
     text-overflow: ellipsis;
   }
 }
+
 //SDS ALERT STICKY
 .sds-alert--sticky {
   @include u-display('flex');
@@ -316,6 +329,7 @@
     }
   }
 }
+
 //ALERT-BASIC
 .sds-alert--basic {
   @include u-text('secondary-dark');
@@ -330,9 +344,10 @@
     align-self: center;
   }
 }
+
 //ALERT-Default
 .sds-alert {
-  border: solid 0.1rem #FEBE2E;
+  border: solid 0.1rem $warning;
   @include u-radius('lg');
   @include u-display('flex');
   @include u-flex('align-center');
@@ -345,11 +360,11 @@
   }
 
   .usa-button--circle {
-    @include u-margin(0, !important);
+    @include u-margin(0,  !important);
   }
 
   .bi-exclamation-triangle {
-    @include u-text('warning');
+    //@include u-text('warning'); //TODO: need to check the requirement
     margin: auto 10px;
   }
 
@@ -360,41 +375,39 @@
 
   // Alert tag - Info
   &.info {
-    border: solid 0.1rem #00BDE3;
+    border: solid 0.1rem $info;
 
     .usa-button--circle {
-      @include u-margin(0, !important);
+      @include u-margin(0,  !important);
     }
   }
 
   .bi-info-circle {
     margin: auto 10px;
-    color: #00BDE3;
   }
+
   // Alert tag - Error
   &.error {
-    border: solid 0.1rem #E9695F;
+    border: solid 0.1rem $error;
 
     .usa-button--circle {
-      @include u-margin(0, !important);
+      @include u-margin(0,  !important);
     }
   }
 
   .bi-slash-circle {
     margin: auto 10px;
-    color: #E9695F;
   }
 
   &.success {
-    border: solid 0.1rem #00a91c;
+    border: solid 0.1rem $success;
 
     .usa-button--circle {
-      @include u-margin(0, !important);
+      @include u-margin(0,  !important);
     }
   }
 
   .bi-check-circle {
     margin: auto 10px;
-    color: #00a91c;
   }
 }
