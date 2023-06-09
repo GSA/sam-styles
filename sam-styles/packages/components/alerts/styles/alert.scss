@@ -1,14 +1,8 @@
 //SDS ALERT
-$info: #00BDE3;
-$warning: #fbc036;
-$error: #fb5a47;
-$success: #00a91c;
-
-
 .sds-alert--deprecated {
   @include u-padding('05');
   @include u-radius('lg');
-  border: solid 0.1rem $warning;
+  border: solid 0.1rem color('gold-20v');
   width: 175px;
 
   .sds-alert-icon {
@@ -25,7 +19,7 @@ $success: #00a91c;
 
   //SDS ALERT INFO
   &.info {
-    border: solid 0.1rem $info;
+    border: solid 0.1rem color('cyan-30v');
 
     .sds-alert-icon {
       @include u-bg('info');
@@ -34,7 +28,7 @@ $success: #00a91c;
 
   //SDS ALERT ERROR
   &.error {
-    border: solid 0.1rem $error;
+    border: solid 0.1rem color('red-40v');
 
     .sds-alert-icon {
       @include u-bg('error');
@@ -102,7 +96,7 @@ $success: #00a91c;
 // Alert tag - Warning
 
 .sds-alert--expanded {
-  border: solid 0.1rem $warning;
+  border: solid 0.1rem color('gold-20v');
   @include u-radius('lg');
   @include u-display('flex');
   @include u-flex('align-center');
@@ -138,7 +132,7 @@ $success: #00a91c;
 
   // Alert tag - Info
   &.info {
-    border: solid 0.1rem $info;
+    border: solid 0.1rem color('cyan-30v');
 
     .usa-button--circle {
       @include u-margin(0,  !important);
@@ -151,7 +145,7 @@ $success: #00a91c;
 
   // Alert tag - Error
   &.error {
-    border: solid 0.1rem $error;
+    border: solid 0.1rem color('red-40v');
 
     .usa-button--circle {
       @include u-margin(0,  !important);
@@ -163,7 +157,7 @@ $success: #00a91c;
   }
 
   &.success {
-    border: solid 0.1rem $success;
+    border: solid 0.1rem color('green-cool-40v');
 
     .usa-button--circle {
       @include u-margin(0,  !important);
@@ -347,7 +341,7 @@ $success: #00a91c;
 
 //ALERT-Default
 .sds-alert {
-  border: solid 0.1rem $warning;
+  border: solid 0.1rem color('gold-20v');
   @include u-radius('lg');
   @include u-display('flex');
   @include u-flex('align-center');
@@ -375,7 +369,7 @@ $success: #00a91c;
 
   // Alert tag - Info
   &.info {
-    border: solid 0.1rem $info;
+    border: solid 0.1rem color('cyan-30v');
 
     .usa-button--circle {
       @include u-margin(0,  !important);
@@ -388,7 +382,7 @@ $success: #00a91c;
 
   // Alert tag - Error
   &.error {
-    border: solid 0.1rem $error;
+    border: solid 0.1rem color('red-40v');
 
     .usa-button--circle {
       @include u-margin(0,  !important);
@@ -400,7 +394,7 @@ $success: #00a91c;
   }
 
   &.success {
-    border: solid 0.1rem $success;
+    border: solid 0.1rem color('green-cool-40v');
 
     .usa-button--circle {
       @include u-margin(0,  !important);
