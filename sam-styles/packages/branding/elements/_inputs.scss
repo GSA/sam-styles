@@ -1,3 +1,6 @@
+@use "uswds-core" as *;
+@use "sam-styles/packages/theme/variables" as *;
+
 .sds-form-wrapper {
     @include u-bg("accent-cool-light");
     justify-content: center;
