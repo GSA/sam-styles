@@ -26,7 +26,6 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     outline-width: 2px
   }
 
-
   &--unstyled {
     @include u-text($theme-link-color);
     border: none;
@@ -69,7 +68,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
     &:disabled {
       background-color: color('white') !important;
-      @include u-text("bold", $theme-link-active-color);
+      @include u-text("bold", $theme-color-base);
       @include u-border("base-light");
       box-shadow: none;
     }
@@ -96,7 +95,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
     &:disabled {
       background-color: color('white') !important;
-      @include u-text("bold", $theme-link-active-color);
+       @include u-text("bold", $theme-color-base);
       @include u-border("base-light");
       box-shadow: none;
     }
@@ -121,7 +120,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
     &:disabled {
       background-color: color('white') !important;
-      @include u-text("bold", $theme-link-active-color);
+     @include u-text("bold", $theme-color-base);
       @include u-border("base-light");
       box-shadow: none;
     }
@@ -146,7 +145,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
     &:disabled {
       background-color: color('white') !important;
-      @include u-text("bold", $theme-link-active-color);
+     @include u-text("bold", $theme-color-base);
       @include u-border("base-light");
       box-shadow: none;
     }
@@ -171,7 +170,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
     &:disabled {
       background-color: color('white') !important;
-      @include u-text("bold", $theme-link-active-color);
+     @include u-text("bold", $theme-color-base);
       @include u-border("base-light");
       box-shadow: none;
     }
@@ -187,9 +186,10 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
   &:disabled {
     background-color: color('white') !important;
-    color: color($theme-link-active-color) !important;
+    color: color($theme-color-base) !important;
     font-weight: bold;
-    @include u-text("bold", $theme-link-active-color);
+@include u-text("bold", $theme-color-base);
+   
     @include u-border("base-darker");
 
     &:hover {
