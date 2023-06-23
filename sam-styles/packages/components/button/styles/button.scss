@@ -1,4 +1,4 @@
-$button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+$button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
 .usa-button {
   @include u-text("secondary-darker");
@@ -23,15 +23,13 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   &.usa-focus,
   &:focus {
     outline-offset: units(2px) !important;
-    outline-width: 2px
+    outline-width: 2px;
   }
 
   &--unstyled {
     @include u-text($theme-link-color);
     border: none;
     text-decoration: none;
-
-
 
     &.usa-button--active,
     &:active {
@@ -47,7 +45,6 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
       @include u-bg("transparent");
       text-decoration: underline;
     }
-
   }
 
   &.bg-primary-lighter {
@@ -67,17 +64,16 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     }
 
     &:disabled {
-      background-color: color('white') !important;
+      background-color: color("white") !important;
       @include u-text("bold", $theme-color-base);
       @include u-border("base-light");
       box-shadow: none;
     }
-
   }
 
   &.bg-secondary-lighter {
     @include u-border("secondary");
-    background-color: #ADCDFF !important;
+    background-color: #adcdff !important;
     @include u-text("bold", $theme-link-active-color);
 
     &.usa-button--hover,
@@ -88,14 +84,14 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
     &.usa-button--active,
     &:active {
-      background-color: #ADCDFF !important;
+      background-color: #adcdff !important;
       @include u-border("secondary-dark");
       @include u-text("bold", $theme-link-active-color);
     }
 
     &:disabled {
-      background-color: color('white') !important;
-       @include u-text("bold", $theme-color-base);
+      background-color: color("white") !important;
+      @include u-text("bold", $theme-color-base);
       @include u-border("base-light");
       box-shadow: none;
     }
@@ -119,8 +115,8 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     }
 
     &:disabled {
-      background-color: color('white') !important;
-     @include u-text("bold", $theme-color-base);
+      background-color: color("white") !important;
+      @include u-text("bold", $theme-color-base);
       @include u-border("base-light");
       box-shadow: none;
     }
@@ -144,8 +140,8 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     }
 
     &:disabled {
-      background-color: color('white') !important;
-     @include u-text("bold", $theme-color-base);
+      background-color: color("white") !important;
+      @include u-text("bold", $theme-color-base);
       @include u-border("base-light");
       box-shadow: none;
     }
@@ -169,15 +165,39 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     }
 
     &:disabled {
-      background-color: color('white') !important;
-     @include u-text("bold", $theme-color-base);
+      background-color: color("white") !important;
+      @include u-text("bold", $theme-color-base);
       @include u-border("base-light");
       box-shadow: none;
     }
-
+  }
+  &.pill-primary-lighter {
+    @include u-border("primary");
+    background-color: #e3f5e1;
+    &.usa-button--hover,
+    &:hover {
+      @include u-bg("primary-light");
+      @include u-border("primary-light");
+      @include u-border-width("2px");
+      @include u-text("secondary-darker");
+      background-color: #b7f5bd !important;
+    }
+    &.usa-button--active,
+    &:active {
+      @include u-bg("primary-dark");
+      @include u-border("primary-dark");
+      @include u-text("white");
+      background-color: #00a91c !important;
+    }
+    &.usa-focus,
+    &:focus {
+      outline-offset: units(2px) !important;
+      outline-width: 2px;
+      background-color: #70e17b;
+    }
+  
   }
 }
-
 
 .usa-button--outline {
   @include u-border("primary");
@@ -185,11 +205,11 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   box-shadow: none;
 
   &:disabled {
-    background-color: color('white') !important;
+    background-color: color("white") !important;
     color: color($theme-color-base) !important;
     font-weight: bold;
-@include u-text("bold", $theme-color-base);
-   
+    @include u-text("bold", $theme-color-base);
+
     @include u-border("base-darker");
 
     &:hover {
@@ -390,7 +410,6 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   }
 }
 
-
 .usa-button--base {
   @include u-text("white");
   background-color: color("base");
@@ -410,7 +429,6 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     @include u-border("base-dark");
   }
 }
-
 
 .usa-button--accent-cool {
   background-color: color("accent-cool");
@@ -447,7 +465,6 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     @include u-border("accent-warm-darker");
   }
 }
-
 
 .sds-button--circle {
   border-radius: 50%;
@@ -518,7 +535,6 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
 .sds-button,
 .usa-button {
-
   &--disabled,
   &:disabled {
     box-shadow: none;
@@ -713,7 +729,7 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 .sds-button.sds-button--icon {
   width: auto;
   height: fit-content;
-  line-height: 1.0;
+  line-height: 1;
   @include u-padding-x(4);
   @include u-radius("lg");
   @include u-display("flex");
@@ -764,14 +780,14 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     @include u-padding(2);
     @include u-shadow(2);
     @include u-border(2px);
-    @include u-border('accent-cool-light');
-    @include u-radius('lg');
-    @include u-text('left');
+    @include u-border("accent-cool-light");
+    @include u-radius("lg");
+    @include u-text("left");
     @include u-margin-y(1);
 
     .sds-button__header {
-      @include u-display('flex');
-      @include u-flex('row');
+      @include u-display("flex");
+      @include u-flex("row");
       @include u-flex(1);
       padding-bottom: 0.5rem;
       flex-grow: 0;
@@ -783,8 +799,8 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
       h4,
       h5,
       h6 {
-        @include u-font('sans', 'md');
-        @include u-text('bold');
+        @include u-font("sans", "md");
+        @include u-text("bold");
       }
 
       p {
@@ -799,20 +815,20 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     }
 
     .sds-button--icon__title {
-      @include u-color('base');
-      @include u-text('italic');
+      @include u-color("base");
+      @include u-text("italic");
       @include u-margin-top(1);
-      @include u-text('normal');
+      @include u-text("normal");
       flex-wrap: wrap;
     }
 
     &--selected,
     &:hover {
-      @include u-border('secondary');
+      @include u-border("secondary");
     }
 
     &:disabled {
-      background-color: 'base-light';
+      background-color: "base-light";
       color: color("white");
       box-shadow: none;
     }
@@ -822,22 +838,25 @@ $button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 .sds-button.sds-button--icon-lg {
   height: 100%;
   width: 100%;
-  @include u-text('center');
-  @include u-display('flex');
-  @include u-flex('column');
+  @include u-text("center");
+  @include u-display("flex");
+  @include u-flex("column");
   align-items: center;
 
   .usa-tag {
-    @include u-text('white');
-    @include u-text('no-italic');
-    @include u-margin-x('auto');
+    @include u-text("white");
+    @include u-text("no-italic");
+    @include u-margin-x("auto");
     @include u-padding-y(1);
   }
 
   .sds-button__body {
-    @include u-text('center');
-    @include u-display('flex');
-    @include u-flex('column');
+    @include u-text("center");
+    @include u-display("flex");
+    @include u-flex("column");
     flex-grow: 1;
   }
+}
+.pill-icon {
+  vertical-align: middle;
 }
