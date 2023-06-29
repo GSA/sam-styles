@@ -156,9 +156,15 @@ COMPONENT SETTINGS
         'desktop-lg': true, // 1200px
         'widescreen': true, // 1400px
     ),
-//  $width-settings: (responsive: true),
-   // $flex-direction-settings: (responsive: true),
-
+    $flex-settings: ("output": true,
+        "responsive": true,
+    ),
+    $flex-direction-settings: ("output": true,
+        "responsive": true,
+    ),
+    $flex-wrap-settings: ("output": true,
+        "responsive": true,
+    ),
 
     /*
 ----------------------------------------
