@@ -4,6 +4,7 @@ $button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   @include u-text("secondary-darker");
   @include u-border("primary");
   @include u-border-width("2px");
+  @include u-minw(15);
 
   &.usa-button--hover,
   &:hover {
@@ -170,32 +171,6 @@ $button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
       @include u-border("base-light");
       box-shadow: none;
     }
-  }
-  &.pill-primary-lighter {
-    @include u-border("primary");
-    background-color: #e3f5e1;
-    &.usa-button--hover,
-    &:hover {
-      @include u-bg("primary-light");
-      @include u-border("primary-light");
-      @include u-border-width("2px");
-      @include u-text("secondary-darker");
-      background-color: #b7f5bd !important;
-    }
-    &.usa-button--active,
-    &:active {
-      @include u-bg("primary-dark");
-      @include u-border("primary-dark");
-      @include u-text("white");
-      background-color: #00a91c !important;
-    }
-    &.usa-focus,
-    &:focus {
-      outline-offset: units(2px) !important;
-      outline-width: 2px;
-      background-color: #70e17b;
-    }
-  
   }
 }
 
@@ -859,4 +834,7 @@ $button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 }
 .pill-icon {
   vertical-align: middle;
+}
+.pill-height {
+  max-height: 44px;
 }
