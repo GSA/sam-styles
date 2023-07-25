@@ -1,0 +1,193 @@
+$sam-uswds-font-path: "../node_modules/@uswds/uswds/dist/fonts" !default;
+$sam-uswds-image-path: "../node_modules/@uswds/uswds/dist/img" !default;
+$sam-uswds-respect-user-font-size: true !default;
+
+@use "uswds-core"with ($theme-font-path: $sam-uswds-font-path,
+    $theme-image-path: $sam-uswds-image-path,
+    $theme-respect-user-font-size: $sam-uswds-respect-user-font-size,
+
+    /*
+----------------------------------------
+Theme palette colors
+----------------------------------------
+*/
+
+    // Base colors
+    $theme-color-base-family : 'gray-warm',
+    $theme-color-base-lightest: 'gray-warm-2',
+    $theme-color-base-lighter : 'gray-warm-4',
+    $theme-color-base-light : 'gray-warm-20',
+    $theme-color-base : 'gray-warm-50',
+    $theme-color-base-dark : 'gray-warm-70',
+    $theme-color-base-darker : 'gray-warm-70',
+    $theme-color-base-darkest : 'gray-warm-80',
+    $theme-color-base-ink : 'gray-warm-80',
+
+    // Primary colors
+    $theme-color-primary-family : 'green-cool-vivid',
+    $theme-color-primary-lightest: false,
+    $theme-color-primary-lighter : 'green-cool-5v',
+    $theme-color-primary-light : 'green-cool-10v',
+    $theme-color-primary : 'green-cool-20v',
+    $theme-color-primary-vivid : 'green-cool-30v',
+    $theme-color-primary-dark : 'green-cool-40v',
+    $theme-color-primary-darker : 'green-cool-50v',
+    $theme-color-primary-darkest : false,
+
+    // Secondary colors
+    $theme-color-secondary-family : 'blue-warm-vivid',
+    $theme-color-secondary-lightest: "blue-warm-20v",
+    $theme-color-secondary-lighter : 'blue-warm-30v',
+    $theme-color-secondary-light : 'blue-warm-40v',
+    $theme-color-secondary : 'blue-warm-50v',
+    $theme-color-secondary-vivid : 'blue-warm-60v',
+    $theme-color-secondary-dark : 'blue-warm-70v',
+    $theme-color-secondary-darker : 'blue-warm-80v',
+    $theme-color-secondary-darkest : false,
+
+    // Accent warm colors
+    $theme-color-accent-warm-family : 'gold',
+    $theme-color-accent-warm-lightest: false,
+    $theme-color-accent-warm-lighter : 'gold-5',
+    $theme-color-accent-warm-light : 'gold-10',
+    $theme-color-accent-warm : 'gold-20',
+    $theme-color-accent-warm-dark : 'gold-30',
+    $theme-color-accent-warm-darker : 'gold-40',
+    $theme-color-accent-warm-darkest : false,
+
+    // Accent cool colors
+    $theme-color-accent-cool-family : 'blue',
+    $theme-color-accent-cool-lightest: false,
+    $theme-color-accent-cool-lighter : 'blue-5',
+    $theme-color-accent-cool-light : 'blue-10',
+    $theme-color-accent-cool : 'blue-20',
+    $theme-color-accent-cool-dark : 'blue-30',
+    $theme-color-accent-cool-darker : 'blue-40',
+    $theme-color-accent-cool-darkest : false,
+
+    /*
+    ----------------------------------------
+    State palette colors
+    ----------------------------------------
+    */
+
+    // Error colors
+    $theme-color-error-family : 'red-vivid',
+    $theme-color-error-lighter: 'red-20v',
+    $theme-color-error-light : 'red-30v',
+    $theme-color-error : 'red-40v',
+    $theme-color-error-dark : 'red-60v',
+    $theme-color-error-darker : 'red-70v',
+
+    /*
+    ----------------------------------------
+    General colors
+    ----------------------------------------
+    */
+
+    $theme-color-info:'cyan-30v',
+    $theme-color-warning: 'gold-20v',
+    $theme-color-success:'green-cool-40v',
+
+    // Links
+    $theme-link-color : 'indigo-cool-60',
+    $theme-link-visited-color: 'indigo-cool-60',
+    $theme-link-hover-color : 'yellow-50',
+    $theme-link-active-color : 'indigo-cool-70',
+
+    /*
+----------------------------------------
+COMPONENT SETTINGS
+----------------------------------------
+*/
+
+    // Banner
+    $theme-banner-max-width: 'widescreen',
+
+    // Header
+    $theme-header-max-width: 'widescreen',
+    $theme-header-min-width: 'tablet',
+
+    //$button-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2),
+
+    $theme-grid-container-max-width: 'widescreen',
+    //$theme-page-margins-bottom: 8,
+
+    $theme-global-content-styles: true,
+    $theme-font-role-heading: "sans",
+    $theme-font-role-body: "sans",
+    // $theme-font-role-code: "mono",
+    $theme-font-role-alt: "sans",
+    $theme-font-weight-thin: 100,
+    // $theme-font-weight-light: 300,
+    // $theme-font-weight-normal: 400,
+    $theme-font-weight-medium: 500,
+    $theme-font-weight-semibold: 600,
+    $theme-font-weight-bold: 700,
+    $theme-generate-all-weights: true,
+    $theme-body-font-family: "sans",
+    $theme-body-font-size: "xs",
+    $theme-body-line-height: 3,
+    $theme-h1-font-size: 'xl',
+    $theme-h2-font-size: 'lg',
+    $theme-h3-font-size: 'md',
+    $theme-h4-font-size: 'md',
+    $theme-h5-font-size: 'xs',
+    $theme-h6-font-size: 'xs',
+
+    $theme-heading-line-height: 2,
+    $theme-text-measure: 5,
+    $theme-text-measure-wide: 6,
+    $theme-prose-font-family: "sans",
+    $theme-lead-font-family: "body",
+    // $theme-lead-font-size: "lg",
+    $theme-lead-line-height: 3,
+    $theme-lead-measure: 5,
+
+
+    $utilities-use-important: true,
+    $theme-utility-breakpoints: ('card': false, // 160px
+        'card-lg': false, // 240px
+        'mobile': true, // 320px
+        'mobile-lg': true, // 480px
+        'tablet': true, // 640px
+        'tablet-lg': true, // 800px
+        'desktop': true, // 1024px
+        'desktop-lg': true, // 1200px
+        'widescreen': true, // 1400px
+    ),
+    $flex-settings: ("output": true,
+        "responsive": true,
+    ),
+    $flex-direction-settings: ("output": true,
+        "responsive": true,
+    ),
+    $flex-wrap-settings: ("output": true,
+        "responsive": true,
+    ),
+
+    /*
+----------------------------------------
+Values
+----------------------------------------
+*/
+    // color palettes (text)
+    $color-palettes: ('palette-color-state'),
+
+    // .background-color
+
+    $background-color-palettes: ('palette-color-state'),
+
+    // .border-radius
+
+    $border-radius-manual-values: ('button': 5px,
+        'overlay': 6px,
+    ),
+
+    // .min-width
+
+    $min-width-manual-values: ('menu': 200px),
+
+    $margin-palettes: ('palette-units-em', 'palette-margin-default'),
+
+);

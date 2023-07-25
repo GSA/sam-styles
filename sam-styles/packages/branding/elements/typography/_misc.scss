@@ -1,0 +1,63 @@
+.sds-group {
+    @include u-margin-top(0.5);
+  
+    .sds-static {
+      @include u-margin-y(0);
+    }
+  }
+  
+  .sds-group--horizontal {
+    @include u-margin-top(0.5);
+  
+    .sds-static {
+      @include u-margin-y(0.5);
+    }
+  }
+  
+  .sds-static--label {
+    @include u-display('block');
+    @include u-margin-top(0.5);
+    @include u-margin-right(0.5, !important);
+    white-space: nowrap;
+  }
+  
+  .sds-static {
+    @include u-text('semibold');
+  }
+  
+  .line-height-05 {
+    line-height: 0.5rem;
+  }
+  
+  // Code samples -- added from sds-theme-custom-styles
+  code, pre {
+    @include u-font('mono', '3xs');
+    // TODO: add more black-transparent values (1-5)
+    background-color: rgba(0, 0, 0, .05);
+  }
+  
+  code {
+    @include u-padding-y(2px);
+  
+    &::before,
+    &::after {
+      letter-spacing: letter-spacing('ls-neg-3');
+      content: '\00a0';
+    }
+  }
+  
+  section {
+    h1, h2, h3, h4, h5, h6 {
+      @include u-margin-top(2);
+      @include u-margin-bottom(1);
+      clear: both;
+      + * {
+        margin-top: 0;
+      }
+    }
+  }
+  
+  // USWDS does not support space between flex
+  .flex-justify-space-between {
+    justify-content: space-between; 
+  }

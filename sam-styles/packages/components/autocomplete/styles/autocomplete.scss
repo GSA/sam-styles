@@ -1,0 +1,121 @@
+.sds-autocomplete {
+    @include u-font('sans', 'xs');
+    @include u-position('absolute');
+    @include u-z('top');
+    @include u-overflow-y('scroll');
+    @include u-overflow-x('hidden');
+    @include u-width('full');
+    @include u-bg('white');
+    max-height: 320px;
+    max-width: units($theme-input-max-width);
+  
+    /* Custom Shadow */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  
+    /* Use unstyled list for top level and child UL's */
+    @extend .usa-list !optional;
+    @extend .usa-list--unstyled !optional;
+  
+    ul {
+      @extend .usa-list !optional;
+      @extend .usa-list--unstyled !optional;
+    }
+  
+  
+    /* Scroll bar style */
+    /* width */
+    &::-webkit-scrollbar {
+      height: 10px;
+      width: 10px;
+    }
+  
+    /* Track */
+    &::-webkit-scrollbar-track {
+      @include u-bg('base-lighter');
+    }
+  
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      @include u-bg('base');
+      border-radius: 0;
+    }
+  
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      @include u-bg('base-dark');
+    }
+  
+    /* Item */
+    .sds-autocomplete__item {
+      @include u-padding(1);
+      cursor: pointer;
+    }
+  
+    /* Item hover or highlighted */
+    .sds-autocomplete__item:hover, .sds-autocomplete__item--highlighted {
+      @include u-bg('secondary');
+      @include u-text('white');
+    }
+  
+    /* Item selected */
+    .sds-autocomplete__item--selected, .sds-autocomplete__item--selected:hover {
+      @include u-text('base');
+      @include u-bg('white');
+      @include u-text('italic');
+      cursor: auto;
+    }
+  
+    /* Item Group */
+    .sds-autocomplete__group {
+      div.sds-autocomplete__item {
+        @include u-bg('base-lightest');
+        @include u-text('semibold');
+      }
+  
+      /* Group hover or highlighted */
+      div.sds-autocomplete__item:hover, div.sds-autocomplete__item--highlighted {
+        @include u-bg('secondary');
+        @include u-text('white');
+      }
+  
+      /* Item selected */
+      div.sds-autocomplete__item--selected, div.sds-autocomplete__item--selected:hover {
+        @include u-text('base-dark');
+        @include u-bg('base-lightest');
+        @include u-text('italic');
+        cursor: auto;
+      }
+  
+      /* Child with group */
+      .sds-autocomplete__group {
+        .sds-autocomplete__item {
+          @include u-padding-left(2);
+        }
+  
+        ul > li.sds-autocomplete__item {
+          @include u-padding-left(4);
+        }
+      }
+  
+      /* Grandchildren Items */
+      & > ul > li.sds-autocomplete__item {
+        @include u-padding-left(2);
+      }
+  
+      & > div.sds-autocomplete__item--disabled, & > div.sds-autocomplete__item--disabled:hover {
+        @include u-bg('base-lightest');
+        @include u-text('ink');
+        @include u-text('no-italic');
+        cursor: auto;
+      }
+    }
+  
+    /* Disabled */
+    .sds-autocomplete__item--disabled, .sds-autocomplete__item--disabled:hover {
+      @include u-text('base');
+      @include u-bg('white');
+      @include u-text('italic');
+      cursor: auto;
+    }
+  
+  }

@@ -1,0 +1,87 @@
+.sds-field {
+    @include u-font("sans", "2xs");
+    @include u-text("base-dark");
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      //heading style
+      @extend .h2;
+  
+      //heading light style
+      &.sds-light {
+        @extend .h3;
+      }
+    }
+  
+    .sds-field__name {
+      @include u-display("inline-block");
+      @include u-margin-right("2px");
+      // class used to vertically align field name to tag text
+      &.has-usa-tag {
+        vertical-align: middle;
+        padding-top: 4px;
+      }
+    }
+    .sds-field__value {
+      @include u-font("sans", $theme-body-font-size);
+      @include u-display("inline-block");
+      @include u-text("semibold");
+      &.left-align {
+        margin-left: -3.5rem;
+      }
+  
+      &--small {
+        @include u-font("sans", "3xs");
+        @include u-text("normal");
+        a.usa-link {
+          font-size: inherit;
+        }
+      }
+  
+      &--large {
+        @include u-font("sans", "md");
+        @include u-text("semibold");
+        a.usa-link {
+          font-size: inherit;
+        }
+      }
+  
+      &--paragraph {
+        @include u-display("block");
+        @include u-text("normal");
+        @include u-measure($theme-text-measure-wide);
+      }
+  
+      a.usa-link {
+        font-size: inherit;
+      }
+    }
+    &--stacked {
+      .sds-field__name {
+        @include u-display("block");
+      }
+      .sds-field__value {
+        @include u-display("block");
+        &--paragraph {
+          @include u-display("block");
+        }
+      }
+    }
+    &--small {
+      @include u-font("sans", "3xs");
+    }
+    &--large {
+      @include u-font("sans", "sm");
+    }
+    &--featured {
+      .sds-field__name {
+        @include u-text("italic");
+        @include u-text("light");
+        @include u-font("sans", "2xs");
+      }
+    }
+  }

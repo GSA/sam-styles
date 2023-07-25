@@ -1,0 +1,138 @@
+/*******************************
+       USWDS OVERRIDES
+*******************************/
+/*-------------------
+       Header
+--------------------*/
+.usa-header {
+  background-color: white;
+}
+
+.usa-menu-btn {
+  @include button-unstyled;
+
+  .counter-icon{
+    color: red !important;
+    margin-top: -2.4em;
+    margin-left: 2.4em;
+  }
+}
+
+.usa-overlay {
+  background: color('secondary-darker');
+
+  &.is-visible {
+    opacity: opacity(50);
+  }
+}
+
+.usa-nav__primary button {
+  font-size: unset;
+  font-weight: unset;
+}
+
+/*-------------------
+ usa-header--extended
+--------------------*/
+.usa-header--extended {
+
+  .usa-nav-container {
+    max-width: 100%;
+    @include u-padding-x(0);
+  }
+
+  .usa-nav__link:not(.usa-current):hover::after {
+    content: none;
+  }
+
+  .usa-logo {
+    @include at-media($theme-header-min-width) {
+      margin: units(3) 0 units(2);
+    }
+  }
+
+  .usa-nav {
+    @include at-media($theme-header-min-width) {
+      border-top: units(1px) solid color('base-lighter');
+      box-shadow: 0 -10px white, 0 2px 11px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+/************************
+    MEGA MENU / SUBMENU
+***********************/
+.usa-nav__submenu {
+  background-color: color('white');
+  color: color('ink');
+
+  .usa-nav__submenu-item a {
+    color: color($theme-link-color);
+  }
+
+  .usa-nav__submenu-item a:hover {
+    color: color($theme-link-color);
+    text-decoration: underline;
+  }
+}
+
+.usa-megamenu.usa-nav__submenu {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.usa-megamenu.usa-nav__submenu::before {
+  content: none;
+}
+
+.usa-megamenu.usa-nav__submenu::after {
+  content: none;
+}
+
+
+/*******************************
+      SDS Specific Styles
+*******************************/
+.sds-header__logo {
+  @include u-height(4);
+  @include at-media($theme-header-min-width) {
+    @include u-height(5);
+  }
+}
+/*-------------------
+  sds-subheader
+--------------------*/
+.sds-subheader {
+  @include u-bg('base-lighter');
+  @include u-height(8);
+  @include u-margin-top(-2);
+  @include u-padding-y(2);
+  @include u-padding-x(2);
+
+  .sds-subheader__inner {
+    @include u-maxw('widescreen');
+    @include u-flex('justify-center');
+    margin: auto;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include u-font('sans', 'md');
+      @include u-text('normal');
+      @include u-margin-top(0);
+      @include u-margin-x(4);
+    }
+    @include at-media($theme-header-min-width) {
+      div {
+        max-width: 87.5rem;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        @include u-padding-x(4);
+      }
+    }
+  }
+}

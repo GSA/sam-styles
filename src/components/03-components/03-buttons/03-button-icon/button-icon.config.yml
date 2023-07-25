@@ -1,7 +1,0 @@
-label: Icon Button
-status: wip
-preview: "@sam-grid"
-context:
-  label:
-  classes: "sds-button--icon sds-button--icon-lg"
-  buttons:

@@ -1,0 +1,22 @@
+@use "uswds-core" as *;
+
+@mixin range-focus{
+    border: unit($number: (1px)) solid color('ink');
+    background-color: color('secondary-lighter');
+  }
+  
+  @mixin range-track {
+    background: color('base-light');
+    border: none;
+    
+  }
+  @mixin range-thumb {
+    background-color: color('secondary-light');
+    border: units(1px) solid color('secondary-light');
+    box-shadow: none;
+  }
+  
+  @mixin range-ms-fill {
+    background-color: color("base-light");
+    border: none;
+  }

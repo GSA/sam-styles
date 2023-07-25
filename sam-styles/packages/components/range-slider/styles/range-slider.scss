@@ -1,0 +1,47 @@
+    .usa-range{
+    &::-webkit-slider-runnable-track {
+      @include sam.range-track;
+    }
+  
+    &::-moz-range-track {
+      @include sam.range-track;
+    }
+  
+    &::-ms-track {
+      @include sam.range-track;
+    }
+    
+    &::-webkit-slider-thumb {
+      @include sam.range-thumb;
+    }
+  
+    &::-moz-range-thumb {
+      @include sam.range-thumb;
+    }
+  
+    &::-ms-thumb {
+      @include sam.range-thumb;
+    }
+  
+    &::-ms-fill-lower {
+      @include sam.range-ms-fill;
+    }
+  
+    &::-ms-fill-upper {
+      @include sam.range-ms-fill;
+    }
+    
+    &:focus{
+      &::-webkit-slider-thumb {
+        @include sam.range-focus;
+      }
+  
+      &::-moz-range-thumb {
+        @include sam.range-focus;
+      }
+  
+      &::-ms-thumb {
+        @include sam.range-focus;
+      }
+    }
+    }
