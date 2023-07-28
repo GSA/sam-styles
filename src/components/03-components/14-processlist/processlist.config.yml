@@ -1,7 +1,0 @@
-label: Process List
-status: wip
-
-variants:
-  - name: default
-    label: Process List
-    status: null

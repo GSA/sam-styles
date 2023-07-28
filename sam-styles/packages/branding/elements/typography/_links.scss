@@ -1,0 +1,85 @@
+.usa-link {
+    @include u-text('no-underline');
+  
+    &--small {
+      @include u-font ('sans', '3xs');
+      @include u-line-height('sans', 3);
+    }
+  
+    &--large {
+      @include u-font ('sans', 'md');
+      @include u-line-height('sans', 3);
+    }
+  
+    &--hover, &:hover {
+      @include u-text ('yellow-50');
+      @include u-text ('underline');
+    }
+  
+    &--inverse {
+      @include u-text ('blue-10');
+      
+      &--hover, &:hover {
+        @include u-text ('secondary-lighter');
+        @include u-text ('underline');
+      }
+  
+      &--active, &:active {
+        @include u-text('blue-5');
+      }
+    }
+    .usa-link__external-icon {
+      @include u-margin-left('05');
+      vertical-align: inherit;
+    }
+  }
+  
+  .sds-group {
+    @include u-margin-top(0.5);
+  
+    .sds-static {
+      @include u-margin-y(0);
+    }
+  }
+  
+  .sds-group--horizontal {
+    @include u-margin-top(0.5);
+  
+    .sds-static {
+      @include u-margin-y(0.5);
+    }
+  }
+  
+  .sds-static--label {
+    @include u-display('block');
+    @include u-margin-top(0.5);
+    @include u-margin-right(0.5, !important);
+    white-space: nowrap;
+  }
+  
+  .sds-static {
+    @include u-text('semibold');
+  }
+  
+  //taken from elements/links.scss
+  .sds-icon-link{
+    @include u-display('inline-flex');
+    @include u-flex('align-center');
+    svg{
+        @include u-flex('align-center');
+    }
+    &--left{
+        svg{
+            @include u-margin-right(1)
+        }
+    }
+    &--right{
+        svg{
+            @include u-margin-left(1)
+        }
+    }
+  }
+  
+  .sds-link--display-visited:visited {
+    @include u-text('violet-70v');
+  }

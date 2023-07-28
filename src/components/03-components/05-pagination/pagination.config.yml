@@ -1,7 +1,0 @@
-label: Pagination
-status: wip
-
-variants:
-  - name: default
-    label: SAM Pagination
-    status: null
