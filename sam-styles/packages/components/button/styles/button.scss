@@ -832,3 +832,56 @@ $button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     flex-grow: 1;
   }
 }
+
+.usa-button-pill {
+  @include u-radius("pill");
+  @include u-display("flex");
+  @include u-flex('align-center'); // Vertically align items in the center
+  @include u-flex('justify-center'); // Horizontally center content
+
+  svg {
+    width: 16px !important;
+    height: 16px !important;
+    fill: currentColor !important;
+    stroke-width: 1px !important;
+    stroke: color("secondary-darker");
+  }
+
+  &--next {
+    svg {
+      @include u-margin-left(1);
+      @include u-margin-top(1px);
+    }
+    &.usa-button:active svg,
+    &.usa-button:disabled svg,
+    &.usa-button--active svg {
+      stroke: color("white");
+    }
+  }
+
+  &--previous {
+    svg {
+      @include u-margin-right(1);
+      @include u-margin-top(1px);
+    }
+    &.usa-button--active svg {
+      stroke: color("secondary-darker");
+    }
+    &:disabled svg {
+      stroke: color("base");
+    }
+  }
+
+  &--cancel {
+    svg {
+      @include u-margin-right(1);
+      @include u-margin-top(1px);
+      height: 14px !important;
+      width: 14px !important;
+      stroke: color("ink");
+    }
+    &:disabled svg {
+      stroke: color("base");
+    }
+  }
+}
