@@ -850,7 +850,7 @@ $button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   &--next {
     svg {
       @include u-margin-left(1);
-      @include u-margin-top(2px);
+      @include u-margin-top(3px);
     }
     &.usa-button:active svg,
     &.usa-button:disabled svg,
