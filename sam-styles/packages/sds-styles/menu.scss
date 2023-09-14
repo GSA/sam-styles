@@ -153,7 +153,9 @@
     line-height: 1.5;
     font-size: 17px;
     border-color: color("secondary-dark") !important;
-    background-color: white;
+    background-color: white !important;
+    padding: 0.5rem !important;
+    min-width: 6.25rem !important;
 
     &:visited {
       color: color("secondary-dark") !important;
@@ -161,7 +163,7 @@
     }
 
     &.usa-button--hover,
-    &:hover {
+    &:not(.usa-button--disabled):hover {
       background-color: color("secondary-dark") !important;
       color: white !important;
       border-color: color("secondary-dark") !important;
@@ -176,8 +178,17 @@
       box-shadow: none;
     }
   }
-}
 
+  &.usa-button--disabled {
+    box-shadow: none;
+    border-width: 2px !important;
+    border-style: solid !important;
+    @include u-border("base-light");
+    background-color: white !important;
+    color: color("base") !important;
+    cursor: unset !important;
+  }
+}
 
 @media only screen and (min-width: 400px) and (max-width:800px) {
   .sds-button--menu {
