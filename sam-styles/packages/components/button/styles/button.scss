@@ -4,7 +4,6 @@ $button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   @include u-text("secondary-darker");
   @include u-border("primary");
   @include u-border-width("2px");
-  @include u-minw(15);
 
   &.usa-button--hover,
   &:hover {
@@ -839,6 +838,7 @@ $button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   @include u-display("flex");
   @include u-flex('align-center'); // Vertically align items in the center
   @include u-flex('justify-center'); // Horizontally center content
+  @include u-minw(15);
 
   svg {
     width: 16px;
