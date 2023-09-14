@@ -509,7 +509,6 @@ $button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
 .sds-button,
 .usa-button {
-
   &--disabled,
   &:disabled {
     box-shadow: none;
@@ -846,25 +845,19 @@ $button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     fill: currentColor;
     stroke-width: 1px;
     stroke: color("secondary-darker");
+    @include u-margin-top(3px);
+  }
+  &.usa-button:active svg,
+  &.usa-button:disabled svg,
+  &.usa-button--active svg {
+    stroke: color("white");
   }
 
-  &--next {
+  &.bg-primary-lighter {
     svg {
-      @include u-margin-left(1);
-      @include u-margin-top(3px);
-    }
-    &.usa-button:active svg,
-    &.usa-button:disabled svg,
-    &.usa-button--active svg {
-      stroke: color("white");
-    }
-  }
-
-  &--previous {
-    svg {
-      @include u-margin-right(1);
       @include u-margin-top(2px);
     }
+    &:active svg,
     &.usa-button--active svg {
       stroke: color("secondary-darker");
     }
@@ -873,16 +866,21 @@ $button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     }
   }
 
-  &--cancel {
+  &.usa-button--base {
     svg {
-      @include u-margin-right(1);
       @include u-margin-top(2px);
       height: 14px !important;
       width: 14px !important;
+      stroke: color("ink");
+    }
+    &:active svg {
       stroke: color("ink");
     }
     &:disabled svg {
       stroke: color("base");
     }
   }
+}
+.space-x-1 > * + * {
+  margin-left: 8px;
 }
