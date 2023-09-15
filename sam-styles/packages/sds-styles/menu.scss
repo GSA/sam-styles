@@ -152,7 +152,7 @@
   &.usa-button {
     line-height: 1.5;
     font-size: 17px;
-    border-color: color("secondary-dark") !important;
+    border-color: color("secondary-dark");
     background-color: white !important;
     padding: 0.5rem !important;
     min-width: 6.25rem !important;
@@ -183,7 +183,7 @@
     box-shadow: none;
     border-width: 2px !important;
     border-style: solid !important;
-    @include u-border("base-light");
+    border-color: color("base") !important;
     background-color: white !important;
     color: color("base") !important;
     cursor: unset !important;
