@@ -171,7 +171,7 @@
     }
 
     &.usa-button--active,
-    &:active {
+    &:not(.usa-button--disabled):active {
       background-color: color("secondary-dark") !important;
       color: white;
       border-color: color("secondary-dark") !important;
