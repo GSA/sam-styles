@@ -515,8 +515,8 @@ $button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   &--disabled,
   &:disabled {
     box-shadow: none;
-    @include u-border("base-light");
-    @include u-bg("base-light");
+    @include u-border("disabled");
+    @include u-bg("disabled");
     @include u-text("white");
     border-width: 2px !important;
     border-style: solid !important;
@@ -526,7 +526,7 @@ $button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     &.usa-button--unstyled {
       box-shadow: none;
       @include u-bg("transparent");
-      @include u-text("base-light");
+      @include u-text("disabled");
     }
   }
 }
