@@ -16,8 +16,8 @@ Theme palette colors
     $theme-color-base-family : 'gray-warm',
     $theme-color-base-lightest: 'gray-warm-2',
     $theme-color-base-lighter : 'gray-warm-4',
-    $theme-color-base-light : 'gray-warm-20',
-    $theme-color-base : 'gray-warm-50',
+    $theme-color-base-light : 'gray-20',
+    $theme-color-base : 'gray-50',
     $theme-color-base-dark : 'gray-warm-70',
     $theme-color-base-darker : 'gray-warm-70',
     $theme-color-base-darkest : 'gray-warm-80',
@@ -70,6 +70,8 @@ Theme palette colors
     State palette colors
     ----------------------------------------
     */
+    // Disabled color
+    $theme-color-disabled : 'gray-20',
 
     // Error colors
     $theme-color-error-family : 'red-vivid',
