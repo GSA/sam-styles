@@ -119,3 +119,36 @@
     }
   
   }
+
+  .sds-selected__label {
+    position: sticky;
+    top: 0; 
+    @include u-z('top');
+    @include u-bg('secondary');
+    padding: 10px; 
+    cursor: pointer; 
+    text-align: center;  
+    color: white; 
+    @include u-display('block');  
+  }
+  .sds-selected__label--disabled {
+    @include u-bg('base');
+  }
+  
+  .sds-autocomplete__checkbox {
+    @include u-padding(2);
+    margin-bottom: -4px;
+    cursor: pointer;
+    &--highlighted,
+    &:hover {
+      background-color: #EFF6FB !important; 
+    }
+    &--item {
+      font-weight: 600 !important;
+      @include u-display('inline');
+    }
+    &--secondary {
+      font-weight: 400 !important;
+      margin-left: 2rem;
+    }
+  }
