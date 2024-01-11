@@ -43,5 +43,4 @@ export default {
   export const ThreeColumns = () => {
     return Columns;
   };
-
   

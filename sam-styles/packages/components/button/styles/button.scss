@@ -62,7 +62,7 @@ $button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     &:active {
       background-color: white !important;
       @include u-border("primary-dark");
-      @include u-text("bold", $theme-link-active-color);
+      @include u-text("bold", "primary-darker");
     }
 
     &:disabled {
