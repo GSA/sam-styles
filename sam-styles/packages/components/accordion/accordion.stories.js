@@ -1,70 +1,47 @@
-//import BorderedAccordion from "./templates/bordered.html";
 import MultiSelectableAccordion from "./templates/multiselectable.html";
 
 export default {
     title: "Components/Accordion",
     argTypes: {
-      class: {type: "string"},
-      expanded: {type: "boolean"},
+        class: { control: 'text' },
+        expanded: { control: 'boolean' }
     },
-  };
+};
 
-  const BorderedTemplate = (args) => {
-    return `<div class="usa-accordion ${args.class}">
+export const Multiselectable = () => {
+    // Create a container element
+    const container = document.createElement('div');
+    container.innerHTML = MultiSelectableAccordion;
 
-    <h2 class="usa-accordion__heading">
-        <button class="usa-accordion__button  border-top-1px border-base-light " aria-expanded="false" aria-controls="b-a1">
-            Accordion Button
-        </button>
-    </h2>
-    <!--div id="b-a1" class="usa-accordion__content">
-        <p>Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.</p>
-    </div-->
+    // Set initial state of all accordions to closed, except the second one
+    container.querySelectorAll('.usa-accordion__button').forEach((button, index) => {
+        button.setAttribute('aria-expanded', index === 1 ? 'true' : 'false');
+    });
+    container.querySelectorAll('.usa-accordion__content').forEach((content, index) => {
+        content.style.display = index === 1 ? 'block' : 'none';
+    });
 
-    <h2 class="usa-accordion__heading">
-        <button class="usa-accordion__button " aria-expanded="true" aria-controls="b-a2">
-            Accordion Button
-        </button>
-    </h2>
-    <div id="b-a2" class="usa-accordion__content">
-        <p>Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.</p>
-    </div>
+    // JavaScript for accordion logic
+    const script = document.createElement('script');
+    script.type = 'module';
+    script.textContent = `
+        const initAccordion = () => {
+            const accordionButtons = document.querySelectorAll('.usa-accordion__button');
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    const contentPanelId = this.getAttribute('aria-controls');
+                    const contentPanel = document.getElementById(contentPanelId);
+                    contentPanel.style.display = isExpanded ? 'none' : 'block';
+                });
+            });
+        };
+        initAccordion();
+    `;
 
-    <h2 class="usa-accordion__heading">
-        <button class="usa-accordion__button " aria-expanded="false" aria-controls="b-a3">
-            Accordion Button
-        </button>
-    </h2>
-    <!--div id="b-a3" class="usa-accordion__content">
-        <p>Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.</p>
-    </div-->
+    // Append the script to the container
+    container.appendChild(script);
 
-    <h2 class="usa-accordion__heading">
-        <button class="usa-accordion__button " aria-expanded="false" aria-controls="b-a4">
-            Accordion Button
-        </button>
-    </h2>
-    <!--div id="b-a4" class="usa-accordion__content">
-        <p>Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.</p>
-    </div-->
-
-    <h2 class="usa-accordion__heading">
-        <button class="usa-accordion__button " aria-expanded="false" aria-controls="b-a5">
-            Accordion Button
-        </button>
-    </h2>
-    <!--div id="b-a5" class="usa-accordion__content">
-        <p>Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.</p>
-    </div-->
-
-</div>`;
-  };
-
-  export const Multiselectable = () => {
-    return MultiSelectableAccordion;
-  };
-  
-  export const Bordered = BorderedTemplate.bind({});
-    Bordered.args = {
-      class: "usa-accordion--bordered",
-    };
+    return container;
+};
