@@ -5,24 +5,23 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "storybook dev -p 6006",
     "federalist": "npm run build:storybook",
     "start": "npm run start:storybook",
-    "start:storybook": "start-storybook -p 6006",
-    "build:storybook": "build-storybook -o _site"
+    "start:storybook": "storybook dev -p 6006",
+    "build:storybook": "storybook build -o _site"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.17.10",
-    "@storybook/addon-actions": "^6.5.0",
-    "@storybook/addon-essentials": "^6.5.0",
-    "@storybook/addon-interactions": "^6.5.0",
-    "@storybook/addon-links": "^6.5.0",
-    "@storybook/builder-webpack5": "^6.5.0",
-    "@storybook/html": "^6.5.0",
-    "@storybook/manager-webpack5": "^6.5.0",
+    "@storybook/addon-actions": "^7.6.10",
+    "@storybook/addon-essentials": "^7.6.10",
+    "@storybook/addon-interactions": "^7.6.10",
+    "@storybook/addon-links": "^7.6.10",
+    "@storybook/html": "^7.6.10",
+    "@storybook/html-webpack5": "^7.6.10",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/testing-library": "0.0.11",
     "@whitespace/storybook-addon-html": "^5.0.0",
@@ -30,6 +29,7 @@
     "css-loader": "^6.7.1",
     "sass": "^1.51.0",
     "sass-loader": "^12.6.0",
+    "storybook": "^7.6.10",
     "style-loader": "^3.3.1"
   },
   "dependencies": {

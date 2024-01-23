@@ -6,6 +6,7 @@ export const parameters = {
       useTabs: false,
       htmlWhitespaceSensitivity: "strict",
     },
+    root: "#storybook-root",
   },
   controls: {
     matchers: {
