@@ -13,8 +13,6 @@ export default {
   },
 };
 
-export const __namedExportsOrder = ['Default','Expanded', 'Header', 'Sticky', 'Default_deprecated', 'Block_deprecated'];
-
 const AlertTemplate = (args) => {
   return `
 <h3>SDS Alert Default</h3>
