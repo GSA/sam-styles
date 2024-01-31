@@ -1,70 +1,93 @@
-//import BorderedAccordion from "./templates/bordered.html";
 import MultiSelectableAccordion from "./templates/multiselectable.html";
+import BorderedAccordion from "./templates/bordered.html"
 
 export default {
     title: "Components/Accordion",
     argTypes: {
-      class: {type: "string"},
-      expanded: {type: "boolean"},
+        class: { control: 'text' },
+        expanded: { control: 'boolean' }
     },
-  };
+};
+export const Bordered = (args) => {
+    const container = document.createElement('div');
+    container.className = `usa-accordion ${args.class || 'usa-accordion--bordered'}`;
+    container.innerHTML = BorderedAccordion;
 
-  const BorderedTemplate = (args) => {
-    return `<div class="usa-accordion ${args.class}">
+    const accordionButtons = container.querySelectorAll('.usa-accordion__button');
+    const accordionContents = container.querySelectorAll('.usa-accordion__content');
 
-    <h2 class="usa-accordion__heading">
-        <button class="usa-accordion__button  border-top-1px border-base-light " aria-expanded="false" aria-controls="b-a1">
-            Accordion Button
-        </button>
-    </h2>
-    <!--div id="b-a1" class="usa-accordion__content">
-        <p>Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.</p>
-    </div-->
+    if (accordionButtons.length > 0 && accordionContents.length > 0) {
+        accordionButtons[0].setAttribute('aria-expanded', 'true');
+        accordionContents[0].style.display = 'block';
+    }
 
-    <h2 class="usa-accordion__heading">
-        <button class="usa-accordion__button " aria-expanded="true" aria-controls="b-a2">
-            Accordion Button
-        </button>
-    </h2>
-    <div id="b-a2" class="usa-accordion__content">
-        <p>Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.</p>
-    </div>
+    for (let i = 1; i < accordionButtons.length; i++) {
+        accordionButtons[i].setAttribute('aria-expanded', 'false');
+        accordionContents[i].style.display = 'none';
+    }
 
-    <h2 class="usa-accordion__heading">
-        <button class="usa-accordion__button " aria-expanded="false" aria-controls="b-a3">
-            Accordion Button
-        </button>
-    </h2>
-    <!--div id="b-a3" class="usa-accordion__content">
-        <p>Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.</p>
-    </div-->
+    const script = document.createElement('script');
+    script.type = 'module';
+    script.textContent = `
+    const initAccordion = () => {
+        const accordionButtons = document.querySelectorAll('.usa-accordion__button');
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                // Toggle the current section
+                this.setAttribute('aria-expanded', !isExpanded);
+                const contentPanelId = this.getAttribute('aria-controls');
+                const contentPanel = document.getElementById(contentPanelId);
+                contentPanel.style.display = isExpanded ? 'none' : 'block';
 
-    <h2 class="usa-accordion__heading">
-        <button class="usa-accordion__button " aria-expanded="false" aria-controls="b-a4">
-            Accordion Button
-        </button>
-    </h2>
-    <!--div id="b-a4" class="usa-accordion__content">
-        <p>Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.</p>
-    </div-->
-
-    <h2 class="usa-accordion__heading">
-        <button class="usa-accordion__button " aria-expanded="false" aria-controls="b-a5">
-            Accordion Button
-        </button>
-    </h2>
-    <!--div id="b-a5" class="usa-accordion__content">
-        <p>Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.</p>
-    </div-->
-
-</div>`;
-  };
-
-  export const Multiselectable = () => {
-    return MultiSelectableAccordion;
-  };
-  
-  export const Bordered = BorderedTemplate.bind({});
-    Bordered.args = {
-      class: "usa-accordion--bordered",
+                // Collapse other sections
+                accordionButtons.forEach(otherButton => {
+                    if (otherButton !== this) {
+                        otherButton.setAttribute('aria-expanded', 'false');
+                        const otherContentPanel = document.getElementById(otherButton.getAttribute('aria-controls'));
+                        otherContentPanel.style.display = 'none';
+                    }
+                });
+            });
+        });
     };
+    initAccordion();
+    `;
+
+    container.appendChild(script);
+
+    return container;
+};
+
+export const Multiselectable = () => {
+    const container = document.createElement('div');
+    container.innerHTML = MultiSelectableAccordion;
+    container.querySelectorAll('.usa-accordion__button').forEach((button, index) => {
+        button.setAttribute('aria-expanded', index === 1 ? 'true' : 'false');
+    });
+    container.querySelectorAll('.usa-accordion__content').forEach((content, index) => {
+        content.style.display = index === 1 ? 'block' : 'none';
+    });
+
+    const script = document.createElement('script');
+    script.type = 'module';
+    script.textContent = `
+        const initAccordion = () => {
+            const accordionButtons = document.querySelectorAll('.usa-accordion__button');
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    const contentPanelId = this.getAttribute('aria-controls');
+                    const contentPanel = document.getElementById(contentPanelId);
+                    contentPanel.style.display = isExpanded ? 'none' : 'block';
+                });
+            });
+        };
+        initAccordion();
+    `;
+
+    container.appendChild(script);
+
+    return container;
+};
