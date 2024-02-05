@@ -22,7 +22,7 @@ jobs:
         env:
           NODE_OPTIONS: "--max_old_space_size=8192"
       - name: Add .nojekyll file to allow for node_modules to be included in bundle
-        run: touch storybook-static/.nojekyll
+        run: touch _site/.nojekyll
       - name: Archive Storybook Assets
         uses: actions/upload-artifact@v4
         with:
