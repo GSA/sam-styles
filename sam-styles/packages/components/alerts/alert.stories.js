@@ -50,7 +50,7 @@ const AlertTemplate = (args) => {
     <div class="grid-container width-full maxw-full margin-0 padding-0">
         <div class="grid-row">
             <div class="grid-col-auto">
-                <i class="sds text-error bi-slash-circle size-2x"></i>
+                <i class="sds text-error bi-exclamation-circle size-2x"></i>
             </div>
             <div class="grid-col-fill">
                 <span class="sds-alert-content">

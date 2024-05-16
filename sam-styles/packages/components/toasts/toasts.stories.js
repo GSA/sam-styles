@@ -43,7 +43,7 @@ export default {
     <div class="sds-toast sds-toast--error">
         <div class="sds-toast__content">
             <div class="sds-toast__content__icon">
-                <i class="sds text-ink bi-slash-circle size-2x"></i>
+                <i class="sds text-ink bi-exclamation-circle size-2x"></i>
             </div>
             <span class="sds-toast__content__text">Something went wrong</span>
             <div class="sds-toast__content__close">
