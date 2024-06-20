@@ -181,8 +181,15 @@
     }
   
     textarea {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+ 
+  @media (min-width: 400px) {
+    .usa-character-count textarea {
       width: 320px;
-      max-width: none;
+      max-width: 100%;
     }
   }
   
