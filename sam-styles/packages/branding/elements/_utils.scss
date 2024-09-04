@@ -1,63 +1,78 @@
 .cursor-pointer {
-    cursor: pointer;
-  }
-  
-  .minw-card-lg {
-    min-width: 240px;
-  }
-  
-  .sds-measure-7 {
-    max-width: 96ex !important;
-  }
-  
-  .sds-measure-8 {
-    max-width: 104ex !important;
-  }
-  
-  .sds-measure-9 {
-    max-width: 120ex !important;
-  }
-  
-  .sds-measure-10 {
-    max-width: 136ex !important;
-  }
+  cursor: pointer;
+}
 
-  i.size-xs{
-    font-size: .75em;
+.minw-card-lg {
+  min-width: 240px;
+}
+
+.sds-measure-7 {
+  max-width: 96ex !important;
+}
+
+.sds-measure-8 {
+  max-width: 104ex !important;
+}
+
+.sds-measure-9 {
+  max-width: 120ex !important;
+}
+
+.sds-measure-10 {
+  max-width: 136ex !important;
+}
+
+i.size-xs {
+  font-size: 0.75em;
+}
+i.size-sm {
+  font-size: 0.875em;
+}
+i.size-lg {
+  font-size: 1.33em;
+}
+i.size-2x {
+  font-size: 2em;
+}
+i.size-3x {
+  font-size: 3em;
+}
+i.size-4x {
+  font-size: 4em;
+}
+i.size-5x {
+  font-size: 5em;
+}
+i.size-6x {
+  font-size: 6em;
+}
+i.size-7x {
+  font-size: 7em;
+}
+i.size-8x {
+  font-size: 8em;
+}
+i.size-9x {
+  font-size: 9em;
+}
+i.size-10x {
+  font-size: 10em;
+}
+i.sds-icon-margin {
+  margin-right: 0.5rem;
+}
+
+.sds-textarea-small {
+  @include u-width("mobile");
+}
+
+.sds-textarea-medium {
+  @include u-width("mobile-lg");
+}
+
+.sds-textarea-large {
+  @include u-width("tablet");
+  .usa-textarea {
+    max-width: none !important;
   }
-  i.size-sm{
-    font-size: .875em;
-  }
-  i.size-lg{
-    font-size: 1.33em;
-  }
-  i.size-2x{
-    font-size: 2em;
-  }
-  i.size-3x{
-    font-size: 3em;
-  }
-  i.size-4x{
-    font-size: 4em;
-  }
-  i.size-5x{
-    font-size: 5em;
-  }
-  i.size-6x{
-    font-size: 6em;
-  }
-  i.size-7x{
-    font-size: 7em;
-  }
-  i.size-8x{
-    font-size: 8em;
-  }
-  i.size-9x{
-    font-size: 9em;
-  }
-  i.size-10x{
-    font-size: 10em;
-  }
-  i.sds-icon-margin {
-    margin-right: 0.5rem;
-  }
+}
