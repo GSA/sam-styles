@@ -67,9 +67,6 @@
         @include u-border-x('1px');
         @include u-border-bottom('1px');
         @include u-border('base-light');
-        &:nth-child(0) {
-          @include u-border-top('1px');
-        }
   
         &.usa-current > a {
           color: color('secondary-dark');
