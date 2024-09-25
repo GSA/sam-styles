@@ -67,7 +67,7 @@
         @include u-border-x('1px');
         @include u-border-bottom('1px');
         @include u-border('base-light');
-        &:first-of-type {
+        &:nth-child(0) {
           @include u-border-top('1px');
         }
   
@@ -97,6 +97,11 @@
         a.usa-link--active {
           color: color("base-dark");
         }
+      }
+    }
+    &>li:nth-child(1) {
+      .usa-sidenav__item{
+        @include u-border-top('1px');
       }
     }
   }
