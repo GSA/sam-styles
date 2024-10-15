@@ -40,3 +40,43 @@
     }
   }
 }
+
+.sds-button-group--modular.sds-button-group--segmented {
+  mat-button-toggle:not(:last-of-type){
+    margin-right: 10px;
+  }
+  .sds-button-group__item {
+    .mat-button-toggle-button{
+      padding: 8px;
+    }
+    border-radius: 8px;
+    box-shadow: 1px 2px 4px 0px #00000080;
+    background-color: var(--base-lightest, #F9F9F7); 
+    border: 2px solid white !important;
+    border-width: 2px;
+
+    .mat-button-toggle-focus-overlay{
+      background-color: transparent;
+    }
+
+    &:not(.mat-button-toggle-disabled):hover{
+      background: var(--accent-cool-lighter, #EFF6FB);
+      border-color: var(--accent-cool-lighter, #EFF6FB) !important;
+      cursor: pointer;
+    }
+    &:not(.mat-button-toggle-disabled).mat-button-toggle-checked, &:not(.mat-button-toggle-disabled):active{
+      border: 2px solid #2672DE !important;
+    }
+    &.mat-button-toggle-disabled{
+      background: var(--base-light, #C9C9C9);
+      border: 2px solid var(--base-light, #C9C9C9) !important;
+      color: var(--base-dark, #454540)
+    }
+    // Focus is placed on this class when tabbing
+    .mat-button-toggle-button:focus{
+      outline: solid 2px #2491FF;
+      outline-offset: 5px;
+    }
+
+  }
+}
