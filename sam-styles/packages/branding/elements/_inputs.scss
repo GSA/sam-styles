@@ -130,6 +130,7 @@
   .usa-checkbox__label::before,
   .usa-radio__label::before {
     margin-right: 0.5rem;
+    box-shadow: 0 0 0 2px color("ink");
   }
   
   .usa-checkbox__label-description,
