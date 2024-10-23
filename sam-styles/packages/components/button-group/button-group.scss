@@ -51,26 +51,30 @@
     }
     border-radius: 8px;
     box-shadow: 1px 2px 4px 0px #00000080;
-    background-color: var(--base-lightest, #F9F9F7); 
-    border: 2px solid white !important;
-    border-width: 2px;
+    @include u-bg('base-lightest');
+    @include u-border(2px, !important);
+    @include u-border('solid');
+    @include u-border('base-lightest', !important);
 
     .mat-button-toggle-focus-overlay{
       background-color: transparent;
     }
 
     &:not(.mat-button-toggle-disabled):hover{
-      background: var(--accent-cool-lighter, #EFF6FB);
-      border-color: var(--accent-cool-lighter, #EFF6FB) !important;
+      @include u-bg('accent-cool-lighter');
+      @include u-border('accent-cool-lighter', !important);
       cursor: pointer;
     }
     &:not(.mat-button-toggle-disabled).mat-button-toggle-checked, &:not(.mat-button-toggle-disabled):active{
-      border: 2px solid #2672DE !important;
+    
+      @include u-border('secondary', !important);
+      @include u-border(2px, !important);
     }
     &.mat-button-toggle-disabled{
-      background: var(--base-light, #C9C9C9);
-      border: 2px solid var(--base-light, #C9C9C9) !important;
-      color: var(--base-dark, #454540)
+      @include u-bg('base-light');
+      @include u-border('base-light', !important);
+      @include u-border(2px, !important);
+      @include u-text('base-dark');
     }
     // Focus is placed on this class when tabbing
     .mat-button-toggle-button:focus{
