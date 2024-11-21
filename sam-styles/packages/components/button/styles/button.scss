@@ -1,5 +1,13 @@
 $button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
+$info-light-alt: #9DDFEB;
+$info-lighter-alt: #E7F6F8;
+$info-dark-alt: #009EC1;
+
+$error-light-alt: #FDB8AE;
+$error-lightest-alt: #FDE0DB;
+$error-dark-alt: #B50909;
+
 .usa-button {
   @include u-text("secondary-darker");
   @include u-border("primary");
@@ -421,6 +429,42 @@ $button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     color: color("white");
     background-color: color("accent-cool-darker");
     @include u-border("accent-cool-darker");
+  }
+}
+
+.usa-button--info-light {
+  background-color: $info-light-alt;
+  border-color: $info-light-alt;
+
+  &.usa-button--hover,
+  &:hover {
+    background-color: $info-lighter-alt;
+  border-color: $info-lighter-alt;
+  }
+
+  &.usa-button--active,
+  &:active {
+    color: color("white");
+    background-color: $info-dark-alt;
+  border-color: $info-dark-alt;
+  }
+}
+
+.usa-button--error-light {
+  background-color: $error-light-alt;
+  border-color: $error-light-alt;
+
+  &.usa-button--hover,
+  &:hover {
+    background-color: $error-lightest-alt;
+  border-color: $error-lightest-alt;
+  }
+
+  &.usa-button--active,
+  &:active {
+    color: color("white");
+    background-color: $error-dark-alt;
+  border-color: $error-dark-alt;
   }
 }
 
