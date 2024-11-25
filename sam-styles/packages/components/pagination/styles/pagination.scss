@@ -13,9 +13,7 @@
   input {
     margin-top: 0;
   min-height: 1.75rem;
-    @include at-media('mobile-lg') {
-      margin-right: 0.5rem;
-    }
+  margin-right: 0.5rem;
   }
 }
 
@@ -47,10 +45,7 @@
 }
 
 .sds-pagination__results {
-  @include u-display('none');
-  @include at-media('mobile-lg') {
-    @include u-display('block');
-  }
+  @include u-display('block');
 }
 
 .sds-pagination .usa-label {
@@ -58,13 +53,10 @@
 }
 
 .sds-pagination .sds-pagination__total {
-  @include u-display('none');
+  @include u-display('block');
   strong {
     color: #162e51;
     @include u-margin-left('2px');
-  }
-  @include at-media('mobile-lg') {
-    @include u-display('block');
   }
 }
 .width-6{
