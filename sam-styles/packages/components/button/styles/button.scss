@@ -675,6 +675,32 @@ $error-dark-alt: #B50909;
 }
 
 /*-------------------
+  SDS Button Secondary
+--------------------*/
+.sds-button--secondary {
+  @include u-bg("secondary-dark");
+  color: color("white");
+  box-shadow: none;
+
+  &.usa-button--hover,
+  &:hover {
+    background-color: color("secondary-light");
+    color: color("white");
+  }
+
+  &.usa-button--active,
+  &:active {
+    background-color: color("secondary-darker");
+    color: color("white");
+  }
+
+  &.usa-focus,
+  &:focus {
+    outline-offset: units(2px);
+  }
+}
+
+/*-------------------
   Circular Buttons - DEPRECATED: Use .sds-button--circle
 --------------------*/
 .sds-button.sds-button--circular {
