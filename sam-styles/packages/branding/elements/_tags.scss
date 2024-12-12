@@ -402,3 +402,45 @@
     margin-left: 0.75rem;
     text-decoration: none;
   }
+
+  .sds-tag-right-align {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+  }
+  
+  .sds-status-tag {
+    @include u-font("sans", "3xs");
+    @include u-text("normal");
+    padding: 6px 10px !important;
+    border-radius: 99rem;
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+  
+    &--info {
+      @include u-bg("info-lighter");
+      @include u-border("info-light");
+    }
+  
+    &--error {
+      background-color: #fdecea; 
+      @include u-border("error-lighter");
+    }
+  
+    &--accent-cool {
+      @include u-bg("accent-cool-lighter");
+      @include u-border("accent-cool");
+    }
+    &--locked {
+      @include u-bg("base-light");
+      @include u-border("base-light");
+    }
+    &--primary-lighter {
+      @include u-bg("primary-lighter");
+      @include u-border("primary");
+    }
+  }
+  
