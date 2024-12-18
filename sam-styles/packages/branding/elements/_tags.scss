@@ -408,21 +408,33 @@
     top: 12px;
     right: 12px;
     z-index: 10;
+    @media (max-width: 1000px) {
+      position: static; 
+      display: block; 
+      text-align: center; 
+    }
   }
   
   .sds-status-tag {
     @include u-font("sans", "3xs");
     @include u-text("normal");
     padding: 6px 10px !important;
+    margin: 8px;
     border-radius: 99rem;
     display: inline-flex; 
     align-items: center;
     justify-content: center;
     border: 1px solid transparent;
+    @media (max-width: 1000px) {
+      width: 100%; 
+      max-width: none; 
+      border-radius: 0rem;
+      margin: 0px;
+    }
   
     &--info {
       @include u-bg("info-lighter");
-      @include u-border("info-light");
+      border-color: #9ddfeb;
     }
   
     &--error {
@@ -437,6 +449,9 @@
     &--locked {
       @include u-bg("base-light");
       @include u-border("base-light");
+      i {
+        margin-right: 8px;
+      }
     }
     &--primary-lighter {
       @include u-bg("primary-lighter");
