@@ -1,3 +1,12 @@
+$info-light-alt: #9DDFEB;
+$info-lighter-alt: #E7F6F8;
+$info-dark-alt: #009EC1;
+
+$error-light-alt: #FDB8AE;
+$error-lighter-alt: #FDB8AE;
+$error-lightest-alt: #FDE0DB;
+$error-dark-alt: #B50909;
+
 .usa-tag:last-of-type {
     margin-right: units(0.5);
   }
@@ -433,13 +442,13 @@
     }
   
     &--info {
-      @include u-bg("info-lighter");
-      border-color: #9ddfeb;
+      background-color: $info-lighter-alt;
+      border-color: $info-light-alt;
     }
   
     &--error {
-      background-color: #fde0db; 
-      @include u-border("error-lighter");
+      background-color: $error-lightest-alt;
+      border-color: $error-light-alt;
     }
   
     &--accent-cool {
