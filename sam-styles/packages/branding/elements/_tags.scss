@@ -1,3 +1,12 @@
+$info-light-alt: #9DDFEB;
+$info-lighter-alt: #E7F6F8;
+$info-dark-alt: #009EC1;
+
+$error-light-alt: #FDB8AE;
+$error-lighter-alt: #FDB8AE;
+$error-lightest-alt: #FDE0DB;
+$error-dark-alt: #B50909;
+
 .usa-tag:last-of-type {
     margin-right: units(0.5);
   }
@@ -402,3 +411,60 @@
     margin-left: 0.75rem;
     text-decoration: none;
   }
+
+  .sds-tag-right-align {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+    @media (max-width: 1000px) {
+      position: static; 
+      display: block; 
+      text-align: center; 
+    }
+  }
+  
+  .sds-status-tag {
+    @include u-font("sans", "3xs");
+    @include u-text("normal");
+    padding: 6px 10px !important;
+    margin: 8px;
+    border-radius: 99rem;
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    @media (max-width: 1000px) {
+      width: 100%; 
+      max-width: none; 
+      border-radius: 4px 4px 0 0;
+      margin: 0px;
+    }
+  
+    &--info {
+      background-color: $info-lighter-alt;
+      border-color: $info-light-alt;
+    }
+  
+    &--error {
+      background-color: $error-lightest-alt;
+      border-color: $error-light-alt;
+    }
+  
+    &--accent-cool {
+      @include u-bg("accent-cool-lighter");
+      @include u-border("accent-cool");
+    }
+    &--locked {
+      @include u-bg("base-light");
+      @include u-border("base-light");
+      i {
+        margin-right: 8px;
+      }
+    }
+    &--primary-lighter {
+      @include u-bg("primary-lighter");
+      @include u-border("primary");
+    }
+  }
+  

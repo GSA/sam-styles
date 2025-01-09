@@ -3,6 +3,7 @@ import info from "./info.html";
 import status from "./status.html";
 import outlinedSam from "./outlinedSam.html";
 import outlinedExtended from "./outlinedExtended.html";
+import statusTag from "./statusTag.html";
 
 
 export default {
@@ -27,4 +28,7 @@ export const OutlinedSam = () => {
 
 export const OutlinedExtended = () => {
   return outlinedExtended;
+};
+export const StatusTag = () => {
+  return statusTag;
 };
