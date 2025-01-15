@@ -72,6 +72,13 @@
           color: color('secondary-dark');
           font-weight: font-weight('bold');
         }
+        &.disabled{
+          color: #c9c9c9 !important;
+          cursor: auto;
+          &:focus{
+            outline: none;
+          }
+        }
   
       }
     }
