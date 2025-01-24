@@ -44,6 +44,10 @@
       @include u-margin-top(0.5);
       @include u-margin-left(0);
     }
+    formly-field {
+      display: block;
+      margin-right: 0 !important;
+    }
   }
 
   .filters-modal {
