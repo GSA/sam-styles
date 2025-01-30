@@ -7,6 +7,8 @@ $error-lighter-alt: #FDB8AE;
 $error-lightest-alt: #FDE0DB;
 $error-dark-alt: #B50909;
 
+$base-lighter-alt: #E5E5E5;
+
 .usa-tag:last-of-type {
     margin-right: units(0.5);
   }
@@ -456,7 +458,7 @@ $error-dark-alt: #B50909;
       @include u-border("accent-cool");
     }
     &--locked {
-      @include u-bg("base-light");
+      background-color: $base-lighter-alt;
       @include u-border("base-light");
       i {
         margin-right: 8px;
