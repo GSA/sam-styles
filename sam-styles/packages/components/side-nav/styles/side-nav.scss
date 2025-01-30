@@ -63,11 +63,18 @@
   
   
     .usa-sidenav__item{
-       @include u-border-top(0);
         @include u-border-x('1px');
         @include u-border-bottom('1px');
         @include u-border('base-light');
-  
+
+        &:first-child {
+            @include u-border-top('1px');
+        }
+        
+        &:not(:first-child) {
+            @include u-border-top(0);
+        }
+
         &.usa-current > a {
           color: color('secondary-dark');
           font-weight: font-weight('bold');
