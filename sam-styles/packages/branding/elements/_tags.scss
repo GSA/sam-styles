@@ -456,7 +456,7 @@ $error-dark-alt: #B50909;
       @include u-border("accent-cool");
     }
     &--locked {
-      @include u-bg("base-light");
+      background-color: #E5E5E5;
       @include u-border("base-light");
       i {
         margin-right: 8px;
