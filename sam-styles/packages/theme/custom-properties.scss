@@ -11,6 +11,53 @@
   color-scheme: light;
   
   // ========================================
+  // USWDS Token Values as CSS Custom Properties
+  // ========================================
+  // Extract USWDS tokens into CSS custom properties for runtime flexibility
+  // These can be overridden without recompiling
+  
+  // USWDS Color tokens
+  --uswds-white: #{color('white')};
+  --uswds-black: #{color('black')};
+  --uswds-gray-warm-2: #{color('gray-warm-2')};
+  --uswds-gray-warm-4: #{color('gray-warm-4')};
+  --uswds-gray-20: #{color('gray-20')};
+  --uswds-gray-50: #{color('gray-50')};
+  --uswds-gray-warm-70: #{color('gray-warm-70')};
+  --uswds-gray-warm-80: #{color('gray-warm-80')};
+  --uswds-green-cool-20v: #{color('green-cool-20v')};
+  --uswds-blue-warm-50v: #{color('blue-warm-50v')};
+  --uswds-gold-20: #{color('gold-20')};
+  --uswds-blue-20: #{color('blue-20')};
+  --uswds-red-40v: #{color('red-40v')};
+  --uswds-gold-20v: #{color('gold-20v')};
+  --uswds-green-cool-40v: #{color('green-cool-40v')};
+  --uswds-cyan-30v: #{color('cyan-30v')};
+  --uswds-indigo-cool-60: #{color('indigo-cool-60')};
+  --uswds-indigo-cool-70: #{color('indigo-cool-70')};
+  --uswds-yellow-50: #{color('yellow-50')};
+  
+  // USWDS Spacing tokens (commonly used)
+  --uswds-spacing-05: #{units('05')};
+  --uswds-spacing-1: #{units(1)};
+  --uswds-spacing-105: #{units('105')};
+  --uswds-spacing-2: #{units(2)};
+  --uswds-spacing-205: #{units('205')};
+  --uswds-spacing-3: #{units(3)};
+  --uswds-spacing-4: #{units(4)};
+  --uswds-spacing-5: #{units(5)};
+  --uswds-spacing-6: #{units(6)};
+  --uswds-spacing-8: #{units(8)};
+  --uswds-spacing-10: #{units(10)};
+  
+  // USWDS Radius tokens
+  --uswds-radius-lg: #{radius('lg')};
+  --uswds-radius-pill: #{radius('pill')};
+  
+  // USWDS Shadow tokens
+  --uswds-shadow-2: #{get-uswds-value('shadow', 2)};
+  
+  // ========================================
   // Dark Mode Color Definitions (Currently Unused)
   // ========================================
   // Define dark mode colors as custom properties
@@ -38,26 +85,26 @@
   // To enable dark mode: change color-scheme to "light dark"
   
   // Utility colors (these are always the same - true white/black)
-  --sam-color-white: #{color('white')};
-  --sam-color-black: #{color('black')};
+  --sam-color-white: var(--uswds-white);
+  --sam-color-black: var(--uswds-black);
   --sam-color-transparent: transparent;
   
   // Surface colors (these DO change for dark mode)
-  --sam-color-surface: light-dark(#{color('white')}, var(--sam-dark-surface));
-  --sam-color-on-surface: light-dark(#{color('black')}, var(--sam-dark-on-surface));
+  --sam-color-surface: light-dark(var(--uswds-white), var(--sam-dark-surface));
+  --sam-color-on-surface: light-dark(var(--uswds-black), var(--sam-dark-on-surface));
   
   // Base theme colors (light-dark prepared, only light active for now)
-  --sam-color-primary-base: light-dark(#{color('green-cool-20v')}, var(--sam-dark-primary));
-  --sam-color-secondary-base: light-dark(#{color('blue-warm-50v')}, var(--sam-dark-secondary));
-  --sam-color-accent-warm-base: light-dark(#{color('gold-20')}, var(--sam-dark-accent-warm));
-  --sam-color-accent-cool-base: light-dark(#{color('blue-20')}, var(--sam-dark-accent-cool));
-  --sam-color-base-gray: light-dark(#{color('gray-50')}, var(--sam-dark-base-gray));
-  --sam-color-error-base: light-dark(#{color('red-40v')}, var(--sam-dark-error));
-  --sam-color-warning-base: light-dark(#{color('gold-20v')}, var(--sam-dark-warning));
-  --sam-color-success-base: light-dark(#{color('green-cool-40v')}, var(--sam-dark-success));
-  --sam-color-info-base: light-dark(#{color('cyan-30v')}, var(--sam-dark-info));
+  --sam-color-primary-base: light-dark(var(--uswds-green-cool-20v), var(--sam-dark-primary));
+  --sam-color-secondary-base: light-dark(var(--uswds-blue-warm-50v), var(--sam-dark-secondary));
+  --sam-color-accent-warm-base: light-dark(var(--uswds-gold-20), var(--sam-dark-accent-warm));
+  --sam-color-accent-cool-base: light-dark(var(--uswds-blue-20), var(--sam-dark-accent-cool));
+  --sam-color-base-gray: light-dark(var(--uswds-gray-50), var(--sam-dark-base-gray));
+  --sam-color-error-base: light-dark(var(--uswds-red-40v), var(--sam-dark-error));
+  --sam-color-warning-base: light-dark(var(--uswds-gold-20v), var(--sam-dark-warning));
+  --sam-color-success-base: light-dark(var(--uswds-green-cool-40v), var(--sam-dark-success));
+  --sam-color-info-base: light-dark(var(--uswds-cyan-30v), var(--sam-dark-info));
   
-  // Brand colors (core brand identity)
+  // Brand colors (core brand identity - hardcoded for now, could use USWDS token if available)
   --sam-color-brand-blue-base: light-dark(#0a3466, var(--sam-dark-brand-blue));
   
   // ========================================
@@ -66,15 +113,15 @@
   // These automatically adapt based on the light-dark() base colors
   // Currently using light values only (color-scheme: light)
   
-  // Base/Gray colors (USWDS tokens - future: could use light-dark)
-  --sam-color-base-lightest: #{color('gray-warm-2')};
-  --sam-color-base-lighter: #{color('gray-warm-4')};
-  --sam-color-base-light: #{color('gray-20')};
+  // Base/Gray colors (use USWDS tokens via custom properties)
+  --sam-color-base-lightest: var(--uswds-gray-warm-2);
+  --sam-color-base-lighter: var(--uswds-gray-warm-4);
+  --sam-color-base-light: var(--uswds-gray-20);
   --sam-color-base: var(--sam-color-base-gray);
-  --sam-color-base-dark: #{color('gray-warm-70')};
-  --sam-color-base-darker: #{color('gray-warm-70')};
-  --sam-color-base-darkest: #{color('gray-warm-80')};
-  --sam-color-base-ink: #{color('gray-warm-80')};
+  --sam-color-base-dark: var(--uswds-gray-warm-70);
+  --sam-color-base-darker: var(--uswds-gray-warm-70);
+  --sam-color-base-darkest: var(--uswds-gray-warm-80);
+  --sam-color-base-ink: var(--uswds-gray-warm-80);
   
   // Primary colors (generated from base)
   --sam-color-primary-lighter: color-mix(in srgb, var(--sam-color-primary-base) 10%, var(--sam-color-surface));
@@ -137,11 +184,11 @@
   --sam-color-error-light-alt: color-mix(in srgb, var(--sam-color-error-base) 40%, var(--sam-color-surface));
   --sam-color-error-dark-alt: color-mix(in srgb, var(--sam-color-error-base) 65%, var(--sam-color-on-surface));
   
-  // Link colors (generated from brand blue)
-  --sam-color-link: #{color('indigo-cool-60')};
-  --sam-color-link-visited: #{color('indigo-cool-60')};
-  --sam-color-link-hover: #{color('yellow-50')};
-  --sam-color-link-active: #{color('indigo-cool-70')};
+  // Link colors (use USWDS tokens via custom properties)
+  --sam-color-link: var(--uswds-indigo-cool-60);
+  --sam-color-link-visited: var(--uswds-indigo-cool-60);
+  --sam-color-link-hover: var(--uswds-yellow-50);
+  --sam-color-link-active: var(--uswds-indigo-cool-70);
   
   // Brand blue variants (generated from base)
   --sam-color-brand-blue-dark: var(--sam-color-brand-blue-base);
@@ -224,18 +271,18 @@
   --sam-spacing-24px: 24px;
   --sam-spacing-32px: 32px;
   
-  // USWDS units-based spacing
-  --sam-spacing-05: #{units('05')};
-  --sam-spacing-1: #{units(1)};
-  --sam-spacing-105: #{units('105')};
-  --sam-spacing-2: #{units(2)};
-  --sam-spacing-205: #{units('205')};
-  --sam-spacing-3: #{units(3)};
-  --sam-spacing-4: #{units(4)};
-  --sam-spacing-5: #{units(5)};
-  --sam-spacing-6: #{units(6)};
-  --sam-spacing-8: #{units(8)};
-  --sam-spacing-10: #{units(10)};
+  // USWDS units-based spacing (reference USWDS custom properties)
+  --sam-spacing-05: var(--uswds-spacing-05);
+  --sam-spacing-1: var(--uswds-spacing-1);
+  --sam-spacing-105: var(--uswds-spacing-105);
+  --sam-spacing-2: var(--uswds-spacing-2);
+  --sam-spacing-205: var(--uswds-spacing-205);
+  --sam-spacing-3: var(--uswds-spacing-3);
+  --sam-spacing-4: var(--uswds-spacing-4);
+  --sam-spacing-5: var(--uswds-spacing-5);
+  --sam-spacing-6: var(--uswds-spacing-6);
+  --sam-spacing-8: var(--uswds-spacing-8);
+  --sam-spacing-10: var(--uswds-spacing-10);
   
   // Auto spacing
   --sam-spacing-auto: auto;  
@@ -253,11 +300,11 @@
   --sam-border-radius-xs: 2px;
   --sam-border-radius-sm: 4px;
   --sam-border-radius-md: 6px;
-  --sam-border-radius-lg: #{radius('lg')};
+  --sam-border-radius-lg: var(--uswds-radius-lg);
   --sam-border-radius-xl: 10px;
   --sam-border-radius-2xl: 20px;
   --sam-border-radius-3xl: 40px;
-  --sam-border-radius-pill: #{radius('pill')};
+  --sam-border-radius-pill: var(--uswds-radius-pill);
   --sam-border-radius-circle: 50%;
   
   // Component-specific border radius
@@ -273,7 +320,7 @@
   --sam-shadow-none: none;
   --sam-shadow-button: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   --sam-shadow-1: 0 0 11px rgba(33, 33, 33, .2);
-  --sam-shadow-2: #{get-uswds-value('shadow', 2)};
+  --sam-shadow-2: var(--uswds-shadow-2);
   
   // Common shadow patterns from audit
   --sam-shadow-sm: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
