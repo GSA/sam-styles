@@ -34,9 +34,9 @@
     @media (min-width: 30em) {
       @include u-padding-x(4);
       @include u-margin-y(3);
-      -moz-box-shadow: 2px 2px 10px 3px #c9c9c9;
-      -webkit-box-shadow: 2px 2px 10px 3px #c9c9c9;
-      box-shadow: 2px 2px 10px 3px #c9c9c9;
+      -moz-box-shadow: var(--sam-shadow-input-focus);
+      -webkit-box-shadow: var(--sam-shadow-input-focus);
+      box-shadow: var(--sam-shadow-input-focus);
     }
   
     .usa-legend {
@@ -142,7 +142,7 @@
   .usa-checkbox__input[aria-checked="mixed"]+.usa-checkbox__label:before,
   .usa-checkbox__input[aria-checked="mixed"]:disabled+.usa-checkbox__label:before {
     @include u-bg("primary");
-    box-shadow: 0 0 0 2px #70e17b;
+    box-shadow: var(--sam-shadow-focus);
     background-image: url("#{$sam-image-path}/minus-white.svg");
     background-repeat: no-repeat;
     background-position: center center;
@@ -202,7 +202,7 @@
   
   .usa-checkbox,
   .usa-radio {
-    background-color: transparent !important;
+    background-color: var(--sam-color-transparent) !important;
   
     &__tooltip{
       display: inline;
@@ -211,19 +211,19 @@
     .usa-checkbox__input:checked+.usa-checkbox__label,
     .usa-radio__input:checked+.usa-radio__label {
       &::before {
-        background-color: #70e17b !important;
+        background-color: var(--sam-color-focus-green) !important;
       }
     }
   
     .usa-checkbox__input:checked+.usa-checkbox__label {
       &::before {
-        box-shadow: 0 0 0 2px #70e17b !important;
+        box-shadow: var(--sam-shadow-focus) !important;
       }
     }
   
     .usa-radio__input:checked+.usa-radio__label {
       &::before {
-        box-shadow: 0 0 0 2px #70e17b, inset 0 0 0 2px white !important;
+        box-shadow: 0 0 0 2px var(--sam-color-focus-green), inset 0 0 0 2px var(--sam-color-white) !important;
       }
     }
   }

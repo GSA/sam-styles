@@ -41,7 +41,7 @@
     &:disabled {
       text-decoration: unset;
       pointer-events: none;
-      background-color: transparent;
+      background-color: var(--sam-color-transparent);
       color: color("base-light");
     }
 
@@ -53,11 +53,11 @@
       top: 0.8rem;
       width: 25px;
       height: 25px;
-      background: linear-gradient(#0a3466, #0a3466) #e2e2e2;
+      background: linear-gradient(var(--sam-color-brand-blue-dark), var(--sam-color-brand-blue-dark)) var(--sam-color-bg-light-gray);
       background-position: center;
       background-size: 54% 1px;
       background-repeat: no-repeat;
-      border-radius: 50%;
+      border-radius: var(--sam-border-radius-circle);
     }
 
     &[aria-expanded="true"] {
@@ -78,12 +78,12 @@
         top: 0.8rem;
         width: 25px;
         height: 25px;
-        background: linear-gradient(#0a3466, #0a3466);
+        background: linear-gradient(var(--sam-color-brand-blue-dark), var(--sam-color-brand-blue-dark));
         background-position: center;
         background-size: 1px 54%;
         background-repeat: no-repeat;
-        border-radius: 50%;
-        z-index: 1;
+        border-radius: var(--sam-border-radius-circle);
+        z-index: var(--sam-z-index-base);
       }
     }
   }

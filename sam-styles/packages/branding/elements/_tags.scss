@@ -1,11 +1,12 @@
-$info-light-alt: #9DDFEB;
-$info-lighter-alt: #E7F6F8;
-$info-dark-alt: #009EC1;
+// Tag color variables using CSS custom properties
+$info-light-alt: var(--sam-color-info-light);
+$info-lighter-alt: var(--sam-color-info-lighter);
+$info-dark-alt: var(--sam-color-info-dark);
 
-$error-light-alt: #FDB8AE;
-$error-lighter-alt: #FDB8AE;
-$error-lightest-alt: #FDE0DB;
-$error-dark-alt: #B50909;
+$error-light-alt: var(--sam-color-error-light-alt);
+$error-lighter-alt: var(--sam-color-error-light-alt);
+$error-lightest-alt: var(--sam-color-error-lightest);
+$error-dark-alt: var(--sam-color-error-dark-alt);
 
 .usa-tag:last-of-type {
     margin-right: units(0.5);
@@ -22,10 +23,10 @@ $error-dark-alt: #B50909;
   }
   
   .sds-tag--info-white {
-    background-color: white;
-    border: 1px solid #76766a;
-    font-weight: font-weight("semibold");
-    border-radius: 0;
+    background-color: var(--sam-color-white);
+    border: var(--sam-border-width-1px) solid var(--sam-color-border-olive);
+    font-weight: var(--sam-font-weight-semibold);
+    border-radius: var(--sam-border-radius-none);
     @include u-text("base-darker");
   }
   
@@ -33,9 +34,9 @@ $error-dark-alt: #B50909;
   
   .sds-tag.sds-tag--chip {
     background-color: color("primary-lighter");
-    border: 1px solid color("primary");
+    border: var(--sam-border-width-1px) solid color("primary");
     @include u-font("sans", "3xs");
-    padding: 2px 5px;
+    padding: var(--sam-spacing-2px) var(--sam-spacing-6px);
     @include u-display("inline-flex");
     @include u-align-items("align-start");
     @include u-margin-top("05");
@@ -43,8 +44,8 @@ $error-dark-alt: #B50909;
   
   .sds-tag.sds-tag--chip .sds-tag__close {
     @include button-unstyled;
-    font-size: 12px;
-    margin-left: 5px;
+    font-size: var(--sam-font-size-12px);
+    margin-left: var(--sam-spacing-6px);
     @include u-text("ink");
     cursor: pointer;
   
@@ -232,11 +233,11 @@ $error-dark-alt: #B50909;
   ----------------------------------------
   */
   .sds-type--label-title {
-    font-size: 14px;
+    font-size: var(--sam-font-size-14px);
     font-style: italic;
-    font-weight: font-weight("thin");
+    font-weight: var(--sam-font-weight-thin);
     margin: 0;
-    color: #5d5d52;
+    color: var(--sam-color-border-olive-dark);
   }
   
   .sds-tag--light {
@@ -456,10 +457,10 @@ $error-dark-alt: #B50909;
       @include u-border("accent-cool");
     }
     &--locked {
-      background-color: #E5E5E5;
+      background-color: var(--sam-color-bg-silver);
       @include u-border("base-light");
       i {
-        margin-right: 8px;
+        margin-right: var(--sam-spacing-8px);
       }
     }
     &--primary-lighter {

@@ -7,12 +7,12 @@
   @include u-display('flex');
   @include u-flex('align-center');
   justify-content: space-between;
-  padding: 0 10px 5px 20px;
+  padding: 0 var(--sam-spacing-10px) var(--sam-spacing-6px) var(--sam-spacing-24px);
   margin-bottom: 3px;
-  border-bottom: 1px solid #eae6e6;
+  border-bottom: var(--sam-border-width-1px) solid var(--sam-color-border-beige);
 
   button {
-    border: 2px solid color('base-light');
+    border: var(--sam-border-width-2px) solid color('base-light');
 
     &:hover {
       border-color: color('primary');
@@ -26,8 +26,8 @@
 }
 
 .sds-menu__header-title {
-  font-size: 18px;
-  font-weight: font-weight('semibold');
+  font-size: var(--sam-font-size-18px);
+  font-weight: var(--sam-font-weight-semibold);
   color: color('gray-warm-70');
 }
 
@@ -35,14 +35,14 @@
   @include button-unstyled;
   display: flex;
   align-items: center;
-  padding: 6px 20px;
-  width: 100%;
+  padding: var(--sam-spacing-6px) var(--sam-spacing-24px);
+  width: var(--sam-width-full);
   text-decoration: none;
-  font-weight: font-weight('semibold');
-  font-size: 17px;
+  font-weight: var(--sam-font-weight-semibold);
+  font-size: var(--sam-font-size-17px);
 
   &:hover {
-    color: #7a591a
+    color: var(--sam-color-border-brown);
   }
 
   &:focus {
@@ -108,7 +108,7 @@
   &:active {
     @include u-border("secondary-dark");
     box-shadow: $button-shadow;
-    color: #1A4480;
+    color: var(--sam-color-blue-link);
   }
 
   &.usa-button--hover,
@@ -123,7 +123,7 @@
   @include at-media('tablet-lg') {
     span {
       display: inline;
-      color: #1A4480;
+      color: var(--sam-color-blue-link);
     }
 
     height: 40px;

@@ -26,7 +26,7 @@
   
   .border--hairline {
     border: 0 !important;
-    box-shadow: 0 0 0 1px color("base-light");
+    box-shadow: 0 0 0 var(--sam-border-width-1px) color("base-light");
   }
   
   @media (min-resolution: 2dppx) {

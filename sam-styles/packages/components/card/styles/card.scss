@@ -1,8 +1,8 @@
 /*-------------------
        SDS CARD
 --------------------*/
-$sds-card-border-width: 1px;
-$sds-card-border-radius: border-radius('md');
+$sds-card-border-width: var(--sam-border-width-1px);
+$sds-card-border-radius: var(--sam-border-radius-md);
 $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width});
 
 .sds-card {
@@ -107,9 +107,9 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
       width: 33px;
       height: 33px;
       transform: rotate(180deg);
-      right: 10px;
-      border-radius: 50%;
-      background-color: #e2e2e2;
+      right: var(--sam-spacing-10px);
+      border-radius: var(--sam-border-radius-circle);
+      background-color: var(--sam-color-bg-light-gray);
     }
 
     .sds-card__collapse::before {
@@ -117,12 +117,12 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
       display: block;
       width: 14px;
       height: 0;
-      border-bottom: solid 1px #0a3466;
+      border-bottom: solid var(--sam-border-width-1px) var(--sam-color-brand-blue-dark);
       position: absolute;
       left: 9px;
-      bottom: 16px;
+      bottom: var(--sam-spacing-16px);
       transform: rotate(180deg);
-      transition: width 0.2s ease-in;
+      transition: width var(--sam-transition-ease-in);
     }
 
     .sds-card__collapse::after {
@@ -130,11 +130,11 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
       display: block;
       width: 14px;
       height: 0;
-      border-bottom: solid 1px #0a3466;
+      border-bottom: solid var(--sam-border-width-1px) var(--sam-color-brand-blue-dark);
       position: absolute;
       left: 9px;
-      bottom: 16px;
-      transition: width 0.2s ease-in;
+      bottom: var(--sam-spacing-16px);
+      transition: width var(--sam-transition-ease-in);
     }
 
     // remove margin top from first sibling of a heading that isn't in a vertical card

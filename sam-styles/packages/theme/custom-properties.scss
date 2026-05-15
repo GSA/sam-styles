@@ -1,0 +1,518 @@
+// SAM Design System CSS Custom Properties
+// This file generates CSS custom properties from USWDS tokens and SAM-specific values
+// Following CSS custom properties best practices
+// Uses light-dark() for future dark mode support + color-mix() for variants
+
+@use "uswds-core" as *;
+
+// Generate CSS custom properties on :root
+:root {
+  // Set color scheme - only light for now, change to "light dark" to enable dark mode
+  color-scheme: light;
+  
+  // ========================================
+  // USWDS Token Values as CSS Custom Properties
+  // ========================================
+  // Extract USWDS tokens into CSS custom properties for runtime flexibility
+  // These can be overridden without recompiling
+  
+  // USWDS Color tokens
+  --uswds-white: #{color('white')};
+  --uswds-black: #{color('black')};
+  --uswds-gray-warm-2: #{color('gray-warm-2')};
+  --uswds-gray-warm-4: #{color('gray-warm-4')};
+  --uswds-gray-20: #{color('gray-20')};
+  --uswds-gray-50: #{color('gray-50')};
+  --uswds-gray-warm-70: #{color('gray-warm-70')};
+  --uswds-gray-warm-80: #{color('gray-warm-80')};
+  --uswds-green-cool-20v: #{color('green-cool-20v')};
+  --uswds-blue-warm-50v: #{color('blue-warm-50v')};
+  --uswds-gold-20: #{color('gold-20')};
+  --uswds-blue-20: #{color('blue-20')};
+  --uswds-red-40v: #{color('red-40v')};
+  --uswds-gold-20v: #{color('gold-20v')};
+  --uswds-green-cool-40v: #{color('green-cool-40v')};
+  --uswds-cyan-30v: #{color('cyan-30v')};
+  --uswds-indigo-cool-60: #{color('indigo-cool-60')};
+  --uswds-indigo-cool-70: #{color('indigo-cool-70')};
+  --uswds-yellow-50: #{color('yellow-50')};
+  
+  // USWDS Spacing tokens (commonly used)
+  --uswds-spacing-05: #{units('05')};
+  --uswds-spacing-1: #{units(1)};
+  --uswds-spacing-105: #{units('105')};
+  --uswds-spacing-2: #{units(2)};
+  --uswds-spacing-205: #{units('205')};
+  --uswds-spacing-3: #{units(3)};
+  --uswds-spacing-4: #{units(4)};
+  --uswds-spacing-5: #{units(5)};
+  --uswds-spacing-6: #{units(6)};
+  --uswds-spacing-8: #{units(8)};
+  --uswds-spacing-10: #{units(10)};
+  
+  // USWDS Radius tokens
+  --uswds-radius-lg: #{radius('lg')};
+  --uswds-radius-pill: #{radius('pill')};
+  
+  // USWDS Shadow tokens
+  --uswds-shadow-2: #{get-uswds-value('shadow', 2)};
+  
+  // ========================================
+  // Dark Mode Color Definitions (Currently Unused)
+  // ========================================
+  // Define dark mode colors as custom properties
+  // These are only used when color-scheme includes "dark"
+  // Change these to adjust dark mode appearance
+  
+  --sam-dark-surface: #0f172a;
+  --sam-dark-on-surface: #f1f5f9;
+  --sam-dark-primary: #4ade80;
+  --sam-dark-secondary: #60a5fa;
+  --sam-dark-accent-warm: #fbbf24;
+  --sam-dark-accent-cool: #38bdf8;
+  --sam-dark-base-gray: #cbd5e1;
+  --sam-dark-error: #f87171;
+  --sam-dark-warning: #fbbf24;
+  --sam-dark-success: #4ade80;
+  --sam-dark-info: #22d3ee;
+  --sam-dark-brand-blue: #3b82f6;
+  
+  // ========================================
+  // Base Color Tokens (Theme-able with light-dark)
+  // ========================================
+  // These use light-dark() to prepare for dark mode
+  // Currently only light values are active (color-scheme: light)
+  // To enable dark mode: change color-scheme to "light dark"
+  
+  // Utility colors (these are always the same - true white/black)
+  --sam-color-white: var(--uswds-white);
+  --sam-color-black: var(--uswds-black);
+  --sam-color-transparent: transparent;
+  
+  // Surface colors (these DO change for dark mode)
+  --sam-color-surface: light-dark(var(--uswds-white), var(--sam-dark-surface));
+  --sam-color-on-surface: light-dark(var(--uswds-black), var(--sam-dark-on-surface));
+  
+  // Base theme colors (light-dark prepared, only light active for now)
+  --sam-color-primary-base: light-dark(var(--uswds-green-cool-20v), var(--sam-dark-primary));
+  --sam-color-secondary-base: light-dark(var(--uswds-blue-warm-50v), var(--sam-dark-secondary));
+  --sam-color-accent-warm-base: light-dark(var(--uswds-gold-20), var(--sam-dark-accent-warm));
+  --sam-color-accent-cool-base: light-dark(var(--uswds-blue-20), var(--sam-dark-accent-cool));
+  --sam-color-base-gray: light-dark(var(--uswds-gray-50), var(--sam-dark-base-gray));
+  --sam-color-error-base: light-dark(var(--uswds-red-40v), var(--sam-dark-error));
+  --sam-color-warning-base: light-dark(var(--uswds-gold-20v), var(--sam-dark-warning));
+  --sam-color-success-base: light-dark(var(--uswds-green-cool-40v), var(--sam-dark-success));
+  --sam-color-info-base: light-dark(var(--uswds-cyan-30v), var(--sam-dark-info));
+  
+  // Brand colors (core brand identity - hardcoded for now, could use USWDS token if available)
+  --sam-color-brand-blue-base: light-dark(#0a3466, var(--sam-dark-brand-blue));
+  
+  // ========================================
+  // Generated Color Variants (using color-mix)
+  // ========================================
+  // These automatically adapt based on the light-dark() base colors
+  // Currently using light values only (color-scheme: light)
+  
+  // Base/Gray colors (use USWDS tokens via custom properties)
+  --sam-color-base-lightest: var(--uswds-gray-warm-2);
+  --sam-color-base-lighter: var(--uswds-gray-warm-4);
+  --sam-color-base-light: var(--uswds-gray-20);
+  --sam-color-base: var(--sam-color-base-gray);
+  --sam-color-base-dark: var(--uswds-gray-warm-70);
+  --sam-color-base-darker: var(--uswds-gray-warm-70);
+  --sam-color-base-darkest: var(--uswds-gray-warm-80);
+  --sam-color-base-ink: var(--uswds-gray-warm-80);
+  
+  // Primary colors (generated from base)
+  --sam-color-primary-lighter: color-mix(in srgb, var(--sam-color-primary-base) 10%, var(--sam-color-surface));
+  --sam-color-primary-light: color-mix(in srgb, var(--sam-color-primary-base) 30%, var(--sam-color-surface));
+  --sam-color-primary: var(--sam-color-primary-base);
+  --sam-color-primary-vivid: color-mix(in srgb, var(--sam-color-primary-base) 120%, var(--sam-color-on-surface) 0%);
+  --sam-color-primary-dark: color-mix(in srgb, var(--sam-color-primary-base) 80%, var(--sam-color-on-surface));
+  --sam-color-primary-darker: color-mix(in srgb, var(--sam-color-primary-base) 60%, var(--sam-color-on-surface));
+  
+  // Secondary colors (generated from base)
+  --sam-color-secondary-lightest: color-mix(in srgb, var(--sam-color-secondary-base) 20%, var(--sam-color-surface));
+  --sam-color-secondary-lighter: color-mix(in srgb, var(--sam-color-secondary-base) 40%, var(--sam-color-surface));
+  --sam-color-secondary-light: color-mix(in srgb, var(--sam-color-secondary-base) 60%, var(--sam-color-surface));
+  --sam-color-secondary: var(--sam-color-secondary-base);
+  --sam-color-secondary-vivid: color-mix(in srgb, var(--sam-color-secondary-base) 110%, var(--sam-color-on-surface) 0%);
+  --sam-color-secondary-dark: color-mix(in srgb, var(--sam-color-secondary-base) 80%, var(--sam-color-on-surface));
+  --sam-color-secondary-darker: color-mix(in srgb, var(--sam-color-secondary-base) 60%, var(--sam-color-on-surface));
+  
+  // Accent warm colors (generated from base)
+  --sam-color-accent-warm-lighter: color-mix(in srgb, var(--sam-color-accent-warm-base) 10%, var(--sam-color-surface));
+  --sam-color-accent-warm-light: color-mix(in srgb, var(--sam-color-accent-warm-base) 30%, var(--sam-color-surface));
+  --sam-color-accent-warm: var(--sam-color-accent-warm-base);
+  --sam-color-accent-warm-dark: color-mix(in srgb, var(--sam-color-accent-warm-base) 80%, var(--sam-color-on-surface));
+  --sam-color-accent-warm-darker: color-mix(in srgb, var(--sam-color-accent-warm-base) 60%, var(--sam-color-on-surface));
+  
+  // Accent cool colors (generated from base)
+  --sam-color-accent-cool-lighter: color-mix(in srgb, var(--sam-color-accent-cool-base) 10%, var(--sam-color-surface));
+  --sam-color-accent-cool-light: color-mix(in srgb, var(--sam-color-accent-cool-base) 30%, var(--sam-color-surface));
+  --sam-color-accent-cool: var(--sam-color-accent-cool-base);
+  --sam-color-accent-cool-dark: color-mix(in srgb, var(--sam-color-accent-cool-base) 80%, var(--sam-color-on-surface));
+  --sam-color-accent-cool-darker: color-mix(in srgb, var(--sam-color-accent-cool-base) 60%, var(--sam-color-on-surface));
+  
+  // State colors
+  --sam-color-disabled: #{color('gray-20')};
+  
+  // Error colors (generated from base)
+  --sam-color-error-lighter: color-mix(in srgb, var(--sam-color-error-base) 30%, var(--sam-color-surface));
+  --sam-color-error-light: color-mix(in srgb, var(--sam-color-error-base) 50%, var(--sam-color-surface));
+  --sam-color-error: var(--sam-color-error-base);
+  --sam-color-error-dark: color-mix(in srgb, var(--sam-color-error-base) 80%, var(--sam-color-on-surface));
+  --sam-color-error-darker: color-mix(in srgb, var(--sam-color-error-base) 60%, var(--sam-color-on-surface));
+  
+  // Warning colors (generated from base)
+  --sam-color-warning: var(--sam-color-warning-base);
+  --sam-color-warning-lighter: color-mix(in srgb, var(--sam-color-warning-base) 10%, var(--sam-color-surface));
+  
+  // Success colors (generated from base)
+  --sam-color-success: var(--sam-color-success-base);
+  --sam-color-success-lighter: color-mix(in srgb, var(--sam-color-success-base) 20%, var(--sam-color-surface));
+  --sam-color-success-darker: color-mix(in srgb, var(--sam-color-success-base) 70%, var(--sam-color-on-surface));
+  
+  // Info colors (generated from base)
+  --sam-color-info: var(--sam-color-info-base);
+  --sam-color-info-lighter: color-mix(in srgb, var(--sam-color-info-base) 10%, var(--sam-color-surface));
+  --sam-color-info-light: color-mix(in srgb, var(--sam-color-info-base) 40%, var(--sam-color-surface));
+  --sam-color-info-dark: color-mix(in srgb, var(--sam-color-info-base) 80%, var(--sam-color-on-surface));
+  
+  // Legacy error colors (keep for backwards compatibility, but generate from base)
+  --sam-color-error-lightest: color-mix(in srgb, var(--sam-color-error-base) 20%, var(--sam-color-surface));
+  --sam-color-error-light-alt: color-mix(in srgb, var(--sam-color-error-base) 40%, var(--sam-color-surface));
+  --sam-color-error-dark-alt: color-mix(in srgb, var(--sam-color-error-base) 65%, var(--sam-color-on-surface));
+  
+  // Link colors (use USWDS tokens via custom properties)
+  --sam-color-link: var(--uswds-indigo-cool-60);
+  --sam-color-link-visited: var(--uswds-indigo-cool-60);
+  --sam-color-link-hover: var(--uswds-yellow-50);
+  --sam-color-link-active: var(--uswds-indigo-cool-70);
+  
+  // Brand blue variants (generated from base)
+  --sam-color-brand-blue-dark: var(--sam-color-brand-blue-base);
+  --sam-color-brand-blue-light: color-mix(in srgb, var(--sam-color-brand-blue-base) 8%, var(--sam-color-white));
+  --sam-color-brand-blue-medium: color-mix(in srgb, var(--sam-color-brand-blue-base) 120%, var(--sam-color-black) 10%);
+  
+  // Component-specific colors (generated)
+  --sam-color-secondary-lighter-bg: color-mix(in srgb, var(--sam-color-secondary-base) 35%, var(--sam-color-white));
+  
+  // Background colors (generated for better theming)
+  --sam-color-bg-light-beige: color-mix(in srgb, #f0f0e8 95%, var(--sam-color-black) 0%);
+  --sam-color-bg-light-gray: color-mix(in srgb, var(--sam-color-base-gray) 10%, var(--sam-color-white));
+  --sam-color-bg-medium-gray: color-mix(in srgb, var(--sam-color-base-gray) 20%, var(--sam-color-white));
+  --sam-color-bg-medium-gray-alt: color-mix(in srgb, var(--sam-color-base-gray) 18%, var(--sam-color-white));
+  --sam-color-bg-lightest: color-mix(in srgb, var(--sam-color-base-gray) 3%, var(--sam-color-white));
+  --sam-color-bg-light-gray-alt: color-mix(in srgb, var(--sam-color-base-gray) 5%, var(--sam-color-white));
+  --sam-color-bg-light-green: color-mix(in srgb, var(--sam-color-success-base) 40%, var(--sam-color-white));
+  --sam-color-bg-silver: color-mix(in srgb, var(--sam-color-base-gray) 12%, var(--sam-color-white));
+  --sam-color-bg-light: color-mix(in srgb, var(--sam-color-base-gray) 8%, var(--sam-color-white));
+  
+  // Focus and interaction colors
+  --sam-color-focus-green: color-mix(in srgb, var(--sam-color-success-base) 110%, var(--sam-color-white) 10%);
+  --sam-color-focus-blue: color-mix(in srgb, var(--sam-color-info-base) 100%, var(--sam-color-white) 0%);
+  
+  // Status/Statistic colors (generated from semantic bases)
+  --sam-color-status-green-dark: color-mix(in srgb, var(--sam-color-success-base) 90%, var(--sam-color-black));
+  --sam-color-status-green-light: color-mix(in srgb, var(--sam-color-success-base) 15%, var(--sam-color-white));
+  --sam-color-status-blue-dark: color-mix(in srgb, var(--sam-color-info-base) 90%, var(--sam-color-black));
+  --sam-color-status-blue-light: color-mix(in srgb, var(--sam-color-info-base) 12%, var(--sam-color-white));
+  --sam-color-status-blue-medium: color-mix(in srgb, var(--sam-color-info-base) 80%, var(--sam-color-black));
+  --sam-color-status-red-dark: color-mix(in srgb, var(--sam-color-error-base) 85%, var(--sam-color-black));
+  --sam-color-status-red-light: color-mix(in srgb, var(--sam-color-error-base) 12%, var(--sam-color-white));
+  --sam-color-status-orange-dark: color-mix(in srgb, var(--sam-color-warning-base) 100%, #ff4500 20%);
+  --sam-color-status-orange-light: color-mix(in srgb, var(--sam-color-warning-base) 15%, var(--sam-color-white));
+  --sam-color-status-yellow-medium: color-mix(in srgb, var(--sam-color-warning-base) 100%, #ffff00 30%);
+  --sam-color-status-yellow-light: color-mix(in srgb, var(--sam-color-warning-base) 15%, var(--sam-color-white));
+  --sam-color-status-gray-medium: color-mix(in srgb, var(--sam-color-base-gray) 40%, var(--sam-color-white));
+  --sam-color-status-gray-light: color-mix(in srgb, var(--sam-color-base-gray) 8%, var(--sam-color-white));
+  --sam-color-status-gray-dark: color-mix(in srgb, var(--sam-color-base-gray) 70%, var(--sam-color-black));
+  --sam-color-status-gray-darkest: color-mix(in srgb, var(--sam-color-base-gray) 50%, var(--sam-color-black));
+  
+  // Dialog/Alert colors (generated from semantic bases)
+  --sam-color-dialog-error: color-mix(in srgb, var(--sam-color-error-base) 110%, var(--sam-color-white) 10%);
+  --sam-color-dialog-warning: color-mix(in srgb, var(--sam-color-warning-base) 120%, #ff8c00 10%);
+  --sam-color-dialog-info: var(--sam-color-focus-blue);
+  --sam-color-dialog-bg-light: color-mix(in srgb, var(--sam-color-base-gray) 2%, var(--sam-color-white));
+  --sam-color-dialog-gray-medium: color-mix(in srgb, var(--sam-color-base-gray) 35%, var(--sam-color-white));
+  --sam-color-dialog-gray-dark: color-mix(in srgb, var(--sam-color-base-gray) 60%, var(--sam-color-black));
+  
+  // Border/divider colors (generated)
+  --sam-color-border-gray-light: color-mix(in srgb, var(--sam-color-base-gray) 25%, var(--sam-color-white));
+  --sam-color-border-gray-medium: color-mix(in srgb, var(--sam-color-base-gray) 20%, var(--sam-color-white));
+  --sam-color-border-gray-medium-alt: color-mix(in srgb, var(--sam-color-base-gray) 18%, var(--sam-color-white));
+  --sam-color-border-gray: color-mix(in srgb, var(--sam-color-base-gray) 30%, var(--sam-color-white));
+  --sam-color-border-beige: color-mix(in srgb, var(--sam-color-bg-light-beige) 90%, var(--sam-color-base-gray));
+  --sam-color-border-olive: color-mix(in srgb, var(--sam-color-base-gray) 45%, #7a7a50);
+  --sam-color-border-olive-dark: color-mix(in srgb, var(--sam-color-base-gray) 55%, #5d5d40);
+  --sam-color-border-brown: color-mix(in srgb, var(--sam-color-accent-warm-base) 80%, var(--sam-color-black));
+  --sam-color-border-navy: color-mix(in srgb, var(--sam-color-brand-blue-base) 130%, var(--sam-color-black) 5%);
+  
+  // Additional text/UI colors
+  --sam-color-gray-medium: color-mix(in srgb, var(--sam-color-base-gray) 45%, var(--sam-color-white));
+  --sam-color-gray-dark: color-mix(in srgb, var(--sam-color-base-gray) 80%, var(--sam-color-black));
+  --sam-color-blue-link: color-mix(in srgb, var(--sam-color-secondary-base) 85%, var(--sam-color-black));
+  --sam-color-blue-focus: color-mix(in srgb, var(--sam-color-secondary-base) 100%, #00bfff 30%);
+  
+  // ========================================
+  // Spacing
+  // ========================================
+  
+  // Pixel-based spacing (from audit - most common hardcoded values)
+  --sam-spacing-0: 0;
+  --sam-spacing-2px: 2px;
+  --sam-spacing-4px: 4px;
+  --sam-spacing-6px: 6px;
+  --sam-spacing-8px: 8px;
+  --sam-spacing-10px: 10px;
+  --sam-spacing-12px: 12px;
+  --sam-spacing-16px: 16px;
+  --sam-spacing-24px: 24px;
+  --sam-spacing-32px: 32px;
+  
+  // USWDS units-based spacing (reference USWDS custom properties)
+  --sam-spacing-05: var(--uswds-spacing-05);
+  --sam-spacing-1: var(--uswds-spacing-1);
+  --sam-spacing-105: var(--uswds-spacing-105);
+  --sam-spacing-2: var(--uswds-spacing-2);
+  --sam-spacing-205: var(--uswds-spacing-205);
+  --sam-spacing-3: var(--uswds-spacing-3);
+  --sam-spacing-4: var(--uswds-spacing-4);
+  --sam-spacing-5: var(--uswds-spacing-5);
+  --sam-spacing-6: var(--uswds-spacing-6);
+  --sam-spacing-8: var(--uswds-spacing-8);
+  --sam-spacing-10: var(--uswds-spacing-10);
+  
+  // Auto spacing
+  --sam-spacing-auto: auto;  
+  // ========================================
+  // Borders
+  // ========================================
+  
+  --sam-border-width-0: 0;
+  --sam-border-width-1px: 1px;
+  --sam-border-width-2px: 2px;
+  --sam-border-width-3px: 3px;
+  
+  // Border radius values (from audit)
+  --sam-border-radius-none: 0;
+  --sam-border-radius-xs: 2px;
+  --sam-border-radius-sm: 4px;
+  --sam-border-radius-md: 6px;
+  --sam-border-radius-lg: var(--uswds-radius-lg);
+  --sam-border-radius-xl: 10px;
+  --sam-border-radius-2xl: 20px;
+  --sam-border-radius-3xl: 40px;
+  --sam-border-radius-pill: var(--uswds-radius-pill);
+  --sam-border-radius-circle: 50%;
+  
+  // Component-specific border radius
+  --sam-border-radius-button: 5px;
+  --sam-border-radius-overlay: 6px;
+  --sam-border-radius-dialog: 4px;
+  --sam-border-radius-alert: 12px;
+  
+  // ========================================
+  // Shadows
+  // ========================================
+  
+  --sam-shadow-none: none;
+  --sam-shadow-button: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+  --sam-shadow-1: 0 0 11px rgba(33, 33, 33, .2);
+  --sam-shadow-2: var(--uswds-shadow-2);
+  
+  // Common shadow patterns from audit
+  --sam-shadow-sm: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  --sam-shadow-md: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+  --sam-shadow-lg: 0 14px 24px 0 rgba(0, 0, 0, 0.06);
+  --sam-shadow-focus: 0 0 0 2px var(--sam-color-focus-green);
+  --sam-shadow-input-focus: 2px 2px 10px 3px var(--sam-color-border-gray-light);
+  
+  // Inset shadows
+  --sam-shadow-inset-sm: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+  --sam-shadow-inset-md: inset 0 1px 7px 0 rgba(30, 75, 198, 0.16);
+  
+  // Material Design style shadow (from dialog.scss)
+  --sam-shadow-dialog: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+  
+  // Glow shadows
+  --sam-shadow-glow-blue: 0px 0px 20px -1px var(--sam-color-brand-blue-medium);
+  --sam-shadow-button-group: 1px 2px 4px 0px rgba(0, 0, 0, 0.5);
+  
+  // ========================================
+  // Typography
+  // ========================================
+  
+  --sam-font-weight-thin: 100;
+  --sam-font-weight-light: 300;
+  --sam-font-weight-normal: 400;
+  --sam-font-weight-medium: 500;
+  --sam-font-weight-semibold: 600;
+  --sam-font-weight-bold: 700;
+  
+  // USWDS-based font sizes
+  --sam-font-size-2xs: #{size('body', '2xs')};
+  --sam-font-size-xs: #{size('body', 'xs')};
+  --sam-font-size-sm: #{size('body', 1)};
+  --sam-font-size-md: #{size('body', 'md')};
+  --sam-font-size-lg: #{size('body', 'lg')};
+  --sam-font-size-6: #{size('body', 6)};
+  --sam-font-size-8: #{size('body', 8)};
+  --sam-font-size-10: #{size('body', 10)};
+  
+  // Pixel-based font sizes (from audit - for gradual migration)
+  --sam-font-size-12px: 12px;
+  --sam-font-size-14px: 14px;
+  --sam-font-size-16px: 16px;
+  --sam-font-size-17px: 17px;
+  --sam-font-size-18px: 18px;
+  --sam-font-size-20px: 20px;
+  --sam-font-size-24px: 24px;
+  --sam-font-size-28px: 28px;
+  
+  // Line heights
+  --sam-line-height-1: 1;
+  --sam-line-height-2: #{lh('heading', 2)};
+  --sam-line-height-3: #{lh('body', 3)};
+  
+  // Pixel-based line heights (from audit)
+  --sam-line-height-14px: 14px;
+  --sam-line-height-16px: 16px;
+  --sam-line-height-20px: 20px;
+  --sam-line-height-26px: 26px;
+  --sam-line-height-32px: 32px;
+  --sam-line-height-42px: 42px;
+  
+  // Letter spacing (from statistic.scss)
+  --sam-letter-spacing-tight: -0.6px;
+  --sam-letter-spacing-tighter: -0.63px;
+  --sam-letter-spacing-normal: 0;
+  
+  // ========================================
+  // Sizing
+  // ========================================
+  
+  // USWDS-based sizing
+  --sam-size-3: #{units(3)};
+  --sam-size-4: #{units(4)};
+  --sam-size-5: #{units(5)};
+  --sam-size-6: #{units(6)};
+  --sam-size-15: #{units(15)};
+  
+  // Common pixel-based sizes (from audit)
+  --sam-size-32px: 32px;
+  --sam-size-40px: 40px;
+  --sam-size-51px: 51px;
+  
+  // Width values (from audit)
+  --sam-width-300px: 300px;
+  --sam-width-480px: 480px;
+  --sam-width-800px: 800px;
+  --sam-width-1000px: 1000px;
+  --sam-width-full: 100%;
+  --sam-width-fit: fit-content;
+  
+  // Height values
+  --sam-height-auto: auto;
+  --sam-height-full: 100%;
+  
+  // ========================================
+  // Z-index
+  // ========================================
+  
+  --sam-z-index-base: 1;
+  --sam-z-index-2: 2;
+  --sam-z-index-10: 10;
+  --sam-z-index-sticky: 100;
+  --sam-z-index-dropdown: 800;
+  --sam-z-index-overlay: 900;
+  --sam-z-index-modal: 1000;
+  --sam-z-index-toast: 999999; // From toasts.scss - consider reducing
+  
+  // ========================================
+  // Transitions
+  // ========================================
+  
+  --sam-transition-fast: 0.1s ease-out;
+  --sam-transition-base: 0.2s ease-out;
+  --sam-transition-slow: 0.3s ease-out;
+  
+  // Specific easing functions (from audit)
+  --sam-transition-ease-in: 0.2s ease-in;
+  --sam-transition-ease-in-out: 0.2s ease-in-out;
+  --sam-transition-ease-in-slow: 0.3s ease-in;
+  
+  // Duration values
+  --sam-duration-fast: 0.1s;
+  --sam-duration-base: 0.2s;
+  --sam-duration-slow: 0.3s;
+  
+  // Easing values
+  --sam-easing-ease-out: ease-out;
+  --sam-easing-ease-in: ease-in;
+  --sam-easing-ease-in-out: ease-in-out;
+  
+  // ========================================
+  // Opacity
+  // ========================================
+  
+  --sam-opacity-0: 0;
+  --sam-opacity-5: 0.05;
+  --sam-opacity-10: 0.1;
+  --sam-opacity-12: 0.12;
+  --sam-opacity-14: 0.14;
+  --sam-opacity-15: 0.15;
+  --sam-opacity-20: 0.2;
+  --sam-opacity-25: 0.25;
+  --sam-opacity-30: 0.3;
+  --sam-opacity-50: 0.5;
+  --sam-opacity-100: 1;
+  
+  // ========================================
+  // RGBA Overlays (common black overlay patterns)
+  // ========================================
+  
+  --sam-overlay-black-5: rgba(0, 0, 0, 0.05);
+  --sam-overlay-black-6: rgba(0, 0, 0, 0.06);
+  --sam-overlay-black-10: rgba(0, 0, 0, 0.1);
+  --sam-overlay-black-12: rgba(0, 0, 0, 0.12);
+  --sam-overlay-black-14: rgba(0, 0, 0, 0.14);
+  --sam-overlay-black-15: rgba(0, 0, 0, 0.15);
+  --sam-overlay-black-20: rgba(0, 0, 0, 0.2);
+  --sam-overlay-black-25: rgba(0, 0, 0, 0.25);
+  --sam-overlay-black-30: rgba(0, 0, 0, 0.3);
+  --sam-overlay-black-50: rgba(0, 0, 0, 0.5);
+
+  // ========================================
+  // Breakpoints (for reference in JS)
+  // ========================================
+  
+  --sam-breakpoint-mobile: 320px;
+  --sam-breakpoint-mobile-lg: 480px;
+  --sam-breakpoint-tablet: 640px;
+  --sam-breakpoint-tablet-lg: 800px;
+  --sam-breakpoint-desktop: 1024px;
+  --sam-breakpoint-desktop-lg: 1200px;
+  --sam-breakpoint-widescreen: 1400px;
+  
+  // ========================================
+  // Component-specific values
+  // ========================================
+  
+  --sam-button-min-width: #{units(15)};
+  --sam-button-padding-x: #{units(2.5)};
+  --sam-button-padding-y: #{units(1.5)};
+  --sam-button-padding-x-sm: #{units(2)};
+  --sam-button-padding-y-sm: #{units(1)};
+  
+  --sam-button-circle-size: #{units(4)};
+  --sam-button-circle-size-sm: #{units(3)};
+  --sam-button-circle-size-lg: #{units(5)};
+  
+  --sam-focus-outline-offset: #{units(0.5)};
+  --sam-focus-outline-offset-2: #{units(2px)};
+  --sam-focus-outline-width: 2px;
+  
+  --sam-min-width-menu: 200px;
+}
