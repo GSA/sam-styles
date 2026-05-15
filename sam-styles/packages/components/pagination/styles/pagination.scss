@@ -19,22 +19,22 @@
 
 .sds-pagination button {
   display: block;
-  background-color: #eff6fb;
-  border-radius: 50%;
+  background-color: var(--sam-color-brand-blue-light);
+  border-radius: var(--sam-border-radius-circle);
   border: none;
-  height: 40px;
-  width: 40px;
+  height: var(--sam-size-40px);
+  width: var(--sam-size-40px);
   text-indent: -9999em;
-  margin: 0 15px;
+  margin: 0 var(--sam-spacing-16px);
   position: relative;
   &::after {
     content: '';
     position: absolute;
-    border: solid #0a3466;
-    border-width: 0 1px 1px 0;
+    border: solid var(--sam-color-brand-blue-dark);
+    border-width: 0 var(--sam-border-width-1px) var(--sam-border-width-1px) 0;
     width: 0.6rem;
     height: 0.6rem;
-    top: 15px;
+    top: var(--sam-spacing-16px);
     left: 13px;
     transform: rotate(-45deg);
   }
@@ -55,7 +55,7 @@
 .sds-pagination .sds-pagination__total {
   @include u-display('block');
   strong {
-    color: #162e51;
+    color: var(--sam-color-brand-blue-medium);
     @include u-margin-left('2px');
   }
 }

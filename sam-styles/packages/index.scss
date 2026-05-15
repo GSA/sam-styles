@@ -4,6 +4,9 @@
 
 @forward "../packages/theme/settings.scss";
 
+// Import CSS custom properties
+@import "../packages/theme/custom-properties.scss";
+
 @import "../packages/components/accordion/styles/accordion.scss";
 @import "../packages/components/actions/styles/actions.scss";
 @import "../packages/components/alerts/styles/alert.scss";

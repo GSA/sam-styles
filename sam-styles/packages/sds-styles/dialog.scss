@@ -1,12 +1,12 @@
 .sds-dialog__container {
     display: block;
-    padding: 30px;
-    border-radius: 4px;
+    padding: var(--sam-spacing-32px);
+    border-radius: var(--sam-border-radius-dialog);
     box-sizing: border-box;
     overflow: auto;
     outline: 0;
-    width: 100%;
-    height: 100%;
+    width: var(--sam-width-full);
+    height: var(--sam-height-full);
     min-height: inherit;
     max-height: 90vh;
     position: relative;
@@ -17,71 +17,71 @@
     }
 
     ::-webkit-scrollbar-thumb {
-        border-radius: 4px;
-        background-color: rgba(0, 0, 0, .5);
-        box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+        border-radius: var(--sam-border-radius-dialog);
+        background-color: var(--sam-overlay-black-50);
+        box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
     }
 }
 
 .sds-dialog__container {
-    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
-    background: #fff;
+    box-shadow: var(--sam-shadow-dialog);
+    background: var(--sam-color-white);
 }
 
 .sds-dialog-title {
-    margin: 0 0 20px;
+    margin: 0 0 var(--sam-spacing-24px);
     display: block;
 }
 
 .sds-dialog-content {
     display: block;
-    margin: 0 -24px;
-    padding: 0 24px;
+    margin: 0 calc(-1 * var(--sam-spacing-24px));
+    padding: 0 var(--sam-spacing-24px);
     max-height: 65vh;
     overflow: auto;
-    line-height: 20px;
+    line-height: var(--sam-line-height-20px);
     -webkit-overflow-scrolling: touch;
 }
 
 .sds-dialog-content.sds-dialog-content--centered {
     p {
-        margin: auto;
+        margin: var(--sam-spacing-auto);
     }
 }
 
 .sds-dialog-actions {
-    padding: 8px 0;
+    padding: var(--sam-spacing-8px) 0;
     display: flex;
     flex-wrap: wrap;
-    min-height: 52px;
+    min-height: var(--sam-size-51px);
     align-items: center;
-    margin-bottom: -24px;
+    margin-bottom: calc(-1 * var(--sam-spacing-24px));
 }
 
 .sds-dialog__container {
     .close-btn {
         @include button-unstyled;
         position: absolute;
-        right: 20px;
-        top: 15px;
-        width: 20px;
-        height: 20px;
+        right: var(--sam-spacing-24px);
+        top: var(--sam-spacing-16px);
+        width: var(--sam-spacing-24px);
+        height: var(--sam-spacing-24px);
         text-align: center;
-        color: #9b9b9b;
+        color: var(--sam-color-dialog-gray-medium);
     }
 
     .sds-dialog-title {
-        font-size: 24px;
-        font-weight: font-weight('semibold');
+        font-size: var(--sam-font-size-24px);
+        font-weight: var(--sam-font-weight-semibold);
     }
 
     .sds-dialog-subtitle {
-        font-size: 20px;
+        font-size: var(--sam-font-size-20px);
     }
 
     .sds-dialog-actions {
-        margin-bottom: -10px;
-        margin-top: 20px;
+        margin-bottom: var(--sam-spacing-10px);
+        margin-top: var(--sam-spacing-24px);
         justify-content: flex-end;
     }
 
@@ -95,60 +95,60 @@
 // Dialog Alert
 // ================================
 .sds-dialog--alert {
-    border-width: 3px;
+    border-width: var(--sam-border-width-3px);
     border-style: solid;
-    border-radius: 8px;
-    background-color: #fcfcfb;
+    border-radius: var(--sam-border-radius-lg);
+    background-color: var(--sam-color-dialog-bg-light);
 
     .sds-dialog-icon {
         text-align: center;
-        margin-top: 5px;
+        margin-top: var(--sam-spacing-6px);
     }
 
     .sds-dialog-title {
         text-align: center;
-        font-size: 28px;
-        font-weight: font-weight('semibold');
-        margin-top: 14px;
-        margin-bottom: 10px;
+        font-size: var(--sam-font-size-28px);
+        font-weight: var(--sam-font-weight-semibold);
+        margin-top: var(--sam-spacing-16px);
+        margin-bottom: var(--sam-spacing-10px);
     }
 
     .sds-dialog-content {
         text-align: center;
-        font-size: 20px;
-        line-height: 26px;
-        font-weight: font-weight('normal');
-        color: #5c5c5c;
+        font-size: var(--sam-font-size-20px);
+        line-height: var(--sam-line-height-26px);
+        font-weight: var(--sam-font-weight-normal);
+        color: var(--sam-color-dialog-gray-dark);
     }
 
     .sds-dialog-actions {
-        margin-top: 30px;
-        margin-bottom: 0px;
+        margin-top: var(--sam-spacing-32px);
+        margin-bottom: var(--sam-spacing-0);
         justify-content: center;
     }
 }
 
 .sds-dialog--alert-error {
-    border-color: #E9695F;
+    border-color: var(--sam-color-dialog-error);
 
     .sds-dialog-icon {
-        color: #E9695F;
+        color: var(--sam-color-dialog-error);
     }
 }
 
 .sds-dialog--alert-warning {
-    border-color: #febe2e;
+    border-color: var(--sam-color-dialog-warning);
 
     .sds-dialog-icon {
-        color: #febe2e;
+        color: var(--sam-color-dialog-warning);
     }
 }
 
 .sds-dialog--alert-info {
-    border-color: #00BDE3;
+    border-color: var(--sam-color-dialog-info);
 
     .sds-dialog-icon {
-        color: #00BDE3;
+        color: var(--sam-color-dialog-info);
     }
 }
 

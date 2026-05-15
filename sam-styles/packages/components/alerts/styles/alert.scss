@@ -196,14 +196,14 @@
     @include u-margin-y(1);
     @include u-border(1px);
     @include u-border('gray-10');
-    border-radius: 12px;
+    border-radius: var(--sam-border-radius-lg);
 
     .sds-button--circle {
       margin: auto;
     }
 
     &:hover {
-      box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+      box-shadow: var(--sam-shadow-1);
     }
   }
 
@@ -254,7 +254,7 @@
   @include u-margin-y(1);
   @include u-border(1px);
   @include u-border('gray-10');
-  border-radius: 12px;
+  border-radius: var(--sam-border-radius-lg);
   flex-wrap: nowrap;
   overflow-x: auto;
 

@@ -1,0 +1,153 @@
+// SAM Design System - Dark Mode Theme Example
+// This file demonstrates how to implement dark mode using the color-mix() based system
+
+// Option 1: Simple Dark Mode Implementation
+// ==========================================
+// Just override the 10 base colors for a complete dark theme
+
+[data-theme="dark"] {
+  // Invert base colors
+  --sam-color-white: #0f172a;
+  --sam-color-black: #f1f5f9;
+  
+  // Adjust base theme colors for dark mode
+  --sam-color-primary-base: #4ade80;        // Brighter green for visibility
+  --sam-color-secondary-base: #60a5fa;      // Brighter blue for visibility
+  --sam-color-accent-warm-base: #fbbf24;    // Gold remains visible
+  --sam-color-accent-cool-base: #38bdf8;    // Cyan for cool accent
+  --sam-color-base-gray: #cbd5e1;           // Lighter gray for text
+  --sam-color-error-base: #f87171;          // Softer red
+  --sam-color-warning-base: #fbbf24;        // Bright gold
+  --sam-color-success-base: #4ade80;        // Bright green
+  --sam-color-info-base: #22d3ee;           // Bright cyan
+  --sam-color-brand-blue-base: #3b82f6;     // Bright brand blue
+  
+  // All 85+ color variants automatically regenerate from these 10 base colors!
+  
+  // Optional: Fine-tune specific elements if needed
+  --sam-color-disabled: #475569;            // Darker disabled state
+  
+  // Link colors for dark mode
+  --sam-color-link: #60a5fa;
+  --sam-color-link-visited: #a78bfa;
+  --sam-color-link-hover: #fbbf24;
+  --sam-color-link-active: #3b82f6;
+}
+
+// Option 2: System Preference Dark Mode
+// ==========================================
+// Automatically apply dark mode based on user's system preference
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sam-color-white: #0f172a;
+    --sam-color-black: #f1f5f9;
+    --sam-color-primary-base: #4ade80;
+    --sam-color-secondary-base: #60a5fa;
+    --sam-color-accent-warm-base: #fbbf24;
+    --sam-color-accent-cool-base: #38bdf8;
+    --sam-color-base-gray: #cbd5e1;
+    --sam-color-error-base: #f87171;
+    --sam-color-warning-base: #fbbf24;
+    --sam-color-success-base: #4ade80;
+    --sam-color-info-base: #22d3ee;
+    --sam-color-brand-blue-base: #3b82f6;
+  }
+}
+
+// Option 3: High Contrast Dark Mode
+// ==========================================
+// For better accessibility
+
+[data-theme="dark-high-contrast"] {
+  --sam-color-white: #000000;
+  --sam-color-black: #ffffff;
+  --sam-color-primary-base: #00ff00;
+  --sam-color-secondary-base: #00bfff;
+  --sam-color-accent-warm-base: #ffff00;
+  --sam-color-accent-cool-base: #00ffff;
+  --sam-color-base-gray: #ffffff;
+  --sam-color-error-base: #ff0000;
+  --sam-color-warning-base: #ffff00;
+  --sam-color-success-base: #00ff00;
+  --sam-color-info-base: #00ffff;
+  --sam-color-brand-blue-base: #0080ff;
+}
+
+// Usage in HTML:
+// ==========================================
+// 
+// <!-- Manual toggle -->
+// <html data-theme="dark">
+//
+// <!-- Or via JavaScript -->
+// <script>
+//   // Toggle dark mode
+//   const toggle = () => {
+//     const current = document.documentElement.getAttribute('data-theme');
+//     document.documentElement.setAttribute('data-theme', 
+//       current === 'dark' ? 'light' : 'dark'
+//     );
+//   };
+//
+//   // Respect system preference
+//   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+//   if (prefersDark.matches) {
+//     document.documentElement.setAttribute('data-theme', 'dark');
+//   }
+//
+//   // Listen for system changes
+//   prefersDark.addEventListener('change', (e) => {
+//     document.documentElement.setAttribute('data-theme', 
+//       e.matches ? 'dark' : 'light'
+//     );
+//   });
+// </script>
+
+// Smooth Transitions Between Themes
+// ==========================================
+
+* {
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+// Disable transitions during initial load
+// ==========================================
+
+.no-transitions * {
+  transition: none !important;
+}
+
+// Alternative Color Schemes
+// ==========================================
+
+// Sepia/Warm Dark Mode
+[data-theme="dark-sepia"] {
+  --sam-color-white: #1a1612;
+  --sam-color-black: #f4e4d4;
+  --sam-color-primary-base: #90b77d;
+  --sam-color-secondary-base: #7c9cb5;
+  --sam-color-base-gray: #d4c4b4;
+}
+
+// Cool/Blue Dark Mode
+[data-theme="dark-cool"] {
+  --sam-color-white: #0a1628;
+  --sam-color-black: #e8f1f8;
+  --sam-color-primary-base: #7dd3c0;
+  --sam-color-secondary-base: #82b1ff;
+  --sam-color-base-gray: #c4d4e4;
+}
+
+// Reduced Motion Support
+// ==========================================
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

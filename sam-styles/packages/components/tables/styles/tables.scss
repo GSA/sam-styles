@@ -159,7 +159,7 @@ $sds-table-border: "1px";
       width: 1.5rem;
       vertical-align: middle;
       &>g.unsorted{
-        fill: #757575;
+        fill: var(--sam-color-gray-medium);
       }
     }
   }

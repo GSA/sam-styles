@@ -140,10 +140,10 @@
     cursor: pointer;
     &--highlighted,
     &:hover {
-      background-color: #EFF6FB !important; 
+      background-color: var(--sam-color-brand-blue-light) !important; 
     }
     &--item {
-      font-weight: 600 !important;
+      font-weight: var(--sam-font-weight-semibold) !important;
       @include u-display('inline');
     }
     &--secondary {
