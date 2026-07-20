@@ -6,7 +6,7 @@
 
 ## Node version
 
-- Pinned to **Node 24** (active LTS) in `.nvmrc` and `.github/workflows/build.yml` (`node-version: '24.x'`). Keep these in sync — they are the single source of truth. Use `fnm use` / `nvm use` to match `.nvmrc`.
+- Pinned to **Node 24** (active LTS). `.nvmrc` is the canonical version; `.github/workflows/build.yml` (`node-version: '24.x'`) must be kept in sync with it. Use `fnm use` / `nvm use` to match `.nvmrc`.
 
 ## Developer commands
 
