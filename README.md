@@ -1,11 +1,15 @@
 # SAM Styles
 
-[![CircleCI](https://circleci.com/gh/GSA/sam-styles.svg?style=shield)](https://circleci.com/gh/GSA/sam-styles)
+## Storybook
 
-## Fractal
-
-We're using [Fractal](http://fractal.build) to generate an interactive component library for sam-styles. You can run it locally after `npm install` with:
+We use [Storybook](https://storybook.js.org/) to generate an interactive component library for sam-styles. After `npm install`, run it locally with:
 
 ```sh
 npm start
+```
+
+To build the static Storybook site (as CI does):
+
+```sh
+npm run build:storybook
 ```
