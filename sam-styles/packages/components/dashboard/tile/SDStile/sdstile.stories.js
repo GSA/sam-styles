@@ -1,8 +1,8 @@
 export default {
-    title: "Components/Dashboard/Tile",
-  };
-  const Template = () => {
-    return `<div class="grid-row flex-align-center">
+  title: "Components/Dashboard/Tile",
+};
+const Template = () => {
+  return `<div class="grid-row flex-align-center">
     <div class="tablet:grid-col">
         <div class="sds-tile">
             <span class="sds-tile__icon fa-stack fa-2x">
@@ -56,6 +56,5 @@ export default {
     </div>
 </div>
   `;
-  };
-  export const SDStile = Template.bind({});
-  
+};
+export const SDStile = Template.bind({});

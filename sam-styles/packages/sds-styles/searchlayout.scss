@@ -1,11 +1,9 @@
 .sds-sidepanel {
-    .mobile-only {
-        @include u-display('block');
+  .mobile-only {
+    @include u-display("block");
 
-        @include at-media('tablet-lg') {
-            @include u-display('none'); 
-          }
-        
+    @include at-media("tablet-lg") {
+      @include u-display("none");
     }
-
+  }
 }

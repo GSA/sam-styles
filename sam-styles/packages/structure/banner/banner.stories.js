@@ -1,9 +1,9 @@
-import GovernmentBanner from "./template/banner.html"
+import GovernmentBanner from "./template/banner.html";
 
 export default {
-    title: "Structure/GovtBaner",
-  };
+  title: "Structure/GovtBaner",
+};
 
-  export const GovtBaner = () => {
-    return GovernmentBanner;
-  };
+export const GovtBaner = () => {
+  return GovernmentBanner;
+};

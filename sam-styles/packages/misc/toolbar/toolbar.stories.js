@@ -1,8 +1,8 @@
 export default {
-    title: "Miscellaneous/Toolbar",
-  };
-  const Template = () => {
-      return `<div class="grid-row margin-105">
+  title: "Miscellaneous/Toolbar",
+};
+const Template = () => {
+  return `<div class="grid-row margin-105">
       <div class="tablet:grid-col-auto display-flex position-relative">
           <div class="sds-toolbar">
               <div class="sds-toolbar__header">
@@ -243,6 +243,5 @@ export default {
       </div>
   </footer>
   `;
-  };
-  export const Toolbar = Template.bind({});
-  
+};
+export const Toolbar = Template.bind({});

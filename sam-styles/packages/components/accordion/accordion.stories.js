@@ -2,15 +2,15 @@
 import MultiSelectableAccordion from "./templates/multiselectable.html";
 
 export default {
-    title: "Components/Accordion",
-    argTypes: {
-      class: {type: "string"},
-      expanded: {type: "boolean"},
-    },
-  };
+  title: "Components/Accordion",
+  argTypes: {
+    class: { type: "string" },
+    expanded: { type: "boolean" },
+  },
+};
 
-  const BorderedTemplate = (args) => {
-    return `<div class="usa-accordion ${args.class}">
+const BorderedTemplate = (args) => {
+  return `<div class="usa-accordion ${args.class}">
 
     <h2 class="usa-accordion__heading">
         <button class="usa-accordion__button  border-top-1px border-base-light " aria-expanded="false" aria-controls="b-a1">
@@ -58,13 +58,13 @@ export default {
     </div>
 
 </div>`;
-  };
+};
 
-  export const Multiselectable = () => {
-    return MultiSelectableAccordion;
-  };
-  
-  export const Bordered = BorderedTemplate.bind({});
-    Bordered.args = {
-      class: "usa-accordion--bordered",
-    };
+export const Multiselectable = () => {
+  return MultiSelectableAccordion;
+};
+
+export const Bordered = BorderedTemplate.bind({});
+Bordered.args = {
+  class: "usa-accordion--bordered",
+};

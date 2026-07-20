@@ -1,9 +1,9 @@
 export default {
   title: "Form Elements/Input",
   argTypes: {
-    label: {type: "string"},
+    label: { type: "string" },
     classTypes: {
-      control: {type: "select"},
+      control: { type: "select" },
       options: ["", "usa-focus", "usa-input--error", "usa-input--success"],
     },
   },

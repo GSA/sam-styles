@@ -1,8 +1,8 @@
 export default {
-    title: "Miscellaneous/SearchLayout",
-  };
-  const Template = () => {
-      return `<div class="margin-3 grid-row grid-gap">
+  title: "Miscellaneous/SearchLayout",
+};
+const Template = () => {
+  return `<div class="margin-3 grid-row grid-gap">
       <div class="grid-col-12 tablet-lg:grid-col-3 margin-top-2">
           <div class="sds-sidepanel">
               <div class="sds-card mobile-only ">
@@ -141,6 +141,5 @@ export default {
       </div>
   </div>
   `;
-  };
-  export const SearchLayout = Template.bind({});
-  
+};
+export const SearchLayout = Template.bind({});

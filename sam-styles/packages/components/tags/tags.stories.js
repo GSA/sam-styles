@@ -5,7 +5,6 @@ import outlinedSam from "./outlinedSam.html";
 import outlinedExtended from "./outlinedExtended.html";
 import statusTag from "./statusTag.html";
 
-
 export default {
   title: "Components/Tags",
 };

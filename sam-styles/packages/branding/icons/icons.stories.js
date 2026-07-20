@@ -5,5 +5,5 @@ export default {
 };
 
 export const IconLibrary = () => {
-    return IconsLibrary;
+  return IconsLibrary;
 };

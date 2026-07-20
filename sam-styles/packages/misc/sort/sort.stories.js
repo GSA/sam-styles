@@ -1,8 +1,8 @@
 export default {
-    title: "Miscellaneous/Sort",
-  };
-  const Template = () => {
-      return `<label class="usa-label font-sans-2xs text-italic text-base" for="options">
+  title: "Miscellaneous/Sort",
+};
+const Template = () => {
+  return `<label class="usa-label font-sans-2xs text-italic text-base" for="options">
     Sort by
     </label>
     <select class="usa-select border-base-light maxw-card" name="options" id="options">
@@ -12,6 +12,5 @@ export default {
         <option value="">Expiration Date</option>
     </select>
   `;
-  };
-  export const Sort = Template.bind({});
-  
+};
+export const Sort = Template.bind({});

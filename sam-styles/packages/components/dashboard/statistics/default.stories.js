@@ -1,8 +1,8 @@
 export default {
-    title: "Components/Dashboard/Statistics",
-  };
-  const Template = () => {
-    return `<h3 class="margin-0">SDS Statistic</h3>
+  title: "Components/Dashboard/Statistics",
+};
+const Template = () => {
+  return `<h3 class="margin-0">SDS Statistic</h3>
     <div class="sds-statistics">
         <button class="green statistic">
             <div class="value">
@@ -42,6 +42,5 @@ export default {
         </button>
     </div>
   `;
-  };
-  export const Default = Template.bind({});
-  
+};
+export const Default = Template.bind({});

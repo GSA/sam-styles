@@ -10,5 +10,5 @@ export const ThemeColors = () => {
 };
 
 export const StateColors = () => {
-    return StateColor;
+  return StateColor;
 };

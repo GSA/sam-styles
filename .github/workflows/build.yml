@@ -14,7 +14,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '24.x'
+          node-version: "24.x"
       - name: Install Node Packages
         run: npm ci
       - name: Lint SCSS
@@ -28,7 +28,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '24.x'
+          node-version: "24.x"
       - name: Install Node Packages
         run: npm ci
       - name: Check formatting
@@ -42,7 +42,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '24.x'
+          node-version: "24.x"
       - name: Install Node Packages
         run: npm i
       - name: Build Storybook Assets

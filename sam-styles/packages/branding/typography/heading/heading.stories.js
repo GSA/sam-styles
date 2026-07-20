@@ -11,9 +11,9 @@ export const Default = () => {
 };
 
 export const Light = () => {
-    return LightHeading;
+  return LightHeading;
 };
 
 export const Link = () => {
-    return LinkHeading;
+  return LinkHeading;
 };

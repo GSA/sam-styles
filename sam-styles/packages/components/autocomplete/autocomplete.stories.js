@@ -1,8 +1,8 @@
 export default {
-    title: "Components/AutoComplete",
-  };
-  const Template = () => {
-    return `<ul class="sds-autocomplete sds-list--no-bullets" role="listbox">
+  title: "Components/AutoComplete",
+};
+const Template = () => {
+  return `<ul class="sds-autocomplete sds-list--no-bullets" role="listbox">
     <li role="option" class="sds-autocomplete__group">
       <div class="sds-autocomplete__item">FORMULA GRANTS</div>
       <ul class ="sds-list--no-bullets">
@@ -81,6 +81,5 @@ export default {
     </li>
   </ul>
   `;
-  };
-  export const AutoComplete = Template.bind({});
-  
+};
+export const AutoComplete = Template.bind({});

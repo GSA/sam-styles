@@ -1,8 +1,8 @@
 export default {
-    title: "Components/Toasts",
-  };
-  const Template = () => {
-    return `<h3>SDS Toasts</h3>
+  title: "Components/Toasts",
+};
+const Template = () => {
+  return `<h3>SDS Toasts</h3>
 
     <div class="sds-toast sds-toast--info">
         <div class="sds-toast__content">
@@ -52,6 +52,5 @@ export default {
         </div>
     </div>
   `;
-  };
-  export const Toasts = Template.bind({});
-  
+};
+export const Toasts = Template.bind({});

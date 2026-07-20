@@ -1,13 +1,12 @@
 @for $i from 4 through 31 {
-
-    .min-height-#{$i} {
-      .ck-editor__editable_inline {
-        min-height: $i * 1rem;
-      }
-    }
-    .max-height-#{$i} {
-      .ck-editor__editable_inline {
-          max-height: $i * 1rem;
-      }
+  .min-height-#{$i} {
+    .ck-editor__editable_inline {
+      min-height: $i * 1rem;
     }
   }
+  .max-height-#{$i} {
+    .ck-editor__editable_inline {
+      max-height: $i * 1rem;
+    }
+  }
+}

@@ -11,50 +11,49 @@ import DangerTemplate from "./templates/danger.html";
 import SecondaryTemplate from "./templates/secondary.html";
 
 export default {
-    title: "Components/Button/Circle",
-  };
-  
-  export const Default = () => {
-    return DefaultTemplate;
-  };
-  
-  export const Outline = () => {
-    return OutlineTemplate;
-  };
-  
-  export const OutlineInverse = () => {
-    return OutlineInverseTemplate;
-  };
-  
-  export const White = () => {
-    return WhiteTemplate;
-  };
-  
-  export const AccentCool = () => {
-    return AccentCoolTemplate;
-  };
+  title: "Components/Button/Circle",
+};
 
-  export const Base = () => {
-    return BaseTemplate;
-  };
+export const Default = () => {
+  return DefaultTemplate;
+};
 
-  export const Big = () => {
-    return BigTemplate;
-  };
+export const Outline = () => {
+  return OutlineTemplate;
+};
 
-  export const Danger = () => {
-    return DangerTemplate;
-  };
+export const OutlineInverse = () => {
+  return OutlineInverseTemplate;
+};
 
-  export const Secondary = () => {
-    return SecondaryTemplate;
-  };
+export const White = () => {
+  return WhiteTemplate;
+};
 
-  export const Small = () => {
-    return SmallTemplate;
-  };
+export const AccentCool = () => {
+  return AccentCoolTemplate;
+};
 
-  export const Shadow = () => {
-    return ShadowTemplate;
-  };
+export const Base = () => {
+  return BaseTemplate;
+};
 
+export const Big = () => {
+  return BigTemplate;
+};
+
+export const Danger = () => {
+  return DangerTemplate;
+};
+
+export const Secondary = () => {
+  return SecondaryTemplate;
+};
+
+export const Small = () => {
+  return SmallTemplate;
+};
+
+export const Shadow = () => {
+  return ShadowTemplate;
+};

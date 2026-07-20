@@ -14,67 +14,66 @@ import ListCard from "./templates/list.html";
 import ShadowedNoBorderCard from "./templates/shadowedNoBorder.html";
 import VerticalHeaderCard from "./templates/verticalHeader.html";
 
-
 export default {
-    title: "Components/Card",
-  };
+  title: "Components/Card",
+};
 
-  export const Default = () => {
-    return DefaultCard;
-  };
+export const Default = () => {
+  return DefaultCard;
+};
 
-  export const BorderedNoShadow = () => {
-    return BorderedNoShadowCard;
-  };
+export const BorderedNoShadow = () => {
+  return BorderedNoShadowCard;
+};
 
-  export const ShadowedNoBorder = () => {
-    return ShadowedNoBorderCard;
-  };
+export const ShadowedNoBorder = () => {
+  return ShadowedNoBorderCard;
+};
 
-  export const NoShadowOrBorder = () => {
-    return NoShadowNoBorderCard;
-  };
+export const NoShadowOrBorder = () => {
+  return NoShadowNoBorderCard;
+};
 
-  export const NoHeader = () => {
-    return NoHeaderCard;
-  };
+export const NoHeader = () => {
+  return NoHeaderCard;
+};
 
-  export const LinkHeader = () => {
-    return LinkHeaderCard;
-  };
+export const LinkHeader = () => {
+  return LinkHeaderCard;
+};
 
-  export const HeaderIconLeft = () => {
-    return HeaderIconLeftCard;
-  };
+export const HeaderIconLeft = () => {
+  return HeaderIconLeftCard;
+};
 
-  export const HeaderIconStacked = () => {
-    return HeaderIconStackedCard;
-  };
+export const HeaderIconStacked = () => {
+  return HeaderIconStackedCard;
+};
 
-  export const HeaderIconCentered = () => {
-    return HeaderIconCenteredCard;
-  };
+export const HeaderIconCentered = () => {
+  return HeaderIconCenteredCard;
+};
 
-  export const HeaderWithOneButton = () => {
-    return HeaderOneButtonCard;
-  };
+export const HeaderWithOneButton = () => {
+  return HeaderOneButtonCard;
+};
 
-  export const HeaderWithTwoButtons = () => {
-    return HeaderTwoButtonCard;
-  };
+export const HeaderWithTwoButtons = () => {
+  return HeaderTwoButtonCard;
+};
 
-  export const HeaderWithActionButton = () => {
-    return HeaderActionButtonCard;
-  };
+export const HeaderWithActionButton = () => {
+  return HeaderActionButtonCard;
+};
 
-  export const VerticalHeader = () => {
-    return VerticalHeaderCard;
-  };
+export const VerticalHeader = () => {
+  return VerticalHeaderCard;
+};
 
-  export const Collapsible = () => {
-    return CollapsibleCard;
-  };
+export const Collapsible = () => {
+  return CollapsibleCard;
+};
 
-  export const List = () => {
-    return ListCard;
-  };
+export const List = () => {
+  return ListCard;
+};

@@ -1,10 +1,9 @@
-import PopUpTemplate from "./pop-up.html"
+import PopUpTemplate from "./pop-up.html";
 
 export default {
-    title: "Miscellaneous/PopUp",
-  };
+  title: "Miscellaneous/PopUp",
+};
 
-  export const PopUp = () => {
-    return PopUpTemplate;
-  };
-  
+export const PopUp = () => {
+  return PopUpTemplate;
+};

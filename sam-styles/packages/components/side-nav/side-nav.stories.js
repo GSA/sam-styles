@@ -1,7 +1,6 @@
 import SideNavDefault from "./templates/default.html";
 import SideNavCompare from "./templates/compare.html";
 
-
 export default {
   title: "Components/SideNav",
 };
@@ -11,8 +10,5 @@ export const Default = () => {
 };
 
 export const Compare = () => {
-    return SideNavCompare;
-  };
-
-
-
+  return SideNavCompare;
+};
