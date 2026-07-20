@@ -1,0 +1,9 @@
+# Build output
+_site/
+
+# Vendor / static assets (not authored source)
+assets/
+public/
+
+# Dependencies
+node_modules/
