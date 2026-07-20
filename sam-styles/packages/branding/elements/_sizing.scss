@@ -1,24 +1,24 @@
-/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); see CI lint gate */
+/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 .sds-min-width-160 {
-  min-width: 160px;
-}
+    min-width: 160px;
+  }
+  
+  .sds-width-max-content {
+    width: max-content;
+  }
+  
+  .sds-width-min-content {
+    width: min-content;
+  }
+  
+  .sds-height-max-content {
+    height: max-content;
+  }
+  
+  .sds-height-min-content {
+    height: min-content;
+  }
 
-.sds-width-max-content {
-  width: max-content;
-}
-
-.sds-width-min-content {
-  width: min-content;
-}
-
-.sds-height-max-content {
-  height: max-content;
-}
-
-.sds-height-min-content {
-  height: min-content;
-}
-
-.width-card-lg {
-  width: 15 rem !important;
-}
+  .width-card-lg {
+    width: 15 rem !important;
+  }

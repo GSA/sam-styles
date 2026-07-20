@@ -1,4 +1,4 @@
-/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); see CI lint gate */
+/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 .sds-menu {
   @include u-padding-top(1);
   @include u-padding-bottom('105');
@@ -21,7 +21,7 @@
 
     &:active {
       border-color: color('secondary-dark');
-
+      ;
     }
   }
 }
@@ -43,7 +43,7 @@
   font-size: 17px;
 
   &:hover {
-    color: #7a591a;
+    color: #7a591a
   }
 
   &:focus {
@@ -69,9 +69,9 @@
   border-radius: 50%;
   height: units(4);
   width: units(4);
-  @include u-display('inline-flex');
-  @include u-flex('align-center');
-  @include u-flex('justify-center');
+  @include u-display("inline-flex");
+  @include u-flex("align-center");
+  @include u-flex("justify-center");
   margin: unset;
   padding: 0;
 
@@ -85,31 +85,31 @@
     height: units(3);
     width: units(3);
     padding: 0;
-    font-size: size('body', 1);
+    font-size: size("body", 1);
   }
 
   &.sds-button--big,
   &.usa-button--big {
     height: units(5);
     width: units(5);
-    font-size: size('body', 6);
+    font-size: size("body", 6);
   }
 
-  background-color: color('white');
-  @include u-border('white');
+  background-color: color("white");
+  @include u-border("white");
   transition: box-shadow 0.2s ease-out;
 
   &.usa-button--hover,
   &:hover {
-    background-color: color('white');
-    @include u-border('white');
+    background-color: color("white");
+    @include u-border("white");
     @include u-shadow(2);
   }
 
   &:active {
-    @include u-border('secondary-dark');
+    @include u-border("secondary-dark");
     box-shadow: $button-shadow;
-    color: #1a4480;
+    color: #1A4480;
   }
 
   &.usa-button--hover,
@@ -124,7 +124,7 @@
   @include at-media('tablet-lg') {
     span {
       display: inline;
-      color: #1a4480;
+      color: #1A4480;
     }
 
     height: 40px;
@@ -143,39 +143,39 @@
 }
 
 .sds-button--menu {
-  color: color('secondary-dark') !important;
+  color: color("secondary-dark") !important;
 
   usa-icon {
     font-size: 1.5rem;
-    vertical-align: -0.4rem;
+    vertical-align: -0.4rem
   }
 
   &.usa-button {
     line-height: 1.5;
     font-size: 17px;
-    border-color: color('secondary-dark');
+    border-color: color("secondary-dark");
     background-color: white !important;
     padding: 0.5rem !important;
     min-width: 6.25rem !important;
 
     &:visited {
-      color: color('secondary-dark') !important;
+      color: color("secondary-dark") !important;
       box-shadow: none;
     }
 
     &.usa-button--hover,
     &:not(.usa-button--disabled):hover {
-      background-color: color('secondary-dark') !important;
+      background-color: color("secondary-dark") !important;
       color: white !important;
-      border-color: color('secondary-dark') !important;
+      border-color: color("secondary-dark") !important;
       box-shadow: none;
     }
 
     &.usa-button--active,
     &:not(.usa-button--disabled):active {
-      background-color: color('secondary-dark') !important;
+      background-color: color("secondary-dark") !important;
       color: white;
-      border-color: color('secondary-dark') !important;
+      border-color: color("secondary-dark") !important;
       box-shadow: none;
     }
   }
@@ -184,14 +184,14 @@
     box-shadow: none;
     border-width: 2px !important;
     border-style: solid !important;
-    border-color: color('base') !important;
+    border-color: color("base") !important;
     background-color: white !important;
-    color: color('base') !important;
+    color: color("base") !important;
     cursor: unset !important;
   }
 }
 
-@media only screen and (min-width: 400px) and (max-width: 800px) {
+@media only screen and (min-width: 400px) and (max-width:800px) {
   .sds-button--menu {
     padding: 1em 0.5em;
 

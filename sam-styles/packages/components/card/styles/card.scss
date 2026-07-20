@@ -1,4 +1,4 @@
-/* stylelint-disable selector-no-qualifying-type -- legacy baseline (issue #735); see CI lint gate */
+/* stylelint-disable selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 /*-------------------
        SDS CARD
 --------------------*/
@@ -28,7 +28,7 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     >*:last-child {
       @include u-margin-bottom(0);
     }
-    &--accent-cool {
+    &--accent-cool{
       @include u-bg('accent-cool-lighter');
     }
   }
@@ -39,6 +39,7 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     @include u-padding(2);
     border-top-left-radius: $inner-border-radius;
     border-top-right-radius: $inner-border-radius;
+
 
     &--flex {
       @include grid-row;
@@ -97,11 +98,11 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
       @include u-display('flex');
       @include u-flex('align-center', 'justify');
 
-      .sds-card__action > * {
+      .sds-card__action>* {
         @include u-margin-right(0);
       }
     }
-
+    
     .sds-card__collapse {
       transition: transform 0.2s ease-in;
       width: 33px;
@@ -138,7 +139,7 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     }
 
     // remove margin top from first sibling of a heading that isn't in a vertical card
-    .sds-card__title + * {
+    .sds-card__title+* {
       @include u-margin-top(0);
     }
   }
@@ -200,14 +201,14 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
         border-top-right-radius: 0;
         align-items: center;
         justify-content: left;
-        text-align: left;
+        text-align: left; 
       }
 
       .sds-card__body {
         text-align: center;
       }
     }
-
+    
     @include at-media('tablet-lg') {
       @include u-display('flex');
 
@@ -231,7 +232,7 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
       @include u-font-size('body', 'xs');
       @include u-text('semibold');
     }
-    .sds-accordion__title {
+    .sds-accordion__title{
       @include u-padding-left(0);
     }
 

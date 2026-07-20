@@ -1,4 +1,4 @@
-/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); see CI lint gate */
+/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 /*******************************
        USWDS OVERRIDES
 *******************************/
@@ -9,7 +9,7 @@
 
 .usa-footer__secondary-link a,
 .usa-footer__primary-link:hover {
-  @include u-text('no-underline');
+  @include u-text("no-underline");
 }
 
 .usa-footer__secondary-link a:hover {
@@ -18,13 +18,13 @@
 }
 
 .usa-footer__nav {
-  @include u-maxw('full');
+  @include u-maxw("full");
   @include u-padding-bottom(1);
 }
 
 .sds-footer__logo {
-  @include u-display('flex');
-  @include u-flex('justify-start');
+  @include u-display("flex");
+  @include u-flex("justify-start");
 }
 
 .sds-footer__logo-link {
@@ -49,7 +49,7 @@
       background-repeat: no-repeat;
       align-items: center;
       background-size: contain;
-      content: '';
+      content: "";
       display: inline-flex;
       height: 2rem;
       justify-content: center;
@@ -59,7 +59,7 @@
       order: 2;
     }
 
-    @include at-media('mobile-lg') {
+    @include at-media("mobile-lg") {
       &::after {
         content: none;
       }
@@ -84,20 +84,20 @@
   padding-top: 15px;
 
   .sds-feedback__button {
-    @include u-bg('white');
-    @include u-text('center');
+    @include u-bg("white");
+    @include u-text("center");
     @include u-padding-y(3);
-    @include u-radius-top('pill');
+    @include u-radius-top("pill");
     border: none;
     display: flex;
-    @include u-flex('column');
-    @include u-flex('align-center');
+    @include u-flex("column");
+    @include u-flex("align-center");
     width: 140px;
     margin: auto;
 
     .sds-feedback__open {
       @include u-padding(1);
-      @include u-bg('base-light');
+      @include u-bg("base-light");
       height: 30px;
       width: 30px;
       border: none;
@@ -106,7 +106,7 @@
 
     .sds-feedback__closed {
       @include u-padding(1);
-      @include u-bg('primary');
+      @include u-bg("primary");
       height: 30px;
       width: 30px;
       border: none;
@@ -114,15 +114,15 @@
     }
 
     .sds-feedback__title {
-      @include u-font('sans', 'sm');
-      @include u-text('base-dark');
+      @include u-font("sans", "sm");
+      @include u-text("base-dark");
       @include u-margin-top(1);
     }
   }
 
   .sds-feedback__response {
     width: 100%;
-    @include u-bg('white');
+    @include u-bg("white");
 
     div {
       margin: auto;
@@ -130,30 +130,30 @@
     }
 
     .sds-feedback__response-title {
-      @include u-font('sans', 'lg');
-      @include u-text('base');
-      @include u-text('bold');
-      @include u-display('inline');
+      @include u-font("sans", "lg");
+      @include u-text("base");
+      @include u-text("bold");
+      @include u-display("inline");
     }
 
     .sds-feedback__response-title-thin {
-      @include u-font('sans', 'lg');
-      @include u-text('base');
-      @include u-text('normal');
-      @include u-display('inline');
+      @include u-font("sans", "lg");
+      @include u-text("base");
+      @include u-text("normal");
+      @include u-display("inline");
     }
 
     .sds-feedback__response-text {
-      @include u-font('sans', 'md');
-      @include u-text('secondary-dark');
-      @include u-text('bold');
-      @include u-display('block');
+      @include u-font("sans", "md");
+      @include u-text("secondary-dark");
+      @include u-text("bold");
+      @include u-display("block");
       @include u-margin-y(2);
     }
 
     .sds-feedback__input {
       @include u-width(full);
-      @include u-bg('base-lighter');
+      @include u-bg("base-lighter");
       border: none;
       resize: none;
     }

@@ -1,17 +1,17 @@
-/* stylelint-disable selector-no-qualifying-type -- legacy baseline (issue #735); see CI lint gate */
+/* stylelint-disable selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 $header-colors: (
   base: (
     background: 'base-lighter',
   ),
   accent-cool: (
-    background: 'accent-cool-lighter',
+    background: "accent-cool-lighter",
   ),
   accent-warm: (
-    background: 'accent-warm-lighter',
+    background: "accent-warm-lighter",
   ),
   feature: (
-    background: 'secondary-dark',
-    text: 'white'
+    background: "secondary-dark",
+    text: "white"
   )
 );
 
@@ -23,7 +23,7 @@ $header-colors: (
         @include u-bg(map-get(map-get($header-colors, $name), background));
       }
       @if map-get(map-get($header-colors, $name), text) {
-        @include u-text(map-get(map-get($header-colors, $name), text));
+        @include u-text(map-get(map-get($header-colors, $name), text))
       }
     }
   }
@@ -50,7 +50,7 @@ h2, .h2 {
   @include u-text('semibold');
 }
 
-h3, .h3 {
+h3, .h3{
   @include h3;
 }
 

@@ -1,4 +1,4 @@
-/* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); see CI lint gate */
+/* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 .cursor-pointer {
   cursor: pointer;
 }
@@ -64,15 +64,15 @@ i.sds-icon-margin {
 }
 
 .sds-textarea-small {
-  @include u-width('mobile');
+  @include u-width("mobile");
 }
 
 .sds-textarea-medium {
-  @include u-width('mobile-lg');
+  @include u-width("mobile-lg");
 }
 
 .sds-textarea-large {
-  @include u-width('tablet');
+  @include u-width("tablet");
   .usa-textarea {
     max-width: none !important;
   }
