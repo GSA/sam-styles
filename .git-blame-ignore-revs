@@ -1,0 +1,5 @@
+# Commits that should be ignored by git blame.
+# To use: git config blame.ignoreRevsFile .git-blame-ignore-revs
+
+# Bulk reformat with Prettier (issue #739)
+de978e14ee97404d3d067340e1792ea2424fa530
