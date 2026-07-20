@@ -10,6 +10,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -20,17 +22,17 @@ jobs:
           node-version: '24.x'
 
       - name: Install dependencies
-        run: npm i
+        run: npm ci
 
       - name: Run tests (stylelint)
         run: npm test
 
-      - name: Generate coverage report (SCSS compilation check)
-        run: npm run coverage
+      - name: SCSS compilation check
+        run: npm run compile:check
 
-      - name: Upload coverage artifact
+      - name: Upload compilation report artifact
         uses: actions/upload-artifact@v4
         with:
-          name: coverage-report
+          name: scss-compilation-report
           path: coverage/compilation-report.txt
           retention-days: 30
