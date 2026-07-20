@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); see CI lint gate */
 .usa-checkbox,
 .usa-radio {
   background-color: transparent !important;
@@ -15,7 +16,7 @@
 /* sds-panel wrapper for filters */
 
 .sds-panel {
-  padding: units("05") units(1);
+  padding: units('05') units(1);
 }
 
 .sds-filters--horizontal {
@@ -41,12 +42,12 @@
     @include u-margin-left(2);
     width: 240px;
 
-   formly-field {
-    display: block;
-    margin-right: 0rem !important;
-    margin-top: 0 !important;
+    formly-field {
+      display: block;
+      margin-right: 0 !important;
+      margin-top: 0 !important;
     }
-    
+
     @media only screen and (max-width: 800px) {
       @include u-margin-top(0.5);
       @include u-margin-left(0);
@@ -62,7 +63,7 @@
 
   .horizontal-reset {
     margin-left: auto;
-    @include u-margin-top("neg-2px");
+    @include u-margin-top('neg-2px');
     @media only screen and (max-width: 800px) {
       display: none;
     }

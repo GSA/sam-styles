@@ -9,7 +9,8 @@
     "federalist": "npm run build:storybook",
     "start": "npm run start:storybook",
     "start:storybook": "storybook dev -p 6006",
-    "build:storybook": "storybook build -o _site"
+    "build:storybook": "storybook build -o _site",
+    "lint": "stylelint 'sam-styles/**/*.scss'"
   },
   "keywords": [],
   "author": "",
@@ -27,10 +28,13 @@
     "@whitespace/storybook-addon-html": "^5.0.0",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
+    "postcss-scss": "^4.0.9",
     "sass": "^1.51.0",
     "sass-loader": "^12.6.0",
     "storybook": "^7.6.10",
-    "style-loader": "^3.3.1"
+    "style-loader": "^3.3.1",
+    "stylelint": "^17.14.1",
+    "stylelint-scss": "^7.2.0"
   },
   "dependencies": {
     "@uswds/uswds": "^3.3.0",

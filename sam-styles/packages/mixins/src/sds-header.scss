@@ -1,71 +1,72 @@
-@use "uswds-core" as *;
+/* stylelint-disable selector-no-qualifying-type -- legacy baseline (issue #735); see CI lint gate */
+@use 'uswds-core' as *;
 
 $header-colors: (
   base: (
     background: 'base-lighter',
   ),
   accent-cool: (
-    background: "accent-cool-lighter",
+    background: 'accent-cool-lighter',
   ),
   accent-warm: (
-    background: "accent-warm-lighter",
+    background: 'accent-warm-lighter',
   ),
   feature: (
-    background: "secondary-dark",
-    text: "white"
+    background: 'secondary-dark',
+    text: 'white'
   )
 );
 
 @mixin sds-header {
-    @include u-text('base-dark');
-    @each $color, $var in $header-colors {
-      &--#{$color} {
-        @if map-get(map-get($header-colors, $color), background) {
-          @include u-bg(map-get(map-get($header-colors, $color), background));
-        }
-        @if map-get(map-get($header-colors, $color), text) {
-          @include u-text(map-get(map-get($header-colors, $color), text))
-        }
+  @include u-text('base-dark');
+  @each $color, $var in $header-colors {
+    &--#{$color} {
+      @if map-get(map-get($header-colors, $color), background) {
+        @include u-bg(map-get(map-get($header-colors, $color), background));
+      }
+      @if map-get(map-get($header-colors, $color), text) {
+        @include u-text(map-get(map-get($header-colors, $color), text));
       }
     }
-    h1, h2, h3, h4, h5, h6 {
-      color: inherit;
-    }
   }
-
   h1, h2, h3, h4, h5, h6 {
-    @include u-text('base-dark');
-    &.sds-light {
-      @include u-text('normal');
-    }
+    color: inherit;
   }
-  
-  // Heading helper classes
-  h1, .h1 {
-    @include h1;
-    @include u-text('base');
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include u-text('base-dark');
+  &.sds-light {
+    @include u-text('normal');
   }
-  
-  h2, .h2 {
-    @include h2;
-    @include u-text('semibold');
-  }
-  
-  h3, .h3{
-    @include h3;
-  }
-  
-  h4, .h4 {
-    @include h4;
-    @include u-text('semibold');
-  }
-  
-  h5, .h5 {
-    @include h5;
-  }
-  
-  h6, .h6 {
-    @include h6;
-    @include u-text('semibold');
-    text-transform: none;
-  }
+}
+
+// Heading helper classes
+h1, .h1 {
+  @include h1;
+  @include u-text('base');
+}
+
+h2, .h2 {
+  @include h2;
+  @include u-text('semibold');
+}
+
+h3, .h3 {
+  @include h3;
+}
+
+h4, .h4 {
+  @include h4;
+  @include u-text('semibold');
+}
+
+h5, .h5 {
+  @include h5;
+}
+
+h6, .h6 {
+  @include h6;
+  @include u-text('semibold');
+  text-transform: none;
+}

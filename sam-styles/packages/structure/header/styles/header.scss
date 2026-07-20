@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); see CI lint gate */
 /*******************************
        USWDS OVERRIDES
 *******************************/
@@ -11,7 +12,7 @@
 .usa-menu-btn {
   @include button-unstyled;
 
-  .counter-icon{
+  .counter-icon {
     color: red !important;
     margin-top: -2.4em;
     margin-left: 2.4em;
@@ -88,7 +89,6 @@
 .usa-megamenu.usa-nav__submenu::after {
   content: none;
 }
-
 
 /*******************************
       SDS Specific Styles

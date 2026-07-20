@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); see CI lint gate */
 .usa-accordion:not(.sds-accordion--filters):not(.usa-nav__primary) {
 
   @include u-padding-x(1);
@@ -10,27 +11,27 @@
 
   &.usa-accordion--accent_cool {
     .usa-accordion__button:not(.usa-banner__button) {
-      @include u-bg("accent-cool-lighter");
+      @include u-bg('accent-cool-lighter');
 
     }
   }
 
   .usa-accordion__button:not(.usa-banner__button) {
-    @include u-bg("white");
-    @include u-padding-right("205");
+    @include u-bg('white');
+    @include u-padding-right('205');
     @include u-padding-left(8);
     @include u-padding-y(2);
-    @include u-text("semibold");
-    @include u-position("relative");
+    @include u-text('semibold');
+    @include u-position('relative');
     @include u-border-x(1px);
     @include u-border-bottom(1px);
-    @include u-border("base-light");
+    @include u-border('base-light');
 
     font-size: 1.06em;
     background-image: none;
 
     &:hover {
-      @include u-bg("accent-cool-light");
+      @include u-bg('accent-cool-light');
     }
 
     &:focus,
@@ -42,13 +43,13 @@
       text-decoration: unset;
       pointer-events: none;
       background-color: transparent;
-      color: color("base-light");
+      color: color('base-light');
     }
 
     &::after {
-      content: "";
-      @include u-display("inline-block");
-      @include u-position("absolute");
+      content: '';
+      @include u-display('inline-block');
+      @include u-position('absolute');
       @include u-left(3);
       top: 0.8rem;
       width: 25px;
@@ -60,20 +61,20 @@
       border-radius: 50%;
     }
 
-    &[aria-expanded="true"] {
+    &[aria-expanded='true'] {
       background-image: none;
-      @include u-text("secondary-dark");
+      @include u-text('secondary-dark');
     }
 
-    &[aria-expanded="false"] {
+    &[aria-expanded='false'] {
       background-image: none;
       background-repeat: no-repeat;
       background-size: 1rem;
 
       &::before {
-        content: "";
-        @include u-display("inline-block");
-        @include u-position("absolute");
+        content: '';
+        @include u-display('inline-block');
+        @include u-position('absolute');
         @include u-left(3);
         top: 0.8rem;
         width: 25px;
@@ -98,9 +99,9 @@
     }
   }
 
-  .usa-accordion__content:not([display="none"]) {
+  .usa-accordion__content:not([display='none']) {
     @include u-border-bottom(1px);
-    border-color: color("base-light");
+    border-color: color('base-light');
   }
 
 }
@@ -117,11 +118,11 @@
   }
 
   .usa-accordion__content {
-    @include u-bg("white");
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 3px 0px inset;
-    margin: 0px;
+    @include u-bg('white');
+    box-shadow: rgba(0, 0, 0, 0.25) 0 1px 3px 0 inset;
+    margin: 0;
     padding: 1em;
-    @include u-font("sans", "xs");
+    @include u-font('sans', 'xs');
     font-size: 0.87rem;
 
     .usa-input,
@@ -148,7 +149,7 @@
     border: none;
 
     &:hover {
-      @include u-bg("accent-cool-light");
+      @include u-bg('accent-cool-light');
     }
 
     &:focus,
@@ -161,7 +162,7 @@
       border-style: solid;
       border-width: 0.1em 0.1em 0 0;
       position: relative;
-      content: "";
+      content: '';
       height: 0.5em;
       right: 0.25em;
       top: 0.25em;
@@ -178,12 +179,12 @@
       content: none !important;
     }
 
-    &[aria-expanded="true"]:after {
+    &[aria-expanded='true']:after {
       background: none;
       border-style: solid;
       border-width: 0.1em 0.1em 0 0;
       position: relative;
-      content: "";
+      content: '';
       height: 0.5em;
       right: 0.25em;
       top: 0.25em;
@@ -194,7 +195,7 @@
       float: right;
     }
 
-    &[aria-expanded="true"]:before {
+    &[aria-expanded='true']:before {
       content: none !important;
     }
   }
@@ -203,7 +204,7 @@
 .usa-accordion--bordered {
   .usa-accordion__content {
     @include u-border(1px);
-    @include u-border("base-light");
+    @include u-border('base-light');
     @include u-border-top(0);
   }
 }
@@ -215,12 +216,12 @@
 
   .sds-accordion-next {
     .sds-accordion-title {
-      @include u-text("secondary-dark");
+      @include u-text('secondary-dark');
     }
   }
 
   .sds-accordion-next .sds-accordion-title {
-    @include u-text("base-dark");
+    @include u-text('base-dark');
   }
 }
 

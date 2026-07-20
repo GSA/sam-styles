@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); see CI lint gate */
 .sds-popup {
   position: relative;
   display: inline-block;
@@ -158,17 +159,17 @@
     }
 
     .tooltip {
-      @include u-display("inline-block");
-      @include u-bg("base-dark");
-      @include u-border("1px");
-      @include u-border("solid");
-      @include u-border("base-darkest");
-      @include u-text("base-lightest");
-      @include u-font("sans", "3xs");
-      @include u-padding-x("2px");
-      @include u-padding-y("05");
-      @include u-text("no-wrap");
-      @include u-margin("1px");
+      @include u-display('inline-block');
+      @include u-bg('base-dark');
+      @include u-border('1px');
+      @include u-border('solid');
+      @include u-border('base-darkest');
+      @include u-text('base-lightest');
+      @include u-font('sans', '3xs');
+      @include u-padding-x('2px');
+      @include u-padding-y('05');
+      @include u-text('no-wrap');
+      @include u-margin('1px');
     }
   }
 }
@@ -257,16 +258,16 @@
 
   .tooltip {
     font-weight: normal;
-    @include u-bg("base-dark");
-    @include u-border("1px");
-    @include u-border("solid");
-    @include u-border("base-darkest");
-    @include u-text("base-lightest");
-    @include u-font("sans", "3xs");
-    @include u-padding-x("2px");
-    @include u-padding-y("05");
-    @include u-text("normal");
-    @include u-margin("1px");
+    @include u-bg('base-dark');
+    @include u-border('1px');
+    @include u-border('solid');
+    @include u-border('base-darkest');
+    @include u-text('base-lightest');
+    @include u-font('sans', '3xs');
+    @include u-padding-x('2px');
+    @include u-padding-y('05');
+    @include u-text('normal');
+    @include u-margin('1px');
     min-width: 300px;
     max-width: 500px;
     text-indent: 0 !important;
@@ -298,8 +299,8 @@
   }
 
   &.tooltip {
-    @include u-border("1px");
-    @include u-border("base-darkest");
+    @include u-border('1px');
+    @include u-border('base-darkest');
     background-color: white;
   }
 
@@ -309,6 +310,6 @@
 
   p.content,
   p.title {
-    margin: 0em 1em;
+    margin: 0 1em;
   }
 }

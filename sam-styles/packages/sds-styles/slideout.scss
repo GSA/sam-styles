@@ -1,14 +1,15 @@
+/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); see CI lint gate */
 $slide-out-width: 15rem;
 
 .dialog-slide-out {
   position: fixed !important;
-  bottom: 0px;
-  top: 0px;
+  bottom: 0;
+  top: 0;
   width: $slide-out-width;
   height: 100%;
-  right: 0px;
+  right: 0;
 
-  &.sds-dialog__container{
+  &.sds-dialog__container {
     max-height: none;
     padding: 0;
   }
