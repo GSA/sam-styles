@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "stylelint \"sam-styles/**/*.scss\"",
+    "compile:check": "mkdir -p coverage && sass sam-styles/index.scss --no-source-map --load-path=. --load-path=sam-styles/packages --load-path=node_modules/@uswds/uswds/packages --load-path=node_modules/@uswds > /dev/null && echo \"SCSS compilation: OK\" | tee coverage/compilation-report.txt",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "storybook": "storybook dev -p 6006",

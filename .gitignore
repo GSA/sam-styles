@@ -25,3 +25,6 @@ spec/screenshots/metadata.js
 
 # ignore VSCode files
 .vscode/
+
+# coverage output
+coverage/

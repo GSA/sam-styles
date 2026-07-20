@@ -13,7 +13,9 @@
 - `npm i` — install
 - `npm start` / `npm run storybook` — dev server on port 6006
 - `npm run build:storybook` — build static site to `_site/` (the real CI verification step)
-- `npm test` — **not implemented** (`exit 1`); there is no test suite. Do not treat a failing `npm test` as a regression.
+- `npm test` — runs `stylelint` across all SCSS sources; exits 0 on clean lint.
+- `npm run coverage` — compiles `sam-styles/index.scss` via `sass` (all load paths pre-set); writes `coverage/compilation-report.txt`. Exits 0 on success. USWDS deprecation WARNINGs are pre-existing noise, not failures.
+- `npm run lint` — alias; same as `npm test`.
 
 Build gotcha: the Storybook build needs extra heap. CI sets `NODE_OPTIONS="--max_old_space_size=8192"`; use the same locally if `build:storybook` OOMs.
 
