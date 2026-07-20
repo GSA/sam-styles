@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '24.x'
       - name: Install Node Packages
-        run: npm i
+        run: npm ci
       - name: Lint SCSS
         run: npm run lint
   Build-Storybook-Assets:

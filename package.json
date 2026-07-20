@@ -10,7 +10,7 @@
     "start": "npm run start:storybook",
     "start:storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build -o _site",
-    "lint": "stylelint 'sam-styles/**/*.scss'"
+    "lint": "stylelint \"sam-styles/**/*.scss\""
   },
   "keywords": [],
   "author": "",
