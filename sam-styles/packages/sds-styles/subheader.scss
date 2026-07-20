@@ -1,3 +1,4 @@
+/* stylelint-disable max-nesting-depth -- legacy baseline (issue #735); tracked in #740 */
 .sds-subheader__title,
 .subheader__buttons {
   @include u-margin-bottom(1);
@@ -48,10 +49,10 @@
         // Mobile or Tablet
         &.sds-button--circular{
           &:active{
-            box-shadow: 0px 0px 0 1px #162e51;
+            box-shadow: 0 0 0 1px #162e51;
           }
           &:hover{
-            box-shadow: 0px 0px 20px -1px #162e51;
+            box-shadow: 0 0 20px -1px #162e51;
           }
         }
       }

@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 .usa-step-indicator__total-steps {
     @include u-text("secondary");
   }

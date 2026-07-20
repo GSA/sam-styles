@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 .sds-menu {
   @include u-padding-top(1);
   @include u-padding-bottom('105');

@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 /*******************************
        USWDS OVERRIDES
 *******************************/
@@ -10,7 +11,7 @@
     @include at-media-max($theme-header-min-width) {
       background: color('accent-cool-lighter');
       &.is-visible {
-        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
       }
     }
   }

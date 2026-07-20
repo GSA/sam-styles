@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 .sds-popup {
   position: relative;
   display: inline-block;
@@ -309,6 +310,6 @@
 
   p.content,
   p.title {
-    margin: 0em 1em;
+    margin: 0 1em;
   }
 }

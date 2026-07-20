@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 $button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
 $info-light-alt: #9DDFEB;
@@ -39,7 +40,7 @@ $error-dark-alt: #B50909;
     @include u-text($theme-link-color);
     border: none;
     text-decoration: underline;
-    min-width: 0px !important;
+    min-width: 0 !important;
 
     &.usa-button--active,
     &:active {

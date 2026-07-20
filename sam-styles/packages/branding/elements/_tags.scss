@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 $info-light-alt: #9DDFEB;
 $info-lighter-alt: #E7F6F8;
 $info-dark-alt: #009EC1;
@@ -438,7 +439,7 @@ $error-dark-alt: #B50909;
       width: 100%; 
       max-width: none; 
       border-radius: 4px 4px 0 0;
-      margin: 0px;
+      margin: 0;
     }
   
     &--info {

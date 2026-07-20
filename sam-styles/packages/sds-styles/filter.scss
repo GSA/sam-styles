@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 .usa-checkbox,
 .usa-radio {
   background-color: transparent !important;
@@ -43,7 +44,7 @@
 
    formly-field {
     display: block;
-    margin-right: 0rem !important;
+    margin-right: 0 !important;
     margin-top: 0 !important;
     }
     
