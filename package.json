@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "stylelint \"sam-styles/**/*.scss\"",
-    "compile:check": "mkdir -p coverage && sass sam-styles/index.scss --no-source-map --load-path=. --load-path=sam-styles/packages --load-path=node_modules/@uswds/uswds/packages --load-path=node_modules/@uswds > /dev/null && echo \"SCSS compilation: OK\" | tee coverage/compilation-report.txt",
+    "compile:check": "node scripts/compile-check.js",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "storybook": "storybook dev -p 6006",
