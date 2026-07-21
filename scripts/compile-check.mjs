@@ -1,11 +1,14 @@
 // scripts/compile-check.js
 // Cross-platform SCSS compilation smoke-check.
-// Runs: sass sam-styles/index.scss --no-source-map [load paths] > /dev/null
+// Runs: sass sam-styles/index.scss --no-source-map [load paths]
 // Writes coverage/compilation-report.txt and exits 0 on success.
 
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
+import { execSync } from "child_process";
+import { mkdirSync, writeFileSync } from "fs";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const loadPaths = [
   ".",
@@ -26,8 +29,8 @@ try {
   process.exit(1);
 }
 
-const outDir = path.join(__dirname, "..", "coverage");
-fs.mkdirSync(outDir, { recursive: true });
+const outDir = join(__dirname, "..", "coverage");
+mkdirSync(outDir, { recursive: true });
 const msg = "SCSS compilation: OK\n";
-fs.writeFileSync(path.join(outDir, "compilation-report.txt"), msg);
+writeFileSync(join(outDir, "compilation-report.txt"), msg);
 process.stdout.write(msg);

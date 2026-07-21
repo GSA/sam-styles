@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "stylelint \"sam-styles/**/*.scss\"",
-    "compile:check": "node scripts/compile-check.js",
+    "compile:check": "node scripts/compile-check.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "storybook": "storybook dev -p 6006",
