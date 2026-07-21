@@ -55,13 +55,14 @@ module.exports = {
           options: {
             sourceMap: true,
             sassOptions: {
-              includePaths: [
+              loadPaths: [
+                ".",
                 "./sam-styles/packages",
                 "./node_modules/@uswds/uswds/packages",
                 "./node_modules/@uswds",
               ],
-              implementation: require("sass-embedded"),
             },
+            implementation: require("sass-embedded"),
           },
         },
       ],
