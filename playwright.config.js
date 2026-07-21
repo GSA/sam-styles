@@ -17,7 +17,7 @@ module.exports = defineConfig({
       "npm run build:storybook -- --quiet && npx http-server _site --port 6007 --silent",
     url: "http://127.0.0.1:6007",
     reuseExistingServer: !process.env.CI,
-    timeout: 180_000,
+    timeout: 300_000,
     env: {
       NODE_OPTIONS: "--max_old_space_size=8192",
     },
