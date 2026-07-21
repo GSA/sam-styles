@@ -1,4 +1,4 @@
-/* stylelint-disable max-nesting-depth -- legacy baseline (issue #735); tracked in #740 */
+// (max-nesting-depth baseline resolved — issue #743)
 .sds-subheader__title,
 .subheader__buttons {
   @include u-margin-bottom(1);
@@ -25,37 +25,41 @@
       @include u-display("flex");
       @include u-flex("align-center");
     }
+
     .button-container {
       @include u-margin-top(0.5);
     }
+
     .actions-div {
       .actions-button {
         @include u-display("flex");
         @include u-margin-right(0);
         @include u-flex("align-center");
-
-        // Desktop
-        &.sds-button--labeled-icon {
-          @include u-padding-right(0.5);
-          .ellipsis-icon {
-            @include u-bg("secondary-dark");
-            @include u-text("white");
-            border-radius: 50%;
-            padding: 0.1em 0.2em;
-            margin-left: 0.4em;
-          }
-        }
-
-        // Mobile or Tablet
-        &.sds-button--circular {
-          &:active {
-            box-shadow: 0 0 0 1px #162e51;
-          }
-          &:hover {
-            box-shadow: 0 0 20px -1px #162e51;
-          }
-        }
       }
     }
+  }
+}
+
+// Desktop: labeled-icon variant — lifted to avoid exceeding nesting depth 4
+.sds-navbar .sds-subheader__content .actions-div .actions-button.sds-button--labeled-icon {
+  @include u-padding-right(0.5);
+
+  .ellipsis-icon {
+    @include u-bg("secondary-dark");
+    @include u-text("white");
+    border-radius: 50%;
+    padding: 0.1em 0.2em;
+    margin-left: 0.4em;
+  }
+}
+
+// Mobile / Tablet: circular variant — lifted to avoid exceeding nesting depth 4
+.sds-navbar .sds-subheader__content .actions-div .actions-button.sds-button--circular {
+  &:active {
+    box-shadow: 0 0 0 1px #162e51;
+  }
+
+  &:hover {
+    box-shadow: 0 0 20px -1px #162e51;
   }
 }

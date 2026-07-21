@@ -1,4 +1,4 @@
-/* stylelint-disable max-nesting-depth, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
+/* stylelint-disable selector-no-qualifying-type -- legacy baseline (issue #735); max-nesting-depth resolved in issue #743 */
 .sds-tree-table--scrollable {
   overflow: scroll;
 
@@ -51,17 +51,25 @@ table.sds-tree-table {
           cursor: pointer;
           top: 0.25rem;
           color: color("accent-cool");
-          svg {
-            background-color: color("ink");
-            border-radius: 50%;
-          }
         }
 
         .usa-button:hover {
           filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.1));
         }
       }
+    }
+  }
+}
 
+// Lifted to avoid nesting depth > 4 (issue #743)
+table.sds-tree-table tbody tr:not(.text-center) td:first-child .usa-button svg {
+  background-color: color("ink");
+  border-radius: 50%;
+}
+
+table.sds-tree-table {
+  tbody {
+    tr:not(.text-center) {
       td:nth-child(2) {
         border-left: 1px solid color("base-light");
       }
