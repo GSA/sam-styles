@@ -16,6 +16,10 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ !failure() }}
     needs: Build-Storybook
+    permissions:
+      contents: write
+      pages: write
+      pull-requests: write
     steps:
       # Only needed because rossjrw/pr-preview-action needs to run in a git repo
       - name: Check out repository code
