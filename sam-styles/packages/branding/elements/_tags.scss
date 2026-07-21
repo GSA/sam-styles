@@ -1,4 +1,4 @@
-/* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
+/* stylelint-disable selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 $info-light-alt: #9ddfeb;
 $info-lighter-alt: #e7f6f8;
 $info-dark-alt: #009ec1;
@@ -216,15 +216,15 @@ $error-dark-alt: #b50909;
 }
 
 .sds-tag--disabled {
-  @include u-bg("disabled", !important);
-  @include u-border("disabled-dark", !important);
+  @include u-bg("disabled");
+  @include u-border("disabled-dark");
 }
 
 // Block style tag
 div[class^="grid-col-"] .sds-tag--block,
 div[class*=" grid-col-"] .sds-tag--block {
-  display: block !important;
-  width: 100% !important;
+  display: block; /* stylelint-disable-line declaration-no-important */
+  width: 100%; /* stylelint-disable-line declaration-no-important */
 }
 
 /*
@@ -241,16 +241,16 @@ div[class*=" grid-col-"] .sds-tag--block {
 }
 
 .sds-tag--light {
-  @include u-bg("white", !important);
-  @include u-border("warning", !important);
-  @include u-text("base-darker", !important);
+  @include u-bg("white");
+  @include u-border("warning");
+  @include u-text("base-darker");
 }
 
 .sds-static--tag {
   @include u-display("block");
   @include u-margin-bottom(0);
   @include u-margin-top("2px");
-  @include u-margin-right(0.5, !important);
+  @include u-margin-right(0.5);
   @include u-font("sans", "3xs");
   min-width: 52px;
   width: 52px;
@@ -428,7 +428,7 @@ div[class*=" grid-col-"] .sds-tag--block {
 .sds-status-tag {
   @include u-font("sans", "3xs");
   @include u-text("normal");
-  padding: 6px 10px !important;
+  padding: 6px 10px;
   margin: 8px;
   border-radius: 99rem;
   display: inline-flex;

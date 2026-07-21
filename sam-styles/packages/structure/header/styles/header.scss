@@ -1,7 +1,6 @@
-/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 /*******************************
        USWDS OVERRIDES
-*******************************/
+*******************************
 /*-------------------
        Header
 --------------------*/
@@ -13,7 +12,7 @@
   @include button-unstyled;
 
   .counter-icon {
-    color: red !important;
+    color: red;
     margin-top: -2.4em;
     margin-left: 2.4em;
   }

@@ -1,4 +1,4 @@
-/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
+
 /*******************************
        USWDS OVERRIDES
 *******************************/
@@ -40,7 +40,7 @@
   .usa-footer__primary-link {
     // override USWDS arrow icon (before)
     &::before {
-      content: none !important;
+      content: none;
     }
 
     // Apply SDS plus/minus icon (after)
