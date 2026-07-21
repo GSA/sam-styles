@@ -14,7 +14,7 @@
     "length-zero-no-unit": true,
     "max-nesting-depth": 4,
     "selector-max-id": 0,
-    "selector-no-qualifying-type": [true, {"ignore": ["attribute"]}],
+    "selector-no-qualifying-type": [true, { "ignore": ["attribute"] }],
     "selector-pseudo-element-no-unknown": true,
     "string-no-newline": true
   }
