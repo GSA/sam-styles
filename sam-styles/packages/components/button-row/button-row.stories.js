@@ -1,8 +1,8 @@
 export default {
-    title: "Components/ButtonRow",
-  };
-  const Template = () => {
-    return `<h2>Button Row</h2>
+  title: "Components/ButtonRow",
+};
+const Template = () => {
+  return `<h2>Button Row</h2>
     <div class="sds-button-row">
         <button class="usa-button bg-primary-lighter">Back</button>
         <button class="usa-button bg-primary-lighter">Cancel</button>
@@ -51,6 +51,5 @@ export default {
         </div>
     </div>
   `;
-  };
-  export const Default = Template.bind({});
-  
+};
+export const Default = Template.bind({});

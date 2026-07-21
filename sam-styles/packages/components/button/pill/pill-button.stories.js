@@ -22,4 +22,3 @@ export const Cancel = () => {
 export const Previous = () => {
   return PreviousTemplate;
 };
-

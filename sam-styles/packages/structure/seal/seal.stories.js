@@ -1,9 +1,9 @@
-import SealStructure from "./templates/seal.html"
+import SealStructure from "./templates/seal.html";
 
 export default {
-    title: "Structure/Seal",
-  };
+  title: "Structure/Seal",
+};
 
-  export const Seal = () => {
-    return SealStructure;
-  };
+export const Seal = () => {
+  return SealStructure;
+};

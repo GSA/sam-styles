@@ -1,8 +1,8 @@
 export default {
-    title: "Components/History",
-  };
-  const Template = () => {
-    return `<ul class="sds-history">
+  title: "Components/History",
+};
+const Template = () => {
+  return `<ul class="sds-history">
     <li>
         <div class="sds-history__bullet"></div>
         <div class="sds-card shadow-none">
@@ -38,6 +38,5 @@ export default {
     </li>
 </ul>
   `;
-  };
-  export const History = Template.bind({});
-  
+};
+export const History = Template.bind({});

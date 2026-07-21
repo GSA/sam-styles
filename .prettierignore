@@ -1,0 +1,16 @@
+# Build output
+_site/
+
+# Vendor / static assets (not authored source)
+assets/
+public/
+
+# Dependencies
+node_modules/
+
+# Malformed HTML fragments that pre-date this PR — prettier cannot parse them
+sam-styles/packages/components/alerts/templates/overview.html
+sam-styles/packages/components/tags/status.html
+sam-styles/packages/components/tags/statusTag.html
+sam-styles/packages/misc/pop-up/pop-up.html
+sam-styles/packages/patterns/pages/templates/fullPage.html

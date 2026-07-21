@@ -8,8 +8,8 @@ import OverviewTemplate from "./templates/overview.html";
 export default {
   title: "Components/Alert",
   argTypes: {
-    class: {type: "string"},
-    text: {type: "string"},
+    class: { type: "string" },
+    text: { type: "string" },
   },
 };
 
@@ -113,6 +113,5 @@ Default.args = {
   class: "",
   //role: "",
   //title: "",
-  text: 'Consectetur adipiscing elit, sed do eiusmod tempor indididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+  text: "Consectetur adipiscing elit, sed do eiusmod tempor indididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
 };
-

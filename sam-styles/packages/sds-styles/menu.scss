@@ -1,35 +1,34 @@
 /* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 .sds-menu {
   @include u-padding-top(1);
-  @include u-padding-bottom('105');
+  @include u-padding-bottom("105");
 }
 
 .sds-menu__header {
-  @include u-display('flex');
-  @include u-flex('align-center');
+  @include u-display("flex");
+  @include u-flex("align-center");
   justify-content: space-between;
   padding: 0 10px 5px 20px;
   margin-bottom: 3px;
   border-bottom: 1px solid #eae6e6;
 
   button {
-    border: 2px solid color('base-light');
+    border: 2px solid color("base-light");
 
     &:hover {
-      border-color: color('primary');
+      border-color: color("primary");
     }
 
     &:active {
-      border-color: color('secondary-dark');
-      ;
+      border-color: color("secondary-dark");
     }
   }
 }
 
 .sds-menu__header-title {
   font-size: 18px;
-  font-weight: font-weight('semibold');
-  color: color('gray-warm-70');
+  font-weight: font-weight("semibold");
+  color: color("gray-warm-70");
 }
 
 .sds-menu__item {
@@ -39,15 +38,15 @@
   padding: 6px 20px;
   width: 100%;
   text-decoration: none;
-  font-weight: font-weight('semibold');
+  font-weight: font-weight("semibold");
   font-size: 17px;
 
   &:hover {
-    color: #7a591a
+    color: #7a591a;
   }
 
   &:focus {
-    color: color('accent-warm-darker');
+    color: color("accent-warm-darker");
     text-decoration: underline;
     outline-offset: -4px !important;
   }
@@ -56,11 +55,11 @@
 // Small menu
 .sds-menu.sds-menu--small {
   .sds-menu__header-title {
-    @include u-font('sans', 'xs');
+    @include u-font("sans", "xs");
   }
 
   .sds-menu__item {
-    @include u-font('sans', '2xs');
+    @include u-font("sans", "2xs");
   }
 }
 
@@ -109,7 +108,7 @@
   &:active {
     @include u-border("secondary-dark");
     box-shadow: $button-shadow;
-    color: #1A4480;
+    color: #1a4480;
   }
 
   &.usa-button--hover,
@@ -121,21 +120,21 @@
     display: none;
   }
 
-  @include at-media('tablet-lg') {
+  @include at-media("tablet-lg") {
     span {
       display: inline;
-      color: #1A4480;
+      color: #1a4480;
     }
 
     height: 40px;
     width: 125px;
-    @include u-radius('lg');
+    @include u-radius("lg");
 
     svg {
-      @include u-text('white');
-      @include u-bg('secondary-dark');
+      @include u-text("white");
+      @include u-bg("secondary-dark");
       border-radius: 50%;
-      padding: .25rem;
+      padding: 0.25rem;
       margin-left: 8px;
       height: 1.25em;
     }
@@ -147,7 +146,7 @@
 
   usa-icon {
     font-size: 1.5rem;
-    vertical-align: -0.4rem
+    vertical-align: -0.4rem;
   }
 
   &.usa-button {
@@ -191,7 +190,7 @@
   }
 }
 
-@media only screen and (min-width: 400px) and (max-width:800px) {
+@media only screen and (min-width: 400px) and (max-width: 800px) {
   .sds-button--menu {
     padding: 1em 0.5em;
 

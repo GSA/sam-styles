@@ -1,8 +1,8 @@
 export default {
-    title: "Components/Dashboard/Statistics",
-  };
-  const Template = () => {
-    return `<h3 class="margin-0">SDS Statistic Alternative</h3>
+  title: "Components/Dashboard/Statistics",
+};
+const Template = () => {
+  return `<h3 class="margin-0">SDS Statistic Alternative</h3>
     <div class="margin-x-2 display-flex">
         <div class="sds-statistics--alt">
             <button class="statistic-alt">
@@ -18,6 +18,5 @@ export default {
         </div>
     </div>
   `;
-  };
-  export const Alt = Template.bind({});
-  
+};
+export const Alt = Template.bind({});

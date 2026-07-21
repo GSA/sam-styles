@@ -87,7 +87,5 @@ const Template = () => {
 `;
 };
 
-
-
 export const Checkboxes = Template.bind({});
 //export const CheckboxTile = TileTemplate.bind({});

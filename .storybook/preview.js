@@ -15,5 +15,5 @@ export const parameters = {
     },
   },
 };
-import '../node_modules/@uswds/uswds/dist/js/uswds.min.js';
+import "../node_modules/@uswds/uswds/dist/js/uswds.min.js";
 import "../sam-styles/index.scss";

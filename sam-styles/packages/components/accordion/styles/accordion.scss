@@ -1,6 +1,5 @@
 /* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 .usa-accordion:not(.sds-accordion--filters):not(.usa-nav__primary) {
-
   @include u-padding-x(1);
 
   &.border-0 {
@@ -12,7 +11,6 @@
   &.usa-accordion--accent_cool {
     .usa-accordion__button:not(.usa-banner__button) {
       @include u-bg("accent-cool-lighter");
-
     }
   }
 
@@ -103,7 +101,6 @@
     @include u-border-bottom(1px);
     border-color: color("base-light");
   }
-
 }
 
 .usa-accordion.sds-accordion--filters {

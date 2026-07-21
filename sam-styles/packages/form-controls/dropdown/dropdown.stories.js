@@ -1,15 +1,15 @@
 export default {
-    title: "Form Elements/Dropdown",
-    argTypes: {
-      label: {type: "string"},
-      classTypes: {
-        control: {type: "select"},
-        options: ["", "usa-focus", "usa-input--error", "usa-input--success"],
-      },
+  title: "Form Elements/Dropdown",
+  argTypes: {
+    label: { type: "string" },
+    classTypes: {
+      control: { type: "select" },
+      options: ["", "usa-focus", "usa-input--error", "usa-input--success"],
     },
-  };
-  const Template = (args) => {
-    return ` 
+  },
+};
+const Template = (args) => {
+  return ` 
     <h4>Default</h4>
   <form class="usa-form">
       <label class="usa-label" for="options">Dropdown label</label>
@@ -32,10 +32,9 @@ export default {
       </select>
   </form>
   `;
-  };
-  
-  export const Dropdown = Template.bind({});
-  Dropdown.args = {
-    label: "Text input label",
-  };
-  
+};
+
+export const Dropdown = Template.bind({});
+Dropdown.args = {
+  label: "Text input label",
+};

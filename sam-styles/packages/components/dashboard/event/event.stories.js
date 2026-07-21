@@ -1,8 +1,8 @@
 export default {
-    title: "Components/Dashboard/Event",
-  };
-  const Template = () => {
-    return `<div class="margin-4 width-mobile">
+  title: "Components/Dashboard/Event",
+};
+const Template = () => {
+  return `<div class="margin-4 width-mobile">
         <div class="sds-feed">
             <div class="event margin-0">
                 <div class="content">
@@ -67,6 +67,5 @@ export default {
         </div>
     </div>
   `;
-  };
-  export const Event = Template.bind({});
-  
+};
+export const Event = Template.bind({});

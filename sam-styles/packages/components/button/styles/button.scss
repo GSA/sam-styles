@@ -1,13 +1,13 @@
 /* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 $button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
-$info-light-alt: #9DDFEB;
-$info-lighter-alt: #E7F6F8;
-$info-dark-alt: #009EC1;
+$info-light-alt: #9ddfeb;
+$info-lighter-alt: #e7f6f8;
+$info-dark-alt: #009ec1;
 
-$error-light-alt: #FDB8AE;
-$error-lightest-alt: #FDE0DB;
-$error-dark-alt: #B50909;
+$error-light-alt: #fdb8ae;
+$error-lightest-alt: #fde0db;
+$error-dark-alt: #b50909;
 
 .usa-button {
   @include u-text("secondary-darker");
@@ -439,14 +439,14 @@ $error-dark-alt: #B50909;
   &.usa-button--hover,
   &:hover {
     background-color: $info-lighter-alt;
-  border-color: $info-lighter-alt;
+    border-color: $info-lighter-alt;
   }
 
   &.usa-button--active,
   &:active {
     color: color("white");
     background-color: $info-dark-alt;
-  border-color: $info-dark-alt;
+    border-color: $info-dark-alt;
   }
 }
 
@@ -457,14 +457,14 @@ $error-dark-alt: #B50909;
   &.usa-button--hover,
   &:hover {
     background-color: $error-lightest-alt;
-  border-color: $error-lightest-alt;
+    border-color: $error-lightest-alt;
   }
 
   &.usa-button--active,
   &:active {
     color: color("white");
     background-color: $error-dark-alt;
-  border-color: $error-dark-alt;
+    border-color: $error-dark-alt;
   }
 }
 
@@ -913,8 +913,8 @@ $error-dark-alt: #B50909;
 .usa-button-pill {
   @include u-radius("pill");
   @include u-display("flex");
-  @include u-flex('align-center'); // Vertically align items in the center
-  @include u-flex('justify-center'); // Horizontally center content
+  @include u-flex("align-center"); // Vertically align items in the center
+  @include u-flex("justify-center"); // Horizontally center content
 
   svg {
     width: 16px;

@@ -42,12 +42,12 @@
     @include u-margin-left(2);
     width: 240px;
 
-   formly-field {
-    display: block;
-    margin-right: 0 !important;
-    margin-top: 0 !important;
+    formly-field {
+      display: block;
+      margin-right: 0 !important;
+      margin-top: 0 !important;
     }
-    
+
     @media only screen and (max-width: 800px) {
       @include u-margin-top(0.5);
       @include u-margin-left(0);

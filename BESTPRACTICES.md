@@ -45,7 +45,7 @@
     6. pseudo-states (:checked, :target, etc.) and pseudo-elements (::after, ::selection, etc.)
     7. nested elements
     8. nested classes
-_Can deviate from example below but try to be consistent throughout for readability_
+       _Can deviate from example below but try to be consistent throughout for readability_
 - Grid Systems
   - Do not nest containers
     - Containers are meant to be parent of grid system so should only be added to the body once. Everything else should be done with rows and columns (grid-row, grid-col)

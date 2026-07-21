@@ -1,15 +1,15 @@
 export default {
-    title: "Form Elements/AddressForm",
-    argTypes: {
-      label: {type: "string"},
-      classTypes: {
-        control: {type: "select"},
-        options: ["", "usa-focus", "usa-input--error", "usa-input--success"],
-      },
+  title: "Form Elements/AddressForm",
+  argTypes: {
+    label: { type: "string" },
+    classTypes: {
+      control: { type: "select" },
+      options: ["", "usa-focus", "usa-input--error", "usa-input--success"],
     },
-  };
-  const Template = (args) => {
-    return ` 
+  },
+};
+const Template = (args) => {
+  return ` 
     <div class="sds-form-wrapper grid-row">
     <form class="sds-form usa-form usa-form--large">
         <fieldset class="usa-fieldset">
@@ -137,10 +137,9 @@ export default {
     </form>
 </div>
   `;
-  };
-  
-  export const AddressForm = Template.bind({});
-  AddressForm.args = {
-    label: "Text input label",
-  };
-  
+};
+
+export const AddressForm = Template.bind({});
+AddressForm.args = {
+  label: "Text input label",
+};

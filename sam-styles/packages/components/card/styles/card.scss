@@ -3,33 +3,34 @@
        SDS CARD
 --------------------*/
 $sds-card-border-width: 1px;
-$sds-card-border-radius: border-radius('md');
-$inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width});
+$sds-card-border-radius: border-radius("md");
+$inner-border-radius: calc(
+  #{$sds-card-border-radius} - #{$sds-card-border-width}
+);
 
 .sds-card {
   @include u-padding(0);
-  @include u-border('base-light', 'solid', $sds-card-border-width);
+  @include u-border("base-light", "solid", $sds-card-border-width);
   border-radius: $sds-card-border-radius;
   @include u-shadow(2);
 
   &__title {
     @include u-margin-y(0);
-    @include u-display('inline-block');
-
+    @include u-display("inline-block");
   }
 
   &__body {
     @include u-padding(2);
 
-    >*:first-child {
+    > *:first-child {
       @include u-margin-top(0);
     }
 
-    >*:last-child {
+    > *:last-child {
       @include u-margin-bottom(0);
     }
-    &--accent-cool{
-      @include u-bg('accent-cool-lighter');
+    &--accent-cool {
+      @include u-bg("accent-cool-lighter");
     }
   }
 
@@ -40,36 +41,35 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     border-top-left-radius: $inner-border-radius;
     border-top-right-radius: $inner-border-radius;
 
-
     &--flex {
       @include grid-row;
-      @include u-display('flex');
-      @include u-flex('align-center');
+      @include u-display("flex");
+      @include u-flex("align-center");
 
       .sds-card__title {
         @include grid-col(12);
-        @include u-text('center');
-        @include at-media('tablet-lg') {
-          @include grid-col('auto');
-          @include u-text('left');
-          flex: flex('auto');
+        @include u-text("center");
+        @include at-media("tablet-lg") {
+          @include grid-col("auto");
+          @include u-text("left");
+          flex: flex("auto");
         }
       }
 
       .sds-card__buttons {
         @include grid-col(12);
-        @include at-media('tablet-lg') {
+        @include at-media("tablet-lg") {
           @include grid-col;
           // IE
           flex: 1 0 auto;
-          flex: flex('fill');
-          @include u-text('right');
+          flex: flex("fill");
+          @include u-text("right");
         }
       }
 
       .usa-button {
         @include u-margin-top(1);
-        @include at-media('tablet-lg') {
+        @include at-media("tablet-lg") {
           margin-top: 0;
         }
       }
@@ -81,28 +81,28 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
         @include u-margin-right(1);
       }
 
-      >* {
-        @include u-display('inline-block');
-        @include u-text('bottom');
+      > * {
+        @include u-display("inline-block");
+        @include u-text("bottom");
       }
     }
 
     &--stacked,
     &--center {
-      @include u-display('flex');
+      @include u-display("flex");
       justify-content: center;
       align-items: center;
     }
 
     &--action {
-      @include u-display('flex');
-      @include u-flex('align-center', 'justify');
+      @include u-display("flex");
+      @include u-flex("align-center", "justify");
 
-      .sds-card__action>* {
+      .sds-card__action > * {
         @include u-margin-right(0);
       }
     }
-    
+
     .sds-card__collapse {
       transition: transform 0.2s ease-in;
       width: 33px;
@@ -114,7 +114,7 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     }
 
     .sds-card__collapse::before {
-      content: '';
+      content: "";
       display: block;
       width: 14px;
       height: 0;
@@ -127,7 +127,7 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     }
 
     .sds-card__collapse::after {
-      content: '';
+      content: "";
       display: block;
       width: 14px;
       height: 0;
@@ -139,7 +139,7 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     }
 
     // remove margin top from first sibling of a heading that isn't in a vertical card
-    .sds-card__title+* {
+    .sds-card__title + * {
       @include u-margin-top(0);
     }
   }
@@ -148,8 +148,8 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     .usa-button {
       @include u-width(full);
 
-      @include at-media('tablet-lg') {
-        @include u-width('auto');
+      @include at-media("tablet-lg") {
+        @include u-width("auto");
         margin-left: units(1);
         margin-right: units(0);
       }
@@ -157,16 +157,16 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
   }
 
   &__link {
-    @include u-width('full');
+    @include u-width("full");
     color: inherit;
   }
 
   &__action {
-    @include u-text('right');
+    @include u-text("right");
   }
 
   &--height-full {
-    @include u-height('full');
+    @include u-height("full");
   }
 
   &--list {
@@ -192,28 +192,27 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
   }
 
   &--vertical {
-
-    @include at-media('mobile') {
-      @include u-display('flex');
+    @include at-media("mobile") {
+      @include u-display("flex");
 
       .sds-card__header {
-        @include u-border-right('base-light', 'solid', $sds-card-border-width);
+        @include u-border-right("base-light", "solid", $sds-card-border-width);
         border-top-right-radius: 0;
         align-items: center;
         justify-content: left;
-        text-align: left; 
+        text-align: left;
       }
 
       .sds-card__body {
         text-align: center;
       }
     }
-    
-    @include at-media('tablet-lg') {
-      @include u-display('flex');
+
+    @include at-media("tablet-lg") {
+      @include u-display("flex");
 
       .sds-card__header {
-        @include u-border-right('base-light', 'solid', $sds-card-border-width);
+        @include u-border-right("base-light", "solid", $sds-card-border-width);
         border-top-right-radius: 0;
         text-align: left;
       }
@@ -228,25 +227,25 @@ $inner-border-radius: calc(#{$sds-card-border-radius} - #{$sds-card-border-width
     @include u-radius(0);
     .sds-card__header {
       cursor: pointer;
-      @include u-font-family('sans');
-      @include u-font-size('body', 'xs');
-      @include u-text('semibold');
+      @include u-font-family("sans");
+      @include u-font-size("body", "xs");
+      @include u-text("semibold");
     }
-    .sds-accordion__title{
+    .sds-accordion__title {
       @include u-padding-left(0);
     }
 
     .sds-card__title {
       .sds-card__subtitle {
         @include u-margin-y(0);
-        @include u-display('inline-block');
-        @include u-text('secondary-dark');
-        @include u-text('bold');
+        @include u-display("inline-block");
+        @include u-text("secondary-dark");
+        @include u-text("bold");
       }
     }
   }
 
   .usa-button--outline {
-    @include u-bg('white');
+    @include u-bg("white");
   }
 }

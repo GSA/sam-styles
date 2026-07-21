@@ -1,7 +1,6 @@
 import DefaultParagraph from "./templates/default.html";
 import LinksParagraph from "./templates/links.html";
 
-
 export default {
   title: "Branding/Typography/Paragraph",
 };
@@ -11,6 +10,5 @@ export const Default = () => {
 };
 
 export const Links = () => {
-    return LinksParagraph;
+  return LinksParagraph;
 };
-

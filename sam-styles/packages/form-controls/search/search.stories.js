@@ -1,4 +1,4 @@
-import SearchLayout from "./templates/search.html"
+import SearchLayout from "./templates/search.html";
 
 /*export default {
   title: "Form Elements/Search",

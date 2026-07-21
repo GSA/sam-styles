@@ -36,5 +36,3 @@ When USWDS does not provide a needed UI. A new component its created following t
 ```
 sds-dialog
 ```
-
-

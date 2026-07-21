@@ -1,8 +1,8 @@
 export default {
-    title: "Components/Actions",
-  };
-  const Template = () => {
-    return `<div class="grid-row bg-accent-warm-lighter">
+  title: "Components/Actions",
+};
+const Template = () => {
+  return `<div class="grid-row bg-accent-warm-lighter">
                 <div class="tablet:grid-col">
                     <h4>Trigger options</h4>
                     <button class="usa-button sds-button--action">
@@ -34,6 +34,5 @@ export default {
                 </div>
             </div> 
   `;
-  };
-  export const Actions = Template.bind({});
-  
+};
+export const Actions = Template.bind({});

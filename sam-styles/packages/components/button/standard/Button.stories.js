@@ -7,18 +7,26 @@ import ShadowTemplate from "./templates/shadow.html";
 export default {
   title: "Components/Button/Standard",
   argTypes: {
-    label: {control: "text"},
+    label: { control: "text" },
     type: {
-      control: {type: "select"},
-      options: ["primary", "secondary", "base", "unstyled", "accent-cool", "outline", "shadow"],
+      control: { type: "select" },
+      options: [
+        "primary",
+        "secondary",
+        "base",
+        "unstyled",
+        "accent-cool",
+        "outline",
+        "shadow",
+      ],
     },
     size: {
-      control: {type: "select"},
+      control: { type: "select" },
       options: ["", "big", "small"],
     },
 
     color: {
-      control: {type: "select"},
+      control: { type: "select" },
       options: ["", "light", "lighter", "lightest", "vivid", "dark", "darker"],
     },
   },
@@ -97,10 +105,10 @@ export const Shadow = () => {
 };
 
 export const Default = CustomTemplate.bind({});
-Default.args = {label: "Default"};
+Default.args = { label: "Default" };
 
 export const Secondary = CustomTemplate.bind({});
-Secondary.args = {label: "Secondary", type: "secondary"};
+Secondary.args = { label: "Secondary", type: "secondary" };
 
 export const AccentCool = CustomTemplate.bind({});
 AccentCool.args = {
@@ -132,10 +140,10 @@ Outline.args = {
 };
 
 export const Danger = CustomTemplate.bind({});
- Danger.args = {
-   label: "Danger",
-   type: "danger",
- };
+Danger.args = {
+  label: "Danger",
+  type: "danger",
+};
 
 export const Unstyled = CustomTemplate.bind({});
 Unstyled.args = {

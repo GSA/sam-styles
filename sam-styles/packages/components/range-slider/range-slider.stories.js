@@ -6,7 +6,6 @@ export default {
       defaultValue: 20,
     },
   },*/
-
 };
 const Template = (args) => {
   return `

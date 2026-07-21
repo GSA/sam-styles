@@ -1,15 +1,15 @@
 export default {
-    title: "Form Elements/NameForm",
-    argTypes: {
-      label: {type: "string"},
-      classTypes: {
-        control: {type: "select"},
-        options: ["", "usa-focus", "usa-input--error", "usa-input--success"],
-      },
+  title: "Form Elements/NameForm",
+  argTypes: {
+    label: { type: "string" },
+    classTypes: {
+      control: { type: "select" },
+      options: ["", "usa-focus", "usa-input--error", "usa-input--success"],
     },
-  };
-  const Template = (args) => {
-    return ` 
+  },
+};
+const Template = (args) => {
+  return ` 
     <form class="usa-form">
     <fieldset class="usa-fieldset">
         <legend class="usa-legend">Name</legend>
@@ -27,10 +27,9 @@ export default {
     </fieldset>
     </form>
     `;
-  };
-  
-  export const NameForm = Template.bind({});
-  NameForm.args = {
-    label: "Text input label",
-  };
-  
+};
+
+export const NameForm = Template.bind({});
+NameForm.args = {
+  label: "Text input label",
+};

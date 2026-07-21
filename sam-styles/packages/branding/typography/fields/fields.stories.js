@@ -10,5 +10,5 @@ export const Default = () => {
 };
 
 export const Example = () => {
-    return ExampleField;
+  return ExampleField;
 };

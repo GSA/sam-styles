@@ -14,11 +14,26 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '24.x'
+          node-version: "24.x"
       - name: Install Node Packages
         run: npm ci
       - name: Lint SCSS
         run: npm run lint
+
+  Format-Check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24.x"
+      - name: Install Node Packages
+        run: npm ci
+      - name: Check formatting
+        run: npm run format:check
+
   Build-Storybook-Assets:
     runs-on: ubuntu-latest
     steps:
@@ -27,7 +42,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '24.x'
+          node-version: "24.x"
       - name: Install Node Packages
         run: npm i
       - name: Build Storybook Assets
