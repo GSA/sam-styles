@@ -2,18 +2,20 @@
 
 ## What this repo is
 
-`@gsa-sam/sam-styles` — a SASS/CSS component library for SAM.gov, documented via a **Storybook** site (Storybook 7, `@storybook/html`). There is **no application runtime and no test suite**; the deliverable is the compiled styles plus the Storybook docs deployed to GitHub Pages.
+`@gsa-sam/sam-styles` — a SASS/CSS component library for SAM.gov, documented via a **Storybook** site (Storybook 7, `@storybook/html`). There is **no application runtime**; the deliverable is the compiled styles plus the Storybook docs deployed to GitHub Pages.
 
 ## Node version
 
-- Pinned to **Node 24** (active LTS). `.nvmrc` is the canonical version; `.github/workflows/build.yml` (`node-version: '24.x'`) must be kept in sync with it. Use `fnm use` / `nvm use` to match `.nvmrc`.
+- Pinned to **Node 24** (active LTS). `.nvmrc` is the **single source of truth** — all GitHub Actions workflows use `node-version-file: '.nvmrc'`. Use `fnm use` / `nvm use` to match locally. To upgrade Node, update `.nvmrc` only; CI picks it up automatically.
 
 ## Developer commands
 
 - `npm i` — install
 - `npm start` / `npm run storybook` — dev server on port 6006
 - `npm run build:storybook` — build static site to `_site/` (the real CI verification step)
-- `npm test` — **not implemented** (`exit 1`); there is no test suite. Do not treat a failing `npm test` as a regression.
+- `npm test` — runs `stylelint` across all SCSS sources; exits 0 on clean lint.
+- `npm run compile:check` — compiles `sam-styles/index.scss` via `sass` (all load paths pre-set); writes `coverage/compilation-report.txt`. Exits 0 on success. USWDS deprecation WARNINGs are pre-existing noise, not failures.
+- `npm run lint` — alias; same as `npm test`.
 
 Build gotcha: the Storybook build needs extra heap. CI sets `NODE_OPTIONS="--max_old_space_size=8192"`; use the same locally if `build:storybook` OOMs.
 
@@ -22,7 +24,9 @@ The build emits many `@storybook/components` "export not found" WARNings and web
 ## CI
 
 - CI runs on **GitHub Actions only** (`.github/workflows/`). There is no CircleCI.
-- `build.yml` is a reusable workflow (`workflow_call`) that builds Storybook; `build-and-deploy-storybook.yml` (push to `master`) and `pr-workflow.yml` (PR preview) both call it. Node version lives only in `build.yml` — the callers don't pin Node.
+- `build.yml` is a reusable workflow (`workflow_call`) that lints and builds Storybook; `build-and-deploy-storybook.yml` (push to `master`) and `pr-workflow.yml` (PR preview) both call it.
+- `test.yml` runs `npm test` (stylelint) and `npm run compile:check` (full SCSS compilation) on every PR; uploads a `scss-compilation-report` artifact.
+- All workflows read the Node version from `.nvmrc` via `node-version-file: '.nvmrc'` — do **not** hardcode a version in workflow files.
 
 ## Source layout
 
