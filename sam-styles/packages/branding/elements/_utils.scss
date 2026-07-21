@@ -1,4 +1,4 @@
-/* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
+/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 .cursor-pointer {
   cursor: pointer;
 }
@@ -23,43 +23,43 @@
   max-width: 136ex !important;
 }
 
-i.size-xs {
+.size-xs {
   font-size: 0.75em;
 }
-i.size-sm {
+.size-sm {
   font-size: 0.875em;
 }
-i.size-lg {
+.size-lg {
   font-size: 1.33em;
 }
-i.size-2x {
+.size-2x {
   font-size: 2em;
 }
-i.size-3x {
+.size-3x {
   font-size: 3em;
 }
-i.size-4x {
+.size-4x {
   font-size: 4em;
 }
-i.size-5x {
+.size-5x {
   font-size: 5em;
 }
-i.size-6x {
+.size-6x {
   font-size: 6em;
 }
-i.size-7x {
+.size-7x {
   font-size: 7em;
 }
-i.size-8x {
+.size-8x {
   font-size: 8em;
 }
-i.size-9x {
+.size-9x {
   font-size: 9em;
 }
-i.size-10x {
+.size-10x {
   font-size: 10em;
 }
-i.sds-icon-margin {
+.sds-icon-margin {
   margin-right: 0.5rem;
 }
 

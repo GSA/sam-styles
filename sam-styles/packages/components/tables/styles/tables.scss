@@ -1,4 +1,4 @@
-/* stylelint-disable max-nesting-depth, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
+/* stylelint-disable max-nesting-depth -- legacy baseline (issue #735); tracked in #740 */
 $sds-table-border: "1px";
 
 %sds-table--highlight {
@@ -44,19 +44,6 @@ $sds-table-border: "1px";
     td {
       @extend %sds-table--cell;
     }
-
-    // tiger stripes for tables without subsections or expandable rows
-    &:only-of-type:not(.sds-table--expansion) {
-      .sds-table__row:nth-of-type(even) > td {
-        @include u-bg("base-lightest");
-      }
-    }
-
-    &.sds-table__subsection {
-      th {
-        @include u-text("semibold");
-      }
-    }
   }
 
   // sticky column border
@@ -65,69 +52,82 @@ $sds-table-border: "1px";
     @include u-border-right("base-light", $sds-table-border);
   }
 
-  &__subsection {
-    tr:first-child > th {
-      @extend %sds-table--highlight;
-    }
-    // tiger stripes for subsections
-    tr:nth-of-type(odd) {
-      td {
-        @include u-bg("base-lightest");
-      }
-    }
-    // remove double border with thead bottom border
-    &:first-of-type > tr > th {
-      border-top: 0;
-    }
-  }
-
-  // expansion tables
-  &--expansion {
-    // tiger stripes for expansion tables
-    .sds-table__row:nth-child(4n + 3):not(.sds-table__row--expanded) {
-      td {
-        @include u-bg("base-lightest");
-      }
-    }
-
-    // detail row parent when expanded
-    .sds-table__row--expanded {
-      td {
-        @extend %sds-table--highlight;
-      }
-      // remove double border with thead bottom border
-      &:first-of-type > td {
-        border-top: 0;
-      }
-      // detail row when expanded
-      + .sds-table__row--detail {
-        display: table-row;
-      }
-    }
-
-    // wrapper
-    .sds-table__cell__expanded-wrapper {
-      overflow: hidden;
-      display: flex;
-    }
-
-    // detail row when collapsed
-    .sds-table__row--detail {
-      height: 0;
-      display: table-row;
-
-      .sds-table__cell--detail {
-        @include u-border-bottom("base-light", $sds-table-border);
-        @include u-padding-top(0);
-        @include u-padding-bottom(0);
-      }
-    }
-  }
-
   .sds-button.usa-button--unstyled {
     color: inherit;
     padding: 0;
     background: inherit;
+  }
+}
+
+// tiger stripes for tables without subsections or expandable rows
+.sds-table:not(:has(.sds-table--expansion)) {
+  .sds-table__row:nth-of-type(even) > td {
+    @include u-bg("base-lightest");
+  }
+}
+
+.sds-table .sds-table__subsection {
+  th {
+    @include u-text("semibold");
+  }
+}
+
+.sds-table__subsection {
+  tr:first-child > th {
+    @extend %sds-table--highlight;
+  }
+  // tiger stripes for subsections
+  tr:nth-of-type(odd) {
+    td {
+      @include u-bg("base-lightest");
+    }
+  }
+  // remove double border with thead bottom border
+  &:first-of-type > tr > th {
+    border-top: 0;
+  }
+}
+
+// expansion tables
+.sds-table--expansion {
+  // tiger stripes for expansion tables
+  .sds-table__row:nth-child(4n + 3):not(.sds-table__row--expanded) {
+    td {
+      @include u-bg("base-lightest");
+    }
+  }
+
+  // detail row parent when expanded
+  .sds-table__row--expanded {
+    td {
+      @extend %sds-table--highlight;
+    }
+    // remove double border with thead bottom border
+    &:first-of-type > td {
+      border-top: 0;
+    }
+    // detail row when expanded
+    + .sds-table__row--detail {
+      display: table-row;
+    }
+  }
+
+  // wrapper
+  .sds-table__cell__expanded-wrapper {
+    overflow: hidden;
+    display: flex;
+  }
+
+  // detail row when collapsed
+  .sds-table__row--detail {
+    height: 0;
+    display: table-row;
+
+    .sds-table__cell--detail {
+      @include u-border-bottom("base-light", $sds-table-border);
+      @include u-padding-top(0);
+      @include u-padding-bottom(0);
+    }
   }
 }
 
@@ -142,8 +142,8 @@ $sds-table-border: "1px";
 }
 
 .usa-table {
-  tr.sds-table__row--hovered,
-  tr.usa-table__row--hovered {
+  .sds-table__row--hovered,
+  .usa-table__row--hovered {
     td {
       @include u-bg("base-light", !important);
       cursor: pointer;
@@ -161,7 +161,7 @@ $sds-table-border: "1px";
       height: 1.5rem;
       width: 1.5rem;
       vertical-align: middle;
-      & > g.unsorted {
+      & > .unsorted {
         fill: #757575;
       }
     }
@@ -181,38 +181,32 @@ $sds-table-border: "1px";
   &:not(.usa-table--borderless):not(.sds-tree-table) {
     @include at-media("tablet") {
       thead {
-        th,
-        td {
-          /**
-          Overrides remaining borders to ensure correct color and width.
-          Must include :not(.mat-header-cell) in order to prevent a 2 px border from forming when sds-table extends usa-table
-          */
-          &:first-child:not(.mat-header-cell) {
-            @include u-border-left("base-light", $sds-table-border);
-          }
-          &:last-child:not(.mat-header-cell) {
-            @include u-border-right("base-light", $sds-table-border);
-          }
-          &:not(.mat-header-cell) {
-            @include u-border-top("base-light", $sds-table-border);
-          }
+        /**
+        Overrides remaining borders to ensure correct color and width.
+        Must include :not(.mat-header-cell) in order to prevent a 2 px border from forming when sds-table extends usa-table
+        */
+        :first-child:not(.mat-header-cell) {
+          @include u-border-left("base-light", $sds-table-border);
+        }
+        :last-child:not(.mat-header-cell) {
+          @include u-border-right("base-light", $sds-table-border);
+        }
+        :not(.mat-header-cell) {
+          @include u-border-top("base-light", $sds-table-border);
         }
       }
       tbody {
         tr {
           &:last-child {
-            td:not(.mat-cell) {
+            :not(.mat-cell) {
               @include u-border-bottom("base-light", $sds-table-border);
             }
           }
-          th,
-          td {
-            &:first-child:not(.mat-cell) {
-              @include u-border-left("base-light", $sds-table-border);
-            }
-            &:last-child:not(.mat-cell) {
-              @include u-border-right("base-light", $sds-table-border);
-            }
+          :first-child:not(.mat-cell) {
+            @include u-border-left("base-light", $sds-table-border);
+          }
+          :last-child:not(.mat-cell) {
+            @include u-border-right("base-light", $sds-table-border);
           }
         }
       }
@@ -220,20 +214,17 @@ $sds-table-border: "1px";
   }
   @include at-media("tablet") {
     thead {
-      th,
-      td {
-        /**
-          Removes internal borders so that only borders on the outside edges of header remain
-        */
-        &:not(:first-child) {
-          border-left: 0;
-        }
-        &:not(:last-child) {
-          border-right: 0;
-        }
-        &:not(.mat-header-cell) {
-          @include u-border-bottom("base-light", $sds-table-border);
-        }
+      /**
+        Removes internal borders so that only borders on the outside edges of header remain
+      */
+      :not(:first-child) {
+        border-left: 0;
+      }
+      :not(:last-child) {
+        border-right: 0;
+      }
+      :not(.mat-header-cell) {
+        @include u-border-bottom("base-light", $sds-table-border);
         padding-bottom: 0.5rem;
         padding-top: 0.5rem;
         padding-left: 1.5rem;
@@ -284,7 +275,7 @@ $sds-table-border: "1px";
     }
   }
   thead {
-    th[aria-sort] {
+    [aria-sort] {
       background-color: color($theme-table-header-background-color);
     }
   }

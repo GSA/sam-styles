@@ -1,4 +1,4 @@
-/* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
+/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 
 @mixin bordered-item($top: false) {
   @include u-border("1px");
@@ -11,14 +11,14 @@
   }
 }
 
-hr.thin {
+.thin {
   border: 0;
   height: 0;
   @include u-border-top(1px);
   @include u-border-top("base-lighter");
 }
 
-hr.fine {
+.fine {
   border: 0;
   height: 0;
   @include u-border-top(1px);

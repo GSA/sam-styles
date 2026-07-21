@@ -1,4 +1,4 @@
-/* stylelint-disable max-nesting-depth, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
+/* stylelint-disable max-nesting-depth -- legacy baseline (issue #735); tracked in #740 */
 .sds-tree-table--scrollable {
   overflow: scroll;
 
@@ -7,7 +7,7 @@
   }
 }
 
-table.sds-tree-table {
+.sds-tree-table {
   border-collapse: separate;
   border-spacing: 0 5px;
 
@@ -44,7 +44,7 @@ table.sds-tree-table {
       }
     }
 
-    tr:not(.text-center) {
+    :not(.text-center) {
       td:first-child {
         position: relative;
         .usa-button {
@@ -76,7 +76,7 @@ table.sds-tree-table {
       }
     }
 
-    tr[aria-expanded] {
+    [aria-expanded] {
       td {
         background-color: color("base-lightest");
       }
@@ -86,7 +86,7 @@ table.sds-tree-table {
       }
     }
 
-    tr[aria-level="1"] {
+    [aria-level="1"] {
       .vertical-border {
         margin-left: 1rem;
         margin-top: 1rem;
@@ -129,7 +129,7 @@ table.sds-tree-table {
 
   // CSS for up to 10 nested children
   @for $i from 1 through 10 {
-    tr[aria-level="#{$i}"] {
+    [aria-level="#{$i}"] {
       td:nth-child(2),
       .usa-button {
         position: relative;

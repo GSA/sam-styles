@@ -1,4 +1,4 @@
-/* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
+/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 $info-light-alt: #9ddfeb;
 $info-lighter-alt: #e7f6f8;
 $info-dark-alt: #009ec1;
@@ -221,8 +221,8 @@ $error-dark-alt: #b50909;
 }
 
 // Block style tag
-div[class^="grid-col-"] .sds-tag--block,
-div[class*=" grid-col-"] .sds-tag--block {
+[class^="grid-col-"] .sds-tag--block,
+[class*=" grid-col-"] .sds-tag--block {
   display: block !important;
   width: 100% !important;
 }

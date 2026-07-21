@@ -1,4 +1,3 @@
-/* stylelint-disable selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 .sds-field {
   @include u-font("sans", "2xs");
   @include u-text("base-dark");
@@ -11,11 +10,10 @@
   h6 {
     //heading style
     @extend .h2;
+  }
 
-    //heading light style
-    &.sds-light {
-      @extend .h3;
-    }
+  .sds-light {
+    @extend .h3;
   }
 
   .sds-field__name {
@@ -27,6 +25,7 @@
       padding-top: 4px;
     }
   }
+
   .sds-field__value {
     @include u-font("sans", $theme-body-font-size);
     @include u-display("inline-block");
@@ -35,54 +34,60 @@
       margin-left: -3.5rem;
     }
 
-    &--small {
-      @include u-font("sans", "3xs");
-      @include u-text("normal");
-      a.usa-link {
-        font-size: inherit;
-      }
-    }
-
-    &--large {
-      @include u-font("sans", "md");
-      @include u-text("semibold");
-      a.usa-link {
-        font-size: inherit;
-      }
-    }
-
-    &--paragraph {
-      @include u-display("block");
-      @include u-text("normal");
-      @include u-measure($theme-text-measure-wide);
-    }
-
-    a.usa-link {
+    .usa-link {
       font-size: inherit;
     }
   }
-  &--stacked {
-    .sds-field__name {
-      @include u-display("block");
-    }
-    .sds-field__value {
-      @include u-display("block");
-      &--paragraph {
-        @include u-display("block");
-      }
+
+  .sds-field__value--small {
+    @include u-font("sans", "3xs");
+    @include u-text("normal");
+    .usa-link {
+      font-size: inherit;
     }
   }
+
+  .sds-field__value--large {
+    @include u-font("sans", "md");
+    @include u-text("semibold");
+    .usa-link {
+      font-size: inherit;
+    }
+  }
+
+  .sds-field__value--paragraph {
+    @include u-display("block");
+    @include u-text("normal");
+    @include u-measure($theme-text-measure-wide);
+  }
+
   &--small {
     @include u-font("sans", "3xs");
   }
+
   &--large {
     @include u-font("sans", "sm");
   }
-  &--featured {
-    .sds-field__name {
-      @include u-text("italic");
-      @include u-text("light");
-      @include u-font("sans", "2xs");
-    }
+}
+
+.sds-field--stacked {
+  .sds-field__name {
+    @include u-display("block");
+  }
+
+  .sds-field__value {
+    @include u-display("block");
+  }
+
+  .sds-field__value--paragraph {
+    @include u-display("block");
+  }
+}
+
+.sds-field--featured {
+  .sds-field__name {
+    @include u-text("italic");
+    @include u-text("light");
+    @include u-font("sans", "2xs");
   }
 }

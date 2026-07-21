@@ -1,4 +1,4 @@
-/* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
+/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 /*******************************
        USWDS OVERRIDES
 *******************************/
@@ -103,11 +103,16 @@
       @include u-top("neg-05");
       @include u-right(-2px);
     }
-    &:hover,
-    &.usa-current {
+    &:hover {
       .sds-nav__secondary-item-text {
         @include add-bar("2px", "primary", "bottom", 1, 0, "neg-105");
       }
+    }
+  }
+
+  .usa-current {
+    .sds-nav__secondary-item-text {
+      @include add-bar("2px", "primary", "bottom", 1, 0, "neg-105");
     }
   }
 }

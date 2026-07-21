@@ -1,4 +1,4 @@
-/* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
+/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 @use "uswds-core" as *;
 @use "sam-styles/packages/theme/variables" as *;
 
@@ -122,7 +122,7 @@ sds-filters usa-accordion formly-field:first-child {
   @include u-margin-top(2rem);
   margin-left: -1.15rem;
 
-  input.usa-input {
+  .usa-input {
     @extend .usa-input--error;
   }
 }

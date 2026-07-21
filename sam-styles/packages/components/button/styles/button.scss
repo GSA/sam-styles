@@ -1,4 +1,4 @@
-/* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
+/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 $button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
 $info-light-alt: #9ddfeb;
@@ -42,14 +42,12 @@ $error-dark-alt: #b50909;
     text-decoration: underline;
     min-width: 0 !important;
 
-    &.usa-button--active,
     &:active {
       border: none;
       @include u-bg("transparent");
       @include u-text($theme-link-active-color);
     }
 
-    &.usa-button--hover,
     &:hover {
       border: none;
       @include u-bg("transparent");
@@ -565,17 +563,22 @@ $error-dark-alt: #b50909;
     border-width: 2px !important;
     border-style: solid !important;
     border-color: color("base-light") !important;
+  }
+}
 
-    &.sds-button--unstyled,
-    &.usa-button--unstyled {
-      box-shadow: none;
-      @include u-bg("transparent");
-      @include u-text("base");
-      border: none !important;
-      text-decoration: none;
-      &:hover {
-        font-weight: unset !important;
-      }
+.sds-button--disabled,
+.sds-button:disabled,
+.usa-button--disabled,
+.usa-button:disabled {
+  .sds-button--unstyled,
+  .usa-button--unstyled {
+    box-shadow: none;
+    @include u-bg("transparent");
+    @include u-text("base");
+    border: none !important;
+    text-decoration: none;
+    &:hover {
+      font-weight: unset !important;
     }
   }
 }
