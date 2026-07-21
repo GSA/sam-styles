@@ -144,9 +144,9 @@
   margin-bottom: -4px;
   cursor: pointer;
   &--highlighted,
-    &:hover {
-      background-color: #eff6fb;
-    }
+  &:hover {
+    background-color: #eff6fb;
+  }
   &--item {
     font-weight: 600;
     @include u-display("inline");
