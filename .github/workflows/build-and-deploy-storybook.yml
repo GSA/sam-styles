@@ -12,16 +12,16 @@ jobs:
     needs: Build-Storybook
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v7
       - name: Download Storybook Assets
         # If closing PR, build will not occur so nothing to download
         if: github.event.action != 'closed'
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: storybook-assets
           path: ./_site
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.2.3
+        uses: JamesIves/github-pages-deploy-action@v4.8.0
         with:
           branch: gh-pages
           folder: _site

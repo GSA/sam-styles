@@ -19,11 +19,11 @@ jobs:
     steps:
       # Only needed because rossjrw/pr-preview-action needs to run in a git repo
       - name: Check out repository code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Download Storybook Assets
         # If closing PR, build will not occur so nothing to download
         if: github.event.action != 'closed'
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: storybook-assets
           path: ./_site
