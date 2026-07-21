@@ -194,11 +194,11 @@
 }
 
 .sds-popover__content.sds-popover__hidden {
-  display: none; /* stylelint-disable-line declaration-no-important */
+  display: none;
 }
 
 .sds-popover__content.sds-popover__shown {
-  display: block; /* stylelint-disable-line declaration-no-important */
+  display: block;
 }
 
 .sds-tooltip__content,
@@ -270,7 +270,7 @@
     @include u-margin("1px");
     min-width: 300px;
     max-width: 500px;
-    text-indent: 0; /* stylelint-disable-line declaration-no-important */
+    text-indent: 0;
   }
 }
 

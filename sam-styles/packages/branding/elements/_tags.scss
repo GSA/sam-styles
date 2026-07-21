@@ -223,8 +223,8 @@ $error-dark-alt: #b50909;
 // Block style tag
 div[class^="grid-col-"] .sds-tag--block,
 div[class*=" grid-col-"] .sds-tag--block {
-  display: block; /* stylelint-disable-line declaration-no-important */
-  width: 100%; /* stylelint-disable-line declaration-no-important */
+  display: block;
+  width: 100%;
 }
 
 /*

@@ -26,27 +26,27 @@ hr.fine {
 }
 
 .border--hairline {
-  border: 0; /* stylelint-disable-line declaration-no-important */
+  border: 0;
   box-shadow: 0 0 0 1px color("base-light");
 }
 
 @media (min-resolution: 2dppx) {
   .border--hairline {
-    border: 0; /* stylelint-disable-line declaration-no-important */
+    border: 0;
     box-shadow: 0 0 0 0.5px;
   }
 }
 
 @media (min-resolution: 3dppx) {
   .border--hairline {
-    border: 0; /* stylelint-disable-line declaration-no-important */
+    border: 0;
     box-shadow: 0 0 0 0.33333333px;
   }
 }
 
 @media (min-resolution: 4dppx) {
   .border--hairline {
-    border: 0; /* stylelint-disable-line declaration-no-important */
+    border: 0;
     box-shadow: 0 0 0 0.25px;
   }
 }
