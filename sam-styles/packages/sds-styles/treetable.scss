@@ -44,7 +44,8 @@
       }
     }
 
-    :not(.text-center) {
+    /* stylelint-disable selector-no-qualifying-type */
+    tr:not(.text-center) {
       td:first-child {
         position: relative;
         .usa-button {
@@ -75,8 +76,9 @@
         border-right: 1px solid color("base-light");
       }
     }
+    /* stylelint-enable selector-no-qualifying-type */
 
-    [aria-expanded] {
+    tr[aria-expanded] {
       td {
         background-color: color("base-lightest");
       }
@@ -86,7 +88,7 @@
       }
     }
 
-    [aria-level="1"] {
+    tr[aria-level="1"] {
       .vertical-border {
         margin-left: 1rem;
         margin-top: 1rem;
@@ -129,7 +131,7 @@
 
   // CSS for up to 10 nested children
   @for $i from 1 through 10 {
-    [aria-level="#{$i}"] {
+    tr[aria-level="#{$i}"] {
       td:nth-child(2),
       .usa-button {
         position: relative;

@@ -4,7 +4,8 @@
     border-top: none;
   }
 
-  :not(.usa-button) {
+  /* stylelint-disable-next-line selector-no-qualifying-type */
+  a:not(.usa-button) {
     color: color("ink");
     font-weight: font-weight("semibold");
 

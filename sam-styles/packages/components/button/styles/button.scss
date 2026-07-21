@@ -566,20 +566,17 @@ $error-dark-alt: #b50909;
   }
 }
 
-.sds-button--disabled,
-.sds-button:disabled,
-.usa-button--disabled,
-.usa-button:disabled {
-  .sds-button--unstyled,
-  .usa-button--unstyled {
-    box-shadow: none;
-    @include u-bg("transparent");
-    @include u-text("base");
-    border: none !important;
-    text-decoration: none;
-    &:hover {
-      font-weight: unset !important;
-    }
+.sds-button--disabled.sds-button--unstyled,
+.sds-button:disabled.sds-button--unstyled,
+.usa-button--disabled.usa-button--unstyled,
+.usa-button:disabled.usa-button--unstyled {
+  box-shadow: none;
+  @include u-bg("transparent");
+  @include u-text("base");
+  border: none !important;
+  text-decoration: none;
+  &:hover {
+    font-weight: unset !important;
   }
 }
 

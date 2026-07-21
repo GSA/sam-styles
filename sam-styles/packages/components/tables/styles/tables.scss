@@ -60,11 +60,13 @@ $sds-table-border: "1px";
 }
 
 // tiger stripes for tables without subsections or expandable rows
-.sds-table:not(:has(.sds-table--expansion)) {
+/* stylelint-disable selector-no-qualifying-type */
+.sds-table tbody:only-of-type:not(.sds-table--expansion) {
   .sds-table__row:nth-of-type(even) > td {
     @include u-bg("base-lightest");
   }
 }
+/* stylelint-enable selector-no-qualifying-type */
 
 .sds-table .sds-table__subsection {
   th {
@@ -185,29 +187,39 @@ $sds-table-border: "1px";
         Overrides remaining borders to ensure correct color and width.
         Must include :not(.mat-header-cell) in order to prevent a 2 px border from forming when sds-table extends usa-table
         */
-        :first-child:not(.mat-header-cell) {
+        /* stylelint-disable selector-no-qualifying-type */
+        th:first-child:not(.mat-header-cell),
+        td:first-child:not(.mat-header-cell) {
           @include u-border-left("base-light", $sds-table-border);
         }
-        :last-child:not(.mat-header-cell) {
+        th:last-child:not(.mat-header-cell),
+        td:last-child:not(.mat-header-cell) {
           @include u-border-right("base-light", $sds-table-border);
         }
-        :not(.mat-header-cell) {
+        th:not(.mat-header-cell),
+        td:not(.mat-header-cell) {
           @include u-border-top("base-light", $sds-table-border);
         }
+        /* stylelint-enable selector-no-qualifying-type */
       }
       tbody {
         tr {
           &:last-child {
-            :not(.mat-cell) {
+            /* stylelint-disable-next-line selector-no-qualifying-type */
+            td:not(.mat-cell) {
               @include u-border-bottom("base-light", $sds-table-border);
             }
           }
-          :first-child:not(.mat-cell) {
+          /* stylelint-disable selector-no-qualifying-type */
+          td:first-child:not(.mat-cell),
+          th:first-child:not(.mat-cell) {
             @include u-border-left("base-light", $sds-table-border);
           }
-          :last-child:not(.mat-cell) {
+          td:last-child:not(.mat-cell),
+          th:last-child:not(.mat-cell) {
             @include u-border-right("base-light", $sds-table-border);
           }
+          /* stylelint-enable selector-no-qualifying-type */
         }
       }
     }
@@ -217,13 +229,17 @@ $sds-table-border: "1px";
       /**
         Removes internal borders so that only borders on the outside edges of header remain
       */
-      :not(:first-child) {
+      /* stylelint-disable selector-no-qualifying-type */
+      th:not(:first-child),
+      td:not(:first-child) {
         border-left: 0;
       }
-      :not(:last-child) {
+      th:not(:last-child),
+      td:not(:last-child) {
         border-right: 0;
       }
-      :not(.mat-header-cell) {
+      th:not(.mat-header-cell),
+      td:not(.mat-header-cell) {
         @include u-border-bottom("base-light", $sds-table-border);
         padding-bottom: 0.5rem;
         padding-top: 0.5rem;
@@ -231,6 +247,7 @@ $sds-table-border: "1px";
         padding-right: 1rem;
         background-color: color($theme-table-header-background-color);
       }
+      /* stylelint-enable selector-no-qualifying-type */
     }
     tbody {
       tr {
