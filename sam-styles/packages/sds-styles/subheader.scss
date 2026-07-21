@@ -41,7 +41,10 @@
 }
 
 // Labeled-icon variant (action button with text label) — lifted to avoid exceeding nesting depth 4
-.sds-navbar .sds-subheader__content .actions-div .actions-button.sds-button--labeled-icon {
+.sds-navbar
+  .sds-subheader__content
+  .actions-div
+  .actions-button.sds-button--labeled-icon {
   @include u-padding-right(0.5);
 
   .ellipsis-icon {
@@ -54,7 +57,10 @@
 }
 
 // Circular variant (icon-only action button) — lifted to avoid exceeding nesting depth 4
-.sds-navbar .sds-subheader__content .actions-div .actions-button.sds-button--circular {
+.sds-navbar
+  .sds-subheader__content
+  .actions-div
+  .actions-button.sds-button--circular {
   &:active {
     box-shadow: 0 0 0 1px #162e51;
   }
