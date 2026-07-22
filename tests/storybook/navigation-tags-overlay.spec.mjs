@@ -2,15 +2,19 @@ import { test, expect } from "@playwright/test";
 
 // ─── Side Nav ────────────────────────────────────────────────────────────────
 
-test("side nav: active/current link is rendered semibold", async ({ page }) => {
+test("side nav: active/current link has the expected secondary-darker text color", async ({
+  page,
+}) => {
   await page.goto("/iframe.html?id=components-sidenav--default");
 
   // getByRole waits for the story HTML to render
   const current = page.getByRole("link", { name: "Current page" }).first();
   await expect(current).toBeVisible();
 
-  // .usa-current applies font-weight: semibold (600) — this fails if the rule is removed
-  await expect(current).toHaveCSS("font-weight", "600");
+  // `.usa-sidenav .usa-current { color: color("secondary-darker") }` — ink/gray-warm-90
+  // rgb(46, 46, 42) is distinct from the normal link ink colour rgb(69, 69, 64);
+  // this assertion fails if the .usa-current colour rule is removed.
+  await expect(current).toHaveCSS("color", "rgb(46, 46, 42)");
 });
 
 test("side nav: active/current link has extra left padding from the active-bar rule", async ({
@@ -27,14 +31,7 @@ test("side nav: active/current link has extra left padding from the active-bar r
 });
 
 // ─── Side Nav Styled-Variant ──────────────────────────────────────────────────
-//
-// The compare template does NOT include the .usa-sidenav--styled variant.
-// The styled / disabled behaviour lives in side-nav.scss and is exercised by
-// the selector `.usa-sidenav--styled .usa-sidenav__item.disabled`.
-// We verify the SCSS rule compiles and the selector exists at a CSS level by
-// checking a normal styled-variant link in the Default story's sidenav (the
-// non-current links carry the base link colour defined under `.usa-sidenav a`).
-//
+
 test("side nav: non-current links have the expected ink text color", async ({
   page,
 }) => {
@@ -46,6 +43,31 @@ test("side nav: non-current links have the expected ink text color", async ({
   // `.usa-sidenav a:not(.usa-button) { color: color("ink") }` — gray-warm-80 = #454540
   // This fails if the base link-colour rule is stripped
   await expect(link).toHaveCSS("color", "rgb(69, 69, 64)");
+});
+
+test("side nav styled-variant: disabled item has muted color and auto cursor", async ({
+  page,
+}) => {
+  await page.goto("/iframe.html?id=components-sidenav--default");
+
+  const link = page.getByRole("link", { name: "Parent link" }).first();
+  await expect(link).toBeVisible();
+
+  // Add the styled-variant modifier and mark the first item disabled in-page so we
+  // can assert the compiled `.usa-sidenav--styled .usa-sidenav__item.disabled` rule.
+  const styles = await page.evaluate(() => {
+    const nav = document.querySelector(".usa-sidenav");
+    nav.classList.add("usa-sidenav--styled");
+    const firstItem = nav.querySelector("li.usa-sidenav__item");
+    firstItem.classList.add("disabled");
+    const cs = getComputedStyle(firstItem);
+    return { color: cs.color, cursor: cs.cursor };
+  });
+
+  // `.usa-sidenav--styled .usa-sidenav__item.disabled { color: #c9c9c9 !important; cursor: auto }`
+  // rgb(201, 201, 201) = #c9c9c9 — fails if the disabled block is removed
+  expect(styles.color).toBe("rgb(201, 201, 201)");
+  expect(styles.cursor).toBe("auto");
 });
 
 // ─── Subheader / Navbar Action Button ────────────────────────────────────────
