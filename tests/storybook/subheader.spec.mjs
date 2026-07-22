@@ -99,7 +99,8 @@ test("subheader: circular button has a focus-ring box-shadow on :active", async 
 
   // Fails if the :active block is removed from the lifted circular rule.
   // The rule exists if the refactor preserved the lifted selector.
+  // Chromium normalises #162e51 to rgb(22, 46, 81) in computed/CSSOM values.
   expect(activeBoxShadow).not.toBeNull();
   expect(activeBoxShadow).not.toBe("");
-  expect(activeBoxShadow).toContain("162e51");
+  expect(activeBoxShadow).toContain("22, 46, 81");
 });
