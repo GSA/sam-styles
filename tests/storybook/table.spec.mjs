@@ -17,7 +17,9 @@ test("standard table body cell has correct padding", async ({ page }) => {
   await expect(cell).toHaveCSS("padding-right", "16px");
 });
 
-test("table header cells have the correct background color", async ({ page }) => {
+test("table header cells have the correct background color", async ({
+  page,
+}) => {
   await page.goto(STORY);
 
   const th = page.locator(".sds-table thead th").first();
@@ -26,12 +28,16 @@ test("table header cells have the correct background color", async ({ page }) =>
   await expect(th).toHaveCSS("background-color", "rgb(245, 245, 240)");
 });
 
-test("even rows in a single-tbody table get tiger-stripe background", async ({ page }) => {
+test("even rows in a single-tbody table get tiger-stripe background", async ({
+  page,
+}) => {
   await page.goto(STORY);
 
   // The first table has a single tbody (no subsection class), so tiger stripes apply
   const evenCell = page
-    .locator(".sds-table tbody:only-of-type .sds-table__row:nth-of-type(even) td")
+    .locator(
+      ".sds-table tbody:only-of-type .sds-table__row:nth-of-type(even) td"
+    )
     .first();
   await expect(evenCell).toBeVisible();
   // u-bg("base-lightest")
@@ -49,7 +55,9 @@ test("hovered row cells get the hover background color", async ({ page }) => {
     const row = document.querySelector(".sds-table tbody tr");
     if (!row) return null;
     row.classList.add("sds-table__row--hovered");
-    const td = document.querySelector(".sds-table tr.sds-table__row--hovered td");
+    const td = document.querySelector(
+      ".sds-table tr.sds-table__row--hovered td"
+    );
     return td ? getComputedStyle(td).backgroundColor : null;
   });
 
@@ -57,7 +65,9 @@ test("hovered row cells get the hover background color", async ({ page }) => {
   expect(hoveredBg).toBe("rgb(201, 201, 201)");
 });
 
-test("subsection header row has accent-cool-lighter highlight background", async ({ page }) => {
+test("subsection header row has accent-cool-lighter highlight background", async ({
+  page,
+}) => {
   await page.goto(STORY);
 
   const subsectionHeader = page
@@ -65,7 +75,10 @@ test("subsection header row has accent-cool-lighter highlight background", async
     .first();
   await expect(subsectionHeader).toBeVisible();
   // %sds-table--highlight => u-bg("accent-cool-lighter")
-  await expect(subsectionHeader).toHaveCSS("background-color", "rgb(239, 246, 251)");
+  await expect(subsectionHeader).toHaveCSS(
+    "background-color",
+    "rgb(239, 246, 251)"
+  );
 });
 
 test("table container has a visible border", async ({ page }) => {
