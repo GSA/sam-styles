@@ -85,7 +85,7 @@ test("tags: sds-tag--block inside a grid-col renders as block at full width", as
 }) => {
   await page.goto("/iframe.html?id=components-tags--chips");
 
-  const styles = await page.evaluate(() => {
+  const result = await page.evaluate(() => {
     // Wrap the tag in a grid column, mimicking the selector:
     //   div[class^="grid-col-"] .sds-tag--block { display: block; width: 100% }
     const wrapper = document.createElement("div");
@@ -96,14 +96,18 @@ test("tags: sds-tag--block inside a grid-col renders as block at full width", as
     wrapper.appendChild(tag);
     document.body.appendChild(wrapper);
     const cs = window.getComputedStyle(tag);
-    return { display: cs.display, width: cs.width };
+    return {
+      display: cs.display,
+      tagOffsetWidth: tag.offsetWidth,
+      wrapperOffsetWidth: wrapper.offsetWidth,
+    };
   });
 
   // `div[class^="grid-col-"] .sds-tag--block { display: block; width: 100% }`
-  // display:block is the key assertion — confirms the rule applied
-  expect(styles.display).toBe("block");
-  // width:100% is set by the rule; getComputedStyle returns the CSS value before layout resolves it
-  expect(styles.width).not.toBe("auto");
+  // display:block confirms the rule applied
+  expect(result.display).toBe("block");
+  // width:100% resolves to the wrapper's width — offsetWidth provides a real layout value
+  expect(result.tagOffsetWidth).toBe(result.wrapperOffsetWidth);
 });
 
 // ── sds-status-tag padding ────────────────────────────────────────────────────
