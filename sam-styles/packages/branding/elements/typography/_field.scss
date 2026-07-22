@@ -12,9 +12,19 @@
     @extend .h2;
   }
 
-  .sds-light {
-    @extend .h3;
+  /* stylelint-disable selector-no-qualifying-type -- h*.sds-light targets heading
+     elements only; a generic .sds-light utility should not @extend .h3 */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &.sds-light {
+      @extend .h3;
+    }
   }
+  /* stylelint-enable selector-no-qualifying-type */
 
   .sds-field__name {
     @include u-display("inline-block");

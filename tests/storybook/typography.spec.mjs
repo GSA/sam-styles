@@ -82,14 +82,14 @@ test.describe("Heading sds-light regression", () => {
     await expect(lightHeading).toHaveCSS("font-weight", "400");
   });
 
-  test(".sds-light heading has normal (400) font-weight regardless of context", async ({
+  test(".sds-light heading has normal (400) font-weight — heading in table context", async ({
     page,
   }) => {
     await page.goto("/iframe.html?id=branding-typography-heading--light");
 
-    // Verify font-weight on a heading that is NOT inside a table cell (the default
-    // heading entry is nested in a <td> which overrides the heading color token).
-    // Use the free-form headings at the bottom of the light.html template instead.
+    // The light.html template renders headings inside a <td>; the td context
+    // overrides the heading color token but does NOT override font-weight.
+    // This assertion verifies u-text("normal") → font-weight: 400 even in a table cell.
     const lightHeading = page.locator(".sds-light").first();
     await expect(lightHeading).toBeVisible();
 
