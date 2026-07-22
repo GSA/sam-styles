@@ -48,9 +48,10 @@ test("hovered row cells get the hover background color", async ({ page }) => {
   await page.goto(STORY);
   await page.waitForLoadState("networkidle");
 
-  // Inject the hover class and read computed CSS in a single evaluate call,
-  // since the class addition doesn't trigger a DOM mutation event that
-  // Playwright's locator polling can observe on the already-present td elements.
+  // Inject the hover class and read computed CSS in a single evaluate call.
+  // Note: we use evaluate() here rather than Playwright locator polling because
+  // the class is added dynamically and we want to read the style in the same
+  // synchronous tick — avoiding a race between class addition and style resolution.
   const hoveredBg = await page.evaluate(() => {
     const row = document.querySelector(".sds-table tbody tr");
     if (!row) return null;
