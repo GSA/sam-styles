@@ -13,7 +13,9 @@ test.describe("Radio regression", () => {
     // The visual dot is on ::before. Verify its background-color via JS.
     // rgb(112, 225, 123) = $theme-color-primary
     const bgColor = await label.evaluate((el) => {
-      return window.getComputedStyle(el, "::before").getPropertyValue("background-color");
+      return window
+        .getComputedStyle(el, "::before")
+        .getPropertyValue("background-color");
     });
     expect(bgColor).toBe("rgb(112, 225, 123)");
   });
@@ -28,7 +30,9 @@ test.describe("Radio regression", () => {
     await expect(label).toBeVisible();
 
     const borderColor = await label.evaluate((el) => {
-      return window.getComputedStyle(el, "::before").getPropertyValue("border-color");
+      return window
+        .getComputedStyle(el, "::before")
+        .getPropertyValue("border-color");
     });
     // rgb(46, 46, 42) = USWDS "ink" token
     expect(borderColor).toBe("rgb(46, 46, 42)");
