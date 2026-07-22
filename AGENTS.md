@@ -14,6 +14,7 @@
 - `npm start` / `npm run storybook` — dev server on port 6006
 - `npm run build:storybook` — build static site to `_site/` (the real CI verification step)
 - `npm test` — runs `stylelint` across all SCSS sources; exits 0 on clean lint.
+- `npm run test:storybook` — Playwright smoke-style regression tests. Builds Storybook, serves the static `_site/` output via `http-server`, and runs Chromium checks against Storybook iframe URLs (asserting computed styles on rendered stories). Requires the Chromium browser (`npx playwright install chromium`) — Playwright config (`playwright.config.mjs`) and specs (`tests/storybook/*.spec.mjs`) are ESM.
 - `npm run compile:check` — compiles `sam-styles/index.scss` via `sass` (all load paths pre-set); writes `coverage/compilation-report.txt`. Exits 0 on success. USWDS deprecation WARNINGs are pre-existing noise, not failures.
 - `npm run lint` — alias; same as `npm test`.
 
@@ -25,7 +26,7 @@ The build emits many `@storybook/components` "export not found" WARNings and web
 
 - CI runs on **GitHub Actions only** (`.github/workflows/`). There is no CircleCI.
 - `build.yml` is a reusable workflow (`workflow_call`) that lints and builds Storybook; `build-and-deploy-storybook.yml` (push to `master`) and `pr-workflow.yml` (PR preview) both call it.
-- `test.yml` runs `npm test` (stylelint) and `npm run compile:check` (full SCSS compilation) on every PR; uploads a `scss-compilation-report` artifact.
+- `test.yml` runs `npm test` (stylelint), `npm run compile:check` (full SCSS compilation), and `npm run test:storybook` (Playwright smoke-style regression tests, after `npx playwright install --with-deps chromium`) on every PR; uploads a `scss-compilation-report` artifact.
 - All workflows read the Node version from `.nvmrc` via `node-version-file: '.nvmrc'` — do **not** hardcode a version in workflow files.
 
 ## Source layout
