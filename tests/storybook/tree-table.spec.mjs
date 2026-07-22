@@ -88,9 +88,7 @@ test("tree-table expand button svg has ink background and circular shape", async
   //   { background-color: color("ink"); border-radius: 50%; }
   // color("ink") in the SAM-STYLES theme = gray-warm-90 = #2e2e2a = rgb(46, 46, 42).
   const svg = page
-    .locator(
-      "tr[aria-expanded] td:first-child .usa-button svg"
-    )
+    .locator("tr[aria-expanded] td:first-child .usa-button svg")
     .first();
   await expect(svg).toBeVisible();
 

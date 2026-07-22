@@ -53,7 +53,9 @@ test("subheader: circular button has a box-shadow on :hover", async ({
   await expect(btn).toBeVisible();
 
   // Confirm no shadow before hover
-  const shadowBefore = await btn.evaluate((el) => getComputedStyle(el).boxShadow);
+  const shadowBefore = await btn.evaluate(
+    (el) => getComputedStyle(el).boxShadow
+  );
   expect(shadowBefore).toBe("none");
 
   await btn.hover();
@@ -61,7 +63,9 @@ test("subheader: circular button has a box-shadow on :hover", async ({
   // `.sds-button--circular:hover { box-shadow: 0 0 20px -1px #162e51 }`
   // Fails if the :hover block is removed from the lifted circular rule.
   // We assert non-none and that it contains the expected color component rgb(22, 46, 81).
-  const shadowAfter = await btn.evaluate((el) => getComputedStyle(el).boxShadow);
+  const shadowAfter = await btn.evaluate(
+    (el) => getComputedStyle(el).boxShadow
+  );
   expect(shadowAfter).not.toBe("none");
   expect(shadowAfter).toContain("22, 46, 81");
 });
