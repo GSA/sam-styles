@@ -2,9 +2,7 @@ import { test, expect } from "@playwright/test";
 
 // ─── Side Nav ────────────────────────────────────────────────────────────────
 
-test("side nav: active/current link is rendered semibold", async ({
-  page,
-}) => {
+test("side nav: active/current link is rendered semibold", async ({ page }) => {
   await page.goto("/iframe.html?id=components-sidenav--default");
 
   // getByRole waits for the story HTML to render
