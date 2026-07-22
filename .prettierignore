@@ -8,6 +8,9 @@ public/
 # Dependencies
 node_modules/
 
+# Playwright test artefacts
+test-results/
+
 # Malformed HTML fragments that pre-date this PR — prettier cannot parse them
 sam-styles/packages/components/alerts/templates/overview.html
 sam-styles/packages/components/tags/status.html
