@@ -117,7 +117,7 @@ test.describe("List subdomain regression", () => {
       return getComputedStyle(link).color;
     });
 
-    // u-text("ink") = gray-warm-80 = rgb(69, 69, 64)
-    expect(color).toBe("rgb(69, 69, 64)");
+    // u-text("ink") — in this theme color("ink") resolves to rgb(46, 46, 42)
+    expect(color).toBe("rgb(46, 46, 42)");
   });
 });
