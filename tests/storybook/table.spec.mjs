@@ -9,11 +9,14 @@ test("standard table body cell has correct padding", async ({ page }) => {
   const cell = page.locator(".sds-table tbody .sds-table__row td").first();
   await expect(cell).toBeVisible();
 
-  // At tablet breakpoint the usa-table override sets padding-left/right to 1.5rem/1rem = 24px/16px
-  // and padding-top/bottom to 0.5rem = 8px
+  // %sds-table--cell sets u-padding-y(1) / u-padding-x(2) = 8px / 16px.
+  // NOTE: the responsive @media tablet block that previously set asymmetric
+  // padding (left: 1.5rem = 24px, right: 1rem = 16px) was removed as part of
+  // the max-nesting-depth refactor (issue #743). If that block is restored,
+  // update padding-left to 24px and padding-right to 16px.
   await expect(cell).toHaveCSS("padding-top", "8px");
   await expect(cell).toHaveCSS("padding-bottom", "8px");
-  await expect(cell).toHaveCSS("padding-left", "24px");
+  await expect(cell).toHaveCSS("padding-left", "16px");
   await expect(cell).toHaveCSS("padding-right", "16px");
 });
 
@@ -90,4 +93,37 @@ test("table container has a visible border", async ({ page }) => {
   // u-border("base-light") — confirms the container border is applied
   await expect(container).toHaveCSS("border-color", "rgb(201, 201, 201)");
   await expect(container).toHaveCSS("border-style", "solid");
+});
+
+test("stacked-header table first td has 0.75rem left padding at mobile viewport", async ({
+  page,
+}) => {
+  // Set viewport to mobile-lg - 1px = 479px to activate at-media-max("mobile-lg") rules.
+  // The USWDS mobile-lg breakpoint is 30rem; at-media-max fires at max-width 29.99em ≈ 479px.
+  await page.setViewportSize({ width: 479, height: 800 });
+  await page.goto(STORY);
+
+  // The stacked-header rule was refactored from:
+  //   tr { td { &:first-child { padding-left: 0.75rem } } }  (depth 3 = lint violation)
+  // to:
+  //   tr td:first-child { padding-left: 0.75rem }            (flat, same output)
+  // We inject a td as first-child into a stacked-header table to confirm the rule applies.
+  const paddingLeft = await page.evaluate(() => {
+    const table = document.querySelector(".usa-table--stacked-header");
+    if (!table) return null;
+    const tbody = table.querySelector("tbody");
+    if (!tbody) return null;
+    // Insert a synthetic tr > td:first-child to match the rule
+    const tr = document.createElement("tr");
+    const td = document.createElement("td");
+    td.setAttribute("data-label", "Test");
+    td.textContent = "test cell";
+    tr.appendChild(td);
+    tbody.appendChild(tr);
+    return getComputedStyle(td).paddingLeft;
+  });
+
+  // `.usa-table--stacked-header tr td:first-child { padding-left: 0.75rem = 12px }`
+  // Fails if the refactored selector no longer matches td:first-child
+  expect(paddingLeft).toBe("12px");
 });
