@@ -104,7 +104,8 @@ test("stacked-header table first td has 0.75rem left padding at mobile viewport"
   await page.goto(STORY);
 
   // The stacked-header rule was refactored from:
-  //   tr { td { &:first-child { padding-left: 0.75rem } } }  (depth 3 = lint violation)
+  //   tr { td { &:first-child { padding-left: 0.75rem } } }  (depth-5 violation when accounting
+  //     for the full chain: .usa-table &--stacked-header > @media > tr > td > &:first-child)
   // to:
   //   tr td:first-child { padding-left: 0.75rem }            (flat, same output)
   // The .usa-table--stacked-header tables in table.html are inside an HTML comment, so
