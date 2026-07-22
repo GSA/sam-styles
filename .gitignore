@@ -28,3 +28,7 @@ spec/screenshots/metadata.js
 
 # coverage output
 coverage/
+
+# Playwright test output
+test-results/
+playwright-report/

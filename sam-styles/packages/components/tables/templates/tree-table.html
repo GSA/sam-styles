@@ -1,0 +1,61 @@
+<div class="sds-tree-table--scrollable">
+  <table class="usa-table sds-tree-table">
+    <thead>
+      <tr>
+        <th scope="col"><span class="usa-sr-only">Expand/collapse</span></th>
+        <th scope="col">Entity</th>
+        <th scope="col">Status</th>
+        <th scope="col">Expiration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Level 1 expandable row -->
+      <tr aria-level="1" aria-expanded="true" class="text-left">
+        <td>
+          <button class="usa-button usa-button--unstyled" aria-label="collapse">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              role="img"
+              class="usa-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g class="expanded"><path d="M19 13H5v-2h14v2z" /></g>
+            </svg>
+          </button>
+        </td>
+        <td>Parent Entity A</td>
+        <td>Active</td>
+        <td>12/31/2025</td>
+      </tr>
+      <!-- Level 2 child row -->
+      <tr aria-level="2" class="text-left">
+        <td>
+          <div class="vertical-border"></div>
+          <div class="horizontal-border"></div>
+        </td>
+        <td>Child Entity B</td>
+        <td>Active</td>
+        <td>06/30/2025</td>
+      </tr>
+      <!-- Level 2 selected row -->
+      <tr aria-level="2" class="sds-tree-table__row--selected text-left">
+        <td>
+          <div class="vertical-border"></div>
+          <div class="horizontal-border"></div>
+        </td>
+        <td>Child Entity C (selected)</td>
+        <td>Inactive</td>
+        <td>01/01/2024</td>
+      </tr>
+      <!-- Level 1 non-expandable row -->
+      <tr aria-level="1" class="text-left">
+        <td></td>
+        <td>Standalone Entity D</td>
+        <td>Active</td>
+        <td>03/15/2026</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
