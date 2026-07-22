@@ -36,7 +36,7 @@ test.describe("Button regression", () => {
     await expect(button).toHaveCSS("box-shadow", "none");
   });
 
-  test("unstyled disabled button has transparent background and no border", async ({
+  test("unstyled disabled button has transparent background, no box-shadow, and no text-decoration", async ({
     page,
   }) => {
     await page.goto("/iframe.html?id=components-button-standard--unstyled");

@@ -5,7 +5,10 @@ test.describe("Autocomplete regression", () => {
     page,
   }) => {
     await page.goto("/iframe.html?id=components-autocomplete--auto-complete");
-    const item = page.locator(".sds-autocomplete__item--highlighted").first();
+    // Target the leaf-level highlighted item by text to avoid DOM-order brittleness
+    const item = page
+      .locator(".sds-autocomplete__item--highlighted")
+      .filter({ hasText: "Option 3 [highlighted]" });
     await expect(item).toBeVisible();
     // rgb(38, 114, 222) = USWDS color("secondary") in this theme
     await expect(item).toHaveCSS("background-color", "rgb(38, 114, 222)");
@@ -16,7 +19,10 @@ test.describe("Autocomplete regression", () => {
     page,
   }) => {
     await page.goto("/iframe.html?id=components-autocomplete--auto-complete");
-    const item = page.locator(".sds-autocomplete__item--selected").first();
+    // Target the leaf-level selected item by text to avoid DOM-order brittleness
+    const item = page.locator(".sds-autocomplete__item--selected").filter({
+      hasText: "Option 1 [selected]",
+    });
     await expect(item).toBeVisible();
     await expect(item).toHaveCSS("font-style", "italic");
     await expect(item).toHaveCSS("cursor", "auto");
