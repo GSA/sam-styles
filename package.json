@@ -53,11 +53,5 @@
     "postcss-preset-env": "11.3.0",
     "react-syntax-highlighter": "16.1.1",
     "sass-embedded": "^1.57.1"
-  },
-  "allowScripts": {
-    "esbuild@0.25.12": true,
-    "fsevents@2.3.3": true,
-    "fsevents@2.3.2": true,
-    "@parcel/watcher@2.6.0": true
   }
 }
