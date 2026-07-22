@@ -107,20 +107,25 @@ test("stacked-header table first td has 0.75rem left padding at mobile viewport"
   //   tr { td { &:first-child { padding-left: 0.75rem } } }  (depth 3 = lint violation)
   // to:
   //   tr td:first-child { padding-left: 0.75rem }            (flat, same output)
-  // We inject a td as first-child into a stacked-header table to confirm the rule applies.
+  // The .usa-table--stacked-header tables in table.html are inside an HTML comment, so
+  // we inject a minimal table with that class directly into the page body to exercise
+  // the compiled CSS rule at mobile viewport width.
   const paddingLeft = await page.evaluate(() => {
-    const table = document.querySelector(".usa-table--stacked-header");
-    if (!table) return null;
-    const tbody = table.querySelector("tbody");
-    if (!tbody) return null;
-    // Insert a synthetic tr > td:first-child to match the rule
+    // Build: table.usa-table.usa-table--stacked-header > tbody > tr > td:first-child
+    const table = document.createElement("table");
+    table.className = "usa-table usa-table--stacked-header";
+    const tbody = document.createElement("tbody");
     const tr = document.createElement("tr");
     const td = document.createElement("td");
     td.setAttribute("data-label", "Test");
     td.textContent = "test cell";
     tr.appendChild(td);
     tbody.appendChild(tr);
-    return getComputedStyle(td).paddingLeft;
+    table.appendChild(tbody);
+    document.body.appendChild(table);
+    const result = getComputedStyle(td).paddingLeft;
+    table.remove();
+    return result;
   });
 
   // `.usa-table--stacked-header tr td:first-child { padding-left: 0.75rem = 12px }`

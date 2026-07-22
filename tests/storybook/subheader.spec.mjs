@@ -72,21 +72,34 @@ test("subheader: circular button has a focus-ring box-shadow on :active", async 
   await page.goto(STORY);
   await page.waitForLoadState("networkidle");
 
-  // Use evaluate() to dispatch mousedown and read computedStyle in the same synchronous
-  // call — the :active pseudo-class is applied during mousedown and persists until mouseup,
-  // so reading style in the same tick captures it reliably.
+  // CSS :active cannot be reliably triggered via synthetic MouseEvents in Chromium —
+  // the browser's active state is tied to real pointer events, not JS-dispatched ones.
+  // Instead, verify the rule exists in the compiled stylesheet by scanning cssRules.
+  // The Storybook build serves all CSS from the same origin (localhost), so cssRules
+  // are accessible without CORS restrictions.
   // `.sds-button--circular:active { box-shadow: 0 0 0 1px #162e51 }`
-  const shadow = await page.evaluate(() => {
-    const el = document.querySelector(".sds-button--circular");
-    if (!el) return null;
-    el.dispatchEvent(
-      new MouseEvent("mousedown", { bubbles: true, cancelable: true })
-    );
-    return getComputedStyle(el).boxShadow;
+  const activeBoxShadow = await page.evaluate(() => {
+    for (const sheet of Array.from(document.styleSheets)) {
+      try {
+        for (const rule of Array.from(sheet.cssRules || [])) {
+          if (
+            rule.selectorText &&
+            rule.selectorText.includes("sds-button--circular") &&
+            rule.selectorText.includes(":active")
+          ) {
+            return rule.style.boxShadow;
+          }
+        }
+      } catch {
+        // Skip cross-origin sheets (none expected in Storybook build)
+      }
+    }
+    return null;
   });
 
   // Fails if the :active block is removed from the lifted circular rule.
-  expect(shadow).not.toBeNull();
-  expect(shadow).not.toBe("none");
-  expect(shadow).toContain("22, 46, 81");
+  // The rule exists if the refactor preserved the lifted selector.
+  expect(activeBoxShadow).not.toBeNull();
+  expect(activeBoxShadow).not.toBe("");
+  expect(activeBoxShadow).toContain("162e51");
 });
