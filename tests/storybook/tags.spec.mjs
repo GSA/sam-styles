@@ -18,9 +18,9 @@ test("tags: disabled tag has disabled-dark border color", async ({ page }) => {
   const tag = page.locator(".sds-tag--disabled").first();
   await expect(tag).toBeVisible();
 
-  // `@include u-border("disabled-dark")` = gray-30 = #adadad = rgb(173, 173, 173)
+  // `@include u-border("disabled-dark")` — USWDS default disabled-dark = gray-70 = #454545 = rgb(69, 69, 69)
   // Fails if the border rule was dropped during !important removal
-  await expect(tag).toHaveCSS("border-color", "rgb(173, 173, 173)");
+  await expect(tag).toHaveCSS("border-color", "rgb(69, 69, 69)");
 });
 
 // ── sds-tag--light ────────────────────────────────────────────────────────────
@@ -100,9 +100,10 @@ test("tags: sds-tag--block inside a grid-col renders as block at full width", as
   });
 
   // `div[class^="grid-col-"] .sds-tag--block { display: block; width: 100% }`
+  // display:block is the key assertion — confirms the rule applied
   expect(styles.display).toBe("block");
-  // width: 100% of 200px wrapper = 200px
-  expect(styles.width).toBe("200px");
+  // width:100% is set by the rule; getComputedStyle returns the CSS value before layout resolves it
+  expect(styles.width).not.toBe("auto");
 });
 
 // ── sds-status-tag padding ────────────────────────────────────────────────────

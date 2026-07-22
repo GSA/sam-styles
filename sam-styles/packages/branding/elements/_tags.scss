@@ -216,15 +216,21 @@ $error-dark-alt: #b50909;
 }
 
 .sds-tag--disabled {
-  @include u-bg("disabled");
-  @include u-border("disabled-dark");
+  @include u-bg(
+    "disabled",
+    !important
+  ); /* stylelint-disable-line declaration-no-important */
+  @include u-border(
+    "disabled-dark",
+    !important
+  ); /* stylelint-disable-line declaration-no-important */
 }
 
 // Block style tag
 div[class^="grid-col-"] .sds-tag--block,
 div[class*=" grid-col-"] .sds-tag--block {
-  display: block;
-  width: 100%;
+  display: block !important; /* stylelint-disable-line declaration-no-important */
+  width: 100% !important; /* stylelint-disable-line declaration-no-important */
 }
 
 /*
@@ -241,9 +247,18 @@ div[class*=" grid-col-"] .sds-tag--block {
 }
 
 .sds-tag--light {
-  @include u-bg("white");
-  @include u-border("warning");
-  @include u-text("base-darker");
+  @include u-bg(
+    "white",
+    !important
+  ); /* stylelint-disable-line declaration-no-important */
+  @include u-border(
+    "warning",
+    !important
+  ); /* stylelint-disable-line declaration-no-important */
+  @include u-text(
+    "base-darker",
+    !important
+  ); /* stylelint-disable-line declaration-no-important */
 }
 
 .sds-static--tag {

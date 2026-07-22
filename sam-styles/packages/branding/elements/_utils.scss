@@ -8,19 +8,19 @@
 }
 
 .sds-measure-7 {
-  max-width: 96ex;
+  max-width: 96ex !important; /* stylelint-disable-line declaration-no-important */
 }
 
 .sds-measure-8 {
-  max-width: 104ex;
+  max-width: 104ex !important; /* stylelint-disable-line declaration-no-important */
 }
 
 .sds-measure-9 {
-  max-width: 120ex;
+  max-width: 120ex !important; /* stylelint-disable-line declaration-no-important */
 }
 
 .sds-measure-10 {
-  max-width: 136ex;
+  max-width: 136ex !important; /* stylelint-disable-line declaration-no-important */
 }
 
 i.size-xs {
@@ -74,6 +74,6 @@ i.sds-icon-margin {
 .sds-textarea-large {
   @include u-width("tablet");
   .usa-textarea {
-    max-width: none;
+    max-width: none !important; /* stylelint-disable-line declaration-no-important */
   }
 }

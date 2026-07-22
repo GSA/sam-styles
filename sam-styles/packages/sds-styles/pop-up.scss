@@ -194,11 +194,11 @@
 }
 
 .sds-popover__content.sds-popover__hidden {
-  display: none;
+  display: none !important; /* stylelint-disable-line declaration-no-important */
 }
 
 .sds-popover__content.sds-popover__shown {
-  display: block;
+  display: block !important; /* stylelint-disable-line declaration-no-important */
 }
 
 .sds-tooltip__content,

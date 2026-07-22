@@ -3,9 +3,7 @@ import { test, expect } from "@playwright/test";
 // Covers accordion.scss changes — `border: none` on border-0 variant and
 // `content: none` on the SDS custom chevron ::before pseudo-element.
 //
-// Stories:
-//   Components/Accordion — Multiselectable  (usa-accordion--bordered, no filters wrapper)
-//   Components/Accordion — Bordered          (injected border-0 class via page.evaluate)
+// Story: Components/Accordion — Multiselectable  (usa-accordion--bordered, no filters wrapper)
 
 // ── Custom chevron — ::before content:none ────────────────────────────────────
 
@@ -31,8 +29,10 @@ test("accordion: SDS custom button [aria-expanded=true] has no ::before content"
 }) => {
   await page.goto("/iframe.html?id=components-accordion--multiselectable");
 
-  // The multiselectable template has the first button aria-expanded="true"
-  const expanded = page.locator('.usa-accordion__button[aria-expanded="true"]');
+  // Multiple expanded buttons in the multiselectable template — use .first()
+  const expanded = page
+    .locator('.usa-accordion__button[aria-expanded="true"]')
+    .first();
   await expect(expanded).toBeVisible();
 
   // .usa-accordion__button[aria-expanded="true"]:before { content: none }
@@ -45,14 +45,20 @@ test("accordion: SDS custom button [aria-expanded=true] has no ::before content"
 // ── border-0 variant ──────────────────────────────────────────────────────────
 
 test("accordion: border-0 variant button has no border", async ({ page }) => {
-  await page.goto("/iframe.html?id=components-accordion--bordered");
+  await page.goto("/iframe.html?id=components-accordion--multiselectable");
 
-  // Inject border-0 modifier on the accordion so we can assert the compiled rule
-  const borderValue = await page.evaluate(() => {
-    const accordion = document.querySelector(".usa-accordion");
-    accordion.classList.add("border-0");
-    const button = accordion.querySelector(".usa-accordion__button");
-    return window.getComputedStyle(button).getPropertyValue("border-width");
+  // Wait for the accordion to be in the DOM before injecting the border-0 class
+  const accordion = page.locator(".usa-accordion").first();
+  await expect(accordion).toBeVisible();
+
+  // Inject border-0 modifier and measure the compiled rule on the SECOND button
+  // (the first button is inside .usa-accordion__heading:first-of-type which applies
+  // its own border-top via a separate rule, masking the border:none assertion).
+  const borderValue = await accordion.evaluate((el) => {
+    el.classList.add("border-0");
+    const buttons = el.querySelectorAll(".usa-accordion__button");
+    const second = buttons[1] || buttons[0]; // second button has no first-of-type override
+    return window.getComputedStyle(second).getPropertyValue("border-width");
   });
 
   // .usa-accordion.border-0 .usa-accordion__button { border: none }
