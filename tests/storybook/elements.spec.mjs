@@ -69,8 +69,8 @@ test.describe("Icon size utilities regression", () => {
     // .size-2x { font-size: 2em }
     // The parent div has no explicit font-size so inherits 16px base;
     // 2em = 32px. Allow ±1px for subpixel rendering.
-    const fontSize = await icon.evaluate(
-      (el) => parseFloat(getComputedStyle(el).fontSize)
+    const fontSize = await icon.evaluate((el) =>
+      parseFloat(getComputedStyle(el).fontSize)
     );
     expect(fontSize).toBeGreaterThanOrEqual(31);
     expect(fontSize).toBeLessThanOrEqual(33);
@@ -86,11 +86,11 @@ test.describe("Icon size utilities regression", () => {
     await expect(lg).toBeVisible();
     await expect(twoX).toBeVisible();
 
-    const lgSize = await lg.evaluate(
-      (el) => parseFloat(getComputedStyle(el).fontSize)
+    const lgSize = await lg.evaluate((el) =>
+      parseFloat(getComputedStyle(el).fontSize)
     );
-    const twoXSize = await twoX.evaluate(
-      (el) => parseFloat(getComputedStyle(el).fontSize)
+    const twoXSize = await twoX.evaluate((el) =>
+      parseFloat(getComputedStyle(el).fontSize)
     );
 
     // .size-lg { font-size: 1.33em } < .size-2x { font-size: 2em }
@@ -106,8 +106,8 @@ test.describe("Icon size utilities regression", () => {
     await expect(sm).toBeVisible();
 
     // .size-sm { font-size: 0.875em } — 14px at 16px base
-    const fontSize = await sm.evaluate(
-      (el) => parseFloat(getComputedStyle(el).fontSize)
+    const fontSize = await sm.evaluate((el) =>
+      parseFloat(getComputedStyle(el).fontSize)
     );
     expect(fontSize).toBeLessThan(16);
   });

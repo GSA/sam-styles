@@ -29,9 +29,7 @@ test.describe("Card regression", () => {
   test(".sds-card--collapsed hides the body", async ({ page }) => {
     await page.goto("/iframe.html?id=components-card--collapsible");
 
-    const body = page
-      .locator(".sds-card--collapsed .sds-card__body")
-      .first();
+    const body = page.locator(".sds-card--collapsed .sds-card__body").first();
     await expect(body).toBeAttached();
 
     // .sds-card--collapsed .sds-card__body { display: none }

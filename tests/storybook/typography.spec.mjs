@@ -8,9 +8,7 @@ test.describe("Paragraph regression", () => {
   test(".sds-big renders larger font-size than the base paragraph", async ({
     page,
   }) => {
-    await page.goto(
-      "/iframe.html?id=branding-typography-paragraph--default"
-    );
+    await page.goto("/iframe.html?id=branding-typography-paragraph--default");
 
     // Scope to #storybook-root to avoid matching hidden Storybook UI <p> elements
     const base = page.locator("#storybook-root p:not([class])").first();
@@ -34,9 +32,7 @@ test.describe("Paragraph regression", () => {
   test(".sds-small renders smaller font-size than the base paragraph", async ({
     page,
   }) => {
-    await page.goto(
-      "/iframe.html?id=branding-typography-paragraph--default"
-    );
+    await page.goto("/iframe.html?id=branding-typography-paragraph--default");
 
     const base = page.locator("#storybook-root p:not([class])").first();
     const small = page.locator("#storybook-root p.sds-small").first();
@@ -58,9 +54,7 @@ test.describe("Paragraph regression", () => {
   test(".sds-text-error renders the error-dark text color", async ({
     page,
   }) => {
-    await page.goto(
-      "/iframe.html?id=branding-typography-paragraph--default"
-    );
+    await page.goto("/iframe.html?id=branding-typography-paragraph--default");
 
     const errorParagraph = page.locator("p.sds-text-error").first();
     await expect(errorParagraph).toBeVisible();
@@ -79,9 +73,7 @@ test.describe("Heading sds-light regression", () => {
   test(".sds-light heading renders normal (400) font-weight", async ({
     page,
   }) => {
-    await page.goto(
-      "/iframe.html?id=branding-typography-heading--light"
-    );
+    await page.goto("/iframe.html?id=branding-typography-heading--light");
 
     const lightHeading = page.locator(".sds-light").first();
     await expect(lightHeading).toBeVisible();
@@ -93,9 +85,7 @@ test.describe("Heading sds-light regression", () => {
   test(".sds-light heading has normal (400) font-weight regardless of context", async ({
     page,
   }) => {
-    await page.goto(
-      "/iframe.html?id=branding-typography-heading--light"
-    );
+    await page.goto("/iframe.html?id=branding-typography-heading--light");
 
     // Verify font-weight on a heading that is NOT inside a table cell (the default
     // heading entry is nested in a <td> which overrides the heading color token).
@@ -117,9 +107,7 @@ test.describe("Field regression", () => {
   test(".sds-field__name is displayed inline by default (not block)", async ({
     page,
   }) => {
-    await page.goto(
-      "/iframe.html?id=branding-typography-fields--example"
-    );
+    await page.goto("/iframe.html?id=branding-typography-fields--example");
 
     const name = page
       .locator(".sds-field:not(.sds-field--stacked) .sds-field__name")
@@ -131,9 +119,7 @@ test.describe("Field regression", () => {
   });
 
   test(".sds-field--stacked makes __name display block", async ({ page }) => {
-    await page.goto(
-      "/iframe.html?id=branding-typography-fields--example"
-    );
+    await page.goto("/iframe.html?id=branding-typography-fields--example");
 
     const name = page.locator(".sds-field--stacked .sds-field__name").first();
     await expect(name).toBeVisible();
@@ -143,13 +129,9 @@ test.describe("Field regression", () => {
   });
 
   test(".sds-field--stacked makes __value display block", async ({ page }) => {
-    await page.goto(
-      "/iframe.html?id=branding-typography-fields--example"
-    );
+    await page.goto("/iframe.html?id=branding-typography-fields--example");
 
-    const value = page
-      .locator(".sds-field--stacked .sds-field__value")
-      .first();
+    const value = page.locator(".sds-field--stacked .sds-field__value").first();
     await expect(value).toBeVisible();
 
     // .sds-field--stacked .sds-field__value { u-display("block") }
@@ -159,9 +141,7 @@ test.describe("Field regression", () => {
   test(".sds-field--featured makes __name italic and light weight", async ({
     page,
   }) => {
-    await page.goto(
-      "/iframe.html?id=branding-typography-fields--example"
-    );
+    await page.goto("/iframe.html?id=branding-typography-fields--example");
 
     const name = page.locator(".sds-field--featured .sds-field__name").first();
     await expect(name).toBeVisible();
