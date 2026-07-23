@@ -1,9 +1,9 @@
-/* stylelint-disable selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 .usa-sidenav {
-  &__item .usa-sidenav__item {
+  .usa-sidenav__item .usa-sidenav__item {
     border-top: none;
   }
 
+  /* stylelint-disable-next-line selector-no-qualifying-type */
   a:not(.usa-button) {
     color: color("ink");
     font-weight: font-weight("semibold");
@@ -55,67 +55,72 @@
       @include u-padding-y(0);
     }
   }
+}
 
-  &--styled {
-    @include u-border(0);
-    @include u-bg("white");
-    a {
-      color: color("ink");
-      @include u-font-family("sans");
-      @include u-font-size("body", "xs");
-      @include u-text("semibold");
-      @include u-padding-y(2);
-    }
+.usa-sidenav--styled {
+  @include u-border(0);
+  @include u-bg("white");
 
-    .usa-sidenav__item {
-      @include u-border-x("1px");
-      @include u-border-bottom("1px");
-      @include u-border("base-light");
-
-      &:first-child {
-        @include u-border-top("1px");
-      }
-
-      &:not(:first-child) {
-        @include u-border-top(0);
-      }
-
-      &.usa-current > a {
-        color: color("secondary-dark");
-        font-weight: font-weight("bold");
-      }
-      &.disabled {
-        color: #c9c9c9;
-        cursor: auto;
-        &:focus {
-          outline: none;
-        }
-      }
-    }
+  a {
+    color: color("ink");
+    @include u-font-family("sans");
+    @include u-font-size("body", "xs");
+    @include u-text("semibold");
+    @include u-padding-y(2);
   }
 
-  &.sds-subpanel {
-    .usa-sidenav__item {
-      a:not(.usa-button) {
-        @include typeset-link;
-        text-decoration: none;
-        font-weight: font-weight("semibold");
+  .usa-sidenav__item {
+    @include u-border-x("1px");
+    @include u-border-bottom("1px");
+    @include u-border("base-light");
 
-        &:hover {
-          @include u-border("1px", "base-light");
-          color: color("base-dark");
-          background-color: color("base-lightest");
-        }
-      }
-
-      a.usa-link--active {
-        color: color("base-dark");
-      }
-    }
-  }
-  & > li:nth-child(1) {
-    .usa-sidenav__item {
+    &:first-child {
       @include u-border-top("1px");
     }
+
+    &:not(:first-child) {
+      @include u-border-top(0);
+    }
+
+    &.usa-current > a {
+      color: color("secondary-dark");
+      font-weight: font-weight("bold");
+    }
+
+    &.disabled {
+      color: #c9c9c9;
+      cursor: auto;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.usa-sidenav.sds-subpanel {
+  .usa-sidenav__item {
+    /* stylelint-disable-next-line selector-no-qualifying-type -- style all non-button anchors, not just .usa-link */
+    a:not(.usa-button) {
+      @include typeset-link;
+      text-decoration: none;
+      font-weight: font-weight("semibold");
+
+      &:hover {
+        @include u-border("1px", "base-light");
+        color: color("base-dark");
+        background-color: color("base-lightest");
+      }
+    }
+
+    /* stylelint-disable-next-line selector-no-qualifying-type -- match active state on any anchor */
+    a.usa-link--active {
+      color: color("base-dark");
+    }
+  }
+}
+
+.usa-sidenav > li:nth-child(1) {
+  .usa-sidenav__item {
+    @include u-border-top("1px");
   }
 }

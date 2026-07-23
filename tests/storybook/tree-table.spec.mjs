@@ -11,6 +11,7 @@ test("tree-table header cells have accent-cool-lighter background", async ({
   const th = page.locator(".sds-tree-table thead th").first();
   await expect(th).toBeVisible();
   // u-bg("accent-cool-lighter") from treetable.scss thead th rule
+  // accent-cool-lighter = blue-5 = #eff6fb = rgb(239, 246, 251)
   await expect(th).toHaveCSS("background-color", "rgb(239, 246, 251)");
 });
 

@@ -1,4 +1,3 @@
-/* stylelint-disable selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 .sds-autocomplete {
   @include u-font("sans", "xs");
   @include u-position("absolute");
@@ -69,21 +68,21 @@
 
   /* Item Group */
   .sds-autocomplete__group {
-    div.sds-autocomplete__item {
+    .sds-autocomplete__item {
       @include u-bg("base-lightest");
       @include u-text("semibold");
     }
 
     /* Group hover or highlighted */
-    div.sds-autocomplete__item:hover,
-    div.sds-autocomplete__item--highlighted {
+    .sds-autocomplete__item:hover,
+    .sds-autocomplete__item--highlighted {
       @include u-bg("secondary");
       @include u-text("white");
     }
 
     /* Item selected */
-    div.sds-autocomplete__item--selected,
-    div.sds-autocomplete__item--selected:hover {
+    .sds-autocomplete__item--selected,
+    .sds-autocomplete__item--selected:hover {
       @include u-text("base-dark");
       @include u-bg("base-lightest");
       @include u-text("italic");
@@ -96,18 +95,18 @@
         @include u-padding-left(2);
       }
 
-      ul > li.sds-autocomplete__item {
+      ul > .sds-autocomplete__item {
         @include u-padding-left(4);
       }
     }
 
     /* Grandchildren Items */
-    & > ul > li.sds-autocomplete__item {
+    & > ul > .sds-autocomplete__item {
       @include u-padding-left(2);
     }
 
-    & > div.sds-autocomplete__item--disabled,
-    & > div.sds-autocomplete__item--disabled:hover {
+    & > .sds-autocomplete__item--disabled,
+    & > .sds-autocomplete__item--disabled:hover {
       @include u-bg("base-lightest");
       @include u-text("ink");
       @include u-text("no-italic");

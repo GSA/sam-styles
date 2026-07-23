@@ -1,4 +1,3 @@
-/* stylelint-disable selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 $info-light-alt: #9ddfeb;
 $info-lighter-alt: #e7f6f8;
 $info-dark-alt: #009ec1;
@@ -223,8 +222,8 @@ $error-dark-alt: #b50909;
 }
 
 // Block style tag
-div[class^="grid-col-"] .sds-tag--block,
-div[class*=" grid-col-"] .sds-tag--block {
+[class^="grid-col-"] .sds-tag--block,
+[class*=" grid-col-"] .sds-tag--block {
   display: block !important; /* stylelint-disable-line declaration-no-important -- block modifier must override the base inline-flex .sds-tag inside grid columns (#742) */
   width: 100% !important; /* stylelint-disable-line declaration-no-important -- block modifier must fill the grid column, overriding the base .sds-tag width (#742) */
 }

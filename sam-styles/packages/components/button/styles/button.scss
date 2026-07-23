@@ -1,4 +1,3 @@
-/* stylelint-disable selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 $button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
 $info-light-alt: #9ddfeb;
@@ -42,6 +41,7 @@ $error-dark-alt: #b50909;
     text-decoration: underline;
     min-width: 0;
 
+    /* stylelint-disable selector-no-qualifying-type -- preserve static state aliases for unstyled button */
     &.usa-button--active,
     &:active {
       border: none;
@@ -55,6 +55,7 @@ $error-dark-alt: #b50909;
       @include u-bg("transparent");
       text-decoration: underline;
     }
+    /* stylelint-enable selector-no-qualifying-type */
   }
 
   &.bg-primary-lighter {
@@ -577,18 +578,20 @@ $error-dark-alt: #b50909;
     border-width: 2px;
     border-style: solid;
     border-color: color("base-light");
+  }
+}
 
-    &.sds-button--unstyled,
-    &.usa-button--unstyled {
-      box-shadow: none;
-      @include u-bg("transparent");
-      @include u-text("base");
-      border: none;
-      text-decoration: none;
-      &:hover {
-        font-weight: unset;
-      }
-    }
+.sds-button--disabled.sds-button--unstyled,
+.sds-button:disabled.sds-button--unstyled,
+.usa-button--disabled.usa-button--unstyled,
+.usa-button:disabled.usa-button--unstyled {
+  box-shadow: none;
+  @include u-bg("transparent");
+  @include u-text("base");
+  border: none;
+  text-decoration: none;
+  &:hover {
+    font-weight: unset;
   }
 }
 
