@@ -91,6 +91,20 @@ test("filter: .sds-filters--horizontal formly-field has margin-top:0 (override w
   expect(marginTop).toBe("0px");
 });
 
+test("filter story: .sds-filters--horizontal formly-field renders flush (margin-top:0)", async ({
+  page,
+}) => {
+  // Rendered by the SDS Styles / Overrides → Horizontal filter story, which seeds
+  // its own competing `formly-field { margin-top: 40px }` rule inline.
+  await page.goto("/iframe.html?id=sds-styles-overrides--horizontal-filter");
+
+  const field = page.locator(".sds-filters--horizontal > formly-field").first();
+  await expect(field).toBeVisible();
+
+  // The SDS reset must beat the story's seeded 40px competitor.
+  await expect(field).toHaveCSS("margin-top", "0px");
+});
+
 test("filter: .sds-filters--horizontal .search-input formly-field zeroes both margins (override wins without !important)", async ({
   page,
 }) => {

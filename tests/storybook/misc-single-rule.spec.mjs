@@ -5,7 +5,7 @@ import { test, expect } from "@playwright/test";
 // Files covered:
 //   stepindicator.scss  — background-color: transparent + new .sds-step-indicator selector
 //   pagination.scss     — .width-6 { width: 3rem }
-//   slideout.scss       — .dialog-slide-out { position: fixed }
+//   slideout.scss       — .dialog-slide-out { position: fixed } (SDS Styles/Overrides story)
 //   header.scss         — .counter-icon { color: red }  (debug color; !important removed)
 //   footer.scss         — .usa-footer__primary-link::before { content: none }
 //   _sizing.scss        — .width-card-lg { width: 15rem }  (space bug also fixed)
@@ -56,19 +56,14 @@ test("pagination: .width-6 input renders at 3rem (48px) width", async ({
 // ── Slideout ──────────────────────────────────────────────────────────────────
 
 test("slideout: .dialog-slide-out is position:fixed", async ({ page }) => {
-  await page.goto("/iframe.html?id=components-stepindicator--default");
+  // Rendered by the SDS Styles / Overrides → Slideout story.
+  await page.goto("/iframe.html?id=sds-styles-overrides--slideout");
 
-  // .dialog-slide-out has no Storybook story; inject into a loaded page
-  const position = await page.evaluate(() => {
-    const el = document.createElement("div");
-    el.className = "dialog-slide-out";
-    el.style.visibility = "hidden";
-    document.body.appendChild(el);
-    return window.getComputedStyle(el).position;
-  });
+  const panel = page.locator(".dialog-slide-out").first();
+  await expect(panel).toBeVisible();
 
   // `.dialog-slide-out { position: fixed }` — fails if USWDS or browser resets to static
-  expect(position).toBe("fixed");
+  await expect(panel).toHaveCSS("position", "fixed");
 });
 
 // ── Header counter-icon ───────────────────────────────────────────────────────

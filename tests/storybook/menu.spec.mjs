@@ -93,3 +93,24 @@ test("action button: has white background (circle action button base state)", as
   // `.sds-button--action { background-color: color("white") }`
   await expect(btn).toHaveCSS("background-color", "rgb(255, 255, 255)");
 });
+
+// ── sds-button--menu (SDS Styles/Overrides story) ─────────────────────────────
+// The new MenuButton story renders base/hover/active/disabled variants so the
+// menu-trigger states are reviewable without DevTools injection.
+
+test("menu button story: disabled variant renders base-gray border/text on white", async ({
+  page,
+}) => {
+  await page.goto("/iframe.html?id=sds-styles-overrides--menu-button");
+
+  const disabled = page
+    .locator(".sds-button--menu.usa-button--disabled")
+    .first();
+  await expect(disabled).toBeVisible();
+
+  // `.sds-button--menu.usa-button--disabled { border-color: base; background: white; color: base }`
+  // base = gray-50 = rgb(117, 117, 117)
+  await expect(disabled).toHaveCSS("border-top-color", "rgb(117, 117, 117)");
+  await expect(disabled).toHaveCSS("background-color", "rgb(255, 255, 255)");
+  await expect(disabled).toHaveCSS("color", "rgb(117, 117, 117)");
+});
