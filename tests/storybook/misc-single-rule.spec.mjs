@@ -20,7 +20,22 @@ test("step indicator: .usa-step-indicator has transparent background", async ({
   const indicator = page.locator(".usa-step-indicator").first();
   await expect(indicator).toBeVisible();
 
-  // `.usa-step-indicator { background-color: transparent }` — fails if USWDS re-asserts white
+  // Seed a competing background via a lower-priority mechanism (an equal-specificity
+  // inline-injected stylesheet placed BEFORE our rule in source order). Our
+  // `.usa-step-indicator { background-color: transparent }` must still win over the
+  // USWDS `.usa-step-indicator { background-color: white }` (equal 0,1,0 specificity,
+  // resolved by source order since our packages are forwarded after uswds).
+  // Without our override winning, the computed value would be white, not transparent.
+  await indicator.evaluate((el) => {
+    const style = document.createElement("style");
+    // Inserted at the top of <head> so it precedes the compiled bundle in source
+    // order; equal specificity means our later rule wins only if the cascade holds.
+    style.textContent = ".usa-step-indicator { background-color: white; }";
+    document.head.insertBefore(style, document.head.firstChild);
+  });
+
+  // `.usa-step-indicator { background-color: transparent }` — fails if USWDS (or the
+  // seeded competing rule) re-asserts an opaque background.
   await expect(indicator).toHaveCSS("background-color", "rgba(0, 0, 0, 0)");
 });
 
