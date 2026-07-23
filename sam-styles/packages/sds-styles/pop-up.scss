@@ -194,11 +194,11 @@
 }
 
 .sds-popover__content.sds-popover__hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+  display: none !important; /* stylelint-disable-line declaration-no-important -- visibility toggle must override the shared .sds-popover__content display:block (#742) */
 }
 
 .sds-popover__content.sds-popover__shown {
-  display: block !important; /* stylelint-disable-line declaration-no-important */
+  display: block !important; /* stylelint-disable-line declaration-no-important -- visibility toggle must override the shared .sds-popover__content default (#742) */
 }
 
 .sds-tooltip__content,

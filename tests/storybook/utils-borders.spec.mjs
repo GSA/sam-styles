@@ -85,12 +85,17 @@ test("borders: .border--hairline has zero border-width (border reset)", async ({
     const el = document.createElement("div");
     el.className = "border--hairline";
     el.style.visibility = "hidden";
+    // Seed a competing inline border so a passing assertion proves the
+    // `.border--hairline` reset actually wins the cascade (a plain <div>
+    // already has border-width:0, which would make this test pass even if
+    // the rule were deleted).
+    el.style.border = "4px solid red";
     document.body.appendChild(el);
     return window.getComputedStyle(el).borderWidth;
   });
 
-  // `.border--hairline { border: 0 }` — was `border: 0 !important`
-  // Confirms the border reset still applies without the !important guard
+  // `.border--hairline { border: 0 !important }` must override the inline
+  // 4px border seeded above and reset border-width back to 0.
   expect(borderWidth).toBe("0px");
 });
 

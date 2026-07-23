@@ -216,17 +216,17 @@ $error-dark-alt: #b50909;
 }
 
 .sds-tag--disabled {
-  /* stylelint-disable-next-line declaration-no-important */
+  /* stylelint-disable-next-line declaration-no-important -- disabled state must override the base .sds-tag background (#742) */
   @include u-bg("disabled", !important);
-  /* stylelint-disable-next-line declaration-no-important */
+  /* stylelint-disable-next-line declaration-no-important -- disabled state must override the base .sds-tag border (#742) */
   @include u-border("disabled-dark", !important);
 }
 
 // Block style tag
 div[class^="grid-col-"] .sds-tag--block,
 div[class*=" grid-col-"] .sds-tag--block {
-  display: block !important; /* stylelint-disable-line declaration-no-important */
-  width: 100% !important; /* stylelint-disable-line declaration-no-important */
+  display: block !important; /* stylelint-disable-line declaration-no-important -- block modifier must override the base inline-flex .sds-tag inside grid columns (#742) */
+  width: 100% !important; /* stylelint-disable-line declaration-no-important -- block modifier must fill the grid column, overriding the base .sds-tag width (#742) */
 }
 
 /*
@@ -243,11 +243,11 @@ div[class*=" grid-col-"] .sds-tag--block {
 }
 
 .sds-tag--light {
-  /* stylelint-disable-next-line declaration-no-important */
+  /* stylelint-disable-next-line declaration-no-important -- light variant must override the base .sds-tag background (#742) */
   @include u-bg("white", !important);
-  /* stylelint-disable-next-line declaration-no-important */
+  /* stylelint-disable-next-line declaration-no-important -- light variant must override the base .sds-tag border (#742) */
   @include u-border("warning", !important);
-  /* stylelint-disable-next-line declaration-no-important */
+  /* stylelint-disable-next-line declaration-no-important -- light variant must override the base .sds-tag text color (#742) */
   @include u-text("base-darker", !important);
 }
 
