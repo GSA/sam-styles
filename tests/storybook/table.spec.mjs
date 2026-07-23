@@ -9,14 +9,13 @@ test("standard table body cell has correct padding", async ({ page }) => {
   const cell = page.locator(".sds-table tbody .sds-table__row td").first();
   await expect(cell).toBeVisible();
 
-  // %sds-table--cell sets u-padding-y(1) / u-padding-x(2) = 8px / 16px.
-  // NOTE: the responsive @media tablet block that previously set asymmetric
-  // padding (left: 1.5rem = 24px, right: 1rem = 16px) was removed as part of
-  // the max-nesting-depth refactor (issue #743). If that block is restored,
-  // update padding-left to 24px and padding-right to 16px.
+  // %sds-table--cell sets u-padding-y(1) / u-padding-x(2) = 8px / 16px, but the
+  // responsive @include at-media("tablet") block overrides body-cell padding to
+  // left: 1.5rem = 24px, right: 1rem = 16px at tablet+ widths. The Playwright
+  // config runs Desktop Chrome (>= tablet), so the tablet override applies here.
   await expect(cell).toHaveCSS("padding-top", "8px");
   await expect(cell).toHaveCSS("padding-bottom", "8px");
-  await expect(cell).toHaveCSS("padding-left", "16px");
+  await expect(cell).toHaveCSS("padding-left", "24px");
   await expect(cell).toHaveCSS("padding-right", "16px");
 });
 
