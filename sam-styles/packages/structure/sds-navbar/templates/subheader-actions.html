@@ -1,0 +1,26 @@
+<!-- Minimal fixture for testing subheader action-button variants (issue #743).
+     Reproduces the selector chain:
+     .sds-navbar > .sds-subheader__content > .actions-div > .actions-button.sds-button--{variant}
+-->
+<div class="sds-navbar">
+  <div class="sds-subheader__content">
+    <div class="actions-div">
+      <!-- Labeled-icon variant: action button with text label + ellipsis icon -->
+      <button
+        class="usa-button actions-button sds-button--labeled-icon"
+        aria-label="Actions menu"
+      >
+        <span>Actions</span>
+        <span class="ellipsis-icon" aria-hidden="true">•••</span>
+      </button>
+
+      <!-- Circular variant: icon-only action button -->
+      <button
+        class="usa-button actions-button sds-button--circular"
+        aria-label="More options"
+      >
+        <span aria-hidden="true">⋯</span>
+      </button>
+    </div>
+  </div>
+</div>
