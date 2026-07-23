@@ -1,4 +1,3 @@
-/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 .sds-min-width-160 {
   min-width: 160px;
 }
@@ -20,5 +19,5 @@
 }
 
 .width-card-lg {
-  width: 15 rem !important;
+  width: 15rem;
 }

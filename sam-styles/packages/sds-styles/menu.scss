@@ -1,4 +1,3 @@
-/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 .sds-menu {
   @include u-padding-top(1);
   @include u-padding-bottom("105");
@@ -48,7 +47,7 @@
   &:focus {
     color: color("accent-warm-darker");
     text-decoration: underline;
-    outline-offset: -4px !important;
+    outline-offset: -4px;
   }
 }
 
@@ -142,7 +141,7 @@
 }
 
 .sds-button--menu {
-  color: color("secondary-dark") !important;
+  color: color("secondary-dark");
 
   usa-icon {
     font-size: 1.5rem;
@@ -153,40 +152,40 @@
     line-height: 1.5;
     font-size: 17px;
     border-color: color("secondary-dark");
-    background-color: white !important;
-    padding: 0.5rem !important;
-    min-width: 6.25rem !important;
+    background-color: white;
+    padding: 0.5rem;
+    min-width: 6.25rem;
 
     &:visited {
-      color: color("secondary-dark") !important;
+      color: color("secondary-dark");
       box-shadow: none;
     }
 
     &.usa-button--hover,
     &:not(.usa-button--disabled):hover {
-      background-color: color("secondary-dark") !important;
-      color: white !important;
-      border-color: color("secondary-dark") !important;
+      background-color: color("secondary-dark");
+      color: white;
+      border-color: color("secondary-dark");
       box-shadow: none;
     }
 
     &.usa-button--active,
     &:not(.usa-button--disabled):active {
-      background-color: color("secondary-dark") !important;
+      background-color: color("secondary-dark");
       color: white;
-      border-color: color("secondary-dark") !important;
+      border-color: color("secondary-dark");
       box-shadow: none;
     }
   }
 
   &.usa-button--disabled {
     box-shadow: none;
-    border-width: 2px !important;
-    border-style: solid !important;
-    border-color: color("base") !important;
-    background-color: white !important;
-    color: color("base") !important;
-    cursor: unset !important;
+    border-width: 2px;
+    border-style: solid;
+    border-color: color("base");
+    background-color: white;
+    color: color("base");
+    cursor: unset;
   }
 }
 
@@ -195,7 +194,7 @@
     padding: 1em 0.5em;
 
     span {
-      display: none !important;
+      display: none;
     }
   }
 }

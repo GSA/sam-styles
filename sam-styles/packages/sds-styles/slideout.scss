@@ -1,8 +1,7 @@
-/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 $slide-out-width: 15rem;
 
 .dialog-slide-out {
-  position: fixed !important;
+  position: fixed;
   bottom: 0;
   top: 0;
   width: $slide-out-width;

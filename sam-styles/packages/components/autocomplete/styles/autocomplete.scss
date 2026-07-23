@@ -1,4 +1,4 @@
-/* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
+/* stylelint-disable selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 .sds-autocomplete {
   @include u-font("sans", "xs");
   @include u-position("absolute");
@@ -145,14 +145,14 @@
   cursor: pointer;
   &--highlighted,
   &:hover {
-    background-color: #eff6fb !important;
+    background-color: #eff6fb;
   }
   &--item {
-    font-weight: 600 !important;
+    font-weight: 600;
     @include u-display("inline");
   }
   &--secondary {
-    font-weight: 400 !important;
+    font-weight: 400;
     margin-left: 2rem;
   }
 }

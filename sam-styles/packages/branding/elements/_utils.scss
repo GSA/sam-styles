@@ -1,4 +1,4 @@
-/* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
+/* stylelint-disable selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 .cursor-pointer {
   cursor: pointer;
 }
@@ -8,19 +8,19 @@
 }
 
 .sds-measure-7 {
-  max-width: 96ex !important;
+  max-width: 96ex !important; /* stylelint-disable-line declaration-no-important -- width utility must override USWDS component max-width (#742) */
 }
 
 .sds-measure-8 {
-  max-width: 104ex !important;
+  max-width: 104ex !important; /* stylelint-disable-line declaration-no-important -- width utility must override USWDS component max-width (#742) */
 }
 
 .sds-measure-9 {
-  max-width: 120ex !important;
+  max-width: 120ex !important; /* stylelint-disable-line declaration-no-important -- width utility must override USWDS component max-width (#742) */
 }
 
 .sds-measure-10 {
-  max-width: 136ex !important;
+  max-width: 136ex !important; /* stylelint-disable-line declaration-no-important -- width utility must override USWDS component max-width (#742) */
 }
 
 i.size-xs {
@@ -74,6 +74,6 @@ i.sds-icon-margin {
 .sds-textarea-large {
   @include u-width("tablet");
   .usa-textarea {
-    max-width: none !important;
+    max-width: none !important; /* stylelint-disable-line declaration-no-important -- large-textarea utility must lift USWDS .usa-textarea max-width (#742) */
   }
 }

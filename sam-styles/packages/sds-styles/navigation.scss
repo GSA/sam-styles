@@ -1,4 +1,4 @@
-/* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
+/* stylelint-disable selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 /*******************************
        USWDS OVERRIDES
 *******************************/
@@ -83,7 +83,7 @@
     }
     @include at-media-max("tablet-lg") {
       &::before {
-        content: none !important;
+        content: none;
       }
     }
   }

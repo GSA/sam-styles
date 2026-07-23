@@ -1,4 +1,4 @@
-/* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
+/* stylelint-disable selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 .sds-popup {
   position: relative;
   display: inline-block;
@@ -194,11 +194,11 @@
 }
 
 .sds-popover__content.sds-popover__hidden {
-  display: none !important;
+  display: none !important; /* stylelint-disable-line declaration-no-important -- visibility toggle must override the shared .sds-popover__content display:block (#742) */
 }
 
 .sds-popover__content.sds-popover__shown {
-  display: block !important;
+  display: block !important; /* stylelint-disable-line declaration-no-important -- visibility toggle must override the shared .sds-popover__content default (#742) */
 }
 
 .sds-tooltip__content,
@@ -270,7 +270,7 @@
     @include u-margin("1px");
     min-width: 300px;
     max-width: 500px;
-    text-indent: 0 !important;
+    text-indent: 0;
   }
 }
 

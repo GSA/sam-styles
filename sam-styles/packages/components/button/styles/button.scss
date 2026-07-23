@@ -1,4 +1,4 @@
-/* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
+/* stylelint-disable selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 $button-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 
 $info-light-alt: #9ddfeb;
@@ -32,7 +32,7 @@ $error-dark-alt: #b50909;
 
   &.usa-focus,
   &:focus {
-    outline-offset: units(2px) !important;
+    outline-offset: units(2px);
     outline-width: 2px;
   }
 
@@ -40,7 +40,7 @@ $error-dark-alt: #b50909;
     @include u-text($theme-link-color);
     border: none;
     text-decoration: underline;
-    min-width: 0 !important;
+    min-width: 0;
 
     &.usa-button--active,
     &:active {
@@ -63,18 +63,20 @@ $error-dark-alt: #b50909;
     &.usa-button--hover,
     &:hover {
       @include u-text("bold", $theme-link-active-color);
-      background-color: white !important;
+      background-color: white !important; /* stylelint-disable-line declaration-no-important -- bg-*-lighter variant must override USWDS .usa-button state backgrounds (#742) */
     }
 
     &.usa-button--active,
     &:active {
-      background-color: white !important;
+      background-color: white !important; /* stylelint-disable-line declaration-no-important -- bg-*-lighter variant must override USWDS .usa-button state backgrounds (#742) */
       @include u-border("primary-dark");
       @include u-text("bold", $theme-link-active-color);
     }
 
     &:disabled {
-      background-color: color("white") !important;
+      background-color: color(
+        "white"
+      ) !important; /* stylelint-disable-line declaration-no-important -- bg-*-lighter variant must override USWDS .usa-button state backgrounds (#742) */
       @include u-text("bold", $theme-color-base);
       @include u-border("base-light");
       box-shadow: none;
@@ -83,24 +85,26 @@ $error-dark-alt: #b50909;
 
   &.bg-secondary-lighter {
     @include u-border("secondary");
-    background-color: #adcdff !important;
+    background-color: #adcdff !important; /* stylelint-disable-line declaration-no-important -- bg-*-lighter variant must override USWDS .usa-button state backgrounds (#742) */
     @include u-text("bold", $theme-link-active-color);
 
     &.usa-button--hover,
     &:hover {
       @include u-text("bold", $theme-link-active-color);
-      background-color: white !important;
+      background-color: white !important; /* stylelint-disable-line declaration-no-important -- bg-*-lighter variant must override USWDS .usa-button state backgrounds (#742) */
     }
 
     &.usa-button--active,
     &:active {
-      background-color: #adcdff !important;
+      background-color: #adcdff !important; /* stylelint-disable-line declaration-no-important -- bg-*-lighter variant must override USWDS .usa-button state backgrounds (#742) */
       @include u-border("secondary-dark");
       @include u-text("bold", $theme-link-active-color);
     }
 
     &:disabled {
-      background-color: color("white") !important;
+      background-color: color(
+        "white"
+      ) !important; /* stylelint-disable-line declaration-no-important -- bg-*-lighter variant must override USWDS .usa-button state backgrounds (#742) */
       @include u-text("bold", $theme-color-base);
       @include u-border("base-light");
       box-shadow: none;
@@ -114,18 +118,22 @@ $error-dark-alt: #b50909;
     &.usa-button--hover,
     &:hover {
       @include u-text("bold", $theme-link-active-color);
-      background-color: white !important;
+      background-color: white !important; /* stylelint-disable-line declaration-no-important -- bg-*-lighter variant must override USWDS .usa-button state backgrounds (#742) */
     }
 
     &.usa-button--active,
     &:active {
-      background-color: color("base-lightest") !important;
+      background-color: color(
+        "base-lightest"
+      ) !important; /* stylelint-disable-line declaration-no-important -- bg-*-lighter variant must override USWDS .usa-button state backgrounds (#742) */
       @include u-border("base-dark");
       @include u-text("bold", $theme-link-active-color);
     }
 
     &:disabled {
-      background-color: color("white") !important;
+      background-color: color(
+        "white"
+      ) !important; /* stylelint-disable-line declaration-no-important -- bg-*-lighter variant must override USWDS .usa-button state backgrounds (#742) */
       @include u-text("bold", $theme-color-base);
       @include u-border("base-light");
       box-shadow: none;
@@ -139,18 +147,20 @@ $error-dark-alt: #b50909;
     &:hover {
       @include u-text("bold", $theme-link-active-color);
       @include u-border("accent-cool");
-      background-color: white !important;
+      background-color: white !important; /* stylelint-disable-line declaration-no-important -- bg-*-lighter variant must override USWDS .usa-button state backgrounds (#742) */
     }
 
     &.usa-button--active,
     &:active {
-      background-color: white !important;
+      background-color: white !important; /* stylelint-disable-line declaration-no-important -- bg-*-lighter variant must override USWDS .usa-button state backgrounds (#742) */
       @include u-border("accent-cool-dark");
       @include u-text("bold", $theme-link-active-color);
     }
 
     &:disabled {
-      background-color: color("white") !important;
+      background-color: color(
+        "white"
+      ) !important; /* stylelint-disable-line declaration-no-important -- bg-*-lighter variant must override USWDS .usa-button state backgrounds (#742) */
       @include u-text("bold", $theme-color-base);
       @include u-border("base-light");
       box-shadow: none;
@@ -164,18 +174,20 @@ $error-dark-alt: #b50909;
     &:hover {
       @include u-text("bold", $theme-link-active-color);
       @include u-border("accent-warm");
-      background-color: white !important;
+      background-color: white !important; /* stylelint-disable-line declaration-no-important -- bg-*-lighter variant must override USWDS .usa-button state backgrounds (#742) */
     }
 
     &.usa-button--active,
     &:active {
-      background-color: white !important;
+      background-color: white !important; /* stylelint-disable-line declaration-no-important -- bg-*-lighter variant must override USWDS .usa-button state backgrounds (#742) */
       @include u-border("accent-warm-dark");
       @include u-text("bold", $theme-link-active-color);
     }
 
     &:disabled {
-      background-color: color("white") !important;
+      background-color: color(
+        "white"
+      ) !important; /* stylelint-disable-line declaration-no-important -- bg-*-lighter variant must override USWDS .usa-button state backgrounds (#742) */
       @include u-text("bold", $theme-color-base);
       @include u-border("base-light");
       box-shadow: none;
@@ -189,8 +201,8 @@ $error-dark-alt: #b50909;
   box-shadow: none;
 
   &:disabled {
-    background-color: color("white") !important;
-    color: color($theme-color-base) !important;
+    background-color: color("white");
+    color: color($theme-color-base);
     font-weight: bold;
     @include u-text("bold", $theme-color-base);
 
@@ -562,19 +574,19 @@ $error-dark-alt: #b50909;
     @include u-border("disabled");
     @include u-bg("disabled");
     @include u-text("white");
-    border-width: 2px !important;
-    border-style: solid !important;
-    border-color: color("base-light") !important;
+    border-width: 2px;
+    border-style: solid;
+    border-color: color("base-light");
 
     &.sds-button--unstyled,
     &.usa-button--unstyled {
       box-shadow: none;
       @include u-bg("transparent");
       @include u-text("base");
-      border: none !important;
+      border: none;
       text-decoration: none;
       &:hover {
-        font-weight: unset !important;
+        font-weight: unset;
       }
     }
   }
@@ -741,7 +753,7 @@ $error-dark-alt: #b50909;
 
     .fa-layers {
       .fa-circle {
-        color: color("secondary-darker") !important;
+        color: color("secondary-darker");
       }
 
       .svg-inline--fa:not(.fa-circle) {
@@ -790,7 +802,7 @@ $error-dark-alt: #b50909;
 
   svg {
     margin-right: units(2);
-    width: units(6) !important;
+    width: units(6);
   }
 
   .sds-button--icon__title {
@@ -946,8 +958,8 @@ $error-dark-alt: #b50909;
   &.usa-button--base {
     svg {
       @include u-margin-top(2px);
-      height: 14px !important;
-      width: 14px !important;
+      height: 14px;
+      width: 14px;
       stroke: color("ink");
     }
     &:active svg {

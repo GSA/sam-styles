@@ -1,4 +1,4 @@
-/* stylelint-disable declaration-no-important, selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
+/* stylelint-disable selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 .usa-sidenav {
   &__item .usa-sidenav__item {
     border-top: none;
@@ -85,7 +85,7 @@
         font-weight: font-weight("bold");
       }
       &.disabled {
-        color: #c9c9c9 !important;
+        color: #c9c9c9;
         cursor: auto;
         &:focus {
           outline: none;
