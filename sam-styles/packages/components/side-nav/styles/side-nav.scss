@@ -1,4 +1,3 @@
-/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 .usa-sidenav {
   .usa-sidenav__item .usa-sidenav__item {
     border-top: none;
@@ -89,7 +88,7 @@
     }
 
     &.disabled {
-      color: #c9c9c9 !important;
+      color: #c9c9c9;
       cursor: auto;
       &:focus {
         outline: none;

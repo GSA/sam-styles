@@ -1,4 +1,3 @@
-/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 /*******************************
        USWDS OVERRIDES
 *******************************/
@@ -83,7 +82,7 @@
     }
     @include at-media-max("tablet-lg") {
       &::before {
-        content: none !important;
+        content: none;
       }
     }
   }

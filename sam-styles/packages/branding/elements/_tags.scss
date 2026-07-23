@@ -1,4 +1,3 @@
-/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
 $info-light-alt: #9ddfeb;
 $info-lighter-alt: #e7f6f8;
 $info-dark-alt: #009ec1;
@@ -216,15 +215,17 @@ $error-dark-alt: #b50909;
 }
 
 .sds-tag--disabled {
+  /* stylelint-disable-next-line declaration-no-important -- disabled state must override the base .sds-tag background (#742) */
   @include u-bg("disabled", !important);
+  /* stylelint-disable-next-line declaration-no-important -- disabled state must override the base .sds-tag border (#742) */
   @include u-border("disabled-dark", !important);
 }
 
 // Block style tag
 [class^="grid-col-"] .sds-tag--block,
 [class*=" grid-col-"] .sds-tag--block {
-  display: block !important;
-  width: 100% !important;
+  display: block !important; /* stylelint-disable-line declaration-no-important -- block modifier must override the base inline-flex .sds-tag inside grid columns (#742) */
+  width: 100% !important; /* stylelint-disable-line declaration-no-important -- block modifier must fill the grid column, overriding the base .sds-tag width (#742) */
 }
 
 /*
@@ -241,8 +242,11 @@ $error-dark-alt: #b50909;
 }
 
 .sds-tag--light {
+  /* stylelint-disable-next-line declaration-no-important -- light variant must override the base .sds-tag background (#742) */
   @include u-bg("white", !important);
+  /* stylelint-disable-next-line declaration-no-important -- light variant must override the base .sds-tag border (#742) */
   @include u-border("warning", !important);
+  /* stylelint-disable-next-line declaration-no-important -- light variant must override the base .sds-tag text color (#742) */
   @include u-text("base-darker", !important);
 }
 
@@ -250,7 +254,7 @@ $error-dark-alt: #b50909;
   @include u-display("block");
   @include u-margin-bottom(0);
   @include u-margin-top("2px");
-  @include u-margin-right(0.5, !important);
+  @include u-margin-right(0.5);
   @include u-font("sans", "3xs");
   min-width: 52px;
   width: 52px;
@@ -428,7 +432,7 @@ $error-dark-alt: #b50909;
 .sds-status-tag {
   @include u-font("sans", "3xs");
   @include u-text("normal");
-  padding: 6px 10px !important;
+  padding: 6px 10px;
   margin: 8px;
   border-radius: 99rem;
   display: inline-flex;

@@ -1,5 +1,3 @@
-/* stylelint-disable declaration-no-important -- legacy baseline (issue #735); tracked in #740 */
-
 @mixin bordered-item($top: false) {
   @include u-border("1px");
   @include u-border("base-light");
@@ -26,27 +24,27 @@
 }
 
 .border--hairline {
-  border: 0 !important;
+  border: 0 !important; /* stylelint-disable-line declaration-no-important -- utility reset must defeat USWDS component borders; box-shadow below simulates the hairline (#742) */
   box-shadow: 0 0 0 1px color("base-light");
 }
 
 @media (min-resolution: 2dppx) {
   .border--hairline {
-    border: 0 !important;
+    border: 0 !important; /* stylelint-disable-line declaration-no-important -- utility reset must defeat USWDS component borders; box-shadow below simulates the hairline (#742) */
     box-shadow: 0 0 0 0.5px;
   }
 }
 
 @media (min-resolution: 3dppx) {
   .border--hairline {
-    border: 0 !important;
+    border: 0 !important; /* stylelint-disable-line declaration-no-important -- utility reset must defeat USWDS component borders; box-shadow below simulates the hairline (#742) */
     box-shadow: 0 0 0 0.33333333px;
   }
 }
 
 @media (min-resolution: 4dppx) {
   .border--hairline {
-    border: 0 !important;
+    border: 0 !important; /* stylelint-disable-line declaration-no-important -- utility reset must defeat USWDS component borders; box-shadow below simulates the hairline (#742) */
     box-shadow: 0 0 0 0.25px;
   }
 }
