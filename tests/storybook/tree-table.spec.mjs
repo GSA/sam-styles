@@ -77,3 +77,23 @@ test("selected tree-table row has secondary-color top and bottom borders", async
   await expect(cell).toHaveCSS("border-top-color", "rgb(38, 114, 222)");
   await expect(cell).toHaveCSS("border-bottom-color", "rgb(38, 114, 222)");
 });
+
+test("tree-table expand button svg has ink background and circular shape", async ({
+  page,
+}) => {
+  await page.goto(STORY);
+
+  // The expanded level-1 row has a .usa-button > svg in td:first-child.
+  // After the nesting-depth refactor the rule was lifted to a flat selector:
+  //   table.sds-tree-table tbody tr:not(.text-center) td:first-child .usa-button svg
+  //   { background-color: color("ink"); border-radius: 50%; }
+  // color("ink") in the SAM-STYLES theme = gray-warm-90 = #2e2e2a = rgb(46, 46, 42).
+  const svg = page
+    .locator("tr[aria-expanded] td:first-child .usa-button svg")
+    .first();
+  await expect(svg).toBeVisible();
+
+  // Fails if the lifted .usa-button svg rule is removed from treetable.scss
+  await expect(svg).toHaveCSS("background-color", "rgb(46, 46, 42)");
+  await expect(svg).toHaveCSS("border-radius", "50%");
+});
