@@ -78,6 +78,7 @@
     }
     /* stylelint-enable selector-no-qualifying-type */
 
+    /* stylelint-disable selector-no-qualifying-type -- intentional aria-state / aria-level row selectors */
     tr[aria-expanded] {
       td {
         background-color: color("base-lightest");
@@ -98,6 +99,7 @@
         margin-left: 2rem;
       }
     }
+    /* stylelint-enable selector-no-qualifying-type */
   }
 
   .sds-tree-table__row--selected:not(.text-center) {
@@ -131,6 +133,7 @@
 
   // CSS for up to 10 nested children
   @for $i from 1 through 10 {
+    /* stylelint-disable-next-line selector-no-qualifying-type -- intentional aria-level row selector */
     tr[aria-level="#{$i}"] {
       td:nth-child(2),
       .usa-button {

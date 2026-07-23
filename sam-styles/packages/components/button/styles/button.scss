@@ -42,17 +42,21 @@ $error-dark-alt: #b50909;
     text-decoration: underline;
     min-width: 0 !important;
 
+    /* stylelint-disable selector-no-qualifying-type -- preserve static state aliases for unstyled button */
+    &.usa-button--active,
     &:active {
       border: none;
       @include u-bg("transparent");
       @include u-text($theme-link-active-color);
     }
 
+    &.usa-button--hover,
     &:hover {
       border: none;
       @include u-bg("transparent");
       text-decoration: underline;
     }
+    /* stylelint-enable selector-no-qualifying-type */
   }
 
   &.bg-primary-lighter {

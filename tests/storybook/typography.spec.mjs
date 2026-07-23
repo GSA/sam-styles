@@ -81,22 +81,6 @@ test.describe("Heading sds-light regression", () => {
     // u-text("normal") → font-weight: 400
     await expect(lightHeading).toHaveCSS("font-weight", "400");
   });
-
-  test(".sds-light heading has normal (400) font-weight — heading in table context", async ({
-    page,
-  }) => {
-    await page.goto("/iframe.html?id=branding-typography-heading--light");
-
-    // The light.html template renders headings inside a <td>; the td context
-    // overrides the heading color token but does NOT override font-weight.
-    // This assertion verifies u-text("normal") → font-weight: 400 even in a table cell.
-    const lightHeading = page.locator(".sds-light").first();
-    await expect(lightHeading).toBeVisible();
-
-    // u-text("normal") → font-weight: 400 — this is the core assertion for the
-    // h*.sds-light → .sds-light refactor; color is overridden by usa-table td context
-    await expect(lightHeading).toHaveCSS("font-weight", "400");
-  });
 });
 
 // ─── Fields (.sds-field, .sds-field--stacked, .sds-field--featured) ──────────

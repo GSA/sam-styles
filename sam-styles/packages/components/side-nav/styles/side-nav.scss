@@ -100,7 +100,8 @@
 
 .usa-sidenav.sds-subpanel {
   .usa-sidenav__item {
-    .usa-link {
+    /* stylelint-disable-next-line selector-no-qualifying-type -- style all non-button anchors, not just .usa-link */
+    a:not(.usa-button) {
       @include typeset-link;
       text-decoration: none;
       font-weight: font-weight("semibold");
@@ -112,7 +113,8 @@
       }
     }
 
-    .usa-link--active {
+    /* stylelint-disable-next-line selector-no-qualifying-type -- match active state on any anchor */
+    a.usa-link--active {
       color: color("base-dark");
     }
   }
