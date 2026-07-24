@@ -35,6 +35,12 @@ name: Publish to npm
 #     2. Flips the workflow to a live publish by setting the repo/environment
 #        variable  DRY_RUN = false  (Settings → Secrets and variables →
 #        Actions → Variables), or edits the default below.
+#
+# Note on workflow_dispatch rehearsals: a manual dry-run against an
+# already-published version (e.g. the current 3.0.25) will verify the
+# tarball and THEN fail with npm's "cannot publish over previously
+# published version" error. That's expected — the packaging check still
+# ran. Bump to an unpublished version to see a fully clean dry-run.
 
 on:
   release:
@@ -42,9 +48,12 @@ on:
   # A tag push runs the CI dry-run (build + tests + `npm publish --dry-run`)
   # so packaging is validated on the tag itself. Live publish stays gated
   # on a published Release: the tag-push event never sets DRY_RUN=false.
+  # Matches both v-prefixed (v3.1.0, the dominant convention) and bare
+  # semver (3.1.0) tags; the version guard normalizes either form.
   push:
     tags:
-      - "v*"
+      - "v[0-9]*"
+      - "[0-9]*"
   workflow_dispatch:
     inputs:
       dry-run:
