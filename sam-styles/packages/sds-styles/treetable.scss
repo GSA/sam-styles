@@ -1,4 +1,3 @@
-/* stylelint-disable selector-no-qualifying-type -- legacy baseline (issue #735); max-nesting-depth resolved in issue #743 */
 .sds-tree-table--scrollable {
   overflow: scroll;
 
@@ -7,7 +6,7 @@
   }
 }
 
-table.sds-tree-table {
+.sds-tree-table {
   border-collapse: separate;
   border-spacing: 0 5px;
 
@@ -44,6 +43,7 @@ table.sds-tree-table {
       }
     }
 
+    /* stylelint-disable selector-no-qualifying-type -- td/th cell scope required for tree-table cursor and border styling */
     tr:not(.text-center) {
       td:first-child {
         position: relative;
@@ -58,17 +58,20 @@ table.sds-tree-table {
         }
       }
     }
+    /* stylelint-enable selector-no-qualifying-type */
   }
 }
 
 // Lifted to avoid nesting depth > 4 (issue #743)
-table.sds-tree-table tbody tr:not(.text-center) td:first-child .usa-button svg {
+/* stylelint-disable-next-line selector-no-qualifying-type -- td/tr scope required to match the correct tree-table cell */
+.sds-tree-table tbody tr:not(.text-center) td:first-child .usa-button svg {
   background-color: color("ink");
   border-radius: 50%;
 }
 
-table.sds-tree-table {
+.sds-tree-table {
   tbody {
+    /* stylelint-disable selector-no-qualifying-type -- td cell scope required for tree-table border styling */
     tr:not(.text-center) {
       td:nth-child(2) {
         border-left: 1px solid color("base-light");
@@ -83,7 +86,9 @@ table.sds-tree-table {
         border-right: 1px solid color("base-light");
       }
     }
+    /* stylelint-enable selector-no-qualifying-type */
 
+    /* stylelint-disable selector-no-qualifying-type -- intentional aria-state / aria-level row selectors */
     tr[aria-expanded] {
       td {
         background-color: color("base-lightest");
@@ -104,6 +109,7 @@ table.sds-tree-table {
         margin-left: 2rem;
       }
     }
+    /* stylelint-enable selector-no-qualifying-type */
   }
 
   .sds-tree-table__row--selected:not(.text-center) {
@@ -137,6 +143,7 @@ table.sds-tree-table {
 
   // CSS for up to 10 nested children
   @for $i from 1 through 10 {
+    /* stylelint-disable-next-line selector-no-qualifying-type -- intentional aria-level row selector */
     tr[aria-level="#{$i}"] {
       td:nth-child(2),
       .usa-button {

@@ -46,4 +46,34 @@ test.describe("Button regression", () => {
     await expect(button).toHaveCSS("box-shadow", "none");
     await expect(button).toHaveCSS("text-decoration", "none");
   });
+
+  test("unstyled button --hover class alias renders transparent background and underline", async ({
+    page,
+  }) => {
+    // Variants story renders static-state examples using the class aliases
+    // (.usa-button--unstyled.usa-button--hover) rather than live :hover, so the
+    // alias must be preserved for the Storybook static state to render correctly.
+    await page.goto("/iframe.html?id=components-button-standard--variants");
+    const button = page
+      .locator(".usa-button--unstyled.usa-button--hover")
+      .first();
+    await expect(button).toBeVisible();
+    // &.usa-button--hover { @include u-bg("transparent"); text-decoration: underline }
+    await expect(button).toHaveCSS("background-color", "rgba(0, 0, 0, 0)");
+    await expect(button).toHaveCSS("text-decoration-line", "underline");
+  });
+
+  test("unstyled button --active class alias renders transparent background and active link color", async ({
+    page,
+  }) => {
+    await page.goto("/iframe.html?id=components-button-standard--variants");
+    const button = page
+      .locator(".usa-button--unstyled.usa-button--active")
+      .first();
+    await expect(button).toBeVisible();
+    // &.usa-button--active { @include u-bg("transparent"); @include u-text($theme-link-active-color) }
+    // $theme-link-active-color = indigo-cool-70 = rgb(55, 66, 116)
+    await expect(button).toHaveCSS("background-color", "rgba(0, 0, 0, 0)");
+    await expect(button).toHaveCSS("color", "rgb(55, 66, 116)");
+  });
 });

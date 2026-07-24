@@ -1,4 +1,3 @@
-/* stylelint-disable selector-no-qualifying-type -- legacy baseline (issue #735); tracked in #740 */
 .sds-list {
   @extend .usa-list !optional;
   @include u-measure($theme-text-measure-wide);
@@ -15,17 +14,13 @@
   &--unstyled {
     @include unstyled-list;
   }
+
   &--subdomain {
     @include unstyled-list;
     @include u-font("sans", "sm");
     @include u-text("semibold");
     li {
       @include u-margin-y(2);
-    }
-    .usa-link {
-      &--active {
-        @include u-text("ink");
-      }
     }
   }
 
@@ -62,4 +57,8 @@
       padding-bottom: 0;
     }
   }
+}
+
+.sds-list--subdomain .usa-link--active {
+  @include u-text("ink");
 }
