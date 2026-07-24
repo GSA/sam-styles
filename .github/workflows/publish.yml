@@ -3,14 +3,15 @@ name: Publish to npm
 # Publishes @gsa-sam/sam-styles to the public npm registry.
 #
 # Trigger: a GitHub Release is published (which points at a version tag,
-# e.g. v3.1.0). Manual dispatch is also allowed for dry-run rehearsals.
+# e.g. v3.1.0). A matching tag push (v*) also runs the CI dry-run so
+# packaging is validated on the tag; live publish stays release-gated.
+# Manual dispatch is also allowed for dry-run rehearsals.
 #
-# Why release-gated (not raw `push: tags`): issue #737 asks for a
-# tag-gated publish. We gate on a *published Release* rather than a bare
-# tag push because Releases are auditable, can be gated by the
-# `npm-publish` environment's required reviewers, and give DevSecOps a
-# clear HITL approval point. A tag pushed without an accompanying Release
-# will NOT publish by design.
+# Why release-gated for live publish (not raw `push: tags`): issue #737
+# asks for a tag-gated publish. Tag pushes run the dry-run, but the live
+# `npm publish` only happens on a published *Release* — Releases are
+# auditable, can be gated by the `npm-publish` environment's required
+# reviewers, and give DevSecOps a clear HITL approval point.
 #
 # Security model (locked-down access):
 #   - Runs only in the `npm-publish` GitHub Actions environment, which
@@ -38,6 +39,12 @@ name: Publish to npm
 on:
   release:
     types: [published]
+  # A tag push runs the CI dry-run (build + tests + `npm publish --dry-run`)
+  # so packaging is validated on the tag itself. Live publish stays gated
+  # on a published Release: the tag-push event never sets DRY_RUN=false.
+  push:
+    tags:
+      - "v*"
   workflow_dispatch:
     inputs:
       dry-run:
@@ -83,6 +90,10 @@ jobs:
     permissions:
       contents: read
       id-token: write # required for npm Trusted Publishing (OIDC)
+    env:
+      # Surface the optional token as an env var so step-level `if:`
+      # conditions can test it (secrets can't be referenced in `if:`).
+      HAS_NPM_TOKEN: ${{ secrets.NPM_TOKEN != '' }}
     steps:
       - name: Check out repository code
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -110,7 +121,7 @@ jobs:
           fi
 
       - name: Verify tag matches package.json version
-        if: github.event_name == 'release'
+        if: github.event_name == 'release' || github.event_name == 'push'
         run: |
           # Strip an optional leading "v" (v3.1.0 -> 3.1.0); other prefixes fail.
           TAG="${GITHUB_REF_NAME#v}"
@@ -125,8 +136,12 @@ jobs:
         id: mode
         run: |
           # Priority: workflow_dispatch input > repo/env variable DRY_RUN > default true.
+          # A tag push (push event) always forces dry-run; only a published
+          # Release (or manual dispatch) may perform a live publish.
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             DRY="${{ inputs.dry-run }}"
+          elif [ "${{ github.event_name }}" = "push" ]; then
+            DRY="true"
           else
             DRY="${{ vars.DRY_RUN }}"
           fi
@@ -147,10 +162,17 @@ jobs:
         if: steps.mode.outputs.dry-run == 'true'
         run: npm publish --dry-run --access public
 
-      - name: Publish (live)
-        if: steps.mode.outputs.dry-run == 'false'
+      # Preferred path: OIDC Trusted Publishing. No token env is set, so npm
+      # uses the short-lived OIDC credential. Runs unless an NPM_TOKEN secret
+      # is configured (in which case the fallback step below handles publish).
+      - name: Publish (live, OIDC Trusted Publishing)
+        if: steps.mode.outputs.dry-run == 'false' && env.HAS_NPM_TOKEN != 'true'
+        run: npm publish --access public
+
+      # Fallback path: token-based publish, only when an NPM_TOKEN secret is
+      # actually present. Remove the secret once OIDC Trusted Publishing is live.
+      - name: Publish (live, token fallback)
+        if: steps.mode.outputs.dry-run == 'false' && env.HAS_NPM_TOKEN == 'true'
         env:
-          # Fallback for token-based publishing if Trusted Publishing is not
-          # yet configured. Leave unset once OIDC Trusted Publishing is live.
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm publish --access public
