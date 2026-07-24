@@ -1,0 +1,156 @@
+name: Publish to npm
+
+# Publishes @gsa-sam/sam-styles to the public npm registry.
+#
+# Trigger: a GitHub Release is published (which points at a version tag,
+# e.g. v3.1.0). Manual dispatch is also allowed for dry-run rehearsals.
+#
+# Why release-gated (not raw `push: tags`): issue #737 asks for a
+# tag-gated publish. We gate on a *published Release* rather than a bare
+# tag push because Releases are auditable, can be gated by the
+# `npm-publish` environment's required reviewers, and give DevSecOps a
+# clear HITL approval point. A tag pushed without an accompanying Release
+# will NOT publish by design.
+#
+# Security model (locked-down access):
+#   - Runs only in the `npm-publish` GitHub Actions environment, which
+#     DevSecOps can gate with required reviewers / protection rules.
+#   - Uses npm Trusted Publishing (OIDC) — no long-lived token stored in
+#     the repo. The `id-token: write` permission mints a short-lived
+#     credential that npm trusts because this repo + workflow filename are
+#     registered as the package's Trusted Publisher.
+#     (npmjs.com → package → Settings → Trusted Publisher:
+#        Publisher = GitHub Actions
+#        Organization = GSA, Repository = sam-styles
+#        Workflow filename = publish.yml
+#        Environment name = npm-publish)
+#   - Quality gates (lint + tests + SCSS compile) must pass before publish.
+#
+# HITL handoff to DevSecOps:
+#   Until the Trusted Publisher connection is live, this workflow runs
+#   `npm publish --dry-run` only (DRY_RUN defaults to "true"). DevSecOps:
+#     1. Registers the Trusted Publisher on npmjs (values above), OR adds an
+#        NPM_TOKEN secret to the `npm-publish` environment as a fallback.
+#     2. Flips the workflow to a live publish by setting the repo/environment
+#        variable  DRY_RUN = false  (Settings → Secrets and variables →
+#        Actions → Variables), or edits the default below.
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: "Run npm publish in --dry-run mode (no upload)"
+        type: boolean
+        default: true
+
+# Least-privilege at the top level; the publish job opts into id-token.
+permissions:
+  contents: read
+
+jobs:
+  # Reuse the existing lint/build quality gates before publishing.
+  quality-gates:
+    uses: ./.github/workflows/build.yml
+
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Setup Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: ".nvmrc"
+      - name: Install dependencies
+        run: npm ci
+      - name: Run tests (stylelint)
+        run: npm test
+      - name: SCSS compilation check
+        run: npm run compile:check
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+      - name: Run Storybook smoke tests
+        run: npm run test:storybook
+
+  publish:
+    needs: [quality-gates, test]
+    runs-on: ubuntu-latest
+    environment: npm-publish
+    permissions:
+      contents: read
+      id-token: write # required for npm Trusted Publishing (OIDC)
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Setup Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: ".nvmrc"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Trusted Publishing needs npm >= 11.5.1. Pin the floor rather than
+      # pulling an unpinned @latest on this security-sensitive job.
+      - name: Ensure npm supports Trusted Publishing
+        run: |
+          NPM_MIN="11.5.1"
+          CURRENT="$(npm --version)"
+          if [ "$(printf '%s\n' "$NPM_MIN" "$CURRENT" | sort -V | head -n1)" != "$NPM_MIN" ]; then
+            echo "npm $CURRENT < $NPM_MIN; upgrading"
+            npm install -g "npm@$NPM_MIN"
+          else
+            echo "npm $CURRENT satisfies >= $NPM_MIN"
+          fi
+
+      - name: Verify tag matches package.json version
+        if: github.event_name == 'release'
+        run: |
+          # Strip an optional leading "v" (v3.1.0 -> 3.1.0); other prefixes fail.
+          TAG="${GITHUB_REF_NAME#v}"
+          PKG="$(node -p "require('./package.json').version")"
+          echo "Release tag: $GITHUB_REF_NAME (normalized: $TAG)   package.json: $PKG"
+          if [ "$TAG" != "$PKG" ]; then
+            echo "::error::Release tag ($GITHUB_REF_NAME) does not match package.json version ($PKG). Tags must be <version> or v<version>."
+            exit 1
+          fi
+
+      - name: Determine dry-run mode
+        id: mode
+        run: |
+          # Priority: workflow_dispatch input > repo/env variable DRY_RUN > default true.
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            DRY="${{ inputs.dry-run }}"
+          else
+            DRY="${{ vars.DRY_RUN }}"
+          fi
+          # Default to the safe mode when unset.
+          DRY="${DRY:-true}"
+          # Normalize case so True/FALSE/etc. behave predictably.
+          DRY="$(echo "$DRY" | tr '[:upper:]' '[:lower:]')"
+          # Fail loudly on anything that isn't an explicit boolean, so a
+          # release never silently no-ops (neither dry-run nor live).
+          if [ "$DRY" != "true" ] && [ "$DRY" != "false" ]; then
+            echo "::error::DRY_RUN must be 'true' or 'false' (got '$DRY')"
+            exit 1
+          fi
+          echo "dry-run=$DRY" >> "$GITHUB_OUTPUT"
+          echo "Publish dry-run mode: $DRY"
+
+      - name: Publish (dry-run)
+        if: steps.mode.outputs.dry-run == 'true'
+        run: npm publish --dry-run --access public
+
+      - name: Publish (live)
+        if: steps.mode.outputs.dry-run == 'false'
+        env:
+          # Fallback for token-based publishing if Trusted Publishing is not
+          # yet configured. Leave unset once OIDC Trusted Publishing is live.
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access public

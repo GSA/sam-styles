@@ -96,17 +96,32 @@ We recommend implementing **sam-styles** with `npm`, follow steps 1 -- 3 from [U
 npm install --save @gsa-sam/sam-styles
 ```
 
-The `sam-styles` module is now installed as a dependency. You can use the un-compiled files found in the `node_modules/@gsa-sam/sam-styles/src/` directory.
+The `sam-styles` module is now installed as a dependency. The package ships uncompiled SCSS sources — you compile them as part of your own build. The published contents are:
 
 ```
 node_modules/@gsa-sam/sam-styles/
-├── dist/
-│   ├── css/
-│   ├── fonts/
-│   ├── img/
-│   ├── js/
-│   └── scss/
+└── sam-styles/
+    ├── index.scss        # main entry point (forwards USWDS + all packages)
+    └── packages/
+        ├── ...           # component, pattern, and branding partials
+        └── images/       # SVG/PNG assets referenced by the SCSS via url()
 ```
+
+`@use` the entry point from your project's SCSS. Because `@gsa-sam/sam-styles` `@forward`s USWDS, make sure the USWDS load path is available to your Sass compiler (see the USWDS steps above):
+
+```scss
+@use "@gsa-sam/sam-styles";
+```
+
+You can also reach individual partials directly if you only need a subset:
+
+```scss
+@use "@gsa-sam/sam-styles/packages/components/...";
+```
+
+**Assets:** Some styles reference images (e.g. `landing-hero.png`, `arrow-down.svg`) via `url()`, resolved through the `$sam-image-path` Sass variable defined in `sam-styles/packages/theme/variables.scss`. The package ships these images under `sam-styles/packages/images/` so the references have a real target inside the package.
+
+Because `$sam-image-path` defaults to a relative path (`../sam-styles/packages/images`), the generated `url()` values are resolved by the **browser at runtime relative to your compiled CSS**, not by Sass at build time. In practice you should make the bundled images available at a matching path in your served output — for example, copy `node_modules/@gsa-sam/sam-styles/sam-styles/packages/images/` into your build's asset pipeline so the `url()` references resolve in the browser.
 
 **Note:** We do not recommend directly editing sam-styles files in `node_modules`. One of the benefits of using a package manager is its ease of upgrade and installation. If you make customizations to the files in the package, any upgrade or re-installation will wipe them out.
 
