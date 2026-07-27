@@ -98,3 +98,27 @@ After your pull request is merged, you can safely delete your branch and pull th
   ```shell
   git pull origin master
   ```
+
+## Code coverage
+
+This is a SCSS-only library with no JS runtime. "Coverage" is measured as **component/story coverage**:
+
+> Every Storybook story file (`.stories.js`) in `sam-styles/packages/` should have at least one matching Playwright smoke-test spec in `tests/storybook/`.
+
+### How it works
+
+- `npm run coverage` runs `scripts/coverage-report.mjs` and writes:
+  - `coverage/component-coverage.json` — machine-readable results
+  - `coverage/component-coverage.md` — human-readable markdown table
+- CI runs this check on every PR and posts the report as a PR comment.
+- The check fails (exits 1) if coverage drops below the configured threshold (currently **35%**).
+
+### Adding coverage for a new component
+
+When you add a new `.stories.js` file, add a corresponding spec in `tests/storybook/<component-name>.spec.mjs` that:
+1. Navigates to the story via `page.goto('/iframe.html?id=<story-id>')`
+2. Asserts at least one computed CSS property on a rendered element
+
+### Raising the threshold
+
+Once enough specs have been added to push coverage above a new watermark, update the `--threshold=N` value in the `coverage` script in `package.json` and commit the change.
