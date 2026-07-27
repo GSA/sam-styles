@@ -21,13 +21,7 @@
  *   node scripts/coverage-report.mjs [--threshold=<n>]
  */
 
-import {
-  readdirSync,
-  readFileSync,
-  mkdirSync,
-  writeFileSync,
-  existsSync,
-} from "fs";
+import { readdirSync, readFileSync, mkdirSync, writeFileSync } from "fs";
 import { join, dirname, relative } from "path";
 import { fileURLToPath } from "url";
 
@@ -42,11 +36,17 @@ const OUT_DIR = join(ROOT, "coverage");
 
 // Parse --threshold=N from argv, fallback to env var, then default 35
 const thresholdArg = process.argv.find((a) => a.startsWith("--threshold="));
-const THRESHOLD = thresholdArg
-  ? parseInt(thresholdArg.split("=")[1], 10)
-  : process.env.COVERAGE_THRESHOLD
-    ? parseInt(process.env.COVERAGE_THRESHOLD, 10)
-    : 35;
+const thresholdValue = thresholdArg
+  ? thresholdArg.split("=")[1]
+  : process.env.COVERAGE_THRESHOLD || "35";
+const THRESHOLD = Number(thresholdValue);
+
+if (!Number.isInteger(THRESHOLD) || THRESHOLD < 0 || THRESHOLD > 100) {
+  process.stderr.write(
+    `Invalid coverage threshold "${thresholdValue}". Use an integer from 0 to 100.\n`
+  );
+  process.exit(1);
+}
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -100,12 +100,36 @@ function buildCoveredSet(specsDir) {
   return covered;
 }
 
+/** Convert Storybook title/export text to Storybook's generated id segment. */
+function toStorybookId(value, { splitCamelCase = false } = {}) {
+  const normalized = splitCamelCase
+    ? value.replace(/([a-z])([A-Z])/g, "$1-$2")
+    : value;
+
+  return normalized
+    .trim()
+    .replace(/[^a-zA-Z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .toLowerCase();
+}
+
+/** Extract the Storybook title and named stories from a CSF story file. */
+function storyMetadata(absPath) {
+  const content = readFileSync(absPath, "utf8");
+  const titleMatch = content.match(/title:\s*["']([^"']+)["']/);
+  const title = titleMatch ? titleMatch[1] : null;
+  const exports = [
+    ...content.matchAll(/export\s+const\s+([A-Za-z0-9_$]+)\s*=/g),
+  ].map(([, name]) => name);
+
+  return { title, exports };
+}
+
 /**
- * Derive a match key from a story file path.
- * e.g. "components/accordion/accordion.stories.js"
- *   → tries: "components-accordion", "accordion"
+ * Derive match keys from a story file path and Storybook metadata.
+ * e.g. title "Components", export "Tables" → "components--tables"
  */
-function storyMatchKeys(relPath) {
+function storyMatchKeys(relPath, absPath) {
   // relPath like "components/accordion/accordion.stories.js"
   const segments = relPath.replace(/\\/g, "/").split("/");
   // Remove filename
@@ -115,7 +139,20 @@ function storyMatchKeys(relPath) {
   // Group prefix = join all segments with "-"
   const prefix = segments.join("-");
 
-  return [prefix, componentName, relPath];
+  const keys = new Set([prefix, componentName, relPath]);
+  const { title, exports } = storyMetadata(absPath);
+
+  if (title) {
+    const titleId = toStorybookId(title);
+    keys.add(titleId);
+    for (const exportName of exports) {
+      keys.add(
+        `${titleId}--${toStorybookId(exportName, { splitCamelCase: true })}`
+      );
+    }
+  }
+
+  return [...keys];
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
@@ -127,7 +164,7 @@ const coveredKeys = buildCoveredSet(SPECS_DIR);
 
 const rows = storyFiles.map((absPath) => {
   const relPath = relative(PACKAGES_DIR, absPath);
-  const keys = storyMatchKeys(relPath);
+  const keys = storyMatchKeys(relPath, absPath);
   const isCovered = keys.some((k) => coveredKeys.has(k));
   return { path: relPath, covered: isCovered };
 });
