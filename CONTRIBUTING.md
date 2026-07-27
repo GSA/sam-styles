@@ -116,6 +116,7 @@ This is a SCSS-only library with no JS runtime. "Coverage" is measured as **comp
 ### Adding coverage for a new component
 
 When you add a new `.stories.js` file, add a corresponding spec in `tests/storybook/<component-name>.spec.mjs` that:
+
 1. Navigates to the story via `page.goto('/iframe.html?id=<story-id>')`
 2. Asserts at least one computed CSS property on a rendered element
 

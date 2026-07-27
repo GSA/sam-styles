@@ -21,7 +21,13 @@
  *   node scripts/coverage-report.mjs [--threshold=<n>]
  */
 
-import { readdirSync, readFileSync, mkdirSync, writeFileSync, existsSync } from "fs";
+import {
+  readdirSync,
+  readFileSync,
+  mkdirSync,
+  writeFileSync,
+  existsSync,
+} from "fs";
 import { join, dirname, relative } from "path";
 import { fileURLToPath } from "url";
 
@@ -39,8 +45,8 @@ const thresholdArg = process.argv.find((a) => a.startsWith("--threshold="));
 const THRESHOLD = thresholdArg
   ? parseInt(thresholdArg.split("=")[1], 10)
   : process.env.COVERAGE_THRESHOLD
-  ? parseInt(process.env.COVERAGE_THRESHOLD, 10)
-  : 35;
+    ? parseInt(process.env.COVERAGE_THRESHOLD, 10)
+    : 35;
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -66,7 +72,9 @@ function walkFiles(dir, predicate) {
  */
 function buildCoveredSet(specsDir) {
   const covered = new Set();
-  const specFiles = readdirSync(specsDir).filter((f) => f.endsWith(".spec.mjs"));
+  const specFiles = readdirSync(specsDir).filter((f) =>
+    f.endsWith(".spec.mjs")
+  );
 
   for (const file of specFiles) {
     // Stem as a fallback key (e.g. "accordion" from "accordion.spec.mjs")
@@ -112,7 +120,9 @@ function storyMatchKeys(relPath) {
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 
-const storyFiles = walkFiles(PACKAGES_DIR, (name) => name.endsWith(".stories.js"));
+const storyFiles = walkFiles(PACKAGES_DIR, (name) =>
+  name.endsWith(".stories.js")
+);
 const coveredKeys = buildCoveredSet(SPECS_DIR);
 
 const rows = storyFiles.map((absPath) => {
@@ -142,7 +152,10 @@ const json = {
   passed,
   stories: rows,
 };
-writeFileSync(join(OUT_DIR, "component-coverage.json"), JSON.stringify(json, null, 2));
+writeFileSync(
+  join(OUT_DIR, "component-coverage.json"),
+  JSON.stringify(json, null, 2)
+);
 
 // Markdown
 const statusEmoji = passed ? "✅" : "❌";

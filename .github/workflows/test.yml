@@ -53,8 +53,7 @@ jobs:
             }
             const body = fs.readFileSync(reportPath, 'utf8');
             const marker = '<!-- sam-styles-coverage-report -->';
-            const fullBody = `${marker}
-${body}`;
+            const fullBody = marker + '\n' + body;
 
             const { data: comments } = await github.rest.issues.listComments({
               owner: context.repo.owner,
