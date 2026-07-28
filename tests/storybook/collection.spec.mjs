@@ -18,12 +18,18 @@ test.describe("Collection regression", () => {
     await expect(heading).toBeVisible();
   });
 
-  test("collection tag renders with visible text", async ({ page }) => {
+  test("collection tag renders with non-transparent background", async ({
+    page,
+  }) => {
     await page.goto("/iframe.html?id=components-collection--default");
     const tag = page.locator(".usa-collection__meta-item.usa-tag").first();
     await expect(tag).toBeVisible();
-    const text = await tag.textContent();
-    expect(text?.trim().length).toBeGreaterThan(0);
+    // USWDS tags have a compiled background-color — assert it is not transparent
+    const bg = await tag.evaluate(
+      (el) => window.getComputedStyle(el).backgroundColor
+    );
+    expect(bg).not.toBe("rgba(0, 0, 0, 0)");
+    expect(bg).not.toBe("transparent");
   });
 
   test("collection description text is rendered", async ({ page }) => {

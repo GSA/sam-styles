@@ -6,10 +6,12 @@ import { test, expect } from "@playwright/test";
 test.describe("Alert regression", () => {
   test("default alert (warning) renders gold border", async ({ page }) => {
     await page.goto("/iframe.html?id=components-alert--default");
-    const alert = page.locator(".sds-alert").first();
+    // The story renders info first (index 0); the plain .sds-alert (warning) is at index 1.
+    // Use nth(1) to target the un-modified default variant.
+    const alert = page.locator(".sds-alert").nth(1);
     await expect(alert).toBeVisible();
-    // border: solid 0.1rem color("gold-20v") — actual rendered value from compiled theme
-    await expect(alert).toHaveCSS("border-color", "rgb(0, 189, 227)");
+    // border: solid 0.1rem color("gold-20v") → rgb(255, 190, 46)
+    await expect(alert).toHaveCSS("border-color", "rgb(255, 190, 46)");
   });
 
   test("info alert renders cyan border", async ({ page }) => {
