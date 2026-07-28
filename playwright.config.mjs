@@ -14,8 +14,14 @@ export default defineConfig({
   },
   webServer: {
     command:
-      "npm run build:storybook -- --quiet && npx http-server _site --port 6007 --silent",
-    url: "http://127.0.0.1:6007",
+      "rm -rf _site && npm run build:storybook -- --quiet && npx http-server _site --port 6007 --silent",
+    // Probe iframe.html, not "/". Storybook writes _site/index.html during the
+    // fast manager phase (~1s) but the story iframe bundles and iframe.html only
+    // land at the end of the preview phase (~9s). A "/" readiness check goes
+    // green ~8s too early, so tests would hit /iframe.html?id=... before it
+    // exists and every locator 404s ("element(s) not found"). iframe.html is the
+    // last artifact written, so it is a correct "build fully done" signal.
+    url: "http://127.0.0.1:6007/iframe.html",
     reuseExistingServer: !process.env.CI,
     timeout: 300_000,
     env: {
