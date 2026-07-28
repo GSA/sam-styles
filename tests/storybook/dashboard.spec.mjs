@@ -138,7 +138,8 @@ test.describe("Dashboard Tile Outline regression", () => {
     page,
   }) => {
     // The SDStile-outline story renders an empty template; verify the
-    // iframe itself loads cleanly (no JS error, body is present).
+    // iframe loads and body is attached to the DOM. This confirms Storybook
+    // renders the story without a page-level crash — no JS error check is made.
     await page.goto(
       "/iframe.html?id=components-dashboard-tile--sd-stile-outline"
     );

@@ -1,9 +1,10 @@
 import { test, expect } from "@playwright/test";
 
 // The pages stories render full HTML page templates (layout patterns).
-// We assert that each story's iframe loads and contains a visible structural element.
-// The meaningful guarantee is that the template renders without error and exposes
-// recognisable layout structure (sds-page, grid wrappers, or footer).
+// We assert that each story's iframe loads and the expected structural element
+// is attached to the DOM. This confirms the template is rendered by Storybook
+// and that the target selector exists — it does not verify visual appearance
+// or the absence of JS console errors.
 
 const stories = [
   {
