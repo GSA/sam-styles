@@ -21,9 +21,9 @@
  *   node scripts/coverage-report.mjs [--threshold=<n>]
  */
 
-import { readdirSync, readFileSync, mkdirSync, writeFileSync } from "fs";
-import { join, dirname, relative } from "path";
-import { fileURLToPath } from "url";
+import { readdirSync, readFileSync, mkdirSync, writeFileSync } from "node:fs";
+import { join, dirname, relative } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
