@@ -13,8 +13,8 @@ test.describe("Toolbar regression", () => {
     await page.goto("/iframe.html?id=miscellaneous-toolbar--toolbar");
     const header = page.locator(".sds-toolbar__header").first();
     await expect(header).toBeVisible();
-    const width = await header.evaluate(
-      (el) => parseFloat(getComputedStyle(el).width)
+    const width = await header.evaluate((el) =>
+      parseFloat(getComputedStyle(el).width)
     );
     expect(width).toBeGreaterThan(0);
   });

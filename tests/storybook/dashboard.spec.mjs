@@ -15,8 +15,8 @@ test.describe("Dashboard Event regression", () => {
     await page.goto("/iframe.html?id=components-dashboard-event--event");
     const date = page.locator(".event .summary .date").first();
     await expect(date).toBeVisible();
-    const fontSize = await date.evaluate(
-      (el) => parseFloat(getComputedStyle(el).fontSize)
+    const fontSize = await date.evaluate((el) =>
+      parseFloat(getComputedStyle(el).fontSize)
     );
     expect(fontSize).toBeGreaterThan(0);
   });
@@ -36,9 +36,7 @@ test.describe("Dashboard Event regression", () => {
 
 test.describe("Dashboard Statistics Alt regression", () => {
   test("Alt story: .sds-statistics--alt is visible", async ({ page }) => {
-    await page.goto(
-      "/iframe.html?id=components-dashboard-statistics--alt"
-    );
+    await page.goto("/iframe.html?id=components-dashboard-statistics--alt");
     const stats = page.locator(".sds-statistics--alt").first();
     await expect(stats).toBeVisible();
   });
@@ -46,13 +44,11 @@ test.describe("Dashboard Statistics Alt regression", () => {
   test("Alt story: statistic-alt button has a positive width", async ({
     page,
   }) => {
-    await page.goto(
-      "/iframe.html?id=components-dashboard-statistics--alt"
-    );
+    await page.goto("/iframe.html?id=components-dashboard-statistics--alt");
     const btn = page.locator(".statistic-alt").first();
     await expect(btn).toBeVisible();
-    const width = await btn.evaluate(
-      (el) => parseFloat(getComputedStyle(el).width)
+    const width = await btn.evaluate((el) =>
+      parseFloat(getComputedStyle(el).width)
     );
     expect(width).toBeGreaterThan(0);
   });
@@ -60,9 +56,7 @@ test.describe("Dashboard Statistics Alt regression", () => {
   test("Alt story: statistic value is rendered with content", async ({
     page,
   }) => {
-    await page.goto(
-      "/iframe.html?id=components-dashboard-statistics--alt"
-    );
+    await page.goto("/iframe.html?id=components-dashboard-statistics--alt");
     const value = page.locator(".statistic-alt .value").first();
     await expect(value).toBeVisible();
     const text = await value.textContent();
@@ -76,9 +70,7 @@ test.describe("Dashboard Statistics Default regression", () => {
   test("Default story: .sds-statistics container is visible", async ({
     page,
   }) => {
-    await page.goto(
-      "/iframe.html?id=components-dashboard-statistics--default"
-    );
+    await page.goto("/iframe.html?id=components-dashboard-statistics--default");
     const stats = page.locator(".sds-statistics").first();
     await expect(stats).toBeVisible();
   });
@@ -86,9 +78,7 @@ test.describe("Dashboard Statistics Default regression", () => {
   test("Default story: .circular span inside green statistic has a themed background", async ({
     page,
   }) => {
-    await page.goto(
-      "/iframe.html?id=components-dashboard-statistics--default"
-    );
+    await page.goto("/iframe.html?id=components-dashboard-statistics--default");
     const circle = page.locator(".statistic.green .circular").first();
     await expect(circle).toBeVisible();
     // .green .circular applies a themed background-color (e.g. rgb(234, 242, 235))
@@ -101,15 +91,13 @@ test.describe("Dashboard Statistics Default regression", () => {
   test("Default story: .circular span has a border-radius making it circular", async ({
     page,
   }) => {
-    await page.goto(
-      "/iframe.html?id=components-dashboard-statistics--default"
-    );
+    await page.goto("/iframe.html?id=components-dashboard-statistics--default");
     // Use the green statistic's circular span which is visible
     const circle = page.locator(".statistic.green .circular").first();
     await expect(circle).toBeVisible();
     // A circular shape requires border-radius > 0
-    const radius = await circle.evaluate(
-      (el) => parseFloat(getComputedStyle(el).borderRadius)
+    const radius = await circle.evaluate((el) =>
+      parseFloat(getComputedStyle(el).borderRadius)
     );
     expect(radius).toBeGreaterThan(0);
   });
