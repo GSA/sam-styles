@@ -7,11 +7,16 @@ test.describe("AddressForm regression", () => {
     await expect(wrapper).toBeVisible();
   });
 
-  test("usa-form renders as a block element", async ({ page }) => {
+  test(".sds-form.usa-form--large has max-width 50rem (SDS form size override)", async ({
+    page,
+  }) => {
     await page.goto("/iframe.html?id=form-elements-addressform--address-form");
-    const form = page.locator(".usa-form").first();
+    // `.sds-form.usa-form.usa-form--large { max-width: 50rem }` — SDS override.
+    // A browser default cannot produce this value; it only applies when the SDS
+    // stylesheet loads and the selector matches.
+    const form = page.locator(".sds-form.usa-form--large").first();
     await expect(form).toBeVisible();
-    await expect(form).toHaveCSS("display", "block");
+    await expect(form).toHaveCSS("max-width", "800px"); // 50rem @ 16px root
   });
 
   test("usa-select renders with appearance: none (USWDS custom-select override)", async ({
