@@ -1,8 +1,22 @@
 {
   "name": "@gsa-sam/sam-styles",
   "version": "3.0.25",
-  "description": "",
-  "main": "index.js",
+  "description": "SASS/CSS component library for SAM.gov, built on USWDS.",
+  "main": "sam-styles/index.scss",
+  "sass": "sam-styles/index.scss",
+  "style": "sam-styles/index.scss",
+  "exports": {
+    ".": "./sam-styles/index.scss",
+    "./index.scss": "./sam-styles/index.scss",
+    "./packages/*": "./sam-styles/packages/*"
+  },
+  "files": [
+    "sam-styles/**/*.scss",
+    "sam-styles/packages/images/**",
+    "README.md",
+    "LICENSE.md",
+    "CHANGELOG.md"
+  ],
   "scripts": {
     "test": "stylelint \"sam-styles/**/*.scss\"",
     "test:storybook": "playwright test",
