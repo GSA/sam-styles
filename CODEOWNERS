@@ -12,4 +12,3 @@
 # default owners. This is a merge-time guardrail against unauthorized
 # modifications to the OIDC/npm publish path (see docs/npm-publish-runbook.md).
 /.github/   @GSA/sam-shared-frontend-admin @christyhermansen @GSA/sam-shared-frontend
-
