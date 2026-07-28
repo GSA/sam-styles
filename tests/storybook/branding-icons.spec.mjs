@@ -25,7 +25,9 @@ test.describe("Branding Icons — Icon Library story", () => {
     const biIcon = page.locator("i.bi").first();
     await expect(biIcon).toBeVisible();
 
-    const width = await biIcon.evaluate((el) => el.getBoundingClientRect().width);
+    const width = await biIcon.evaluate(
+      (el) => el.getBoundingClientRect().width
+    );
     expect(width).toBeGreaterThan(0);
   });
 
@@ -40,7 +42,9 @@ test.describe("Branding Icons — Icon Library story", () => {
     const biIcon = page.locator("i.bi").first();
     await expect(biIcon).toBeVisible();
 
-    const width = await biIcon.evaluate((el) => el.getBoundingClientRect().width);
+    const width = await biIcon.evaluate(
+      (el) => el.getBoundingClientRect().width
+    );
     expect(width).toBeGreaterThan(0);
   });
 });

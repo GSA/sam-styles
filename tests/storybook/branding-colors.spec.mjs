@@ -17,10 +17,14 @@ test.describe("Branding Colors — Theme Colors story", () => {
     await page.goto("/iframe.html?id=branding-colors--theme-colors");
     // Each swatch is a <td> inside the color column — the first data cell in each row
     // has an inline background set by the template
-    const swatch = page.locator("table.sds-table tbody tr td:first-child").first();
+    const swatch = page
+      .locator("table.sds-table tbody tr td:first-child")
+      .first();
     await expect(swatch).toBeVisible();
 
-    const bg = await swatch.evaluate((el) => getComputedStyle(el).backgroundColor);
+    const bg = await swatch.evaluate(
+      (el) => getComputedStyle(el).backgroundColor
+    );
     // Must be any color value — not transparent / rgba(0,0,0,0)
     expect(bg).not.toBe("rgba(0, 0, 0, 0)");
     expect(bg).not.toBe("transparent");

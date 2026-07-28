@@ -23,9 +23,7 @@ test.describe("Branding Typography Typesetting story", () => {
     const h1 = page.locator(".example-spacing h1").first();
     await expect(h1).toBeVisible();
 
-    const fontSize = await h1.evaluate(
-      (el) => getComputedStyle(el).fontSize
-    );
+    const fontSize = await h1.evaluate((el) => getComputedStyle(el).fontSize);
     expect(parseFloat(fontSize)).toBeGreaterThan(0);
   });
 
