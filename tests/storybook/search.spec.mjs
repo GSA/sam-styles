@@ -25,9 +25,7 @@ test.describe("Search regression", () => {
     const input = page.locator(".usa-search [type='search']").first();
     await expect(input).toBeVisible();
     // `u-shadow(3)` applies a non-none box-shadow to the search input
-    const shadow = await input.evaluate((el) =>
-      getComputedStyle(el).boxShadow
-    );
+    const shadow = await input.evaluate((el) => getComputedStyle(el).boxShadow);
     expect(shadow).not.toBe("none");
   });
 

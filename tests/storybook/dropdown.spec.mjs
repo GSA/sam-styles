@@ -43,9 +43,7 @@ test.describe("Dropdown regression", () => {
     await page.goto("/iframe.html?id=form-elements-dropdown--dropdown");
     const form = page.locator(".usa-form").first();
     await expect(form).toBeVisible();
-    const maxWidth = await form.evaluate((el) =>
-      getComputedStyle(el).maxWidth
-    );
+    const maxWidth = await form.evaluate((el) => getComputedStyle(el).maxWidth);
     // USWDS sets a max-width on .usa-form (e.g. 30rem / 32rem)
     expect(maxWidth).not.toBe("none");
   });

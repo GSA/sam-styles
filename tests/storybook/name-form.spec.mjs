@@ -16,11 +16,11 @@ test.describe("NameForm regression", () => {
     await expect(smallInput).toBeVisible();
     await expect(fullInput).toBeVisible();
 
-    const smallWidth = await smallInput.evaluate((el) =>
-      el.getBoundingClientRect().width
+    const smallWidth = await smallInput.evaluate(
+      (el) => el.getBoundingClientRect().width
     );
-    const fullWidth = await fullInput.evaluate((el) =>
-      el.getBoundingClientRect().width
+    const fullWidth = await fullInput.evaluate(
+      (el) => el.getBoundingClientRect().width
     );
     // .usa-input--small constrains the field width (used for short inputs like "Title")
     expect(smallWidth).toBeLessThan(fullWidth);
