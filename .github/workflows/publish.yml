@@ -3,15 +3,13 @@ name: Publish to npm
 # Publishes @gsa-sam/sam-styles to the public npm registry.
 #
 # Trigger: a GitHub Release is published (which points at a version tag,
-# e.g. v3.1.0). A matching tag push (v*) also runs the CI dry-run so
-# packaging is validated on the tag; live publish stays release-gated.
-# Manual dispatch is also allowed for dry-run rehearsals.
+# e.g. v3.1.0). Manual dispatch is also allowed for dry-run rehearsals.
 #
-# Why release-gated for live publish (not raw `push: tags`): issue #737
-# asks for a tag-gated publish. Tag pushes run the dry-run, but the live
-# `npm publish` only happens on a published *Release* — Releases are
-# auditable, can be gated by the `npm-publish` environment's required
-# reviewers, and give DevSecOps a clear HITL approval point.
+# Why key on Release (not a raw `push: tags`): publishing a Release is a
+# deliberate, auditable act. It gives DevSecOps a clear HITL approval point
+# and pairs with the `npm-publish` environment's required reviewers. A raw
+# tag push is quiet and unauthenticated by comparison, so the live
+# `npm publish` only happens on a published *Release*.
 #
 # Security model (locked-down access):
 #   - Runs only in the `npm-publish` GitHub Actions environment, which
@@ -44,15 +42,6 @@ name: Publish to npm
 on:
   release:
     types: [published]
-  # A tag push runs the CI dry-run (build + tests + `npm publish --dry-run`)
-  # so packaging is validated on the tag itself. Live publish stays gated
-  # on a published Release: the tag-push event never sets DRY_RUN=false.
-  # Matches both v-prefixed (v3.1.0, the dominant convention) and bare
-  # semver (3.1.0) tags; the version guard normalizes either form.
-  push:
-    tags:
-      - "v[0-9]*"
-      - "[0-9]*"
   workflow_dispatch:
     inputs:
       dry-run:
@@ -125,7 +114,7 @@ jobs:
           fi
 
       - name: Verify tag matches package.json version
-        if: github.event_name == 'release' || github.event_name == 'push'
+        if: github.event_name == 'release'
         run: |
           # Strip an optional leading "v" (v3.1.0 -> 3.1.0); other prefixes fail.
           TAG="${GITHUB_REF_NAME#v}"
@@ -140,12 +129,10 @@ jobs:
         id: mode
         run: |
           # Priority: workflow_dispatch input > repo/env variable DRY_RUN > default true.
-          # A tag push (push event) always forces dry-run; only a published
-          # Release (or manual dispatch) may perform a live publish.
+          # Only a published Release (or a manual dispatch with dry-run=false)
+          # may perform a live publish.
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             DRY="${{ inputs.dry-run }}"
-          elif [ "${{ github.event_name }}" = "push" ]; then
-            DRY="true"
           else
             DRY="${{ vars.DRY_RUN }}"
           fi
