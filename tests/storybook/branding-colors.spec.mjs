@@ -11,15 +11,13 @@ test.describe("Branding Colors — Theme Colors story", () => {
     await expect(table).toBeVisible();
   });
 
-  test("color swatch cells have a non-transparent background-color", async ({
+  test("color swatch .square-4 has a non-transparent background-color", async ({
     page,
   }) => {
     await page.goto("/iframe.html?id=branding-colors--theme-colors");
-    // Each swatch is a <td> inside the color column — the first data cell in each row
-    // has an inline background set by the template
-    const swatch = page
-      .locator("table.sds-table tbody tr td:first-child")
-      .first();
+    // Swatches are <div class="square-4 border bg-*"> nested inside the first <td>.
+    // The bg-* USWDS utility class sets the background-color on .square-4, not the td.
+    const swatch = page.locator("table.sds-table .square-4").first();
     await expect(swatch).toBeVisible();
 
     const bg = await swatch.evaluate(
@@ -45,5 +43,20 @@ test.describe("Branding Colors — State Colors story", () => {
     await page.goto("/iframe.html?id=branding-colors--state-colors");
     const table = page.locator("table.sds-table").first();
     await expect(table).toBeVisible();
+  });
+
+  test("state color swatch .square-4 has a non-transparent background-color", async ({
+    page,
+  }) => {
+    await page.goto("/iframe.html?id=branding-colors--state-colors");
+    // Swatches are <div class="square-4 border bg-*"> — same pattern as theme colors
+    const swatch = page.locator("table.sds-table .square-4").first();
+    await expect(swatch).toBeVisible();
+
+    const bg = await swatch.evaluate(
+      (el) => getComputedStyle(el).backgroundColor
+    );
+    expect(bg).not.toBe("rgba(0, 0, 0, 0)");
+    expect(bg).not.toBe("transparent");
   });
 });
