@@ -55,8 +55,12 @@ off as done and record the date.
 
 ### Layer 2 — Branch protection on `master`
 
-- [ ] **Required status checks** — add `quality-gates` and `test` as required
-      checks (or the merged `build` reusable workflow status)
+- [ ] **Required status checks** — add the PR quality-gate check runs so a PR
+      can't merge until they pass. These are named `{workflow} / {job}`; in
+      this repo the relevant ones are `Test / test`, `Build-Storybook / Lint`,
+      `Build-Storybook / Format-Check`, and `Build-Storybook / Build-Storybook-Assets`.
+      (Note: `quality-gates` is a job in the release-triggered `publish.yml`
+      and does **not** appear as a PR status check — don't reference it here.)
 - [ ] **Require a pull request before merging** — at least 1 approving review
 - [ ] **Require review from Code Owners** — ensures `CODEOWNERS` is enforced
 - [ ] **Restrict pushes** — no direct pushes to `master`; only PRs
