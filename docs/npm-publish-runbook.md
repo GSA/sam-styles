@@ -12,11 +12,11 @@ See also: `.github/workflows/publish.yml` for the full workflow source.
 Three independent guardrails must all be satisfied before a live publish can
 reach npm. An attacker would need to defeat all three simultaneously.
 
-| Layer | What it guards | Where it lives |
-|---|---|---|
-| 1 — CODEOWNERS | Merge-time: any change to `/.github/` requires `@GSA/sam-shared-frontend-admin` review | `CODEOWNERS` |
-| 2 — Branch protection | Merge-time: `master` requires a passing PR review, code-owner approval, and forbids direct pushes | GitHub repo Settings → Branches |
-| 3 — Environment gate | Run-time: the `npm-publish` environment pauses every publish job for a named human approver **before** OIDC mints a credential | GitHub repo Settings → Environments → `npm-publish` |
+| Layer                 | What it guards                                                                                                                 | Where it lives                                      |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------- |
+| 1 — CODEOWNERS        | Merge-time: any change to `/.github/` requires `@GSA/sam-shared-frontend-admin` review                                         | `CODEOWNERS`                                        |
+| 2 — Branch protection | Merge-time: `master` requires a passing PR review, code-owner approval, and forbids direct pushes                              | GitHub repo Settings → Branches                     |
+| 3 — Environment gate  | Run-time: the `npm-publish` environment pauses every publish job for a named human approver **before** OIDC mints a credential | GitHub repo Settings → Environments → `npm-publish` |
 
 Layers 1 and 2 prevent an unauthorized workflow change from landing on
 `master`. Layer 3 catches anything that somehow slips through — even a
@@ -56,7 +56,7 @@ off as done and record the date.
 ### Layer 2 — Branch protection on `master`
 
 - [ ] **Required status checks** — add `quality-gates` and `test` as required
-  checks (or the merged `build` reusable workflow status)
+      checks (or the merged `build` reusable workflow status)
 - [ ] **Require a pull request before merging** — at least 1 approving review
 - [ ] **Require review from Code Owners** — ensures `CODEOWNERS` is enforced
 - [ ] **Restrict pushes** — no direct pushes to `master`; only PRs
@@ -67,11 +67,11 @@ Location: `https://github.com/GSA/sam-styles/settings/branches`
 ### Layer 3 — `npm-publish` environment
 
 - [ ] **Required reviewers** — add `@GSA/sam-shared-frontend-admin` (and/or
-  specific individuals); at least one approval required
+      specific individuals); at least one approval required
 - [ ] **Deployment branches** — restrict to the `master` branch only (prevents
-  the environment from being triggered by a feature branch)
+      the environment from being triggered by a feature branch)
 - [ ] **Wait timer** (optional) — add a short wait (e.g. 5 min) as an extra
-  speed-bump if desired
+      speed-bump if desired
 
 Location: `https://github.com/GSA/sam-styles/settings/environments`
 
@@ -79,7 +79,7 @@ Location: `https://github.com/GSA/sam-styles/settings/environments`
 
 - [ ] Log in to npmjs.com as the `@gsa-sam` org owner
 - [ ] Navigate to the `@gsa-sam/sam-styles` package → **Settings** →
-  **Trusted Publishers**
+      **Trusted Publishers**
 - [ ] Add a GitHub Actions publisher:
   - **Organization**: `GSA`
   - **Repository**: `sam-styles`
