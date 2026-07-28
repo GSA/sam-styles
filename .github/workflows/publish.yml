@@ -2,8 +2,17 @@ name: Publish to npm
 
 # Publishes @gsa-sam/sam-styles to the public npm registry.
 #
-# Trigger: a GitHub Release is published (which points at a version tag,
-# e.g. v3.1.0). Manual dispatch is also allowed for dry-run rehearsals.
+# Trigger: a full GitHub Release is published (activity type `released`,
+# which points at a version tag, e.g. v3.1.0). Manual dispatch is also
+# allowed for dry-run rehearsals.
+#
+# Why `released` and not `published`: `published` also fires for
+# pre-releases (e.g. v3.1.0-beta.1). Because we publish with npm's default
+# `latest` dist-tag, a pre-release firing `published` would land as
+# `latest` and be picked up by every consumer by default — not what we
+# want. `released` fires only for full, non-prerelease Releases, so it
+# structurally prevents an accidental beta-as-latest publish. Revisit with
+# explicit dist-tag handling if we ever want beta channels.
 #
 # Why key on Release (not a raw `push: tags`): publishing a Release is a
 # deliberate, auditable act. It gives DevSecOps a clear HITL approval point
@@ -41,7 +50,7 @@ name: Publish to npm
 
 on:
   release:
-    types: [published]
+    types: [released]
   workflow_dispatch:
     inputs:
       dry-run:
