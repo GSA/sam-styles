@@ -74,9 +74,19 @@ Location: `https://github.com/GSA/sam-styles/settings/branches`
 > repo with required reviewers (`@GSA/sam-shared-frontend`) and a deployment
 > branch policy restricting it to `master`. The boxes below are checked to
 > record that state; re-verify if the environment is ever recreated.
+>
+> **⚠️ Reviewer scope is broader than DevSecOps.** The current required
+> reviewer is the whole `@GSA/sam-shared-frontend` team, not a DevSecOps-only
+> group. Any member of that team can approve a pending publish — so the
+> run-time gate today gates on "a frontend maintainer", not "DevSecOps". If
+> the intent is DevSecOps-only approval, change the required reviewers to
+> `@GSA/sam-shared-frontend-admin` (or a named DevSecOps individual) before
+> going live. Until then, do not treat Layer 3 as a DevSecOps-exclusive
+> control.
 
 - [x] **Required reviewers** — `@GSA/sam-shared-frontend` is set; at least one
-      approval required
+      approval required (see scope caveat above — tighten to
+      `@GSA/sam-shared-frontend-admin` for DevSecOps-only approval)
 - [x] **Deployment branches** — restricted to the `master` branch only
       (prevents the environment from being triggered by a feature branch)
 - [ ] **Wait timer** (optional) — add a short wait (e.g. 5 min) as an extra
