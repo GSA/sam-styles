@@ -12,11 +12,11 @@ See also: `.github/workflows/publish.yml` for the full workflow source.
 Three independent guardrails must all be satisfied before a live publish can
 reach npm. An attacker would need to defeat all three simultaneously.
 
-| Layer                 | What it guards                                                                                                                 | Where it lives                                      |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------- |
-| 1 — CODEOWNERS        | Merge-time: any change to `/.github/` requires `@GSA/sam-shared-frontend-admin` review                                         | `CODEOWNERS`                                        |
-| 2 — Branch protection | Merge-time: `master` requires a passing PR review, code-owner approval, and forbids direct pushes                              | GitHub repo Settings → Branches                     |
-| 3 — Environment gate  | Run-time: the `npm-publish` environment pauses every publish job for a named human approver **before** OIDC mints a credential | GitHub repo Settings → Environments → `npm-publish` |
+| Layer                 | What it guards                                                                                                             | Where it lives                                  |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| 1 — CODEOWNERS        | Merge-time: any change to `/.github/` requires `@GSA/sam-shared-frontend-admin` review                                     | `CODEOWNERS`                                    |
+| 2 — Branch protection | Merge-time: `master` requires a passing PR review, code-owner approval, and forbids direct pushes                          | GitHub repo Settings → Branches                 |
+| 3 — Environment gate  | Run-time: the `release` environment pauses every publish job for a named human approver **before** OIDC mints a credential | GitHub repo Settings → Environments → `release` |
 
 Layers 1 and 2 prevent an unauthorized workflow change from landing on
 `master`. Layer 3 catches anything that somehow slips through — even a
@@ -32,9 +32,9 @@ approves the pending deployment.
 2. The `quality-gates` and `test` jobs run first (lint, SCSS compile,
    Playwright smoke tests).
 3. On success, the `publish` job is queued **but paused** at the
-   `environment: npm-publish` gate.
+   `environment: release` gate.
 4. GitHub sends a notification to the required reviewers configured on the
-   `npm-publish` environment.
+   `release` environment.
 5. A named DevSecOps approver reviews the pending deployment in
    **Actions → the workflow run → Review deployments** and clicks **Approve**.
 6. Only after approval does the job continue — at which point GitHub mints a
@@ -68,18 +68,38 @@ off as done and record the date.
 
 Location: `https://github.com/GSA/sam-styles/settings/branches`
 
-### Layer 3 — `npm-publish` environment
+### Layer 3 — `release` environment
 
-- [ ] **Required reviewers** — add `@GSA/sam-shared-frontend-admin` (and/or
-      specific individuals); at least one approval required
-- [ ] **Deployment branches** — restrict to the `master` branch only (prevents
-      the environment from being triggered by a feature branch)
+> **Status: already configured.** The `release` environment exists on the
+> repo with required reviewers (`@GSA/sam-shared-frontend`) and a deployment
+> branch policy restricting it to `master`. The boxes below are checked to
+> record that state; re-verify if the environment is ever recreated.
+>
+> **⚠️ Reviewer scope is broader than DevSecOps.** The current required
+> reviewer is the whole `@GSA/sam-shared-frontend` team, not a DevSecOps-only
+> group. Any member of that team can approve a pending publish — so the
+> run-time gate today gates on "a frontend maintainer", not "DevSecOps". If
+> the intent is DevSecOps-only approval, change the required reviewers to
+> `@GSA/sam-shared-frontend-admin` (or a named DevSecOps individual) before
+> going live. Until then, do not treat Layer 3 as a DevSecOps-exclusive
+> control.
+
+- [x] **Required reviewers** — `@GSA/sam-shared-frontend` is set; at least one
+      approval required (see scope caveat above — tighten to
+      `@GSA/sam-shared-frontend-admin` for DevSecOps-only approval)
+- [x] **Deployment branches** — restricted to the `master` branch only
+      (prevents the environment from being triggered by a feature branch)
 - [ ] **Wait timer** (optional) — add a short wait (e.g. 5 min) as an extra
       speed-bump if desired
 
 Location: `https://github.com/GSA/sam-styles/settings/environments`
 
 ### npm Trusted Publisher registration
+
+> **Note (DevSecOps):** the OIDC wiring is more involved here because the
+> `@gsa-sam` org publishes with **immutable tokens**. Confirm with the org
+> owner how the Trusted Publisher / OIDC exchange interacts with the immutable
+> token policy before flipping `DRY_RUN` to `false`.
 
 - [ ] Log in to npmjs.com as the `@gsa-sam` org owner
 - [ ] Navigate to the `@gsa-sam/sam-styles` package → **Settings** →
@@ -88,11 +108,11 @@ Location: `https://github.com/GSA/sam-styles/settings/environments`
   - **Organization**: `GSA`
   - **Repository**: `sam-styles`
   - **Workflow filename**: `publish.yml`
-  - **Environment name**: `npm-publish`
+  - **Environment name**: `release`
 - [ ] Once registered, flip `DRY_RUN` to `false`:
   - Go to `https://github.com/GSA/sam-styles/settings/variables/actions`
   - Set the `DRY_RUN` repository variable (or environment variable on
-    `npm-publish`) to `false`
+    `release`) to `false`
   - Alternatively, edit the default in `publish.yml` — but prefer the
     variable so it can be toggled without a code change
 
@@ -103,7 +123,7 @@ Location: `https://github.com/GSA/sam-styles/settings/environments`
 1. Trigger a manual dry-run: **Actions → Publish to npm → Run workflow** →
    leave `dry-run: true` → **Run workflow**.
 2. Watch the run. After `quality-gates` and `test` pass, the `publish` job
-   should show **"Waiting for review"** under the `npm-publish` environment.
+   should show **"Waiting for review"** under the `release` environment.
 3. Approve it. The job should proceed, run `npm publish --dry-run`, and exit 0.
 4. Confirm in the job logs that `npm publish --dry-run` ran (look for
    `npm notice` tarball output and the "dry-run" notice).

@@ -16,12 +16,12 @@ name: Publish to npm
 #
 # Why key on Release (not a raw `push: tags`): publishing a Release is a
 # deliberate, auditable act. It gives DevSecOps a clear HITL approval point
-# and pairs with the `npm-publish` environment's required reviewers. A raw
+# and pairs with the `release` environment's required reviewers. A raw
 # tag push is quiet and unauthenticated by comparison, so the live
 # `npm publish` only happens on a published *Release*.
 #
 # Security model (locked-down access):
-#   - Runs only in the `npm-publish` GitHub Actions environment, which
+#   - Runs only in the `release` GitHub Actions environment, which
 #     DevSecOps can gate with required reviewers / protection rules.
 #   - Uses npm Trusted Publishing (OIDC) — no long-lived token stored in
 #     the repo. The `id-token: write` permission mints a short-lived
@@ -31,7 +31,7 @@ name: Publish to npm
 #        Publisher = GitHub Actions
 #        Organization = GSA, Repository = sam-styles
 #        Workflow filename = publish.yml
-#        Environment name = npm-publish)
+#        Environment name = release)
 #   - Quality gates (lint + tests + SCSS compile) must pass before publish.
 #
 # HITL handoff to DevSecOps:
@@ -92,7 +92,7 @@ jobs:
   publish:
     needs: [quality-gates, test]
     runs-on: ubuntu-latest
-    environment: npm-publish
+    environment: release
     permissions:
       contents: read
       id-token: write # required for npm Trusted Publishing (OIDC)
