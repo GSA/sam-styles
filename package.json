@@ -21,7 +21,7 @@
     "test": "stylelint \"sam-styles/**/*.scss\"",
     "test:storybook": "playwright test",
     "compile:check": "node scripts/compile-check.mjs",
-    "coverage": "node scripts/coverage-report.mjs --threshold=35",
+    "coverage": "node scripts/coverage-report.mjs --threshold=90",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "storybook": "storybook dev -p 6006",

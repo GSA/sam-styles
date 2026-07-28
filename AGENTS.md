@@ -17,7 +17,7 @@
 - `npm run test:storybook` — Playwright smoke-style regression tests. Builds Storybook, serves the static `_site/` output via `http-server`, and runs Chromium checks against Storybook iframe URLs (asserting computed styles on rendered stories). Requires the Chromium browser (`npx playwright install chromium`) — Playwright config (`playwright.config.mjs`) and specs (`tests/storybook/*.spec.mjs`) are ESM.
 - `npm run compile:check` — compiles `sam-styles/index.scss` via `sass` (all load paths pre-set); writes `coverage/compilation-report.txt`. Exits 0 on success. USWDS deprecation WARNINGs are pre-existing noise, not failures.
 - `npm run lint` — alias; same as `npm test`.
-- `npm run coverage` — runs `scripts/coverage-report.mjs`; writes `coverage/component-coverage.json` and `coverage/component-coverage.md`. Exits 0 if coverage meets the threshold (currently **35%**), exits 1 otherwise.
+- `npm run coverage` — runs `scripts/coverage-report.mjs`; writes `coverage/component-coverage.json` and `coverage/component-coverage.md`. Exits 0 if coverage meets the threshold (currently **90%**), exits 1 otherwise.
 
 ## Code coverage
 
@@ -26,8 +26,8 @@ This is a SCSS-only library with no JS runtime. "Coverage" is measured as **comp
 > Every Storybook story file (`.stories.js`) in `sam-styles/packages/` should have at least one matching Playwright smoke-test spec in `tests/storybook/`.
 
 - **Metric**: `(stories with a Playwright spec) / (total stories) × 100`
-- **Current threshold**: 35% — CI fails if coverage drops below this.
-- **Target**: 80–90% (tracked in a separate issue — add specs for uncovered components).
+- **Current threshold**: 90% — CI fails if coverage drops below this.
+- **Target**: 80–90% — **met**; all Storybook stories currently have a matching Playwright spec (100%). The threshold is held at 90% to leave slack for new stories landing ahead of their specs.
 - **Reports**: `coverage/component-coverage.json` (machine-readable) and `coverage/component-coverage.md` (posted as a PR comment by CI).
 - **To raise the threshold**: update the `--threshold` value in the `coverage` script in `package.json` once enough new specs have been added.
 
