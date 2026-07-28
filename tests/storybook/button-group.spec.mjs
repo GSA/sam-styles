@@ -7,7 +7,9 @@ import { test, expect } from "@playwright/test";
 test.describe("Button group regression", () => {
   test("segmented button group renders as flex row", async ({ page }) => {
     await page.goto("/iframe.html?id=components-buttongroup--button-group");
-    const group = page.locator(".sds-button-group.sds-button-group--segmented").first();
+    const group = page
+      .locator(".sds-button-group.sds-button-group--segmented")
+      .first();
     await expect(group).toBeVisible();
     // @include u-display("flex") + @include u-flex("row")
     await expect(group).toHaveCSS("display", "flex");
@@ -17,7 +19,9 @@ test.describe("Button group regression", () => {
   test("first item in group removes right border-radius", async ({ page }) => {
     await page.goto("/iframe.html?id=components-buttongroup--button-group");
     const firstButton = page
-      .locator(".sds-button-group.sds-button-group--segmented .sds-button-group__item:first-child .usa-button")
+      .locator(
+        ".sds-button-group.sds-button-group--segmented .sds-button-group__item:first-child .usa-button"
+      )
       .first();
     await expect(firstButton).toBeVisible();
     // .sds-button-group__item:first-child > .usa-button { border-top-right-radius: 0; border-bottom-right-radius: 0 }
@@ -28,7 +32,9 @@ test.describe("Button group regression", () => {
   test("last item in group removes left border-radius", async ({ page }) => {
     await page.goto("/iframe.html?id=components-buttongroup--button-group");
     const lastButton = page
-      .locator(".sds-button-group.sds-button-group--segmented .sds-button-group__item:last-child .usa-button")
+      .locator(
+        ".sds-button-group.sds-button-group--segmented .sds-button-group__item:last-child .usa-button"
+      )
       .first();
     await expect(lastButton).toBeVisible();
     // .sds-button-group__item:last-child > .usa-button { border-top-left-radius: 0; border-bottom-left-radius: 0 }
@@ -45,6 +51,9 @@ test.describe("Button group regression", () => {
       .first();
     await expect(outlineButton).toBeVisible();
     // .sds-button-group--secondary .usa-button--outline { @include u-bg("white") }
-    await expect(outlineButton).toHaveCSS("background-color", "rgb(255, 255, 255)");
+    await expect(outlineButton).toHaveCSS(
+      "background-color",
+      "rgb(255, 255, 255)"
+    );
   });
 });
