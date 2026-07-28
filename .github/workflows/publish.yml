@@ -30,8 +30,7 @@ name: Publish to npm
 # HITL handoff to DevSecOps:
 #   Until the Trusted Publisher connection is live, this workflow runs
 #   `npm publish --dry-run` only (DRY_RUN defaults to "true"). DevSecOps:
-#     1. Registers the Trusted Publisher on npmjs (values above), OR adds an
-#        NPM_TOKEN secret to the `npm-publish` environment as a fallback.
+#     1. Registers the Trusted Publisher on npmjs (values above).
 #     2. Flips the workflow to a live publish by setting the repo/environment
 #        variable  DRY_RUN = false  (Settings → Secrets and variables →
 #        Actions → Variables), or edits the default below.
@@ -99,10 +98,6 @@ jobs:
     permissions:
       contents: read
       id-token: write # required for npm Trusted Publishing (OIDC)
-    env:
-      # Surface the optional token as an env var so step-level `if:`
-      # conditions can test it (secrets can't be referenced in `if:`).
-      HAS_NPM_TOKEN: ${{ secrets.NPM_TOKEN != '' }}
     steps:
       - name: Check out repository code
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -171,17 +166,10 @@ jobs:
         if: steps.mode.outputs.dry-run == 'true'
         run: npm publish --dry-run --access public
 
-      # Preferred path: OIDC Trusted Publishing. No token env is set, so npm
-      # uses the short-lived OIDC credential. Runs unless an NPM_TOKEN secret
-      # is configured (in which case the fallback step below handles publish).
+      # Live publish via OIDC Trusted Publishing. No token env is set — npm
+      # mints a short-lived OIDC credential trusted because this repo +
+      # workflow are registered as the package's Trusted Publisher. This is
+      # the only supported publish path; there is no long-lived-token fallback.
       - name: Publish (live, OIDC Trusted Publishing)
-        if: steps.mode.outputs.dry-run == 'false' && env.HAS_NPM_TOKEN != 'true'
-        run: npm publish --access public
-
-      # Fallback path: token-based publish, only when an NPM_TOKEN secret is
-      # actually present. Remove the secret once OIDC Trusted Publishing is live.
-      - name: Publish (live, token fallback)
-        if: steps.mode.outputs.dry-run == 'false' && env.HAS_NPM_TOKEN == 'true'
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        if: steps.mode.outputs.dry-run == 'false'
         run: npm publish --access public
