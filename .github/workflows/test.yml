@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      pull-requests: write
     steps:
       - name: Check out repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -36,9 +37,60 @@ jobs:
       - name: Run Storybook smoke tests
         run: npm run test:storybook
 
+      - name: Run component/story coverage check
+        run: npm run coverage
+
+      - name: Post coverage report as PR comment
+        if: always() && github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
+        with:
+          script: |
+            const fs = require('fs');
+            const reportPath = 'coverage/component-coverage.md';
+            if (!fs.existsSync(reportPath)) {
+              console.log('Coverage report not found, skipping comment.');
+              return;
+            }
+            const body = fs.readFileSync(reportPath, 'utf8');
+            const marker = '<!-- sam-styles-coverage-report -->';
+            const fullBody = marker + '\n' + body;
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const existing = comments.find((c) => c.body.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body: fullBody,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: fullBody,
+              });
+            }
+
       - name: Upload compilation report artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: scss-compilation-report
           path: coverage/compilation-report.txt
+          retention-days: 30
+
+      - name: Upload coverage report artifact
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: component-coverage-report
+          path: |
+            coverage/component-coverage.json
+            coverage/component-coverage.md
           retention-days: 30
