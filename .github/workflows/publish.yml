@@ -3,8 +3,8 @@ name: Publish to npm
 # Publishes @gsa-sam/sam-styles to the public npm registry.
 #
 # Trigger: a full GitHub Release is published (activity type `released`,
-# which points at a version tag, e.g. v3.1.0). Manual dispatch is also
-# allowed for dry-run rehearsals.
+# which points at a version tag, e.g. v3.1.0). Manual dispatch is
+# rehearsal-only and must run in dry-run mode.
 #
 # Why `released` and not `published`: `published` also fires for
 # pre-releases (e.g. v3.1.0-beta.1). Because we publish with npm's default
@@ -35,12 +35,15 @@ name: Publish to npm
 #   - Quality gates (lint + tests + SCSS compile) must pass before publish.
 #
 # HITL handoff to DevSecOps:
-#   Until the Trusted Publisher connection is live, this workflow runs
-#   `npm publish --dry-run` only (DRY_RUN defaults to "true"). DevSecOps:
+#   Until the Trusted Publisher connection is live, Release-triggered runs
+#   publish with `npm publish --dry-run` only (DRY_RUN defaults to "true").
+#   DevSecOps:
 #     1. Registers the Trusted Publisher on npmjs (values above).
-#     2. Flips the workflow to a live publish by setting the repo/environment
-#        variable  DRY_RUN = false  (Settings → Secrets and variables →
-#        Actions → Variables), or edits the default below.
+#     2. Enables Release-triggered live publishing by setting the
+#        repo/environment variable  DRY_RUN = false  (Settings → Secrets and
+#        variables → Actions → Variables), or edits the default below.
+#   Manual workflow_dispatch runs are always rehearsal-only, regardless of
+#   DRY_RUN, and cannot perform a live publish.
 #
 # Note on workflow_dispatch rehearsals: a manual dry-run against an
 # already-published version (e.g. the current 3.0.25) will verify the
@@ -137,11 +140,14 @@ jobs:
       - name: Determine dry-run mode
         id: mode
         run: |
-          # Priority: workflow_dispatch input > repo/env variable DRY_RUN > default true.
-          # Only a published Release (or a manual dispatch with dry-run=false)
-          # may perform a live publish.
+          # workflow_dispatch is rehearsal-only. Only a published Release may
+          # perform a live publish, controlled by repo/env variable DRY_RUN.
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             DRY="${{ inputs.dry-run }}"
+            if [ "$DRY" != "true" ]; then
+              echo "::error::workflow_dispatch runs must use dry-run=true. Publish a GitHub Release to run a live publish."
+              exit 1
+            fi
           else
             DRY="${{ vars.DRY_RUN }}"
           fi
@@ -159,7 +165,7 @@ jobs:
           echo "Publish dry-run mode: $DRY"
 
       - name: Publish (dry-run)
-        if: steps.mode.outputs.dry-run == 'true'
+        if: steps.mode.outputs['dry-run'] == 'true'
         run: npm publish --dry-run --access public
 
       # Live publish via OIDC Trusted Publishing. No token env is set — npm
@@ -167,5 +173,5 @@ jobs:
       # workflow are registered as the package's Trusted Publisher. This is
       # the only supported publish path; there is no long-lived-token fallback.
       - name: Publish (live, OIDC Trusted Publishing)
-        if: steps.mode.outputs.dry-run == 'false'
+        if: github.event_name == 'release' && steps.mode.outputs['dry-run'] == 'false'
         run: npm publish --access public
