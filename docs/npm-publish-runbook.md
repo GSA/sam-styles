@@ -27,8 +27,10 @@ approves the pending deployment.
 
 ## How the approval flow works at runtime
 
-1. A GitHub Release is published (or a maintainer triggers `workflow_dispatch`
-   with `dry-run: true`).
+1. A GitHub Release is published (for live publish or Release dry-run), or a
+   maintainer triggers rehearsal-only `workflow_dispatch` with `dry-run: true`.
+   Manual `workflow_dispatch` runs with `dry-run: false` fail before any
+   publish command can run.
 2. The `quality-gates` and `test` jobs run first (lint, SCSS compile,
    Playwright smoke tests).
 3. On success, the `publish` job is queued **but paused** at the
@@ -109,24 +111,31 @@ Location: `https://github.com/GSA/sam-styles/settings/environments`
   - **Repository**: `sam-styles`
   - **Workflow filename**: `publish.yml`
   - **Environment name**: `release`
-- [ ] Once registered, flip `DRY_RUN` to `false`:
+- [ ] Once registered, enable Release-triggered live publishing by flipping
+      `DRY_RUN` to `false`:
   - Go to `https://github.com/GSA/sam-styles/settings/variables/actions`
   - Set the `DRY_RUN` repository variable (or environment variable on
     `release`) to `false`
   - Alternatively, edit the default in `publish.yml` — but prefer the
     variable so it can be toggled without a code change
+  - This does **not** enable manual live publishing; `workflow_dispatch`
+    remains rehearsal-only and still requires `dry-run: true`
 
 ---
 
 ## Verifying the gate is active (smoke test)
 
-1. Trigger a manual dry-run: **Actions → Publish to npm → Run workflow** →
-   leave `dry-run: true` → **Run workflow**.
+1. Trigger a manual rehearsal dry-run: **Actions → Publish to npm → Run
+   workflow** → leave `dry-run: true` → **Run workflow**.
 2. Watch the run. After `quality-gates` and `test` pass, the `publish` job
    should show **"Waiting for review"** under the `release` environment.
 3. Approve it. The job should proceed, run `npm publish --dry-run`, and exit 0.
 4. Confirm in the job logs that `npm publish --dry-run` ran (look for
    `npm notice` tarball output and the "dry-run" notice).
+5. Trigger a manual negative test: **Actions → Publish to npm → Run
+   workflow** → set `dry-run: false` → **Run workflow**. The publish job must
+   fail with `workflow_dispatch runs must use dry-run=true` before either
+   `npm publish --dry-run` or live `npm publish` runs.
 
 If the job does **not** pause for review, the environment gate is misconfigured
 — stop and fix before registering the Trusted Publisher.

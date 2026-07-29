@@ -19,6 +19,7 @@
   ],
   "scripts": {
     "test": "stylelint \"sam-styles/**/*.scss\"",
+    "test:publish-workflow": "node scripts/check-publish-workflow.mjs",
     "test:storybook": "playwright test",
     "compile:check": "node scripts/compile-check.mjs",
     "coverage": "node scripts/coverage-report.mjs --threshold=90",
