@@ -41,13 +41,15 @@ assert(
 );
 
 assert(
-  /if: github\.event_name == 'release' && steps\.mode\.outputs\['dry-run'\] == 'false'/.test(
+  /if:\s*github\.event_name\s*==\s*['"]release['"]\s*&&\s*steps\.mode\.outputs\[['"]dry-run['"]\]\s*==\s*['"]false['"]/.test(
     livePublishStep
   ),
   "Live publish must explicitly require the release event and dry-run=false."
 );
 assert(
-  /if: steps\.mode\.outputs\['dry-run'\] == 'true'/.test(dryRunPublishStep),
+  /if:\s*steps\.mode\.outputs\[['"]dry-run['"]\]\s*==\s*['"]true['"]/.test(
+    dryRunPublishStep
+  ),
   "Dry-run publish must still run when dry-run mode is true."
 );
 
