@@ -42,7 +42,7 @@
     "@storybook/addon-essentials": "8.6.14",
     "@storybook/addon-interactions": "8.6.14",
     "@storybook/addon-links": "8.6.18",
-    "@storybook/html": "8.6.18",
+    "@storybook/html": "10.4.4",
     "@storybook/html-webpack5": "8.6.14",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/testing-library": "0.2.2",
