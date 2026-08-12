@@ -13,7 +13,7 @@ jobs:
     # in the trusted target-repository context.
     if: >-
       github.event.pull_request.user.login == 'dependabot[bot]' &&
-      github.repository == 'GSA/sam-styles'
+      contains(fromJSON('["GSA/sam-styles", "GSA/ngx-uswds-icons"]'), github.repository)
 
     steps:
       - name: Fetch Dependabot metadata
