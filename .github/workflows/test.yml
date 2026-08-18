@@ -28,6 +28,9 @@ jobs:
       - name: Run tests (stylelint)
         run: npm test
 
+      - name: Validate security workflow
+        run: npm run test:security-workflow
+
       - name: SCSS compilation check
         run: npm run compile:check
 

@@ -20,6 +20,7 @@
   "scripts": {
     "test": "stylelint \"sam-styles/**/*.scss\"",
     "test:publish-workflow": "node scripts/check-publish-workflow.mjs",
+    "test:security-workflow": "node scripts/check-security-workflow.mjs && node scripts/check-zap-results.test.mjs",
     "test:storybook": "playwright test",
     "test:a11y": "playwright test --config=playwright.a11y.config.mjs",
     "compile:check": "node scripts/compile-check.mjs",
