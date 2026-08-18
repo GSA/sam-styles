@@ -37,6 +37,9 @@ jobs:
       - name: Run Storybook smoke tests
         run: npm run test:storybook
 
+      - name: Enforce WCAG 2.1 AA on Storybook stories
+        run: npm run test:a11y
+
       - name: Run component/story coverage check
         run: npm run coverage
 

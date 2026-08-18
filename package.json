@@ -21,6 +21,7 @@
     "test": "stylelint \"sam-styles/**/*.scss\"",
     "test:publish-workflow": "node scripts/check-publish-workflow.mjs",
     "test:storybook": "playwright test",
+    "test:a11y": "playwright test --config=playwright.a11y.config.mjs",
     "compile:check": "node scripts/compile-check.mjs",
     "coverage": "node scripts/coverage-report.mjs --threshold=90",
     "format": "prettier --write .",
@@ -36,6 +37,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
     "@babel/core": "^7.17.10",
     "@playwright/test": "1.62.1",
     "@storybook/addon-actions": "8.6.18",
