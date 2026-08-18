@@ -50,6 +50,11 @@ assert.match(
 );
 assert.match(
   workflow,
+  /cmd_options:\s*-I -j/,
+  "ZAP must use its JavaScript-capable spider to discover Storybook routes"
+);
+assert.match(
+  workflow,
   /node scripts\/check-zap-results\.mjs report_json\.json/,
   "ZAP findings must pass through the severity gate"
 );
