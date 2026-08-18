@@ -42,7 +42,10 @@ test("Storybook stories have no unresolved WCAG 2.1 AA violations", async ({
     await page.goto(
       `/iframe.html?id=${encodeURIComponent(story.id)}&viewMode=story`
     );
-    await expect(page.locator("#storybook-root")).toBeAttached();
+    await expect(
+      page.locator("body"),
+      `${story.id} should finish rendering`
+    ).toHaveClass(/\bsb-show-main\b/);
 
     const results = await new AxeBuilder({ page })
       .withTags(WCAG_21_AA_TAGS)
