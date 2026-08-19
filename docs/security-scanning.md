@@ -1,8 +1,8 @@
 # Security scanning
 
-The `Security` GitHub Actions workflow complements (and does not replace) Dependabot:
+SAST is provided by GitHub's built-in CodeQL **default setup**, which runs automatically on every pull request and push to `master` — no committed workflow is required. The `Security` GitHub Actions workflow adds DAST and complements (and does not replace) Dependabot and CodeQL default setup:
 
-- **SAST:** CodeQL scans the JavaScript/TypeScript build toolchain and GitHub Actions workflows on every pull request and push to `master`.
+- **SAST:** CodeQL default setup (repository **Settings > Code security > Code scanning**) scans the JavaScript/TypeScript toolchain and GitHub Actions workflows. It is managed by GitHub, not by this workflow. Do **not** add a committed CodeQL workflow here — advanced setup and default setup cannot run simultaneously, and doing so causes the workflow to fail at startup.
 - **DAST:** OWASP ZAP runs a baseline scan against the built Storybook site. `scripts/check-zap-results.mjs` fails for any new medium- or high-severity alert.
 
 ## Existing-finding baseline
@@ -24,8 +24,8 @@ CodeQL uses GitHub's code-scanning baseline to distinguish pull-request findings
 Branch protection is administered outside this repository. A repository administrator or DevSecOps must configure the `master` ruleset to:
 
 1. Require these status checks before merge:
-   - `SAST (javascript-typescript)`
-   - `SAST (actions)`
+   - `Analyze (javascript-typescript)` (CodeQL default setup)
+   - `Analyze (actions)` (CodeQL default setup)
    - `DAST (medium/high gate)`
 2. Enable the code-scanning merge protection rule for CodeQL and block **high** and **medium** alerts introduced by a pull request.
 

@@ -23,20 +23,10 @@ assert.match(
   /push:[\s\S]*branches:\s*\[master\]/,
   "security scans must run on master"
 );
-assert.match(
+assert.doesNotMatch(
   workflow,
-  /github\/codeql-action\/init@[^\s]+/,
-  "CodeQL must initialize SAST"
-);
-assert.match(
-  workflow,
-  /language:\s*\[[^\]]*javascript-typescript[^\]]*actions[^\]]*\]/,
-  "CodeQL must scan the JavaScript toolchain and workflows"
-);
-assert.match(
-  workflow,
-  /github\/codeql-action\/analyze@[^\s]+/,
-  "CodeQL must analyze and upload results"
+  /github\/codeql-action/,
+  "CodeQL runs via GitHub default setup; a committed CodeQL job conflicts with it and fails at startup"
 );
 assert.match(
   workflow,
@@ -66,13 +56,18 @@ assert.ok(
 );
 assert.match(
   docs,
-  /Require these status checks[\s\S]*SAST \(javascript-typescript\)[\s\S]*SAST \(actions\)[\s\S]*DAST \(medium\/high gate\)/,
+  /Require these status checks[\s\S]*Analyze \(javascript-typescript\)[\s\S]*Analyze \(actions\)[\s\S]*DAST \(medium\/high gate\)/,
   "required status checks must be documented for repository administrators"
 );
 assert.match(
   docs,
   /block \*\*high\*\* and \*\*medium\*\* alerts introduced by a pull request/,
   "CodeQL new-code severity protection must be documented"
+);
+assert.match(
+  docs,
+  /default setup/,
+  "docs must explain that CodeQL runs via GitHub default setup, not a committed workflow"
 );
 assert.match(
   docs,
