@@ -17,6 +17,15 @@ pluginid|alertRef|url|param
 
 Low and informational ZAP alerts remain visible in the uploaded `zap-security-report` artifact but do not block builds.
 
+## Hardening applied to the built site
+
+The blocking medium-severity findings were fixed in the delivered markup rather than baselined, so the protection reaches real browsers (GitHub Pages hosting cannot set response headers):
+
+- **Content Security Policy** and **X-Content-Type-Options** are injected via `<meta http-equiv>` in `.storybook/preview-head.html` (story iframe) and `.storybook/manager-head.html` (Storybook shell). The CSP includes `frame-ancestors 'self'`, which provides genuine clickjacking protection and satisfies ZAP's anti-clickjacking rule (an `X-Frame-Options` `<meta>` would be ignored by browsers).
+- **Subresource Integrity** — the single external stylesheet (`bootstrap-icons` from jsDelivr) carries a pinned `integrity` (sha384) and `crossorigin` attribute in `.storybook/preview-head.html`. If that dependency version is bumped, recompute the hash with `curl -fsSL <url> | openssl dgst -sha384 -binary | openssl base64 -A`.
+
+Several non-blocking (low/informational) WARN findings remain — e.g. `Permissions-Policy` and `Cross-Origin-Embedder-Policy` headers, which cannot be set from static markup. They surface in the `zap-security-report` artifact but do not fail the gate.
+
 CodeQL uses GitHub's code-scanning baseline to distinguish pull-request findings from existing default-branch findings. Existing alerts must be triaged in the repository's **Security > Code scanning** view rather than dismissed without review.
 
 ## Required repository rules
