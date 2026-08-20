@@ -551,9 +551,29 @@
     console.warn('unable to connect to top frame for connecting dev tools');
   }
 </script>
+<!--
+  CSP delivered via <meta> for the Storybook docs site (GitHub Pages cannot
+  set response headers; server-set CSP would be stronger and is tracked as a
+  hosting follow-up). Only directives valid in a meta context are included:
+  frame-ancestors / X-Frame-Options are header-only and are handled by
+  clickjacking baseline entries in .zap/baseline.json instead.
+  'unsafe-eval' was verified removable and dropped. 'unsafe-inline' is still
+  required because Storybook 7 (@storybook/html) injects inline scripts and
+  styles at runtime with no nonce/hash support; removing it blocks rendering
+  (verified in headless Chromium). Revisit on the Storybook upgrade (#768).
+  This markup is docs tooling and is not part of the published npm package
+  (SCSS only).
+-->
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; img-src 'self' data:; connect-src 'self'; form-action 'self'; frame-src 'self'; worker-src 'self' blob:; child-src 'self' blob:; manifest-src 'self'; media-src 'self'; base-uri 'self'; object-src 'none'"
+/>
+<meta http-equiv="X-Content-Type-Options" content="nosniff" />
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+  integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+  crossorigin="anonymous"
 />
 
     <script type="module" crossorigin src="./assets/iframe-BHfodeoa.js"></script>
