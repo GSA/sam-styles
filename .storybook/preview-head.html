@@ -1,15 +1,19 @@
 <!--
   CSP delivered via <meta> for the Storybook docs site (GitHub Pages cannot
-  set response headers). Only directives that are valid in a meta context are
-  included: frame-ancestors / X-Frame-Options are header-only and are handled
-  by clickjacking baseline entries in .zap/baseline.json instead.
-  'unsafe-inline' / 'unsafe-eval' are required by Storybook's webpack runtime
-  and are baselined with rationale; this markup is docs tooling and is not part
-  of the published npm package (SCSS only).
+  set response headers; server-set CSP would be stronger and is tracked as a
+  hosting follow-up). Only directives valid in a meta context are included:
+  frame-ancestors / X-Frame-Options are header-only and are handled by
+  clickjacking baseline entries in .zap/baseline.json instead.
+  'unsafe-eval' was verified removable and dropped. 'unsafe-inline' is still
+  required because Storybook 7 (@storybook/html) injects inline scripts and
+  styles at runtime with no nonce/hash support; removing it blocks rendering
+  (verified in headless Chromium). Revisit on the Storybook upgrade (#768).
+  This markup is docs tooling and is not part of the published npm package
+  (SCSS only).
 -->
 <meta
   http-equiv="Content-Security-Policy"
-  content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; img-src 'self' data:; connect-src 'self'; form-action 'self'; frame-src 'self'; worker-src 'self' blob:; child-src 'self' blob:; manifest-src 'self'; media-src 'self'; base-uri 'self'; object-src 'none'"
+  content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; img-src 'self' data:; connect-src 'self'; form-action 'self'; frame-src 'self'; worker-src 'self' blob:; child-src 'self' blob:; manifest-src 'self'; media-src 'self'; base-uri 'self'; object-src 'none'"
 />
 <meta http-equiv="X-Content-Type-Options" content="nosniff" />
 <link

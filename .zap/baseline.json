@@ -10,23 +10,16 @@
     {
       "fingerprint": "10055|10055-5||",
       "alert": "CSP: script-src unsafe-inline",
-      "reason": "Storybook's webpack runtime injects inline bootstrap scripts; removing 'unsafe-inline' from script-src breaks the docs site. Docs tooling only, not shipped in the npm package.",
+      "reason": "Storybook 7 (@storybook/html) injects inline bootstrap scripts at runtime with no nonce/hash support; removing 'unsafe-inline' from script-src blocks rendering (verified in headless Chromium). 'unsafe-eval' was verified removable and has been dropped. Docs tooling only, not shipped in the npm package.",
       "owner": "sam-styles maintainers",
-      "remediation": "Remove when Storybook supports nonce/hash-based CSP for its runtime injection."
+      "remediation": "Revisit on the Storybook upgrade (#768), which may add nonce/hash-based CSP support for its runtime injection."
     },
     {
       "fingerprint": "10055|10055-6||",
       "alert": "CSP: style-src unsafe-inline",
-      "reason": "Storybook and the addon UI inject inline styles at runtime; removing 'unsafe-inline' from style-src breaks rendering. Docs tooling only, not shipped in the npm package.",
+      "reason": "Storybook and the addon UI inject inline styles at runtime; removing 'unsafe-inline' from style-src blocks rendering (verified in headless Chromium). Docs tooling only, not shipped in the npm package.",
       "owner": "sam-styles maintainers",
-      "remediation": "Remove when Storybook supports nonce/hash-based CSP for injected styles."
-    },
-    {
-      "fingerprint": "10055|10055-10||",
-      "alert": "CSP: script-src unsafe-eval",
-      "reason": "Storybook's webpack 'eval' devtool and runtime require 'unsafe-eval'; removing it breaks the docs site. Docs tooling only, not shipped in the npm package.",
-      "owner": "sam-styles maintainers",
-      "remediation": "Remove if the Storybook build is reconfigured to avoid eval-based bundles."
+      "remediation": "Revisit on the Storybook upgrade (#768), which may add nonce/hash-based CSP support for injected styles."
     },
     {
       "fingerprint": "10055|10055-11||",

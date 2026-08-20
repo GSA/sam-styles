@@ -23,14 +23,16 @@ The blocking medium-severity findings were fixed in the delivered markup where r
 
 **Fixed in markup (genuine, ships to browsers):**
 
-- **Content Security Policy** and **X-Content-Type-Options** are injected via `<meta http-equiv>` in `.storybook/preview-head.html` (story iframe) and `.storybook/manager-head.html` (Storybook shell). Only directives valid in a `<meta>` context are included, with explicit `form-action`, `frame-src`, `worker-src`, `child-src`, `manifest-src` and `media-src` so there are no missing fallbacks.
+- **Content Security Policy** and **X-Content-Type-Options** are injected via `<meta http-equiv>` in `.storybook/preview-head.html` (story iframe) and `.storybook/manager-head.html` (Storybook shell). Only directives valid in a `<meta>` context are included, with explicit `form-action`, `frame-src`, `worker-src`, `child-src`, `manifest-src` and `media-src` so there are no missing fallbacks. `unsafe-eval` was verified removable (headless Chromium, no violations on either surface) and dropped; `script-src`/`style-src` retain only `unsafe-inline` (see below).
 - **Subresource Integrity** — the single external stylesheet (`bootstrap-icons` from jsDelivr) carries a pinned `integrity` (sha384) and `crossorigin` attribute in `.storybook/preview-head.html`. If that dependency version is bumped, recompute the hash with `curl -fsSL <url> | openssl dgst -sha384 -binary | openssl base64 -A`.
 
 **Baselined with rationale (cannot be fixed in this hosting/framework combination, see `.zap/baseline.json`):**
 
 - **Anti-clickjacking** (`10020`) — `X-Frame-Options` / CSP `frame-ancestors` are header-only and ignored via `<meta>`; GitHub Pages cannot set response headers.
-- **CSP `unsafe-inline` / `unsafe-eval`** (`10055`) — required by Storybook's webpack runtime; removing them breaks the docs site.
+- **CSP `unsafe-inline`** (`10055`) — Storybook 7 (`@storybook/html`) injects inline scripts and styles at runtime with no nonce/hash support; removing `unsafe-inline` blocks rendering (verified in headless Chromium). Tracked for revisit on the Storybook upgrade (#768). Note `unsafe-eval` was tested and removed — it is _not_ required.
 - **CSP meta-invalid / no-fallback residue** (`10055`) — defensively baselined; only header-only directives remain unexpressible via `<meta>`.
+
+A server-set CSP response header would be stronger than `<meta>` (it can carry `frame-ancestors` and apply to non-HTML responses), but GitHub Pages cannot set custom response headers. Moving the docs site to a host that can (e.g. behind a CDN/worker) is tracked as a hosting follow-up.
 
 Each of these is revisited if the docs site moves to a host that can emit HTTP response headers. The remaining WARN findings (e.g. `Permissions-Policy`, `Cross-Origin-Embedder-Policy`) are low/informational, cannot be set from static markup, and do not fail the gate — they surface in the `zap-security-report` artifact.
 
