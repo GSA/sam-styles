@@ -1,0 +1,39 @@
+{
+  "acceptedFindings": [
+    {
+      "fingerprint": "10020|10020-1||",
+      "alert": "Missing Anti-clickjacking Header",
+      "reason": "X-Frame-Options and CSP frame-ancestors are header-only directives; they are ignored when set via <meta>. The site is hosted on GitHub Pages, which cannot emit custom response headers. This is Storybook docs tooling, not the published npm package (SCSS only), and is not embedded in third-party frames.",
+      "owner": "sam-styles maintainers",
+      "remediation": "Revisit if the docs site moves to a host that can set response headers (add X-Frame-Options: SAMEORIGIN / CSP frame-ancestors 'self')."
+    },
+    {
+      "fingerprint": "10055|10055-5||",
+      "alert": "CSP: script-src unsafe-inline",
+      "reason": "Storybook 7 (@storybook/html) injects inline bootstrap scripts at runtime with no nonce/hash support; removing 'unsafe-inline' from script-src blocks rendering (verified in headless Chromium). 'unsafe-eval' was verified removable and has been dropped. Docs tooling only, not shipped in the npm package.",
+      "owner": "sam-styles maintainers",
+      "remediation": "Revisit on the Storybook upgrade (#768), which may add nonce/hash-based CSP support for its runtime injection."
+    },
+    {
+      "fingerprint": "10055|10055-6||",
+      "alert": "CSP: style-src unsafe-inline",
+      "reason": "Storybook and the addon UI inject inline styles at runtime; removing 'unsafe-inline' from style-src blocks rendering (verified in headless Chromium). Docs tooling only, not shipped in the npm package.",
+      "owner": "sam-styles maintainers",
+      "remediation": "Revisit on the Storybook upgrade (#768), which may add nonce/hash-based CSP support for injected styles."
+    },
+    {
+      "fingerprint": "10055|10055-11||",
+      "alert": "CSP: Meta Policy Invalid Directive",
+      "reason": "Resolved by removing header-only directives (frame-ancestors) from the <meta> CSP. Baselined defensively in case ZAP re-derives a residual invalid-directive alert against the meta-delivered policy; no valid meta directive remains unaddressed.",
+      "owner": "sam-styles maintainers",
+      "remediation": "Move CSP to an HTTP response header if the host supports it, which allows all directives."
+    },
+    {
+      "fingerprint": "10055|10055-13||",
+      "alert": "CSP: Failure to Define Directive with No Fallback",
+      "reason": "Baselined defensively. The meta CSP now defines form-action, frame-src, worker-src, child-src, manifest-src and media-src explicitly; any residual no-fallback alert stems from directives that are header-only and cannot be expressed via <meta> on GitHub Pages.",
+      "owner": "sam-styles maintainers",
+      "remediation": "Move CSP to an HTTP response header if the host supports it."
+    }
+  ]
+}
