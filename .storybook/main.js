@@ -1,4 +1,10 @@
-const path = require("path");
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { mergeConfig } from "vite";
+import postcssImport from "postcss-import";
+import postcssPresetEnv from "postcss-preset-env";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /**
  * Vite plugin: import bare `*.html` component templates as raw string modules.
@@ -36,7 +42,7 @@ function rawHtmlPlugin() {
   };
 }
 
-module.exports = {
+const config = {
   stories: ["../sam-styles/packages/**/**/*.stories.@(js|jsx|ts|tsx)"],
 
   addons: ["@storybook/addon-links", "@whitespace/storybook-addon-html"],
@@ -48,10 +54,8 @@ module.exports = {
     options: {},
   },
 
-  viteFinal: async (config) => {
-    const { mergeConfig } = require("vite");
-
-    return mergeConfig(config, {
+  viteFinal: async (viteConfig) =>
+    mergeConfig(viteConfig, {
       plugins: [rawHtmlPlugin()],
       css: {
         preprocessorOptions: {
@@ -66,11 +70,12 @@ module.exports = {
         },
         postcss: {
           plugins: [
-            require("postcss-import")({ root: path.resolve(__dirname, "..") }),
-            require("postcss-preset-env")(),
+            postcssImport({ root: path.resolve(__dirname, "..") }),
+            postcssPresetEnv(),
           ],
         },
       },
-    });
-  },
+    }),
 };
+
+export default config;
