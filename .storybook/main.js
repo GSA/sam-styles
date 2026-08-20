@@ -1,73 +1,76 @@
 const path = require("path");
 
+/**
+ * Vite plugin: import bare `*.html` component templates as raw string modules.
+ *
+ * Under the previous webpack builder, `import Tpl from "./foo.html"` resolved
+ * to the file's text via the html-webpack5 default rules. Vite instead treats
+ * `.html` as an entry document (and parses inline `<style>` blocks), so we
+ * rewrite template imports to Vite's `?raw` query to get the file contents as
+ * a default-exported string. This preserves the existing `return Template;`
+ * story pattern without touching the story files that rely on it.
+ */
+function rawHtmlPlugin() {
+  const templatesRoot = path.resolve(__dirname, "../sam-styles/packages");
+
+  return {
+    name: "sam-styles-raw-html",
+    enforce: "pre",
+    // Rewrite bare `import Tpl from "./foo.html"` to `"./foo.html?raw"` so Vite
+    // imports the file as a raw string module. This preserves the existing
+    // `return Template;` story pattern (29 story files) without editing them,
+    // and keeps Vite's HTML/asset pipeline from trying to parse inline
+    // `<style>` blocks in the templates. Storybook's own iframe.html and any
+    // `.html` outside the component sources fall through untouched.
+    async resolveId(source, importer) {
+      if (!importer || !source.endsWith(".html")) return null;
+      const resolved = await this.resolve(source, importer, {
+        skipSelf: true,
+      });
+      if (!resolved) return null;
+      const [filepath] = resolved.id.split("?");
+      if (!path.resolve(filepath).startsWith(templatesRoot + path.sep))
+        return null;
+      return { id: `${filepath}?raw`, external: false };
+    },
+  };
+}
+
 module.exports = {
   stories: ["../sam-styles/packages/**/**/*.stories.@(js|jsx|ts|tsx)"],
 
-  addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
-    "@whitespace/storybook-addon-html",
-  ],
+  addons: ["@storybook/addon-links", "@whitespace/storybook-addon-html"],
 
   staticDirs: ["../sam-styles/packages/images"],
 
   framework: {
-    name: "@storybook/html-webpack5",
+    name: "@storybook/html-vite",
     options: {},
   },
 
-  webpackFinal: async (config, { configType }) => {
-    config.module.rules.push({
-      test: /\.s(c|a)ss$/i,
-      use: [
-        {
-          loader: "style-loader",
-        },
-        {
-          loader: "css-loader",
-          options: {
-            sourceMap: true,
-            esModule: false,
+  viteFinal: async (config) => {
+    const { mergeConfig } = require("vite");
+
+    return mergeConfig(config, {
+      plugins: [rawHtmlPlugin()],
+      css: {
+        preprocessorOptions: {
+          scss: {
+            loadPaths: [
+              ".",
+              "./sam-styles/packages",
+              "./node_modules/@uswds/uswds/packages",
+              "./node_modules/@uswds",
+            ],
           },
         },
-        {
-          loader: "postcss-loader",
-          options: {
-            sourceMap: true,
-            postcssOptions: (loaderContext) => {
-              return {
-                plugins: [
-                  ["postcss-import", { root: loaderContext.resourcePath }],
-                  //["postcss-discard-comments", { removeAll: true }],
-                  "postcss-preset-env",
-                  //[
-                  //  "postcss-csso",
-                  //  { forceMediaMerge: false, comments: false },
-                  //],
-                ],
-              };
-            },
-          },
+        postcss: {
+          plugins: [
+            require("postcss-import")({ root: path.resolve(__dirname, "..") }),
+            require("postcss-preset-env")(),
+          ],
         },
-        {
-          loader: "sass-loader",
-          options: {
-            sourceMap: true,
-            sassOptions: {
-              loadPaths: [
-                ".",
-                "./sam-styles/packages",
-                "./node_modules/@uswds/uswds/packages",
-                "./node_modules/@uswds",
-              ],
-            },
-            implementation: require("sass-embedded"),
-          },
-        },
-      ],
-      include: path.resolve(__dirname, "../sam-styles/index.scss"),
+      },
     });
-    return config;
   },
 };
