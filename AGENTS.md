@@ -18,6 +18,7 @@
 - `npm run compile:check` — compiles `sam-styles/index.scss` via `sass` (all load paths pre-set); writes `coverage/compilation-report.txt`. Exits 0 on success. USWDS deprecation WARNINGs are pre-existing noise, not failures.
 - `npm run lint` — alias; same as `npm test`.
 - `npm run coverage` — runs `scripts/coverage-report.mjs`; writes `coverage/component-coverage.json` and `coverage/component-coverage.md`. Exits 0 if coverage meets the threshold (currently **90%**), exits 1 otherwise.
+- `npm run test:security-workflow` — validates the `Security` workflow contract and the ZAP severity gate (`scripts/check-security-workflow.mjs` + `scripts/check-zap-results.test.mjs`). Exits 0 when the DAST workflow, gate logic, baseline, and docs are consistent. Does **not** run ZAP itself (that needs Docker + a served Storybook; CI provides the end-to-end scan).
 
 ## Code coverage
 
@@ -39,7 +40,8 @@ The build emits many `@storybook/components` "export not found" WARNings and web
 
 - CI runs on **GitHub Actions only** (`.github/workflows/`). There is no CircleCI.
 - `build.yml` is a reusable workflow (`workflow_call`) that lints and builds Storybook; `build-and-deploy-storybook.yml` (push to `master`) and `pr-workflow.yml` (PR preview) both call it.
-- `test.yml` runs `npm test` (stylelint), `npm run compile:check` (full SCSS compilation), and `npm run test:storybook` (Playwright smoke-style regression tests, after `npx playwright install --with-deps chromium`) on every PR; uploads a `scss-compilation-report` artifact.
+- `test.yml` runs `npm test` (stylelint), `npm run compile:check` (full SCSS compilation), `npm run test:security-workflow` (security workflow + ZAP gate contract), and `npm run test:storybook` (Playwright smoke-style regression tests, after `npx playwright install --with-deps chromium`) on every PR; uploads a `scss-compilation-report` artifact.
+- `security.yml` runs **DAST** only: it builds and serves Storybook, scans it with OWASP ZAP (`zaproxy/action-baseline`), and fails on new medium/high findings via `scripts/check-zap-results.mjs`; triaged pre-existing findings live in `.zap/baseline.json`. **SAST is CodeQL default setup** (managed in repo Settings, not a workflow file) — do **not** add a committed CodeQL workflow, as advanced + default setup conflict and fail at startup. See `docs/security-scanning.md`.
 - All workflows read the Node version from `.nvmrc` via `node-version-file: '.nvmrc'` — do **not** hardcode a version in workflow files.
 
 ## Source layout
