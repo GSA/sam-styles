@@ -1,6 +1,15 @@
+<!--
+  CSP delivered via <meta> for the Storybook docs site (GitHub Pages cannot
+  set response headers). Only directives that are valid in a meta context are
+  included: frame-ancestors / X-Frame-Options are header-only and are handled
+  by clickjacking baseline entries in .zap/baseline.json instead.
+  'unsafe-inline' / 'unsafe-eval' are required by Storybook's webpack runtime
+  and are baselined with rationale; this markup is docs tooling and is not part
+  of the published npm package (SCSS only).
+-->
 <meta
   http-equiv="Content-Security-Policy"
-  content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; img-src 'self' data:; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; object-src 'none'"
+  content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; img-src 'self' data:; connect-src 'self'; form-action 'self'; frame-src 'self'; worker-src 'self' blob:; child-src 'self' blob:; manifest-src 'self'; media-src 'self'; base-uri 'self'; object-src 'none'"
 />
 <meta http-equiv="X-Content-Type-Options" content="nosniff" />
 <link

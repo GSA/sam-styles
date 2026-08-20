@@ -71,7 +71,7 @@ assert.match(
 );
 assert.match(
   docs,
-  /initial baseline is empty/,
+  /baselined with (documented )?rationale/,
   "pre-existing finding triage must be documented"
 );
 assert.match(
