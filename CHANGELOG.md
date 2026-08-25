@@ -1,8 +1,20 @@
 # Changelog
 
-## v3.1.0 (unreleased)
+## v3.1.1 (unreleased)
+
+Patch release to unblock the npm publish of the 3.1.0 content. **`3.1.0` was tagged and released on GitHub but never reached npm** — the OIDC publish failed at the registry with a 422, so `3.1.1` carries the same library content plus the fix. npm `latest` is still `3.0.25`.
+
+### Fixes
+
+- Restored the `repository` field in `package.json`, absent since the May 2022 Storybook migration, which caused sigstore provenance validation to reject the publish (`"repository.url" is ""`). Also added `homepage` and `bugs`, missing for the same reason. Metadata only — no source changes.
+
+---
+
+## v3.1.0 (tagged, not published to npm)
 
 First minor release since v3.0.25, and the **go-live pilot for the OIDC Trusted Publishing pipeline**. Supersedes the staged-but-never-published `3.0.26`. No breaking changes to the SCSS API — the bump reflects new tooling, testing, and security infrastructure plus a major Storybook upgrade.
+
+The publish attempt failed provenance validation; the content below ships as `3.1.1`.
 
 ### Build
 

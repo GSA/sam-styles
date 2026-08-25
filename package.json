@@ -1,6 +1,6 @@
 {
   "name": "@gsa-sam/sam-styles",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "SASS/CSS component library for SAM.gov, built on USWDS.",
   "main": "sam-styles/index.scss",
   "sass": "sam-styles/index.scss",
@@ -37,6 +37,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GSA/sam-styles.git"
+  },
+  "homepage": "https://github.com/GSA/sam-styles#readme",
+  "bugs": {
+    "url": "https://github.com/GSA/sam-styles/issues"
+  },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
     "@playwright/test": "1.62.1",
