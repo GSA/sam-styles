@@ -1,0 +1,31 @@
+import{r as e}from"./preload-helper-Dl2UHooj.js";var t,n=e((()=>{t=`<div class="sds-pagination">
+  <div class="sds-pagination__controls">
+    <button>Previous Page</button>
+    <input
+      class="usa-input height-4 width-6 text-center border-base-light"
+      value="1"
+      type="number"
+      min="1"
+      max="10"
+      aria-label="current page"
+    />
+    <span class="sds-pagination__total"> of <strong>10</strong> </span>
+    <button>Next Page</button>
+  </div>
+  <div class="sds-pagination__results">
+    <label
+      class="usa-label font-sans-2xs text-italic text-base"
+      for="results-select"
+    >
+      results per page
+    </label>
+    <select class="usa-select border-base-light" id="results-select">
+      <option value="0: 25">25</option>
+      <option value="1: 50">50</option>
+      <option value="2: 100">100</option>
+    </select>
+  </div>
+</div>
+`})),r,i,a;e((()=>{n(),r={title:`Components/Pagination`},i=()=>t,i.parameters={...i.parameters,docs:{...i.parameters?.docs,source:{originalSource:`() => {
+  return Head;
+}`,...i.parameters?.docs?.source}}},a=[`Pagination`]}))();export{i as Pagination,a as __namedExportsOrder,r as default};
