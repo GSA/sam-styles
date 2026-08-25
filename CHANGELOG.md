@@ -1,5 +1,39 @@
 # Changelog
 
+## v3.1.0 (unreleased)
+
+First minor release since v3.0.25, and the **go-live pilot for the OIDC Trusted Publishing pipeline**. Supersedes the staged-but-never-published `3.0.26`. No breaking changes to the SCSS API — the bump reflects new tooling, testing, and security infrastructure plus a major Storybook upgrade.
+
+### Build
+
+- Upgraded Storybook from 8.6.x to 10.x on the Vite builder ([#813](https://github.com/GSA/sam-styles/pull/813))
+- Normalized Node to 24 LTS via `.nvmrc` as the single source of truth and removed stale CircleCI config ([#738](https://github.com/GSA/sam-styles/pull/738))
+- Added a tag-gated npm publish workflow with Trusted Publisher / OIDC hardening ([#770](https://github.com/GSA/sam-styles/pull/770), [#780](https://github.com/GSA/sam-styles/pull/780), [#788](https://github.com/GSA/sam-styles/pull/788))
+- Enabled Dependabot for npm and github-actions, with grouped updates and auto-approve/auto-merge workflows ([#749](https://github.com/GSA/sam-styles/pull/749), [#792](https://github.com/GSA/sam-styles/pull/792), [#802](https://github.com/GSA/sam-styles/pull/802))
+- Added Prettier and formatted the entire repo ([#746](https://github.com/GSA/sam-styles/pull/746))
+- Bumped `vite` from 7.3.6 to 8.1.0 ([#815](https://github.com/GSA/sam-styles/pull/815))
+
+### Testing
+
+- Added Storybook style regression smoke tests with Playwright ([#764](https://github.com/GSA/sam-styles/pull/764))
+- Expanded Playwright coverage across form controls, components, dashboard, page layout, branding, and structure stories ([#781](https://github.com/GSA/sam-styles/pull/781), [#782](https://github.com/GSA/sam-styles/pull/782), [#783](https://github.com/GSA/sam-styles/pull/783), [#784](https://github.com/GSA/sam-styles/pull/784))
+- Added component/story coverage reporting and raised the threshold to 90% ([#773](https://github.com/GSA/sam-styles/pull/773), [#786](https://github.com/GSA/sam-styles/pull/786))
+- Added a WCAG 2.1 AA Storybook accessibility gate ([#811](https://github.com/GSA/sam-styles/pull/811))
+- Added a stylelint lint gate on every PR ([#744](https://github.com/GSA/sam-styles/pull/744))
+
+### Security
+
+- Added SAST (CodeQL default setup) and DAST (OWASP ZAP) CI gates ([#812](https://github.com/GSA/sam-styles/pull/812))
+- Cleared high-severity transitive advisories via `npm audit fix` ([#753](https://github.com/GSA/sam-styles/pull/753))
+
+### Fixes
+
+- Resolved `selector-no-qualifying-type` violations across 19 files ([#757](https://github.com/GSA/sam-styles/pull/757))
+- Resolved `declaration-no-important` violations across 18 files ([#756](https://github.com/GSA/sam-styles/pull/756))
+- Resolved `max-nesting-depth` violations across 3 files ([#755](https://github.com/GSA/sam-styles/pull/755))
+
+---
+
 ## v0.0.21 (04/08/2019)
 
 - [0.0.21](https://github.com/GSA/sam-styles/commit/8a8e1f04fd1dfad13957a91bafdbd9129eac6476) - undefined
