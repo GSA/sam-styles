@@ -46,7 +46,7 @@ name: Publish to npm
 #   DRY_RUN, and cannot perform a live publish.
 #
 # Note on workflow_dispatch rehearsals: a manual dry-run against an
-# already-published version (e.g. the current 3.0.25) will verify the
+# already-published version (e.g. the previously released 3.0.25) will verify the
 # tarball and THEN fail with npm's "cannot publish over previously
 # published version" error. That's expected — the packaging check still
 # ran. Bump to an unpublished version to see a fully clean dry-run.
