@@ -1,5 +1,0 @@
-import{r as e}from"./preload-helper-Dl2UHooj.js";var t,n,r,i;e((()=>{t={title:`Components/Range Slider`},n=e=>`
-  <div style="padding: 1rem">
-    <input id="usa-range" class="${e.class}" type="range" min="${e.min}" max="${e.max}" step="${e.step}" value="${e.value}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20" role="slider" />
-</div>
-`,r=n.bind({}),r.args={class:`usa-range`,min:`0`,max:`100`,step:`10`,value:`20`},r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:'args => {\n  return `\n  <div style="padding: 1rem">\n    <input id="usa-range" class="${args.class}" type="range" min="${args.min}" max="${args.max}" step="${args.step}" value="${args.value}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20" role="slider" />\n</div>\n`;\n}',...r.parameters?.docs?.source}}},i=[`RangeSlider`]}))();export{r as RangeSlider,i as __namedExportsOrder,t as default};
