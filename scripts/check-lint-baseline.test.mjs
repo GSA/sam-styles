@@ -167,6 +167,17 @@ withBaseline({ warnings: "ten" }, () => {
   });
 });
 
+// exits non-zero when the stylelint report is not an array (malformed shape)
+withBaseline({ warnings: 10 }, () => {
+  withTempDir((dir) => {
+    const path = join(dir, "stylelint-report.json");
+    writeFileSync(path, JSON.stringify({ not: "an array" }));
+    const { status, stderr } = run([path]);
+    assert.equal(status, 1);
+    assert.match(stderr, /Unexpected stylelint report shape/);
+  });
+});
+
 // exits non-zero when the stylelint report is missing
 withBaseline({ warnings: 10 }, () => {
   const { status, stderr } = run([

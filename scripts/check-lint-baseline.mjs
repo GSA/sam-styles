@@ -58,6 +58,17 @@ try {
   process.exit(1);
 }
 
+if (!Array.isArray(report)) {
+  console.error(`✖ Unexpected stylelint report shape at ${reportPath}`);
+  console.error(
+    "  Expected a JSON array of per-file results (the `--formatter json` output)."
+  );
+  console.error(
+    '  Run `stylelint "sam-styles/**/*.scss" --formatter json --output-file <path>` to regenerate it.'
+  );
+  process.exit(1);
+}
+
 let baseline;
 try {
   baseline = JSON.parse(readFileSync(baselinePath, "utf8"));
