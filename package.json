@@ -32,7 +32,10 @@
     "start": "npm run start:storybook",
     "start:storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build -o _site",
-    "lint": "stylelint \"sam-styles/**/*.scss\""
+    "lint": "stylelint \"sam-styles/**/*.scss\"",
+    "lint:report": "stylelint \"sam-styles/**/*.scss\" --formatter json --output-file stylelint-report.json; true",
+    "lint:baseline": "npm run lint:report && node scripts/check-lint-baseline.mjs stylelint-report.json",
+    "lint:baseline:bump": "npm run lint:report && node scripts/check-lint-baseline.mjs --bump stylelint-report.json"
   },
   "keywords": [],
   "author": "",
