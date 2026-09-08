@@ -53,7 +53,7 @@ try {
   console.error(`✖ Could not read stylelint report at ${reportPath}`);
   console.error(`  ${error.message}`);
   console.error(
-    "  Run `stylelint \"sam-styles/**/*.scss\" --formatter json --output-file <path>` first to generate it."
+    '  Run `stylelint "sam-styles/**/*.scss" --formatter json --output-file <path>` first to generate it.'
   );
   process.exit(1);
 }
