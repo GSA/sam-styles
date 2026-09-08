@@ -17,8 +17,9 @@
 - `npm run test:storybook` — Playwright smoke-style regression tests. Builds Storybook, serves the static `_site/` output via `http-server`, and runs Chromium checks against Storybook iframe URLs (asserting computed styles on rendered stories). Requires the Chromium browser (`npx playwright install chromium`) — Playwright config (`playwright.config.mjs`) and specs (`tests/storybook/*.spec.mjs`) are ESM.
 - `npm run compile:check` — compiles `sam-styles/index.scss` via `sass` (all load paths pre-set); writes `coverage/compilation-report.txt`. Exits 0 on success. USWDS deprecation WARNINGs are pre-existing noise, not failures.
 - `npm run lint` — alias; same as `npm test`.
-- `npm run coverage` — runs `scripts/coverage-report.mjs`; writes `coverage/component-coverage.json` and `coverage/component-coverage.md`. Exits 0 if coverage meets the threshold (currently **90%**), exits 1 otherwise.
+- `npm run coverage` — runs `scripts/coverage-report.mjs`; writes `coverage/component-coverage.json` (committed) and `coverage/component-coverage.md` (CI artifact only). Exits 0 if coverage meets the threshold read from the committed `coverage-floor.json` ratchet (currently **90%**), exits 1 otherwise.
 - `npm run test:security-workflow` — validates the `Security` workflow contract and the ZAP severity gate (`scripts/check-security-workflow.mjs` + `scripts/check-zap-results.test.mjs`). Exits 0 when the DAST workflow, gate logic, baseline, and docs are consistent. Does **not** run ZAP itself (that needs Docker + a served Storybook; CI provides the end-to-end scan).
+- `npm run test:coverage-workflow` — validates the component/story coverage contract (`scripts/check-coverage-workflow.mjs`): `coverage-floor.json` shape, that `coverage/component-coverage.json` is committed (not gitignored), and that `test.yml` guards against a stale committed report and triggers on push to `master`.
 
 ## Code coverage
 
@@ -27,10 +28,11 @@ This is a SCSS-only library with no JS runtime. "Coverage" is measured as **comp
 > Every Storybook story file (`.stories.js`) in `sam-styles/packages/` should have at least one matching Playwright smoke-test spec in `tests/storybook/`.
 
 - **Metric**: `(stories with a Playwright spec) / (total stories) × 100`
-- **Current threshold**: 90% — CI fails if coverage drops below this.
+- **Current threshold**: 90%, read from the committed `coverage-floor.json` ratchet at the repo root (`{ "lines": 90 }`) — CI fails if coverage drops below this. `--threshold=<n>` and `COVERAGE_THRESHOLD` still work as explicit overrides for local one-off runs, but `package.json`'s `coverage` script relies on the floor file so there's a single source of truth.
 - **Target**: 80–90% — **met**; all Storybook stories currently have a matching Playwright spec (100%). The threshold is held at 90% to leave slack for new stories landing ahead of their specs.
-- **Reports**: `coverage/component-coverage.json` (machine-readable) and `coverage/component-coverage.md` (posted as a PR comment by CI).
-- **To raise the threshold**: update the `--threshold` value in the `coverage` script in `package.json` once enough new specs have been added.
+- **Reports**: `coverage/component-coverage.json` is **committed** (its `lines` key is the single percentage a cross-repo quality dashboard reads — see [GSA/sam-styles#822](https://github.com/GSA/sam-styles/issues/822)); `coverage/component-coverage.md` stays a CI artifact / PR comment only, not committed.
+- CI (`test.yml`) fails the build if the committed `coverage/component-coverage.json` doesn't match a freshly regenerated report, so the committed snapshot can't silently go stale.
+- **To raise the threshold**: edit `coverage-floor.json`'s `lines` value once enough new specs have landed to genuinely raise it. It should only ever go up.
 
 Build gotcha: the Storybook build needs extra heap. CI sets `NODE_OPTIONS="--max_old_space_size=8192"`; use the same locally if `build:storybook` OOMs.
 

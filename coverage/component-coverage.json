@@ -1,0 +1,219 @@
+{
+  "threshold": 90,
+  "total": 52,
+  "covered": 52,
+  "uncovered": 0,
+  "percentage": 100,
+  "lines": 100,
+  "passed": true,
+  "stories": [
+    {
+      "path": "branding/colors/colors.stories.js",
+      "covered": true
+    },
+    {
+      "path": "branding/elements/elements.stories.js",
+      "covered": true
+    },
+    {
+      "path": "branding/icons/icons.stories.js",
+      "covered": true
+    },
+    {
+      "path": "branding/typography/fields/fields.stories.js",
+      "covered": true
+    },
+    {
+      "path": "branding/typography/heading/heading.stories.js",
+      "covered": true
+    },
+    {
+      "path": "branding/typography/lists/lists.stories.js",
+      "covered": true
+    },
+    {
+      "path": "branding/typography/paragraph/paragraph.stories.js",
+      "covered": true
+    },
+    {
+      "path": "branding/typography/typesetting/typesetting.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/accordion/accordion.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/actions/actions.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/alerts/alert.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/autocomplete/autocomplete.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/button/circle/circle-button.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/button/pill/pill-button.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/button/standard/Button.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/button-group/button-grop.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/button-row/button-row.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/card/card.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/collection/collection.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/dashboard/event/event.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/dashboard/statistics/alt.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/dashboard/statistics/default.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/dashboard/tile/SDStile/sdstile.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/dashboard/tile/SDStile-outline/tileoutline.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/history/history.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/pagination/Pagination.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/process-list/process-list.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/range-slider/range-slider.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/side-nav/side-nav.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/stepindicator/stepindicator.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/summarybox/summarybox.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/tables/tables.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/tags/tags.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/toasts/toasts.stories.js",
+      "covered": true
+    },
+    {
+      "path": "form-controls/address-form/address-form.stories.js",
+      "covered": true
+    },
+    {
+      "path": "form-controls/checkbox/checkbox.stories.js",
+      "covered": true
+    },
+    {
+      "path": "form-controls/dropdown/dropdown.stories.js",
+      "covered": true
+    },
+    {
+      "path": "form-controls/input/input.stories.js",
+      "covered": true
+    },
+    {
+      "path": "form-controls/name-form/name-form.stories.js",
+      "covered": true
+    },
+    {
+      "path": "form-controls/radio/radio.stories.js",
+      "covered": true
+    },
+    {
+      "path": "form-controls/search/search.stories.js",
+      "covered": true
+    },
+    {
+      "path": "misc/pop-up/pop-up.stories.js",
+      "covered": true
+    },
+    {
+      "path": "misc/search-layout/search-layout.stories.js",
+      "covered": true
+    },
+    {
+      "path": "misc/sort/sort.stories.js",
+      "covered": true
+    },
+    {
+      "path": "misc/toolbar/toolbar.stories.js",
+      "covered": true
+    },
+    {
+      "path": "patterns/pages/pages.stories.js",
+      "covered": true
+    },
+    {
+      "path": "sds-styles/stories/sds-styles.stories.js",
+      "covered": true
+    },
+    {
+      "path": "structure/banner/banner.stories.js",
+      "covered": true
+    },
+    {
+      "path": "structure/footer/footer.stories.js",
+      "covered": true
+    },
+    {
+      "path": "structure/header/header.stories.js",
+      "covered": true
+    },
+    {
+      "path": "structure/sds-navbar/sds-navbar.stories.js",
+      "covered": true
+    },
+    {
+      "path": "structure/seal/seal.stories.js",
+      "covered": true
+    }
+  ]
+}

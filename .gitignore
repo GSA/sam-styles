@@ -26,8 +26,9 @@ spec/screenshots/metadata.js
 # ignore VSCode files
 .vscode/
 
-# coverage output
-coverage/
+# coverage output (component-coverage.json is committed — see #822)
+coverage/*
+!coverage/component-coverage.json
 
 # Playwright test output
 test-results/

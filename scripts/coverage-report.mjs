@@ -11,11 +11,21 @@
  *
  * Outputs:
  *   coverage/component-coverage.json   — machine-readable results
+ *                                         (committed — the dashboard reads
+ *                                         its `lines` key; see #822)
  *   coverage/component-coverage.md     — human-readable markdown table
+ *                                         (CI artifact only, gitignored)
  *
  * Exits:
- *   0  — coverage meets or exceeds COVERAGE_THRESHOLD (default 35%)
+ *   0  — coverage meets or exceeds the threshold
  *   1  — coverage is below threshold (fails CI)
+ *
+ * The default threshold comes from the committed coverage-floor.json ratchet
+ * at the repo root (`{ "lines": <percentage> }`) rather than a literal in
+ * package.json, so there's a single source of truth for the number — and the
+ * same file the cross-repo quality dashboard can read directly. Raise it by
+ * editing that one file once coverage has genuinely improved; it should only
+ * ever go up.
  *
  * Usage:
  *   node scripts/coverage-report.mjs [--threshold=<n>]
@@ -33,12 +43,25 @@ const ROOT = join(__dirname, "..");
 const PACKAGES_DIR = join(ROOT, "sam-styles", "packages");
 const SPECS_DIR = join(ROOT, "tests", "storybook");
 const OUT_DIR = join(ROOT, "coverage");
+const FLOOR_PATH = join(ROOT, "coverage-floor.json");
 
-// Parse --threshold=N from argv, fallback to env var, then default 35
+/** Read the committed ratchet floor's `lines` percentage, or null if absent/invalid. */
+function readFloor(path) {
+  try {
+    const floor = JSON.parse(readFileSync(path, "utf8"));
+    return Number.isFinite(floor.lines) ? floor.lines : null;
+  } catch {
+    return null;
+  }
+}
+
+// Parse --threshold=N from argv, fallback to env var, then coverage-floor.json
 const thresholdArg = process.argv.find((a) => a.startsWith("--threshold="));
-const thresholdValue = thresholdArg
-  ? thresholdArg.split("=")[1]
-  : process.env.COVERAGE_THRESHOLD || "35";
+const floorValue = readFloor(FLOOR_PATH);
+const thresholdValue =
+  thresholdArg?.split("=")[1] ??
+  process.env.COVERAGE_THRESHOLD ??
+  (floorValue !== null ? String(floorValue) : "35");
 const THRESHOLD = Number(thresholdValue);
 
 if (!Number.isInteger(THRESHOLD) || THRESHOLD < 0 || THRESHOLD > 100) {
@@ -180,18 +203,23 @@ const passed = pct >= THRESHOLD;
 mkdirSync(OUT_DIR, { recursive: true });
 
 // JSON
+// `lines` mirrors the single-percentage key the cross-repo quality dashboard
+// reads from other libraries' coverage-floor.json (GSA/sam-styles#822). This
+// repo's metric is story-smoke coverage, not line coverage, so it's the only
+// key populated here rather than forcing statements/branches/functions too.
 const json = {
   threshold: THRESHOLD,
   total,
   covered,
   uncovered,
   percentage: pct,
+  lines: pct,
   passed,
   stories: rows,
 };
 writeFileSync(
   join(OUT_DIR, "component-coverage.json"),
-  JSON.stringify(json, null, 2)
+  `${JSON.stringify(json, null, 2)}\n`
 );
 
 // Markdown
