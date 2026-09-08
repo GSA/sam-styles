@@ -1,0 +1,613 @@
+import{t as e}from"./rolldown-runtime-Dh6celcD.js";var t;function n(){return(n=e((()=>{t=`<table class="sds-table">
+  <tr>
+    <th></th>
+    <th>Default</th>
+    <th>Hover</th>
+    <th>Active</th>
+    <th>Focus</th>
+    <th>Disabled</th>
+  </tr>
+  <tr style="height: 80px">
+    <td class="padding-1">Next</td>
+    <td class="padding-1">
+      <button class="usa-button usa-button-pill space-x-1">
+        <span> NEXT </span>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-chevron-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </div>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button class="usa-button usa-button--hover usa-button-pill space-x-1">
+        <span> NEXT </span>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-chevron-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </div>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button class="usa-button usa-button--active usa-button-pill space-x-1">
+        <span> NEXT </span>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-chevron-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </div>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button class="usa-button usa-focus usa-button-pill space-x-1">
+        <span> NEXT </span>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-chevron-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </div>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button class="usa-button usa-button-pill space-x-1" disabled="disabled">
+        <span> NEXT </span>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-chevron-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </div>
+      </button>
+    </td>
+  </tr>
+</table>
+`})))()}var r;function i(){return(i=e((()=>{r=`<table class="sds-table">
+  <tr>
+    <th></th>
+    <th>Default</th>
+    <th>Hover</th>
+    <th>Active</th>
+    <th>Focus</th>
+    <th>Disabled</th>
+  </tr>
+
+  <tr style="height: 80px">
+    <td class="padding-1">Cancel</td>
+    <td class="padding-1">
+      <button
+        class="usa-button usa-button--base usa-button--outline usa-button-pill text-ink space-x-1"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+            />
+          </svg>
+        </div>
+        <span> CANCEL </span>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button
+        class="usa-button usa-button--base usa-button--outline usa-button--hover usa-button-pill text-ink space-x-1"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+            />
+          </svg>
+        </div>
+        <span> CANCEL </span>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button
+        class="usa-button usa-button--base usa-button--outline usa-button--active usa-button-pill text-ink space-x-1"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+            />
+          </svg>
+        </div>
+        <span> CANCEL </span>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button
+        class="usa-button usa-button--base usa-button--outline usa-focus usa-button-pill text-ink space-x-1"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+            />
+          </svg>
+        </div>
+        <span> CANCEL </span>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button
+        class="usa-button usa-button--base usa-button--outline usa-button-pill text-ink space-x-1"
+        disabled="disabled"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+            />
+          </svg>
+        </div>
+        <span> CANCEL </span>
+      </button>
+    </td>
+  </tr>
+</table>
+`})))()}var a;function o(){return(o=e((()=>{a=`<table class="sds-table">
+  <tr>
+    <th></th>
+    <th>Default</th>
+    <th>Hover</th>
+    <th>Active</th>
+    <th>Focus</th>
+    <th>Disabled</th>
+  </tr>
+
+  <tr style="height: 80px">
+    <td class="padding-1">Previous</td>
+    <td class="padding-1">
+      <button class="usa-button bg-primary-lighter usa-button-pill space-x-1">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-chevron-left"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+            />
+          </svg>
+        </div>
+        <span> PREVIOUS </span>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button
+        class="usa-button bg-primary-lighter usa-button--hover usa-button-pill space-x-1"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-chevron-left"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+            />
+          </svg>
+        </div>
+        <span> PREVIOUS </span>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button
+        class="usa-button bg-primary-lighter usa-button--active usa-button-pill space-x-1"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-chevron-left"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+            />
+          </svg>
+        </div>
+        <span> PREVIOUS </span>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button
+        class="usa-button bg-primary-lighter usa-focus usa-button-pill space-x-1"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-chevron-left"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+            />
+          </svg>
+        </div>
+        <span> PREVIOUS </span>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button
+        class="usa-button bg-primary-lighter usa-button-pill space-x-1"
+        disabled="disabled"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-chevron-left"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+            />
+          </svg>
+        </div>
+        <span> PREVIOUS </span>
+      </button>
+    </td>
+  </tr>
+</table>
+`})))()}var s;function c(){return(c=e((()=>{s=`<table class="sds-table">
+  <tr>
+    <th>
+      <h3>Pill Buttons</h3>
+    </th>
+    <th>Default</th>
+    <th>Hover</th>
+    <th>Active</th>
+    <th>Focus</th>
+    <th>Disabled</th>
+  </tr>
+  <tr style="height: 80px">
+    <td class="padding-1">Next</td>
+    <td class="padding-1">
+      <button class="usa-button usa-button-pill space-x-1">
+        <span> NEXT </span>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-chevron-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </div>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button class="usa-button usa-button--hover usa-button-pill space-x-1">
+        <span> NEXT </span>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-chevron-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </div>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button class="usa-button usa-button--active usa-button-pill space-x-1">
+        <span> NEXT </span>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-chevron-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </div>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button class="usa-button usa-focus usa-button-pill space-x-1">
+        <span> NEXT </span>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-chevron-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </div>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button class="usa-button usa-button-pill space-x-1" disabled="disabled">
+        <span> NEXT </span>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-chevron-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </div>
+      </button>
+    </td>
+  </tr>
+
+  <tr style="height: 80px">
+    <td class="padding-1">Previous</td>
+    <td class="padding-1">
+      <button class="usa-button bg-primary-lighter usa-button-pill space-x-1">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-chevron-left"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+            />
+          </svg>
+        </div>
+        <span> PREVIOUS </span>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button
+        class="usa-button bg-primary-lighter usa-button--hover usa-button-pill space-x-1"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-chevron-left"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+            />
+          </svg>
+        </div>
+        <span> PREVIOUS </span>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button
+        class="usa-button bg-primary-lighter usa-button--active usa-button-pill space-x-1"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-chevron-left"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+            />
+          </svg>
+        </div>
+        <span> PREVIOUS </span>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button
+        class="usa-button bg-primary-lighter usa-focus usa-button-pill space-x-1"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-chevron-left"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+            />
+          </svg>
+        </div>
+        <span> PREVIOUS </span>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button
+        class="usa-button bg-primary-lighter usa-button-pill space-x-1"
+        disabled="disabled"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-chevron-left"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+            />
+          </svg>
+        </div>
+        <span> PREVIOUS </span>
+      </button>
+    </td>
+  </tr>
+
+  <tr style="height: 80px">
+    <td class="padding-1">Cancel</td>
+    <td class="padding-1">
+      <button
+        class="usa-button usa-button--base usa-button--outline usa-button-pill text-ink space-x-1"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+            />
+          </svg>
+        </div>
+        <span> CANCEL </span>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button
+        class="usa-button usa-button--base usa-button--outline usa-button--hover usa-button-pill text-ink space-x-1"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+            />
+          </svg>
+        </div>
+        <span> CANCEL </span>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button
+        class="usa-button usa-button--base usa-button--outline usa-button--active usa-button-pill text-ink space-x-1"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+            />
+          </svg>
+        </div>
+        <span> CANCEL </span>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button
+        class="usa-button usa-button--base usa-button--outline usa-focus usa-button-pill text-ink space-x-1"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+            />
+          </svg>
+        </div>
+        <span> CANCEL </span>
+      </button>
+    </td>
+    <td class="padding-1">
+      <button
+        class="usa-button usa-button--base usa-button--outline usa-button-pill text-ink space-x-1"
+        disabled="disabled"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+            />
+          </svg>
+        </div>
+        <span> CANCEL </span>
+      </button>
+    </td>
+  </tr>
+</table>
+`})))()}var l,u,d,f,p,m;function h(){return(h=e((()=>{n(),i(),o(),c(),l={title:`Components/Button/Pill`},u=()=>s,d=()=>t,f=()=>r,p=()=>a,u.parameters={...u.parameters,docs:{...u.parameters?.docs,source:{originalSource:`() => {
+  return VarientsTemplate;
+}`,...u.parameters?.docs?.source}}},d.parameters={...d.parameters,docs:{...d.parameters?.docs,source:{originalSource:`() => {
+  return NextTemplate;
+}`,...d.parameters?.docs?.source}}},f.parameters={...f.parameters,docs:{...f.parameters?.docs,source:{originalSource:`() => {
+  return CancelTemplate;
+}`,...f.parameters?.docs?.source}}},p.parameters={...p.parameters,docs:{...p.parameters?.docs,source:{originalSource:`() => {
+  return PreviousTemplate;
+}`,...p.parameters?.docs?.source}}},m=[`Variants`,`Next`,`Cancel`,`Previous`]})))()}h();export{f as Cancel,d as Next,p as Previous,u as Variants,m as __namedExportsOrder,l as default};
