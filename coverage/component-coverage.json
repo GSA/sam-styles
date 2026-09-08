@@ -56,6 +56,14 @@
       "covered": true
     },
     {
+      "path": "components/button-group/button-grop.stories.js",
+      "covered": true
+    },
+    {
+      "path": "components/button-row/button-row.stories.js",
+      "covered": true
+    },
+    {
       "path": "components/button/circle/circle-button.stories.js",
       "covered": true
     },
@@ -65,14 +73,6 @@
     },
     {
       "path": "components/button/standard/Button.stories.js",
-      "covered": true
-    },
-    {
-      "path": "components/button-group/button-grop.stories.js",
-      "covered": true
-    },
-    {
-      "path": "components/button-row/button-row.stories.js",
       "covered": true
     },
     {
@@ -96,11 +96,11 @@
       "covered": true
     },
     {
-      "path": "components/dashboard/tile/SDStile/sdstile.stories.js",
+      "path": "components/dashboard/tile/SDStile-outline/tileoutline.stories.js",
       "covered": true
     },
     {
-      "path": "components/dashboard/tile/SDStile-outline/tileoutline.stories.js",
+      "path": "components/dashboard/tile/SDStile/sdstile.stories.js",
       "covered": true
     },
     {

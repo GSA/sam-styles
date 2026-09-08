@@ -27,6 +27,12 @@ assert.equal(
   "coverage-floor.json must have a numeric `lines` percentage"
 );
 assert.ok(
+  Number.isInteger(floor.lines),
+  "coverage-floor.json's `lines` must be an integer — " +
+    "scripts/coverage-report.mjs rejects a non-integer threshold, so a " +
+    "fractional floor value would pass this check but fail `npm run coverage`"
+);
+assert.ok(
   floor.lines >= 0 && floor.lines <= 100,
   "coverage-floor.json's `lines` must be a percentage between 0 and 100"
 );
@@ -59,6 +65,20 @@ assert.equal(
   1,
   "coverage/component-coverage.json must NOT be gitignored — it needs to be " +
     "committed so the dashboard can read it"
+);
+
+// `check-ignore` only proves the ignore rules allow the file; it doesn't
+// prove the file is actually tracked. Assert it's committed too.
+const isTracked = spawnSync(
+  "git",
+  ["ls-files", "--error-unmatch", "coverage/component-coverage.json"],
+  { encoding: "utf8" }
+);
+assert.equal(
+  isTracked.status,
+  0,
+  "coverage/component-coverage.json must be tracked by git — it needs to " +
+    "be committed so the dashboard can read it"
 );
 
 // ── the rest of coverage/ stays gitignored (CI artifacts only) ─────────────

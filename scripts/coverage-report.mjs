@@ -185,12 +185,17 @@ const storyFiles = walkFiles(PACKAGES_DIR, (name) =>
 );
 const coveredKeys = buildCoveredSet(SPECS_DIR);
 
-const rows = storyFiles.map((absPath) => {
-  const relPath = relative(PACKAGES_DIR, absPath);
-  const keys = storyMatchKeys(relPath, absPath);
-  const isCovered = keys.some((k) => coveredKeys.has(k));
-  return { path: relPath, covered: isCovered };
-});
+const rows = storyFiles
+  .map((absPath) => {
+    const relPath = relative(PACKAGES_DIR, absPath);
+    const keys = storyMatchKeys(relPath, absPath);
+    const isCovered = keys.some((k) => coveredKeys.has(k));
+    return { path: relPath, covered: isCovered };
+  })
+  // readdirSync's traversal order isn't guaranteed stable across platforms;
+  // sort by path so the committed JSON's `stories` array doesn't produce
+  // false-positive diffs/CI failures across environments.
+  .sort((a, b) => a.path.localeCompare(b.path));
 
 const total = rows.length;
 const covered = rows.filter((r) => r.covered).length;
