@@ -30,6 +30,12 @@ jobs:
       - name: Run tests (stylelint)
         run: npm test
 
+      - name: Guard stylelint warning baseline
+        run: npm run lint:baseline
+
+      - name: Run stylelint baseline gate unit tests
+        run: node scripts/check-lint-baseline.test.mjs
+
       - name: Validate security workflow
         run: npm run test:security-workflow
 
