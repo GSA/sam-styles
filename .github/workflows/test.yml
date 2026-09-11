@@ -6,6 +6,8 @@ on:
       - opened
       - reopened
       - synchronize
+  push:
+    branches: [master]
 
 jobs:
   test:
@@ -37,6 +39,9 @@ jobs:
       - name: Validate security workflow
         run: npm run test:security-workflow
 
+      - name: Validate coverage workflow
+        run: npm run test:coverage-workflow
+
       - name: SCSS compilation check
         run: npm run compile:check
 
@@ -51,6 +56,9 @@ jobs:
 
       - name: Run component/story coverage check
         run: npm run coverage
+
+      - name: Guard against a stale committed coverage report
+        run: git diff --exit-code -- coverage/component-coverage.json
 
       - name: Post coverage report as PR comment
         if: always() && github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
