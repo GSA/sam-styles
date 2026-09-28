@@ -58,7 +58,7 @@
     "@whitespace/storybook-addon-html": "9.0.0",
     "http-server": "14.1.1",
     "postcss-scss": "4.0.9",
-    "prettier": "3.9.6",
+    "prettier": "3.9.8",
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "sass": "^1.102.0",
