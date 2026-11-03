@@ -70,7 +70,7 @@
   "dependencies": {
     "@uswds/uswds": "^3.14.0",
     "bootstrap-icons": "^1.10.3",
-    "postcss-import": "16.2.0",
+    "postcss-import": "17.0.0",
     "postcss-preset-env": "11.6.1",
     "react-syntax-highlighter": "16.1.2",
     "sass-embedded": "^1.102.0"
