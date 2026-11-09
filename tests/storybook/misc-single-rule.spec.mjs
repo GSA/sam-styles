@@ -66,6 +66,19 @@ test("slideout: .dialog-slide-out is position:fixed", async ({ page }) => {
   await expect(panel).toHaveCSS("position", "fixed");
 });
 
+// ── Header home link ──────────────────────────────────────────────────────────
+
+test("header: home link accessible name includes its visible label", async ({
+  page,
+}) => {
+  await page.goto("/iframe.html?id=structure-header--default");
+
+  const homeLink = page.locator('.usa-logo a[href="/"]');
+  await expect(homeLink).toBeVisible();
+  await expect(homeLink).toHaveText("Logo");
+  await expect(homeLink).toHaveAccessibleName("Logo Home");
+});
+
 // ── Header counter-icon ───────────────────────────────────────────────────────
 
 test("header: .counter-icon inside .usa-menu-btn renders red text", async ({
