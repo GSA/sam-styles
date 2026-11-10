@@ -3,7 +3,7 @@ import{t as e}from"./rolldown-runtime-Dh6celcD.js";var t;function n(){return(n=e
   <div class="usa-navbar">
     <div class="usa-logo" id="extended-logo">
       <em class="usa-logo__text"
-        ><a href="/" title="Home" aria-label="Home">Logo</a></em
+        ><a href="/" title="Home" aria-label="Logo Home">Logo</a></em
       >
     </div>
     <button class="usa-menu-btn">
